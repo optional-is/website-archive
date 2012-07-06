@@ -7,4 +7,4 @@ So this is the first test, back-up and archiving (optional.is)
 
 I don't expect anyone to use or fork these pages, they are all the public pages available on the site. This repo is more used as a back-up incase something horrible should happen.
 
-The backup.sh file are the commands for you to do the same. Feel free to copy that and start your own back-ups.
+In the backup.sh file are the commands for you to do the same. Feel free to copy that and start your own back-ups.
