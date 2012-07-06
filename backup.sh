@@ -8,7 +8,7 @@ git pull
 git add .
 
 # Git Commit the changes
-git commit -m "Archive fected on \c"; date
+git commit -m "Archive fecthed on `date`"
 
 # Git Push to keep the repo up to date
 git push
