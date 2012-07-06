@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="readability-verification" content="DRPbu4h9pDUUaRVQCALsfmmh3nEygKucjzuDwsBv">
+<title>A few things you might not have known about email &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" /> 
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="../../../../xmlrpc.php" />
+<meta name="viewport" content="width=725; initial-scale=0.43;" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+
+</head>
+<body>
+<div id="header">
+<h1><a href="../../../../index.html"><img width="600" height="139" src="../../../../../images/mast.png" alt="optional.is/required" /></a></h1>
+</div>
+
+			
+		<div class="post-1167 post type-post status-publish format-standard hentry category-youre-doing-it-wrong tag-communications tag-email tag-life-hacks tag-management tag-tips" id="post-1167">
+			<h2 style="border-bottom: 2px solid #a33fbe">A few things you might not have known about email</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2010-04-02T02:20:39+00:00">Friday, April 2nd, 02010 at 02:20 UTC</abbr></div>
+				<p>Sometimes I forget that I live in an online world and that not everyone else is here. This becomes painfully clear whenever I make a comment that seems so completely basic to me, but is an eye opener for others. This has happened more than once when discussing email, so I figured I would jot down a few quick notes and interesting facts about email that you might not have known, that way there is a permanent URL for others to reference.</p>
+<p>If you take the analogy of the layers of an onion, the development of the world-wide-web is a similar structure. When some people refer to &#8220;Internet&#8221;, they are actually referring to the &#8220;world wide web&#8221; (or sadly facebook). The world wide web is just a part of the Internet, just as email, IM are part of the internet as well. But email goes back even further to pre-Internet, ARPANET days.</p>
+<h2>Never trust anyone over 30</h2>
+<p>Arguably, the first email sent was by Ray Tomlinson in 1971 to himself as a test message. Back in those days there wasn&#8217;t the concept of websites and hosting providers, just local machines where you could read and leave messages to other users of the same machine. Much like a private bulletin board. Tomlinson took many of these tools and extended them across multiple machines on the ARPANET. This was the start of the email we know today. For all of Tomlinson&#8217;s achievements he is most remembered for choosing the @ sign, also known as the <a href="http://en.wikipedia.org/wiki/Asperand">Asperand</a>, as the separator between your username and the host.</p>
+<h2>Length of an email address</h2>
+<p>This is a hotly contested and often mis-quoted number. A quick search and the value 320 will turn-up. The rational is that a domain name can be up to 255 characters long. The username, the part before the @ sign, can be 64 characters long. This would mean 64+1 (for the @ sign) and 255 more equals 320. This is actually incorrect. According to the Email related RFC (the documents that define how these protocols work) the maximum is 254 characters.</p>
+<p>For developers, this means that you need to watch out for the maximum value when allowing form field input and storage in the database. There are services such as, <a href="http://www.abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijk.com/">http://www.abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijk.com</a> designed to test and break many email forms which would think this is too long and invalid!</p>
+<h2>Multiple email addresses in one!</h2>
+<p>Have you ever noticed an email address with a &#8216;+&#8217; or &#8216;-&#8217; in it? Depending on your hosting provider and your email server, these two little characters can make a world of difference. Lets say my email address is brian@example.com. If you sent a message to that address it would end-up in my inbox, but what if you sent a message to brian+work@example.com? Well, that too would end-up in the same inbox as mail to just brian@example.com. Anything after the &#8216;+&#8217; is ignored by the mail server and it is delivered to the mailbox of the name before the &#8216;+&#8217; or in some servers&#8217; case the &#8216;-&#8217; sign.</p>
+<p>So why is this useful? Well, you can do a lot with this trick, firstly when you have to fill out forms you can use brian+ProductName@example.com when you are trying out a new product. Then 6 months later when you get spam to that address, it is pretty clear who sold your info! Secondly, you can easily setup filters in your mail application to check for &#8220;If to field is brian+ProductName@example.com move to trash&#8221; or other folders.</p>
+<p>Another useful trick using this technique is on sites that only allow you one sign-up per email address. You could go out and register loads of throw-away webmail accounts or you could just increment a number behind your name brian+1@example.com, brian+2, brian+3&#8230; A good form will prevent this, but it is rarely the case.</p>
+<h2>Throw-away email addresses</h2>
+<p>There are a few services that allow you to create throw-away email addresses. Sites like <a href="http://dodgeit.com/">dodgeit.com</a> allow you to create any email address you want and then read the results via RSS. If you worried that someone is going to sell your email address or spam you, a service like this is a great temporary tool.</p>
+<p>A similar service is <a href="http://10minutemail.com/">10minutemail.com</a> this creates an email that only exists for 10 minutes or so. This allows you to check and reply to any messages before it evaporates.</p>
+<p>These services are great for consumers because it protects you from unwanted spam, but can be a headache for site owners. If you run a forum and block/ban someone, they can just come back with these throw-away addresses. This is why some sites just out-right block webmail services like hotmail or some of the more popular throw-away emails.</p>
+<h2>Blackhole email</h2>
+<p>With some mail servers it is possible to create a &#8220;black hole&#8221; for incoming messages. There are two reasons for this, firstly, if you are a business you might want to setup a special email address that catches all messages that were sent your domain, but lacked a mailbox. For instance, a messages to brian@example.org would end-up in the mailbox for brian, but a message for brain@examlpe.org would be rejected because there is no mailbox entitled &#8216;brain&#8217;. A black hole account captures all these mis-spellings and allows for a company to periodically look though and possibly reroute the messages to its intended owner.</p>
+<p>The downside to a black hole account is that every spam messages and iteration of common email addresses will find their way into this mailbox. It could be more trouble than it is worth.</p>
+<p>The other reason a black hole account might be important is to reduce spam. Different spammers have different techniques, but once they realize an account is active, usually via a reply or some sort of embedded image, they continue to spam it. If your mail server response to the spammer with an email that says &#8220;this account is not active&#8221;, the spammer might take it for a reply and send more spam and things spiral further into the tragedy of the commons. This is one justification to use a black hole address, it hides active and inactive accounts from potential spammers.</p>
+<h2>On your own time</h2>
+<p>It seems like the buzz word of 02010 is going to be &#8220;real-time&#8221;, real-time web, real-time communications, real-time thoughts. Phones are real-time and don&#8217;t we all love the copious ringtones that we hear daily. Real-time in an invitation to interruption. Sitting on IM, is like telling others, bug me, my time isn&#8217;t valuable, go ahead an jump right into my flow.</p>
+<p>Asynchronous communications, like email, allow people to deal with the information  when they want too. If you get on a regiment of checking your email 2-3 times a day rather than when the app goes &#8220;bing&#8221; you&#8217;ll be much happier and focused.</p>
+<p>Email isn&#8217;t a telephone, it isn&#8217;t IM, which is exactly why it is useful. It allows information to be sent and stored, but dealt with when the time is right. You are in control of the conversation, not the sender.</p>
+<h2>Death of email</h2>
+<p>Every few months it seems that someone is proclaiming the death of email in favour of IM/Jabber, Wave, Buzz, Twitter/sms or some other new fangled technology. Yet, somehow email has shrugged off everyone single one. Maybe the cost of switching is too high? Maybe corporate culture has latched onto email and it has become too integral? We all probably have a few emails addresses, work, home, school and maybe a few others to boot. Maybe just the shear weight of switching prevents us from doing anything. This is a problem if you already have email, but for the next generation of Internet users, they might skip this step completely, but I doubt it.</p>
+<p>I had an advisor in school who&#8217;s email username was only two characters &#8220;ht&#8221; and he&#8217;s had that same account for probably close to 20 years (if not longer?). He would get so much spam his computer was constantly beeping with new messages. I can envision that original conversation. The nascent IT department saying &#8220;We&#8217;re only going to need a few of these accounts, sure you can have &#8216;ht&#8217; it won&#8217;t conflict with anything in the future, email&#8217;s just a fad&#8221;. We&#8217;ll it is still here today, email is so cheap and easy, most people have a work email account before business cards.</p>
+<p>Email is incredibly robust and stable, it isn&#8217;t going away any time soon, so it is best to learn as many tips and tricks to improve your daily life. Having a happy inbox makes for a happy atmosphere. Take back your inbox and start treating it like a clean, organized closet rather than a landfill where everyone dumps their leftovers onto you.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/youre-doing-it-wrong/index.html" title="View all articles in You're doing it wrong" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #96e20d">You're doing it wrong</a></p><p><strong>Tags:</strong> <a href="../../../../tag/communications/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #77a351">communications</a>, <a href="../../../../tag/email/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #0c83f5">email</a>, <a href="../../../../tag/life-hacks/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #be6071">life hacks</a>, <a href="../../../../tag/management/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #d10af4">management</a>, <a href="../../../../tag/tips/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #e4c947">tips</a></p>			  </div>
+
+		<div class="navigation">
+			<div class="prev"><div class="time">24 March 02010</div><a href="../../../03/24/ada-lovelace-day-florence-nightingale/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #3117d1">&laquo; Ada Lovelace Day: Florence Nightingale</a></div>
+			<div class="next"><div class="time">14 April 02010</div><a href="../../14/poisonous-people/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #5a7cea">Poisonous People &raquo;</a></div>
+		</div>
+
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+
+
+  <div style="float: left; font-size: 16px;">
+
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+
+</div> 
+<a href="../../../../../index.html" class="url" style="float:right; display: block;"><img src="../../../../../images/sm-black.png" alt="(optional.is)" class="logo fn org" /></a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>

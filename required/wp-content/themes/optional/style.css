@@ -1,0 +1,74 @@
+html,body,div,span,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline}:focus{outline:0}body{line-height:1;color:black;background:white}ol,ul{list-style:none}table{border-collapse:separate;border-spacing:0}caption,th,td{text-align:left;font-weight:normal}blockquote:before,blockquote:after,q:before,q:after{content:""}blockquote,q{quotes:"" ""}
+
+body { font: 100%/1.5 "Lucida Grande",Helvetica,Arial,sans-serif; margin: 0 auto; padding: 1.5em; width: 42em; }
+#header { text-align: center; }
+h1,h2 { font-size: 1.5em; line-height: 1em; margin-bottom: 1em; }
+h3 { font-weight: bold;}
+h3, h4, h5, h6 { font-size: 1em; line-height: 1.5em; }
+p, ol, ul { font-size: 1em; line-height: 1.5em; padding: 0 0 1.5em; }
+ul li { list-style-type: disc; }
+ol li { list-style-type: decimal-leading-zero; }
+div, li { font-size: 1em; line-height: 1.5em; }
+blockquote { font-style: italic; padding: 0 4em; color: #666; }
+em { font-style: italic; }
+strong { font-weight: bold; }
+sub,sup { font-size: 50%; }
+sup { vertical-align:top; }
+a { color: black; background-color: #F3E88E; /* #FBEC5D; */}
+a:hover { background-color: #FFD700; }
+a:visited { background-color: #FFD700; }
+a:visited:hover { background-color: #FFD700; }
+a { -webkit-transition: all 0.5s linear; }
+table { font-size: 1em; line-height: 1.5em; margin: 0 0 1.5em 0; border: 1px solid #ddd; width: 100%; }
+th, td {  padding: 0 .5em; line-height: 1.5em; text-align: center; }
+th { font-weight: bold; border-bottom: 1px solid #ccc; background-color: #ddd;}
+td.item { text-align: left; }
+tr:nth-child(odd) { background-color: #eee;}
+code, pre, kbd { font-family: "Andale Mono", Monaco, Courier, "Courier New", serif; color: #666666; padding: 0 0 1.5em; 
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+ }
+
+#header a, #header a:hover, #header a:visited { background-color: #ffffff; }
+#footer a.url, #footer a.url:hover, #footer a.url:visited { background-color: #ffffff; }
+#footer { clear: both; padding-top: 1em; }
+
+.banner { width: 100%; text-align: center; padding: 0 0 1.5em;}
+.time { color: #999; }
+.postmetadata { padding-bottom: 4em; }
+.description {color: #777; padding: 0 3em;}
+
+ul li.categories { list-style-type: none; clear: both; }
+.categories .cat-item { margin-right: 8px; margin-bottom: 10px; float: left; width: 216px; list-style-type: none;  }
+.categories .cat-item a { text-align: left; display: block; position: relative; }
+.categories .cat-item a span { position: absolute; right: 0 }
+
+.archives { clear: both; }
+ul li.archives { list-style-type: none; clear: both; }
+.archives li { margin-right: 8px; margin-bottom: 10px; float: left; width:160px; list-style-type: none;  }
+.archives li a { text-align: left; display: block; position: relative; }
+.archives li a span { position: absolute; right: 0 }
+.feed a { padding-left:20px; background-image: url('http://suda.co.uk/images/feed.gif'); background-position: 3px 50%; background-repeat: no-repeat
+}
+
+.navigation { clear: both; padding-bottom: 5em; }
+.navigation .prev { float: left;  width: auto; text-align: left; }
+.navigation .next { float: right; width: auto; text-align: right; }
+.navigation a, { font-weight: bold; color: #000; text-decoration: underline; background-color: #ffffff;}
+.readmore { font-weight: bold; color: #003F87; text-decoration: underline; background-color: #ffffff;}
+.navigation a:hover, .readmore:hover,.navigation a:visited, .readmore:visited  { background-color: #ffffff;}
+
+
+li.comment { padding-bottom: 2em; }
+
+::-moz-selection{ background: #FFD700; color:#000; text-shadow: none; }
+::selection { background:#FFD700; color:#000; text-shadow: none; }
+
+
+@media print{
+ html body { width: auto; }
+ #searchform, .navigation { display: none; }
+}

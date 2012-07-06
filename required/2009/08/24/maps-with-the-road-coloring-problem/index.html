@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="readability-verification" content="DRPbu4h9pDUUaRVQCALsfmmh3nEygKucjzuDwsBv">
+<title>Maps with the road coloring problem &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" /> 
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="../../../../xmlrpc.php" />
+<meta name="viewport" content="width=725; initial-scale=0.43;" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+
+</head>
+<body>
+<div id="header">
+<h1><a href="../../../../index.html"><img width="600" height="139" src="../../../../../images/mast.png" alt="optional.is/required" /></a></h1>
+</div>
+
+			
+		<div class="post-843 post type-post status-publish format-standard hentry category-travel category-visualizations tag-compression tag-connected-graph tag-graph tag-instructions tag-maps tag-road-coloring-problem tag-signage tag-tourism tag-tourist" id="post-843">
+			<h2 style="border-bottom: 2px solid #efc395">Maps with the road coloring problem</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2009-08-24T11:11:46+00:00">Monday, August 24th, 02009 at 11:11 UTC</abbr></div>
+				<p><a href="http://en.wikipedia.org/wiki/Road_coloring_problem">The road coloring problem</a> is proposed as a graph theory problem, but once you understand it, the applications can be stretched into other disciplines. What the conjecture asks is: using a single set of instructions, is it possible to reach or located a destination from any other point within the network. Now, &#8220;the network&#8221; can easily be abstracted to &#8220;the city&#8221;. Imagine you arrive in a foreign city you&#8217;ve never been too before. You can&#8217;t read the language, you have no idea how to get to your destination and it is getting late. Traditionally, you might have a paper map which has issues with localization and internationalization not to mention changes since it was printed. The first hurdle is that you need to know where your destination is on the map. Secondly, you need to know where you are on the map. Couple that with the lack of local knowledge about street restrictions and the best route between the two points and things get tricky. What is needed is a simple and concise set of instructions from every possible point in the city to another.</p>
+<p>With a road colored map, this is simple, because from any node in the network you can get to any other with the exact same set of instructions. In our case the network is made-up of city streets and intersections. Each intersection is equivalent of a node and every edge a street. Now you can get to your destination knowing a simple set of instructions from any intersection in the city. The same instructions to get you to your hotel would apply if you were standing on main street or the airport terminal. Let&#8217;s see how this works.</p>
+<p>If we look at this example, the network has 8 nodes and each node has 4 lines radiating from it. Each line has a direction, either pointing to the node or away from it. Think of this as 8 street corners each with a combination of 4 one-way streets coming in and out.</p>
+<p><img style="float: left; padding-right: 15px;" title="Road Color Map" src="../../../../wp-content/uploads/2009/08/graph-road-color.png" alt="graph road color" width="238" height="237" />You can select any node in the graph and use the following set of instructions to get to node 1, Blue-Yellow-Yellow, Blue-Yellow-Yellow, Blue-Yellow-Yellow. It might not be the most efficient path, but it will always bring you to node 1.</p>
+<p>If you wanted to get to node 6 you use these instructions, Blue-Blue-Yellow, Blue-Blue-Yellow,Blue-Blue-Yellow. Every node in the city has a similar set of instructions so that no matter where you start, you will always end-up at the desired destination.</p>
+<p>Now, imagine this isn&#8217;t a contrived graph, but a map of a city with tourist attractions as the nodes. Node 1 might be a museum, node 2 the swimming pool. Instead of having different directions to get to every destination on the map, if the map where a &#8220;road colored map&#8221; the instructions would be simple—they would be identical. This would gives tourists an easy way to remember to how to get between places.</p>
+<div class="banner"><img title="Map road colored" src="../../../../wp-content/uploads/2009/08/map-road-color.jpg" alt="Map road colored" width="700" height="202" /></div>
+<p>At each destination, you could have the same signage about how to get to all the other destinations. No need to print specific directions to and from each location to the others.</p>
+<p><img style="float: right; padding-left: 15px" title="Sample Sign to tell you how to get anywhere from any point" src="../../../../wp-content/uploads/2009/08/road-color-sign.png" alt="road-color-sign" width="213" height="272" />The problem in real life is that the number of destinations in a city isn&#8217;t 8, it&#8217;s hundreds, which makes the graph vastly more complex. Urban expansion would be defined by how it fits into the graph—no exceptions. Since cities emerge organically, over time it would be impossible to not let an intersection be built until it connected with 3 other intersections or the re-routing of other streets. That&#8217;s just not practical urban development.</p>
+<p>In an ideal city, we can take the road coloring idea to another level. If we abstract the color information we can take the instructions Yellow-Yellow-Blue, which are actually an arbitrary choice between 2 options, Yellow or Blue and convert them to something else. There is no reason this couldn&#8217;t be Black and White, Ying and Yang or even 1 and 0. If we move to 0 and 1, this allows us to add another layer of encoding. Each choice is one bit, Yellow-Yellow-Blue becomes 110, three bits. If we were familiar with binary we could begin to encode this as a number, 110 is 6 in base 2. Postal addresses could take on a whole new meaning. To say, &#8220;I live at 123 Main street&#8221; might be giving people everything they need to get to your house from any point in the city. 123 would convert to 001-010-111 or Blue-Blue-Yellow, Blue-Yellow-Blue, Yellow-Yellow-Yellow. This is just a fictitious scenario, to actually encode this into an existing city would be extremely difficult, if not impossible highly improbably.</p>
+<p><img style="float: right; padding-left: 15px" title="Road Colored Map from CloudMade and OSM" src="../../../../wp-content/uploads/2009/08/road-color-map.png" alt="road-color-map" width="400" height="336" />In the end, this is an interesting thought experiment. The road coloring problem&#8217;s biggest asset is that the instruction set is very tiny. In this day and age of computers we should be wasteful of just about everything. The price of hardware has dropped so much it is virtually free, storage is next to free and bandwidth is trending to free. Our phones have larger and larger memory to store specific instructions rather than the small sub-set in the road coloring problem. The facets that we want to minimize, travel time and fuel are the two things that are very wasteful in this algorithm. One way this system could fully blossom would be with mass-transit. Possibly automated vehicles, you get inside, punch in your destination and it simply follows a predefined route. They don&#8217;t need to know where they are currently, just the simple pattern is needed to get to any other node in the system. If we get to the point where we have automated vehicles, then we&#8217;ll probably will have all sorts of interesting location based hardware which preempts the need for such a small instruction set of directions.</p>
+<p><img style="float: right; padding-left: 15px" title="Road Coloring In situ" src="../../../../wp-content/uploads/2009/08/road-color-in-situ.jpg" alt="Road Coloring In situ" width="220" height="149" />Needless to say, this is an interesting look at the possibilities of minimizing confusing directions between destinations. There might be something worth exploring further within the confines of an ideal city or on a specific subset of an existing map, such as tourist destinations or some sort of sight-seeing your where you simply start at any point on the route and can easily jump around to other parts without knowledge of your current location.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/travel/index.html" title="View all articles in Travel" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #1fb0f9">Travel</a>, <a href="../../../../category/visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../../../tag/compression/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #07f5d2">compression</a>, <a href="../../../../tag/connected-graph/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #cf32f9">connected graph</a>, <a href="../../../../tag/graph/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #f8b0b9">graph</a>, <a href="../../../../tag/instructions/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #cbde2d">instructions</a>, <a href="../../../../tag/maps/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #7e9447">maps</a>, <a href="../../../../tag/road-coloring-problem/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #cb12b9">road coloring problem</a>, <a href="../../../../tag/signage/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #bcaf75">signage</a>, <a href="../../../../tag/tourism/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #02a954">tourism</a>, <a href="../../../../tag/tourist/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #9c0763">tourist</a></p>			  </div>
+
+		<div class="navigation">
+			<div class="prev"><div class="time">14 August 02009</div><a href="../../14/prediction-markets/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #ef0e9e">&laquo; Introduction to Prediction Markets</a></div>
+			<div class="next"><div class="time">13 September 02009</div><a href="../../../09/13/everybody-votes/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #ce33a4">Everybody votes! &raquo;</a></div>
+		</div>
+
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+
+
+  <div style="float: left; font-size: 16px;">
+
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+
+</div> 
+<a href="../../../../../index.html" class="url" style="float:right; display: block;"><img src="../../../../../images/sm-black.png" alt="(optional.is)" class="logo fn org" /></a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>

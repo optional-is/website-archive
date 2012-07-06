@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="readability-verification" content="DRPbu4h9pDUUaRVQCALsfmmh3nEygKucjzuDwsBv">
+<title>HLS World Map &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" /> 
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="../../../../xmlrpc.php" />
+<meta name="viewport" content="width=725; initial-scale=0.43;" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+
+</head>
+<body>
+<div id="header">
+<h1><a href="../../../../index.html"><img width="600" height="139" src="../../../../../images/mast.png" alt="optional.is/required" /></a></h1>
+</div>
+
+			
+		<div class="post-1624 post type-post status-publish format-standard hentry category-cartography category-chromatics category-visualizations tag-algorithm tag-color tag-dopplr tag-equation tag-geonames tag-hls tag-map tag-svg tag-visualizations" id="post-1624">
+			<h2 style="border-bottom: 2px solid #4d26a5">HLS World Map</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2010-12-13T13:31:29+00:00">Monday, December 13th, 02010 at 13:31 UTC</abbr></div>
+				<p>This post is part of a series in the exploration of color. Recently, I have been fascinated by various aspects of how to use color, how we interpret color and some best practices. In this post, I am exploring automatic color generation programmatically, meaning that given the same input over and over, you get back the same color. Sometimes it is meaningful, sometimes it isn&#8217;t, but either way it is predictable.</p>
+<p>I am a big fan of <a href="http://blog.dopplr.com/2007/10/23/in-rainbows/">Dopplr&#8217;s coloring algorithm</a>, it is elegantly simple and reproducible across programing languages, platforms and machines. The concept is that having a large data set which requires unique colors can be encumbering. Firstly, you need to generate or select a color for each item, then create a mapping between each term and the color look-up. If you could somehow derive a color from the text itself, then you can do away with the overhead of the color to term mapping.</p>
+<p>The Dopplr alogrithm does just this, using the city name as the seed which is fed into an md5() hash function a unique color can be derived. This md5 function returns a 32 character hexadecimal string. This is a one-way hash, it is unique and widely reproducible on any machine that implements md5(). Next, we need to move from the massive 32 character string down to the standard RGB 255,255,255 range. This is done by simply using the first 6 characters rather than all 32. The algorithm ends-up looking something like:</p>
+<p><code>$hex_color = sub-string(md5($original_string), 0, 6)</code></p>
+<p>Using this, the string &#8220;Brian Suda&#8221; and this algorithm, you will always get #338c88 back. Changing the text ever so slightly makes a completely different color. The string &#8220;brian suda&#8221; produces #7864fd. This means that for a very large set of data, you can create a fairly unique color simply and easily. Dopplr uses this to giving each city it&#8217;s own color, giving you a nice little colored icon of upcoming destinations.</p>
+<p>The downside to the Dopplr algorithm is when you have two cities which were geographically close, yet could be completely different colors, there is no way to represent the concept of nearness. Take for instance London, it is the color #59ead8, but nearby Oxford is #f0dddd. Having radically different colors might be a good thing for some use cases, but it is confusing if you are trying to build a relationship of what is close.</p>
+<p>I wondered if it was possible to generate a color, not based on the string of the city name, but based on a location, therefore pushing more metadata into it at a glance. Geographically close locations would have varying shades of a similar color.</p>
+<p><img style="float: right; padding-left: 15px" title="Worldflag system" src="../../../../wp-content/uploads/2010/12/worldflag-system.gif" alt="Worldflag system" width="212" height="190" />To do this, I didn&#8217;t use the standard RGB space we&#8217;re used too. My algorithm uses the HLS (Hue, Lightness, Saturation) color space. Originally, I saw a poster called &#8220;<a href="http://www.behance.net/gallery/Worldflag-System/317559">Worldflag System</a>&#8221; in which they made a new flag for each nation based on the GDP, population and location. It was an interesting way to glean more data about a country from just the flag. So I tried my hand at creating a similar algorithm to do encode the latitude and longitude of a single point into a color. That way it makes it much more generic and allows me to color more than just a country.</p>
+<p>To get some seed data, I went to <a href="http://www.geonames.org/">GeoNames.org</a> and downloaded a list of all the cities with over 1,000 people in population. This gave me plenty of data and latitudes and longitudes to test. I used a very <a href="../../../06/28/geonames-maps/index.html">similar codebase as I did in my previous GeoNames experiments</a> to convert the text files into an image. I generated a point for every city based on the X,Y of the latitude, longitude, and made the color of the dot based on location data.</p>
+<p>Longitude wraps from -180° to +180°, that&#8217;s a 360° arc. The hue value in HLS is also from 0 to 360, so the conversion between the two is easy. Next, I mapped the latitude of +/-90° to the Lightness. In HLS the Lightness and Saturation are from 0 to 1, so I converted the total possible 180 degres into 0 to 1 values for the Lightness. This means the north pole is pure white and the south pole is pure black. Finally, I fixed the saturation at 1, but if you really wanted to experiment this could changed based on the altitude or another variable.</p>
+<p><img style="float: right; padding-left: 15px;" title="Oymyakon" src="../../../../wp-content/uploads/2010/12/oymyakon.png" alt="Oymyakon" width="125" height="125" />Now any point on the planet can be given an HLS color based on this simple equation. HLS maps nicely back to RGB, which can be represented as a hex color for use online. Take for instance, <a href="http://en.wikipedia.org/wiki/Oymyakon">Oymyakon</a> a village with less than 1,000 people. You have probably never heard it and have no idea where it might be. When we feed in the latitude and longitude to the algorithmic, we get back #d80086, a light pink color. In relation to the full world map you can get a rough guess were it is located. Sure, this isn&#8217;t good enough for driving directions, but it will get you in the area pretty quickly on the scale of the globe.</p>
+<p>Using the full data set, I plotted the dots in their respective colors via SVG. Then open the file in an editor for final clean-up and I added some instructional notes. The resulting map looked like this:</p>
+<div class="banner"><img class="alignnone size-full wp-image-1638" title="HLS World" src="../../../../wp-content/uploads/2010/12/hls-world.png" alt="A map of all cities in the world with a population over 1000 people" width="700" height="328" /></div>
+<p>You can easily see that the spectrum fades from yellow into green into blue, all the way through back to red. Using just the locations of the cities you can get a rough outline of the continents and easily see the sparsely populated areas compared to the densely.</p>
+<p>It&#8217;s possible to see the usefulness of having the location data encoded into the color itself. Take for instance two town names, if they are both shades of blue, but one is darker than the other, you will know that the darker one is more southerly. The same inbuilt location knowledge applies to a green dot versus a blue dot. The green is more westerly.</p>
+<p>To demonstrate the ability to locate a place on the map with only color, I found <a href="http://en.wikipedia.org/wiki/Seven_Summits">a list on wikipedia of the tallest mountains on each continent</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Summit</th>
+<th>Elevation</th>
+<th>latitude</th>
+<th>longitude</th>
+</tr>
+</thead>
+<tbody>
+<tr class="geo">
+<td class="item fn">Kilimanjaro (Volcano Kibo: Uhuru Peak)</td>
+<td>5892m</td>
+<td class="latitude">-3.075833</td>
+<td class="longitude">37.353333</td>
+</tr>
+<tr class="geo">
+<td class="item fn">Vinson Massif</td>
+<td>4892m</td>
+<td class="latitude">-78.525483</td>
+<td class="longitude">-85.617147</td>
+</tr>
+<tr class="geo">
+<td class="item fn">Kosciuszko</td>
+<td>2228m</td>
+<td class="latitude">-36.455981</td>
+<td class="longitude">148.263333</td>
+</tr>
+<tr class="geo">
+<td class="item fn">Carstensz Pyramid (Puncak Jaya)</td>
+<td>4884m</td>
+<td class="latitude">-4.083333</td>
+<td class="longitude">137.183333</td>
+</tr>
+<tr class="geo">
+<td class="item fn">Everest (Sagarmatha or Chomolungma)</td>
+<td>8848m</td>
+<td class="latitude">27.988056</td>
+<td class="longitude">86.925278</td>
+</tr>
+<tr class="geo">
+<td class="item fn">Elbrus (Minghi-Tau)</td>
+<td>5642m</td>
+<td class="latitude">43.355</td>
+<td class="longitude">42.439167</td>
+</tr>
+<tr class="geo">
+<td class="item fn">Mount McKinley (Denali)</td>
+<td>6194m</td>
+<td class="latitude">63.0695</td>
+<td class="longitude">-151.0074</td>
+</tr>
+<tr class="geo">
+<td class="item fn">Aconcagua</td>
+<td>6962m</td>
+<td class="latitude">32.655556</td>
+<td class="longitude">-70.015833</td>
+</tr>
+</tbody>
+</table>
+<p><img style="float: left; padding-right: 15px;" title="HLS Mountains" src="../../../../wp-content/uploads/2010/12/hls-mountains.png" alt="Mountain colors based on their latitude and longitude" width="303" height="385" />Some of these mountains you may recognize, others you don&#8217;t. Converting their latitudes and longitudes into colors and you can see roughtly where they appear on an HLS World map. From the silhouette of the continents, you can quickly guess where about these mountains sit. This could be applied to just about any point of interest; towns, mountains, volcanoes, forests, ship wrecks, etc. All this geographic color encoding means that there is some additional data which can be glean from the color about the part in relation to the whole.</p>
+<p>This same concept of giving points a color based on their location can be used within a single country, state or town. The scaling factors just need to be re-adjusted  to accommodate the new dimensions of the area. Instead of +/-180° longitude, it&#8217;s scales over the smaller range. You could map London with a similar hue gradient. It would be obvious if two points were vastly different colors that will take some time to get there!</p>
+<p>These are just two quick and simple algorithms for giving a placename a color. Each has benefits and drawbacks, but as a proof-of-concept the HLS map can be used to encode more data into a color than before. Using this knowledge might be useful in a projects in the future.</p>
+<h2>Downloads</h2>
+<ul>
+<li><a href="../../../../wp-content/uploads/2010/12/map-poster.pdf">PDF A3 Poster of HLS world map</a></li>
+</ul>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/cartography/index.html" title="View all articles in Cartography" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #992978">Cartography</a>, <a href="../../../../category/chromatics/index.html" title="View all articles in Chromatics" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #1e7940">Chromatics</a>, <a href="../../../../category/visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../../../tag/algorithm/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #ed4696">algorithm</a>, <a href="../../../../tag/color/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #70dda5">color</a>, <a href="../../../../tag/dopplr/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #874e0a">dopplr</a>, <a href="../../../../tag/equation/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #1fc3e5">equation</a>, <a href="../../../../tag/geonames/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #f9c6c0">geonames</a>, <a href="../../../../tag/hls/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #6b517d">hls</a>, <a href="../../../../tag/map/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #1d78dc">map</a>, <a href="../../../../tag/svg/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #ae8eb9">svg</a>, <a href="../../../../tag/visualizations/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p>			  </div>
+
+		<div class="navigation">
+			<div class="prev"><div class="time">03 December 02010</div><a href="../../03/building-a-better-business-card/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #27e922">&laquo; Building a better business card</a></div>
+			<div class="next"><div class="time">01 January 02011</div><a href="../../../../2011/01/01/omnibus-02010/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #20338c">Omnibus 02010 &raquo;</a></div>
+		</div>
+
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+
+
+  <div style="float: left; font-size: 16px;">
+
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+
+</div> 
+<a href="../../../../../index.html" class="url" style="float:right; display: block;"><img src="../../../../../images/sm-black.png" alt="(optional.is)" class="logo fn org" /></a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>

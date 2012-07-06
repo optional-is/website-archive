@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="readability-verification" content="DRPbu4h9pDUUaRVQCALsfmmh3nEygKucjzuDwsBv">
+<title>Maximum Color Contrast &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" /> 
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="../../../../xmlrpc.php" />
+<meta name="viewport" content="width=725; initial-scale=0.43;" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+
+</head>
+<body>
+<div id="header">
+<h1><a href="../../../../index.html"><img width="600" height="139" src="../../../../../images/mast.png" alt="optional.is/required" /></a></h1>
+</div>
+
+			
+		<div class="post-1675 post type-post status-publish format-standard hentry category-chromatics tag-accessibility tag-color tag-contrast tag-dopplr tag-hls tag-programatic tag-rgb tag-yiq" id="post-1675">
+			<h2 style="border-bottom: 2px solid #259847">Maximum Color Contrast</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2011-01-12T12:21:30+00:00">Wednesday, January 12th, 02011 at 12:21 UTC</abbr></div>
+				<p>In a previous article, <a href="../../../../2010/12/13/hls-world-map/index.html">I created a world map in the HLS color space based on the latitude and longitude of the city names</a>. I also demonstrated two different ways to deterministically create a unique color for a city name. The first was based on a hash of the location name and the other on the geolocation. There are plenty of other algorithms that could be used, but I focused on those two. The downside of giving yourself over to the algorithm completely is that you will sometimes get very light colors and other times very dark. The output you receive will run the full range of possible colors and you need to be prepared to deal with them in your design. To handle the unexpected, the function that returns a unique color needs a friend. This friendly helper algorithm will return black or white, depending on which has the higher contrast with your color.</p>
+<p>There are a few ways to determine the level of contrast between colors. In this article, I will examine three. They are easy to implement and all produce similar results. It isn&#8217;t a matter of which is best, but more the fact that you are using one at all!</p>
+<div class="banner"><img title="Color Chips" src="../../../../wp-content/uploads/2010/12/color-chips.png" alt="Color Chips" width="700" height="120" /></div>
+<p>Let&#8217;s have a look at four locations, <a href="http://en.wikipedia.org/wiki/Reykjavik">Reykjavík, Iceland</a>, <a href="http://en.wikipedia.org/wiki/London">London, England</a>, <a href="http://en.wikipedia.org/wiki/Lagos">Lagos, Nigeria</a> and <a href="http://en.wikipedia.org/wiki/Johannesburg">Johannesburg, South Africa</a>. When we run these places through both the Dopplr and the HLS Lat/Lon algorithms you see that we get different colors. The Dopplr colors are nice and unique based on a hash of the location name, but don&#8217;t tell you any additional information. The HLS Lat/Lon are based on the location therefore the results are getting darker and darker as you move southward. They are also shading from green to blue as you move eastward.</p>
+<p>Now that we have colors for each location we need to find out whether any accompanying text should be white or black based on which has a higher contrast.</p>
+<p>There are three functions I want to compare. The first I will simply called 50%. This takes the hex value and compares it to half-way between pure black and pure white. If the hex value is less than half, it returns white, if it is more than half it returns black.</p>
+<pre><code>function getContrast50($hexcolor){
+	return (hexdec($hexcolor) &gt; 0xffffff/2)?'black':'white';
+}
+</code></pre>
+<p>It doesn&#8217;t get much simpler! It is easy to remember, but is naïve when it comes to understanding how we perceive parts of the spectrum. Different wavelengths have greater or lesser impact on the contrast. The second equation is called YIQ because it converts the RGB color space into <a href="http://en.wikipedia.org/wiki/YIQ">YIQ</a> which takes into account the different impacts of its constituent parts. Again, the equation returns white or black and is also very easy to implement.</p>
+<pre><code>function getContrastYIQ($hexcolor){
+	$r = hexdec(substr($hexcolor,0,2));
+	$g = hexdec(substr($hexcolor,2,2));
+	$b = hexdec(substr($hexcolor,4,2));
+
+	$yiq = (($r*299)+($g*587)+($b*114))/1000;
+
+	return ($yiq &gt;= 128)?'black':'white';
+}
+</code></pre>
+<p>You&#8217;ll first notice that the hex value has been broken down into the RGB values separately. This is important because each of these channels is scaled in accordance to their visual impact. Once everything is scaled, it will be in a range between zero and 255. Much like the previous 50% equation, we now need to check if the input is above or below half-way. Depending on which section it sits in, we&#8217;ll return the corresponding higher contrasting color.</p>
+<p>The third function deals with luminosity, which is the brightness of the color.</p>
+<pre><code>function getContrastL($hexcolor){
+	$r = hexdec(substr($hexcolor,0,2));
+	$g = hexdec(substr($hexcolor,2,2));
+	$b = hexdec(substr($hexcolor,4,2));</code></pre>
+<pre><code>	$l = ($r*0.2126)+($g*0.7152)+($b*0.0722);
+
+	return ($l &gt;= 128)?'black':'white';
+}</code></pre>
+<p>As you can see, we broken down the RGB into it&#8217;s constituent parts and applied slightly different scaling values. The resulting value is again between zero and 255, so we compare half-way to find the maximum contrast.</p>
+<p>That&#8217;s it, three simple contrast equations which work really well to determine the best readability.</p>
+<p>The <a href="http://www.w3.org/TR/AERT#color-contrast">W3C has a few documents about color contrast</a> and how to determine if there is enough contrast between any two colors. <a href="http://particletree.com/notebook/calculating-color-contrast-for-legible-text/">Particletree wrote-up their experience with choosing light or dark themes in their products</a> and Jonathan Snook created a <a href="http://snook.ca/technical/colour_contrast/colour.html">color contrast picker</a> which allows you to play with the RGB sliders and get values for YIQ, contrast and others in return.</p>
+<p>If we go back to the cities list and their color swatches let&#8217;s see what color we should be using for maximum contrast based on the equations.</p>
+<p>If we use the simple 50% contrast function we can see that it recommends white against all the colors except the first three Dopplr results. The equation feels these are too light and that black is a better fit.</p>
+<div class="banner"><img title="Color Chips 50%" src="../../../../wp-content/uploads/2010/12/color-chips-50.png" alt="" width="700" height="333" /></div>
+<p>The more complex YIQ and Luminosity functions, with its weighted colors, had identical results for these colors, but they were a slightly different suggestion than the 50% function. The very dark colors still get recommended white text, but there are some surprises. The brown Reykjavík is recommended as white rather than black. The two lighter colors in the HLS lat/lon result are also inverted compared to the 50% results. These equations feels that the hue is too light and that black has the most contrast.</p>
+<div class="banner"><img title="Color Chips YIQ" src="../../../../wp-content/uploads/2010/12/color-chips-yiq.png" alt="" width="700" height="333" /></div>
+<p>As you can see the two contrast algorithms agree most of the time. There are some instances where they conflict, but overall you can use the equation you like better. I don&#8217;t think it is a major issue if some edge-case colors get one contrast over another, they are still readable, the maximum readability will always be debatable.</p>
+<p>Rather than pull some edge-case city colors, let&#8217;s look at some common colors and then see how the three functions compare. You can quickly see that they do pretty well across the whole spectrum. Again, salt to taste.</p>
+<div class="banner"><img title="Contrast Common" src="../../../../wp-content/uploads/2010/12/contrast1.png" alt="" width="700" height="324" /></div>
+<p>In the first few shades of grey, the white and black contrasts make sense, but as we test other colors in the spectrum, we do get some unexpected deviation. Pure red #FF0000 has a flip-flop. This is due to how the YIQ function weights the RGB parts. You might have a personal preference to one style over another, both are justifiable.</p>
+<div class="banner"><img title="Contrast Uncommon" src="../../../../wp-content/uploads/2010/12/contrast2.png" alt="" width="700" height="324" /></div>
+<p>In this second round of colors, we go deeper into the spectrum, off the beaten path. Again, most of the time the contrasting algorithms are in sync, but every once an awhile they disagree. You can select which you like better, neither of which are recommending a bad combination.</p>
+<p>If you are dealing with large data sets and take the hands off approach to selecting unique colors, then you are going to need to be aware of contrast. You now know at least three different ways to determine when you should be using white or black as a complimentary color. There is no excuse to create a better experience for your customers, avoid confusion and make it pleasing on the eyes. Sure, there are plenty of other color and contrast generating algorithms, but this was just an introduction to show how easy it can be to provide better defaults to your customers.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/chromatics/index.html" title="View all articles in Chromatics" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #1e7940">Chromatics</a></p><p><strong>Tags:</strong> <a href="../../../../tag/accessibility/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #0ff85b">accessibility</a>, <a href="../../../../tag/color/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #70dda5">color</a>, <a href="../../../../tag/contrast/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #c8fd07">contrast</a>, <a href="../../../../tag/dopplr/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #874e0a">dopplr</a>, <a href="../../../../tag/hls/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #6b517d">hls</a>, <a href="../../../../tag/programatic/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #a56491">programatic</a>, <a href="../../../../tag/rgb/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #889574">RGB</a>, <a href="../../../../tag/yiq/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #a3b315">YIQ</a></p>			  </div>
+
+		<div class="navigation">
+			<div class="prev"><div class="time">01 January 02011</div><a href="../../01/omnibus-02010/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #20338c">&laquo; Omnibus 02010</a></div>
+			<div class="next"><div class="time">29 January 02011</div><a href="../../29/protected-cultural-property/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #ea51ec">Protected Cultural Property &raquo;</a></div>
+		</div>
+
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+
+
+  <div style="float: left; font-size: 16px;">
+
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+
+</div> 
+<a href="../../../../../index.html" class="url" style="float:right; display: block;"><img src="../../../../../images/sm-black.png" alt="(optional.is)" class="logo fn org" /></a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>

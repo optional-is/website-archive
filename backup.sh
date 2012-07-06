@@ -2,7 +2,7 @@
 git pull
 
 # Curl the existing site to get new content
-#wget -rkp -l2 -np -nH --cut-dirs=1 http://optional.is/required/
+wget -rkp -nH http://optional.is/
 
 # Git add any new files
 git add .
@@ -11,4 +11,5 @@ git add .
 git commit -m "Archive fecthed on `date`"
 
 # Git Push to keep the repo up to date
+# Might have issues with name/passwords here.
 git push

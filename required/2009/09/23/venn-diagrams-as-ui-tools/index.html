@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="readability-verification" content="DRPbu4h9pDUUaRVQCALsfmmh3nEygKucjzuDwsBv">
+<title>Venn Diagrams as UI Tools &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" /> 
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="../../../../xmlrpc.php" />
+<meta name="viewport" content="width=725; initial-scale=0.43;" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+
+</head>
+<body>
+<div id="header">
+<h1><a href="../../../../index.html"><img width="600" height="139" src="../../../../../images/mast.png" alt="optional.is/required" /></a></h1>
+</div>
+
+			
+		<div class="post-746 post type-post status-publish format-standard hentry category-visualizations tag-advanced-query tag-and tag-boolean-logic tag-first-order-logic tag-gui tag-gui-controls tag-limiting tag-not tag-or tag-query tag-search tag-search-results tag-venn tag-venn-diagram" id="post-746">
+			<h2 style="border-bottom: 2px solid #c1f692">Venn Diagrams as UI Tools</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2009-09-23T23:32:45+00:00">Wednesday, September 23rd, 02009 at 23:32 UTC</abbr></div>
+				<p>A previous article about the <a href="../../../07/20/pie-charts-and-other-circular-visualizations/index.html">problems with pie charts</a> received plenty of attention. This time I&#8217;m taking on <a href="http://en.wikipedia.org/wiki/Venn_diagrams">Venn diagrams</a>. As a numeric graph, these share many of the same failings as pie charts. They require the observer to estimate relative areas on abstract shapes.</p>
+<p><img style="float: right; padding-left: 15px" title="Venn Diagram Example 1" src="../../../../wp-content/uploads/2009/07/venn-diagram-1.png" alt="Venn Diagram Example 1" width="250" height="200" />In this example, you can see two overlapping circles. Firstly, did you know one circle is double the area of the other? Probably not, because we&#8217;re not very good at judging relative areas of shapes. Can you determine the value of the overlap area? The equation is complex on paper, let alone in your head!</p>
+<p>You need to take the cord that cuts the circle, find the height <em>h</em>, the length of the cord <em>L</em> and the radius of the circle <em>R</em>.</p>
+<div class="banner"><code>A = 1/2 × R<sup>2</sup> × (2 × arcsin(L/(2R))) - L/2 × (R-h)</code></div>
+<p>That gives you area of the cord which you&#8217;d need to repeat for the other circle, then add the two values together. See not so easy now is it!</p>
+<p>To &#8220;improve&#8221; this as a graph, we&#8217;d need to add the values for each area. In doing so, we&#8217;re back to the same issue with the pie chart, if you need labels, why isn&#8217;t this just a table? What additional information do you learn from the circles?</p>
+<p>As a graph to convey some percentage of overlap Venn diagrams are just eye-candy, but they do have a strong reason to exist.</p>
+<h2>Venn Diagram&#8217;s for Abstract Concepts</h2>
+<p>Venn diagrams excel when they explain logical concepts such as philosophical ideas or arguments.</p>
+<p>If we take the assertions: <em>all mammals are part of the animal kingdom </em>and <em>humans are mammals</em>, we can determine that humans are animals.<img style="float: right; padding-left: 15px" title="Venn Diagram Example 2" src="http://chart.apis.google.com/chart?cht=v&amp;chs=100x100&amp;chd=t:100,50,10,50,10,10&amp;chco=FCD116,FFA500,000000" alt="" width="100" height="100" /> If we represent this as a Venn diagram there is one large circle representing all animals. Inside of this, there&#8217;d be another circle representing all mammals, and finally within that, a final smaller circle representing humans. The circles are getting smaller because each contains multiple assertions. Humans are mammals, but so are dogs and cats. Humans are just a subset and therefore don&#8217;t take-up the whole area of the circle. If we remove the circle representing mammals and we&#8217;d be left with the assertion humans are animals.</p>
+<p>From this, we can begin to build-up logical statements, also known as <a href="http://en.wikipedia.org/wiki/Propositional_calculus">propositional calculus</a>. Take for instance the following assertions: &#8220;it is raining&#8221;, &#8220;the ground is wet&#8221;. In propositional calculus we need to be aware of several logical statements and their fallacies. Take for instance Modus Tollens:</p>
+<div class="banner"><code>If <em>p</em> then <em>q</em>; not <em>q</em>; therefore not <em>p</em>.</code></div>
+<p>If we substitute our earlier assertions, &#8220;it is raining&#8221; and &#8220;the ground is wet&#8221; into this equation we get:</p>
+<div class="banner"><code>If "it is raining" then "the ground is wet"; not "the ground is wet"; therefore not "it is raining"</code></div>
+<p>Then logical fallacy comes in when you invert the assertions.</p>
+<div class="banner"><code>If "the ground is wet" then "it is raining"; not "it is raining"; therefore not "the ground is wet"</code></div>
+<p>While the first part might be true, the second part does not logically follow from it. There could be other reasons why the ground is wet even though it is not raining. People could be outside watering plants or washing their car. <img style="float: left; padding-right: 15px" title="Venn diagram Example 3" src="http://chart.apis.google.com/chart?cht=v&amp;chs=250x150&amp;chd=t:100,50,10,40,10,00&amp;chco=FCD116,FFA500,000000&amp;chdl=The%20ground%20is%20wet|Watering%20Plants|it%20is%20raining" alt="" width="250" height="150" />We can build these assertions as a Venn diagram to help explain why the inverse is not true.</p>
+<p>The state of the world is either the ground being wet or not. So the largest circle is for the ground being in the wet state. A small circle inside of this represents &#8220;it is raining&#8221;. This is wholly within the circle &#8220;the ground is wet&#8221; because every time it rains the ground must be wet. We know this from our original assertion. But as you can see from the diagram, there are other reasons why the ground can be wet. For instance, &#8220;watering plants&#8221; can make the ground wet or may not. Therefore, that circle is partly inside and partly outside the circle &#8220;the ground is wet&#8221;.</p>
+<p>Now if we go back to our assertions, if it&#8217;s raining the ground is wet. If we examine every point inside the circle &#8220;it is raining&#8221; we&#8217;ll find that it is contained by the circle &#8220;the ground is wet&#8221;. When we negate the statement, the ground is not wet, it is not raining. &#8220;Ground not wet&#8221; is represented by all the space outside the largest circle and nowhere in that space is any part of the circle &#8220;it is raining&#8221;.</p>
+<p>The inverse does not hold-up. If the ground is wet, it is raining. If we look at the circle &#8220;The ground is wet&#8221; some of the area inside of this contains the circle &#8220;it is raining&#8221;. So this statement is not immediately false, but there are other reasons why the ground could be wet. The last part we need to address is the inverted negation &#8220;it&#8217;s not rain&#8221; therefore &#8220;the ground is not wet&#8221;. &#8220;It is not raining&#8221; is described by the area outside the circle &#8220;it is raining&#8221; and as we can plainly see, some of that area contains the circle &#8220;the ground is wet&#8221;.</p>
+<p>Venn diagrams modeling logical statements allow us to visualize larger constructs in ways that are easier than written sentences without having to deal with exact numeric values.</p>
+<h2>First Order Logic</h2>
+<p>First order logic, truth tables and logical operators sound complicated, but they&#8217;re really not. We make statements in these forms all the time without even realizing it. When preparing dinner, you  look through the fridge and see what&#8217;s available. Maybe you have some rice, then you need to ask your self, &#8220;I can cook some chicken or beef to go along with this.&#8221; Next you might think, &#8220;if I have chicken, I need to cook some vegetables.&#8221; This is built-up to statements such as:</p>
+<div class="banner"><code>Dinner = Rice AND ((Chicken AND Vegetables) OR Beef)</code></div>
+<p>The basics behind first order logic revolve around <a href="http://en.wikipedia.org/wiki/Truth_Table">truth tables</a> of AND, OR and NOT. This is a table that shows you the results if you were to look at all the possibilities and their resulting operations.</p>
+<p>If there are two options &#8220;Chicken&#8221; or &#8220;Beef&#8221; the truth tables based on AND and OR are as follows:</p>
+<table border="0">
+<tbody>
+<tr>
+<th>Chicken</th>
+<th>Beef</th>
+<th>AND</th>
+<th>OR</th>
+</tr>
+<tr>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p>Having this truth table, we can ask questions such as &#8220;Are you having beef <strong>OR</strong> chicken for dinner?&#8221; You can quickly look at the first two columns and begin to fill-in the blanks. The first row represents Chicken=No, Beef=No, so the answer to the question would be the corresponding OR column, &#8220;No, we are not having beef or chicken for dinner&#8221;. Now, if we look at the next row, chicken=No, beef=Yes, you can answer the question, &#8220;Yes, we are having beef or chicken for dinner.&#8221; Presumably, you don&#8217;t get the answer you wanted, which is &#8220;what is on the menu&#8221;, but using these truth tables you can build-up chains of these statements to determine answers to other questions. Plenty of board games such as Clue/Cluedo benefit from this sort of logic, &#8220;Do you have Professor Plum <strong>OR</strong> the Observatory <strong>OR</strong> the Revolver&#8221;, then then a card gets shown. So you know at least one of those was a yes! Over time, with enough truth tables, you can win the game, but be careful, if you get too good, all your friends will call you a dork and never play board games with you again—there is an art to bluffing and knowing when to be a gracious loser.</p>
+<h2>Performing a Web Search with Logical Operators</h2>
+<p>With this knowledge of logical operators it is possible to plug them into search engines to get more refined results, but it is highly unlikely that you have done this and if you have, I bet you don&#8217;t do it very often. The reason being, it&#8217;s too difficult to write out these long strings, the syntax for ANDs and ORs plus all the nested parentheses for groupings feels like a programming language when all you wanted to do is search.</p>
+<p>Let&#8217;s take the three terms: Peanut Butter, Jelly, Bananas and examine a few different combinations which would allow us to search for vastly different documents.</p>
+<div class="banner"><code>Peanut Butter OR Jelly OR Bananas</code></div>
+<p>Sites like Google use something similar to the truth table when determining if it should return a document. It asks each document, do you have the term &#8220;Peanut Butter&#8221; and saved the answer Yes or No. It then repeats this for the other two terms for all the documents. It then looks in the corresponding OR column. If the result is a Yes, then the page is returned as a search result matching the query. Now, computers are very good at this sort of logic, so the truth table is over simplifying what actually happens.</p>
+<p>Let&#8217;s look at some other possible queries and think about what the truth table might look like and if the returned documents make sense.</p>
+<div class="banner"><code>Peanut Butter AND Jelly AND Bananas</code></div>
+<p>This query will find all documents which contain all three  terms, because for the AND operator to return Yes, all the individual items must also be Yes.</p>
+<div class="banner"><code>Peanut Butter AND (Jelly OR Bananas)</code></div>
+<p>This query will find all documents with the term &#8220;Peanut butter&#8221; as well as one of the other two remaining terms. So you&#8217;ll be reading articles about Peanut Butter and Jelly sandwiches next to article about Peanut Butter and Banana sandwiches. The key is that Peanut Butter will be present in every article returned.</p>
+<div class="banner"><code>(Peanut Butter AND Jelly) OR Bananas</code></div>
+<p>This query will find documents all documents that contain the terms Peanut Butter and Jelly, or documents that contain the term Bananas.</p>
+<p>This doesn&#8217;t express all the permutations or even touch on the concept of NOTs. Such as, show me all articles about Peanut Butter and Banana sandwiches not involving Elvis.</p>
+<p>Sites like Google have created advanced search forms which make it easier to build-up boolean logic queries, but they aren&#8217;t intuitive.</p>
+<div class="banner"><img title="google-advanced-search" src="../../../../wp-content/uploads/2011/08/google-advanced-search.png" alt="google-advanced-search" width="542" height="232" /></div>
+<p>This form has the ability to conduct AND and OR searches, echoing back the query string to help teach people how they can do create their own searches without having to visit this page.</p>
+<p>Google will argue that their search algorithm is good enough to get round edge-cases which require monolithicly complex queries. In Google&#8217;s case, they are probably right, the general public will never need to make use of such specific searches, but that doesn&#8217;t mean other more niche systems won&#8217;t need a solution.</p>
+<h2>Venn Diagrams as GUI Controls</h2>
+<p>One thing I have been experimenting with, and I&#8217;ll be the first to admit it might be a failure, is to map complex AND and OR queries to sections of a clickable Venn diagram. This is no longer a data graph, and it is bordering on no longer being a visualization, but instead a GUI component with the same first class status as the checkbox or radio button.</p>
+<p>A Venn GUI control needs to be intuitive, easy to interact with, and immediately usable. At the moment this prototype isn&#8217;t there yet, but with further development, testing and tweaking, I think it shows promise in a niche sub-set of search applications.</p>
+<h3>Requirements</h3>
+<p>There are several technical goals of this new GUI component which need to be addressed.</p>
+<ul>
+<li>The control needs to look like a control, look clickable and react in some form like a checkbox remembering state</li>
+<li>The clickable zones need to be large enough to be distinct from each other and so that they can acquired with ease as defined by <a href="http://en.wikipedia.org/wiki/Fitts%27s_law">Fitts&#8217;s law</a></li>
+<li>Accessible in a manner that there is some logical tab ordering or ability to activate zones without a pointing device</li>
+<li>Associate each zone with the concept or concepts it represents</li>
+<li>Usable on a monochrome display</li>
+</ul>
+<p>Beyond the technical requirements, there needs to be an association with what the Venn diagram is trying to convey. Will people understand the concept of a union of multiple terms?</p>
+<h3>Issues</h3>
+<ul>
+<li>The current design can easily handle 2 and 3 term Venn diagrams, but it does not easily scale to N&gt;3</li>
+<li>At the moment this requires some scripting language to handle the click-behavior. This could be moved into a proprietary format such as Flash. If this were ever to become a standard GUI control, any behavior would natively be handled by the application, but until then, there are some external dependencies.</li>
+</ul>
+<p>So this is the first draft of the Venn diagram GUI control. It was written in SVG with some minor javascript to control the interactions. You can <a href="../../../../wp-content/uploads/2009/09/UI-selector.svg">view the source and see how it all works</a>, a modern browser is needed.</p>
+<div class="banner"><img class="aligncenter size-full wp-image-929" title="venn-diagram-colours" src="../../../../wp-content/uploads/2009/09/venn-diagram-colours.png" alt="venn-diagram-colours" width="573" height="192" /></div>
+<p>As you can see, it is modeled after the RGB color spectrum. The feedback from this test focused around not really understanding the colors or what was happening—back to the drawing board.</p>
+<p>This first implementation didn&#8217;t look like a GUI control, it looked like a corporate logo. It didn&#8217;t &#8220;smell&#8221; like a widget so people were unaware of how to treat it.</p>
+<p><img style="float: right; padding-left: 15px" title="Venn Diagream in situ" src="../../../../wp-content/uploads/2011/08/venn-in-situ.png" alt="Venn Diagream in situ" width="414" height="131" />I proceeded to add some 3Dness to the shapes by beveling the edges and adding a slight gradient to mimic an external light source. This is an example of how the control might look in situ.</p>
+<p>The next step was to make the selected state more obvious without the RBG colors. The main color can be swapped out based on your theme, but for this I am using red.</p>
+<p>If we have 3 search terms, Peanut Butter, Jelly and Bananas, the following Venn diagram would equate to the search:</p>
+<p><img style="float: left; padding-right: 15px" title="venn-in-situ-selected" src="../../../../wp-content/uploads/2011/08/venn-in-situ-selected.png" alt="venn-in-situ-selected" width="106" height="96" /><code>Show me all articles that contain the word ("Banana" OR ("Banana" AND "Peanut Butter")) AND NOT "Jelly"</code>.</p>
+<p>The circle as a whole represents all articles that contain the word &#8220;Banana&#8221;, but we have only selected the outermost part. Which are documents that just contain the word &#8220;Banana&#8221; and not the other two terms. We have also selected the small overlapping section between &#8220;Banana&#8221; and &#8220;Peanut Butter&#8221; so it will also return those corresponding documents.</p>
+<p><img style="float: left; padding-right: 15px" title="venn-in-situ-selected2" src="../../../../wp-content/uploads/2011/08/venn-in-situ-selected2.png" alt="venn-in-situ-selected2" width="101" height="91" /> In this example, the Venn Diagram represents a slightly more complex search query, yet it&#8217;s just as easy to click on and understand. We have selected the small wedge between &#8220;Peanut Butter&#8221; and &#8220;Bananas&#8221; as well as the small wedge between &#8220;Jelly&#8221; and&#8221; Bananas&#8221;. The third section is the intersection of all three terms. So the search query written out would look like this:</p>
+<p><code>Show me all documents that contain: ("Bananas" AND "Peanut Butter") OR ("Bananas" AND "Jelly") OR ("Peanut Butter" AND "Jelly" AND "Bananas")</code></p>
+<p>Clicking the different regions to adjust your advanced search seems to be much faster and easier than writing the long and egregious query strings, but the advantage is only gained when people understand the control without an explanation.  This is what remains to be tested.</p>
+<p>I am planning on using this control in some internal projects as an advanced search option. This is a controlled environment to test the awareness and usage so adjustments can be made or it can be scrapped entirely.</p>
+<p>As with any new idea, the creator has more vested in seeing it succeed than others. I would love nothing more than for this idea to take-off, but I&#8217;m sure there are plenty of reasons why it won&#8217;t. I&#8217;m open to any suggestions on ways to improve the interface and idea, as well as all the reasons why this might be the worst GUI component ever thought-up. I think it has great potential, but then again, I&#8217;m biased.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../../../tag/advanced-query/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #053353">advanced query</a>, <a href="../../../../tag/and/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #be5d5d">and</a>, <a href="../../../../tag/boolean-logic/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #040bfa">boolean logic</a>, <a href="../../../../tag/first-order-logic/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #b83366">first-order logic</a>, <a href="../../../../tag/gui/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #c00425">gui</a>, <a href="../../../../tag/gui-controls/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #c87f19">gui controls</a>, <a href="../../../../tag/limiting/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #7585f2">limiting</a>, <a href="../../../../tag/not/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #d529e9">not</a>, <a href="../../../../tag/or/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #e81c4e">or</a>, <a href="../../../../tag/query/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #1b1cc7">query</a>, <a href="../../../../tag/search/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #06a943">search</a>, <a href="../../../../tag/search-results/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #bd2870">search results</a>, <a href="../../../../tag/venn/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #2e0f5c">venn</a>, <a href="../../../../tag/venn-diagram/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #fcc078">venn diagram</a></p>			  </div>
+
+		<div class="navigation">
+			<div class="prev"><div class="time">13 September 02009</div><a href="../../13/everybody-votes/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #ce33a4">&laquo; Everybody votes!</a></div>
+			<div class="next"><div class="time">10 October 02009</div><a href="../../../10/10/the-albatross-necklace-2-0/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #06dbe3">The Albatross Necklace 2.0 &raquo;</a></div>
+		</div>
+
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+	<h3 id="comments">6 Responses to &#8220;Venn Diagrams as UI Tools&#8221;</h3>
+        <!--
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+	</div> -->
+
+	<ol class="commentlist">
+			<li class="comment even thread-even depth-1" id="comment-41">
+				<div id="div-comment-41" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn"><a href='http://andr3.net' rel='external nofollow' class='url'>André Luís</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="comment-page-1/index.html#comment-41">
+			2009/09/25 at 13:18</a>		</div>
+
+		<p>Brian, very interesting point. </p>
+<p>The thing is.. if what you&#8217;re looking for can be expressed by simple logic sentences, venn might be overdoing it.</p>
+<p>But as soon as you run into sentences like A and B or C, people might get confused. Venn diagrams should be helpful, but I&#8217;m just not sure whether they&#8217;ll be easy to understand for people who did not study statistics at school. </p>
+<p>I think whichever UI you end up formulating, it needs to be heavily tested with non-scientific crowds. And yet, remember that these kinds of queries are seldom used. Advanced searches are far less used than basic searches. That means that not everybody needs this kind of power. But when they do, I agree that this might help understanding far more complex queries.</p>
+<p>I like the approach of progressively adding &#8220;filters&#8221; but I think something could be devised, à lá iTunes smart playlists. But instead of one line for each &#8220;group&#8221; in the diagram, it would be presented as a graph/mesh, allowing users to specify which operator they wanted between every group (and/or).</p>
+<p>Not sure if I made myself clear. Did I?</p>
+
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-42">
+				<div id="div-comment-42" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn"><a href='http://icosidodecahedron.com' rel='external nofollow' class='url'>Michael Kozakewich</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="comment-page-1/index.html#comment-42">
+			2009/09/25 at 14:12</a>		</div>
+
+		<p>I love the idea!</p>
+<p>My Feedback:<br />
+-The circle on top looks to be in the foreground, so my first thought is that it&#8217;s selected. It would be best if you can make all three equal.<br />
+-You&#8217;re using red to show the terms you&#8217;re using. With &#8216;NOT&#8217; a popular boolean, one might think &#8216;NOT&#8217; terms would show up in red, so it may be counter-intuitive. Maybe green, or some other colour? Since, by default, leaving one circle completely unhighlighted means &#8216;NOT&#8217;, you can make it red by default.<br />
+-For the average person, it would be hard to wrap their head around what it means to highlight a different piece. If they could work with just the three main keywords and have the pieces between them worked out automatically, things might be easier. (In other words, if they can successfully manipulate the results using only the three outermost pieces.)</p>
+
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-43">
+				<div id="div-comment-43" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn"><a href='http://www.sanchothefat.com/' rel='external nofollow' class='url'>Robert O'Rourke</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="comment-page-1/index.html#comment-43">
+			2009/09/25 at 18:42</a>		</div>
+
+		<p>It&#8217;s a great concept although I&#8217;m with Andre on how intuitive it would be for everyday people to use. I think in some contexts it could work brilliantly, such as for comparing datasets like two or three genomes to find common/unique sequences. The audience in that regard would definitely have some scientific leanings, but if we&#8217;re talking about something more ubiquitous then I wouldn&#8217;t imagine it would perform as well as something less imaginative and unusual (unfortunately).</p>
+
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-45">
+				<div id="div-comment-45" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn"><a href='http://suda.co.uk' rel='external nofollow' class='url'>brian suda</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="comment-page-1/index.html#comment-45">
+			2009/09/28 at 12:24</a>		</div>
+
+		<p>André, Michael, Robert, I agree with you that using Venn diagrams could seem confusing to everyday people. My two retorts to that would be: we shouldn&#8217;t assume people are stupid, we should educate them. There is nothing worse than talking down to someone and depriving them of an opportunity that they could learn to understand. To start, this GUI element could be part of the advanced search option. People using the advanced search would be more willing to explore and learn how to use this new GUI component since they have already expressed interest in using power user type tools. Secondly, many of the GUI components and Icons we use today had to start somewhere. Things we take for granted, such as the humble Arrow, were not always part of our vernacular. Before the Arrow, the <a href="http://en.wikipedia.org/wiki/Manicule" rel="nofollow">Manicule</a> was the preferred way to point something out. There was a moment when someone suggested using an Arrow and everyone said, &#8220;Yeah, I get it, but it&#8217;s not be intuitive to everyday people.&#8221; I&#8217;m not suggesting that the Venn diagram is as influential as the Arrow, but every idea has to start somewhere. </p>
+<p>I&#8217;d love to find the discussion when someone first suggested the check box, radio button and drop down list to be added into HTML or the Operating System.</p>
+<p>Hopefully, the Venn diagram as a GUI control has sparked some discussion and ideas to potentially improve and iterate it into a more usable form.</p>
+
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-46">
+				<div id="div-comment-46" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn"><a href='http://www.sanchothefat.com' rel='external nofollow' class='url'>Robert O'Rourke</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="comment-page-1/index.html#comment-46">
+			2009/09/29 at 12:11</a>		</div>
+
+		<p>Very good retorts! I was woefully unaware of how we arrived at the GUI elements we take for granted today. I guess the only way to really get a grasp of how people respond to using it would be to make a simple version of it for searching some real data. How do you feel about others experimenting with your example code page? Do you think a twitter or flickr search tool would be a good demo?</p>
+
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+		<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-48">
+				<div id="div-comment-48" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn"><a href='http://suda.co.uk' rel='external nofollow' class='url'>brian suda</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="comment-page-1/index.html#comment-48">
+			2009/09/30 at 09:38</a>		</div>
+
+		<p>Robert, or anyone, please take the code and idea. I would love to see a mock-up of a Flickr image search using this. Their API is pretty flexible, that might be an excellent challenge. If anyone is interested, let me know, I&#8217;d be happy to help.</p>
+
+		<div class="reply">
+				</div>
+				</div>
+		</li>
+	</ol>
+<!--
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+	</div>
+-->
+ 
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+
+
+  <div style="float: left; font-size: 16px;">
+
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+
+</div> 
+<a href="../../../../../index.html" class="url" style="float:right; display: block;"><img src="../../../../../images/sm-black.png" alt="(optional.is)" class="logo fn org" /></a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>

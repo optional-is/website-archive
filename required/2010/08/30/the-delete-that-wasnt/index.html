@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="readability-verification" content="DRPbu4h9pDUUaRVQCALsfmmh3nEygKucjzuDwsBv">
+<title>The Delete that Wasn&#8217;t &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" /> 
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="../../../../xmlrpc.php" />
+<meta name="viewport" content="width=725; initial-scale=0.43;" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+
+</head>
+<body>
+<div id="header">
+<h1><a href="../../../../index.html"><img width="600" height="139" src="../../../../../images/mast.png" alt="optional.is/required" /></a></h1>
+</div>
+
+			
+		<div class="post-1463 post type-post status-publish format-standard hentry category-youre-doing-it-wrong tag-bait-and-switch tag-data-retention tag-delete tag-facebook tag-laws" id="post-1463">
+			<h2 style="border-bottom: 2px solid #93f6be">The Delete that Wasn&#8217;t</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2010-08-30T11:11:08+00:00">Monday, August 30th, 02010 at 11:11 UTC</abbr></div>
+				<p>There has been a privacy row over the last few years, which has picked-up recently with <a href="http://www.quitfacebookday.com/">users organizing a day to delete their facebook accounts</a>.</p>
+<p>From a programming/development stand point, it&#8217;s a very interesting conversation. While technically easy to delete, intfrastruturally it isn&#8217;t. In any high-end web application, you user data is just one more row in a table or collection. The cost of storing one more item is next to zero. Deleting that item is trivial in the grand scope of things, but the danger is that it cascades through the entire system and has unintended consequences!</p>
+<p>Let&#8217;s look at any large community that has user accounts. As customers, we want to be able to purge ourselves from their system, but do we really? There is the age-old problem of the <a href="http://en.wikipedia.org/wiki/Bait_and_switch">bait and switch</a>. Lets say that I sign-up for a service using my regular username, &#8216;briansuda&#8217;. Now, I amass links to my account, it is referenced on websites, in the media, on paper, etc. Now, the company turns evil and I want to quit. I want all my data deleted immediately. Sure, assuming that is possible, it might not be for reasons we&#8217;ll see later, all the information about that account under their control is deleted. Now, the next day, some nefarious person realizes that I deleted the account &#8216;briansuda&#8217; and signs-up and takes over my persona. They have lost all the content, but not inbound links and my good name. In that situation you probably wanted the evil company to inactive your account rather than delete it. It prevents others from snipping-up previously used accounts. We see this problem with domains. I have my own personal domain <a href="http://suda.co.uk">suda.co.uk</a>, if let that lapse and someone else jumps on it, then they could go to all the common sites, use my email address and press the forgot password link and become me. There isn&#8217;t much you can do about this issue because you don&#8217;t own domain names, you lease them.</p>
+<p>In many out of the box web frameworks, the database is normalized so that it is the most optimal, building relations between the tables. A database doesn&#8217;t know anything about what you put into it, it is information agnostic. To a company, some of that information is very important and some isn&#8217;t. Say the first thing you do when signing-up for a new services is agree to some contract and received an invoice. When you try to delete your account, all of these other bits are connected to you and will be deleted too. Companies can&#8217;t delete vital business information such as who they have invoiced, when and other contractual data. It might be possible to make a hard-copy printout, but that will take time and resources. By being efficient in our application design and normalizing our database tables actually inhibits the ability to delete.</p>
+<p>You certainly want an undo button for something as so monumental as a system-wide delete! What if you left your computer on and logged-in and someone snuck-up and pressed the delete button while you where away, maybe as a joke, maybe out of spite! You want to be able to recover all that data. Facebook actually has a grace period which you can re-log-in and prevent the delete from occurring. I would guess that even after you let that lapse, parts of your account are still not fully deleted.</p>
+<p>There are also internal metrics that need to be considered. If you are using a Customer Relationship Management (CRM) tool, then you are tracking all sorts of information about your customers. When you lose a customer, you certainly need to remove them from your mailing lists, but you don&#8217;t want to outright delete them. You might need their data for metrics, such as what is the average order size, or time between projects, or preferences. Just because they are no longer active, doesn&#8217;t mean that the data isn&#8217;t valuable. Imagine a scenario where a new customer is refered to you from someone who quit. The new customer says &#8220;I want the same thing as he ordered&#8221;. If you deleted that information, now you are out two customers!</p>
+<p>You certainly need to honor your customer&#8217;s will to be removed from the system, but not all of their data needs to go. Imagine a forum website, if several people were engaged in threaded conversations and you just deleted one person and all their data, then looking back at the discussion won&#8217;t make sense. It&#8217;s not just the loss of one person&#8217;s data, but now past archived forum data is useless too. One solution is to keep the messages, but replace the text with &#8220;This member has removed their posts&#8221;. This lessens the confusion in threaded conversations, but also respects the will of the quitting customer.</p>
+<p>Depending on your company and dealings, you might be legally obligated to keep the data on file for 60-90 days or more. Some countries have <a href="http://en.wikipedia.org/wiki/Telecommunications_data_retention">data retention laws</a>, which means that deleting a user out-right might put your company into legal hot water! Getting back to flagging a member as inactive rather than deleting them solves both problems.</p>
+<p>Then there is the sticky question of who owns the data. Some sites are explicit in saying that &#8220;you own the data&#8221;, some explicitly say that they own it, then others never mention anything. Can you demand something be deleted that you don&#8217;t own? There are certainly legal instances where people are not free to keep or publish anything they want, but with the banal every day text we write and publish, if you agreed to a EULA (which are legally dubious) or some Terms and Conditions, you might have waved the right to your content, or someone might claim it wasn&#8217;t copyrightable in the first place.</p>
+<p>There was a <a href="http://www.metafilter.com/95152/Userdriven-discontent#3256046">comment on MetaFilter</a> that sums it up nicely, &#8220;If you are not paying for it, you&#8217;re not the customer; you&#8217;re the product being sold.&#8221; Which would explain why some companies are not willing to let you go! Having your data available to sell to companies interested in demographic breakdowns is why you can use their product for free. It isn&#8217;t out of the kindness of their hearts that you can log-in without paying, your actions are being subsidized by advertisements or the sale of your data.</p>
+<p>It just goes to show that as a user, you might want your account closed and all your data removed, but in a community setting removing just one person&#8217;s data could have a larger knock-on effect which ruins it for everyone or the companies business plan. Deactivating data and locking accounts is a much better way to deal with the problem of customer retention than out-right deleting of data. Deleting from a database rarely has an Undo. Changing a flag from &#8220;active&#8221; to &#8220;inactive&#8221; can much more easily be rolled back.</p>
+<p>Next time you sign-up for that new fancy web app, think to yourself: Can I actually delete my data?</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/youre-doing-it-wrong/index.html" title="View all articles in You're doing it wrong" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #96e20d">You're doing it wrong</a></p><p><strong>Tags:</strong> <a href="../../../../tag/bait-and-switch/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #b71060">bait and switch</a>, <a href="../../../../tag/data-retention/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #939928">data retention</a>, <a href="../../../../tag/delete/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #099af5">delete</a>, <a href="../../../../tag/facebook/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #26cae7">facebook</a>, <a href="../../../../tag/laws/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #a00e43">laws</a></p>			  </div>
+
+		<div class="navigation">
+			<div class="prev"><div class="time">12 August 02010</div><a href="../../12/chained-libraries/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #11ce72">&laquo; Chained Libraries</a></div>
+			<div class="next"><div class="time">29 September 02010</div><a href="../../../09/29/the-monkey-and-the-wizard/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #4f1e10">The Monkey and the Wizard &raquo;</a></div>
+		</div>
+
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+
+
+  <div style="float: left; font-size: 16px;">
+
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+
+</div> 
+<a href="../../../../../index.html" class="url" style="float:right; display: block;"><img src="../../../../../images/sm-black.png" alt="(optional.is)" class="logo fn org" /></a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>

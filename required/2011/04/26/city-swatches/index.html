@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="readability-verification" content="DRPbu4h9pDUUaRVQCALsfmmh3nEygKucjzuDwsBv">
+<title>City Swatches &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" /> 
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="../../../../xmlrpc.php" />
+<meta name="viewport" content="width=725; initial-scale=0.43;" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+
+</head>
+<body>
+<div id="header">
+<h1><a href="../../../../index.html"><img width="600" height="139" src="../../../../../images/mast.png" alt="optional.is/required" /></a></h1>
+</div>
+
+			
+		<div class="post-1944 post type-post status-publish format-standard hentry category-cartography category-visualizations tag-city-swatches tag-estonia tag-geonames tag-iceland tag-latitude tag-longitude tag-maps" id="post-1944">
+			<h2 style="border-bottom: 2px solid #1a080f">City Swatches</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2011-04-26T14:41:57+00:00">Tuesday, April 26th, 02011 at 14:41 UTC</abbr></div>
+				<p>Inspiration can strike from anywhere. Knowing how to gather your thoughts and execute is key.</p>
+<p>A few weeks ago, I attended an event at the local library in honor of the many <a title="Estonia on Wikipedia" href="http://en.wikipedia.org/wiki/Estonia">Estonian</a> immigrants here in Iceland with my friend <a href="http://blog.aitorgarciarey.com/">Aitor</a> et al. They were demonstrating local customs, foods, dress, songs and other aspects in order to raise awareness of Estonia and gather funds for a potential Estonian House in Reykjavík. Iceland and Estonia have a very strange past. When Estonia broke away from the former Soviet Union, it declared itself an independent nation. Part of the definition of soverenty is that other nations recognize your independence. Iceland was the nation first to step-up and help Estonia rise to the status of independent country by diplomatically recognition.</p>
+<p>At the fundraiser, there were plenty of broshures talking about Estonia and what great a place it is to live and visit. All and all, it was interesting, but one page especially caught my eye. It was a small thumbnail map of Estonia along with several other thumbnail maps. It took a few seconds to register what was going on, but after that I realized the potential in the designed. Sadly, I lost the original booklet, but I remember it well and replicated the basic design.</p>
+<p>It is interesting to see someone else&#8217;s work and get inspirated, but if you can&#8217;t execute on the idea yourself, then what good was the inspiration? This is where knowing your resources is key. For just about anything geographical, my first stop is <a title="Geonames" href="http://www.geonames.org/">Geonames.org</a>. I have used their code in several other projects, including the <a title="HLS World Map" href="../../../../2010/12/13/hls-world-map/index.html">HLS World Map</a> and <a title="Geonames Maps" href="../../../../2010/06/28/geonames-maps/index.html">Geonames maps</a>. It is as simple as it gets, a Comma Seperated Value list of places with plenty of metadata.</p>
+<p>If I wanted to replicate the thumbnail maps in the broshure, I knew I needed city names, and lots of them. In geonames, you can download a list of every town with a population over 1,000 people. Granted, this data might not be the most up-to-date, for most of my projects it&#8217;s fine. The next step was to pick a starting city. On the first go, I chose Reykjavík. While it makes sense as a local starting point, it isn&#8217;t geographically that interesting, we&#8217;ll see why in a bit. So I went with <a title="Saint Louis, MO USA on Wikipedia" href="http://en.wikipedia.org/wiki/St._Louis,_Missouri">Saint Louis, Missouri, USA</a>. A quick search on Wikipedia and I&#8217;ve got the Latitude and Longitude of the city; 38.627222,-90.197778.</p>
+<p>The next step is to choose and arbitrary tolerance in the number of degrees, sort of geographical error bars. I started with +/- 1.0 degrees. For Saint Louis, this would mean a Latitude of 37.627222 to 39.627222 and a Longitude of -91.197778 to -89.197778. This tolerance can be adjusted to taste.</p>
+<div class="banner"><img title="Zone of Lat/Lon for Saint Louis" src="../../../../wp-content/uploads/2011/04/stl-lat-lon.png" alt="Zone of Lat/Lon for Saint Louis" width="700" height="463" /></div>
+<p>Now that we have this thin band of acceptable latitude and longitude values, I looped through the complete list from geonames to find &#8220;sister&#8221; cities on the same latitude and repeat the process to find &#8220;sister&#8221; cities at the same longitude.</p>
+<p>The original map of Estonia was a series of thumbnails left and right, showing other large cities at the same latitude and a series of thumnails up and down showing cities at the same longitude. It was simple and interesting to see how geographically similar cities might have vastly different climates, cultures, language and history. Now, with some simple logic, a few lines of code and the geonames database, it&#8217;s easy to recreate this for any location!</p>
+<p>For Saint Louis there were many results, so I reduced the tolerance to only 0.25 degrees and limited the results to cities to those with a population of 100,000 or higher. The following cities matched her latitude:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Yinchuan">Yinchuan, China</a>: 38.46806,106.27306</li>
+<li><a href="http://en.wikipedia.org/wiki/Xinzhou">Xinzhou, China</a>: 38.40917,112.73333</li>
+<li><a href="http://en.wikipedia.org/wiki/Jinchang">Jinchang, China</a>: 38.49528,102.17389</li>
+<li><a href="http://en.wikipedia.org/wiki/Dingzhou">Dingzhou, China</a>: 38.51306,114.99556</li>
+<li><a href="http://en.wikipedia.org/wiki/Baoding,_China">Baoding, China</a>: 38.85111,115.49028</li>
+<li><a href="http://en.wikipedia.org/wiki/Marand">Marand, Iran</a>: 38.4329,45.7749</li>
+<li><a href="http://en.wikipedia.org/wiki/Khoy">Khvoy, Iran</a>: 38.5503,44.9521</li>
+<li><a href="http://en.wikipedia.org/wiki/Ishinomaki,_Miyagi">Ishinomaki, Japan</a>: 38.41667,141.3</li>
+<li><a href="http://en.wikipedia.org/wiki/Songrim">Songnim, North Korea</a>: 38.75417,125.645</li>
+<li>Sariwŏn, North Korea: 38.50722,125.75583</li>
+<li><a href="http://en.wikipedia.org/wiki/Nampho">Namp’o, North Korea</a>: 38.7375,125.40778</li>
+<li><a href="http://en.wikipedia.org/wiki/Setubal,_Portugal">Setúbal, Portuga</a>l: 38.5244,-8.8882</li>
+<li><a href="http://en.wikipedia.org/wiki/Queluz,_Portugal">Queluz, Portugal</a>: 38.75,-9.25</li>
+<li><a href="http://en.wikipedia.org/wiki/Lisbon,_Portugal">Lisbon, Portugal</a>: 38.71667,-9.13333</li>
+<li><a href="http://en.wikipedia.org/wiki/Amadora,_Portugal">Amadora, Portugal</a>: 38.75382,-9.23083</li>
+<li><a href="http://en.wikipedia.org/wiki/Dushanbe,_Tajikistan">Dushanbe, Tajikistan</a>: 38.53575,68.77905</li>
+<li><a href="http://en.wikipedia.org/wiki/Van,_Turkey">Van, Turkey</a>: 38.49239,43.38311</li>
+<li><a href="http://en.wikipedia.org/wiki/Uşak">Uşak, Turkey</a>: 38.67351,29.4058</li>
+<li><a href="http://en.wikipedia.org/wiki/Turgutlu">Turgutlu, Turkey</a>: 38.49533,27.6997</li>
+<li><a href="http://en.wikipedia.org/wiki/Manisa">Manisa, Turkey</a>: 38.61202,27.42646</li>
+<li><a href="http://en.wikipedia.org/wiki/Kayseri">Kayseri, Turkey</a>: 38.73222,35.48528</li>
+<li><a href="http://en.wikipedia.org/wiki/İzmir,_Turkey">İzmir, Turkey</a>: 38.41273,27.13838</li>
+<li><a href="http://en.wikipedia.org/wiki/Elâzığ">Elazığ, Turkey</a>: 38.67431,39.22321</li>
+<li><a href="http://en.wikipedia.org/wiki/Afyonkarahisar">Afyonkarahisar, Turkey</a>: 38.75667,30.54333</li>
+<li>Alexandria, USA: 38.80484,-77.04692</li>
+<li>Roseville, USA: 38.75212,-121.28801</li>
+<li><a href="http://en.wikipedia.org/wiki/Sacramento,_California">Sacramento, USA</a>: 38.58157,-121.4944</li>
+<li><a href="http://en.wikipedia.org/wiki/Santa_Rosa,_California">Santa Rosa, USA</a>: 38.44047,-122.71443</li>
+<li><a href="http://en.wikipedia.org/wiki/Colorado_Springs,_Colorado">Colorado Springs, USA</a>: 38.83388,-104.82136</li>
+<li><a href="http://en.wikipedia.org/wiki/Qarshi">Qarshi, Uzbekistan</a>: 38.86333,65.79778</li>
+</ul>
+<p>These cities matched her Longitude:</p>
+<ul>
+<li>Metairie, USA: 29.98409,-90.15285</li>
+<li>Metairie Terrace, USA: 29.97854,-90.16396</li>
+<li><a href="http://en.wikipedia.org/wiki/New_Orleans,_USA">New Orleans, USA</a>: 29.95465,-90.07507</li>
+<li>Jackson, USA: 32.29876,-90.18481</li>
+<li><a href="http://en.wikipedia.org/wiki/Memphis,_Tennessee">Memphis, USA</a>: 35.14953,-90.04898</li>
+<li>New South Memphis, USA: 35.08676,-90.05676</li>
+</ul>
+<p>As you can see, the list is still fairly large. This will certainly depend on your tolerance as well as your geographic location. Poor Reykjavík is pretty far north. At that latitude it doesn&#8217;t have any &#8220;sister&#8221; cities in North America. Only a handful in Asia and Scandinavia. As for longitude, Iceland sits in the middle of the Atlantic, so there is nothing south of Iceland until Antarctica! Therefore, the results aren&#8217;t that interesting as an example.</p>
+<p>We can easily run the same equation for any location, <a href="http://en.wikipedia.org/wiki/Edinburgh">Edinburgh, Scotland</a> for example has the following results:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Aarhus">Århus, Denmark</a>: 56.15674,10.21076</li>
+<li><a href="http://en.wikipedia.org/wiki/Glasgow">Glasgow, Scotland</a>: 55.86515,-4.25763</li>
+<li><a href="http://en.wikipedia.org/wiki/Šiauliai">Šiauliai, Lithuani</a>a: 55.93333,23.31667</li>
+<li><a href="http://en.wikipedia.org/wiki/Panevėžys">Panevėžys, Lithuania</a>: 55.73333,24.35</li>
+<li><a href="http://en.wikipedia.org/wiki/Klaipėda">Klaipėda, Lithuania</a>: 55.71722,21.1175</li>
+<li><a href="http://en.wikipedia.org/wiki/Daugavpils">Daugavpils, Latvia</a>: 55.88333,26.53333</li>
+<li><a href="http://en.wikipedia.org/wiki/Zelenograd">Zelenograd, Russia</a>: 55.9825,37.18139</li>
+<li><a href="http://en.wikipedia.org/wiki/Vladimir">Vladimir, Russia</a>: 56.14278,40.39806</li>
+<li><a href="http://en.wikipedia.org/wiki/Shchelkovo">Shchelkovo, Russia</a>: 55.89278,38.05694</li>
+<li><a href="http://en.wikipedia.org/wiki/Orekhovo-Zuyevo">Orekhovo-Zuyevo, Russia</a>: 55.81083,38.97194</li>
+<li><a href="http://en.wikipedia.org/wiki/Novocheboksarsk">Novocheboksarsk, Russia</a>: 56.11056,47.47778</li>
+<li><a href="http://en.wikipedia.org/wiki/Noginsk">Noginsk, Russia</a>: 55.85361,38.44111</li>
+<li><a href="http://en.wikipedia.org/wiki/Neftekamsk">Neftekamsk, Russia</a>: 56.08333,54.26667</li>
+<li><a href="http://en.wikipedia.org/wiki/Naberezhnyye_Chelny">Naberezhnyye Chelny, Russia</a>: 55.7354,52.4101</li>
+<li><a href="http://en.wikipedia.org/wiki/Mytishchi">Mytishchi, Russia</a>: 55.90889,37.73389</li>
+<li><a href="http://en.wikipedia.org/wiki/Moscow">Moscow, Russia</a>: 55.75222,37.61556</li>
+<li><a href="http://en.wikipedia.org/wiki/Khimki">Khimki, Russia</a>: 55.90167,37.4375</li>
+<li><a href="http://en.wikipedia.org/wiki/Kazan">Kazan’, Russia</a>: 55.7877,49.1248</li>
+<li><a href="http://en.wikipedia.org/wiki/Korolyov_(city)">Korolëv, Russia</a>: 55.91417,37.82556</li>
+<li><a href="http://en.wikipedia.org/wiki/Elektrostal">Elektrostal’, Russia</a>: 55.79194,38.44222</li>
+<li><a href="http://en.wikipedia.org/wiki/Cheboksary">Cheboksary, Russia</a>: 56.13222,47.25194</li>
+<li><a href="http://en.wikipedia.org/wiki/Balashikha">Balashikha, Russia</a>: 55.80278,37.94861</li>
+<li><a href="http://en.wikipedia.org/wiki/Krasnoyarsk">Krasnoyarsk, Russia</a>: 56.00972,92.79167</li>
+<li><a href="http://en.wikipedia.org/wiki/Bratsk">Bratsk, Russia</a>: 56.1325,101.61417</li>
+</ul>
+<p>Longitudinal matches:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Bilbao">Bilbao, Spain</a>: 43.26271,-2.92528</li>
+<li><a href="http://en.wikipedia.org/wiki/Alcalá_de_Henares">Alcalá de Henares, Spain</a>: 40.48333,-3.36667</li>
+<li><a href="http://en.wikipedia.org/wiki/Newport">Newport, Great Britain</a>: 51.58774,-2.99835</li>
+<li><a href="http://en.wikipedia.org/wiki/Liverpool">Liverpool, Great Britain</a>: 53.41058,-2.97794</li>
+<li><a href="http://en.wikipedia.org/wiki/Dundee">Dundee, Great Britain</a>: 56.5,-2.96667</li>
+<li><a href="http://en.wikipedia.org/wiki/Cardiff">Cardiff, Great Britain</a>: 51.48,-3.18</li>
+<li><a href="http://en.wikipedia.org/wiki/Blackpool">Blackpool, Great Britain</a>: 53.81667,-3.05</li>
+<li><a href="http://en.wikipedia.org/wiki/Nador">Nador, Morocco</a>: 35.17404,-2.92866</li>
+</ul>
+<p>Now that we have the list along with the metadata, we can go and grab some thumbnails of each area. The first place that came to mind for free map tiles was <a title="Open Street Map" href="http://www.openstreetmap.org/">Open Street Map</a>. They have an export feature which allows you to grab a PNG or JPEG images with a specific bounding box. The URL looks something like:</p>
+<p><code>http://tile.openstreetmap.org/cgi-bin/export?bbox=-90.3092,38.5734,-90.0627,38.6722&amp;scale=110000&amp;format=png</code></p>
+<p>It is easy to change the top, bottom, left and right values to grab a thumbnail for a different region. The downside to Open Street Map is that the server isn&#8217;t always responsive. It is an open source project which always needs more resources, so I went looking for alternatives so I wasn&#8217;t pounding the Open Street Map server too much. Google Maps offers a Static API service. The terms of service are limited, so the tiles you grab you probably can&#8217;t use in commercial applications, but as a sanity check it is an excellent first pass. The URL to grab a static map image looks like this:</p>
+<p><code>http://maps.google.com/maps/api/staticmap?zoom=11&amp;size=512x512&amp;maptype=roadmap&amp;center=38.627222,-90.197778&amp;sensor=false</code></p>
+<p>Again, you can easily change the latitude and longitudes and generate a new thumbnail for each &#8220;sister&#8221; city.</p>
+<p>The next thing I want to try and do is limit it to &#8220;interesting&#8221; results. This might be difficult to do programatically. Does population of the city have more weight than location? Do you want to try and space out &#8220;sister&#8221; cities evenly, ignoring other metadata? The results will probably need to be curated by some human intervention or powerful heuristics.</p>
+<p>Once you have your sub-set of interesting sister cities, it can finally be arranged in a way similar to the original broshure. At this point, you can modify the look and feel as needed.</p>
+<div class="banner"><img title="City Swatches focused on Saint Louis" src="../../../../wp-content/uploads/2011/04/city-swatches-stl.png" alt="City Swatches focused on Saint Louis" width="700" height="463" /></div>
+<p>I needed a name for this style map to make it easier for me and friends to refer to this in the future. I was originally reminded of Pantone color chips. How each chip can be reordered and put next to others to see how they look in combination. So the name &#8220;city chips&#8221; was kicked around for a bit. Someone thought it was a new brand of Potatoe Chip Snack Foods, so we continued looking. Pantone chips are also referred to as color swatches, so &#8220;City Swatches&#8221; was born.</p>
+<p>I have a few ideas and projects where this sort of style of small, broken-up map swatches will add clarity and zoom levels in a static, analog print medium. As a way to condense geographically disperse areas into something more linear and manageable, City Swatch style maps might be just what is needed.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/cartography/index.html" title="View all articles in Cartography" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #992978">Cartography</a>, <a href="../../../../category/visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../../../tag/city-swatches/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #338939">city swatches</a>, <a href="../../../../tag/estonia/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #5c6298">estonia</a>, <a href="../../../../tag/geonames/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #f9c6c0">geonames</a>, <a href="../../../../tag/iceland/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #83166c">iceland</a>, <a href="../../../../tag/latitude/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #28c1e3">latitude</a>, <a href="../../../../tag/longitude/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #ba569b">longitude</a>, <a href="../../../../tag/maps/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #7e9447">maps</a></p>			  </div>
+
+		<div class="navigation">
+			<div class="prev"><div class="time">06 April 02011</div><a href="../../06/02011-predictions/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #47b2ba">&laquo; 02011 Predictions</a></div>
+			<div class="next"><div class="time">20 June 02011</div><a href="../../../06/20/accessible-color-swatches/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #3ba51e">Accessible Color Swatches &raquo;</a></div>
+		</div>
+
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+
+
+  <div style="float: left; font-size: 16px;">
+
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+
+</div> 
+<a href="../../../../../index.html" class="url" style="float:right; display: block;"><img src="../../../../../images/sm-black.png" alt="(optional.is)" class="logo fn org" /></a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>

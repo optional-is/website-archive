@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 13.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 14948)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	x="0px" y="0px"
+	 width="1000px" height="490px" 
+	viewBox="0 0 443.939 427.781" 
+	enable-background="new 0 0 443.939 427.781"
+	 xml:space="preserve">	
+	<!-- ECMAScript to change the radius with each click -->
+  <script type="text/ecmascript"> <![CDATA[
+    function blueState() {
+		if(document.getElementById('bluePart').getAttribute('fill') == '#D3D3D3'){
+		  document.getElementById('bluePart').setAttribute('fill','#3953A4');
+		} else {
+		  document.getElementById('bluePart').setAttribute('fill','#D3D3D3');
+		}
+		buildQuery()
+    }
+    function redState() {
+		if(document.getElementById('redPart').getAttribute('fill') == '#D3D3D3'){
+		  document.getElementById('redPart').setAttribute('fill','#ED2024');
+		} else {
+		  document.getElementById('redPart').setAttribute('fill','#D3D3D3');
+		}
+		buildQuery()
+    }
+    function greenState() {
+		if(document.getElementById('greenPart').getAttribute('fill') == '#D3D3D3'){
+		  document.getElementById('greenPart').setAttribute('fill','#69BD45');
+		} else {
+		  document.getElementById('greenPart').setAttribute('fill','#D3D3D3');
+		}
+		buildQuery()
+    }
+    function yellowState() {
+		if(document.getElementById('yellowPart').getAttribute('fill') == '#A9A9A9'){
+		  document.getElementById('yellowPart').setAttribute('fill','#FFF200');
+		} else {
+		  document.getElementById('yellowPart').setAttribute('fill','#A9A9A9');
+		}
+		buildQuery()
+    }
+    function cyanState() {
+		if(document.getElementById('cyanPart').getAttribute('fill') == '#A9A9A9'){
+		  document.getElementById('cyanPart').setAttribute('fill','#00AEEF');
+		} else {
+		  document.getElementById('cyanPart').setAttribute('fill','#A9A9A9');
+		}
+		buildQuery()
+    }
+    function magentaState() {
+		if(document.getElementById('magentaPart').getAttribute('fill') == '#A9A9A9'){
+		  document.getElementById('magentaPart').setAttribute('fill','#EC008C');
+		} else {
+		  document.getElementById('magentaPart').setAttribute('fill','#A9A9A9');
+		}
+		buildQuery()
+    }
+    function whiteState() {
+		if(document.getElementById('whitePart').getAttribute('fill') == '#7F7F7F'){
+		  document.getElementById('whitePart').setAttribute('fill','#FFFFFF');
+		} else {
+		  document.getElementById('whitePart').setAttribute('fill','#7F7F7F');
+		}
+		buildQuery()
+    }
+
+	function buildQuery(){
+		// build the advanced query here!
+		if(
+		document.getElementById('whitePart').getAttribute('fill') == '#7F7F7F' &&
+		document.getElementById('cyanPart').getAttribute('fill') == '#A9A9A9' &&
+		document.getElementById('yellowPart').getAttribute('fill') == '#A9A9A9' &&
+		document.getElementById('magentaPart').getAttribute('fill') == '#A9A9A9' &&
+		document.getElementById('redPart').getAttribute('fill') == '#D3D3D3' &&
+		document.getElementById('greenPart').getAttribute('fill') == '#D3D3D3' &&
+		document.getElementById('bluePart').getAttribute('fill') == '#D3D3D3'
+		){
+  		  document.getElementById('query').textContent = 'Please Select the documents you wish to be displayed.';		
+		} else {
+			var counter = 0;
+			document.getElementById('query').textContent = 'Find documents that contain: '
+		}
+		
+		if(document.getElementById('greenPart').getAttribute('fill') != '#D3D3D3'){
+		  if (counter != 0){
+		    document.getElementById('query').textContent += ' OR '
+  		  }
+		  document.getElementById('query').textContent += ' "ITEM 1"'
+		  counter++
+		}
+
+		if(document.getElementById('redPart').getAttribute('fill') != '#D3D3D3'){
+		  if (counter != 0){
+		    document.getElementById('query').textContent += ' OR '
+  		  }
+		  document.getElementById('query').textContent += ' "ITEM 2"'
+		  counter++
+		}
+
+		if(document.getElementById('bluePart').getAttribute('fill') != '#D3D3D3'){
+		  if (counter != 0){
+		    document.getElementById('query').textContent += ' OR '
+  		  }
+		  document.getElementById('query').textContent += ' "ITEM 3"'
+		  counter++
+		}
+
+		if(document.getElementById('yellowPart').getAttribute('fill') != '#A9A9A9'){
+		  if (counter != 0){
+		    document.getElementById('query').textContent += ' OR '
+  		  }
+		  document.getElementById('query').textContent += ' "ITEM 1 AND ITEM 2"'
+		  counter++
+		}
+
+		if(document.getElementById('cyanPart').getAttribute('fill') != '#A9A9A9'){
+		  if (counter != 0){
+		    document.getElementById('query').textContent += ' OR '
+  		  }
+		  document.getElementById('query').textContent += ' "ITEM 1 AND ITEM 3"'
+		  counter++
+		}
+
+		if(document.getElementById('magentaPart').getAttribute('fill') != '#A9A9A9'){
+		  if (counter != 0){
+		    document.getElementById('query').textContent += ' OR '
+  		  }
+		  document.getElementById('query').textContent += ' "ITEM 2 AND ITEM 3"'
+		  counter++
+		}
+
+		if(document.getElementById('whitePart').getAttribute('fill') != '#7F7F7F'){
+		  if (counter != 0){
+		    document.getElementById('query').textContent += ' OR '
+  		  }
+		  document.getElementById('query').textContent += ' "ITEM 1 AND ITEM 2 AND ITEM 3"'
+		  counter++
+		}
+		
+	}
+
+  ]]> </script>
+	
+<path onclick="redState()" fill="#D3D3D3" id="redPart" d="M349.162,171.786c-14.252,42.713-49.984,75.598-94.383,85.824c3.994,12.52,6.158,25.857,6.158,39.702
+	c0,36.407-14.918,69.325-38.968,92.992c23.549,23.173,55.853,37.477,91.499,37.477c72.057,0,130.471-58.414,130.471-130.469
+	C443.939,237.632,403.867,187.312,349.162,171.786z"/>
+
+<path onclick="greenState()" fill="#D3D3D3" id="greenPart"  d="M183,297.312c0-14.441,2.352-28.332,6.684-41.317c-42.015-11.923-75.391-44.374-88.618-85.824
+	C43.171,183.507,0,235.368,0,297.312c0,72.055,58.414,130.469,130.469,130.469c35.648,0,67.952-14.304,91.5-37.477
+	C197.919,366.638,183,333.72,183,297.312z"/>
+
+<path onclick="magentaState()" id="magentaPart" fill="#A9A9A9" d="M260.937,297.312c0-13.845-2.164-27.183-6.158-39.702c-9.451,2.177-19.293,3.327-29.404,3.327
+	c-12.375,0-24.347-1.724-35.69-4.942C185.352,268.98,183,282.871,183,297.312c0,36.407,14.919,69.325,38.969,92.992
+	C246.019,366.638,260.937,333.72,260.937,297.312z"/>
+
+<path onclick="blueState()" fill="#D3D3D3"  id="bluePart" d="M221.969,204.32c23.549-23.174,55.853-37.477,91.499-37.477c12.376,0,24.349,1.724,35.693,4.942
+	c4.332-12.985,6.684-26.876,6.684-41.317C355.845,58.413,297.431,0,225.375,0C153.32,0,94.906,58.413,94.906,130.469
+	c0,13.845,2.164,27.183,6.16,39.702c9.45-2.176,19.292-3.327,29.403-3.327C166.117,166.844,198.42,181.146,221.969,204.32z"/>
+
+<path onclick="cyanState()" id="cyanPart" fill="#A9A9A9" d="M221.969,204.32c14.904,14.666,26.298,32.886,32.81,53.29c44.398-10.227,80.131-43.111,94.383-85.824
+	c-11.345-3.219-23.317-4.942-35.693-4.942C277.822,166.844,245.518,181.146,221.969,204.32z"/>
+
+<path onclick="yellowState()" id="yellowPart" fill="#A9A9A9" d="M189.684,255.995c6.589-19.751,17.774-37.396,32.285-51.675c-23.549-23.174-55.852-37.477-91.5-37.477
+	c-10.111,0-19.953,1.151-29.403,3.327C114.293,211.621,147.669,244.072,189.684,255.995z"/>
+<path id="whitePart" onclick="whiteState()" fill="#7F7F7F" d="M221.969,204.32c-14.512,14.278-25.696,31.924-32.285,51.675
+	c11.343,3.219,23.314,4.942,35.689,4.942c10.111,0,19.953-1.15,29.404-3.328C248.267,237.206,236.874,218.986,221.969,204.32z"/>
+	<text x="10" y="10" id="query" font-family="Verdana" font-size="10" fill="black" >Please Select the documents you wish to be displayed.</text>
+</svg>

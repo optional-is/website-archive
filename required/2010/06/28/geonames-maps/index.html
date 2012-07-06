@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="readability-verification" content="DRPbu4h9pDUUaRVQCALsfmmh3nEygKucjzuDwsBv">
+<title>Geonames Maps &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" /> 
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="../../../../xmlrpc.php" />
+<meta name="viewport" content="width=725; initial-scale=0.43;" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+
+</head>
+<body>
+<div id="header">
+<h1><a href="../../../../index.html"><img width="600" height="139" src="../../../../../images/mast.png" alt="optional.is/required" /></a></h1>
+</div>
+
+			
+		<div class="post-1418 post type-post status-publish format-standard hentry category-cartography category-visualizations tag-geonames tag-map tag-maps tag-svg tag-visualizations" id="post-1418">
+			<h2 style="border-bottom: 2px solid #add21e">Geonames Maps</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2010-06-28T10:01:09+00:00">Monday, June 28th, 02010 at 10:01 UTC</abbr></div>
+				<p>I&#8217;ve been spending much of my free time exploring different types of maps. I have a few new ideas and have enlisted the help of some friends to work on atleast three new maps for Iceland and Reykjavik. When those are further along I&#8217;ll certainly write more about them, but until then, I can show you a quick and easy example of plotting a map based on other data sets.</p>
+<h2>Data sets</h2>
+<p><a href="http://geonames.org/">Geonames</a> is a great repository of geographic information. If you are looking to bootstrap a project, then downloading the free geonames data is an excellent source. It has city names for just about every country. It also has plenty of other geographic data such as boundaries, place names, natural features like streams, rivers, hills, mountains and various other plot-able items.</p>
+<p>As a quick demonstration, I pulled down the Geonames data for both Iceland and Great Britain. The data set is just a tab delimited list of entries. Each entry has a name, a feature type and a more specific feature information, along with latitude and longitude. From this, I wrote a very simple and crude PHP script to convert the data from the CSV file to SVG. SVG is scalable vector graphics. It is an XML format that describes vector images. The beauty of SVG is that you can easily create the data in any text editor, then load it up in a vector program such as Adobe Illustrator.</p>
+<p>The pseudo-code to do this is as follows:</p>
+<ol>
+<li>Open the file</li>
+<li>Loop through each line of the CSV</li>
+<li>extract the feature type, latitude and longitude</li>
+<li>output the data as a line of SVG</li>
+<li>???</li>
+<li>Profit!</li>
+</ol>
+<p>The SVG equivalent of a data point is a circle. To create a circle in SVG you would use the following:</p>
+<p><code>&lt;circle r="1" cx="100" cy="100" stroke-width="0" fill="#000000" /&gt;</code></p>
+<p>That will make a circle with a radius of 1 at an X,Y of 100,100 and fill it in with #000000, black.</p>
+<p>Now, you just need to make one line just like that for each row in the Geonames CSV file. I used the <a href="http://blog.dopplr.com/2007/10/23/in-rainbows/">Dopplr city colouring algorithm</a> to select a colour for each feature. This made sure that each type resulted in a uniquely reproducible colour. Each feature type is unique, so to convert that to a HEX value, I simply ran it through something like.</p>
+<p><code>$colour = sub-string( md5( $featureType ), 0, 6);</code></p>
+<p>This creates an md5 hash from the <var>$featureType</var> and then only takes the first six characters. This results in a nice random HEX value.</p>
+<p>Depending on what country you select, you will need to re-orient the circle&#8217;s x and y data points. Iceland is east of the meridian, therefore it has negative values for its longitude. This isn&#8217;t a major issue, but it does mean when you open the file in the vector editor, it might be off the art board or even upside-down. A bit of trial and error and it will be sorted in no time.</p>
+<div class="banner"><img class="alignnone size-full wp-image-1425" title="Iceland" src="../../../../wp-content/uploads/2010/06/iceland.png" alt="Geonames map of Iceland" width="700" height="430" /></div>
+<p>Even with out the borders, you can distinctly see where the land and sea meet. If you are familiar with Iceland, you can quickly see the populated areas. The green dots are places, this includes towns and farms. The dead-zones are both the interior which is inhospitable and the glaciers where no one lives either. There is plenty of clean-up that can be done to this map, but as a first pass it worked out pretty well.</p>
+<div class="banner"><img class="alignnone size-full wp-image-1424" title="Great Britain" src="../../../../wp-content/uploads/2010/06/gb.png" alt="Geonames map of Great Britain" width="700" height="1322" /></div>
+<p>The results for Great Britain also turned out pretty well. London is visible as is the coast line. The number of light green dots in England is far greater than in the rest of the island. This could be due to the unfarmable rocky highlands or the fact that the Queen is the largest land owner in Scotland?</p>
+<p>The images remind me of a quote by Bruce Lee:</p>
+<blockquote><p>Empty your mind, be formless, shapeless &#8211; like water. Now you put water into a cup, it becomes the cup, you put water into a bottle, it becomes the bottle, you put it in a teapot, it becomes the teapot. Now water can flow or it can crash. Be water, my friend.</p></blockquote>
+<p>If you look at the maps, there is no border, yet we can clearly see where the land and sea meet. In the cases of Iceland and England, it is obvious. Not so much between Scotland and England, or England and Wales, or Northern Ireland and the non-existant Republic of Ireland. Be formless, like water. Our population has nicely flowed into the shape of the &#8220;cup&#8221;. In the case of islands, the cup becomes the available land. We have managed to move into just about every crack, crevasse, fjord and field.</p>
+<p><img style="float: right; padding-left: 10px;" title="Icelandic City Population" src="../../../../wp-content/uploads/2010/06/population.png" alt="Icelandic City Population" width="354" height="321" />As a quick first pass, I am happy with these results. From here it is possible to build-up further. Maybe collect other geographical data points, such as Flickr geotagged photos or geotagged wikipedia posts. Maybe with just those two data sets, I could visualize the outline of Iceland. I doubt it, there isn&#8217;t enough people participating in the very small costal areas. Geonames does give you town population data, so maybe the dot representing the city should be larger based on the number of people. Another possibility would be to merge the data with other data sets like weather or crime.</p>
+<p>I know that people who deal with geographic data always complain that the world is not a series of dots or red pushpins. They are right, even in these maps, lakes, bays, oceans and other features are represented by a single dot. Where would you put a dot to represent a river? At the start, at the end, in the half-way point? The same problem persists for mountains and cities. Having a series of single lat/lon pairs makes the import and presentation very simple, but isn&#8217;t true to life. Ideally, there will be some happy middle ground, because storing and parsing polygons is a big step-up from simple dots.</p>
+<h2>Scalable Vector Graphics</h2>
+<p>If you are dealing with mathematical data sets that you want to visualize, then SVG is a very quick and easy way to get started. By creating SVG circles for lat/lon I saved myself loads of time trying to import this into a vector program. SVG can draw lines, boxes, ellipses, and much more. So when you are thinking about graphing or plotting data sets, then SVG could be an excellent intermediary for between the tabular data and your final production ready presentation. The map of England has close to 50,000 data points and was pretty slow to open in Illustrator, but once it was converted it wasn&#8217;t a problem. SVG is a fast way to programmatically create scaleable visualization and is an excellent tool to know to improve your toolbox of available utilities to get the job done.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/cartography/index.html" title="View all articles in Cartography" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #992978">Cartography</a>, <a href="../../../../category/visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../../../tag/geonames/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #f9c6c0">geonames</a>, <a href="../../../../tag/map/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #1d78dc">map</a>, <a href="../../../../tag/maps/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #7e9447">maps</a>, <a href="../../../../tag/svg/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #ae8eb9">svg</a>, <a href="../../../../tag/visualizations/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p>			  </div>
+
+		<div class="navigation">
+			<div class="prev"><div class="time">12 June 02010</div><a href="../../12/miracle-fruit-berries/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #544679">&laquo; Miracle Fruit Berries</a></div>
+			<div class="next"><div class="time">25 July 02010</div><a href="../../../07/25/five-simple-steps-designing-with-data/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #d62d25">Five Simple Steps: Designing with Data &raquo;</a></div>
+		</div>
+
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+
+
+  <div style="float: left; font-size: 16px;">
+
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+
+</div> 
+<a href="../../../../../index.html" class="url" style="float:right; display: block;"><img src="../../../../../images/sm-black.png" alt="(optional.is)" class="logo fn org" /></a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>
