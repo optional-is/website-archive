@@ -15,6 +15,7 @@
 <script type="text/javascript">
     $(document).ready(function(){	
         try {
+        $(':input:visible:first').focus();
 		$('#archive-list li:even').addClass("odd");
         $('.field-group, .field-group input, .field-group select').bind('click',function(event){		 			
 			if (event.type == 'click') {
@@ -536,13 +537,13 @@
 
 <div id="subscribeFormWelcome">Sign-up for a low-volume email with links to interesting articles, ideas and events.<br>
 <br>
-<a href="http://us2.campaign-archive2.com/home/?u=980d7e7c822ddb46c6693388d&id=4b11c60bdb">View previous newsletters to get a feel for the topics, length and content.</a>
+<a href="archive/index.html">View previous newsletters to get a feel for the topics, length and content.</a>
 </div>
 <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
 
 
 
-<form action="http://optional.us2.list-manage2.com/subscribe/post" method="POST">
+<form action="http://optional.us2.list-manage.com/subscribe/post" method="POST">
 <input type="hidden" name="u" value="980d7e7c822ddb46c6693388d">
 <input type="hidden" name="id" value="4b11c60bdb">
 
@@ -618,7 +619,7 @@
             try {
                 var _gaq = _gaq || [];
                 _gaq.push(["_setAccount", "UA-2497164-9"]);
-                _gaq.push(["_setDomainName", ""]);
+                _gaq.push(["_setDomainName", "list-manage"]);
                 _gaq.push(["_trackPageview"]);
                 _gaq.push(["_setAllowLinker", true]);
             } catch(err) {console.log(err);}</script>

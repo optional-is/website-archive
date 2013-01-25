@@ -1,0 +1,112 @@
+/* @group Fonts */
+@font-face {
+	font-family: 'optional';
+	    src: url("../fonts/optional.eot");
+	    src: local('optional'),
+	       url("../fonts/optional.svg") format('svg'),
+	       url("../fonts/optional.otf") format('opentype');
+}
+
+html {
+	overflow-y: scroll;
+	background: #fff;
+}
+
+body { 
+    font-family:'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	line-height: 1.4em;
+	margin: 0 auto;
+	background: #fff;
+	text-shadow:1px 1px 0px rgba(255,255,255,0.2);
+	padding-bottom: 0px;
+	-webkit-font-smoothing: antialiased;
+	position: relative;
+}
+
+
+h1 {
+	font-family: optional; 
+	font-weight: normal;
+	font-size: 3.8em; 
+	line-height: 1.2em;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	text-shadow: none;
+	clear: both;
+}
+
+h2 {
+	font-size: 1.4em; 
+	line-height: 1.2em; 
+	color: #999;
+	margin: 0;
+	padding: 0;
+}
+
+h3 {
+	font-size: 1.2em; 
+	line-height: 1.2em; 
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+.banner { overflow: hidden; width: 100%;}
+img { /*	max-width: 100%; */ border: 0;}
+
+strong { font-weight: bold; }
+
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after{ clear: both; }
+.clearfix { zoom: 1; }
+
+
+header { padding: 0; margin: 0; }
+footer { margin: 0; text-align: right; margin-bottom: 20px; }
+footer h1 { font-size: 1em;}
+
+a { color: #006aee; font-weight: bold; text-decoration: none; -webkit-font-smoothing: antialiased; }
+a:hover {  color: #095dc6; }
+a:active { position: relative; top:1px; }
+a img { border: none; outline: none; }
+
+header,section,footer { padding: 0 15px;}
+
+::-moz-selection { background: rgba(0,0,0,0.2);	text-shadow: none; }
+::selection { background: rgba(0,0,0,0.2);	text-shadow: none; }
+
+p {
+	-webkit-font-smoothing: subpixel-antialiased;
+	padding: 0;
+	margin: 0 0 15px 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0 0 15px 0;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+li { padding: 0;}
+
+.section {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 10%;
+	padding-right: 10%;
+	display: block;
+}
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+
+/* Retina */
+
+	
+}
+
+

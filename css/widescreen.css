@@ -1,0 +1,40 @@
+body { 
+	background: #fff;
+}
+
+h1 { color: #000; }
+
+/* @end Structure */
+
+@media only screen and (min-width : 45em) and (max-width : 55em) {	
+	h1 { color: #000; }
+}
+
+@media only screen and (min-width : 50em) and (max-width : 55em) {	
+
+
+}
+
+@media only screen and (min-width: 55em) {
+
+}
+
+@media only screen and (min-width: 65em) {
+
+}
+
+@media only screen and (min-width: 70em) {
+
+}
+
+@media only screen and (min-width: 72em) {	
+
+}	
+
+@media only screen and (min-width: 85em) {
+
+}
+
+@media only screen and (min-width: 95em) {
+
+}
