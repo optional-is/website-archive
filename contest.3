@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>(optional.is) contest</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="http://optional.is/contest/favicon.ico" type="image/x-icon" />
+	<!--[if lt IE 9]>
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" media="screen and (min-width: 45em)" href="css/widescreen.css">
+	<style type="text/css">
+		div#bd {
+		    position: relative;
+		}
+
+		#map {
+		    width: 100%;
+		    height: 400px; /* If you change this don't forget to change the crosshair position to match */
+		}
+		div#crosshair {
+		    position: absolute;
+		    top: 192px;
+		    height: 19px;
+		    width: 19px;
+		    left: 50%;
+		    margin-left: -8px;
+		    display: block;
+		    background: url(contest/crosshair.gif);
+		    background-position: center center;
+		    background-repeat: no-repeat;
+		}
+		.error { padding: 15px; border: 1px solid #8B1A1A; background-color: #CD2626; color: #fff; font-weight: bold;}
+		.message { padding: 15px; border: 1px solid #458B00; background-color: #66CD00; color: #fff; font-weight: bold;}
+		ul { list-style-type: none; }
+		@media only screen and (min-width: 45em) {
+			ul li { float: left; width: 33%; }
+		}
+		
+	</style>
+</head>
+
+<body class="home">
+	<header class="clearfix">
+		<h1>(optional.is)</h1>
+	</header> 
+		<section>
+		<h2>02013-Q2</h2>
+		<p>This year we're celebrating by giving away all things paper related. The next four quarters will all have some connection to print, paper, writing and documentation.</p>
+		<div class="banner"><img src="contest/2013-Q2-header.jpg" alt="2013-Q2 Blank Business Cards"/></div>
+		<p>One of the more popular posts in 02012 was the idea of <a href="required/2012/06/12/blank-business-cards/index.html">Blank Business Cards</a>. Since then, I've had several thousand printed in a beautiful letter press style. They are the last business card I'll probably ever carry, both for me and for you. In a pinch, they've come in handy for other people too, so this quarter I'll be giving away a pack of 25 blank business cards.</p>
+	</section>
+
+	<section>
+			<p><strong>Here's how to win:</strong> You need to send us your latitude and longitude by moving and zooming the map so the cross-hairs are centered close to your location. The lat/lon is used to randomly pick the winner and the email address is so we can contact you. That's it. You don't need to spam 6 friends or retweet or follow us. The only thing we ask in return is that you subscribe the <a href="newsletter/index.html">mailing list</a>. We send out one single message each quarter and if you don't like it you can unsubscribe after winning, you won't hurt our feelings, well not too much at least.</p>
+
+			<div id="bd">
+				<div id="map"></div>
+				<div id="crosshair"></div>
+			</div>
+			<form action="contest.3" method="post"  class="clearfix" style="text-align: center; background-color: #fafafa; font-weight: bold; margin-bottom: 10px">
+				<ul>
+					<li>email: <input type="text" name="email" value="" /></li>
+					<li>latitude: <input type="text" id="lat" name="lat" value="" /></li>
+					<li>longitude: <input type="text" id="lon" name="lon" value="" /></li>
+				</ul>
+				<input type="submit" name="Submit" value="Enter the contest and subscribe to the mailing list" />
+
+			</form>
+			<p><strong>Note:</strong> If you win, we'll send you an email to get your full address. If your address isn't nearby the lat/lon you sent in, we'll pick a new random point. (So don't get smart and submit 50 times with 50 different locations, then ask us to send it elsewhere.)</p>
+	</section>
+		<section>
+
+	<p>The winner will be drawn 2 months through the quarter and contacted directly, then announced via the newsletter. The submitted point closest to the randomly chosen point, according to the <a href="http://en.wikipedia.org/wiki/Haversine_formula">Haversine Formula</a> will be deemed the winner.</p>
+
+	</section>
+
+	<section>
+	  <h2>Previous Contest Winners</h2>
+	  <p><strong>July 1st:</strong> Lat: -38.016 Lon: -148.373 was randomly selected. <em>Winner of the <a href="http://reykjavikcentermap.com/">Reykjavik Center Map</a> was Bernard from Spit Junction, Australia</em></p>
+	  <p><strong>October 1st:</strong> Lat: -45.525 Lon: -89.688 was randomly selected. <em>Winner of the <a href="http://icelandillustrated.com">Iceland Illustrated Map</a> was Steve from Cape Town, South Africa</em></p>
+	  <p><strong>December 1st:</strong> Lat: -11.921 Lon: 119.231 was randomly selected. <em>Winner of the TOC San Francisco Map was Marko from Ljubljana, Slovenia</em></p>
+	  <p><strong>March 1st: </strong> Lat: 16.125 Lon: 152.8 was randomly selected. <em>Winner of the Eyjafjallajökull notebooks was Tony in Ibaraki, Japan</em></p>
+	</section>
+	
+	
+	
+
+
+	<footer>
+		<h1>(optional.is)</h1>
+	</footer>
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCv30gBOO7bfdfoFHelkESRfaYl--n4RSQ&amp;sensor=true" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? 
+	"https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + 
+	"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-2497164-9");
+	pageTracker._trackPageview();
+	} catch(err) {}</script>
+	<script type="text/javascript">
+
+	function showMap() {
+		var myOptions = {
+		          center: new google.maps.LatLng(0, 0),
+		          zoom: 2,
+		          mapTypeId: google.maps.MapTypeId.TERRAIN
+		        };
+		var map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+		google.maps.event.addListener(map, "drag", function() {
+	        var center = map.getCenter();
+	        updateLatLonFields(center.lat(), center.lng());
+		});	
+
+		google.maps.event.addDomListener(document.getElementById('crosshair'), 'dblclick', function() {
+	    	console.log('here')
+	        map.setZoom(map.getZoom() + 1);
+	    });
+
+
+	}
+
+	showMap();
+
+	function updateLatLonFields(lat, lon) {
+	    document.getElementById("lat").value = lat;
+	    document.getElementById("lon").value = lon;
+	}
+	</script>
+</body>
+</html>
