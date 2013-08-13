@@ -7,11 +7,51 @@
 	<meta name="google-site-verification" content="NU2VGyLRaV2ouJZYY7Yw2J8cMccR7hU-GsRC-i_inKU" />
 	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png"/>
 	<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" /> 
-
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
 	<title>(optional.is)</title>
-	<style type="text/css">
+<style>
+html, body { padding:0; margin: 0 auto; text-align: center; }
+.content { padding:0; margin: 0 auto; max-width: 960px; }
+xdiv { outline: 1px solid red; }
+.area1 {  width: 66.6666%; float: left; padding: 0; margin: 0; height: 480px; text-align: left; }
+.area2 {  width: 33.3333%; float: left; padding: 0; margin: 0; height: 240px; text-align: left; }
+.area3 {  width: 33.3333%; float: left; padding: 0; margin: 0; height: 240px; text-align: left; }
+.area3 div { height: 120px; width: 100%; float: left; padding: 0; margin: 0; }
+.area4 {  width: 66.6666%; float: left; padding: 0; margin: 0; height: 240px;text-align: left;  }
+.area5 {  width: 33.3333%; float: left; padding: 0; margin: 0; height: 240px;text-align: left;  }
+
+.area4 li { width: 30%; float: left; text-align: left; }
+
+.h1 {  width: 33.3333%; float: left; padding: 0; margin: 0; height: 180px }
+.h2 {  width: 66.6666%; float: left; padding: 0; margin: 0; height: 180px }
+
+@media (max-width: 770px) {
+  .area1 { width: 100%; }
+  .area2 { width: 50%; }
+  .area3 { width: 100%; height: 120px; }
+  .area3 div { width: 50%; float: left; padding: 0; margin: 0; }
+  .area4 { width: 100%; height: 240px; }
+  .area5 { width: 100%; height: 120px; }
+
+
+  .h1 { width: 50%; }
+  .h2 { width: 100%; }
+}
+@media (max-width: 480px) {
+  .area1, .area2, .area3, .area4, .area5 { width: 100%; height: auto; }
+  .area3 { height: 240px; }
+  .area3 div { width: 100%; float: left; padding: 0; margin: 0; }
+  .area4 li { width: 40%; float: left; text-align: left; height: auto; }
+
+  .area5 { height: 240px; }
+
+  .h1 { width: 100%; }
+  .h2 { width: 100%; }
+}
+
         html, body	{ background-color: #FFF; margin: 0 auto; text-align: center; font: 100%/1.5 "Lucida Grande",Helvetica,Arial,sans-serif; }
-	h1, h2 { margin: 0; padding: 0; border-top: 5px solid #c97606;}
+	h1, h2 { margin: 0; padding: 0;}
         body { font-size: 80%;}
         img { border: 0;}
         a { color: black; text-decoration: none; }
@@ -30,73 +70,133 @@ padding-left:20px; }
 	       url("fonts/optional.svg") format('svg'),
 	       url("fonts/optional.otf") format('opentype');
 	}
-	#header { font-family: optional; font-weight: normal; font-size: 64px; }
+	#header { font-family: optional; font-weight: normal; font-size: 65px; }
+	.banner a { position: relative; display: block; width: 100%; height: 100% }
+	.banner a span { position: absolute; bottom: 0; right: 0; padding: .5em 1em; background-color: rgba(0,0,0,0.75); color: #fff }
+	.adr { background-color: rgb(248,240,230); }
+	.adr div { padding: .25em 1em; margin: 0; float: none; height: auto; width: auto; }
+	section { padding-top: 10px; clear: both; }
 	</style>
 </head>
+
 <body>
-    <div style="width: 960px; margin: 0 auto; position: relative;">
-        <div style="text-align: left; height: 161px;">
-            <span id="header">(optional.is)</span>
-	    <div id="toolbar" style="text-align: right; position: absolute; top: 0; left: 496px; width: 464px;">
-<a class="feed" href="http://feeds2.feedburner.com/optional?format=xml">Feed</a> <form style="display: inline" action="required/index.html" method="get"><input type="text" name="s" /><input type="submit" 
-value="search" 
-/></form></div>
-        </div>
+	<div class="content">
+		<section class="blockA">
+			<div class="area1" style="background: transparent url('images/blueberry-iceland.jpg') 50% 20px no-repeat; height: 480px">
+				<header id="header" style="color: #000; text-align: center; padding-top: 370px">(optional.is)</header>
+			</div>
+		<!--
+			<div class="area1" style="border-top: 5px solid #067413">
+				<div style="padding: 8px">
+					<h1>Week #130</h1><p>Weeknotes are a quick and brief review of what we've been up to for the last 7 days. Since this is our first weeknote and we missed the last 129, it's a little longer than normal.
 
-	<div style="width: 313px; text-align: left; position: absolute; left: 474px; top: 161px">
+It has been a busy summer and we've got lots to show for it. You tend to forget how many projects we've been working on and how long they've taken unless you track it and review it.</p><p><a href="http://optional.is/required/2013/08/09/week-130/" class="readmore">Read More...</a></p>				</div>
+			</div>
+		-->
+			<div class="area2" style="border-top: 5px solid #067413">
+				<div style="padding: 8px">
+					<h1>Week #130</h1><p>Weeknotes are a quick and brief review of what we've been up to for the last 7 days. Since this is our first weeknote and we missed the last 129, it's a little longer than normal.
 
-                <h1>Gestalten: A Map of the World</h1><p>The publisher Gestalten asked permission to print a few of our projects in their newest book, A Map of the World. It is a beautiful book full of wonderous maps from various artists around the world.</p><p><a href="required/2013/05/14/gestalten-a-map-of-the-world/index.html" class="readmore">Read More...</a></p>        <ul style="clear: both; padding-top: 10px; border-top: 1px solid #c97606">
+It has been a busy summer and we've got lots to show for it. You tend to forget how many projects we've been working on and how long they've taken unless you track it and review it.</p><p><a href="required/2013/08/09/week-130/index.html" class="readmore">Read More...</a></p>				</div>
+			</div>
+			<div class="area2">
+				        <ul style="clear: both; padding-top: 10px; border-top: 5px solid #067413">
 
-		<li style="border-left: 10px solid #6d9f93;"><a 
-href="required/2013/04/09/tapped-out/index.html">Tapped out</a></li><li style="border-left: 10px solid #083183;"><a 
-href="required/2013/02/08/02012-annual-report/index.html">02012 Annual Report</a></li><li style="border-left: 10px solid #cf4713;"><a 
-href="required/2013/01/21/getting-to-your-minimum-hourly-rate/index.html">Getting to your minimum hourly rate</a></li><li style="border-left: 10px solid #e71a53;"><a 
-href="required/2013/01/01/omnibus-02012/index.html">Omnibus 02012</a></li><li style="border-left: 10px solid #962444;"><a 
-href="required/2012/09/22/does-your-flier-care-about-the-customer/index.html">Does your flier care about the customer?</a></li><li style="border-left: 10px solid #f636a6;"><a 
-href="required/2012/08/20/calendar-business-cards/index.html">Calendar Business Cards</a></li><li style="border-left: 10px solid #464607;"><a 
-href="required/2012/06/26/shine-on-you-crazy-ones/index.html">Shine-on you crazy ones!</a></li>		<li><a href="required/index.html" style="border-top: 1px solid #c97606; padding: 5px; margin-top: 10px">Full Archives</a></li>
-         </ul>
-
+						<li style="border-left: 10px solid #db35ac;"><a 
+				href="required/2013/08/02/icelandic-flag-stamp-bead-art/index.html">Bead Art</a></li><li style="border-left: 10px solid #3dca26;"><a 
+				href="required/2013/07/28/business-metrics/index.html">Business Metrics</a></li><li style="border-left: 10px solid #5dffa9;"><a 
+				href="required/2013/07/18/lethal-t-shirt/index.html">Lethal T-Shirt!</a></li><li style="border-left: 10px solid #3ba983;"><a 
+				href="required/2013/06/01/tricking-the-stock-market/index.html">Tricking the Stock Market</a></li><li style="border-left: 10px solid #c97606;"><a 
+				href="required/2013/05/14/gestalten-a-map-of-the-world/index.html">Gestalten: A Map of the World</a></li><li style="border-left: 10px solid #6d9f93;"><a 
+				href="required/2013/04/09/tapped-out/index.html">Tapped out</a></li><li style="border-left: 10px solid #083183;"><a 
+				href="required/2013/02/08/02012-annual-report/index.html">02012 Annual Report</a></li>						<li><a href="required/index.html" style="border-top: 1px solid #067413; padding: 5px; margin-top: 10px">Full Archives</a></li>
+				         </ul>
+			</div>
+			<!--
+			<div class="area2" style="border-top: 5px solid #270d70">
+				<div style="padding: 8px">
+					<h2>Polyphasic Sleep</h2><p><a href="http://optional.is/required/2009/06/27/polyphasic-sleep'/" class="readmore">Read  More...</a></p>
+				</div>
+			</div>
+			-->
+		</section>
+		
+		<section class="blockB">
+			<div class="area3" >
+				<div style="line-height: 1.25em; background-color:#E0EEE0; font-size: 200%; font-weight: bold; color: #212121"><p style="padding: .5em; margin: 0;">We've worked 
+with some great partners</p></div>
+				<div style="line-height: 1.25em; background-color:#C1CDC1; font-size: 200%; font-weight: bold; color: #212121"><p style="padding: .5em; margin: 0;">Interested in working with us?</p></div>
+			</div>
+			<div class="area2">
+				<p style="margin: 0; padding: 0 2em; font-weight: bold; height: 240px; background: transparent url('images/customers-pwc.png') 50% 50% no-repeat">PwC Data visualization Projects</p>
+			</div>
+			<div class="area2">
+				<p style="margin: 0; padding: 0 2em; font-weight: bold; height: 240px; background: transparent url('images/customers-uefa.png') 50% 50% no-repeat">UEFA Calendars</p>
+			</div>
+		</section>
+		
+		
+		<section class="blockB">
+			<div class="area3" style="background-color:rgb(242,245,238)">
+				<div class="banner" style="box-shadow: inset 0 0 10px #333; background: transparent url('images/banner-contest.jpg') 50% 50% no-repeat"><a href="contest.5"><span>Sign-up to win the Quarterly Contest</span></a></div>
+				<div class="banner" style="box-shadow: inset 0 0 10px #333; background: transparent url('images/banner-mailing-list.jpg') 0 50% no-repeat"><a href="newsletter/index.html"><span>Join our Mailing List</span></a></div>
+				
+			</div>
+			<div class="area2" style="background: transparent url('images/book-fss-csf.jpg') 50% 50% no-repeat; height: 240px"><a href="http://www.fivesimplesteps.com/products/creating-symbol-fonts" style=" height: 240px; width: 100%; display: block; text-indent: -9999px">Creating Symbol Fonts</a></div>
+			<div class="area2" style="background: rgb(253,81,0) url('images/book-fss-dwd.png') 50% 50% no-repeat;"><a href="http://designingwithdata.com" style=" height: 240px; width: 100%; display: block; text-indent: -9999px">Designing With Data</a></div>
+		</section>
+		
+		<section class="blockC">
+			<div class="area4">
+				<h1>Categories</h1>
+				            <ul style="clear: both; padding-top: 10px">
+				                <li style="border-left: 10px solid #aa8c5b;"><a 
+				href="required/category/briefs/index.html">Briefs</a></li><li style="border-left: 10px solid #992978;"><a 
+				href="required/category/cartography/index.html">Cartography</a></li><li style="border-left: 10px solid #a0d2b6;"><a 
+				href="required/category/case-studies/index.html">Case Studies</a></li><li style="border-left: 10px solid #1e7940;"><a 
+				href="required/category/chromatics/index.html">Chromatics</a></li><li style="border-left: 10px solid #7d6198;"><a 
+				href="required/category/community/index.html">Community</a></li><li style="border-left: 10px solid #d70b59;"><a 
+				href="required/category/conferences/index.html">Conferences</a></li><li style="border-left: 10px solid #de7a22;"><a 
+				href="required/category/education/index.html">Education</a></li><li style="border-left: 10px solid #482926;"><a 
+				href="required/category/experiments/index.html">Experiments</a></li><li style="border-left: 10px solid #89c126;"><a 
+				href="required/category/forecast/index.html">Forecast</a></li><li style="border-left: 10px solid #756640;"><a 
+				href="required/category/interfaces/index.html">Interfaces</a></li><li style="border-left: 10px solid #b6755d;"><a 
+				href="required/category/meta/index.html">Meta</a></li><li style="border-left: 10px solid #d0a662;"><a 
+				href="required/category/paper/index.html">Paper</a></li><li style="border-left: 10px solid #7b9cf0;"><a 
+				href="required/category/place/index.html">Place</a></li><li style="border-left: 10px solid #c5f29b;"><a 
+				href="required/category/privacy/index.html">Privacy</a></li><li style="border-left: 10px solid #918e18;"><a 
+				href="required/category/sports/index.html">Sports</a></li><li style="border-left: 10px solid #d4ccb5;"><a 
+				href="required/category/storytelling/index.html">Storytelling</a></li><li style="border-left: 10px solid #bafe5c;"><a 
+				href="required/category/t-shirts/index.html">T-Shirts</a></li><li style="border-left: 10px solid #504c77;"><a 
+				href="required/category/temporality/index.html">Temporality</a></li><li style="border-left: 10px solid #1fb0f9;"><a 
+				href="required/category/travel/index.html">Travel</a></li><li style="border-left: 10px solid #b10ac6;"><a 
+				href="required/category/visualizations/index.html">Visualizations</a></li><li style="border-left: 10px solid #138567;"><a 
+				href="required/category/weeknotes/index.html">Weeknotes</a></li><li style="border-left: 10px solid #96e20d;"><a 
+				href="required/category/youre-doing-it-wrong/index.html">You're doing it wrong</a></li>				            </ul>
+			</div>
+			
+			<div class="area3">
+				<div class="banner" style="background: transparent url('events/office_map.png') 50% 50% no-repeat"></div>
+				<div class="adr">
+					<!-- <div class="fn">Optional Slf.</div> -->
+					<div class="street-address">Austurstræti 17</div>
+					<div><span class="postal-code">101</span> <span class="city">Reykjavík</span></div>
+					<!-- <div class="country">ICELAND</div> -->
+					<div class="email"><a href="mailto:optional@optional.is">optional@optional.is</a></div>
+					<div class="phone">+354.868.0795</div>
+				</div>
+			</div>
+		</section>
+		
+		<!--
+		<section class="blockE">
+			<div class="area5" style="background-color:rgb(237,238,242)">Picture</div>
+			<div class="area4" style="background-color:rgb(237,238,242)">Hire Us</div>
+		</section>
+		-->
 	</div>
-	<div style="position: absolute; top: 161px; left: 0px; border-right: 1px solid #eee; padding-right: 10px; text-align: left; width: 454px">
-	<h1 style="border-color: #"><img style="padding-top: 10px" src="images/blueberry-iceland.jpg" alt="" style="width: 
-				454px;" /></h1><div><div style="width: 216px; float: left; margin-right: 10px; padding-right: 10px; border-right: 1px solid #eee "><h2 style="border-top: 5px solid #33c6a9">Being passionate for your work</h2><p><a href="required/2012/02/10/being-passionate-for-your-work/index.html" class="readmore">Read 
-More...</a></p></div><div style="width: 216px; float: left;"><h2 style="border-top: 5px solid #47c8b5">Millennium Saga</h2><p><a href="required/2011/08/22/millennium-saga/index.html" class="readmore">Read 
-More...</a></p></div></div>
+</body>
 
-	</div>
-
-	<div style="position: absolute; top: 161px; left: 797px; width: 161px; text-align: left; border-left: 1px solid #eee; 
-padding: 0 0 0 10px">
-	<h1>Sections</h1>
-            <ul style="clear: both; padding-top: 10px">
-                <li style="border-left: 10px solid #992978;"><a 
-href="required/category/cartography/index.html">Cartography</a></li><li style="border-left: 10px solid #a0d2b6;"><a 
-href="required/category/case-studies/index.html">Case Studies</a></li><li style="border-left: 10px solid #1e7940;"><a 
-href="required/category/chromatics/index.html">Chromatics</a></li><li style="border-left: 10px solid #7d6198;"><a 
-href="required/category/community/index.html">Community</a></li><li style="border-left: 10px solid #d70b59;"><a 
-href="required/category/conferences/index.html">Conferences</a></li><li style="border-left: 10px solid #de7a22;"><a 
-href="required/category/education/index.html">Education</a></li><li style="border-left: 10px solid #482926;"><a 
-href="required/category/experiments/index.html">Experiments</a></li><li style="border-left: 10px solid #89c126;"><a 
-href="required/category/forecast/index.html">Forecast</a></li><li style="border-left: 10px solid #756640;"><a 
-href="required/category/interfaces/index.html">Interfaces</a></li><li style="border-left: 10px solid #b6755d;"><a 
-href="required/category/meta/index.html">Meta</a></li><li style="border-left: 10px solid #d0a662;"><a 
-href="required/category/paper/index.html">Paper</a></li><li style="border-left: 10px solid #7b9cf0;"><a 
-href="required/category/place/index.html">Place</a></li><li style="border-left: 10px solid #c5f29b;"><a 
-href="required/category/privacy/index.html">Privacy</a></li><li style="border-left: 10px solid #918e18;"><a 
-href="required/category/sports/index.html">Sports</a></li><li style="border-left: 10px solid #d4ccb5;"><a 
-href="required/category/storytelling/index.html">Storytelling</a></li><li style="border-left: 10px solid #bafe5c;"><a 
-href="required/category/t-shirts/index.html">T-Shirts</a></li><li style="border-left: 10px solid #504c77;"><a 
-href="required/category/temporality/index.html">Temporality</a></li><li style="border-left: 10px solid #1fb0f9;"><a 
-href="required/category/travel/index.html">Travel</a></li><li style="border-left: 10px solid #b10ac6;"><a 
-href="required/category/visualizations/index.html">Visualizations</a></li><li style="border-left: 10px solid #96e20d;"><a 
-href="required/category/youre-doing-it-wrong/index.html">You're doing it wrong</a></li>            </ul>
-
-	    <div style="padding-top: 20px"><a href="http://designingwithdata.com/"><img src="dwd.png" 
-alt="Designing with Data book Link" /></a></div>
-
-	</div>
-        
 
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? 
@@ -109,5 +209,6 @@ try {
 var pageTracker = _gat._getTracker("UA-2497164-9");
 pageTracker._trackPageview();
 } catch(err) {}</script>
+
 </body>
 </html>

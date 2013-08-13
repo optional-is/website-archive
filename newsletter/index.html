@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr">
 	<head>
         <title>(optional.is) List</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -174,6 +174,11 @@
 		}
 		.radiogroup input,.phonearea input,.addressfield input,.datefield input,.groups input{
 			width:auto;
+		}
+		.radio-group input,.checkbox-group input{
+			width:auto;
+			display:inline-block;
+			margin-right:5px;
 		}
 		.field-group label{
 			clear:none;
@@ -517,6 +522,19 @@
 			color:#6b0505;
 			background-color:#f4bfbf;
 		}
+		html[dir=rtl] .wrapper,html[dir=rtl] .container,html[dir=rtl] label{
+			text-align:right !important;
+		}
+		html[dir=rtl] ul.interestgroup_field label{
+			padding:0;
+		}
+		html[dir=rtl] ul.interestgroup_field input{
+			margin-left:5px;
+		}
+		html[dir=rtl] label .asterisk{
+			right:auto;
+			left:10px;
+		}
 		#templateHeader{
 			padding:0px;
 			background-color:#003f87;
@@ -543,7 +561,7 @@
 
 
 
-<form action="http://optional.us2.list-manage.com/subscribe/post" method="POST">
+<form action="http://optional.us2.list-manage1.com/subscribe/post" method="POST">
 <input type="hidden" name="u" value="980d7e7c822ddb46c6693388d">
 <input type="hidden" name="id" value="4b11c60bdb">
 
