@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr">
 	<head>
         <title>(optional.is) List</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="(optional.is) List Email Forms">
         <meta name="keywords" content="(optional.is) List">
-        <!-- Change the width below to just wider than your form's width
-        to optimize its initial scale on Apple iOS  and Android devices -->
-        <meta name="viewport" content="width=640">
         <script type="text/javascript" src="http://www.google.com/jsapi"></script>
 <script type="text/javascript">
 	google.load("jquery", "1.7.1");
@@ -65,7 +63,7 @@
 <script type="text/javascript">
     $(document).ready(function(){
         try {
-        var domains =['hotmail.co.uk','yahoo.co.uk','yahoo.com.tw','yahoo.com.au','yahoo.com.mx','gmail.com','hotmail.com','yahoo.com','aol.com','comcast.net','msn.com','seznam.cz','sbcglobal.net','live.com','bellsouth.net','hotmail.fr','verizon.net','mail.ru','btinternet.com','cox.net','yahoo.com.br','bigpond.com','att.net','yahoo.fr','mac.com','ymail.com','googlemail.com','earthlink.net','xtra.co.nz','me.com','yahoo.gr','walla.com','yahoo.es','charter.net','shaw.ca','live.nl','yahoo.ca','orange.fr','optonline.net','gmx.de','wanadoo.fr','optusnet.com.au','rogers.com','web.de','ntlworld.com','juno.com','yahoo.com.sg','rocketmail.com','yandex.ru','yahoo.co.in','centrum.cz','live.co.uk','sympatico.ca','libero.it','walla.co.il','bigpond.net.au','yahoo.com.hk','ig.com.br','live.com.au','free.fr','sky.com','uol.com.br','abv.bg','live.fr','terra.com.br','hotmail.it','tiscali.co.uk','rediffmail.com','aim.com','blueyonder.co.uk','telus.net','bol.com.br','hotmail.es','email.cz','windowslive.com','talktalk.net','home.nl','t-online.de','yahoo.de','telenet.be','163.com','embarqmail.com','windstream.net','roadrunner.com','bluewin.ch','skynet.be','laposte.net','yahoo.it','qq.com','live.dk','planet.nl','hetnet.nl','gmx.net','mindspring.com','rambler.ru','iinet.net.au','eircom.net','yahoo.com.ar','wp.pl','mail.com'];
+        var domains =['hotmail.co.uk','yahoo.co.uk','yahoo.com.tw','yahoo.com.au','yahoo.com.mx','gmail.com','hotmail.com','yahoo.com','aol.com','comcast.net','msn.com','seznam.cz','sbcglobal.net','live.com','bellsouth.net','hotmail.fr','verizon.net','mail.ru','btinternet.com','cox.net','yahoo.com.br','bigpond.com','att.net','yahoo.fr','mac.com','ymail.com','googlemail.com','earthlink.net','xtra.co.nz','me.com','yahoo.gr','walla.com','yahoo.es','charter.net','shaw.ca','live.nl','yahoo.ca','orange.fr','optonline.net','gmx.de','wanadoo.fr','optusnet.com.au','rogers.com','web.de','ntlworld.com','juno.com','yahoo.com.sg','rocketmail.com','yandex.ru','yahoo.co.in','centrum.cz','live.co.uk','sympatico.ca','libero.it','walla.co.il','bigpond.net.au','yahoo.com.hk','ig.com.br','live.com.au','free.fr','sky.com','uol.com.br','abv.bg','live.fr','terra.com.br','hotmail.it','tiscali.co.uk','rediffmail.com','aim.com','blueyonder.co.uk','telus.net','bol.com.br','hotmail.es','email.cz','windowslive.com','talktalk.net','home.nl','t-online.de','yahoo.de','telenet.be','163.com','embarqmail.com','windstream.net','roadrunner.com','bluewin.ch','skynet.be','laposte.net','yahoo.it','qq.com','live.dk','planet.nl','hetnet.nl','gmx.net','mindspring.com','rambler.ru','iinet.net.au','eircom.net','yahoo.com.ar','wp.pl','mail.com','emmis.com','hotmail.de','lireo.com','gmx.at','ukr.net','zol.co.zw'];
         var tdomains = [];
         $('#MERGE0').on('blur', function() {
           $(this).mailcheck({
@@ -95,7 +93,6 @@
 	<style type="text/css">
 		body{
 			font:14px/20px 'Helvetica', Arial, sans-serif;
-			min-width:600px;
 			margin:0;
 			padding:75px 0 0 0;
 			text-align:center;
@@ -174,6 +171,11 @@
 		}
 		.radiogroup input,.phonearea input,.addressfield input,.datefield input,.groups input{
 			width:auto;
+		}
+		.radio-group input,.checkbox-group input{
+			width:auto;
+			display:inline-block;
+			margin-right:5px;
 		}
 		.field-group label{
 			clear:none;
@@ -517,7 +519,59 @@
 			color:#6b0505;
 			background-color:#f4bfbf;
 		}
-		#templateHeader{
+		html[dir=rtl] .wrapper,html[dir=rtl] .container,html[dir=rtl] label{
+			text-align:right !important;
+		}
+		html[dir=rtl] ul.interestgroup_field label{
+			padding:0;
+		}
+		html[dir=rtl] ul.interestgroup_field input{
+			margin-left:5px;
+		}
+		html[dir=rtl] label .asterisk{
+			right:auto;
+			left:10px;
+		}
+	@media (max-width: 601px){
+		body{
+			width:100%;
+			-webkit-font-smoothing:antialiased;
+			padding:10px 0 0 0 !important;
+			min-width:300px !important;
+		}
+
+}	@media (max-width: 601px){
+		textarea,select,ul.unsub-options li textarea{
+			width:80% !important;
+		}
+
+}	@media (max-width: 601px){
+		h1 img{
+			max-width:100%;
+			height:auto !important;
+		}
+
+}	@media (max-width: 601px){
+		.wrapper,.poweredWrapper{
+			width:auto !important;
+			max-width:600px !important;
+			padding:0 10px;
+		}
+
+}	@media (max-width: 601px){
+		.addressfield .countryfield select{
+			max-width:50% !important;
+		}
+
+}	@media (max-width: 601px){
+		#templateContainer,#templateBody,#templateContainer table{
+			width:100% !important;
+			-moz-box-sizing:border-box;
+			-webkit-box-sizing:border-box;
+			box-sizing:border-box;
+		}
+
+}		#templateHeader{
 			padding:0px;
 			background-color:#003f87;
 		}
@@ -619,7 +673,7 @@
             try {
                 var _gaq = _gaq || [];
                 _gaq.push(["_setAccount", "UA-2497164-9"]);
-                _gaq.push(["_setDomainName", "list-manage"]);
+                _gaq.push(["_setDomainName", ".list-manage.com"]);
                 _gaq.push(["_trackPageview"]);
                 _gaq.push(["_setAllowLinker", true]);
             } catch(err) {console.log(err);}</script>
