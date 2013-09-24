@@ -10,73 +10,133 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
 	<title>(optional.is)</title>
-<style>
-html, body { padding:0; margin: 0 auto; text-align: center; }
-.content { padding:0; margin: 0 auto; max-width: 960px; }
-xdiv { outline: 1px solid red; }
-.area1 {  width: 66.6666%; float: left; padding: 0; margin: 0; height: 480px; text-align: left; }
-.area2 {  width: 33.3333%; float: left; padding: 0; margin: 0; height: 240px; text-align: left; }
-.area3 {  width: 33.3333%; float: left; padding: 0; margin: 0; height: 240px; text-align: left; }
-.area3 div { height: 120px; width: 100%; float: left; padding: 0; margin: 0; }
-.area4 {  width: 66.6666%; float: left; padding: 0; margin: 0; height: 240px;text-align: left;  }
-.area5 {  width: 33.3333%; float: left; padding: 0; margin: 0; height: 240px;text-align: left;  }
+	<style>
+	html, body { padding:0; margin: 0 auto; text-align: center; background-color: #dedede; }
+	.content { padding:0; margin: 0 auto; max-width: 960px; background-color: #fff; box-shadow: 0px 0px 5px #f00; }
+	.area1 {  background-color: #fff; width: 66.6666%; float: left; padding: 0; margin: 0; height: 480px; text-align: left; }
+	.area2 {  background-color: #fff; width: 33.3333%; float: left; padding: 0; margin: 0; height: 240px; text-align: left; position: relative; }
+	.area3 {  background-color: #fff; width: 33.3333%; float: left; padding: 0; margin: 0; height: 240px; text-align: left; position: relative; }
+	.area3 div { height: 120px; width: 100%; float: left; padding: 0; margin: 0; }
+	.area4 {  background-color: #fff; width: 66.6666%; float: left; padding: 0; margin: 0; height: 240px;text-align: left;  }
+	.area5 {  background-color: #fff; width: 33.3333%; float: left; padding: 0; margin: 0; height: 240px;text-align: left;  }
 
-.area4 li { width: 30%; float: left; text-align: left; }
+	.content { box-shadow: 0px 0px 100px #999; }
 
-.h1 {  width: 33.3333%; float: left; padding: 0; margin: 0; height: 180px }
-.h2 {  width: 66.6666%; float: left; padding: 0; margin: 0; height: 180px }
+	.area4 li { width: 30%; float: left; text-align: left; }
 
-@media (max-width: 770px) {
-  .area1 { width: 100%; }
-  .area2 { width: 50%; }
-  .area3 { width: 100%; height: 120px; }
-  .area3 div { width: 50%; float: left; padding: 0; margin: 0; }
-  .area4 { width: 100%; height: 240px; }
-  .area5 { width: 100%; height: 120px; }
+	.h1 {  width: 33.3333%; float: left; padding: 0; margin: 0; height: 180px }
+	.h2 {  width: 66.6666%; float: left; padding: 0; margin: 0; height: 180px }
 
+	.quote-follow:before {
+		margin-top: 20px;
+		margin-left: -15px;
+		display: block;
+		content: '◆';
+		font-size: 50px;
+		color: #fff;
+		z-index: 100;
 
-  .h1 { width: 50%; }
-  .h2 { width: 100%; }
-}
-@media (max-width: 480px) {
-  .area1, .area2, .area3, .area4, .area5 { width: 100%; height: auto; }
-  .area3 { height: 240px; }
-  .area3 div { width: 100%; float: left; padding: 0; margin: 0; }
-  .area4 li { width: 40%; float: left; text-align: left; height: auto; }
-
-  .area5 { height: 240px; }
-
-  .h1 { width: 100%; }
-  .h2 { width: 100%; }
-}
-
-        html, body	{ background-color: #FFF; margin: 0 auto; text-align: center; font: 100%/1.5 "Lucida Grande",Helvetica,Arial,sans-serif; }
-	h1, h2 { margin: 0; padding: 0;}
-        body { font-size: 80%;}
-        img { border: 0;}
-        a { color: black; text-decoration: none; }
-        ul li a:hover { background-color: #ccc; }
-	ul li a { display: block; padding: 2px 5px }
-        
-        ul { padding: 0; margin: 0;}
-        li { list-style-type: none; }
-	.feed { background-image:url("http://suda.co.uk/images/feed.gif"); background-position:3px 50%; background-repeat:no-repeat; 
-padding-left:20px; }
-	.readmore { font-weight: bold; color: #003F87; text-decoration: underline;}
-	@font-face {
-	  font-family: 'optional';
-	    src: url("fonts/optional.eot");
-	    src: local('optional'),
-	       url("fonts/optional.svg") format('svg'),
-	       url("fonts/optional.otf") format('opentype');
 	}
-	#header { font-family: optional; font-weight: normal; font-size: 65px; }
-	.banner a { position: relative; display: block; width: 100%; height: 100% }
-	.banner a span { position: absolute; bottom: 0; right: 0; padding: .5em 1em; background-color: rgba(0,0,0,0.75); color: #fff }
-	.adr { background-color: rgb(248,240,230); }
-	.adr div { padding: .25em 1em; margin: 0; float: none; height: auto; width: auto; }
-	section { padding-top: 10px; clear: both; }
-	</style>
+
+	.quote-before:before {
+		margin-top: 20px;
+		margin-left: -20px;
+		display: block;
+		content: '◆';
+		font-size: 50px;
+		color: #fff;
+		z-index: 100;
+
+	}
+
+
+	.quote-below:before {
+		margin-top: 78px;
+		margin-left: 10%;
+		display: block;
+		content: '◆';
+		font-size: 50px;
+		color: #fff;
+		z-index: 1000;	
+	}
+
+	@media (max-width: 770px) {
+	  .area1 { width: 100%; }
+	  .area2 { width: 50%; }
+	  .area3 { width: 100%; height: 120px; }
+	  .area3 div { width: 50%; float: left; padding: 0; margin: 0; }
+	  .area4 { width: 100%; height: 240px; }
+	  .area5 { width: 100%; height: 120px; }
+
+	  .blockB .area1 { width: 50%; }
+
+	  .h1 { width: 50%; }
+	  .h2 { width: 100%; }
+		.quote-below:before {
+			margin-top: 10px;
+			margin-left: 95%;
+		}
+
+	}
+	@media (max-width: 480px) {
+	  .area1, .area2, .area3, .area4, .area5 { width: 100%; height: auto; }
+	  .area3 { height: 240px; }
+	  .area3 div { width: 100%; float: left; padding: 0; margin: 0; }
+	  .area4 li { width: 40%; float: left; text-align: left; height: auto; }
+	  .area5 { height: 240px; }
+
+	  .blockB .area1 { width: 100%; }
+
+
+	  .h1 { width: 100%; }
+	  .h2 { width: 100%; }
+
+		.quote-follow:before {
+			margin-top: -35px;
+			margin-left: 10%;
+		}
+
+		.quote-before:before {
+			margin-top: -45px;
+			margin-left: 80%;
+		}
+
+		.quote-below:before {
+			margin-top: 85px;
+			margin-left: 10%;
+		}
+	}
+
+	        html, body	{ margin: 0 auto; text-align: center; font: 100%/1.5 "Lucida Grande",Helvetica,Arial,sans-serif; }
+		h1, h2 { margin: 0; padding: 0;}
+	        body { font-size: 80%;}
+	        img { border: 0;}
+	        a { color: black; text-decoration: none; }
+	        ul li a:hover { background-color: #ccc; }
+		ul li a { display: block; padding: 2px 5px }
+
+	        ul { padding: 0; margin: 0;}
+	        li { list-style-type: none; }
+		.feed { background-image:url("http://suda.co.uk/images/feed.gif"); background-position:3px 50%; background-repeat:no-repeat; 
+	padding-left:20px; }
+		.readmore { font-weight: bold; color: #003F87; text-decoration: underline;}
+		@font-face {
+		  font-family: 'optional';
+		    src: url("fonts/optional.eot");
+		    src: local('optional'),
+		       url("fonts/optional.svg") format('svg'),
+		       url("fonts/optional.otf") format('opentype');
+		}
+		#header { font-family: optional; font-weight: normal; font-size: 65px; }
+		.banner a { position: relative; display: block; width: 100%; height: 100% }
+		.banner a span { position: absolute; bottom: 0; right: 0; padding: .5em 1em; background-color: rgba(0,0,0,0.75); color: #fff }
+		.adr div { padding: .3em 1em; margin: 0; float: none; height: auto; width: auto; }
+		section {clear: both; }
+		section {  background-color: #fff}
+		.area3 div.adr { padding-top: 0.5em; color: #7F7F7F }
+		.adr a, .adr a:visited { color: #7F7F7F }
+
+		</style>
 </head>
 
 <body>
@@ -86,64 +146,110 @@ padding-left:20px; }
 				<header id="header" style="color: #000; text-align: center; padding-top: 370px">(optional.is)</header>
 			</div>
 		<!--
-			<div class="area1" style="border-top: 5px solid #1f89a0">
+			<div class="area1" style="border-top: 5px solid #1ba4bf">
 				<div style="padding: 8px">
-					<h1>Week #132</h1><p>Heads down for another busy week prepping for a school year start, which means more client work as well. Two new side projects in the wings to be worked on when things are slow or we need a break.</p><p><a href="http://optional.is/required/2013/08/23/week-132/" class="readmore">Read More...</a></p>				</div>
+					<h1>Shishito Peppers</h1><p>We certainly don't have the best of green thumbs, but we did manage to grow some randomly spicy peppers. Now they are ready to eat and the fun begins!</p><p><a href="http://optional.is/required/2013/09/16/shishito-peppers/" class="readmore">Read More...</a></p>				</div>
 			</div>
 		-->
-			<div class="area2" style="border-top: 5px solid #1f89a0">
+			<div class="area2" style="border-top: 5px solid #1ba4bf">
 				<div style="padding: 8px">
-					<h1>Week #132</h1><p>Heads down for another busy week prepping for a school year start, which means more client work as well. Two new side projects in the wings to be worked on when things are slow or we need a break.</p><p><a href="required/2013/08/23/week-132/index.html" class="readmore">Read More...</a></p>				</div>
+					<h1>Shishito Peppers</h1><p>We certainly don't have the best of green thumbs, but we did manage to grow some randomly spicy peppers. Now they are ready to eat and the fun begins!</p><p><a href="required/2013/09/16/shishito-peppers/index.html" class="readmore">Read More...</a></p>				</div>
 			</div>
 			<div class="area2">
-				        <ul style="clear: both; padding-top: 10px; border-top: 5px solid #1f89a0">
+				        <ul style="clear: both; padding-top: 10px; border-top: 5px solid #1ba4bf">
 
-						<li style="border-left: 10px solid #fd2a6a;"><a 
+						<li style="border-left: 10px solid #23e498;"><a 
+				href="required/2013/09/13/weeks-134-135/index.html">Weeks #134-135</a></li><li style="border-left: 10px solid #19aa1c;"><a 
+				href="required/2013/09/03/intuitive-design-or-something-else/index.html">Intuitive Design or something else ...</a></li><li style="border-left: 10px solid #ea0ceb;"><a 
+				href="required/2013/08/30/week-133/index.html">Week #133</a></li><li style="border-left: 10px solid #1f89a0;"><a 
+				href="required/2013/08/23/week-132/index.html">Week #132</a></li><li style="border-left: 10px solid #fd2a6a;"><a 
 				href="required/2013/08/16/week-131/index.html">Week #131</a></li><li style="border-left: 10px solid #63de88;"><a 
 				href="required/2013/08/13/dazzle-camouflage/index.html">Dazzle Camouflage</a></li><li style="border-left: 10px solid #067413;"><a 
-				href="required/2013/08/09/week-130/index.html">Week #130</a></li><li style="border-left: 10px solid #db35ac;"><a 
-				href="required/2013/08/02/icelandic-flag-stamp-bead-art/index.html">Bead Art</a></li><li style="border-left: 10px solid #3dca26;"><a 
-				href="required/2013/07/28/business-metrics/index.html">Business Metrics</a></li><li style="border-left: 10px solid #5dffa9;"><a 
-				href="required/2013/07/18/lethal-t-shirt/index.html">Lethal T-Shirt!</a></li><li style="border-left: 10px solid #3ba983;"><a 
-				href="required/2013/06/01/tricking-the-stock-market/index.html">Tricking the Stock Market</a></li>						<li><a href="required/index.html" style="border-top: 1px solid #1f89a0; padding: 5px; margin-top: 10px">Full Archives</a></li>
+				href="required/2013/08/09/week-130/index.html">Week #130</a></li>						<li><a href="required/index.html" style="border-top: 1px solid #1ba4bf; padding: 5px; margin-top: 10px">Full Archives</a></li>
 				         </ul>
 			</div>
 			<!--
-			<div class="area2" style="border-top: 5px solid #a33fbe">
+			<div class="area2" style="border-top: 5px solid #1f89a0">
 				<div style="padding: 8px">
-					<h2>A few things you might not have known about email</h2><p><a href="http://optional.is/required/2010/04/02/a-few-things-you-might-not-have-known-about-email'/" class="readmore">Read  More...</a></p>
+					<h2>Week #132</h2><p><a href="http://optional.is/required/2013/08/23/week-132'/" class="readmore">Read  More...</a></p>
 				</div>
 			</div>
 			-->
 		</section>
-		
-		<section class="blockB">
-			<div class="area3" >
-				<div style="line-height: 1.25em; background-color:#E0EEE0; font-size: 200%; font-weight: bold; color: #212121"><p style="padding: .5em; margin: 0;">We've worked 
-with some great partners</p></div>
-				<div style="line-height: 1.25em; background-color:#C1CDC1; font-size: 200%; font-weight: bold; color: #212121"><p style="padding: .5em; margin: 0;">Interested in working with us?</p></div>
+		<section class="blockB"  style="border-top: 5px solid #1ba4bf">
+			<div class="area2 " style="height: 240px;">
+				<div style="position: absolute; top: 0; left: 0;height: 240px; width: 100%;">
+					<div style="padding: 1.5em 2em; font-size: 130%; line-height: 160%; color: #3D3242;">
+						<div style="font-family: TimesNewRoman,'Times New Roman',Times">Working with the PwC US Studio team, we created vizualizations for internal and external projects and explored options and workflows to produce projects in house.</div>
+					</div>
+				</div>	
 			</div>
-			<div class="area2">
-				<p style="margin: 0; padding: 0 2em; font-weight: bold; height: 240px; background: transparent url('images/customers-pwc.png') 50% 50% no-repeat">PwC Data visualization Projects</p>
-			</div>
-			<div class="area2">
-				<p style="margin: 0; padding: 0 2em; font-weight: bold; height: 240px; background: transparent url('images/customers-uefa.png') 50% 50% no-repeat">UEFA Calendars</p>
-			</div>
+			<div class="area1 quote-before" style="background: transparent url('images/pwc-logo.jpg') 0% 50% no-repeat; height: 240px"><span style=" height: 240px; width: 100%; display: block; text-indent: -9999px">Books</span></div>
+			
 		</section>
 		
-		
 		<section class="blockB">
+			<div class="area2" style="background: transparent url('images/uefa-logo.jpg') 50% 50% no-repeat; height: 240px"><a href="http://uefa.com" style=" height: 240px; width: 100%; display: block; text-indent: -9999px">UEFA.com</a></div>
+			
+			<div class="area2 quote-follow" style="height: 240px;">
+				<div style="position: absolute; top: 0; left: 0;height: 240px; width: 100%;">
+					<div style="padding: 1.5em 2em; font-size: 130%; line-height: 160%; color: #3D3242;">
+						<div><strong>UEFA</strong></div>
+						<div style="font-family: TimesNewRoman,'Times New Roman',Times">Over the years we've created a few online solutions for the UEFA team. The most used has been <a href="http://calendars.uefa.com">calendars.uefa.com</a>, a simple way to never miss a game.</div>
+					</div>
+				</div>	
+			</div>
 			<div class="area3" style="background-color:rgb(242,245,238)">
-				<div class="banner" style="box-shadow: inset 0 0 10px #333; background: transparent url('images/banner-contest.jpg') 50% 50% no-repeat"><a href="contest.1"><span>Sign-up to win the Quarterly Contest</span></a></div>
-				<div class="banner" style="box-shadow: inset 0 0 10px #333; background: transparent url('images/banner-mailing-list.jpg') 0 50% no-repeat"><a href="newsletter/index.html"><span>Join our Mailing List</span></a></div>
+				<div class="banner" style="box-shadow: inset 0 0 10px #333; background: transparent url('images/banner-uefa-calendars.jpg') 0% 50% no-repeat"><a style="height: 120px; width: 100%; display: block; text-indent: -9999px" href="http://calendars.uefa.com">calendars.uefa.com</a></div>
+				<div class="banner" style="box-shadow: inset 0 0 10px #333; background: transparent url('images/banner-uefa-calendars-local.jpg') 0 50% no-repeat"><a style="height: 120px; width: 100%; display: block; text-indent: -9999px" href="http://calendars.uefa.com">calendars.uefa.com</a></div>
 				
 			</div>
-			<div class="area2" style="background: transparent url('images/book-fss-csf.jpg') 50% 50% no-repeat; height: 240px"><a href="http://www.fivesimplesteps.com/products/creating-symbol-fonts" style=" height: 240px; width: 100%; display: block; text-indent: -9999px">Creating Symbol Fonts</a></div>
-			<div class="area2" style="background: rgb(253,81,0) url('images/book-fss-dwd.png') 50% 50% no-repeat;"><a href="http://designingwithdata.com" style=" height: 240px; width: 100%; display: block; text-indent: -9999px">Designing With Data</a></div>
 		</section>
 		
-		<section class="blockC">
-			<div class="area4">
+
+		
+		
+		<section class="blockB" style="border-top: 5px solid #1ba4bf">
+			<div class="area3" style="background-color:rgb(242,245,238)">
+				<div class="banner" style="box-shadow: inset 0 0 10px #333; background: transparent url('images/banner-contest.jpg') 50% 50% no-repeat"><a href="contest.2"><span>Sign-up to win the Quarterly Contest</span></a></div>
+				<div class="banner" style="box-shadow: inset 0 0 10px #333; background: transparent url('images/banner-mailing-list.jpg') 0 50% no-repeat"><a href="newsletter/index.html"><span>Join our Mailing List</span></a></div>
+        
+			</div>
+			<div class="area2" style="background: transparent url('images/book-fss-csf.jpg') 50% 50% no-repeat; height: 240px"><a href="http://www.fivesimplesteps.com/products/creating-symbol-fonts" style=" height: 240px; width: 100%; display: block; text-indent: -9999px">Creating Symbol Fonts</a></div>
+        
+			<div class="area2 quote-follow" style="height: 240px;">
+				<div style="position: absolute; top: 0; left: 0;height: 240px; width: 100%;">
+					<div style="padding: 1.5em 2em; font-size: 130%; line-height: 160%; color: #3D3242;">
+						<div><strong>Creating Symbol Fonts</strong></div>
+						<div style="font-family: TimesNewRoman,'Times New Roman',Times">This short ebook covers how to create your own symbol fonts to get beautiful vector icons into your webpages.</div>
+						<div style="font-family: TimesNewRoman,'Times New Roman',Times"><a href="http://www.fivesimplesteps.com/products/creating-symbol-fonts">Buy Online</a></div>
+					</div>
+				</div>	
+			</div>
+		</section>
+		<section class="blockB">
+			<div class="area2 " style="background: #f47813 url('images/book-fss-dwd.png') 50% 0% no-repeat; height: 480px;"><a href="http://designingwithdata.com" style=" height: 480px; width: 100%; display: block; text-indent: -9999px">Designing With Data</a></div>
+			
+			<div class="area2 quote-follow" style="height: 480px;">
+				<div style="position: absolute; top: 0; left: 0;height: 240px; width: 100%;">
+					<div style="padding: 1.5em 2em; font-size: 130%; line-height: 160%; color: #3D3242;">
+						<div><strong>Data Visualizations</strong></div>
+						<div style="font-family: TimesNewRoman,'Times New Roman',Times">We specializing in telling stories and solve problems using appropriate data visualizations.</div>
+						<div style="font-family: TimesNewRoman,'Times New Roman',Times">From articles and books to projects and lectures, we have a deep understanding of how to get the right message across.</div>
+					</div>
+				</div>	
+			</div>
+
+			<div class="area2 banner"  style="box-shadow: inset 0 0 10px #333; background: #fff url('required/wp-content/uploads/2010/12/hls-world.png') 50% 50% no-repeat; height: 240px"><a href="required/2010/12/13/hls-world-map/index.html"><span>HLS World Map</span></a></div>
+			<div class="area2 banner" style="height: 240px">
+				
+				<iframe src="http://player.vimeo.com/video/27483938" width="100%" height="240" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</div>
+		</section>
+		
+		<section class="blockC" style="border-top: 5px solid #1ba4bf">
+			<div class="area4" style="background-color: #eee">
+				<div style="padding: 0.5em">
 				<h1>Categories</h1>
 				            <ul style="clear: both; padding-top: 10px">
 				                <li style="border-left: 10px solid #aa8c5b;"><a 
@@ -169,10 +275,11 @@ with some great partners</p></div>
 				href="required/category/visualizations/index.html">Visualizations</a></li><li style="border-left: 10px solid #138567;"><a 
 				href="required/category/weeknotes/index.html">Weeknotes</a></li><li style="border-left: 10px solid #96e20d;"><a 
 				href="required/category/youre-doing-it-wrong/index.html">You're doing it wrong</a></li>				            </ul>
+				</div>
 			</div>
 			
 			<div class="area3">
-				<div class="banner" style="background: transparent url('events/office_map.png') 50% 50% no-repeat"></div>
+				<div class="banner quote-below" style="background: transparent url('events/office_map.png') 50% 50% no-repeat"></div>
 				<div class="adr">
 					<!-- <div class="fn">Optional Slf.</div> -->
 					<div class="street-address">Austurstræti 17</div>
