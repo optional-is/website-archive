@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="readability-verification" content="DRPbu4h9pDUUaRVQCALsfmmh3nEygKucjzuDwsBv">
+<title>Pi in the Sky &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" /> 
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="../../../../xmlrpc.php" />
+<meta name="viewport" content="width=725; initial-scale=0.43;" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+
+</head>
+<body>
+<div id="header">
+<h1><a href="../../../../index.html"><img width="600" height="139" src="../../../../../images/mast.png" alt="optional.is/required" /></a></h1>
+</div>
+
+			
+		<div class="post-2778 post type-post status-publish format-standard hentry category-briefs category-experiments tag-offline tag-pi tag-raspberry-pi tag-survey" id="post-2778">
+			<h2 style="border-bottom: 2px solid #b9aac4">Pi in the Sky</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2013-10-20T12:21:24+00:00">Sunday, October 20th, 02013 at 12:21 UTC</abbr></div>
+				<p>As part of Vísar&#8217;s ability to deploy a survey system we&#8217;ve tried to keep it with fairly low dependancies. The system is built with Django in python and requires some database access for survey response persistence and user data. Beyond that, it is pretty standard. This means we have the ability to run it on a variety of hosting providers, including places like AWS and Heroku. This makes deployments easy and highly portable. So portable infact that we decided to see if we could run the entire stack offline on a Raspberry Pi.</p>
+<div class="banner"><img class="alignnone size-full wp-image-2782" alt="pi" src="../../../../wp-content/uploads/2013/10/pi.jpg" width="700" height="362" /></div>
+<p>The great think about this solution is literally a survey system in a box. We could pre-program the survey and populate the possible respondents or create an anonymous survey. Then stick the box in the post and when you receive it, all you need to do is give it power and plug it into a monitor. The system would boot to the browser and be ready for any respondents. Or atleast that was the plan.</p>
+<p>We used a <a href="http://www.raspberrypi.org">Raspberry Pi</a> B, which has a few more features than the A series. After installing the OS onto an SD card, booting-up and prepping the system, we pulled all the code for the collection server from the git repo. Then installed all the dependancies. The first huddle was Gunicorn, which is used as the production server. We decided to simply skip this since we were certain only one user would be accessing the survey at a time, therefore we could us the built-in Django runserver command. With that out of the way, we hit our next roadblock with PostgreSQL. It required some jiggling and finagling, but in the end it worked. As a fallback we decided to just use SQLite, but with Django&#8217;s migration tool South, we ran into problems with some aspects of the models working. That forced us back to PostgreSQL.</p>
+<p>After getting everything working and running, we did successfully manage to connect to the localhost webserver and browse the survey. The downside was that page loads were taking a long time, too long for our needs. We suspect that the memory, processor speed, SD card writes all contributed to the slowness.</p>
+<p>This leaves us with several options:</p>
+<ol>
+<li>Rewrite the Database ORM layer to work with flat files. Then we could remove the whole database from memory. This would be a lot of effort and not work on services like Heroku where the file system is not persistent.</li>
+<li>Ditch Django and use Flask, or something even lighter. For an open anonymous survey, we don&#8217;t need all the user settings we have now, nor the admin tools. We can always move the data into other tools to manipulate it later, but we&#8217;d need to actually write this new software.</li>
+<li>Skip the offline aspect. If we can get online, we push the heavy lifting back to the server and just focus on the dumb client. All we need is a web browser and internet access. Internet connections are a problem in highly secure areas such as banks or government institutions, but could be solved with private 3G access.</li>
+<li>Try other hardware. Instead of using an inexpensive Raspberry Pi, we could switch to an Android Tablet or other device that we can install arbitrary software and run our stack using this hardware instead.</li>
+</ol>
+<p>Getting this working on the Raspberry Pi was a good experiment, with less than a stelar outcome. Admitably we were pushing the limits of what we could do, so we&#8217;re not disappointed. The one good aspect of the Pi is that the built-in web browser, <a href="http://en.wikipedia.org/wiki/Midori_(web_browser)">Midori</a> does a great job of rendering web fonts and is fast and feature-rich enough to be used as the browser in a Raspberry Pi powered kiosk with an internet connection.</p>
+<p>This mean the Pi project isn&#8217;t completely shelved yet and it might make an appearance in the future.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../../../category/experiments/index.html" title="View all articles in Experiments" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a></p><p><strong>Tags:</strong> <a href="../../../../tag/offline/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #27a213">offline</a>, <a href="../../../../tag/pi/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #72ab8a">pi</a>, <a href="../../../../tag/raspberry-pi/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #028442">raspberry pi</a>, <a href="../../../../tag/survey/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #2fa7b0">survey</a></p>			  </div>
+
+		<div class="navigation">
+			<div class="prev"><div class="time">18 October 02013</div><a href="../../18/week-140/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #5c7b8e">&laquo; Week #140</a></div>
+			<div class="next"><div class="time">25 October 02013</div><a href="../../25/week-141/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #476223">Week #141 &raquo;</a></div>
+		</div>
+
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+
+
+  <div style="float: left; font-size: 16px;">
+
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+
+</div> 
+<a href="../../../../../index.html" class="url" style="float:right; display: block;"><img src="../../../../../images/sm-black.png" alt="(optional.is)" class="logo fn org" /></a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>

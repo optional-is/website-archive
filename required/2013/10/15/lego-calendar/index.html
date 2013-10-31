@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="readability-verification" content="DRPbu4h9pDUUaRVQCALsfmmh3nEygKucjzuDwsBv">
+<title>LEGO Calendar &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" /> 
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="../../../../xmlrpc.php" />
+<meta name="viewport" content="width=725; initial-scale=0.43;" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+
+</head>
+<body>
+<div id="header">
+<h1><a href="../../../../index.html"><img width="600" height="139" src="../../../../../images/mast.png" alt="optional.is/required" /></a></h1>
+</div>
+
+			
+		<div class="post-2766 post type-post status-publish format-standard hentry category-briefs category-experiments category-interfaces category-visualizations tag-calendar tag-lego tag-sync" id="post-2766">
+			<h2 style="border-bottom: 2px solid #4b7f2e">LEGO Calendar</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2013-10-15T12:21:47+00:00">Tuesday, October 15th, 02013 at 12:21 UTC</abbr></div>
+				<p>The <a href="http://vitaminsdesign.com/projects/lego-calendar/">Vitamins Design&#8217;s LEGO calendar</a> has been making the rounds recently online. It is a beautiful piece of work, which is why everyone is lusting over building their own. The promo video of the project is really beautiful as well.</p>
+<p><iframe src="http://player.vimeo.com/video/75500464" height="394" width="700" allowfullscreen="" frameborder="0"></iframe></p>
+<p>We were immediately bitten by the bug and wanted one, so we did a bit of thinking and realised that as cool as it is, the workflow isn&#8217;t actually ideal.</p>
+<p>If you have to have a key explaining parts of the system, it isn&#8217;t explicit enough. Everyone has this cheat sheet  so they know what color block to use to represent each customer. I understand there why this is, for the vision tracking to easily understand different projects the colors need to be distinct enough. Some of this is wrapped-up in the guise that it is to protect clients&#8217; identities. While this might be an issue for some people, we don&#8217;t have that many top secret projects nor that many visitors to the office. So needing a key to inform each team member which color represents which project is one hurdle to adoption.</p>
+<p>We also don&#8217;t time track in half-day chunks, but it is something we are slowly converging on a better system. At the moment each of our customers dictate the invoicing. For some, they have it in 7 minute increments, others are happy with a day-rate. Then we have internal projects which aren&#8217;t billed so effectively they fill lost time or are tracked hourly. If we had a calendar for hourly LEGO block it would be insane!</p>
+<p><img style="float: right; padding-right: 10px;" alt="2x2-lego" src="../../../../wp-content/uploads/2013/10/2x2-lego.jpg" width="188" height="169" />We also did a quick price estimation. At 20 working days a month, 6 people for 3 months, you&#8217;d need 360 blocks to fill the calendar. Then multiply that by the number of projects (let&#8217;s say 5) you get 1800 2&#215;2 <a href="http://www.lego.com">LEGO blocks</a>. This is certainly the upper limit since it is unlikely the whole team will be working on the same project for three months! On the LEGO website, if you order individual blocks (not wholesale) a <a href="http://shop.lego.com/en-US/Pick-A-Brick-ByTheme">2&#215;2 colored block is $0.20</a>. For 1800 that would be $360. Then you need to buy several <a href="http://shop.lego.com/en-US/X-Large-Gray-Baseplate-628">Large Grey Baseplates</a> for around $15 each. This calendar is probably around $400 USD to build. More than a whiteboard, which is much more versatile.</p>
+<p>Then we get to the coolest part of the project, which is also the weakest link in the chain. The calendar to photo to digital conversion. Simply take a photo of the calendar and email it to the server which picks it apart and build a digital version. Ah, if it were that easy! Using <a href="http://www.simplecv.org">SimpleCV</a> it wouldn&#8217;t be hard to write a program. The technical portion of this, while it seems hard, is probably the easiest part of the process. Where this will breakdown is in remembering to take the photo. Their example of keeping the team in sync while travelling is great, except if I can&#8217;t physically get to the board, I can&#8217;t update my time. Moving something on the digital calendar will simply get erased next time someone emails a photo of the board.</p>
+<div class="banner"><img class="alignnone size-full wp-image-2772" alt="LEGO calendar days" src="../../../../wp-content/uploads/2013/10/LEGO-calendar-days.jpg" width="700" height="309" /></div>
+<p>That LEGO board is now the single canonical version of the calendar, if you want something tracked or changed, it has to be done there! Then we need to remember to document it, and hope the lighting and angle were good enough to record the data in the image.</p>
+<p>I like the fact that it is big, easily seen through out the company. It shows progress and effort, but it isn&#8217;t without it&#8217;s limitations. LEGO is expensive and the vision detection software doesn&#8217;t care. It just needs a grid to expect where the objects should appear. This could be done with paper and colored markers, but then it is hard to make changes. It could also be done on a grid with colored sticky-notes. Those are nice squares too. All these alternatives still have the issue of the jump from physical to digital via a photo.</p>
+<p>In an ideal world, as you move things on the board, some sort of <a href="http://en.wikipedia.org/wiki/Near_field_communication">Near Field Communications</a> (NFC) would take place and know you moved the physical object. It would know from where to when it was placed and update a digital version instantly.</p>
+<p>Tracking could also be done with a webcam, relieving people from having to take the photo themselves, but now you are managing a fragile hardware chain of tools. On top of all this, you still have a single canonical calendar which must be changed physically to update the digital versions.</p>
+<p>A possible alternative, which requires even more hardware, would be a projector and <a href="http://en.wikipedia.org/wiki/Kinect">xbox kinect</a>. Have the calendar projected onto the wall which is interactive because the kinect tracks your movements. The upside to this approach is that there is no canonical calendar. Changing something digitally will be reflected on the wall via the projector. Sadly, this approach is even more expensive than the LEGO blocks and not very tactile.</p>
+<p>All-in-all, as much as we love the LEGO calendar idea, it does&#8217;t fit our company workflow or budget, but it has spurred us on to explore more uses of SimpleCV in other projects.</p>
+<p>Everyone is going to have different needs and uses for their calendar. Maybe this LEGO calendar suits your needs perfectly. It is certainly a nice portfolio piece and conversation starter.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../../../category/experiments/index.html" title="View all articles in Experiments" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a>, <a href="../../../../category/interfaces/index.html" title="View all articles in Interfaces" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #756640">Interfaces</a>, <a href="../../../../category/visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../../../tag/calendar/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #a0e7b2">calendar</a>, <a href="../../../../tag/lego/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #3a22c9">lego</a>, <a href="../../../../tag/sync/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #63ad9d">sync</a></p>			  </div>
+
+		<div class="navigation">
+			<div class="prev"><div class="time">12 October 02013</div><a href="../../12/week-139/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #672462">&laquo; Week #139</a></div>
+			<div class="next"><div class="time">18 October 02013</div><a href="../../18/week-140/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #5c7b8e">Week #140 &raquo;</a></div>
+		</div>
+
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+
+
+  <div style="float: left; font-size: 16px;">
+
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+
+</div> 
+<a href="../../../../../index.html" class="url" style="float:right; display: block;"><img src="../../../../../images/sm-black.png" alt="(optional.is)" class="logo fn org" /></a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>
