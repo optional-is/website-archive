@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="readability-verification" content="DRPbu4h9pDUUaRVQCALsfmmh3nEygKucjzuDwsBv">
+<title>Survey Archives &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" /> 
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="../../../../xmlrpc.php" />
+<meta name="viewport" content="width=725; initial-scale=0.43;" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+
+</head>
+<body>
+<div id="header">
+<h1><a href="../../../../index.html"><img width="600" height="139" src="../../../../../images/mast.png" alt="optional.is/required" /></a></h1>
+</div>
+
+			
+		<div class="post-2813 post type-post status-publish format-standard hentry category-briefs category-case-studies tag-archives tag-backups tag-skolapulsinn tag-survey tag-visar" id="post-2813">
+			<h2 style="border-bottom: 2px solid #749159">Survey Archives</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2013-11-19T14:41:02+00:00">Tuesday, November 19th, 02013 at 14:41 UTC</abbr></div>
+				<p>One of the big project we work on is an online survey system. We have a system which we can easily deploy pretty much anywhere that Python and <a href="https://www.djangoproject.com">Django</a> are supported. At the moment we are making full use of Heroku for our hosting, but in the future we might move to other platforms because of price, speed or geography.</p>
+<p>The nice thing about the survey software is that it only exists and work for a short window of time during the collection phase. Once that is done, we create a static report for the customers along with separate online access for the derived data and graphs. This should be the end of our involvement and the use of the original raw survey data. Storage is cheap, so we are opting to keep the anonymous data archived incase we need to revisit it for reports in the future, updates, improvements to the system that need for the source data to be reanalyzed.</p>
+<p>Our original plan was pretty solid. We&#8217;d keep a copy of all the pieces in the chain. We save the survey data into a database, so let&#8217;s keep a copy of the database dump. That way we can always re-import it and breath life back into the survey. For small data explorations, rebuilding the database seems like over kills, so we&#8217;re also going to save a copy of the CSV data dump. This is most commonly what we use for reports and other derived data sets. We want to also keep a copy of the JSON report syntax just incase we find a tiny typo. We can fix it without having to re-calculate any information. This means we&#8217;re also keeping the original survey syntax file too. This is the file that describes the survey, software models and the underlying database structure. It is smart to keep this so we can quickly start a new survey based on these questions or make minor edits for a survey in the future.</p>
+<p>These are all text files, so after compressing and encrypting they don&#8217;t take-up much space, and space is cheap! Having all the pieces of the puzzle make it very easy to replicate the state of the survey some time later.</p>
+<p>Then we realized that we were actually missing the biggest piece &#8211; the actual code! The survey software itself has settled down and we&#8217;re not making any major changes, but since it is Django there are new versions appearing as well as using South to handle database migrations. We quickly realized that as we continue development, no matter how small, we can no longer load our old data into the current software. The &#8220;shape&#8221; of the database isn&#8217;t the same any more. We always want to make use of our most current, bug-free and optimized version of the survey and report generating software, but the delta between the data we have and the actual code always grows larger.</p>
+<p>Imaging having backed-up and archived all your word-processing files from the year 02000. They are safely stored away and now you want to re-open those archives and see what treasures await. Hm&#8230; you don&#8217;t seem to have a version of that software anymore more. No matter you have the newest &#8211; which doesn&#8217;t seem to import or open your ancient version of the files. But you have the original <a href="http://en.wikipedia.org/wiki/3.5%22_Floppy_Disk">3.5 inch floppy disk</a>! Now to find the A:/ Drive and a system which can run <a href="http://en.wikipedia.org/wiki/OS/2">OS/2</a>.</p>
+<div style="font-size: 300%; color: #ff3030; padding: 1em; float: right; width: 5em; line-height: 110%;">Having just the data isn&#8217;t enough!</div>
+<p>We realized we need a way to bootstrap our way from the old system into the newest. All our code is in a version control system, so we try to tag each release of the version of the survey software that is deployed live. This allows us to checkout that tag, but we worry that if we forget we&#8217;ll have problems. Our current best solution is to archive the entire virtual environment that is running the survey software, no matter what the version.</p>
+<p>If this is part of our archiving workflow, we&#8217;ll have the database, the code that was running, the input and output files as well as files we can work with such as CSV and SPSS. Then if for some reason, we need to go back to that survey, we have away to bootstrap ourselves to get to our current version. Using  version control, we can start-up an instance of the old version we have in the archive, load the data into the database while it is the same &#8220;shape&#8221;, then migrate our way up to present day. That is a much easier solution than trying to retrofit current code to import and load old data.</p>
+<p>Luckily we haven&#8217;t needed to do this yet, but this is our current archival and re-activating strategy. Save a snapshot of the whole state of the system as it was when it turned off. It&#8217;s cheap, easy and allows us a direct path to get brought-up to the current production systems.</p>
+<p>The biggest hurdle will be if we every break away and switch systems. Migrating completely away from one platform like Django to something else like Rails would mean that our pathway to migrate to the current production code would be more difficult, not impossible had we written some converting code between the two systems. Hopefully we&#8217;ve done our best to backup, archived and re-activate our system from a cold-start. Giving us the confidence to develop fast and worry less about compatibility issues between instances of surveys as long as we have an established migration path.</p>
+<p>Stop and think about your important data. As you back it up, are your projects so agile and lean that you are potentially sacrificing the ability to even get at that old data? Can you save a snapshot of the entire system, code, virtual environment and all the necessary files to get it going again?</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../../../category/case-studies/index.html" title="View all articles in Case Studies" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #a0d2b6">Case Studies</a></p><p><strong>Tags:</strong> <a href="../../../../tag/archives/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #1a5572">archives</a>, <a href="../../../../tag/backups/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #aa5c56">backups</a>, <a href="../../../../tag/skolapulsinn/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #992eae">skolapulsinn</a>, <a href="../../../../tag/survey/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #2fa7b0">survey</a>, <a href="../../../../tag/visar/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #497540">visar</a></p>			  </div>
+
+		<div class="navigation">
+			<div class="prev"><div class="time">15 November 02013</div><a href="../../15/week-143-144/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #3f7b6b">&laquo; Week #143-144</a></div>
+			<div class="next"><div class="time">22 November 02013</div><a href="../../22/week-145/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #5ddc3f">Week #145 &raquo;</a></div>
+		</div>
+
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+
+
+  <div style="float: left; font-size: 16px;">
+
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+
+</div> 
+<a href="../../../../../index.html" class="url" style="float:right; display: block;"><img src="../../../../../images/sm-black.png" alt="(optional.is)" class="logo fn org" /></a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>
