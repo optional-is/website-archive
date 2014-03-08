@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr">
 	<head>
         <title>(optional.is) List</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="(optional.is) List Email Forms">
         <meta name="keywords" content="(optional.is) List">
-        <!-- Change the width below to just wider than your form's width
-        to optimize its initial scale on Apple iOS  and Android devices -->
-        <meta name="viewport" content="width=640">
         <script type="text/javascript" src="http://www.google.com/jsapi"></script>
 <script type="text/javascript">
 	google.load("jquery", "1.7.1");
@@ -65,7 +63,7 @@
 <script type="text/javascript">
     $(document).ready(function(){
         try {
-        var domains =['hotmail.co.uk','yahoo.co.uk','yahoo.com.tw','yahoo.com.au','yahoo.com.mx','gmail.com','hotmail.com','yahoo.com','aol.com','comcast.net','msn.com','seznam.cz','sbcglobal.net','live.com','bellsouth.net','hotmail.fr','verizon.net','mail.ru','btinternet.com','cox.net','yahoo.com.br','bigpond.com','att.net','yahoo.fr','mac.com','ymail.com','googlemail.com','earthlink.net','xtra.co.nz','me.com','yahoo.gr','walla.com','yahoo.es','charter.net','shaw.ca','live.nl','yahoo.ca','orange.fr','optonline.net','gmx.de','wanadoo.fr','optusnet.com.au','rogers.com','web.de','ntlworld.com','juno.com','yahoo.com.sg','rocketmail.com','yandex.ru','yahoo.co.in','centrum.cz','live.co.uk','sympatico.ca','libero.it','walla.co.il','bigpond.net.au','yahoo.com.hk','ig.com.br','live.com.au','free.fr','sky.com','uol.com.br','abv.bg','live.fr','terra.com.br','hotmail.it','tiscali.co.uk','rediffmail.com','aim.com','blueyonder.co.uk','telus.net','bol.com.br','hotmail.es','email.cz','windowslive.com','talktalk.net','home.nl','t-online.de','yahoo.de','telenet.be','163.com','embarqmail.com','windstream.net','roadrunner.com','bluewin.ch','skynet.be','laposte.net','yahoo.it','qq.com','live.dk','planet.nl','hetnet.nl','gmx.net','mindspring.com','rambler.ru','iinet.net.au','eircom.net','yahoo.com.ar','wp.pl','mail.com'];
+        var domains =['hp.com','hotmail.co.uk','yahoo.co.uk','yahoo.com.tw','yahoo.com.au','yahoo.com.mx','gmail.com','hotmail.com','yahoo.com','aol.com','comcast.net','msn.com','seznam.cz','sbcglobal.net','live.com','bellsouth.net','hotmail.fr','verizon.net','mail.ru','btinternet.com','cox.net','yahoo.com.br','bigpond.com','att.net','yahoo.fr','mac.com','ymail.com','googlemail.com','earthlink.net','xtra.co.nz','me.com','yahoo.gr','walla.com','yahoo.es','charter.net','shaw.ca','live.nl','yahoo.ca','orange.fr','optonline.net','gmx.de','wanadoo.fr','optusnet.com.au','rogers.com','web.de','ntlworld.com','juno.com','yahoo.com.sg','rocketmail.com','yandex.ru','yahoo.co.in','centrum.cz','live.co.uk','sympatico.ca','libero.it','walla.co.il','bigpond.net.au','yahoo.com.hk','ig.com.br','live.com.au','free.fr','sky.com','uol.com.br','abv.bg','live.fr','terra.com.br','hotmail.it','tiscali.co.uk','rediffmail.com','aim.com','blueyonder.co.uk','telus.net','bol.com.br','hotmail.es','email.cz','windowslive.com','talktalk.net','home.nl','t-online.de','yahoo.de','telenet.be','163.com','embarqmail.com','windstream.net','roadrunner.com','bluewin.ch','skynet.be','laposte.net','yahoo.it','qq.com','live.dk','planet.nl','hetnet.nl','gmx.net','mindspring.com','rambler.ru','iinet.net.au','eircom.net','yahoo.com.ar','wp.pl','mail.com','emmis.com','hotmail.de','lireo.com','gmx.at','ukr.net','zol.co.zw'];
         var tdomains = [];
         $('#MERGE0').on('blur', function() {
           $(this).mailcheck({
@@ -95,7 +93,6 @@
 	<style type="text/css">
 		body{
 			font:14px/20px 'Helvetica', Arial, sans-serif;
-			min-width:600px;
 			margin:0;
 			padding:75px 0 0 0;
 			text-align:center;
@@ -171,9 +168,15 @@
 			border:0;
 			background:none;
 			width:98%;
+			background-position:97% 50% !important;
 		}
 		.radiogroup input,.phonearea input,.addressfield input,.datefield input,.groups input{
 			width:auto;
+		}
+		.radio-group input,.checkbox-group input{
+			width:auto;
+			display:inline-block;
+			margin-right:5px;
 		}
 		.field-group label{
 			clear:none;
@@ -285,9 +288,9 @@
 			display:inline !important;
 			width:auto !important;
 		}
-		ul.interestgroup_field label{
-			display:inline;
-			padding:0 30px 0 3px;
+		ul.interestgroup_field label,div.interestgroup_field label{
+			display:table;
+			padding:0 0 0 3px;
 			font-weight:normal;
 		}
 		select{
@@ -517,7 +520,67 @@
 			color:#6b0505;
 			background-color:#f4bfbf;
 		}
-		#templateHeader{
+		.hidden-from-view{
+			left:-5000px;
+			position:absolute;
+		}
+		html[dir=rtl] .wrapper,html[dir=rtl] .container,html[dir=rtl] label{
+			text-align:right !important;
+		}
+		html[dir=rtl] ul.interestgroup_field label{
+			padding:0;
+		}
+		html[dir=rtl] ul.interestgroup_field input{
+			margin-left:5px;
+		}
+		html[dir=rtl] label .asterisk{
+			right:auto;
+			left:10px;
+		}
+		html[dir=rtl] .hidden-from-view{
+			right:-5000px;
+			left:auto;
+		}
+	@media (max-width: 601px){
+		body{
+			width:100%;
+			-webkit-font-smoothing:antialiased;
+			padding:10px 0 0 0 !important;
+			min-width:300px !important;
+		}
+
+}	@media (max-width: 601px){
+		textarea,select,ul.unsub-options li textarea{
+			width:80% !important;
+		}
+
+}	@media (max-width: 601px){
+		h1 img{
+			max-width:100%;
+			height:auto !important;
+		}
+
+}	@media (max-width: 601px){
+		.wrapper,.poweredWrapper{
+			width:auto !important;
+			max-width:600px !important;
+			padding:0 10px;
+		}
+
+}	@media (max-width: 601px){
+		.addressfield .countryfield select{
+			max-width:50% !important;
+		}
+
+}	@media (max-width: 601px){
+		#templateContainer,#templateBody,#templateContainer table{
+			width:100% !important;
+			-moz-box-sizing:border-box;
+			-webkit-box-sizing:border-box;
+			box-sizing:border-box;
+		}
+
+}		#templateHeader{
 			padding:0px;
 			background-color:#003f87;
 		}
@@ -537,31 +600,31 @@
 </h2>
 <div>from (optional.is)
 </div>
-<a class="button" href="http://eepurl.com/nsmKT" target="_blank">join our mailing list</a>
+<a class="button" href="http://eepurl.com/dLs3-/" target="_blank">join our mailing list</a>
 <ul id="archive-list">
-	<div class="display_archive"><li class="campaign">07/01/2013 - <a href="http://eepurl.com/qDr09" title="Art, Inspiration & Remarkability" target="_blank">Art, Inspiration & Remarkability</a></li><li class="campaign">03/10/2012 - <a href="http://eepurl.com/p9eYf" title="An (optional) autumn" target="_blank">An (optional) autumn</a></li><li class="campaign">09/07/2012 - <a href="http://eepurl.com/npHjH" title="Q2: Summer Time In the Arctic" target="_blank">Q2: Summer Time In the Arctic</a></li><li class="campaign">02/04/2012 - <a href="http://eepurl.com/hIG6M" title="First newsletter, I hope you enjoy." target="_blank">First newsletter, I hope you enjoy.</a></li></div>
+	<div class="display_archive"><li class="campaign">05/02/2014 - <a href="http://eepurl.com/NdVuz" title="02013Q4: Friends, fun and food" target="_blank">02013Q4: Friends, fun and food</a></li><li class="campaign">22/10/2013 - <a href="http://eepurl.com/HqM2j" title="Q3: Crowds, Colors & CERN" target="_blank">Q3: Crowds, Colors & CERN</a></li><li class="campaign">08/07/2013 - <a href="http://eepurl.com/B0Q1n" title="Travelling Circus" target="_blank">Travelling Circus</a></li><li class="campaign">02/04/2013 - <a href="http://eepurl.com/xqHdL" title="Paper and Production" target="_blank">Paper and Production</a></li><li class="campaign">07/01/2013 - <a href="http://eepurl.com/qDr09" title="Art, Inspiration & Remarkability" target="_blank">Art, Inspiration & Remarkability</a></li><li class="campaign">03/10/2012 - <a href="http://eepurl.com/p9eYf" title="An (optional) autumn" target="_blank">An (optional) autumn</a></li><li class="campaign">09/07/2012 - <a href="http://eepurl.com/npHjH" title="Q2: Summer Time In the Arctic" target="_blank">Q2: Summer Time In the Arctic</a></li><li class="campaign">02/04/2012 - <a href="http://eepurl.com/hIG6M" title="First newsletter, I hope you enjoy." target="_blank">First newsletter, I hope you enjoy.</a></li></div>
 </ul>
 
 <!--<br /><strong>Share this:</strong><br />
-<a rel="nofollow" target="_blank" href="http://twitter.com/?status=%28optional.is%29%20List%20Email%20Campaign%20Archive%20-%20http%3A%2F%2Feepurl.com%2FkyUSn" title="Twitter"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/twitter.png" title="Twitter" alt="Twitter" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://digg.com/submit?phase=2&url=http%3A%2F%2Fus2.campaign-archive2.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="Digg"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/digg.png" title="Digg" alt="Digg" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://www.facebook.com/share.php?u=http%3A%2F%2Fus2.campaign-archive2.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&t=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="Facebook"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/facebook.png" title="Facebook" alt="Facebook" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://del.icio.us/post?url=http%3A%2F%2Fus2.campaign-archive2.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="Delicious"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/delicious.png" title="Delicious" alt="Delicious" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://reddit.com/submit?url=http%3A%2F%2Fus2.campaign-archive2.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="Reddit"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/reddit.png" title="Reddit" alt="Reddit" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fus2.campaign-archive2.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="StumbleUpon"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/stumbleupon.png" title="StumbleUpon" alt="StumbleUpon" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://www.dzone.com/links/add.html?url=http%3A%2F%2Fus2.campaign-archive2.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="DZone"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/dzone.png" title="DZone" alt="DZone" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http%3A%2F%2Fus2.campaign-archive2.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="Google"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/google.png" title="Google" alt="Google" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fus2.campaign-archive2.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="LinkedIn"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/linkedin.png" title="LinkedIn" alt="LinkedIn" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://www.mister-wong.com/addurl/?bm_url=http%3A%2F%2Fus2.campaign-archive2.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&bm_description=%28optional.is%29%20List%20Email%20Campaign%20Archive&plugin=mc" title="MisterWong"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/misterwong.png" title="MisterWong" alt="MisterWong" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://www.myspace.com/Modules/PostTo/Pages/?u=http%3A%2F%2Fus2.campaign-archive2.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&amp;t=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="MySpace"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/myspace.png" title="MySpace" alt="MySpace" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://www.netvouz.com/action/submitBookmark?url=http%3A%2F%2Fus2.campaign-archive2.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive&popup=no" title="Netvouz"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/netvouz.png" title="Netvouz" alt="Netvouz" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://www.newsvine.com/_tools/seed?u=http%3A%2F%2Fus2.campaign-archive2.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&h=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="NewsVine"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/newsvine.png" title="NewsVine" alt="NewsVine" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://slashdot.org/bookmark.pl?title=%28optional.is%29%20List%20Email%20Campaign%20Archive&url=http%3A%2F%2Fus2.campaign-archive2.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb" title="Slashdot"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/slashdot.png" title="Slashdot" alt="Slashdot" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://technorati.com/faves?add=http%3A%2F%2Fus2.campaign-archive2.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb" title="Technorati"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/technorati.png" title="Technorati" alt="Technorati" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http%3A%2F%2Fus2.campaign-archive2.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&t=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="YahooMyWeb"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/yahoomyweb.png" title="YahooMyWeb" alt="YahooMyWeb" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://www.blinklist.com/index.php?Action=Blink/addblink.php&Url=http%3A%2F%2Fus2.campaign-archive2.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&Title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="BlinkList"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/blinklist.png" title="BlinkList" alt="BlinkList" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://www.designfloat.com/submit.php?url=http%3A%2F%2Fus2.campaign-archive2.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="Design Float"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/designfloat.png" title="Design Float" alt="Design Float" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://www.webnews.de/einstellen?url=http%3A%2F%2Fus2.campaign-archive2.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="Webnews.de"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/webnewsde.png" title="Webnews.de" alt="Webnews.de" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://twitter.com/intent/tweet?text=%28optional.is%29%20List%20Email%20Campaign%20Archive%20-%20http%3A%2F%2Feepurl.com%2Fky0y9" title="Twitter"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/twitter.png" title="Twitter" alt="Twitter" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://digg.com/submit?phase=2&url=http%3A%2F%2Fus2.campaign-archive1.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="Digg"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/digg.png" title="Digg" alt="Digg" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://www.facebook.com/share.php?u=http%3A%2F%2Fus2.campaign-archive1.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&t=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="Facebook"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/facebook.png" title="Facebook" alt="Facebook" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://del.icio.us/post?url=http%3A%2F%2Fus2.campaign-archive1.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="Delicious"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/delicious.png" title="Delicious" alt="Delicious" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://reddit.com/submit?url=http%3A%2F%2Fus2.campaign-archive1.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="Reddit"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/reddit.png" title="Reddit" alt="Reddit" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fus2.campaign-archive1.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="StumbleUpon"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/stumbleupon.png" title="StumbleUpon" alt="StumbleUpon" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://www.dzone.com/links/add.html?url=http%3A%2F%2Fus2.campaign-archive1.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="DZone"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/dzone.png" title="DZone" alt="DZone" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http%3A%2F%2Fus2.campaign-archive1.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="Google"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/google.png" title="Google" alt="Google" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fus2.campaign-archive1.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="LinkedIn"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/linkedin.png" title="LinkedIn" alt="LinkedIn" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://www.mister-wong.com/addurl/?bm_url=http%3A%2F%2Fus2.campaign-archive1.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&bm_description=%28optional.is%29%20List%20Email%20Campaign%20Archive&plugin=mc" title="MisterWong"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/misterwong.png" title="MisterWong" alt="MisterWong" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://www.myspace.com/Modules/PostTo/Pages/?u=http%3A%2F%2Fus2.campaign-archive1.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&amp;t=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="MySpace"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/myspace.png" title="MySpace" alt="MySpace" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://www.netvouz.com/action/submitBookmark?url=http%3A%2F%2Fus2.campaign-archive1.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive&popup=no" title="Netvouz"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/netvouz.png" title="Netvouz" alt="Netvouz" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://www.newsvine.com/_tools/seed?u=http%3A%2F%2Fus2.campaign-archive1.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&h=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="NewsVine"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/newsvine.png" title="NewsVine" alt="NewsVine" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://slashdot.org/bookmark.pl?title=%28optional.is%29%20List%20Email%20Campaign%20Archive&url=http%3A%2F%2Fus2.campaign-archive1.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb" title="Slashdot"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/slashdot.png" title="Slashdot" alt="Slashdot" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://technorati.com/faves?add=http%3A%2F%2Fus2.campaign-archive1.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb" title="Technorati"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/technorati.png" title="Technorati" alt="Technorati" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http%3A%2F%2Fus2.campaign-archive1.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&t=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="YahooMyWeb"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/yahoomyweb.png" title="YahooMyWeb" alt="YahooMyWeb" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://www.blinklist.com/index.php?Action=Blink/addblink.php&Url=http%3A%2F%2Fus2.campaign-archive1.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&Title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="BlinkList"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/blinklist.png" title="BlinkList" alt="BlinkList" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://www.designfloat.com/submit.php?url=http%3A%2F%2Fus2.campaign-archive1.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="Design Float"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/designfloat.png" title="Design Float" alt="Design Float" class="mc-share"></a>
+<a rel="nofollow" target="_blank" href="http://www.webnews.de/einstellen?url=http%3A%2F%2Fus2.campaign-archive1.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="Webnews.de"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/webnewsde.png" title="Webnews.de" alt="Webnews.de" class="mc-share"></a>
 
 -->
 
@@ -585,7 +648,7 @@
             try {
                 var _gaq = _gaq || [];
                 _gaq.push(["_setAccount", "UA-2497164-9"]);
-                _gaq.push(["_setDomainName", "campaign-archive"]);
+                _gaq.push(["_setDomainName", ".campaign-archive.com"]);
                 _gaq.push(["_trackPageview"]);
                 _gaq.push(["_setAllowLinker", true]);
             } catch(err) {console.log(err);}</script>

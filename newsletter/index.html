@@ -520,6 +520,10 @@
 			color:#6b0505;
 			background-color:#f4bfbf;
 		}
+		.hidden-from-view{
+			left:-5000px;
+			position:absolute;
+		}
 		html[dir=rtl] .wrapper,html[dir=rtl] .container,html[dir=rtl] label{
 			text-align:right !important;
 		}
@@ -532,6 +536,10 @@
 		html[dir=rtl] label .asterisk{
 			right:auto;
 			left:10px;
+		}
+		html[dir=rtl] .hidden-from-view{
+			right:-5000px;
+			left:auto;
 		}
 	@media (max-width: 601px){
 		body{
@@ -649,7 +657,8 @@
 
 <br>
 <!-- real people should not fill this in and expect good things -->
-<div style="position: absolute; left: -5000px;"><input type="text" name="b_980d7e7c822ddb46c6693388d_4b11c60bdb" value=""></div>
+<div class="hidden-from-view"><input type="text" name="b_980d7e7c822ddb46c6693388d_4b11c60bdb" value=""></div>
+
 
 <div class="submit_container">
 <input type="submit" class="button" name="submit" value="Subscribe to list">
