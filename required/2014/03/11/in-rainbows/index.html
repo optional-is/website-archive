@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>In Rainbows &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" />
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="../../../../xmlrpc.php" />
+<meta name="viewport" content="width=725; initial-scale=0.43;" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+<style type="text/css">
+@font-face {
+  font-family: 'optional';
+    src: url("../../../../../fonts/optional.eot");
+    src: local('optional'),
+       url("../../../../../fonts/optional.svg") format('svg'),
+       url("../../../../../fonts/optional.otf") format('opentype');
+}
+#header h1 a { font-family: optional; text-decoration: none; font-size: 130px; line-height: 130px; }
+#footer .url { font-family: optional; text-decoration: none; font-size: 26px; }
+</style>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@optionalBot">
+<meta name="twitter:title" content="In Rainbows">
+<meta name="twitter:description" content="A republishing of a now defunct website and blog. This was very inspirational to the whole deterministic design and color creation we use.">
+<meta name="twitter:creator" content="@optionalBot">
+<meta name="twitter:domain" content="http://optional.is">
+</head>
+<body style="padding-top: 5em;">
+<p style="position: absolute;top: 0;left: 0;width: 100%;font-size: 0.9em;padding: 1em 0;text-align: center;background: RGBa(243, 232, 142, 0.8);font-weight: bold;text-shadow: 0px 1px 0px white;">Currently running a campaign for letterpressed notebooks of Islands. <a href="https://www.kickstarter.com/projects/joinanalog/latlon-notebooks-islands">LatLon on Kickstarter</a>.</p>
+<div id="header">
+<h1><a href="../../../../index.html">(optional.is)</a></h1>
+</div>
+			
+		<div class="post-3025 post type-post status-publish format-standard hentry category-chromatics tag-color tag-dopplr tag-md5 tag-sparklines" id="post-3025">
+			<h2 style="border-bottom: 2px solid #69be88">In Rainbows</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2014-03-11T11:11:53+00:00">Tuesday, March 11th, 02014 at 11:11 UTC</abbr></div>
+				<p>Sadly, Dopplr has shutdown and with it their blog. We&#8217;ve referred to this blog post so many times that we dug it out of the web archived and posted it here. <a href="../../../../category/chromatics/index.html">It has influenced many of our articles, ideas and projects</a>.</p>
+<p><a href="http://www.flickr.com/photos/blackbeltjones/1712306250/"><img style="float: right;" alt="Dopplr sparkline stack" src="../../../../wp-content/uploads/2014/03/1712306250_b53c81c6df_o.png" width="325" height="376" /></a></p>
+<p><strong>Originally published:</strong> October 23, 2007 – 4:24 pm, by <a title="View all posts by Matt Jones" href="http://magicalnihilism.com">Matt Jones</a></p>
+<p>We get asked a lot about the colour-coding we give to places in Dopplr: what it represents, why we did it, how are the colours assigned.</p>
+<p>One of the main ‘atoms’ of Dopplr is unsurprisingly, <em>place</em> – so to make that run through the warp-and-weft of the user-interface, and our branding, was extremely important.</p>
+<p>The Dopplr logo, (or <em>‘SparkLogo’</em>* as we sometimes like to call it) is the clearest example of this perhaps.</p>
+<p>As you add trips to different destinations, Dopplr’s logo becomes your logo, reflecting what you’re doing – right the way through to the ‘<a href="http://en.wikipedia.org/wiki/Favicon">favicon</a>‘ that shows up in the address field of most browsers.</p>
+<p>It also makes for <a href="https://web.archive.org/web/20131030214109/http://blog.dopplr.com/index.php/2007/10/08/dopplr-badge-for-your-blog/">a great blog badge…</a></p>
+<p>As well as the aesthetic delights we believe that city colours bring to the service, we’re using them as visual ‘<a href="https://web.archive.org/web/20131030214109/http://blog.dopplr.com/index.php/2007/04/29/working-on-new-affordances/">affordances</a>‘ – ways to create implicit meaning and usefulness in the user-interface.</p>
+<p>When you look at a list of your fellow travellers, you’ll see a coloured border around their icon, which correlates to their current location – allowing you to spot coincidences visually.</p>
+<p>We’re going to be doing far more with the city colours to create affordances in the near-future… But how do we generate them? What’s the basis for making London a fine electric cyan, or San Francisco a rather-fetching coral pink?</p>
+<p>For that I transfer you across to <em><a href="http://www.hackdiary.com/">The Other Matt</a></em>.</p>
+<p><em><strong>Here comes the science bit!</strong></em></p>
+<blockquote><p>We wanted a deterministic RGB colour value for each city. At first, we tried mapping the latitude and longitude of a city to a point in colour space, but we found that this made neighbouring cities too similar in colour. This means that people who travel frequently between Glasgow and Edinburgh wouldn’t clearly see the difference in colour between the two. Also, since so much of the Earth’s surface is covered in water rather than cities, it leads to a sparse use of the potential colour space. In the end, we went with a much simpler approach: we take the <a href="http://en.wikipedia.org/wiki/MD5">MD5 digest</a> of the city’s name, convert it to <a href="http://en.wikipedia.org/wiki/Hexadecimal">hex</a> and take the first 6 characters as a CSS RGB value.</p></blockquote>
+<p>So there you have it. When we struck upon the idea of doing this a couple of weeks into developing Dopplr, it was a huge source of delight to us, and we hope it is to you too…</p>
+<p><em>Illustration: Work-in-progress by <strong><a href="http://www.stamen.com/">Stamen</a>’s <a href="http://www.tom-carden.co.uk/">Tom Carden</a></strong> using the Dopplr API</em></p>
+<p>—-</p>
+<p>* We call it a ‘SparkLogo’ as tribute to information-design-guru Edward Tufte’s concept of “<a href="http://en.wikipedia.org/wiki/Sparkline">Sparklines</a>” which we also use as a device for visualising information elsewhere on the service e.g. on the detailed trip pages.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/chromatics/index.html" title="View all articles in Chromatics" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #1e7940">Chromatics</a></p><p><strong>Tags:</strong> <a href="../../../../tag/color/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #70dda5">color</a>, <a href="../../../../tag/dopplr/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #874e0a">dopplr</a>, <a href="../../../../tag/md5/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #1bc29b">md5</a>, <a href="../../../../tag/sparklines/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #5cfc83">sparklines</a></p>			  </div>
+
+		<div class="navigation">
+			<div class="prev"><div class="time">07 March 02014</div><a href="../../07/week-158-159-160/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #8a216e">&laquo; Week #158-159-160</a></div>
+			<div class="next"><div class="time">18 March 02014</div><a href="../../18/semi-spimed-bananas/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #f44f8c">Semi-Spimed Bananas &raquo;</a></div>
+		</div>
+
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div><a href="https://www.kickstarter.com/projects/joinanalog/latlon-notebooks-islands"><img src="../../../../../images/ks-banner.png" border="0" /></a></div>
+<div id="footer" class="vcard">
+  <div>
+  <div style="float: left; font-size: 16px;">
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+</div> 
+<a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>

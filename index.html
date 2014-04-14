@@ -1,338 +1,313 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta name="readability-verification" content="DRPbu4h9pDUUaRVQCALsfmmh3nEygKucjzuDwsBv">
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-	<meta http-equiv="Content-Language" content="en-us" />
-	<meta name="google-site-verification" content="NU2VGyLRaV2ouJZYY7Yw2J8cMccR7hU-GsRC-i_inKU" />
-	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png"/>
-	<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" /> 
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
-	<title>(optional.is)</title>
-	<style>
-	html, body { padding:0; margin: 0 auto; text-align: center; background-color: #dedede; }
-	.content { padding:0; margin: 0 auto; max-width: 960px; background-color: #fff; box-shadow: 0px 0px 5px #f00; }
-	.area1 {  background-color: #fff; width: 66.667%; float: left; padding: 0; margin: 0; height: 480px; text-align: left; }
-	.area2 {  background-color: #fff; width: 33.334%; float: left; padding: 0; margin: 0; height: 240px; text-align: left; position: relative; }
-	.area3 {  background-color: #fff; width: 33.334%; float: left; padding: 0; margin: 0; height: 240px; text-align: left; position: relative; }
-	.area3 div { height: 120px; width: 100%; float: left; padding: 0; margin: 0; }
-	.area4 {  background-color: #fff; width: 66.667%; float: left; padding: 0; margin: 0; height: 240px;text-align: left;  }
-	.area5 {  background-color: #fff; width: 33.334%; float: left; padding: 0; margin: 0; height: 240px;text-align: left;  }
-
-	.content { box-shadow: 0px 0px 100px #999; }
-
-	.area4 li { width: 30%; float: left; text-align: left; }
-
-	.h1 {  width: 33.3333%; float: left; padding: 0; margin: 0; height: 180px }
-	.h2 {  width: 66.6666%; float: left; padding: 0; margin: 0; height: 180px }
-
-	.quote-follow:before {
-		margin-top: 20px;
-		margin-left: -15px;
-		display: block;
-		content: '◆';
-		font-size: 50px;
-		color: #fff;
-		z-index: 100;
-
-	}
-
-	.quote-before:before {
-		margin-top: 20px;
-		margin-left: -20px;
-		display: block;
-		content: '◆';
-		font-size: 50px;
-		color: #fff;
-		z-index: 100;
-
-	}
-
-
-	.quote-below:before {
-		margin-top: 78px;
-		margin-left: 10%;
-		display: block;
-		content: '◆';
-		font-size: 50px;
-		color: #fff;
-		z-index: 1000;	
-	}
-
-	@media (max-width: 770px) {
-	  .area1 { width: 100%; }
-	  .area2 { width: 50%; }
-	  .area3 { width: 100%; height: 120px; }
-	  .area3 div { width: 50%; float: left; padding: 0; margin: 0; }
-	  .area4 { width: 100%; height: 240px; }
-	  .area5 { width: 100%; height: 120px; }
-
-	  .blockB .area1 { width: 50%; }
-
-	  .h1 { width: 50%; }
-	  .h2 { width: 100%; }
-		.quote-below:before {
-			margin-top: 10px;
-			margin-left: 95%;
-		}
-
-	}
-	@media (max-width: 480px) {
-	  .area1, .area2, .area3, .area4, .area5 { width: 100%; height: auto; }
-	  .area3 { height: 240px; }
-	  .area3 div { width: 100%; float: left; padding: 0; margin: 0; }
-	  .area4 li { width: 40%; float: left; text-align: left; height: auto; }
-	  .area5 { height: 240px; }
-
-	  .blockB .area1 { width: 100%; }
-
-
-	  .h1 { width: 100%; }
-	  .h2 { width: 100%; }
-
-		.quote-follow:before {
-			margin-top: -35px;
-			margin-left: 10%;
-		}
-
-		.quote-before:before {
-			margin-top: -45px;
-			margin-left: 80%;
-		}
-
-		.quote-below:before {
-			margin-top: 85px;
-			margin-left: 10%;
-		}
-	}
-
-	        html, body	{ margin: 0 auto; text-align: center; font: 100%/1.5 "Lucida Grande",Helvetica,Arial,sans-serif; }
-		h1, h2 { margin: 0; padding: 0;}
-	        body { font-size: 80%;}
-	        img { border: 0;}
-	        a { color: black; text-decoration: none; }
-	        ul li a:hover { background-color: #ccc; }
-		ul li a { display: block; padding: 2px 5px }
-
-	        ul { padding: 0; margin: 0;}
-	        li { list-style-type: none; }
-		.feed { background-image:url("http://suda.co.uk/images/feed.gif"); background-position:3px 50%; background-repeat:no-repeat; 
-	padding-left:20px; }
-		.readmore { font-weight: bold; color: #003F87; text-decoration: underline;}
-		@font-face {
-		  font-family: 'optional';
-		    src: url("fonts/optional.eot");
-		    src: local('optional'),
-		       url("fonts/optional.svg") format('svg'),
-		       url("fonts/optional.otf") format('opentype');
-		}
-		#header { font-family: optional; font-weight: normal; font-size: 65px; }
-		.banner a { position: relative; display: block; width: 100%; height: 100% }
-		.banner a span { position: absolute; bottom: 0; right: 0; padding: .5em 1em; background-color: rgba(0,0,0,0.75); color: #fff }
-		.adr div { padding: .3em 1em; margin: 0; float: none; height: auto; width: auto; }
-		section {clear: both; }
-		section {  background-color: #fff}
-		.area3 div.adr { padding-top: 0.5em; color: #7F7F7F }
-		.adr a, .adr a:visited { color: #7F7F7F }
-
+	<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Language" content="en-us">
+		<meta name="google-site-verification" content="NU2VGyLRaV2ouJZYY7Yw2J8cMccR7hU-GsRC-i_inKU">
+		<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
+		<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@optionalBot">
+		<meta name="twitter:title" content="(optional.is)">
+		<meta name="twitter:domain" content="http://optional.is"><meta name="twitter:description" content="A small company based out of Reykjavik, Iceland specializing in future thinking projects">
+		<meta name="twitter:creator" content="@optionalBot">
+		<title>(optional.is)</title>
+		<style>
+			html, body { background-color: #f7f7f7; font-family: Helvetica, Arial, sanserif}
+			html, body, div, p, h1, h2, h3, ul, ol, li, form, iframe { margin: 0 auto; padding:0; font-size: 14px; line-height: 30px;  width: 100%; text-align: center; color: #444; }
+			div, p, h1, h2, h3, li { text-align: left; }
+			li { list-style: none;}
+			
+			h1 { clear: both; font-size: 22px; line-height: 58px; color: #222; text-transform: uppercase; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica-Light", "Helvetica Light","Helvetica Neue"; font-weight: normal; margin-bottom: 18px; border-top: 1px solid #dedede; border-bottom: 1px solid #dedede;  }
+			
+			h2 { border-top: 1px solid #dedede; font-size: 18px; line-height: 44px; color: #222; text-transform: uppercase; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica-Light", "Helvetica Light","Helvetica Neue"; font-weight: normal; }
+			.sub h2 {  border: none; line-height: 45px;  }
+			
+			
+			img { width: 100%; height: 100%;}
+			
+			.row { clear: both; margin: 0 auto; width: 960px;  }
+			.box1 { width: 470px; float: left; margin-right: 20px; }
+			.box2 { width: 225px; float: left; margin-right: 20px; }
+			.row div:last-child { margin-right: 0; }
+			.main, .feature { width: 100%; height: 353px; margin-bottom: 10px; }
+			.sub { width: 100%; height: 146px; margin-bottom: 10px; }
+			.call-out { margin-bottom: 18px; border-top: 1px solid #dedede; border-bottom: 1px solid #dedede; }
+			.call-out a { width: 100%; display: block; font-weight: bold; }
+			.call-out a:hover,li a:hover { background-color: #dedede; }
+			a span { padding-left: 5px;}
+			
+			.thumbnail { height: 186px; margin-bottom: 20px;}
+			.thumbnail a { display: block; height: 100%; width: 100%; text-indent: -9999px; padding: 0; margin: 0; overflow: hidden; }
+			.feature.stretched { height: 393px;  }
+			.main.stretched { height: 392px; border-bottom: 1px solid #dedede; }
+			a { font-weight: normal; color: #003F87; text-decoration: underline;}
+			a:active { position: relative; top:1px; }
+			
+			#categories li, #address li { width: 50%; float: left;}
+			#header { font-family: optional; font-weight: normal; font-size: 65px; line-height: 140px; }
+			
+			@media only screen and (max-width: 960px) {
+				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
+				.row { width: 470px}
+				.box2 { width: 225px; }
+				.box2+.box2 { margin-right: 0px;  }
+				.box2+.box2+.box2 {  margin-right: 20px; }
+				.box2+.box2+.box2+.box2 {  margin-right: 0px; }
+			}
+			@media only screen and (max-width: 480px) {
+				.row { width: 100%; }
+				.box1 { clear: both; float: none; margin-right: 0; width: 100%; height: auto; }
+				.box2 { margin-right: 0; width: 100%; }
+				.stretched, .main, .sub, .feature { height: auto; }
+				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
+				
+				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; }
+				.thumbnail a { max-height: 200px; }
+				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
+				
+			}
+			
+			@font-face {
+					  font-family: 'optional';
+					    src: url("fonts/optional.eot");
+					    src: local('optional'),
+					       url("fonts/optional.svg") format('svg'),
+					       url("fonts/optional.otf") format('opentype');
+					}
+			.branded { font-family: optional; }
+			ul li a { display: block; width:100%; }
+			ul li a span { height: 30px; display: block; width: auto;}
+			.section { padding-top: 50px; }
+			strong { background-color: #FFF68F; padding: 2px 3px;}
 		</style>
-</head>
-
-<body>
-	<div class="content">
-		<section class="blockA">
-			<div class="area1" style="background: transparent url('images/blueberry-iceland.jpg') 50% 20px no-repeat; height: 480px">
-				<header id="header" style="color: #000; text-align: center; padding-top: 370px">(optional.is)</header>
-			</div>
-		<!--
-			<div class="area1" style="border-top: 5px solid #8a216e">
-				<div style="padding: 8px">
-					<h1>Week #158-159-160</h1><p></p><p><a href="http://optional.is/required/2014/03/07/week-158-159-160/" class="readmore">Read More...</a></p>				</div>
-			</div>
-		-->
-			<div class="area2" style="border-top: 5px solid #8a216e">
-				<div style="padding: 8px">
-					<h1>Week #158-159-160</h1><p></p><p><a href="required/2014/03/07/week-158-159-160/index.html" class="readmore">Read More...</a></p>				</div>
-				<form method="get" id="searchform" action="required/index.html" style="text-align: center;">
-				<div><input type="text" value="" name="s" id="s"><input type="submit" id="searchsubmit" value="Search"></div>
-				</form>
-			</div>
-			<div class="area2">
-				        <ul style="clear: both; padding-top: 10px; border-top: 5px solid #8a216e">
-
-						<li style="border-left: 10px solid #3f20e6;"><a 
-				href="required/2014/03/06/smart-devices-smart-defaults/index.html">Smart Devices, Smart Defaults</a></li><li style="border-left: 10px solid #21bf52;"><a 
-				href="required/2014/02/14/week-156-157/index.html">Week #156-157</a></li><li style="border-left: 10px solid #59042c;"><a 
-				href="required/2014/01/31/week-155/index.html">Week #155</a></li><li style="border-left: 10px solid #11710f;"><a 
-				href="required/2014/01/24/week-154/index.html">Week #154</a></li><li style="border-left: 10px solid #8746b7;"><a 
-				href="required/2014/01/22/02013-annual-report/index.html">02013 Annual Report</a></li><li style="border-left: 10px solid #a1f79f;"><a 
-				href="required/2014/01/20/spime-inspiration/index.html">Spime inspiration</a></li><li style="border-left: 10px solid #f997d0;"><a 
-				href="required/2014/01/17/week-153/index.html">Week #153</a></li>						<li><a href="required/index.html" style="border-top: 1px solid #8a216e; padding: 5px; margin-top: 10px">Full Archives</a></li>
-				         </ul>
-			</div>
-			<!--
-			<div class="area2" style="border-top: 5px solid #59042c">
-				<div style="padding: 8px">
-					<h2>Week #155</h2><p><a href="http://optional.is/required/2014/01/31/week-155'/" class="readmore">Read  More...</a></p>
+	</head>
+	<body>
+		<div class="row">
+			<header id="header" style="color: #000; text-align: left;">(optional.is)</header>
+			
+			<div class="box1">
+				<!--
+				<div class="feature stretched" style="outline: 1px solid #ccc; background: #fff url('http://optional.is/images/blueberry-iceland.jpg') 50% 30px no-repeat;">
 				</div>
+				-->
+				<div>
+				<iframe style="height: 353px; width: 100%" src="https://www.kickstarter.com/projects/joinanalog/latlon-notebooks-islands/widget/video.html" frameborder="0" scrolling="no"> </iframe>
+				</div>
+				<div class="call-out readmore"><a href="https://www.kickstarter.com/projects/joinanalog/latlon-notebooks-islands"><span>Kickstarter: Back our letterpressed notebooks </span></a></div>
 			</div>
-			-->
-		</section>
-		<section class="blockB" style="border-top: 5px solid #8a216e">
-			<div class="area2" style="background: transparent url('images/testflight-plane.png') 50% 50% no-repeat; height: 240px"><a href="http://testflightapp.com" style=" height: 240px; width: 100%; display: block; text-indent: -9999px">Test Flight</a></div>
-			
-			<div class="area2 quote-follow" style="height: 240px;">
-				<div style="position: absolute; top: 0; left: 0;height: 240px; width: 100%;">
-					<div style="padding: 1.5em 2em; font-size: 130%; line-height: 160%; color: #3D3242;">
-						<div><strong>Test Flight</strong></div>
-						<div style="font-family: TimesNewRoman,'Times New Roman',Times">Developed analytics dashboards and visualizations for app developers to better understand their customers and usage.</div>
-					</div>
-				</div>	
-			</div>
-			<div class="area3" style="background-color:rgb(242,245,238)">
-				<div class="banner" style="box-shadow: inset 0 0 10px #333; background: transparent url('images/testflight-logo.png') 0% 50% no-repeat"><a style="height: 120px; width: 100%; display: block; text-indent: -9999px" href="http://testflightapp.com">Test Flight</a></div>
-				<div class="banner" style="box-shadow: inset 0 0 10px #333; background: transparent url('images/flightpath-logo.png') 0 50% no-repeat"><a style="height: 120px; width: 100%; display: block; text-indent: -9999px" href="https://testflightapp.com/flightpath/">Flight Path</a></div>
-				
-			</div>
-		</section>
-		
-		<section class="blockB"  >
-			<div class="area2 " style="height: 240px;">
-				<div style="position: absolute; top: 0; left: 0;height: 240px; width: 100%;">
-					<div style="padding: 1.5em 2em; font-size: 130%; line-height: 160%; color: #3D3242;">
-						<div style="font-family: TimesNewRoman,'Times New Roman',Times">Working with the PwC US Studio team, we created vizualizations for internal and external projects and explored options and workflows to produce projects in house.</div>
-					</div>
-				</div>	
-			</div>
-			<div class="area1 quote-before" style="background: transparent url('images/pwc-logo.jpg') 0% 50% no-repeat; height: 240px"><span style=" height: 240px; width: 100%; display: block; text-indent: -9999px">Books</span></div>
-			
-		</section>
-		
-		<section class="blockB">
-			<div class="area2" style="background: transparent url('images/uefa-logo.jpg') 50% 50% no-repeat; height: 240px"><a href="http://uefa.com" style=" height: 240px; width: 100%; display: block; text-indent: -9999px">UEFA.com</a></div>
-			
-			<div class="area2 quote-follow" style="height: 240px;">
-				<div style="position: absolute; top: 0; left: 0;height: 240px; width: 100%;">
-					<div style="padding: 1.5em 2em; font-size: 130%; line-height: 160%; color: #3D3242;">
-						<div><strong>UEFA</strong></div>
-						<div style="font-family: TimesNewRoman,'Times New Roman',Times">Over the years we've created a few online solutions for the UEFA team. The most used has been <a href="http://calendars.uefa.com">calendars.uefa.com</a>, a simple way to never miss a game.</div>
-					</div>
-				</div>	
-			</div>
-			<div class="area3" style="background-color:rgb(242,245,238)">
-				<div class="banner" style="box-shadow: inset 0 0 10px #333; background: transparent url('images/banner-uefa-calendars.jpg') 0% 50% no-repeat"><a style="height: 120px; width: 100%; display: block; text-indent: -9999px" href="http://calendars.uefa.com">calendars.uefa.com</a></div>
-				<div class="banner" style="box-shadow: inset 0 0 10px #333; background: transparent url('images/banner-uefa-calendars-local.jpg') 0 50% no-repeat"><a style="height: 120px; width: 100%; display: block; text-indent: -9999px" href="http://calendars.uefa.com">calendars.uefa.com</a></div>
-				
-			</div>
-		</section>
-		
+			<div class="box2">
+				<div class="main">
+					<h2>Week #164-165</h2><p>Weeks 164 and 165 flew by so fast! It has been an exciting few weeks to see the Kickstarter project get funded 200+% with time to spare. Lots of other good and bad news as well.</p>
+			<form method="get" id="searchform" action="required/index.html" style="text-align: center; margin-top: 50px">
+							<div><input type="text" value="" name="s" id="s"><input type="submit" id="searchsubmit" value="Search"></div>
+			</form></div><div class="call-out"><a href="required/2014/04/12/week-164-165/index.html">
+					
 
-		
-		
-		<section class="blockB" style="border-top: 5px solid #8a216e">
-			<div class="area3" style="background-color:rgb(242,245,238)">
-				<div class="banner" style="box-shadow: inset 0 0 10px #333; background: transparent url('images/banner-contest.jpg') 50% 50% no-repeat"><a href="contest.1"><span>Sign-up to win the Quarterly Contest</span></a></div>
-				<div class="banner" style="box-shadow: inset 0 0 10px #333; background: transparent url('images/banner-mailing-list.jpg') 0 50% no-repeat"><a href="newsletter/index.html"><span>Join our Mailing List</span></a></div>
-        
-			</div>
-			<div class="area2" style="background: transparent url('images/book-fss-csf.jpg') 50% 50% no-repeat; height: 240px"><a href="http://www.fivesimplesteps.com/products/creating-symbol-fonts" style=" height: 240px; width: 100%; display: block; text-indent: -9999px">Creating Symbol Fonts</a></div>
-        
-			<div class="area2 quote-follow" style="height: 240px;">
-				<div style="position: absolute; top: 0; left: 0;height: 240px; width: 100%;">
-					<div style="padding: 1.5em 2em; font-size: 130%; line-height: 160%; color: #3D3242;">
-						<div><strong>Creating Symbol Fonts</strong></div>
-						<div style="font-family: TimesNewRoman,'Times New Roman',Times">This short ebook covers how to create your own symbol fonts to get beautiful vector icons into your webpages.</div>
-						<div style="font-family: TimesNewRoman,'Times New Roman',Times"><a href="http://www.fivesimplesteps.com/products/creating-symbol-fonts">Buy Online</a></div>
-					</div>
-				</div>	
-			</div>
-		</section>
-		<section class="blockB">
-			<div class="area2 " style="background: #f47813 url('images/book-fss-dwd.png') 50% 0% no-repeat; height: 480px;"><a href="http://designingwithdata.com" style=" height: 480px; width: 100%; display: block; text-indent: -9999px">Designing With Data</a></div>
-			
-			<div class="area2 quote-follow" style="height: 480px;">
-				<div style="position: absolute; top: 0; left: 0;height: 240px; width: 100%;">
-					<div style="padding: 1.5em 2em; font-size: 130%; line-height: 160%; color: #3D3242;">
-						<div><strong>Data Visualizations</strong></div>
-						<div style="font-family: TimesNewRoman,'Times New Roman',Times">We specializing in telling stories and solve problems using appropriate data visualizations.</div>
-						<div style="font-family: TimesNewRoman,'Times New Roman',Times">From articles and books to projects and lectures, we have a deep understanding of how to get the right message across.</div>
-					</div>
-				</div>	
-			</div>
+<span>Read More</span></a></div>					
+				</div>
+			<div class="box2">
+				<div class="main">
+					<h2>Recent Articles</h2>
+					<ul style="max-width: 280px">
+						<li><a href="required/2014/03/28/week-163/index.html"><span style="border-left: 10px solid #46d4e9;">Week #163</span></a></li><li><a href="required/2014/03/26/meyrin-cern-terminal-font/index.html"><span style="border-left: 10px solid #0b53cf;">Meyrin: CERN Terminal Font</span></a></li><li><a href="required/2014/03/21/week-161-162/index.html"><span style="border-left: 10px solid #e9422d;">Week #161-162</span></a></li><li><a href="required/2014/03/18/semi-spimed-bananas/index.html"><span style="border-left: 10px solid #f44f8c;">Semi-Spimed Bananas</span></a></li><li><a href="required/2014/03/11/in-rainbows/index.html"><span style="border-left: 10px solid #69be88;">In Rainbows</span></a></li><li><a href="required/2014/03/07/week-158-159-160/index.html"><span style="border-left: 10px solid #8a216e;">Week #158-159-160</span></a></li><li><a href="required/2014/03/06/smart-devices-smart-defaults/index.html"><span style="border-left: 10px solid #3f20e6;">Smart Devices, Smart Defaults</span></a></li><li><a href="required/2014/02/14/week-156-157/index.html"><span style="border-left: 10px solid #21bf52;">Week #156-157</span></a></li><li><a href="required/2014/01/31/week-155/index.html"><span style="border-left: 10px solid #59042c;">Week #155</span></a></li>						</ul>
 
-			<div class="area2 banner"  style="box-shadow: inset 0 0 10px #333; background: #fff url('required/wp-content/uploads/2010/12/hls-world.png') 50% 50% no-repeat; height: 240px"><a href="required/2010/12/13/hls-world-map/index.html"><span>HLS World Map</span></a></div>
-			<div class="area2 banner" style="height: 240px">
-				
-				<iframe src="http://player.vimeo.com/video/27483938" width="100%" height="240" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				</div>
+				<div class="call-out readmore"><a href="required/index.html"><span>Full Archives</span></a></div>
 			</div>
-		</section>
-		
-		<section class="blockC" style="border-top: 5px solid #8a216e">
-			<div class="area4" style="background-color: #f6f6f6">
-				<div style="padding: 0.5em">
-				<h1>Categories</h1>
-				            <ul style="clear: both; padding-top: 10px">
-				                <li style="border-left: 10px solid #aa8c5b;"><a 
-				href="required/category/briefs/index.html">Briefs</a></li><li style="border-left: 10px solid #992978;"><a 
-				href="required/category/cartography/index.html">Cartography</a></li><li style="border-left: 10px solid #a0d2b6;"><a 
-				href="required/category/case-studies/index.html">Case Studies</a></li><li style="border-left: 10px solid #1e7940;"><a 
-				href="required/category/chromatics/index.html">Chromatics</a></li><li style="border-left: 10px solid #7d6198;"><a 
-				href="required/category/community/index.html">Community</a></li><li style="border-left: 10px solid #d70b59;"><a 
-				href="required/category/conferences/index.html">Conferences</a></li><li style="border-left: 10px solid #de7a22;"><a 
-				href="required/category/education/index.html">Education</a></li><li style="border-left: 10px solid #482926;"><a 
-				href="required/category/experiments/index.html">Experiments</a></li><li style="border-left: 10px solid #89c126;"><a 
-				href="required/category/forecast/index.html">Forecast</a></li><li style="border-left: 10px solid #756640;"><a 
-				href="required/category/interfaces/index.html">Interfaces</a></li><li style="border-left: 10px solid #b6755d;"><a 
-				href="required/category/meta/index.html">Meta</a></li><li style="border-left: 10px solid #d0a662;"><a 
-				href="required/category/paper/index.html">Paper</a></li><li style="border-left: 10px solid #7b9cf0;"><a 
-				href="required/category/place/index.html">Place</a></li><li style="border-left: 10px solid #c5f29b;"><a 
-				href="required/category/privacy/index.html">Privacy</a></li><li style="border-left: 10px solid #918e18;"><a 
-				href="required/category/sports/index.html">Sports</a></li><li style="border-left: 10px solid #d4ccb5;"><a 
-				href="required/category/storytelling/index.html">Storytelling</a></li><li style="border-left: 10px solid #bafe5c;"><a 
-				href="required/category/t-shirts/index.html">T-Shirts</a></li><li style="border-left: 10px solid #504c77;"><a 
-				href="required/category/temporality/index.html">Temporality</a></li><li style="border-left: 10px solid #1fb0f9;"><a 
-				href="required/category/travel/index.html">Travel</a></li><li style="border-left: 10px solid #b10ac6;"><a 
-				href="required/category/visualizations/index.html">Visualizations</a></li><li style="border-left: 10px solid #138567;"><a 
-				href="required/category/weeknotes.2">Weeknotes</a></li><li style="border-left: 10px solid #96e20d;"><a 
-				href="required/category/youre-doing-it-wrong/index.html">You're doing it wrong</a></li>				            </ul>
+		</div>
+
+
+		<!-- Previous work -->
+		<div class="row section">
+			<h1>Our Work</h1>
+			<div class="box2">
+				<div class="main stretched">
+					<p>Over the years we've had the good fortune to work with lots of great companies. From creating dashboards to problem solving, we have focused on user interaction of seemingly simple utilities.</p>
+					<p>If we can help you, get in contact.</p>
 				</div>
 			</div>
 			
-			<div class="area3">
-				<div class="banner quote-below" style="background: transparent url('events/office_map.png') 45% 60% no-repeat"></div>
-				<div class="adr">
-					<!-- <div class="fn">Optional Slf.</div> -->
-					<div class="street-address">Laufásvegur 26</div>
-					<div><span class="postal-code">101</span> <span class="city">Reykjavík</span></div>
-					<!-- <div class="country">ICELAND</div> -->
-					<div class="email"><a href="mailto:optional@optional.is">optional@optional.is</a></div>
-					<div class="phone">+354.868.0795</div>
+			<div class="box2">
+				<div class="thumbnail" style="background: #fff url('images/pwc-dashboard.jpg') 50% 0% no-repeat; min-height: 180px"><a href="http://pwc.com">PwC</a></div>
+				<div class="sub">
+					
+					<p>We worked with <strong>PwC</strong> for close to a year. Building-up their internal data vizualization team and creating beautiful, mobile friendly, internal dashboards.</p>
+				</div>
+				<div class="call-out"><a href="http://pwc.com"><span>PwC</span></a></div>
+			</div>
+			<div class="box2">
+				<div class="thumbnail" style="background: transparent url('images/uefa-logo.jpg') 50% 50% no-repeat; min-height: 180px"><a href="http://calendars.uefa.com/en/">UEFA Calendar</a></div>
+				<div class="sub">
+					
+					<p>For <strong>UEFA</strong>, we created a fully-customizable online calendar tool to follow teams, leagues and events so you'll never miss a game.</p>
+				</div>
+				<div class="call-out"><a href="http://calendars.uefa.com/en/"><span>UEFA Calendar</span></a></div>
+			</div>
+			<div class="box2">
+				<div class="thumbnail" style="background: transparent url('images/testflight-plane.png') 50% 50% no-repeat; min-height: 120px"><a href="http://www.testflightapp.com">TestFlight</a></div>
+				<div class="sub" >
+					
+					<p>Working with the team at Burstly, we prototyped several iterations of their popular <strong>TestFlight</strong> tool.</p>
+				</div>
+				<div class="call-out"><a href="http://www.testflightapp.com"><span>TestFlight</span></a></div>
+			</div>
+		</div>
+
+		<!-- Designing with Data -->
+		<div class="row section">
+			<h1>Writing</h1>
+			
+			<div class="box1">
+				<div class="feature stretched" style="background: #fff url('images/dwd-sample-pages.jpg') 50% 0% no-repeat; min-height: 250px;"></div>
+			</div>
+			<div class="box2">
+				<div class="main">
+					<h2>Data Visualizations</h2>
+					<p>We specializing in telling stories and solve problems using appropriate data visualizations.</p>
+					<p>From articles and books to projects and lectures, we have a deep understanding of how to get the right message across.</p>
+				</div>
+				<div class="call-out"><a href="http://pul.ly/b/103898"><span>Buy eBooks set for $25</span></a></div>
+			</div>
+			
+			<div class="box2">
+				<div class="thumbnail" style="background: #f47813 url('images/book-fss-dwd.png') 50% 0% no-repeat; min-height: 180px"><a href="http://pul.ly/b/103898">Designing with Data</a></div>
+				<div class="thumbnail" style="background-color: #000; max-height: 320px"><iframe src="http://player.vimeo.com/video/27483938" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			
+			<div class="box2">
+				<div class="thumbnail" style="outline: 1px solid #dedede; background: transparent url('required/wp-content/uploads/2014/03/Meyrin.png') 50% 50% no-repeat; min-height: 180px"><a href="required/2014/03/26/meyrin-cern-terminal-font/index.html">Meyrin: CERN Terminal Font</a></div>
+				<div class="sub">
+						
+						<p>Symbol fonts to get beautiful vector icons into your webpages. These can be styled fonts or icons like batteries.</p>
+					</div>
+				<div class="call-out"><a href="required/2014/03/26/meyrin-cern-terminal-font/index.html"><span>Meyrin: CERN Terminal Font</span></a></div>
+			</div>
+			<div class="box2 ">
+				<div class="main stretched"><img src="images/battery-font.jpg" width="100%"/></div>
+				
+			</div>
+			
+			<div class="box1">
+				<div class="feature"><a href="http://pul.ly/b/103892"><img alt="Creating Symbol Fonts book" src="images/symbol-font-book.jpg" /></a></div>
+				<div class="call-out"><a href="https://gumroad.com/l/FpfR"><span>Buy Online: $3</span></a></div>
+			</div>
+		</div>
+		
+
+		
+		
+		<div class="row section">
+
+						
+			<div class="box1">
+				<div class="thumbnail" style="outline: 1px solid #ccc; background: #fff url('required/wp-content/uploads/2010/12/hls-world.png') 50% 50% no-repeat; "><a href="required/2010/12/13/hls-world-map/index.html"></a></div>
+				<div class="sub">
+					<h2>HLS World Map</h2>
+					<p>We're big fans of color and cartography. We wanted a visual way to find the color of location on Earth. Using the HLS color space, we mapped every latitude and longitude to an RGB color.</p>
+				</div>
+				<div class="call-out"><a href="required/2010/12/13/hls-world-map/index.html"><span>Read More</span></a></div>
+			</div>
+			<div class="box1" >
+				<div class="main stretched">
+					<h2>Categories</h2>
+					<ul style="clear: both;" id="categories">
+						
+						                <li><a 
+						href="required/category/briefs/index.html"><span style="border-left: 10px solid #aa8c5b;">Briefs</span></a></li><li><a 
+						href="required/category/cartography/index.html"><span style="border-left: 10px solid #992978;">Cartography</span></a></li><li><a 
+						href="required/category/case-studies/index.html"><span style="border-left: 10px solid #a0d2b6;">Case Studies</span></a></li><li><a 
+						href="required/category/chromatics/index.html"><span style="border-left: 10px solid #1e7940;">Chromatics</span></a></li><li><a 
+						href="required/category/community/index.html"><span style="border-left: 10px solid #7d6198;">Community</span></a></li><li><a 
+						href="required/category/conferences/index.html"><span style="border-left: 10px solid #d70b59;">Conferences</span></a></li><li><a 
+						href="required/category/education/index.html"><span style="border-left: 10px solid #de7a22;">Education</span></a></li><li><a 
+						href="required/category/experiments/index.html"><span style="border-left: 10px solid #482926;">Experiments</span></a></li><li><a 
+						href="required/category/forecast/index.html"><span style="border-left: 10px solid #89c126;">Forecast</span></a></li><li><a 
+						href="required/category/interfaces/index.html"><span style="border-left: 10px solid #756640;">Interfaces</span></a></li><li><a 
+						href="required/category/meta/index.html"><span style="border-left: 10px solid #b6755d;">Meta</span></a></li><li><a 
+						href="required/category/paper/index.html"><span style="border-left: 10px solid #d0a662;">Paper</span></a></li><li><a 
+						href="required/category/place/index.html"><span style="border-left: 10px solid #7b9cf0;">Place</span></a></li><li><a 
+						href="required/category/privacy/index.html"><span style="border-left: 10px solid #c5f29b;">Privacy</span></a></li><li><a 
+						href="required/category/sports/index.html"><span style="border-left: 10px solid #918e18;">Sports</span></a></li><li><a 
+						href="required/category/storytelling/index.html"><span style="border-left: 10px solid #d4ccb5;">Storytelling</span></a></li><li><a 
+						href="required/category/t-shirts/index.html"><span style="border-left: 10px solid #bafe5c;">T-Shirts</span></a></li><li><a 
+						href="required/category/temporality/index.html"><span style="border-left: 10px solid #504c77;">Temporality</span></a></li><li><a 
+						href="required/category/travel/index.html"><span style="border-left: 10px solid #1fb0f9;">Travel</span></a></li><li><a 
+						href="required/category/visualizations/index.html"><span style="border-left: 10px solid #b10ac6;">Visualizations</span></a></li><li><a 
+						href="required/category/weeknotes.3"><span style="border-left: 10px solid #138567;">Weeknotes</span></a></li><li><a 
+						href="required/category/youre-doing-it-wrong/index.html"><span style="border-left: 10px solid #96e20d;">You're doing it wrong</span></a></li>						
+						</ul>
 				</div>
 			</div>
-		</section>
+
+		</div>
 		
-		<!--
-		<section class="blockE">
-			<div class="area5" style="background-color:rgb(237,238,242)">Picture</div>
-			<div class="area4" style="background-color:rgb(237,238,242)">Hire Us</div>
-		</section>
-		-->
-	</div>
-</body>
+		
+		<div class="row section">
+			<h1>Stay in Touch</h1>
+			
+			<div class="box2" >
+				<div class="thumbnail" style="min-height: 100px; background: transparent url('images/mailing-list-post-box.jpg')"><a href="newsletter/index.html"><span>Join the Mailing List</span></a></div>
+				<div class="sub">
+					<form action="http://optional.us2.list-manage.com/subscribe/post?u=980d7e7c822ddb46c6693388d&amp;id=4b11c60bdb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="height: 30px">
+						<input type="email" placeholder="Email Address" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="width: 130px"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+					</form>
+					<p><strong>Sign-up for our quarterly newsletter.</strong> It is a low-volume, informative and fun email with nuggets of great ideas.</p>
+					
 
+					
+				</div>
+				<div class="call-out"><a href="newsletter/index.html"><span>Join the Quarterly Mailing List</span></a></div>
+			</div>
+			
+			<div class="box2">
+				<div class="thumbnail" style="min-height: 100px;  background: transparent url('images/contest-map.jpg')"><a href="http://optional.is/content/"><span>Quarterly Contest</span></a></div>
+				<div class="sub">
+					<p>Our <strong>quarterly competition</strong> gives-away prototypes and products. Using the Great Circle Mapper, we'll randomly select a winner.</p>
+				</div>
+				<div class="call-out"><a href="http://optional.is/content/"><span>Quarterly Contest</span></a></div>
+			</div>
 
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? 
-"https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + 
-"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-2497164-9");
-pageTracker._trackPageview();
-} catch(err) {}</script>
+			
+			<div class="box1">
+				<div class="thumbnail" style="background: transparent url('events/office_map.png') 40% 60% no-repeat; min-height:180px"></div>
+				<div class="sub">
+					<ul id="address">
+						<li>
+							<p class="branded" style="font-size: 20px"> (optional.is)</p>
+							<p>Laufásvegur 26</p>
+							<p>101 Reykjavík</p>
+						</li>
+						<li>
+							<p>Phone: +354.868.0795</p>
+							<p>kt. 470211-1130</p>
+							<p>VAT No. 108875</p>
+							
+						</li>
+					</ul>
+				</div>
+				<div class="call-out"><a href="mailto:optional@optional.is"><span>Email: optional@optional.is</span></a></div>
+			</div>
+			
+		</div>
+		
+		
 
-</body>
+		<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? 
+		"https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + 
+		"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+		var pageTracker = _gat._getTracker("UA-2497164-9");
+		pageTracker._trackPageview();
+		} catch(err) {}</script>
+	</body>
 </html>
