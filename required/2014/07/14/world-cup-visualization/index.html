@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>2014 World Cup Visualization &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" />
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="../../../../xmlrpc.php" />
+<meta name="viewport" content="width=725; initial-scale=0.43;" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+<style type="text/css">
+@font-face {
+  font-family: 'optional';
+    src: url("../../../../../fonts/optional.eot");
+    src: local('optional'),
+       url("../../../../../fonts/optional.svg") format('svg'),
+       url("../../../../../fonts/optional.otf") format('opentype');
+}
+#header h1 a { font-family: optional; text-decoration: none; font-size: 130px; line-height: 130px; }
+#footer .url { font-family: optional; text-decoration: none; font-size: 26px; }
+</style>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@optionalBot">
+<meta name="twitter:title" content="2014 World Cup Visualization">
+<meta name="twitter:description" content="With the World Cup finishing, there's a lot of data out there to visualize. Here is our take on Goals scored and conceded, with all the PHP generating SVG code Open Sourced for you to play with.">
+<meta name="twitter:creator" content="@optionalBot">
+<meta name="twitter:domain" content="http://optional.is">
+</head>
+<body>
+<div id="header">
+<h1><a href="../../../../index.html">(optional.is)</a></h1>
+</div>
+			
+		<div class="post-3165 post type-post status-publish format-standard hentry category-briefs category-visualizations tag-data-vizualizations tag-goals tag-open-source tag-scores tag-to_from tag-world-cup" id="post-3165">
+			<h2 style="border-bottom: 2px solid #2c2b3e">2014 World Cup Visualization</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2014-07-14T13:31:06+00:00">Monday, July 14th, 02014 at 13:31 UTC</abbr></div>
+				<p><a href="http://en.wikipedia.org/wiki/2014_FIFA_World_Cup">This year&#8217;s world cup</a> was another thriller. Here in Iceland, we narrowly lost out to Croatia to get into the tournament. The secondary fallback for the office was the USA. Partly due to some of our team having roots there, but also for the Icelandic player who choose to play for the US rather than his main citizenship, Iceland.</p>
+<p>A few years ago, we developed a simple PHP script to generate some SVG to show the flow of data to and from sources. We experimented with various use-cases. When one person sends an email to another, and receives email from a third. We originally created a wheel which showed incoming and outgoing messages. When the numbers got large, things got messy. It was hard to tell what was incoming and what was outgoing. Our second attempt at this was to have redundant actors, once across the top of the page and again at the bottom of the page. From that, it was easy to see what messages were out going and to whom. Also across the bottom it was easy to see incoming messages and from whom they came. This worked really well for communications, but we thought about other data that could easily fit this mold. Luckily, it was World Cup season 02010 and we quickly realized that teams both score goals and concede them, just like we send and receive messages. So we fired-up some code and generated some SVGs. This is what the raw output looked like:</p>
+<div class="banner"><img class="alignnone size-full wp-image-3197" src="../../../../wp-content/uploads/2014/07/wc-02010-raw.png" alt="World Cup 2010 Raw Data" width="700" height="221" /></div>
+<p>We then took that data and brought it into Illustrator to add some notes, groups, team flags, etc. After those changes we got to something that looked more like this:</p>
+<div class="banner"><img class="alignnone size-full wp-image-3196" src="../../../../wp-content/uploads/2014/07/wc-02010.png" alt="World Cup 2010" width="700" height="512" /></div>
+<p>Fast-forward to 02014 and we&#8217;ve got another World Cup on our hands. We dug through the old code repository and updated the values with this year&#8217;s teams and goals. Within a few minutes we had our data visualization again. That&#8217;s the great thing about doing this in code rather than by hand, it might have taken a bit longer when we started, but now that the code is working, we can updated data very, very fast.</p>
+<p>Here is what the raw output looked like after running it through the code:</p>
+<div class="banner"><img src="../../../../wp-content/uploads/2014/07/worldcup2014-raw.png" alt="worldcup2014-raw" width="700" height="218" /></div>
+<p>The colors chosen for each country are simply using our <a href="../../../03/11/in-rainbows/index.html">In Rainbows GetColor function</a>. We&#8217;ve written about choosing colors plenty of times before and there are lots of ways we could have done this; <a href="../../../03/11/in-rainbows/index.html">In Rainbows</a>, <a href="../../../../2010/12/13/hls-world-map/index.html">HLS World Map</a> or something else entirely. As a first pass to make distinct colors this works like a charm.</p>
+<p>After playing around with the design a bit further in Illustrator, adding flags and other features, we&#8217;ve created this:</p>
+<div class="banner"><img src="../../../../wp-content/uploads/2014/07/worldcup2014.png" alt="worldcup2014" width="700" height="281" /></div>
+<p>We&#8217;re happy with the final product, but you might be curious about how we make all those lines and curves in code. It certainly isn&#8217;t magic, and it is probably way easier than you might think. <a href="https://github.com/optional-is/visualizations/tree/master/to_from">We&#8217;ve put all the code to make these to_from visualization on GitHub</a>. There you will find the 02010 code as well as the 02014 example.</p>
+<p>If we look more closely at the code itself, you&#8217;ll see that it isn&#8217;t as complicated as you might expect.</p>
+<pre class="brush: php; title: ; notranslate" title="">
+&lt;?php
+/*
+Brian Suda
+brian@suda.co.uk
+
+Using data from the 2014 world cup, this to_from chart visualizes the goals scored and goals conceeded for each team in the tournament.
+
+Usage:
+php wc2014_tofrom.php &gt; output2014.svg
+
+*/
+
+// Make sure we are sending the right mimetype
+header('Content-Type: image/svg+xml');
+
+// Output the standard XML declaration, doc type and start the SVG element
+echo '&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;
+&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; &quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+';
+
+// Build-up an array of key=&gt;array() mappings for each team and who they scored against.
+$messages =
+array(
+	// Finals
+	&quot;Germany&quot;        =&gt;array(&quot;Argentina&quot;,&quot;Brazil&quot;,&quot;Brazil&quot;,&quot;Brazil&quot;,&quot;Brazil&quot;,&quot;Brazil&quot;,&quot;Brazil&quot;,&quot;Brazil&quot;,&quot;France&quot;,&quot;Algeria&quot;,&quot;Algeria&quot;,&quot;United States&quot;,&quot;Portugal&quot;,&quot;Portugal&quot;,&quot;Portugal&quot;,&quot;Portugal&quot;,&quot;Ghana&quot;,&quot;Ghana&quot;),
+	&quot;Argentina&quot;      =&gt;array(&quot;Belgium&quot;,&quot;Switzerland&quot;,&quot;Nigeria&quot;,&quot;Nigeria&quot;,&quot;Nigeria&quot;,&quot;Bosnia and Herzegovina&quot;,&quot;Bosnia and Herzegovina&quot;,&quot;Iran&quot;,),	
+
+	// Semifinals
+	&quot;Netherlands&quot;    =&gt;array(&quot;Brazil&quot;,&quot;Brazil&quot;,&quot;Brazil&quot;,&quot;Chile&quot;,&quot;Chile&quot;,&quot;Mexico&quot;,&quot;Mexico&quot;,&quot;Australia&quot;,&quot;Australia&quot;,&quot;Australia&quot;,&quot;Spain&quot;,&quot;Spain&quot;,&quot;Spain&quot;,&quot;Spain&quot;,&quot;Spain&quot;,),
+	&quot;Brazil&quot;         =&gt;array(&quot;Germany&quot;,&quot;Netherlands&quot;,&quot;Colombia&quot;,&quot;Colombia&quot;,&quot;Chile&quot;,&quot;Croatia&quot;,&quot;Croatia&quot;,&quot;Croatia&quot;,&quot;Cameroon&quot;,&quot;Cameroon&quot;,&quot;Cameroon&quot;,&quot;Cameroon&quot;,), 
+
+	// Quarter Finals
+	&quot;Colombia&quot;       =&gt;array(&quot;Brazil&quot;,&quot;Uruguay&quot;,&quot;Uruguay&quot;,&quot;Greece&quot;,&quot;Greece&quot;,&quot;Greece&quot;,&quot;Ivory Coast&quot;,&quot;Ivory Coast&quot;,&quot;Japan&quot;,&quot;Japan&quot;,&quot;Japan&quot;,&quot;Japan&quot;),
+	&quot;France&quot;         =&gt;array(&quot;Switzerland&quot;,&quot;Switzerland&quot;,&quot;Switzerland&quot;,&quot;Switzerland&quot;,&quot;Switzerland&quot;,&quot;Nigeria&quot;,&quot;Nigeria&quot;,&quot;Honduras&quot;,&quot;Honduras&quot;,&quot;Honduras&quot;),
+	&quot;Belgium&quot;        =&gt;array(&quot;Algeria&quot;,&quot;Algeria&quot;,&quot;United States&quot;,&quot;United States&quot;,&quot;Korea Republic&quot;,&quot;Russia&quot;,),
+	&quot;Costa Rica&quot;     =&gt;array(&quot;Uruguay&quot;,&quot;Uruguay&quot;,&quot;Uruguay&quot;,&quot;Greece&quot;,&quot;Italy&quot;,), 
+
+	// Round of 16
+	&quot;Algeria&quot;        =&gt;array(&quot;Germany&quot;,&quot;Belgium&quot;,&quot;Korea Republic&quot;,&quot;Korea Republic&quot;,&quot;Korea Republic&quot;,&quot;Korea Republic&quot;,&quot;Russia&quot;,),
+	&quot;Switzerland&quot;    =&gt;array(&quot;France&quot;,&quot;France&quot;,&quot;Ecuador&quot;,&quot;Ecuador&quot;,&quot;Honduras&quot;,&quot;Honduras&quot;,&quot;Honduras&quot;,),
+	&quot;Chile&quot;          =&gt;array(&quot;Brazil&quot;,&quot;Australia&quot;,&quot;Australia&quot;,&quot;Australia&quot;,&quot;Spain&quot;,&quot;Spain&quot;,),
+	&quot;Uruguay&quot;        =&gt;array(&quot;Costa Rica&quot;,&quot;England&quot;,&quot;England&quot;,&quot;Italy&quot;,),
+	&quot;United States&quot;  =&gt;array(&quot;Belgium&quot;,&quot;Portugal&quot;,&quot;Portugal&quot;,&quot;Ghana&quot;,&quot;Ghana&quot;),
+	&quot;Mexico&quot;         =&gt;array(&quot;Croatia&quot;,&quot;Croatia&quot;,&quot;Croatia&quot;,&quot;Cameroon&quot;),
+	&quot;Nigeria&quot;        =&gt;array(&quot;Argentina&quot;,&quot;Argentina&quot;,&quot;Bosnia and Herzegovina&quot;),
+	&quot;Greece&quot;         =&gt;array(&quot;Costa Rica&quot;,&quot;Ivory Coast&quot;,&quot;Ivory Coast&quot;),
+
+	// Group Stage
+	&quot;Croatia&quot;        =&gt;array(&quot;Brazil&quot;,&quot;Mexico&quot;,&quot;Cameroon&quot;,&quot;Cameroon&quot;,&quot;Cameroon&quot;,&quot;Cameroon&quot;),
+	&quot;Australia&quot;      =&gt;array(&quot;Netherlands&quot;,&quot;Netherlands&quot;,&quot;Chile&quot;,&quot;Australia&quot;,&quot;Australia&quot;,&quot;Australia&quot;),
+
+	&quot;Ivory Coast&quot;    =&gt;array(&quot;Colombia&quot;,&quot;Greece&quot;,&quot;Japan&quot;,&quot;Japan&quot;),
+	&quot;Bosnia and Herzegovina&quot; =&gt;array(&quot;Argentina&quot;,&quot;Iran&quot;,&quot;Iran&quot;,&quot;Iran&quot;),
+	&quot;Portugal&quot;       =&gt;array(&quot;United States&quot;,&quot;United States&quot;,&quot;Ghana&quot;,&quot;Ghana&quot;),
+	&quot;Ghana&quot;          =&gt;array(&quot;Germany&quot;,&quot;Germany&quot;,&quot;United States&quot;,&quot;Portugal&quot;),
+
+	&quot;England&quot;        =&gt;array(&quot;Uruguay&quot;,&quot;Italy&quot;,&quot;Italy&quot;,),
+	&quot;Ecuador&quot;        =&gt;array(&quot;Switzerland&quot;,&quot;Honduras&quot;,&quot;Honduras&quot;),
+	&quot;Korea Republic&quot; =&gt;array(&quot;Algeria&quot;,&quot;Algeria&quot;,&quot;Russia&quot;),
+
+	&quot;Japan&quot;          =&gt;array(&quot;Colombia&quot;,&quot;Ivory Coast&quot;),
+	&quot;Italy&quot;          =&gt;array(&quot;England&quot;,&quot;England&quot;),
+	&quot;Russia&quot;         =&gt;array(&quot;Algeria&quot;,&quot;Korea Republic&quot;), 
+
+	&quot;Cameroon&quot;       =&gt;array(&quot;Brazil&quot;,),
+	&quot;Spain&quot;          =&gt;array(&quot;Netherlands&quot;,),
+	&quot;Honduras&quot;       =&gt;array(&quot;Ecuador&quot;),
+	&quot;Iran&quot;           =&gt;array(&quot;Bosnia and Herzegovina&quot;), 
+
+);
+
+// A few settings
+$multiplier = 1;
+$tCount = 0;
+$bars   = array();
+$toBars  = array();
+$bbars   = array();
+
+// Look through each of the teams and see who they scored against and keep a count
+foreach($messages as $from=&gt;$to){
+  $tCount += count($to);
+  $bars[$from] = count($to);
+  for($i=0;$i&lt;count($to);$i++){
+	$posList = getKeyPos($messages,$to[$i]);
+    $toBars[$from][$posList]++;
+    $bbars[$posList]++;
+  }
+
+}
+
+// output top bars and the curve to the bottom bars
+$x = 0;
+$bbarpos = array();
+foreach($bars as $n=&gt;$b){
+  // Output the top bars at the right X,Y coordinates, the proper line width and color
+  echo '&lt;line x1=&quot;'.($x*1).'&quot; y1=&quot;10&quot; x2=&quot;'.(($x*1)+($b*1)).'&quot; y2=&quot;10&quot; stroke=&quot;#'.getColor($n).'&quot; stroke-width=&quot;'.(3*$multiplier).'&quot; fill=&quot;none&quot;/&gt;'.&quot;\n&quot;;
+
+  $lineX = $x;
+  // Loop through each of this teams games and draw the path to the corresponding bottom bar
+  foreach($toBars[$n] as $k=&gt;$tB){
+     $lineX += $tB;
+     $offset = (($k)*5);
+     for($j=0;$j&lt;$k;$j++){
+		$offset += $bbars[$j];
+     }
+
+     $xx = $offset+$bbarpos[$k];
+     $bbarpos[$k] += $tB;
+     // print the path with the proper bezier curve. Handles pointing 50% of the way straight up/down
+     echo '&lt;path d=&quot;M'.($lineX-($tB/2)).',15C'.($lineX-($tB/2)).',50,'.($xx+($tB/2)).',50,'.($xx+($tB/2)).',95&quot; stroke=&quot;#'.getColor($n).'&quot; stroke-width=&quot;'.($tB*$multiplier).'&quot; fill=&quot;none&quot; opacity=&quot;0.5&quot; /&gt;'.&quot;\n&quot;;
+
+  }  
+
+  $x += (($b*1)+5);
+}
+
+// output lower bars
+$x = 0;
+$cn = array_keys($messages);
+for($i=0;$i&lt;count($bbars);$i++){
+    echo '&lt;line x1=&quot;'.($x*1).'&quot; y1=&quot;100&quot; x2=&quot;'.(($x*1)+($bbars[$i]*1)).'&quot; y2=&quot;100&quot; stroke=&quot;#'.getColor($cn[$i]).'&quot; stroke-width=&quot;3&quot; fill=&quot;none&quot;/&gt;'.&quot;\n&quot;;
+    $x += $bbars[$i]+5;
+}
+
+// end the SVG element
+echo '&lt;/svg&gt;';
+
+// using the In Rainbows color generation based on the Team Name
+// http://optional.is/required/2014/03/11/in-rainbows/
+function getColor($str){
+  return substr(md5($str),0,6);
+}
+
+function getKeyPos($list,$key){
+	$counter = 0;
+	foreach(array_keys($list) as $k){
+		if($k == $key) return $counter;
+		$counter++;
+	}
+}
+
+?&gt;
+</pre>
+<p>That&#8217;s it. If you have any questions, comments, thoughts or want to use this code in your own projects, please do. We&#8217;d love to see other examples as uses for this to_from visualization.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../../../category/visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../../../tag/data-vizualizations/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #d28448">data vizualizations</a>, <a href="../../../../tag/goals/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #152c8d">goals</a>, <a href="../../../../tag/open-source/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #d0db2f">open source</a>, <a href="../../../../tag/scores/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #e97e07">scores</a>, <a href="../../../../tag/to_from/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #c240b5">to_from</a>, <a href="../../../../tag/world-cup/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #900118">world cup</a></p>			  </div>
+
+		<div class="navigation">
+			<div class="prev"><div class="time">11 July 02014</div><a href="../../11/week-178/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #fc5da3">&laquo; Week #178</a></div>
+			<div class="next"><div class="time">25 July 02014</div><a href="../../25/week-179-180/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #fe8b88">Week #179-180 &raquo;</a></div>
+		</div>
+
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+  <div style="float: left; font-size: 16px;">
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+</div> 
+<a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>
+<script type='text/javascript' src='../../../../wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9'></script>
+<script type='text/javascript' src='../../../../wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://optional.is/required/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://optional.is/required/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>

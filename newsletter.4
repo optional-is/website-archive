@@ -63,7 +63,7 @@
 <script type="text/javascript">
     $(document).ready(function(){
         try {
-        var domains =['hotmail.co.uk','yahoo.co.uk','yahoo.com.tw','yahoo.com.au','yahoo.com.mx','gmail.com','hotmail.com','yahoo.com','aol.com','comcast.net','msn.com','seznam.cz','sbcglobal.net','live.com','bellsouth.net','hotmail.fr','verizon.net','mail.ru','btinternet.com','cox.net','yahoo.com.br','bigpond.com','att.net','yahoo.fr','mac.com','ymail.com','googlemail.com','earthlink.net','xtra.co.nz','me.com','yahoo.gr','walla.com','yahoo.es','charter.net','shaw.ca','live.nl','yahoo.ca','orange.fr','optonline.net','gmx.de','wanadoo.fr','optusnet.com.au','rogers.com','web.de','ntlworld.com','juno.com','yahoo.com.sg','rocketmail.com','yandex.ru','yahoo.co.in','centrum.cz','live.co.uk','sympatico.ca','libero.it','walla.co.il','bigpond.net.au','yahoo.com.hk','ig.com.br','live.com.au','free.fr','sky.com','uol.com.br','abv.bg','live.fr','terra.com.br','hotmail.it','tiscali.co.uk','rediffmail.com','aim.com','blueyonder.co.uk','telus.net','bol.com.br','hotmail.es','email.cz','windowslive.com','talktalk.net','home.nl','t-online.de','yahoo.de','telenet.be','163.com','embarqmail.com','windstream.net','roadrunner.com','bluewin.ch','skynet.be','laposte.net','yahoo.it','qq.com','live.dk','planet.nl','hetnet.nl','gmx.net','mindspring.com','rambler.ru','iinet.net.au','eircom.net','yahoo.com.ar','wp.pl','mail.com','emmis.com','hotmail.de','lireo.com','gmx.at','ukr.net','zol.co.zw'];
+        var domains =['hp.com','hotmail.co.uk','yahoo.co.uk','yahoo.com.tw','yahoo.com.au','yahoo.com.mx','gmail.com','hotmail.com','yahoo.com','aol.com','comcast.net','msn.com','seznam.cz','sbcglobal.net','live.com','bellsouth.net','hotmail.fr','verizon.net','mail.ru','btinternet.com','cox.net','yahoo.com.br','bigpond.com','att.net','yahoo.fr','mac.com','ymail.com','googlemail.com','earthlink.net','xtra.co.nz','me.com','yahoo.gr','walla.com','yahoo.es','charter.net','shaw.ca','live.nl','yahoo.ca','orange.fr','optonline.net','gmx.de','wanadoo.fr','optusnet.com.au','rogers.com','web.de','ntlworld.com','juno.com','yahoo.com.sg','rocketmail.com','yandex.ru','yahoo.co.in','centrum.cz','live.co.uk','sympatico.ca','libero.it','walla.co.il','bigpond.net.au','yahoo.com.hk','ig.com.br','live.com.au','free.fr','sky.com','uol.com.br','abv.bg','live.fr','terra.com.br','hotmail.it','tiscali.co.uk','rediffmail.com','aim.com','blueyonder.co.uk','telus.net','bol.com.br','hotmail.es','email.cz','windowslive.com','talktalk.net','home.nl','t-online.de','yahoo.de','telenet.be','163.com','embarqmail.com','windstream.net','roadrunner.com','bluewin.ch','skynet.be','laposte.net','yahoo.it','qq.com','live.dk','planet.nl','hetnet.nl','gmx.net','mindspring.com','rambler.ru','iinet.net.au','eircom.net','yahoo.com.ar','wp.pl','mail.com','emmis.com','hotmail.de','lireo.com','gmx.at','ukr.net','zol.co.zw'];
         var tdomains = [];
         $('#MERGE0').on('blur', function() {
           $(this).mailcheck({
@@ -168,6 +168,7 @@
 			border:0;
 			background:none;
 			width:98%;
+			background-position:97% 50% !important;
 		}
 		.radiogroup input,.phonearea input,.addressfield input,.datefield input,.groups input{
 			width:auto;
@@ -519,6 +520,10 @@
 			color:#6b0505;
 			background-color:#f4bfbf;
 		}
+		.hidden-from-view{
+			left:-5000px;
+			position:absolute;
+		}
 		html[dir=rtl] .wrapper,html[dir=rtl] .container,html[dir=rtl] label{
 			text-align:right !important;
 		}
@@ -531,6 +536,10 @@
 		html[dir=rtl] label .asterisk{
 			right:auto;
 			left:10px;
+		}
+		html[dir=rtl] .hidden-from-view{
+			right:-5000px;
+			left:auto;
 		}
 	@media (max-width: 601px){
 		body{
@@ -591,7 +600,7 @@
 
 <div id="subscribeFormWelcome">Sign-up for a low-volume email with links to interesting articles, ideas and events.<br>
 <br>
-<a href="newsletter/archive.9">View previous newsletters to get a feel for the topics, length and content.</a>
+<a href="newsletter/archive.4">View previous newsletters to get a feel for the topics, length and content.</a>
 </div>
 <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
 
@@ -606,7 +615,7 @@
 
 
 <div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
-<label for="MERGE0"><strong>Email Address</strong> <span class="asterisk">*</span></label>
+<label for="MERGE0">Email Address <span class="req float-right fwl dim6 asterisk">*</span></label>
 <div class="field-group">
     <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
     
@@ -647,6 +656,9 @@
 
 
 <br>
+<!-- real people should not fill this in and expect good things -->
+<div class="hidden-from-view"><input type="text" name="b_980d7e7c822ddb46c6693388d_4b11c60bdb" tabindex="-1" value=""></div>
+
 
 <div class="submit_container">
 <input type="submit" class="button" name="submit" value="Subscribe to list">

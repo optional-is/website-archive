@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>PDF Creation from HTML service &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" />
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="../../../../xmlrpc.php" />
+<meta name="viewport" content="width=725; initial-scale=0.43;" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+<style type="text/css">
+@font-face {
+  font-family: 'optional';
+    src: url("../../../../../fonts/optional.eot");
+    src: local('optional'),
+       url("../../../../../fonts/optional.svg") format('svg'),
+       url("../../../../../fonts/optional.otf") format('opentype');
+}
+#header h1 a { font-family: optional; text-decoration: none; font-size: 130px; line-height: 130px; }
+#footer .url { font-family: optional; text-decoration: none; font-size: 26px; }
+</style>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@optionalBot">
+<meta name="twitter:title" content="PDF Creation from HTML service">
+<meta name="twitter:description" content="If you are looking to create PDFs dynamically from HTML pages, then this project code might just save you time and effort. Follow these simple steps and have it easily running in no time.">
+<meta name="twitter:creator" content="@optionalBot">
+<meta name="twitter:domain" content="http://optional.is">
+</head>
+<body>
+<div id="header">
+<h1><a href="../../../../index.html">(optional.is)</a></h1>
+</div>
+			
+		<div class="post-3115 post type-post status-publish format-standard hentry category-briefs category-paper category-tutorial tag-heroku tag-html tag-html2pdf tag-paper tag-papernet tag-pdf tag-tutorial-2" id="post-3115">
+			<h2 style="border-bottom: 2px solid #8a9a60">PDF Creation from HTML service</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2014-06-12T12:21:45+00:00">Thursday, June 12th, 02014 at 12:21 UTC</abbr></div>
+				<p>HTML is one of those beautifully simple technologies that has now permeated every aspect of our daily-life. The web is made-up of HTML pages, HTML emails, browsers on TV, App stores, HTML is just about everywhere.</p>
+<p>When people say HTML they tend to mean that special trio of technologies. The HTML is really just the marked-up context. There are two more independent pieces. Javascript which provides the behavior to the content. Then CSS which is the presentation layer. Each is a technology in its own right, but get lumped together as HTML or &#8220;The Web&#8221;.</p>
+<p>If we love the web because it is made from HTML, then why are we trying to make PDFs from it?</p>
+<p>There exist load of complex layout programs which can export to PDF, but the problem is that they are not scriptable, not easily scriptable, are not available to use without a license or can&#8217;t run from the command line. There are some older Unix tools to create PDF files on the command line, but not very easily with HTML, or they accept the HTML, but are un-aware of new versions of CSS.</p>
+<p>That still doesn&#8217;t explain why we&#8217;d want to take a perfectly good webpage, which work fantastically well in a browser across a variety of devices and then solidify it into a single, (usually) unaccessible PDF file. It would seem a step backwards.</p>
+<p>This is true, making PDFs as a final product when you have HTML does seem very strange, but our goal isn&#8217;t a final product, it is an intermediate step between the digital world of the web and the analog world of paper.</p>
+<p>We needed a way to pull together multiple web-based APIs to build-up an HTML page with fancy CSS print styles and render that into a flat PDF ready for printing. This is because printing from a browser introduces more issues and has less control. PDFs on the other hand already have a massive professional tool chain waiting to accept your files and print them. The PDF is simply the intermediate step.</p>
+<p>This is something that <a href="http://www.aaronstraupcope.com">Aaron Straup Cope</a> refers to as The PaperNet. <a href="../../../../2009/04/29/introducing-the-papernet/index.html">We&#8217;ve written about the PaperNet before</a> and use it quite often in our daily life. From small booklets to on-demand calendars, we take a lot of HTML (or sometimes SVG) and generate PDFs for printing.</p>
+<p>This is a quick tutorial about how you can do this too. It is much easier than you think. The newest cutting edge tools allow you to use just about every CSS rule, including controlling page breaks, rotating text and embedding fonts, images and SVG. Todo this, we use something called <a href="http://phantomjs.org">PhantomJS</a>. This is a &#8216;headless webkit&#8217; instance. It is the same as the Safari or Chrome browser, but without the browser part. You give it a URL or HTML file, it loads it in a browser that you can&#8217;t see and then saves the results as a PNG or PDF. Anything you can do with HTML and CSS in the browser, this tool can replicate and save.</p>
+<p>We&#8217;ve open sourced all of the code that you will need to download to run your own &#8220;PDF as a Service&#8221; instance to convert HTML into a PDF. Just downloading it won&#8217;t do you much good, so what follows is a simple tutorial, hopefully simple enough for anyone to follow the steps and get things running in just a few minutes.</p>
+<h2>Getting Started</h2>
+<p>What you will need for this tutorial:</p>
+<ul>
+<li><a href="http://git-scm.com">GIT</a>: Version control to download and upload the files</li>
+<li><a href="https://www.heroku.com">Heroku Account</a>: Free hosting service for uploading and running the html2pdf code</li>
+<li><a href="https://toolbelt.heroku.com">Heroku Toolbelt</a>: Software to interact with Heroku to create new servers and change settings</li>
+</ul>
+<p>If you are techie enough to want to run this locally, you&#8217;ll need a few more things. If you&#8217;re not, you can skip these step completely:</p>
+<ul>
+<li><a href="https://www.python.org">Python</a>: To run the Python Flask web application environment</li>
+<li><a href="http://virtualenv.readthedocs.org/en/latest/virtualenv.html">Virtualenv</a>: Keeps everything tidy and installs PIP to get additional requirements</li>
+<li><a href="http://phantomjs.org">PhantomJS</a>: The program to convert HTML into a PDF</li>
+</ul>
+<p>The first thing we&#8217;ll need to do is get the code from <a href="https://github.com/optional-is/html2pdf">https://github.com/optional-is/html2pdf</a> so we can begin to install our html2pdf tool. Using GIT is the easiest way download the files. GIT calls this &#8216;cloning&#8217; when you clone the copy of all the code to have locally.</p>
+<p>Since the GIT repository, where all the code is saved together, is open to anyone you should be able to paste this text into your terminal.app or Command Prompt and it will begin the process of saving the files locally.</p>
+<p><code>git clone git@github.com:optional-is/html2pdf.git</code></p>
+<p>Great, now that we have the code locally, we need to create a new server somewhere on Heroku to upload our files. Since this is probably the first time you&#8217;ve used Heroku, we need to login, so type the following on your command line:</p>
+<p><code>heroku login</code></p>
+<p>If that worked, you can now create a new server by typing heroku app:create then a unique name for your server. I decided to use &#8220;html2pdf-optional&#8221;, you can change the -optional to your company or name. Remember, we want something unique.</p>
+<p><code>heroku apps:create html2pdf-optional</code></p>
+<p>This will create a new server for you. How easy was that? It also creates something called a GIT remote. This is a name for GIT to upload too. Much like an FTP server, but using GIT instead.</p>
+<p>Now that we have our code locally and new server, we need to add three items onto Heroku since we are doing something very special by installing PhantomJS on their server. Copy and paste the following lines 1-by-1. These add some settings into heroku to install phantomjs and tell it where so you can call the program.</p>
+<p><code>heroku config:set BUILDPACK_URL=https://github.com/rsussland/heroku-buildpack-python-phantomjs</code></p>
+<p><code>heroku config:set LD_LIBRARY_PATH="/usr/local/lib:/usr/lib:/lib:/app/vendor/phantomjs/lib"</code></p>
+<p><code>heroku config:set PATH="/usr/local/bin:/usr/bin:/bin:/app/vendor/phantomjs/bin"</code></p>
+<p>Finally, we need to upload the html2pdf code to that new server. In GIT terms this is called &#8220;push&#8221;. Paste the following code into the command line to push our code to Heroku:</p>
+<p><code>git push heroku master</code></p>
+<p>This should be everything you need to run an HTML to PDF converter. To view the site, you can type</p>
+<p><code>heroku open</code></p>
+<p>which will launch the browser or you can visit the domain in your browser yourself by typing your-appname.herokuapp.com</p>
+<p>That&#8217;s it. You should new see a text area with some sample HTML in it. If you press the button, it will think for a second and return a PDF.</p>
+<h2>Gotchas</h2>
+<p>There are a few things to be aware of with using Heroku. Since you aren&#8217;t paying, the server will go to sleep after a few minutes of inactivity. This just means that if you come back tomorrow, the first time you visit the site it will take a few more seconds to &#8220;wake-up&#8221; before showing you the webpage. If this is really annoying, you can pay Heroku to have a second dyno to keep things awake or move the code to a different service. Heroku also tries to be a good web citizen to your customers and any page load that takes too long, it drops automatically so that others are stuck waiting. This is incase something gets itself into an infinite loop and would never stop. What this does mean is that VERY large, 100+ page PDFs will take longer to create than Heroku will wait for and you&#8217;ll never get your results. The only way around this is to move the code to a server that you have more control over. For small, practical uses, these shouldn&#8217;t be a problem, but if you are trying to convert that HTML version of War and Peace into a PDF, it probably won&#8217;t work!</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../../../category/paper/index.html" title="View all articles in Paper" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="../../../../category/tutorial/index.html" title="View all articles in Tutorial" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #368fe7">Tutorial</a></p><p><strong>Tags:</strong> <a href="../../../../tag/heroku/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #3115fb">heroku</a>, <a href="../../../../tag/html/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #fc35fd">html</a>, <a href="../../../../tag/html2pdf/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #893cea">html2pdf</a>, <a href="../../../../tag/paper/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="../../../../tag/papernet/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #a2458a">papernet</a>, <a href="../../../../tag/pdf/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #437175">pdf</a>, <a href="../../../../tag/tutorial-2/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #0575c8">tutorial</a></p>			  </div>
+
+		<div class="navigation">
+			<div class="prev"><div class="time">23 May 02014</div><a href="../../../05/23/week-169-170-171/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #950f6a">&laquo; Week 169-170-171</a></div>
+			<div class="next"><div class="time">27 June 02014</div><a href="../../27/weeknotes-172-176/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #465942">Weeknotes 172-176 &raquo;</a></div>
+		</div>
+
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+  <div style="float: left; font-size: 16px;">
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+</div> 
+<a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>
