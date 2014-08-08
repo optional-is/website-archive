@@ -8,7 +8,7 @@ wget -rkp -nH http://optional.is/
 git add .
 
 # Git Commit the changes
-git commit -m "Archive fecthed on `date`"
+git commit -m "Archive fetched on `date`"
 
 # Git Push to keep the repo up to date
 # Might have issues with name/passwords here.
