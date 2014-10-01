@@ -9,21 +9,10 @@
 <link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" />
 <link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
 <link rel="pingback" href="../../../../xmlrpc.php" />
-<meta name="viewport" content="width=725; initial-scale=0.43;" />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
 <link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
-<style type="text/css">
-@font-face {
-  font-family: 'optional';
-    src: url("../../../../../fonts/optional.eot");
-    src: local('optional'),
-       url("../../../../../fonts/optional.svg") format('svg'),
-       url("../../../../../fonts/optional.otf") format('opentype');
-}
-#header h1 a { font-family: optional; text-decoration: none; font-size: 130px; line-height: 130px; }
-#footer .url { font-family: optional; text-decoration: none; font-size: 26px; }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@optionalBot">
 <meta name="twitter:title" content="A few things you might not have known about email">
@@ -49,7 +38,7 @@
 <p>This is a hotly contested and often mis-quoted number. A quick search and the value 320 will turn-up. The rational is that a domain name can be up to 255 characters long. The username, the part before the @ sign, can be 64 characters long. This would mean 64+1 (for the @ sign) and 255 more equals 320. This is actually incorrect. According to the Email related RFC (the documents that define how these protocols work) the maximum is 254 characters.</p>
 <p>For developers, this means that you need to watch out for the maximum value when allowing form field input and storage in the database. There are services such as, <a href="http://www.abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijk.com/">http://www.abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijk.com</a> designed to test and break many email forms which would think this is too long and invalid!</p>
 <h2>Multiple email addresses in one!</h2>
-<p>Have you ever noticed an email address with a &#8216;+&#8217; or &#8216;-&#8217; in it? Depending on your hosting provider and your email server, these two little characters can make a world of difference. Lets say my email address is brian@example.com. If you sent a message to that address it would end-up in my inbox, but what if you sent a message to brian+work@example.com? Well, that too would end-up in the same inbox as mail to just brian@example.com. Anything after the &#8216;+&#8217; is ignored by the mail server and it is delivered to the mailbox of the name before the &#8216;+&#8217; or in some servers&#8217; case the &#8216;-&#8217; sign.</p>
+<p>Have you ever noticed an email address with a &#8216;+&#8217; or &#8216;-&#8216; in it? Depending on your hosting provider and your email server, these two little characters can make a world of difference. Lets say my email address is brian@example.com. If you sent a message to that address it would end-up in my inbox, but what if you sent a message to brian+work@example.com? Well, that too would end-up in the same inbox as mail to just brian@example.com. Anything after the &#8216;+&#8217; is ignored by the mail server and it is delivered to the mailbox of the name before the &#8216;+&#8217; or in some servers&#8217; case the &#8216;-&#8216; sign.</p>
 <p>So why is this useful? Well, you can do a lot with this trick, firstly when you have to fill out forms you can use brian+ProductName@example.com when you are trying out a new product. Then 6 months later when you get spam to that address, it is pretty clear who sold your info! Secondly, you can easily setup filters in your mail application to check for &#8220;If to field is brian+ProductName@example.com move to trash&#8221; or other folders.</p>
 <p>Another useful trick using this technique is on sites that only allow you one sign-up per email address. You could go out and register loads of throw-away webmail accounts or you could just increment a number behind your name brian+1@example.com, brian+2, brian+3&#8230; A good form will prevent this, but it is rarely the case.</p>
 <h2>Throw-away email addresses</h2>
@@ -70,11 +59,11 @@
 <p>Email is incredibly robust and stable, it isn&#8217;t going away any time soon, so it is best to learn as many tips and tricks to improve your daily life. Having a happy inbox makes for a happy atmosphere. Take back your inbox and start treating it like a clean, organized closet rather than a landfill where everyone dumps their leftovers onto you.</p>
 
               <div class="postmetadata">
-					<p><strong>Categories:</strong> <a href="../../../../category/youre-doing-it-wrong/index.html" title="View all articles in You're doing it wrong" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #96e20d">You're doing it wrong</a></p><p><strong>Tags:</strong> <a href="../../../../tag/communications/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #77a351">communications</a>, <a href="../../../../tag/email/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #0c83f5">email</a>, <a href="../../../../tag/life-hacks/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #be6071">life hacks</a>, <a href="../../../../tag/management/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #d10af4">management</a>, <a href="../../../../tag/tips/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #e4c947">tips</a></p>			  </div>
+					<p><strong>Categories:</strong> <a href="../../../../category/youre-doing-it-wrong/index.html" title="View all articles in You're doing it wrong" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #96e20d">You're doing it wrong</a></p><p><strong>Tags:</strong> <a href="../../../../tag/communications/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #77a351">communications</a>, <a href="../../../../tag/email/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0c83f5">email</a>, <a href="../../../../tag/life-hacks/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #be6071">life hacks</a>, <a href="../../../../tag/management/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d10af4">management</a>, <a href="../../../../tag/tips/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e4c947">tips</a></p>			  </div>
 
 		<div class="navigation">
-			<div class="prev"><div class="time">24 March 02010</div><a href="../../../03/24/ada-lovelace-day-florence-nightingale/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #3117d1">&laquo; Ada Lovelace Day: Florence Nightingale</a></div>
-			<div class="next"><div class="time">14 April 02010</div><a href="../../14/poisonous-people/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #5a7cea">Poisonous People &raquo;</a></div>
+			<div class="prev"><div class="time">24 March 02010</div><a href="../../../03/24/ada-lovelace-day-florence-nightingale/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3117d1">&laquo; Ada Lovelace Day: Florence Nightingale</a></div>
+			<div class="next"><div class="time">14 April 02010</div><a href="../../14/poisonous-people/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5a7cea">Poisonous People &raquo;</a></div>
 		</div>
 
 			</div>
@@ -108,7 +97,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.117 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2014-08-25 21:13:44 -->
+<!-- Dynamic page generated in 0.108 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-10-01 09:00:51 -->
 
 <!-- super cache -->

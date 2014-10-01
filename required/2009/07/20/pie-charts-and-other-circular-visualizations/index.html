@@ -9,21 +9,10 @@
 <link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" />
 <link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
 <link rel="pingback" href="../../../../xmlrpc.php" />
-<meta name="viewport" content="width=725; initial-scale=0.43;" />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
 <link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
-<style type="text/css">
-@font-face {
-  font-family: 'optional';
-    src: url("../../../../../fonts/optional.eot");
-    src: local('optional'),
-       url("../../../../../fonts/optional.svg") format('svg'),
-       url("../../../../../fonts/optional.otf") format('opentype');
-}
-#header h1 a { font-family: optional; text-decoration: none; font-size: 130px; line-height: 130px; }
-#footer .url { font-family: optional; text-decoration: none; font-size: 26px; }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@optionalBot">
 <meta name="twitter:title" content="Pie charts and other circular visualizations">
@@ -66,7 +55,7 @@
 <p>The next major issue is defining &#8220;volume&#8221;. The pink is high volume, but what does that actually mean and is that high volume on sunday the same high volume on saturday? How can it jump from low volume immediately to high volume? A better way to define volume would be to explain this in terms of wait time. High volume might mean a 20-30 minute wait in the check-out line. Mild volume, 10-20 minutes and low volume less than 10 minutes. Then it would be easier to determine what &#8220;high volume&#8221; at 3pm means on each day.</p>
 <p>Another possible fix to remove ambiguity is to convert this from a circular visualization to linear.</p>
 <div class="banner"><img class="aligncenter size-full wp-image-731" title="IKEA-hours-line" src="../../../../wp-content/uploads/2009/07/IKEA-hours-line.png" alt="IKEA-hours-line" width="600" height="184" /></div>
-<p>By making it linear you have a start and end point which removes the ambiguity about when the store opens. Although, I&#8217;m not even sure, I am assuming it&#8217;s 9am. Another simple change would by to replace the number &#8220;12&#8243; with the word &#8220;noon&#8221;. After that, it becomes clear what is AM and what is PM. The legend and color coding still needs work regarding the definition of volume being localize to each day, to each week or to IKEA as a whole. I think converting the nebulous &#8220;high volume&#8221; into wait times would give a more concrete definition, but this might mean people change their shopping habits and this visualization becomes obsolete.</p>
+<p>By making it linear you have a start and end point which removes the ambiguity about when the store opens. Although, I&#8217;m not even sure, I am assuming it&#8217;s 9am. Another simple change would by to replace the number &#8220;12&#8221; with the word &#8220;noon&#8221;. After that, it becomes clear what is AM and what is PM. The legend and color coding still needs work regarding the definition of volume being localize to each day, to each week or to IKEA as a whole. I think converting the nebulous &#8220;high volume&#8221; into wait times would give a more concrete definition, but this might mean people change their shopping habits and this visualization becomes obsolete.</p>
 <p>Any pie chart can easily be &#8220;rolled out&#8221; into a linear form. There are pros and cons to this method, space being one of them. A single round graphic takes-up a square amount of space, whereas its linearized representation is long and skinny. Depending on your overall GUI, one representation might be better than another. Context and comprehension will define which is best.</p>
 <p>Another option to solving some of the confusion with the IKEA visualizations would be to convert to 24 hour time. Instead of 9PM switch the text to 21:00. The US has never really caught onto representing time in a 24 hour clock, so again this will suffer from internationalization and localization issues.</p>
 <p><img style="float: right; padding-left: 15px" title="stamen-24h-clock" src="../../../../wp-content/uploads/2009/07/stamen-24h-clock.png" alt="stamen-24h-clock" width="210" height="186" />A good example of a circular visualization comes from the folks at <a href="http://stamen.com/">Stamen Design</a>. They worked on a project called Oakland Crime Spotting which represents crimes on a map throughout the city of Oakland. One way to browse the data is via a clock interface, something they call a &#8220;<a href="http://content.stamen.com/oakland_crimespotting_update_the_pie_of_time">time pie</a>&#8220;. They needed a simple way to represent several variables at once and managed to so with this circular visualization.</p>
@@ -82,11 +71,11 @@
 </ul>
 
               <div class="postmetadata">
-					<p><strong>Categories:</strong> <a href="../../../../category/visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../../../tag/100/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #30bd7c">100%</a>, <a href="../../../../tag/3d-charts/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #e2bd16">3d charts</a>, <a href="../../../../tag/doughnut-chart/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #907719">doughnut chart</a>, <a href="../../../../tag/graphs/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #e8706a">graphs</a>, <a href="../../../../tag/ikea/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #65d6b2">IKEA</a>, <a href="../../../../tag/percentage/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #d1647a">percentage</a>, <a href="../../../../tag/pie/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #ea702b">pie</a>, <a href="../../../../tag/pie-charts/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #404054">pie charts</a>, <a href="../../../../tag/steve-jobs/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #7f76ff">Steve Jobs</a>, <a href="../../../../tag/time-pie/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #f5aea5">time pie</a>, <a href="../../../../tag/visualizations/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a>, <a href="../../../../tag/william-playfair/index.html" rel="tag" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #8085ad">William Playfair</a></p>			  </div>
+					<p><strong>Categories:</strong> <a href="../../../../category/visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../../../tag/100/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #30bd7c">100%</a>, <a href="../../../../tag/3d-charts/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e2bd16">3d charts</a>, <a href="../../../../tag/doughnut-chart/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #907719">doughnut chart</a>, <a href="../../../../tag/graphs/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e8706a">graphs</a>, <a href="../../../../tag/ikea/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #65d6b2">IKEA</a>, <a href="../../../../tag/percentage/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d1647a">percentage</a>, <a href="../../../../tag/pie/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ea702b">pie</a>, <a href="../../../../tag/pie-charts/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #404054">pie charts</a>, <a href="../../../../tag/steve-jobs/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7f76ff">Steve Jobs</a>, <a href="../../../../tag/time-pie/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f5aea5">time pie</a>, <a href="../../../../tag/visualizations/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a>, <a href="../../../../tag/william-playfair/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8085ad">William Playfair</a></p>			  </div>
 
 		<div class="navigation">
-			<div class="prev"><div class="time">11 July 02009</div><a href="../../11/the-long-now/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #44bb79">&laquo; The Long Now</a></div>
-			<div class="next"><div class="time">03 August 02009</div><a href="../../../08/03/hacking-sleep/index.html" style="background-color: #fefefe; text-decoration: none; border-bottom: 2px solid #e78306">Hacking Sleep &raquo;</a></div>
+			<div class="prev"><div class="time">11 July 02009</div><a href="../../11/the-long-now/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #44bb79">&laquo; The Long Now</a></div>
+			<div class="next"><div class="time">03 August 02009</div><a href="../../../08/03/hacking-sleep/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e78306">Hacking Sleep &raquo;</a></div>
 		</div>
 
 			</div>
@@ -120,7 +109,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.117 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2014-08-25 21:13:46 -->
+<!-- Dynamic page generated in 0.111 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-10-01 09:00:53 -->
 
 <!-- super cache -->

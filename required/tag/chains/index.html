@@ -10,7 +10,7 @@
 
 	<title>(optional.is)</title>
 	<style type="text/css">
-        html, body	{ background-color: #FFF; margin: 0 auto; text-align: center; font: 100%/1.5 "Lucida Grande",Helvetica,Arial,sans-serif; }
+        html, body	{ background-color: #f4f4f4; margin: 0 auto; text-align: center; font: 100%/1.5 "Lucida Grande",Helvetica,Arial,sans-serif; }
 	h1, h2 { margin: 0; padding: 0; border-top: 5px solid #99469f;}
         body { font-size: 80%;}
         img { border: 0;}
@@ -23,13 +23,29 @@
 	.feed { background-image:url("http://suda.co.uk/images/feed.gif"); background-position:3px 50%; background-repeat:no-repeat; 
 padding-left:20px; }
 	.navigation a, .readmore { font-weight: bold; color: #003F87; text-decoration: underline;}
+
+
+@font-face {
+  font-family: 'optional';
+    src: url("../../../fonts/optional.eot");
+    src: local('optional'),
+       url("../../../fonts/optional.svg") format('svg'),
+       url("../../../fonts/optional.otf") format('opentype');
+}
+#header h1 { border-top: 0; font-weight: normal; }
+#header h1 a { font-family: optional; text-decoration: none; font-size: 65px; line-height: 140px; text-align: left; }
+#footer .url { font-family: optional; text-decoration: none; font-size: 26px; }
+
 	</style>
 
 </head>
 <body>
     <div style="width: 960px; margin: 0 auto; position: relative;">
         <div style="text-align: left; height: 161px;">
-            <img src="../../../optional-logo.gif" alt="(optional.is)" style="width: 313px;" />
+            <div id="header">
+		<h1><a href="../../index.html">(optional.is)</a></h1>
+	    </div>
+
 	    <div id="toolbar" style="text-align: right; position: absolute; top: 3px; left: 496px; width: 464px;">
 <a class="feed" href="http://feeds2.feedburner.com/optional?format=xml">Feed</a> <form style="display: inline" action="../../index.html" method="get"><input type="text" name="s" /><input type="submit" 
 value="search" 
@@ -65,7 +81,7 @@ padding: 0 0 0 10px">
 	
 
 	<ul style="clear: both; padding-top: 10px; border-top: 1px solid #99469f">
-	<li style="border-left: 10px solid #aa8c5b;"><a href="../../category/briefs/index.html">Briefs</a></li><li style="border-left: 10px solid #992978;"><a href="../../category/cartography/index.html">Cartography</a></li><li style="border-left: 10px solid #a0d2b6;"><a href="../../category/case-studies/index.html">Case Studies</a></li><li style="border-left: 10px solid #1e7940;"><a href="../../category/chromatics/index.html">Chromatics</a></li><li style="border-left: 10px solid #7d6198;"><a href="../../category/community/index.html">Community</a></li><li style="border-left: 10px solid #d70b59;"><a href="../../category/conferences/index.html">Conferences</a></li><li style="border-left: 10px solid #de7a22;"><a href="../../category/education/index.html">Education</a></li><li style="border-left: 10px solid #482926;"><a href="../../category/experiments/index.html">Experiments</a></li><li style="border-left: 10px solid #89c126;"><a href="../../category/forecast/index.html">Forecast</a></li><li style="border-left: 10px solid #756640;"><a href="../../category/interfaces/index.html">Interfaces</a></li><li style="border-left: 10px solid #b6755d;"><a href="../../category/meta/index.html">Meta</a></li><li style="border-left: 10px solid #d0a662;"><a href="../../category/paper/index.html">Paper</a></li><li style="border-left: 10px solid #7b9cf0;"><a href="../../category/place/index.html">Place</a></li><li style="border-left: 10px solid #c5f29b;"><a href="../../category/privacy/index.html">Privacy</a></li><li style="border-left: 10px solid #918e18;"><a href="../../category/sports/index.html">Sports</a></li><li style="border-left: 10px solid #d4ccb5;"><a href="../../category/storytelling/index.html">Storytelling</a></li><li style="border-left: 10px solid #bafe5c;"><a href="../../category/t-shirts/index.html">T-Shirts</a></li><li style="border-left: 10px solid #504c77;"><a href="../../category/temporality/index.html">Temporality</a></li><li style="border-left: 10px solid #1fb0f9;"><a href="../../category/travel/index.html">Travel</a></li><li style="border-left: 10px solid #368fe7;"><a href="../../category/tutorial/index.html">Tutorial</a></li><li style="border-left: 10px solid #b10ac6;"><a href="../../category/visualizations/index.html">Visualizations</a></li><li style="border-left: 10px solid #138567;"><a href="../../category/weeknotes.6">Weeknotes</a></li><li style="border-left: 10px solid #96e20d;"><a href="../../category/youre-doing-it-wrong/index.html">You're doing it wrong</a></li>	
+	<li style="border-left: 10px solid #aa8c5b;"><a href="../../category/briefs/index.html">Briefs</a></li><li style="border-left: 10px solid #992978;"><a href="../../category/cartography/index.html">Cartography</a></li><li style="border-left: 10px solid #a0d2b6;"><a href="../../category/case-studies/index.html">Case Studies</a></li><li style="border-left: 10px solid #1e7940;"><a href="../../category/chromatics/index.html">Chromatics</a></li><li style="border-left: 10px solid #7d6198;"><a href="../../category/community/index.html">Community</a></li><li style="border-left: 10px solid #d70b59;"><a href="../../category/conferences/index.html">Conferences</a></li><li style="border-left: 10px solid #de7a22;"><a href="../../category/education/index.html">Education</a></li><li style="border-left: 10px solid #482926;"><a href="../../category/experiments/index.html">Experiments</a></li><li style="border-left: 10px solid #89c126;"><a href="../../category/forecast/index.html">Forecast</a></li><li style="border-left: 10px solid #756640;"><a href="../../category/interfaces/index.html">Interfaces</a></li><li style="border-left: 10px solid #b6755d;"><a href="../../category/meta/index.html">Meta</a></li><li style="border-left: 10px solid #d0a662;"><a href="../../category/paper/index.html">Paper</a></li><li style="border-left: 10px solid #7b9cf0;"><a href="../../category/place/index.html">Place</a></li><li style="border-left: 10px solid #c5f29b;"><a href="../../category/privacy/index.html">Privacy</a></li><li style="border-left: 10px solid #918e18;"><a href="../../category/sports/index.html">Sports</a></li><li style="border-left: 10px solid #d4ccb5;"><a href="../../category/storytelling/index.html">Storytelling</a></li><li style="border-left: 10px solid #bafe5c;"><a href="../../category/t-shirts/index.html">T-Shirts</a></li><li style="border-left: 10px solid #504c77;"><a href="../../category/temporality/index.html">Temporality</a></li><li style="border-left: 10px solid #1fb0f9;"><a href="../../category/travel/index.html">Travel</a></li><li style="border-left: 10px solid #368fe7;"><a href="../../category/tutorial/index.html">Tutorial</a></li><li style="border-left: 10px solid #b10ac6;"><a href="../../category/visualizations/index.html">Visualizations</a></li><li style="border-left: 10px solid #138567;"><a href="../../category/weeknotes.7">Weeknotes</a></li><li style="border-left: 10px solid #96e20d;"><a href="../../category/youre-doing-it-wrong/index.html">You're doing it wrong</a></li>	
 	</ul>
 
 
@@ -95,7 +111,7 @@ pageTracker._trackPageview();
 
 
 
-<!-- Dynamic page generated in 0.110 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2014-08-25 21:16:37 -->
+<!-- Dynamic page generated in 0.105 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-10-01 09:02:57 -->
 
 <!-- super cache -->

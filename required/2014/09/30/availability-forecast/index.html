@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Availability Forecast &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" />
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="../../../../xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@optionalBot">
+<meta name="twitter:title" content="Availability Forecast">
+<meta name="twitter:description" content="Sometimes crazy ideas lead of a day of design challenges. We took our internal availability levels and visualised them as if it were a weather report.">
+<meta name="twitter:creator" content="@optionalBot">
+<meta name="twitter:domain" content="http://optional.is">
+</head>
+<body>
+<div id="header">
+<h1><a href="../../../../index.html">(optional.is)</a></h1>
+</div>
+			
+		<div class="post-3323 post type-post status-publish format-standard hentry category-briefs category-forecast category-meta tag-availability tag-clouds tag-forecast-2 tag-icons tag-weather tag-widget" id="post-3323">
+			<h2 style="border-bottom: 2px solid #21ad44">Availability Forecast</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2014-09-30T13:31:46+00:00">Tuesday, September 30th, 02014 at 13:31 UTC</abbr></div>
+				<p>Many years ago, I vividly remember sitting at a conferences complaining about the WiFi with friends and other conference goers. At the time, Apple had just released their dashboard widgets and everyone was testing different weather widgets. That gave us the idea to create a conference WiFi weather widget. It would jokingly tell you a forecast about how good or bad the signal would be at the event; Clear, Partly Cloudy, Stormy or Non-Existant. We never built it, for various reasons, technical and otherwise, but the idea has never left us.</p>
+<p><img style="float: right; padding-left: 10px;" src="../../../../wp-content/uploads/2014/09/early-forecast-design.jpg" alt="early-forecast-design" width="199" height="199" />Every once and awhile freelancers and companies post their availability for the next week, month or quarter. More companies are doing this internally and not making it public. We do this, we have an idea of our workload, cashflow and resources for each upcoming month and quarter. Sort of jokingly, internally we have begun to refer to our availability in terms of a weather report: Our Availability Forecast Report.</p>
+<p>What started out as a joke has grown and grown, to the point where we even mocked-up a bunch of designs for an Availability Forecast Widget.</p>
+<p>We wanted to focus on a handful of metrics that we are watching each month. Firstly, our high and low workload in approximate number of days. If we have enough work to fill one day each week we are probably 15%-20% loaded giving us 80%-85% availability.</p>
+<p>Next, we have several internal projects which we are building. These are of varying priority and take a percentage of our time. So we want to monitor how much we are spending on internal projects. We also need to know how much of our workload we can shift if needed. The best organised plans are always subject to delays or new injections of ideas and customers. If some big opportunity appeared, what percentage of the workload is movable to a later date? Usually this is our internal projects, but sometimes it could be other low priority client projects.</p>
+<p>We are also tracking how many projects we are finishing and how many we are starting. This allows us to see if we are winding up or down or staying with the same project load. We could be fully booked that month or quarter, but also expect things to be winding down for the following time period.</p>
+<p>Using all these variables we began to create a series of dashboard style widgets to get the data across. It needed to be dense, but also build some sort of iconography. We&#8217;ve discussed <a href="../../../../2013/09/03/intuitive-design-or-something-else/index.html">the problems with Mystery Meat navigation</a> and wanted to be more explicit than implicit.</p>
+<p>The early versions weren&#8217;t much more than a catchy weather term for our work load; Clear, Partly Cloudy, Cloudy, Foggy, etc. That wasn&#8217;t very fun, so we started to look further afield, but staying within the weather realm. There is an <a href="https://en.wikipedia.org/wiki/Cloud#Cloud_symbols_used_on_weather_office_maps">internationally recognised symbol set for Cloud Types</a>. Really this should be used for uptime in cloud computing, but that&#8217;s another story.</p>
+<div class="banner"><img src="../../../../wp-content/uploads/2014/09/cloud-symbols.gif" alt="cloud-symbols" width="700" height="462" /></div>
+<p>We co-opted some of the semi-relavant symbols in our Availability Forecast. Granted, they are cryptic and very mystery-meat of what they mean, so we are providing some real text on all by the smallest designs. We settled on six different symbols to illustrate various levels of business, from 1 day, 2 days, 3 days, 75%, 85% and nearly 100% busy. The final names for these categories hasn&#8217;t been finalised, but we are mostly sticking with weather related terms.</p>
+<p>Drawing from other sources like candle stick charts used for stocks, we wanted a small, 5 box bar chart-style graph, which could be filled to show some availability. Next to that we originally put our High and Low estimated workload. After some tinkering, we reduced it to just one big number: The percentage of time we are available. Then we added a smaller +/- to show our confidence. Most people don&#8217;t care about that, so we reduced the attention it received.</p>
+<p>For now, we dropped what percentage of the workload is internal projects and what could be bumped. Sometimes internal projects are revenue generating for us or are longer term revenue generating. Ultimately, this was not useful information for the customer, it was something we used to gauge our workload and there is no reason to show that.</p>
+<p>On the widget we also added the period of which this information is valid. This could be a week number or a month, but for us it is usually a quarter.</p>
+<div class="banner"><img src="../../../../wp-content/uploads/2014/09/availabilty-forecast.gif" alt="availabilty-forecast" width="700" height="85" /></div>
+<p>Finally, we wanted to add a small icon to tell if we were on the project increase, decrease or no-change. This was originally a curling arrow or a not-equals sign with two values: incoming projects and outgoing projects. These icons were redundant since it was easy to see if the incoming value was larger, smaller or the same as the outgoing. We reduced the design further to a box with a 45° line through it. The upper left triangle is incoming project count and the lower right triangle is the outgoing project count.</p>
+<p>The point was to let others would know that we might be fully booked now, but the next time period we&#8217;d be closing 2 projects and starting zero. So that would be a good time to contact us even if we are fully booked. Conversely, we might be busy now, with no change in the future. While it doesn&#8217;t describe the size and scope of incoming and outgoing projects, it is a small indicator of what is happening in the future.</p>
+<p>All-in-all, we did several designs, eliminating and making each version more compact. Sometimes this is at the loss of clarity to a novice. Internally, this isn&#8217;t a problem, we all know we the symbols mean and we are generally on top of the situation because we are having weekly meetings about it. The general public on the other hand does not.</p>
+<p>We&#8217;re going to continue to play with the designs and see where this goes and one-day if you see something like this on our website or newsletter, you&#8217;ll know what it means.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../../../category/forecast/index.html" title="View all articles in Forecast" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #89c126">Forecast</a>, <a href="../../../../category/meta/index.html" title="View all articles in Meta" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b6755d">Meta</a></p><p><strong>Tags:</strong> <a href="../../../../tag/availability/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f24431">availability</a>, <a href="../../../../tag/clouds/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #073cae">clouds</a>, <a href="../../../../tag/forecast-2/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d4e677">forecast</a>, <a href="../../../../tag/icons/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bd2119">icons</a>, <a href="../../../../tag/weather/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aab92e">weather</a>, <a href="../../../../tag/widget/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9d2b1a">widget</a></p>			  </div>
+
+		<div class="navigation">
+			<div class="prev"><div class="time">19 September 02014</div><a href="../../19/week-185-186-187-188/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #90eecd">&laquo; Week #185-186-187-188</a></div>
+			<div class="next"></div>
+		</div>
+
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+  <div style="float: left; font-size: 16px;">
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+</div> 
+<a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.111 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-10-01 08:59:16 -->
+
+<!-- super cache -->
