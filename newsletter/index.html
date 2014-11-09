@@ -352,9 +352,11 @@ html[dir="rtl"] .dijitPlaceHolder {left:auto; right:10px;}
 /* Forward to friend */
 .captcha {
     float:left;
-    width:340px;
-    height:170px;
+    width:320px;
+    margin-right:20px;
+    min-height:150px;
 }
+.captcha input {display:inline;}
 
 /* Archive list */
 #archive-list {
@@ -808,6 +810,12 @@ html[dir="rtl"] .dijitPlaceHolder {left:auto; right:10px;}
 			width:auto;
 			float:none;
 			padding-right:0;
+		}
+
+}	@media (max-width: 620px){
+		.captcha{
+			width:auto;
+			float:none;
 		}
 
 }		#templateHeader{
