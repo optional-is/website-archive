@@ -20,6 +20,7 @@
 			html, body { background-color: #f7f7f7; font-family: Helvetica, Arial, sanserif}
 			html, body, div, p, h1, h2, h3, ul, ol, li, form, iframe { margin: 0 auto; padding:0; font-size: 14px; line-height: 30px;  width: 100%; text-align: center; color: #444; }
 			div, p, h1, h2, h3, li { text-align: left; }
+			p { line-height: 24px; padding-bottom: 12px;}
 			li { list-style: none;}
 			
 			h1 { clear: both; font-size: 22px; line-height: 58px; color: #222; text-transform: uppercase; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica-Light", "Helvetica Light","Helvetica Neue"; font-weight: normal; margin-bottom: 18px; border-top: 1px solid #dedede; border-bottom: 1px solid #dedede;  }
@@ -29,10 +30,14 @@
 			
 			
 			img { width: 100%; height: 100%;}
+			img.logos { width: auto; height: auto; vertical-align: middle; padding: 0 1em;}
+			.center { text-align: center; }
 			
 			.row { clear: both; margin: 0 auto; width: 960px;  }
 			.box1 { width: 470px; float: left; margin-right: 20px; }
 			.box2 { width: 225px; float: left; margin-right: 20px; }
+			.inverted { background-color: #d4d4d4; }
+			.inverted>* { padding: 0 .5em; width: auto; }
 			.row div:last-child { margin-right: 0; }
 			.main, .feature { width: 100%; height: 353px; margin-bottom: 10px; }
 			.sub { width: 100%; height: 146px; margin-bottom: 10px; }
@@ -44,11 +49,12 @@
 			.thumbnail { height: 186px; margin-bottom: 20px;}
 			.thumbnail a { display: block; height: 100%; width: 100%; text-indent: -9999px; padding: 0; margin: 0; overflow: hidden; }
 			.feature.stretched { height: 393px;  }
+			.sub.stretched { height: 186px;  border-bottom: 1px solid #dedede; }
 			.main.stretched { height: 392px; border-bottom: 1px solid #dedede; }
 			a { font-weight: normal; color: #003F87; text-decoration: underline;}
 			a:active { position: relative; top:1px; }
 			
-			#weeknotes li, #categories li, #address li { width: 50%; float: left;}
+			#categories li, #address li { width: 50%; float: left;}
 			#header { font-family: optional; font-weight: normal; font-size: 65px; line-height: 140px; }
 			
 			@media only screen and (max-width: 960px) {
@@ -83,124 +89,106 @@
 			ul li a { display: block; width:100%; }
 			ul li a span { height: 30px; display: block; width: auto;}
 			.section { padding-top: 50px; }
-			strong { background-color: #FFF68F; padding: 2px 3px;}
+			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 		</style>
 	</head>
 	<body>
 		<div class="row">
 			<header id="header" style="color: #000; text-align: left;">(optional.is)</header>
-			
 			<div class="box1">
 				<div class="feature stretched" style="outline: 1px solid #ccc; background: #fff url('images/blueberry-iceland.jpg') 50% 30px no-repeat;">
 				</div>
 			</div>
-			<div class="box2">
-				<div class="main">
-					<h2>Week #194-195</h2><p>A double-weeknote where we spent most of it in Berlin for the Beyond Tellerrand conference, but also focusing closely on conducting a few surveys.</p>
-			<form method="get" id="searchform" action="required/index.html" style="text-align: center; margin-top: 50px">
-							<div><input type="text" value="" name="s" id="s"><input type="submit" id="searchsubmit" value="Search"></div>
-			</form></div><div class="call-out"><a href="required/2014/11/07/week-194-195/index.html">
-					
-
-<span>Read More</span></a></div>					
-				</div>
-			<div class="box2">
-				<div class="main">
-					<h2>Recent Articles</h2>
-					<ul style="max-width: 280px">
-						<li><a href="required/2014/09/30/availability-forecast/index.html"><span style="border-left: 10px solid #21ad44;">Availability Forecast</span></a></li><li><a href="required/2014/08/27/paper-calendars/index.html"><span style="border-left: 10px solid #9322db;">Paper Calendars</span></a></li><li><a href="required/2014/08/12/second-generation-usernames/index.html"><span style="border-left: 10px solid #9af81f;">Second Generation Usernames</span></a></li><li><a href="required/2014/07/14/world-cup-visualization/index.html"><span style="border-left: 10px solid #2c2b3e;">2014 World Cup Visualization</span></a></li><li><a href="required/2014/07/07/new-york-city-ny-usa/index.html"><span style="border-left: 10px solid #be0b31;">New York City, NY, USA</span></a></li><li><a href="required/2014/07/01/lisbon-portugal/index.html"><span style="border-left: 10px solid #1b88bd;">Lisbon, Portugal</span></a></li><li><a href="required/2014/06/12/pdf-creation-from-html-service/index.html"><span style="border-left: 10px solid #8a9a60;">PDF Creation from HTML service</span></a></li><li><a href="required/2014/03/26/meyrin-cern-terminal-font/index.html"><span style="border-left: 10px solid #0b53cf;">Meyrin: CERN Terminal Font</span></a></li><li><a href="required/2014/03/18/semi-spimed-bananas/index.html"><span style="border-left: 10px solid #f44f8c;">Semi-Spimed Bananas</span></a></li>						</ul>
-
-				</div>
-				<div class="call-out readmore"><a href="required/index.html"><span>Full Archives</span></a></div>
+			<div class="box1">
+				<h2>Our Work</h2>
+				
+				<p>Over the years we've had the good fortune to work with lots of great companies. From creating dashboards to problem solving, we help with strategy and special projects. Our clients include the PwC USA, TestFlight/Apple, UEFA, Marel, City of Reykjavík and many smaller companies.</p>
+				<p>We bring past experience working at TM-Software/Nýherji, CLARA and Skólapúlsinn on projects ranging from Icelandair Boarding pass design, large scale natural language text processing and data visualizations to making an impact in the educational section through online surveys, analysis and reporting.</p>
+				<p></p>
+				<p><strong>If you think we can help you, <a href="mailto:optional@optional.is">get in contact</a> and we'll find a time to chat.</strong></p>
 			</div>
+			
 		</div>
-
-
+		
+		
 		<!-- Previous work -->
 		<div class="row section">
-			<h1>Our Work</h1>
 			<div class="box2">
-				<div class="main stretched">
-					<p>Over the years we've had the good fortune to work with lots of great companies. From creating dashboards to problem solving, we have focused on user interaction of seemingly simple utilities.</p>
-					<p>If we can help you, get in contact.</p>
+				<div class="thumbnail" style="background: #fff url('images/clara-logo.png') 50% 50% no-repeat; min-height: 180px"><a href="http://pwc.com">PwC</a></div>
+				<div class="sub stretched">
+					
+					<p>At <strong>CLARA</strong> we developed an online tool to help companies monitor the discussion about their brands on social media, news sites and forums through easy to use data visualizations and dashboards.</p>
 				</div>
 			</div>
 			
 			<div class="box2">
 				<div class="thumbnail" style="background: #fff url('images/pwc-dashboard.jpg') 50% 0% no-repeat; min-height: 180px"><a href="http://pwc.com">PwC</a></div>
-				<div class="sub">
+				<div class="sub stretched">
 					
 					<p>We worked with <strong>PwC</strong> for close to a year. Building-up their internal data vizualization team and creating beautiful, mobile friendly, internal dashboards.</p>
 				</div>
-				<div class="call-out"><a href="http://pwc.com"><span>PwC</span></a></div>
 			</div>
 			<div class="box2">
 				<div class="thumbnail" style="background: transparent url('images/uefa-logo.jpg') 50% 50% no-repeat; min-height: 180px"><a href="http://calendars.uefa.com/en/">UEFA Calendar</a></div>
-				<div class="sub">
+				<div class="sub stretched">
 					
 					<p>For <strong>UEFA</strong>, we created a fully-customizable online calendar tool to follow teams, leagues and events so you'll never miss a game.</p>
 				</div>
-				<div class="call-out"><a href="http://calendars.uefa.com/en/"><span>UEFA Calendar</span></a></div>
 			</div>
 			<div class="box2">
 				<div class="thumbnail" style="background: transparent url('images/testflight-plane.png') 50% 50% no-repeat; min-height: 120px"><a href="http://www.testflightapp.com">TestFlight</a></div>
-				<div class="sub" >
+				<div class="sub stretched" >
 					
-					<p>Working with the team at Burstly, we prototyped several iterations of their popular <strong>TestFlight</strong> tool.</p>
+					<p>Working with the team at Burstly, we prototyped several iterations of their popular <strong>TestFlight</strong> tool and unreleased <strong>FlightPath</strong> service before they were acquired by Apple.</p>
 				</div>
-				<div class="call-out"><a href="http://www.testflightapp.com"><span>TestFlight</span></a></div>
-			</div>
-		</div>
-
-		<!-- Designing with Data -->
-		<div class="row section">
-			<h1>Writing</h1>
-			
-			<div class="box1">
-				<div class="feature stretched" style="background: #fff url('images/dwd-sample-pages.jpg') 50% 0% no-repeat; min-height: 250px;"></div>
-			</div>
-			<div class="box2">
-				<div class="main">
-					<h2>Data Visualizations</h2>
-					<p>We specializing in telling stories and solve problems using appropriate data visualizations.</p>
-					<p>From articles and books to projects and lectures, we have a deep understanding of how to get the right message across.</p>
-				</div>
-				<div class="call-out"><a href="https://gumroad.com/l/ArWZ"><span>Buy eBooks set for $25</span></a></div>
-			</div>
-			
-			<div class="box2">
-				<div class="thumbnail" style="background: #f47813 url('images/book-fss-dwd.png') 50% 0% no-repeat; min-height: 180px"><a href="https://gumroad.com/l/ArWZ">Designing with Data</a></div>
-				<div class="thumbnail" style="background-color: #000; max-height: 320px"><iframe src="http://player.vimeo.com/video/27483938" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-			</div>
-		</div>
-
-
-		<div class="row">
-			
-			<div class="box2">
-				<div class="thumbnail" style="outline: 1px solid #dedede; background: transparent url('required/wp-content/uploads/2014/03/Meyrin.png') 50% 50% no-repeat; min-height: 180px"><a href="required/2014/03/26/meyrin-cern-terminal-font/index.html">Meyrin: CERN Terminal Font</a></div>
-				<div class="sub">
-						
-						<p>Symbol fonts to get beautiful vector icons into your webpages. These can be styled fonts or icons like batteries.</p>
-					</div>
-				<div class="call-out"><a href="required/2014/03/26/meyrin-cern-terminal-font/index.html"><span>Meyrin: CERN Terminal Font</span></a></div>
-			</div>
-			<div class="box2 ">
-				<div class="main stretched"><img src="images/battery-font.jpg" width="100%"/></div>
-				
-			</div>
-			
-			<div class="box1">
-				<div class="feature"><a href="http://pul.ly/b/103892"><img alt="Creating Symbol Fonts book" src="images/symbol-font-book.jpg" /></a></div>
-				<div class="call-out"><a href="https://gumroad.com/l/FpfR"><span>Buy Online: $3</span></a></div>
 			</div>
 		</div>
 		
-
-				
+		<div class="row center">
+			<img class="logos" src="images/logos-marel.png" alt="Marel" />
+			<img class="logos" src="images/logos-rvk.png" alt="City of Reykjavik" />
+			<img class="logos" src="images/logos-quizup.png" alt="QuizUp" />
+		</div>
+		
 		<div class="row section">
+			<div class="box2">
+				<div class="main">
+					<h2>Week #217-218-219</h2><p>A triple weeknote this week. Our time has been broken-up by quite a few public holidays recently and a deep focus with a short list of customers.</p>
+			<form method="get" id="searchform" action="required/index.html" style="text-align: center; margin-top: 50px">
+							<div><input type="text" value="" name="s" id="s"><input type="submit" id="searchsubmit" value="Search"></div>
+			</form></div><div class="call-out"><a href="required/2015/04/24/week-217-218-219/index.html">
+					
 
-						
+<span>Read More</span></a></div>					
+			</div>
+			<div class="box2">
+				<div class="feature stretched" style="outline: 1px solid #ccc; background: #fff url('images/warhol.jpg') 50% 0 no-repeat;">
+				</div>
+			</div>
+			<div class="box2">
+				<div class="main">
+					<h2>Recent Articles</h2>
+					<ul style="max-width: 280px">
+						<li><a href="required/2015/03/11/schelling-points/index.html"><span style="border-left: 10px solid #b3c219;">Schelling Points</span></a></li><li><a href="required/2015/01/19/02014-annual-report/index.html"><span style="border-left: 10px solid #f63433;">02014 Annual Report</span></a></li><li><a href="required/2015/01/01/omnibus-02014/index.html"><span style="border-left: 10px solid #a09de9;">Omnibus 02014</span></a></li><li><a href="required/2014/09/30/availability-forecast/index.html"><span style="border-left: 10px solid #21ad44;">Availability Forecast</span></a></li><li><a href="required/2014/08/27/paper-calendars/index.html"><span style="border-left: 10px solid #9322db;">Paper Calendars</span></a></li><li><a href="required/2014/08/12/second-generation-usernames/index.html"><span style="border-left: 10px solid #9af81f;">Second Generation Usernames</span></a></li><li><a href="required/2014/07/14/world-cup-visualization/index.html"><span style="border-left: 10px solid #2c2b3e;">2014 World Cup Visualization</span></a></li><li><a href="required/2014/07/07/new-york-city-ny-usa/index.html"><span style="border-left: 10px solid #be0b31;">New York City, NY, USA</span></a></li><li><a href="required/2014/07/01/lisbon-portugal/index.html"><span style="border-left: 10px solid #1b88bd;">Lisbon, Portugal</span></a></li>						</ul>
+
+				</div>
+				<div class="call-out readmore"><a href="required/index.html"><span>Full Archives</span></a></div>
+			</div>
+			
+			<div class="box2">
+				<div class="main">
+					<h2>Weeknotes</h2>
+					<p>The company is <strong>219 weeks old</strong>. We try to have a small weekly update of what we're up too. Here are the most recent:</p>
+					<ul style="clear: both;" id="weeknotes">
+						<li><a href="required/2015/04/24/week-217-218-219/index.html"><span style="border-left: 10px solid #c4f082;">Week #217-218-219</span></a></li><li><a href="required/2015/04/05/week-215-216/index.html"><span style="border-left: 10px solid #56fe80;">Week #215-216</span></a></li><li><a href="required/2015/03/20/week-213-214/index.html"><span style="border-left: 10px solid #322540;">Week #213-214</span></a></li><li><a href="required/2015/03/06/week-211-212/index.html"><span style="border-left: 10px solid #236e90;">Week #211-212</span></a></li><li><a href="required/2015/02/21/week-209-210/index.html"><span style="border-left: 10px solid #7b3539;">Week #209-210</span></a></li>						</ul>
+				</div>
+				<div class="call-out readmore"><a href="required/category/weeknotes.9"><span>View all weeknotes</span></a></div>
+			</div>
+		</div>
+		
+		
+		
+		<div class="row">
 			<div class="box1">
 				<div class="thumbnail" style="outline: 1px solid #ccc; background: #fff url('required/wp-content/uploads/2010/12/hls-world.png') 50% 50% no-repeat; "><a href="required/2010/12/13/hls-world-map/index.html"></a></div>
 				<div class="sub">
@@ -210,7 +198,7 @@
 				<div class="call-out"><a href="required/2010/12/13/hls-world-map/index.html"><span>Read More</span></a></div>
 			</div>
 			<div class="box1" >
-				<div class="main stretched">
+				<div class="">
 					<h2>Categories</h2>
 					<ul style="clear: both;" id="categories">
 						
@@ -236,14 +224,59 @@
 						href="required/category/travel/index.html"><span style="border-left: 10px solid #1fb0f9;">Travel</span></a></li><li><a 
 						href="required/category/tutorial/index.html"><span style="border-left: 10px solid #368fe7;">Tutorial</span></a></li><li><a 
 						href="required/category/visualizations/index.html"><span style="border-left: 10px solid #b10ac6;">Visualizations</span></a></li><li><a 
-						href="required/category/weeknotes.8"><span style="border-left: 10px solid #138567;">Weeknotes</span></a></li><li><a 
+						href="required/category/weeknotes.9"><span style="border-left: 10px solid #138567;">Weeknotes</span></a></li><li><a 
 						href="required/category/youre-doing-it-wrong/index.html"><span style="border-left: 10px solid #96e20d;">You're doing it wrong</span></a></li>						
 						</ul>
 				</div>
 			</div>
 
 		</div>
+
+
+
+
+		<!-- Designing with Data -->
+		<div class="row section">
+			<div class="box2">
+				<div class="main">
+					<h2>Data Visualizations</h2>
+					<p>We specializing in telling stories and solve problems using appropriate data visualizations.</p>
+					<p>From articles and books to projects and lectures, we have a deep understanding of how to get the right message across.</p>
+				</div>
+				<div class="call-out"><a href="https://gumroad.com/l/ArWZ"><span>Buy eBooks set for $19</span></a></div>
+			</div>
+			
+			<div class="box2">
+				<div class="thumbnail" style="background: #f47813 url('images/book-fss-dwd.png') 50% 0% no-repeat; min-height: 180px"><a href="https://gumroad.com/l/ArWZ">Designing with Data</a></div>
+				<div class="thumbnail" style="background-color: #000; max-height: 320px"><iframe width="100%" height="100%" src="http://www.youtube.com/embed/z5MY119rWYo" frameborder="0" allowfullscreen></iframe></div>
+			</div>
+			<div class="box1">
+				<div class="feature stretched"><iframe src="http://player.vimeo.com/video/109208423" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+			</div>
+		</div>
 		
+		<!-- Designing with Data -->
+		<div class="row section">
+			<div class="box2">
+				<div class="thumbnail" style="outline: 1px solid #ccc; background: #ccc url('images/analog-xmas-topo.png') 100% -3px no-repeat; min-height: 180px"></div>
+				<div class="thumbnail" style="background: #000 url('images/analog-jacket.jpg') 0% 0% no-repeat; max-height: 320px"></div>
+			</div>
+			
+			<div class="box2">
+				<div class="main">
+					<h2>ANALOG.is</h2>
+					<p>Since 02012 we have been making high-quality, locally produced, letter pressed notebooks. The LatLon series focuses on Islands from around the world. Featuring six unique places, we used the topographic lines to create a tactile feel.</p>
+				</div>
+				<div class="call-out"><a href="http://analog.is"><span>View Analog.is</span></a></div>
+			</div>
+			
+
+			<div class="box1">
+				<div class="feature stretched">
+					<a href="http://analog.is"><img style="outline: 1px solid #ccc;" alt="ANALOG island series notebooks" src="images/analog-island-notebooks.jpg" /></a>
+				</div>
+			</div>
+		</div>
 		
 		<div class="row section">
 	<h1>Stay in Touch</h1>
@@ -263,11 +296,11 @@
 	</div>
 	
 	<div class="box2">
-		<div class="thumbnail" style="min-height: 100px;  background: transparent url('images/contest-map.jpg')"><a href="contest.2"><span>Quarterly Contest</span></a></div>
+		<div class="thumbnail" style="min-height: 100px;  background: transparent url('images/contest-map.jpg')"><a href="contest.3"><span>Quarterly Contest</span></a></div>
 		<div class="sub">
 			<p>Our <strong>quarterly competition</strong> gives-away prototypes and products. Using the Great Circle Mapper, we'll randomly select a winner.</p>
 		</div>
-		<div class="call-out"><a href="contest.2"><span>Quarterly Contest</span></a></div>
+		<div class="call-out"><a href="contest.3"><span>Quarterly Contest</span></a></div>
 	</div>
 
 	
@@ -293,7 +326,7 @@
 	
 </div>		
 		
-
+		
 		<script type="text/javascript">
 		var gaJsHost = (("https:" == document.location.protocol) ? 
 		"https://ssl." : "http://www.");
