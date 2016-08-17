@@ -79,13 +79,13 @@
 </script>
 
 <script src='https://www.google.com/recaptcha/api.js' async defer></script>
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
     // Still including jQuery to support http://downloads.mailchimp.com/js/jquery.mailcheck.min.js which is included in forms.
     google.load("jquery", "1.7.1");
 </script>
 
-        <script type="text/javascript" src="http://downloads.mailchimp.com/js/mailcheck.min.js"></script>
+        <script type="text/javascript" src="http://optional.us2.list-manage1.com/js/mailcheck.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
         try {
@@ -99,8 +99,8 @@
 
         var secondLevelDomains = ['yahoo', 'hotmail', 'mail', 'live', 'outlook', 'gmx'];
 
-        var topLevelDomains = ['com', 'com.au', 'com.tw', 'ca', 'co.nz', 'co.uk', 'de',
-            'fr', 'it', 'ru', 'net', 'org', 'edu', 'gov', 'jp', 'nl', 'kr', 'se', 'eu',
+        var topLevelDomains = ['com', 'com.au', 'com.tw', 'ca', 'co', 'co.nz', 'co.uk', 'de',
+            'fl', 'fr', 'it', 'ru', 'net', 'org', 'edu', 'gov', 'jp', 'nl', 'kr', 'se', 'eu',
             'ie', 'co.il', 'us', 'at', 'be', 'dk', 'hk', 'es', 'gr', 'ch', 'no', 'cz',
             'in', 'net', 'net.au', 'info', 'biz', 'mil', 'co.jp', 'sg', 'hu'];
 
@@ -397,7 +397,9 @@ html[dir="rtl"] .dijitPlaceHolder {left:auto; right:10px;}
     box-sizing: border-box;
 }
 
-.hidden-from-view { left: -5000px; position: absolute; }
+.field-shift {
+    left: -9999px; position: absolute;
+}
 
 
 
@@ -736,6 +738,7 @@ html[dir="rtl"] .dijitPlaceHolder {left:auto; right:10px;}
 		}
 		h1{
 			font-size:28px;
+			line-height:110%;
 			margin-bottom:30px;
 			margin-top:0;
 			padding:0;
@@ -854,63 +857,74 @@ html[dir="rtl"] .dijitPlaceHolder {left:auto; right:10px;}
 
 
 
-<form action="http://optional.us2.list-manage1.com/subscribe/post" method="POST">
-<input type="hidden" name="u" value="980d7e7c822ddb46c6693388d">
-<input type="hidden" name="id" value="4b11c60bdb">
-
-
-<div id="mergeTable" class="mergeTable">
-
-
-<div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
-<label for="MERGE0">Email Address <span class="req asterisk">*</span></label>
-<div class="field-group">
-    <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
+<form action="https://optional.us2.list-manage.com/subscribe/post" method="POST">
+    <input type="hidden" name="u" value="980d7e7c822ddb46c6693388d">
+    <input type="hidden" name="id" value="4b11c60bdb">
     
+
+    <!-- people should not fill these in and expect good things -->
+    <div class="field-shift" aria-label="Please leave the following three fields empty">
+        <label for="b_name">Name: </label>
+        <input type="text" name="b_name" tabindex="-1" value="" placeholder="Freddie" id="b_name">
+
+        <label for="b_email">Email: </label>
+        <input type="email" name="b_email" tabindex="-1" value="" placeholder="youremail@gmail.com" id="b_email">
+
+        <label for="b_comment">Comment: </label>
+        <textarea name="b_comment" tabindex="-1" placeholder="Please comment" id="b_comment"></textarea>
+    </div>
+
+    <div id="mergeTable" class="mergeTable">
+        
+        
+        <div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
+            <label for="MERGE0">Email Address <span class="req asterisk">*</span></label>
+            <div class="field-group">
+                <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
+                
+                
+            </div>
+            
+        </div>
+        
+        
+        
+        <div class="mergeRow dojoDndItem mergeRow-text" id="mergeRow-1">
+            <label for="MERGE1">First Name</label>
+            <div class="field-group">
+                <input type="text" name="MERGE1" id="MERGE1" size="25" value="">
+                
+                
+            </div>
+            
+        </div>
+        
+        
+        
+        <div class="mergeRow dojoDndItem mergeRow-text" id="mergeRow-2">
+            <label for="MERGE2">Last Name</label>
+            <div class="field-group">
+                <input type="text" name="MERGE2" id="MERGE2" size="25" value="">
+                
+                
+            </div>
+            
+        </div>
+        
+        
+
+
+        
+    </div>
+
     
-</div>
 
-</div>
-
-
-
-<div class="mergeRow dojoDndItem mergeRow-text" id="mergeRow-1">
-<label for="MERGE1">First Name</label>
-<div class="field-group">
-    <input type="text" name="MERGE1" id="MERGE1" size="25" value="">
-    
-    
-</div>
-
-</div>
-
-
-
-<div class="mergeRow dojoDndItem mergeRow-text" id="mergeRow-2">
-<label for="MERGE2">Last Name</label>
-<div class="field-group">
-    <input type="text" name="MERGE2" id="MERGE2" size="25" value="">
-    
-    
-</div>
-
-</div>
-
-
-
-
-
-</div>
-
-
-<!-- real people should not fill this in and expect good things -->
-<div class="hidden-from-view"><input type="text" name="b_980d7e7c822ddb46c6693388d_4b11c60bdb" tabindex="-1" value=""></div>
-
-<div class="submit_container clear">
-<input type="submit" class="button" name="submit" value="Subscribe to list">
-</div>
+    <div class="submit_container clear">
+        <input type="submit" class="button" name="submit" value="Subscribe to list">
+    </div>
+    <input type="hidden" name="ht" value="64e70e83ed4d6deeba39d7315db8a7be26898a08:MTQ3MTQyNzEyNS4wNzg4">
+    <input type="hidden" name="mc_signupsource" value="hosted">
 </form>
-
 
 
 		    </div>

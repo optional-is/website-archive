@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Red Days &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" />
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="http://optional.is/required/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@optionalBot">
+<meta name="twitter:title" content="Red Days">
+<meta name="twitter:description" content="We all look forward to the next holiday, now this is an app to help you count the days left until you can relax.">
+<meta name="twitter:creator" content="@optionalBot">
+<meta name="twitter:domain" content="http://optional.is">
+</head>
+<body>
+<div id="header">
+<h1><a href="../../../../index.html">(optional.is)</a></h1>
+</div>
+			
+		<div class="post-3785 post type-post status-publish format-standard hentry category-applications category-experiments category-temporality tag-app tag-apple tag-holidays tag-ios tag-iphone tag-programming tag-red-days tag-swift" id="post-3785">
+			<h2 style="border-bottom: 2px solid #ad2128">Red Days</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2016-07-05T13:31:41+00:00">Tuesday, July 5th, 02016 at 13:31 UTC</abbr></div>
+				<p><a href="https://itunes.apple.com/us/app/red-days/id1128247890?mt=8"><img style="float: left; padding-right: 15px;" src="../../../../wp-content/uploads/2016/07/RedDaysIcon.png" alt="RedDaysIcon" width="210" height="211" /></a>Holidays are always a pain when you have a distributed team from lots of different countries and backgrounds. It is certainly something we&#8217;ve run into. Our simple solution was a count-down to the next public holiday or &#8220;Red Day&#8221;. These are officially recognized public holidays in various counties; Iceland, US, UK and Canada.</p>
+<p>At a quick glance we can see how many days it is until there is a public holiday.</p>
+<p><a href="https://itunes.apple.com/us/app/red-days/id1128247890?mt=8">Red Days</a> is available now for the iPhone and Apple Watch. You can select the countries you are interested in and get a count-down of days until you can relax.</p>
+<div class="banner"><a href="https://itunes.apple.com/us/app/red-days/id1128247890?mt=8"><img class="alignnone size-full wp-image-3791" src="../../../../wp-content/uploads/2016/07/appstore.png" alt="appstore" width="135" height="40" /></a></div>
+<h2><a href="https://itunes.apple.com/us/app/red-days/id1128247890?mt=8"><img class="alignnone size-full wp-image-3798" src="../../../../wp-content/uploads/2016/07/screen322x572.jpeg" alt="Red Days App" width="322" height="572" srcset="http://optional.is/required/wp-content/uploads/2016/07/screen322x572.jpeg 322w, http://optional.is/required/wp-content/uploads/2016/07/screen322x572-169x300.jpeg 169w" sizes="(max-width: 322px) 100vw, 322px" /></a> <a href="https://itunes.apple.com/us/app/red-days/id1128247890?mt=8"><img class="alignnone size-full wp-image-3797" src="../../../../wp-content/uploads/2016/07/screen322x572-1.jpeg" alt="Red Days Settings" width="322" height="572" srcset="http://optional.is/required/wp-content/uploads/2016/07/screen322x572-1.jpeg 322w, http://optional.is/required/wp-content/uploads/2016/07/screen322x572-1-169x300.jpeg 169w" sizes="(max-width: 322px) 100vw, 322px" /></a></h2>
+<h2>Apologies for the app</h2>
+<p>We know that this isn&#8217;t the most in-depth app every created. It scratched an itch we had and because of that, we&#8217;ll certainly keep it up-to-date. But you are probably wondering, this is just a list, why not make it an .ics calendar file or a webpage? Why spend the time to make it a compiled app that goes through a centralised authority?</p>
+<p>Good question! We&#8217;ve been trying to expand our knowledge and learning swift has been part of that. To help us learn, we&#8217;ve been putting it to good use on things we want to see exist and Red Days is an early attempt at this. We are not big android users, so we&#8217;re not learning how to develop for that platform, but we are huge fans of the web. And we apologies that this is an app and not just an offline website.</p>
+<p>We did start this off as an offline website. <a href="../../../../../calendars/red/index.html">You can view Red Days online and save it to your phone&#8217;s home screen</a>. That way no matter what platform you are on, you can see the holidays. Right now the list is only Icelandic holidays, so unless you live here or are a big fan of the countries, it isn&#8217;t going to be that useful to you. No worries, we&#8217;ve open sources all the HTML and Javascript code for you to copy, update and host yourself. Just <a href="https://github.com/optional-is/Red-Days">clone the Red Days git repo</a>, change the dates in the json file to your country&#8217;s holidays and localise all of the text you need.</p>
+<h3>Pros &amp; Cons</h3>
+<p>There are lots of interesting things you get by making this a webpage over a native app. Firstly, I can update the webpage &#8220;app icon&#8221; dynamically. In the repo, you&#8217;ll see that the image is actually a PHP file which compiles the next holiday date and renders a new image. The phone will try to update it&#8217;s cache every once and a while and when it does, it will get the next holiday date as the &#8220;app icon&#8221;. This is something only a few Apple apps can do.</p>
+<p>The other major advantage of the web is that it is pretty much write-once run anywhere. Any device that has a browser and supports html manifests will be able to use this &#8220;app&#8221;. There is no review process or gatekeepers.</p>
+<div class="banner"><a href="https://itunes.apple.com/us/app/red-days/id1128247890?mt=8"><img class="alignnone size-full wp-image-3796" src="../../../../wp-content/uploads/2016/07/screen322x572-2-e1467724871642.jpeg" alt="Red Days in Notification Center" width="321" height="277" srcset="http://optional.is/required/wp-content/uploads/2016/07/screen322x572-2-e1467724871642.jpeg 321w, http://optional.is/required/wp-content/uploads/2016/07/screen322x572-2-e1467724871642-300x259.jpeg 300w" sizes="(max-width: 321px) 100vw, 321px" /></a></div>
+<p>The major disadvantage for most phones is that the web is NOT a first-class citizen. As we developed the <a href="https://itunes.apple.com/us/app/red-days/id1128247890?ls=1&amp;mt=8">Red Days app</a> for iOS, we wanted to not just replicate the webpage, but actually learn more about the features of the phone that are not available to the browser. On the phone, this consisted of the Notification Center. It isn&#8217;t possible to get a webpage to be running in there, that is app-land only. So we wrote an extension which allows for Red Days to be there. You can swipe open the notification centre and quickly see the next public holiday. With iOS10, this should also be available when you Force Press the app icon, again, something the web page can&#8217;t do. (Although if the App Icon is the next holiday date, the Force Press is redundant)</p>
+<div class="banner"><a href="https://itunes.apple.com/us/app/red-days/id1128247890?mt=8"><img class="alignnone size-full wp-image-3793" src="../../../../wp-content/uploads/2016/07/screen390x390-1.jpeg" alt="Apple Watch Complications" width="312" height="390" srcset="http://optional.is/required/wp-content/uploads/2016/07/screen390x390-1.jpeg 312w, http://optional.is/required/wp-content/uploads/2016/07/screen390x390-1-240x300.jpeg 240w" sizes="(max-width: 312px) 100vw, 312px" /></a> <a href="https://itunes.apple.com/us/app/red-days/id1128247890?mt=8"><img class="alignnone size-full wp-image-3794" src="../../../../wp-content/uploads/2016/07/screen390x390.jpeg" alt="Red Days on Apple Watch" width="312" height="390" srcset="http://optional.is/required/wp-content/uploads/2016/07/screen390x390.jpeg 312w, http://optional.is/required/wp-content/uploads/2016/07/screen390x390-240x300.jpeg 240w" sizes="(max-width: 312px) 100vw, 312px" /></a></div>
+<p>The other aspect which fascinates us is the Apple Watch. It hasn&#8217;t gotten as much traction as some have hoped. The interesting thing about the watch is that it is Internet Connected, but there is no Web Browser. That means you need to create your own artisanal browsers to fetch your data. For us, holidays are computable locally, so there is no internet connection needed, but there is also no browser to render the HTML which meant our own app for the Apple Watch. This is just a list of holidays in chronological order, something that could be done easily if there were access to a browser. The more interesting thing is the complications. The small apps that run on the watch face itself. Now at a quick glance you can see how many days until the next day off. No need to launch any apps, it is right there next to the date and time. This is something that can&#8217;t currently be done. Not because it isn&#8217;t technically possible, but just because the web isn&#8217;t a first class citizen on the watch.</p>
+<p>We do apologise for making this an app, you can always view it as a webpage, fork it, update it and make improvements that scratch your itches, but for us we learnt about all the details where the Web isn&#8217;t available (yet) and we&#8217;re using that knowledge to inform future decisions.</p>
+<p>In the mean-time, there are a few holidays coming up that we need to plan for, so excuse us while we go enjoy the sun.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/applications/index.html" title="View all articles in Applications" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1ddf33">Applications</a>, <a href="../../../../category/experiments/index.html" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a>, <a href="../../../../category/temporality/index.html" title="View all articles in Temporality" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #504c77">Temporality</a></p><p><strong>Tags:</strong> <a href="../../../../tag/app/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d2a57d">app</a>, <a href="../../../../tag/apple/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1f3870">apple</a>, <a href="../../../../tag/holidays/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d016b2">holidays</a>, <a href="../../../../tag/ios/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1bdf60">iOS</a>, <a href="../../../../tag/iphone/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #867e57">iPhone</a>, <a href="../../../../tag/programming/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7e73d0">programming</a>, <a href="../../../../tag/red-days/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6f5a0e">red days</a>, <a href="../../../../tag/swift/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #818056">swift</a></p>			  </div>
+			
+		<div class="navigation">
+			<div class="prev"><div class="time">25 March 02016</div><a href="../../../03/25/week-266-267/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a6d6e7">&laquo; Week #266-267</a></div>
+			<div class="next"><div class="time">29 July 02016</div><a href="../../29/2000-days/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #080095">2000 Days &raquo;</a></div>
+		</div>
+
+			</div>
+			<!-- call out footer -->
+			<div class="callout-footer" style="padding-top: 1em; border-top: 2px solid #ad2128; border-bottom: 2px solid #ad2128; font-size: 120%">
+			<p>You've been reading optional.is/required/ a blog about technology, culture, paper and other interesting topics, since 02009. The easiest way to stay current is to grab the <a href="http://feeds2.feedburner.com/optional?format=xml">RSS Feed</a>.</p>
+
+			<p><a href="../../../../../newsletter/index.html">Subscribe to the quarterly mailing list</a> to receive interesting stories, links and updates.</p>
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+  <div style="float: left; font-size: 16px;">
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+</div> 
+<a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.152 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2016-08-17 09:45:13 -->
+
+<!-- super cache -->
