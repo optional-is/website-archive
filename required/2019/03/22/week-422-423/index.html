@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Week #422-423 &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="https://optional.is/required/wp-content/themes/optional/style.css" type="text/css" media="all" />
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="https://optional.is/required/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@optionalBot">
+<meta name="twitter:title" content="Week #422-423">
+<meta name="twitter:description" content="A short double weeknote to get us back on track. The spring equinox has passed, but no one told the weather!">
+<meta name="twitter:creator" content="@optionalBot">
+<meta name="twitter:domain" content="http://optional.is">
+</head>
+<body>
+<div id="header">
+<h1><a href="https://optional.is/required/">(optional.is)</a></h1>
+</div>
+			
+		<div class="post-4091 post type-post status-publish format-standard hentry category-briefs category-weeknotes tag-bwr tag-django-2 tag-ios tag-localization tag-measles tag-migration tag-python-3 tag-surveys tag-translations" id="post-4091">
+			<h2 style="border-bottom: 2px solid #580378">Week #422-423</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2019-03-22T15:51:45+00:00">Friday, March 22nd, 02019 at 15:51 UTC</abbr></div>
+				
+<p>This is a double weeknote. Last week got away from us and we fell off the wagon. But we&#8217;ve recovered and now we&#8217;re back to writing again.</p>
+
+
+
+<p>Somewhere along the way, we got a heads-up that Python 2.7 is being end-of-life&#8217;d next year. Now, things won&#8217;t just stop working, but there is no plan update or fix bugs. That means it&#8217;s time to migrate to Python 3 on all our tools. We have plenty of time, but since we are just starting a new survey project, it was probably best to simply use Python 3 and Django 2 since that is the logical way forward anyway.</p>
+
+
+
+<p>So far, it hasn&#8217;t been too bad. Not many Python related changes, mostly Django changes in some of our common accounts libraries. The good news is that once we have updated one app, it is easy to use it across all our others.</p>
+
+
+
+<p>We also launched our new Staff Survey this week. Normally, we start at the beginning of the month, but it took a bit longer to get all the lists sorted out. This is a new survey and there are a lot of new things all happening at once, so we&#8217;re all learning. It is now underway and going really well. It is always stressful to hit the SEND button on thousands of emails and SMSes.</p>
+
+
+
+<p>We also continued on our internal iOS project called <em>BWR</em>. It is shaping-up really well. The major parts are all in place, but the devil is always in the details. We got a few friends testing it out and we&#8217;ll write more about it in the near future.</p>
+
+
+
+<h1>Week 423</h1>
+
+
+
+<p><em>BWR</em> and <em>Triagemail </em>got a bunch of updates this week. It has been fun to get back into iOS programming. While we love the Web and HTML, it has been great to explore some of the places the Web isn&#8217;t allowed (yet). One thing we make a lot of use of in our Apps is the &#8220;action button&#8221;. That is usually the button with the arrow coming out of the box. It opens up a sharing pane so you can pass the text to other apps. We make use of this in Text Stats. It used to be the domain of installed apps, but now <a href="https://wicg.github.io/web-share/">Web Share API</a> is becoming more common and we can do this in our Web Apps.</p>
+
+
+
+<p>So we have been exploring the built-in OS Spotlight search. Your app can contribute items to be indexed and returned in search queries. These items can deep link back into your app. For instance, if you made an email app, it could index all the messages and anyone at the OS level could search and get messages returned which deep link into your app with that message displayed. (For now) this is only available to local apps, but the data can be in sync with online data too.</p>
+
+
+
+<h2>Survey tools and Translations</h2>
+
+
+
+<p>We continued to work on one of our survey tools. We have two main tools right now. One for surveys with tickets issued to participants and another which is newer and is designed to be taken anonymously. There are big differences in the logic and reliability of the results. We&#8217;ve been running and iterating on the ticket based system for years now, so that is pretty well hardened. The anonymous system reuses a lot of code and logic, but serves such a different purpose, audience and customer, that we are still working on all the features.</p>
+
+
+
+<p>This week, we continued to make some administrative tools and have been working on the English translations. There will be a test run in May in Norway and Italy, so we are getting all the English in now for everyone to test and it if all goes well, we&#8217;ll be adding a few more languages too. </p>
+
+
+
+<p>Every time we do, it come with interesting localisation issues. Right now there is a question about which municipality do you live in. It is  dropdown of Icelandic regions. So when we translate this to English, we leave all the regions alone&#8230; now the same question is asked in Norway, but in both Norwegian and English, it needs to be their list of regions. So we&#8217;re doing some backend database juggling to try and relate the question to an answer cell, but allow multiple different questions save to that same cell. Then we can have localised questions, but keep a single place to store the answers. </p>
+
+
+
+<p>We have it all drawn out, but it means some data reconfigurations. We&#8217;re all learning as we go since the requirements when we started have certainly changed, and will change again before this is done. The task is not to over-engineer things, but at the same time, don&#8217;t paint yourself into a corner if you know something might be on the horizon.</p>
+
+
+
+<h2>Measles shots &#x1f489;</h2>
+
+
+
+<p>There has been a bit of a measles out-break/scare in Iceland. 11 or so people have been diagnosed with measles. They know the source and many of the people infected have actually been vaccinated. They either fall into the tiny percentage that can get it even though they were vaccinated and/or it turns out they were only vaccinated once. There seems to have been some shift of when people in Iceland got the second booster shot and a few years of people fell through the cracks. So today and next friday many in the office are heading out in the afternoon so they and the family can get that shot if needed.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../../../../tag/bwr/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e42ec2">BWR</a>, <a href="../../../../tag/django-2/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #320217">django 2</a>, <a href="http://optional.is/required/tag/ios/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1bdf60">iOS</a>, <a href="../../../../tag/localization/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0662a7">localization</a>, <a href="../../../../tag/measles/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3cb0ab">measles</a>, <a href="../../../../tag/migration/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b439f9">migration</a>, <a href="../../../../tag/python-3/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #864707">python 3</a>, <a href="http://optional.is/required/tag/surveys/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #feae57">surveys</a>, <a href="../../../../tag/translations/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2ed18f">translations</a></p>			  </div>
+			
+		<div class="navigation">
+			<div class="prev"><div class="time">08 March 02019</div><a href="../../08/week-421/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c2b8f8">&laquo; Week #421</a></div>
+			<div class="next"><div class="time">05 April 02019</div><a href="../../../04/05/week-424-425/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #338a21">Week #424-425 &raquo;</a></div>
+		</div>
+
+			</div>
+			<!-- call out footer -->
+			<div class="callout-footer" style="padding-top: 1em; border-top: 2px solid #580378; border-bottom: 2px solid #580378; font-size: 120%">
+			<p>You've been reading optional.is/required/ a blog about technology, culture, paper and other interesting topics, since 02009. The easiest way to stay current is to grab the <a href="http://feeds2.feedburner.com/optional?format=xml">RSS Feed</a>.</p>
+
+			<p><a href="../../../../../newsletter/index.html">Subscribe to the quarterly mailing list</a> to receive interesting stories, links and updates.</p>
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+  <div style="float: left; font-size: 16px;">
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+</div> 
+<a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.243 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2019-10-28 08:54:54 -->
+
+<!-- super cache -->

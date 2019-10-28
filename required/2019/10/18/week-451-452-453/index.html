@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Week #451, 452, 453 &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="https://optional.is/required/wp-content/themes/optional/style.css" type="text/css" media="all" />
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="https://optional.is/required/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@optionalBot">
+<meta name="twitter:title" content="Week #451, 452, 453">
+<meta name="twitter:description" content="A triple weeknote as we play catch-up on a few big changes.">
+<meta name="twitter:creator" content="@optionalBot">
+<meta name="twitter:domain" content="http://optional.is">
+</head>
+<body>
+<div id="header">
+<h1><a href="https://optional.is/required/">(optional.is)</a></h1>
+</div>
+			
+		<div class="post-4236 post type-post status-publish format-standard hentry category-briefs category-weeknotes" id="post-4236">
+			<h2 style="border-bottom: 2px solid #bc4a61">Week #451, 452, 453</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2019-10-18T11:11:16+00:00">Friday, October 18th, 02019 at 11:11 UTC</abbr></div>
+				
+<p>These last three weeks we have been transitioning over to a big new project. The survey work is mostly self-sustaining and running smoothly, so we&#8217;ve negotiated a four month contract on a new project. That will last us through to Feb 2020. It keeps us from hunting for work right at the start of the new year, but this is one of those projects that will continue to grow and grow if it is successful.</p>
+
+
+
+<p>This project is still in stealth-mode, but it has been a lot of fun to work on so far. With all our capabilities, we&#8217;ve managed to go from nothing to a working website (front and back-end programming), a web-based JSON API, and an accompanying iOS app which dog-foods the API and reads the data from the website. Nothing is consumer ready, but as a proof-of-concept, we managed to get a lot done, part-time, in three weeks. It is already shown itself to be very useful and we&#8217;ll continue to expand what the website can do and how it interacts (mostly via push notifications) to iOS and later Android devices.</p>
+
+
+
+<p>Since this is still in stealth-mode, we can&#8217;t talk too much about the specifics but we can show-off a few nuggets. In this app, there are a lot of profiles which in turn have profile images. When a customer changes their avatar we&#8217;re uploading these images to Amazon S3. Before they begin to customise these profiles, we needed a default avatar image.</p>
+
+
+
+<figure><img src="../../../../wp-content/uploads/2019/10/default-avatars.png" alt="Sample Avatars" style="width: 100%"/><figcaption>Default Avatar Images named 0-f (0-16 in hex)</figcaption></figure>
+
+
+
+<p>To make it a bit more fun and interesting we found some airplane silhouettes and made 16 icons, naming them 0-9a-f. Now each time there is a new sign-up or account that needs a profile image, we work some mathematical magic. This is a snippet of python code, but it is easily translatable into other languages.</p>
+
+
+
+<pre class="wp-block-preformatted">hashlib.sha1(username).hexdigest()[0:1]+'.png'</pre>
+
+
+
+<p>Using the username as input we run that through a sha1 hash function. This gives us a really long hexadecimal string. We then only take the first character of that. It will be 0-9a-f only and we add &#8216;.png&#8217; to the end of that to randomly select a default avatar image.</p>
+
+
+
+<pre class="wp-block-preformatted">random.choice(['0','1','2','3','4','5','6','7','8',9','a','b','c','d','e','f'])</pre>
+
+
+
+<p>You could also simply choose a random file name from a list if you wanted more or less than 16 variations. The first code example is repeatable, the same username will produce the same image, whereas the second is random.</p>
+
+
+
+<p>This may or may not make it into the final product, but it is a really simple way to create a bit more variety for your default avatar images.</p>
+
+
+
+<h2>Invoices</h2>
+
+
+
+<p>We currently have <s>two</s> one open unpaid invoices. <s>One is in processing, but needs approval from someone who&#8217;s been travelling and busy. Even the most well intentioned companies who usually pay on time have some hiccups which are out of your control.</s> (Paid right before publishing)</p>
+
+
+
+<p>The other is only for a few hours, which we already know we will add 1-2 more too. So we are waiting for the changes, implement those changes, then send a final invoice. It is more sane than sending a second invoice for 1 hour of work.</p>
+
+
+
+<p>This month we are moving over to a retainer for this stealth project. The hope is to invoice for October before this month is over so we can get into a good payment schedule rather than get the October invoice processed in November and paid in December.</p>
+
+
+
+<p>That&#8217;s the CashFlow Life&#x2122;</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong</p>			  </div>
+			
+		<div class="navigation">
+			<div class="prev"><div class="time">15 October 02019</div><a href="../../15/material-poco-apollo-halldor-eldjarn/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d6ed14">&laquo; Material: Poco Apollo - Halldór Eldjárn</a></div>
+			<div class="next"><div class="time">22 October 02019</div><a href="../../22/material-fine-art-ingredient-of-the-web-goddur/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6873e3">Material: Fine art ingredient of the web - Goddur &raquo;</a></div>
+		</div>
+
+			</div>
+			<!-- call out footer -->
+			<div class="callout-footer" style="padding-top: 1em; border-top: 2px solid #bc4a61; border-bottom: 2px solid #bc4a61; font-size: 120%">
+			<p>You've been reading optional.is/required/ a blog about technology, culture, paper and other interesting topics, since 02009. The easiest way to stay current is to grab the <a href="http://feeds2.feedburner.com/optional?format=xml">RSS Feed</a>.</p>
+
+			<p><a href="../../../../../newsletter/index.html">Subscribe to the quarterly mailing list</a> to receive interesting stories, links and updates.</p>
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+  <div style="float: left; font-size: 16px;">
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+</div> 
+<a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.170 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2019-10-28 08:52:39 -->
+
+<!-- super cache -->

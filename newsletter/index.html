@@ -8,8 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="description" content="(optional.is) List Email Forms">
         <meta name="keywords" content="(optional.is) List">
-        <script src="http://twemoji.maxcdn.com/twemoji.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.8/dojo/dojo.js"></script>
+        <script src="https://twemoji.maxcdn.com/2/twemoji.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.8/dojo/dojo.js"></script>
 <script type="text/javascript">
     require([
         "dojo/query",
@@ -74,66 +74,21 @@
             }
         });
 
-        twemoji.parse(document.body, { size: 16 });
+        twemoji.parse(document.body, { size: 72 });
+
+        query(".emoji").forEach(function(emoji){
+            domStyle.set(emoji, {
+                width: "16px",
+                height: "16px"
+            });
+        });
     });
 </script>
 
 <script src='https://www.google.com/recaptcha/api.js' async defer></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript">
-    // Still including jQuery to support http://downloads.mailchimp.com/js/jquery.mailcheck.min.js which is included in forms.
-    google.load("jquery", "1.7.1");
-</script>
 
-        <script type="text/javascript" src="http://optional.us2.list-manage1.com/js/mailcheck.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        try {
-
-        var domains = [
-            'aim.com','aol.com','att.net','bellsouth.net','btinternet.com',
-            'charter.net','comcast.com', 'comcast.net','cox.net','earthlink.net',
-            'gmail.com','googlemail.com','icloud.com','mac.com','me.com','msn.com',
-            'optonline.net','optusnet.com.au', 'rocketmail.com','rogers.com','sbcglobal.net',
-            'shaw.ca','sympatico.ca','telus.net','verizon.net','ymail.com'];
-
-        var secondLevelDomains = ['yahoo', 'hotmail', 'mail', 'live', 'outlook', 'gmx'];
-
-        var topLevelDomains = ['com', 'com.au', 'com.tw', 'ca', 'co', 'co.nz', 'co.uk', 'de',
-            'fl', 'fr', 'it', 'ru', 'net', 'org', 'edu', 'gov', 'jp', 'nl', 'kr', 'se', 'eu',
-            'ie', 'co.il', 'us', 'at', 'be', 'dk', 'hk', 'es', 'gr', 'ch', 'no', 'cz',
-            'in', 'net', 'net.au', 'info', 'biz', 'mil', 'co.jp', 'sg', 'hu'];
-
-        $('#MERGE0').on('blur', function() {
-            var submitBtn = $('input.button:submit')[0];
-            if(submitBtn && submitBtn.value == "Subscribe to list"){ // Only show mailcheck warning on english forms.
-                $(this).mailcheck({
-                    domains: domains,
-                    secondLevelDomains: secondLevelDomains,
-                    topLevelDomains: topLevelDomains,
-                    suggested: function(element, suggestion) {
-                        var msg = 'Hmm, did you mean '+suggestion.full+'? If not, carry on.';
-                        if ( $('#MERGE0_mailcheck').length == 0 ){
-                            element.after('<div id="MERGE0_mailcheck" class="feedback">'+msg+'</div>');
-                            element.closest('.field-group').addClass('mailcheck');
-                        }
-                        var enteredDomain = element[0].value.trim().split('@')[1];
-                        ga('send', 'event', 'mailcheck', enteredDomain, suggestion.domain);
-                    },
-                    empty: function(element) {
-                        if ( $('#MERGE0_mailcheck').length > 0 ){
-                            $('#MERGE0_mailcheck').remove();
-                            element.closest('.field-group').removeClass('mailcheck');
-                        }
-                        return;
-                    }
-                });
-            }
-        });
-        } catch(e){ console.log(e); }
-    });
-</script>
-
+        
         
 	<style type="text/css">/* Forms */
 
@@ -191,11 +146,11 @@ textarea {
 }
 
 select {
-    background:#fff url(http://optional.us2.list-manage1.com/images/icons/signup-sprite.png) no-repeat right -295px;
-    background:#fff url(http://optional.us2.list-manage1.com/images/icons/signup-sprite.png) no-repeat right -295px, -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f1f1f1));
-    background:#fff url(http://optional.us2.list-manage1.com/images/icons/signup-sprite.png) no-repeat right -295px, -webkit-linear-gradient(top, #fff, #f1f1f1);
-    background:#fff url(http://optional.us2.list-manage1.com/images/icons/signup-sprite.png) no-repeat right -295px,     -ms-linear-gradient(top, #fff, #f1f1f1);
-    background:#fff url(http://optional.us2.list-manage1.com/images/icons/signup-sprite.png) no-repeat right -295px,         linear-gradient(to bottom, #fff, #f1f1f1);
+    background:#fff url(https://us2.list-manage.com/images/icons/signup-sprite.png) no-repeat right -295px;
+    background:#fff url(https://us2.list-manage.com/images/icons/signup-sprite.png) no-repeat right -295px, -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f1f1f1));
+    background:#fff url(https://us2.list-manage.com/images/icons/signup-sprite.png) no-repeat right -295px, -webkit-linear-gradient(top, #fff, #f1f1f1);
+    background:#fff url(https://us2.list-manage.com/images/icons/signup-sprite.png) no-repeat right -295px,     -ms-linear-gradient(top, #fff, #f1f1f1);
+    background:#fff url(https://us2.list-manage.com/images/icons/signup-sprite.png) no-repeat right -295px,         linear-gradient(to bottom, #fff, #f1f1f1);
 }
 html[dir="rtl"] select {background-position:14px -295px;}
 
@@ -323,7 +278,7 @@ label.checkbox, label.radio {
     position:absolute;
     top:3px;
     right:2px;
-    background:url(http://optional.us2.list-manage1.com/images/icons/signup-sprite.png) no-repeat 10px -235px;
+    background:url(https://us2.list-manage.com/images/icons/signup-sprite.png) no-repeat 10px -235px;
     height:34px;
     width:42px;
     opacity:.5;
@@ -450,7 +405,7 @@ html[dir="rtl"] .field-shift {
         left:6px;
         width:24px;
         height:24px;
-        background:url(http://optional.us2.list-manage1.com/images/icons/signup-sprite.png) no-repeat;
+        background:url(https://us2.list-manage.com/images/icons/signup-sprite.png) no-repeat;
         content:" ";
         vertical-align:top;
     }
@@ -472,7 +427,7 @@ html[dir="rtl"] .field-shift {
 /* Use high-res sprite for retina displays */
 @media (-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 1.5dppx) {
     .checkbox input + span:before, .radio input + span:before, .calendar-icon {
-        background-image:url(http://optional.us2.list-manage1.com/images/icons/signup-sprite-2x.png);
+        background-image:url(https://us2.list-manage.com/images/icons/signup-sprite-2x.png);
         background-size: 24px;
     }
 }
@@ -834,7 +789,58 @@ html[dir="rtl"] .field-shift {
 			float:none;
 		}
 
-}		#templateHeader{
+}		.gdpr-mergeRow{
+			margin:10px 0;
+			color:#4a4a4a;
+			font-family:Helvetica;
+		}
+		.gdpr-content{
+			margin:0 -20px 0 -20px;
+			padding:20px;
+			background:rgba(255, 255, 255, 0.8);
+		}
+		#gdpr-label{
+			margin-top:0;
+		}
+		#gdpr-description{
+			margin-top:6px;
+			margin-bottom:0;
+			padding-bottom:11px;
+		}
+		.gdpr-content p{
+			color:#4a4a4a;
+			font-size:13px;
+			line-height:1.5;
+		}
+		.gdpr-content .checkbox-group label{
+			font-weight:normal;
+			font-size:13px;
+		}
+		#gdpr-legal{
+			padding-top:20px;
+			margin:0;
+		}
+		.gdpr-footer{
+			margin:0 -20px 0 -20px;
+			padding:20px;
+			background:rgba(255, 255, 255, 0.9);
+			overflow:auto;
+			color:#6d6d6d;
+		}
+		.gdpr-footer p{
+			font-size:10px;
+			line-height:1.5;
+			margin-bottom:0;
+		}
+		.gdpr-footer a{
+			color:#206578;
+		}
+		.gdpr-footer img{
+			width:65px;
+			float:left;
+			margin-right:15px;
+		}
+		#templateHeader{
 			padding:0px;
 			background-color:#003f87;
 		}
@@ -845,7 +851,7 @@ html[dir="rtl"] .field-shift {
 	<body>
 
 		<div class="wrapper rounded6" id="templateContainer">
-		    <h1 class="masthead"><div style="text-align: left;"><img src="http://gallery.mailchimp.com/980d7e7c822ddb46c6693388d/images/Welcome1340622119.jpg" alt="" border="0" style="height: 62px; width: 150px; margin: 0; padding: 0;display: block; margin-top: 0; margin-bottom: 0;" width="150" height="62"></div></h1>
+		    <h1 class="masthead">(optional.is) List</h1>
 
 		    <div id="templateBody" class="bodyContent rounded6">
 	
@@ -919,14 +925,16 @@ html[dir="rtl"] .field-shift {
 
 
         
-    </div>
 
-    
+        
+
+        
+    </div>
 
     <div class="submit_container clear">
-        <input type="submit" class="formEmailButton" name="submit" value="Subscribe to list">
+        <input type="submit" class="formEmailButton" name="submit" value="Subscribe">
     </div>
-    <input type="hidden" name="ht" value="b799c07192661a1752e73f1eeec58c8a1e288ba9:MTUxODE4NzgxNS43OTI4">
+    <input type="hidden" name="ht" value="6b53f5b4ee803928f80a5dbf14cde8aeb2add352:MTU3MjI1Mjc4MS4wNzQ=">
     <input type="hidden" name="mc_signupsource" value="hosted">
 </form>
 
@@ -936,7 +944,7 @@ html[dir="rtl"] .field-shift {
 
         
 		<div class="poweredWrapper">
-			<span class="poweredBy"><a href="http://www.mailchimp.com/monkey-rewards/?utm_source=freemium_newsletter&utm_medium=email&utm_campaign=monkey_rewards&aid=980d7e7c822ddb46c6693388d&afl=1"><img src="https://gallery.mailchimp.com/089443193dd93823f3fed78b4/images/postmark_mailchimp_red.gif" border="0" alt="Email Marketing Powered by MailChimp" title="MailChimp Email Marketing"></a></span>
+			<span class="poweredBy"><a href="http://www.mailchimp.com/monkey-rewards/?utm_source=freemium_newsletter&utm_medium=email&utm_campaign=monkey_rewards&aid=980d7e7c822ddb46c6693388d&afl=1"><img src="https://gallery.mailchimp.com/089443193dd93823f3fed78b4/images/postmark_mailchimp_red.gif" border="0" alt="Email Marketing Powered by Mailchimp" title="Mailchimp Email Marketing"></a></span>
 		</div>
 		
     </body>
@@ -947,6 +955,6 @@ html[dir="rtl"] .field-shift {
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
             ga('create', 'UA-2497164-9', {'allowLinker': true});
-            ga('set', 'hostname', '.list-manage1.com');
+            ga('set', 'hostname', '.list-manage.com');
             ga('send', 'pageview');
         </script>

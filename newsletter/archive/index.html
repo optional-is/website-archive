@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="description" content="(optional.is) List Email Forms">
         <meta name="keywords" content="(optional.is) List">
-        <script src="https://twemoji.maxcdn.com/twemoji.min.js"></script>
+        <script src="https://twemoji.maxcdn.com/2/twemoji.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.8/dojo/dojo.js"></script>
 <script type="text/javascript">
     require([
@@ -74,66 +74,21 @@
             }
         });
 
-        twemoji.parse(document.body, { size: 16 });
+        twemoji.parse(document.body, { size: 72 });
+
+        query(".emoji").forEach(function(emoji){
+            domStyle.set(emoji, {
+                width: "16px",
+                height: "16px"
+            });
+        });
     });
 </script>
 
 <script src='https://www.google.com/recaptcha/api.js' async defer></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript">
-    // Still including jQuery to support http://downloads.mailchimp.com/js/jquery.mailcheck.min.js which is included in forms.
-    google.load("jquery", "1.7.1");
-</script>
 
-        <script type="text/javascript" src="https://us2.campaign-archive.com/js/mailcheck.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        try {
-
-        var domains = [
-            'aim.com','aol.com','att.net','bellsouth.net','btinternet.com',
-            'charter.net','comcast.com', 'comcast.net','cox.net','earthlink.net',
-            'gmail.com','googlemail.com','icloud.com','mac.com','me.com','msn.com',
-            'optonline.net','optusnet.com.au', 'rocketmail.com','rogers.com','sbcglobal.net',
-            'shaw.ca','sympatico.ca','telus.net','verizon.net','ymail.com'];
-
-        var secondLevelDomains = ['yahoo', 'hotmail', 'mail', 'live', 'outlook', 'gmx'];
-
-        var topLevelDomains = ['com', 'com.au', 'com.tw', 'ca', 'co', 'co.nz', 'co.uk', 'de',
-            'fl', 'fr', 'it', 'ru', 'net', 'org', 'edu', 'gov', 'jp', 'nl', 'kr', 'se', 'eu',
-            'ie', 'co.il', 'us', 'at', 'be', 'dk', 'hk', 'es', 'gr', 'ch', 'no', 'cz',
-            'in', 'net', 'net.au', 'info', 'biz', 'mil', 'co.jp', 'sg', 'hu'];
-
-        $('#MERGE0').on('blur', function() {
-            var submitBtn = $('input.button:submit')[0];
-            if(submitBtn && submitBtn.value == "Subscribe to list"){ // Only show mailcheck warning on english forms.
-                $(this).mailcheck({
-                    domains: domains,
-                    secondLevelDomains: secondLevelDomains,
-                    topLevelDomains: topLevelDomains,
-                    suggested: function(element, suggestion) {
-                        var msg = 'Hmm, did you mean '+suggestion.full+'? If not, carry on.';
-                        if ( $('#MERGE0_mailcheck').length == 0 ){
-                            element.after('<div id="MERGE0_mailcheck" class="feedback">'+msg+'</div>');
-                            element.closest('.field-group').addClass('mailcheck');
-                        }
-                        var enteredDomain = element[0].value.trim().split('@')[1];
-                        ga('send', 'event', 'mailcheck', enteredDomain, suggestion.domain);
-                    },
-                    empty: function(element) {
-                        if ( $('#MERGE0_mailcheck').length > 0 ){
-                            $('#MERGE0_mailcheck').remove();
-                            element.closest('.field-group').removeClass('mailcheck');
-                        }
-                        return;
-                    }
-                });
-            }
-        });
-        } catch(e){ console.log(e); }
-    });
-</script>
-
+        
         
 	<style type="text/css">/* Forms */
 
@@ -834,7 +789,58 @@ html[dir="rtl"] .field-shift {
 			float:none;
 		}
 
-}		#templateHeader{
+}		.gdpr-mergeRow{
+			margin:10px 0;
+			color:#4a4a4a;
+			font-family:Helvetica;
+		}
+		.gdpr-content{
+			margin:0 -20px 0 -20px;
+			padding:20px;
+			background:rgba(255, 255, 255, 0.8);
+		}
+		#gdpr-label{
+			margin-top:0;
+		}
+		#gdpr-description{
+			margin-top:6px;
+			margin-bottom:0;
+			padding-bottom:11px;
+		}
+		.gdpr-content p{
+			color:#4a4a4a;
+			font-size:13px;
+			line-height:1.5;
+		}
+		.gdpr-content .checkbox-group label{
+			font-weight:normal;
+			font-size:13px;
+		}
+		#gdpr-legal{
+			padding-top:20px;
+			margin:0;
+		}
+		.gdpr-footer{
+			margin:0 -20px 0 -20px;
+			padding:20px;
+			background:rgba(255, 255, 255, 0.9);
+			overflow:auto;
+			color:#6d6d6d;
+		}
+		.gdpr-footer p{
+			font-size:10px;
+			line-height:1.5;
+			margin-bottom:0;
+		}
+		.gdpr-footer a{
+			color:#206578;
+		}
+		.gdpr-footer img{
+			width:65px;
+			float:left;
+			margin-right:15px;
+		}
+		#templateHeader{
 			padding:0px;
 			background-color:#003f87;
 		}
@@ -845,7 +851,7 @@ html[dir="rtl"] .field-shift {
 	<body>
 
 		<div class="wrapper rounded6" id="templateContainer">
-		    <h1 class="masthead"><div style="text-align: left;"><img src="http://gallery.mailchimp.com/980d7e7c822ddb46c6693388d/images/Welcome1340622119.jpg" alt="" border="0" style="height: 62px; width: 150px; margin: 0; padding: 0;display: block; margin-top: 0; margin-bottom: 0;" width="150" height="62"></div></h1>
+		    <h1 class="masthead">(optional.is) List</h1>
 
 		    <div id="templateBody" class="bodyContent rounded6">
 	
@@ -857,9 +863,9 @@ html[dir="rtl"] .field-shift {
 </h2>
 <div>from (optional.is)
 </div>
-<a class="formEmailButton" href="http://eepurl.com/dLs3-/" target="_blank">join our mailing list</a>
+<a class="formEmailButton" href="http://eepurl.com/doquin" target="_blank">join our mailing list</a>
 <ul id="archive-list">
-	<div class="display_archive"><li class="campaign">01/24/2018 - <a href="http://eepurl.com/dh2dl9" title="Binendum ðŸš—Â to BematistÂ ðŸ‘£" target="_blank">Binendum ðŸš—Â to BematistÂ ðŸ‘£</a></li><li class="campaign">10/16/2017 - <a href="http://eepurl.com/c5KXo9" title="ðŸ“ŠÂ Salaries, ðŸ¥” Potatoes,Â ðŸŽ†Â Darkness and more" target="_blank">ðŸ“ŠÂ Salaries, ðŸ¥” Potatoes,Â ðŸŽ†Â Darkness and more</a></li><li class="campaign">07/18/2017 - <a href="http://eepurl.com/cTv7QD" title="Â Macro and micro artÂ ðŸ¢ðŸŒ¼ðŸŽ¨" target="_blank">Â Macro and micro artÂ ðŸ¢ðŸŒ¼ðŸŽ¨</a></li><li class="campaign">04/06/2017 - <a href="http://eepurl.com/cJq655" title="Planning for the futureÂ â˜ŽðŸš€ðŸŒ›" target="_blank">Planning for the futureÂ â˜ŽðŸš€ðŸŒ›</a></li><li class="campaign">01/02/2017 - <a href="http://eepurl.com/ctAn9L" title="We need a map!Â ðŸŒðŸŒŽðŸŒ" target="_blank">We need a map!Â ðŸŒðŸŒŽðŸŒ</a></li><li class="campaign">10/25/2016 - <a href="http://eepurl.com/ckVHzb" title="Yan, tan, tethera ... Go!Â ðŸ" target="_blank">Yan, tan, tethera ... Go!Â ðŸ</a></li><li class="campaign">07/07/2016 - <a href="http://eepurl.com/b7IBrn" title="Summer cleansing of the spiritÂ ðŸ”†ðŸš¿ðŸ‘¹" target="_blank">Summer cleansing of the spiritÂ ðŸ”†ðŸš¿ðŸ‘¹</a></li><li class="campaign">04/18/2016 - <a href="http://eepurl.com/bXmzdH" title="â˜€ï¸Â Summer is near" target="_blank">â˜€ï¸Â Summer is near</a></li><li class="campaign">01/02/2016 - <a href="http://eepurl.com/bIxdc9" title="Q4 Newsletter:Â ðŸ’°ðŸ’µ" target="_blank">Q4 Newsletter:Â ðŸ’°ðŸ’µ</a></li><li class="campaign">11/02/2015 - <a href="http://eepurl.com/bBpa59" title="Q3: Society for more open browser tabs." target="_blank">Q3: Society for more open browser tabs.</a></li><li class="campaign">07/16/2015 - <a href="http://eepurl.com/btnE7j" title="Q2: Losing LightÂ ðŸ”…" target="_blank">Q2: Losing LightÂ ðŸ”…</a></li><li class="campaign">04/06/2015 - <a href="http://eepurl.com/bi218j" title="Can you taste the revolution?Â ðŸ‘…" target="_blank">Can you taste the revolution?Â ðŸ‘…</a></li><li class="campaign">01/04/2015 - <a href="http://eepurl.com/baCD4T" title="The Sensors of Smell" target="_blank">The Sensors of Smell</a></li><li class="campaign">10/05/2014 - <a href="http://eepurl.com/4Y_XD" title="JafndÃ¦gur" target="_blank">JafndÃ¦gur</a></li><li class="campaign">07/18/2014 - <a href="http://eepurl.com/Zf3Zz" title="Q2: Electric Boogaloo" target="_blank">Q2: Electric Boogaloo</a></li><li class="campaign">04/03/2014 - <a href="http://eepurl.com/RL179" title="Winter Wonderland" target="_blank">Winter Wonderland</a></li><li class="campaign">02/05/2014 - <a href="http://eepurl.com/NdVuz" title="02013Q4: Friends, fun and food" target="_blank">02013Q4: Friends, fun and food</a></li><li class="campaign">10/22/2013 - <a href="http://eepurl.com/HqM2j" title="Q3: Crowds, Colors &amp; CERN" target="_blank">Q3: Crowds, Colors &amp; CERN</a></li><li class="campaign">07/08/2013 - <a href="http://eepurl.com/B0Q1n" title="Travelling Circus" target="_blank">Travelling Circus</a></li><li class="campaign">04/02/2013 - <a href="http://eepurl.com/xqHdL" title="Paper and Production" target="_blank">Paper and Production</a></li></div>
+	<div class="display_archive"><li class="campaign">16/10/2018 - <a href="http://eepurl.com/dI8hv9" title="🐟🏪 Ye olde fish shoppe" target="_blank">🐟🏪 Ye olde fish shoppe</a></li><li class="campaign">24/07/2018 - <a href="http://eepurl.com/dBrkK9" title="Sweet tooth of knowledge 🍬🍭" target="_blank">Sweet tooth of knowledge 🍬🍭</a></li><li class="campaign">05/04/2018 - <a href="http://eepurl.com/dqjILL" title="🦊🐵👍 Emojis Take Over🤓✉️🎉" target="_blank">🦊🐵👍 Emojis Take Over🤓✉️🎉</a></li><li class="campaign">24/01/2018 - <a href="http://eepurl.com/dh2dl9" title="Binendum ðŸš—Â to BematistÂ ðŸ‘£" target="_blank">Binendum ðŸš—Â to BematistÂ ðŸ‘£</a></li><li class="campaign">16/10/2017 - <a href="http://eepurl.com/c5KXo9" title="ðŸ“ŠÂ Salaries, ðŸ¥” Potatoes,Â ðŸŽ†Â Darkness and more" target="_blank">ðŸ“ŠÂ Salaries, ðŸ¥” Potatoes,Â ðŸŽ†Â Darkness and more</a></li><li class="campaign">18/07/2017 - <a href="http://eepurl.com/cTv7QD" title="Â Macro and micro artÂ ðŸ¢ðŸŒ¼ðŸŽ¨" target="_blank">Â Macro and micro artÂ ðŸ¢ðŸŒ¼ðŸŽ¨</a></li><li class="campaign">06/04/2017 - <a href="http://eepurl.com/cJq655" title="Planning for the futureÂ â˜ŽðŸš€ðŸŒ›" target="_blank">Planning for the futureÂ â˜ŽðŸš€ðŸŒ›</a></li><li class="campaign">02/01/2017 - <a href="http://eepurl.com/ctAn9L" title="We need a map!Â ðŸŒðŸŒŽðŸŒ" target="_blank">We need a map!Â ðŸŒðŸŒŽðŸŒ</a></li><li class="campaign">25/10/2016 - <a href="http://eepurl.com/ckVHzb" title="Yan, tan, tethera ... Go!Â ðŸ" target="_blank">Yan, tan, tethera ... Go!Â ðŸ</a></li><li class="campaign">07/07/2016 - <a href="http://eepurl.com/b7IBrn" title="Summer cleansing of the spiritÂ ðŸ”†ðŸš¿ðŸ‘¹" target="_blank">Summer cleansing of the spiritÂ ðŸ”†ðŸš¿ðŸ‘¹</a></li><li class="campaign">18/04/2016 - <a href="http://eepurl.com/bXmzdH" title="â˜€ï¸Â Summer is near" target="_blank">â˜€ï¸Â Summer is near</a></li><li class="campaign">02/01/2016 - <a href="http://eepurl.com/bIxdc9" title="Q4 Newsletter:Â ðŸ’°ðŸ’µ" target="_blank">Q4 Newsletter:Â ðŸ’°ðŸ’µ</a></li><li class="campaign">02/11/2015 - <a href="http://eepurl.com/bBpa59" title="Q3: Society for more open browser tabs." target="_blank">Q3: Society for more open browser tabs.</a></li><li class="campaign">16/07/2015 - <a href="http://eepurl.com/btnE7j" title="Q2: Losing LightÂ ðŸ”…" target="_blank">Q2: Losing LightÂ ðŸ”…</a></li><li class="campaign">06/04/2015 - <a href="http://eepurl.com/bi218j" title="Can you taste the revolution?Â ðŸ‘…" target="_blank">Can you taste the revolution?Â ðŸ‘…</a></li><li class="campaign">04/01/2015 - <a href="http://eepurl.com/baCD4T" title="The Sensors of Smell" target="_blank">The Sensors of Smell</a></li><li class="campaign">05/10/2014 - <a href="http://eepurl.com/4Y_XD" title="JafndÃ¦gur" target="_blank">JafndÃ¦gur</a></li><li class="campaign">18/07/2014 - <a href="http://eepurl.com/Zf3Zz" title="Q2: Electric Boogaloo" target="_blank">Q2: Electric Boogaloo</a></li><li class="campaign">03/04/2014 - <a href="http://eepurl.com/RL179" title="Winter Wonderland" target="_blank">Winter Wonderland</a></li><li class="campaign">05/02/2014 - <a href="http://eepurl.com/NdVuz" title="02013Q4: Friends, fun and food" target="_blank">02013Q4: Friends, fun and food</a></li></div>
 </ul>
 
 <!--<br /><strong>Share this:</strong><br />
@@ -870,7 +876,6 @@ html[dir="rtl"] .field-shift {
 <a rel="nofollow" target="_blank" href="https://plus.google.com/share?url=https%3A%2F%2Fus2.campaign-archive.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb" title="Google Plus"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/googleplus.png" title="Google Plus" alt="Google Plus" class="mc-share"></a>
 <a rel="nofollow" target="_blank" href="http://www.instapaper.com/hello2?url=https%3A%2F%2Fus2.campaign-archive.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="Instapaper"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/instapaper.png" title="Instapaper" alt="Instapaper" class="mc-share"></a>
 <a rel="nofollow" target="_blank" href="http://digg.com/submit?phase=2&url=https%3A%2F%2Fus2.campaign-archive.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="Digg"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/digg.png" title="Digg" alt="Digg" class="mc-share"></a>
-<a rel="nofollow" target="_blank" href="http://del.icio.us/post?url=https%3A%2F%2Fus2.campaign-archive.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="Delicious"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/delicious.png" title="Delicious" alt="Delicious" class="mc-share"></a>
 <a rel="nofollow" target="_blank" href="http://reddit.com/submit?url=https%3A%2F%2Fus2.campaign-archive.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="Reddit"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/reddit.png" title="Reddit" alt="Reddit" class="mc-share"></a>
 <a rel="nofollow" target="_blank" href="http://www.stumbleupon.com/submit?url=https%3A%2F%2Fus2.campaign-archive.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&title=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="StumbleUpon"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/stumbleupon.png" title="StumbleUpon" alt="StumbleUpon" class="mc-share"></a>
 <a rel="nofollow" target="_blank" href="http://www.myspace.com/Modules/PostTo/Pages/?u=https%3A%2F%2Fus2.campaign-archive.com%2Fhome%2F%3Fu%3D980d7e7c822ddb46c6693388d%26id%3D4b11c60bdb&amp;t=%28optional.is%29%20List%20Email%20Campaign%20Archive" title="MySpace"><img border="0" height="15" width="15" src="http://cdn-images.mailchimp.com/icons/share/myspace.png" title="MySpace" alt="MySpace" class="mc-share"></a>
@@ -891,7 +896,7 @@ html[dir="rtl"] .field-shift {
 
         
 		<div class="poweredWrapper">
-			<span class="poweredBy"><a href="http://www.mailchimp.com/monkey-rewards/?utm_source=freemium_newsletter&utm_medium=email&utm_campaign=monkey_rewards&aid=980d7e7c822ddb46c6693388d&afl=1"><img src="https://gallery.mailchimp.com/089443193dd93823f3fed78b4/images/postmark_mailchimp_red.gif" border="0" alt="Email Marketing Powered by MailChimp" title="MailChimp Email Marketing"></a></span>
+			<span class="poweredBy"><a href="http://www.mailchimp.com/monkey-rewards/?utm_source=freemium_newsletter&utm_medium=email&utm_campaign=monkey_rewards&aid=980d7e7c822ddb46c6693388d&afl=1"><img src="https://gallery.mailchimp.com/089443193dd93823f3fed78b4/images/postmark_mailchimp_red.gif" border="0" alt="Email Marketing Powered by Mailchimp" title="Mailchimp Email Marketing"></a></span>
 		</div>
 		
     </body>
