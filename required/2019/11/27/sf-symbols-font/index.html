@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>SF Symbols Font &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="https://optional.is/required/wp-content/themes/optional/style.css" type="text/css" media="all" />
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="https://optional.is/required/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@optionalBot">
+<meta name="twitter:title" content="SF Symbols Font">
+<meta name="twitter:description" content="Apple recently released SF Symbols font. We got all excited and made ourselves a poster of all the options. Here's how we and you can do it!">
+<meta name="twitter:creator" content="@optionalBot">
+<meta name="twitter:domain" content="http://optional.is">
+</head>
+<body>
+<div id="header">
+<h1><a href="https://optional.is/required/">(optional.is)</a></h1>
+</div>
+			
+		<div class="post-4260 post type-post status-publish format-standard hentry category-paper category-visualizations tag-apple tag-font tag-glyphs tag-sf-symbols tag-symbols" id="post-4260">
+			<h2 style="border-bottom: 2px solid #411900">SF Symbols Font</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2019-11-27T11:11:16+00:00">Wednesday, November 27th, 02019 at 11:11 UTC</abbr></div>
+				
+<p>Recently, Apple released iOS13, which included a new symbol font called &#8216;SF Symbols&#8217;. It is a font with lots of commonly used interface glyphs. These are things like upload, download, boxes, icons, actions, etc.</p>
+
+
+
+<p>Several years ago, we wrote a book entitled <em><a href="https://gumroad.com/l/Creating-Symbol-Fonts">Creating Symbol Fonts</a></em> (you can download the eBook for free). At the time, there was a tipping point between creating vector glyphs as a font, which was supported as far back as IE6, or moving to SVGs which were only starting to be supported at the time of the book. Overall, for the Web, SVG has won out for all sorts of reasons (color, accessibility, ease of use/creation, but that&#8217;s another article for another day).</p>
+
+
+
+<p>We&#8217;ve now come full circle and are back to creating symbol fonts inside an app. This was probably the easiest and most compact way for Apple to get hundreds of glyphs easily referencable into their existing framework.</p>
+
+
+
+<p>Naturally, when SF Symbols was announced we got excited about the possibilities! Officially, the font is restricted for when, where and for what it can be used. Even certain glyphs can only be used for very specific use-cases. But that doesn&#8217;t stop us from exploring the possibilities.</p>
+
+
+
+<p>Apple did the right thing and added all these icons in the glyphs higher-up in the Unicode set. They don&#8217;t clash with existing characters, so their semantic meaning is not confused.</p>
+
+
+
+<figure class="banner"><img src="../../../../wp-content/uploads/2019/10/sf-symbols-app-1024x640.png" alt="" class="wp-image-4283" srcset="../../../../wp-content/uploads/2019/10/sf-symbols-app-1024x640.png 1024w, ../../../../wp-content/uploads/2019/10/sf-symbols-app-300x188.png 300w, ../../../../wp-content/uploads/2019/10/sf-symbols-app-768x480.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>SF Symbols App</figcaption></figure>
+
+
+
+<p><a href="https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/">Apple released an app which allows you to browse all of the icons, export and manipulate them.</a> What we wanted was an offline poster which listed all the possibilities so we could get a better overview.</p>
+
+
+
+<p>Todo this, we set to work writing a little bit of code. We knew the Unicode range where these icons would be present, so using HTML we output a list of all the hex values in that range and set the font-family to SF Symbols. </p>
+
+
+
+<pre class="wp-block-preformatted">&lt;?php
+for($i=1048576;$i&lt;=1050434;$i++){
+     $h = (string)dechex($i);
+     echo '&lt;table&gt;
+		&lt;tr&gt;
+			&lt;td class="icon"&gt;&amp;#x'.$h.';&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class="name"&gt;'.get_name($i).'&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;';
+}
+?&gt;
+</pre>
+
+
+
+<p>With a bit more CSS, we created a grid of all the possible icons all floated and nicely wrapping into columns.</p>
+
+
+
+<pre class="wp-block-preformatted">&lt;style&gt;
+@font-face {
+     font-family: t4;
+     src:url("SF-Pro-Rounded-Regular.otf");
+ }
+ body { font-size: 10px; margin: 0 auto; text-align: center; }
+ td { font-size: 8px; text-align: center; padding: 0; margin: 0; }
+ tr { padding: 0; margin: 0;  }
+ .name { font-size: 7.25px; font-family: t4; height: 20px; vertical-align: top; }
+ .codepoint { font-size: 6px; font-family: t4; color: #666;}
+ table { float: left; width: 90px; margin: 0; padding: 0; border-spacing: 0px;
+     border-collapse: separate; overflow: hidden;}
+ .icon {font-family: t4; font-size: 42px; line-height: 72px;}
+&lt;/style&gt; </pre>
+
+
+
+<p>Changing the values in CSS made it very easy to convert from a US 3ft by 4ft poster to an A0. By changing the dimensions of the container, all the icons would flow naturally into rows and columns to fit the desired output size. We could also easily adjust the font-size if we needed to eek out some extra room here or there. </p>
+
+
+
+<figure class="banner"><img src="../../../../wp-content/uploads/2019/10/sf-symbols-a0-poster-725x1024.png" alt="" class="wp-image-4284"/><figcaption>SF Symbols A0 Poster</figcaption></figure>
+
+
+
+<p>Once we had an HTML webpage set for a poster size, we could make that into a print-ready PDF by &#8216;printing&#8217; the webpage as PDF. No need for any tools like Illustrator or Sketch todo the initial layout, that was all done in HTML and CSS.</p>
+
+
+
+<figure class="banner"><img src="../../../../wp-content/uploads/2019/11/webpage-print-dialog-us-scaled.png" alt=""/><figcaption>Since all the tables are floated, changing the paper size reflows the design when printing. The screen and print can look different, and that&#8217;s OK.</figcaption></figure>
+
+
+
+<h2>Digital Archaeology</h2>
+
+
+
+<p>In the process of creating the poster, we found some interesting things. As we looped through all the possible glyph values from the lowest to the highest, it turns out that there are lots of gaps and some icons are not exactly next to the ones you&#8217;d expect.</p>
+
+
+
+<p>We can speculate that the gaps are, or were, reserved for icons that didn&#8217;t make the cut. Maybe these are future product ideas, maybe the design just didn&#8217;t work and it got pulled at the last minute? </p>
+
+
+
+<p>As for the icons you&#8217;d expect to be together but aren&#8217;t, well, that&#8217;s probably the age-old problem of starting by assigning all the spaces, then realising you needed something more. The only free space is at the end so things get jumbled-up. For most people, that doesn&#8217;t matter because they are searching by the glyph name, which can easily be sorted, filters and searched. You only really notice it when they are listed in unicode order.</p>
+
+
+
+<p>What this meant for our code was that we had to have a bunch of exceptions to skip over these gaps. As we looped over the full range of Unicode code points, when we were getting no glyph, we made a list of where the gaps started and stopped to skip over those values.</p>
+
+
+
+<p>We also have another list mapping the unicode value to the name of the glyph. That way we can create nice labels. Having all these lists means updating the poster in the future should be easier. Apple will no doubt add more icons to the end of the list and potential deprecate some in the future. </p>
+
+
+
+<h2>SF Symbols 1.1</h2>
+
+
+
+<p>While we were writing this article, Apple released SF Symbols 1.1. Luckily, we had all the code in place and we could quickly update everything. They added roughly 100 new icons. Some filled gaps, others were appended to the end. It also seems there are a few that are not officially in their SF Symbols app either. (Nothing suspicious, probably an oversight). All in all, the glyphs that were added were mostly circle variants of existing glyphs. Then a bunch of new of icons such as <em>hifispeaker</em> and <em>sportscourt</em>.</p>
+
+
+
+<p>We have since updated our code and output to reflect SF Symbols 1.1 glyphs.</p>
+
+
+
+<h2>Get the Poster</h2>
+
+
+
+<p><a href="https://github.com/optional-is/symbol-poster">We&#8217;ve published all the code to create your own posters on GitHub</a>. Legally, we can&#8217;t distribute the font or poster, but there&#8217;s nothing stopping you from downloading the font and our code, then tweaking the PHP code, CSS or HTML layout and running it to make your own version for any print-size you want.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/paper/index.html" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="../../../../category/visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../../../tag/apple/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1f3870">apple</a>, <a href="../../../../tag/font/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #47a282">font</a>, <a href="../../../../tag/glyphs/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2feaa1">glyphs</a>, <a href="../../../../tag/sf-symbols/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cfed0c">Sf Symbols</a>, <a href="../../../../tag/symbols/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #550357">symbols</a></p>			  </div>
+			
+		<div class="navigation">
+			<div class="prev"><div class="time">19 November 02019</div><a href="../../19/material-a-short-talk-dan-rubin/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f87f1d">&laquo; Material: A short talk - Dan Rubin</a></div>
+			<div class="next"><div class="time">04 December 02019</div><a href="../../../12/04/emoji-explosion/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8df10c">Emoji Explosion &raquo;</a></div>
+		</div>
+
+			</div>
+			<!-- call out footer -->
+			<div class="callout-footer" style="padding-top: 1em; border-top: 2px solid #411900; border-bottom: 2px solid #411900; font-size: 120%">
+			<p>You've been reading optional.is/required/ a blog about technology, culture, paper and other interesting topics, since 02009. The easiest way to stay current is to grab the <a href="http://feeds2.feedburner.com/optional?format=xml">RSS Feed</a>.</p>
+
+			<p><a href="../../../../../newsletter/index.html">Subscribe to the quarterly mailing list</a> to receive interesting stories, links and updates.</p>
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+  <div style="float: left; font-size: 16px;">
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+</div> 
+<a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.196 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2020-01-31 16:34:57 -->
+
+<!-- super cache -->

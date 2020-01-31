@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Week #466-467-468 &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="https://optional.is/required/wp-content/themes/optional/style.css" type="text/css" media="all" />
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="https://optional.is/required/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@optionalBot">
+<meta name="twitter:title" content="Week #466-467-468">
+<meta name="twitter:description" content="A triple weeknote. Mostly surveys prepping for the coming months and top secret projects which should come to light soon!">
+<meta name="twitter:creator" content="@optionalBot">
+<meta name="twitter:domain" content="http://optional.is">
+</head>
+<body>
+<div id="header">
+<h1><a href="https://optional.is/required/">(optional.is)</a></h1>
+</div>
+			
+		<div class="post-4470 post type-post status-publish format-standard hentry category-briefs category-weeknotes tag-cherenkov tag-speed-of-light tag-surveys tag-translations tag-triagemail tag-weeknote" id="post-4470">
+			<h2 style="border-bottom: 2px solid #8ec064">Week #466-467-468</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2020-01-31T11:11:18+00:00">Friday, January 31st, 02020 at 11:11 UTC</abbr></div>
+				
+<h2>Week #466</h2>
+
+
+
+<p>This week, we got back into some server logging and setup AwStats. It is a very old, but reliable piece of software to parse and visualise your server logs. We have been using Google Analytics, just purely out of habit. Now, with Google going off the rails, so many content blockers, GDPR and general page-weight and requests, it was time to remove it.</p>
+
+
+
+<p>Now that AwStats is setup, we&#8217;ll let it run for a bit, do some comparing to numbers we get in Google Analytics, then remove all the tracking/spyware for our templates.</p>
+
+
+
+<p><a href="https://triagemail.com">Triagemail</a> is our little iOS app that we use to check email. A while ago we ask for translation strings. We finally got around to adding them into our code and sent them back out for review. If we don&#8217;t hear anything back soon, we&#8217;ll release the app with translations in Norwegian, Icelandic, Dutch, German, English and Portuguese. If anyone wants to contribute other languages, let us know.</p>
+
+
+
+<p>We also spent some time this week working on our Top Secret project. Mostly getting the Webpage styling matching more the design templates and cleaning-up some of the functionality.</p>
+
+
+
+<h2>Week #467</h2>
+
+
+
+<p>Starting in February, we have several high-intensity months of surveys. This is when we do parent and staff surveys for kindergartens and grade-schools in Iceland. We have also started to offer staff surveys for the general workplace and have a few customers there as well.</p>
+
+
+
+<p>This week was spent prepping servers. The way we designed and architected the system is that for each survey data collection we setup a new instance of the software. It is a little cumbersome, but it also means we never cross-pollinate information and a load on any one survey doesn&#8217;t affect the others. These surveys tend to only run for 4-5 weeks, so for 11 months of the year they are switched off. Which means when we do start-up again, the code has advanced by nearly a year.</p>
+
+
+
+<p>We forget all the impressive features we continue to add when we see them every day. These annual upgrades remind us of what we&#8217;ve accomplished. </p>
+
+
+
+<p>Two things we&#8217;ve done recently that have pushed our offerings beyond competitors is to integrate <a href="https://aws.amazon.com/polly/">Amazon Polly</a> into the system. Previously, we had a license for Text-To-Speech in Icelandic. This allowed us to create MP3s for all of the text strings in the survey. This helped both younger children who had trouble to read, but also people with dyslexia and others maybe with low-vision. </p>
+
+
+
+<p>The process was multi-step, export strings, import to desktop software, generate mp3s, rename them all, upload to server. Which needed to be repeated if there was a change. It was also depending on one employee&#8217;s desktop machine being available and accessible.</p>
+
+
+
+<p>This is now all a 1-click web service and we&#8217;ve expanded it from 1 language to 3: Icelandic, English and Polish. All for much less than the original cost of the software.</p>
+
+
+
+<p>We have also reused this to create MP3s for our upcoming test of Robocalls. We&#8217;re all very excited to see the reaction to this because robocalling is not done in Iceland. To remind people they have an unfinished survey, we&#8217;ve previously emailed them, sent them an SMS, then a second email, then for those still left un-started, we have a human call.</p>
+
+
+
+<p>Now, before that human call, we&#8217;re going to try a robocall and see what sort of reaction people have. This isn&#8217;t spam, because we&#8217;re not calling unsolicited people, these are folks who have agreed to take the survey and have gotten 3 other reminders from us. Still, people might find it weird and creepy, but there is only one way to find out for sure. In 4-5 weeks, we should have feedback of the process, so watch this space.</p>
+
+
+
+<h2>Week #468</h2>
+
+
+
+<p>We spent this week ramping-up again for <a href="https://material.is/2020/">Material Conference</a>. It is now less than two months away. So we&#8217;re out in force connecting with local organisations, meeting with caterers, and finalising some shorter, local speaker slots.</p>
+
+
+
+<p>On Wednesdays, we are scheduled to do pair programming and consulting. It has been going great and this week we dipped our toes into some A.I. and Machine Learning, or as the statisticians like to call it: Regression analysis.</p>
+
+
+
+<p>There is a large dataset about their customers. They have calculations for retention, revenue, etc., but using the regression analysis, we can start to see what factors are contributing the most. The danger is to not confuse correlation with causation. The data is now available in a format we need, the code is up and running, now they can take it themselves and start to explore the different variables and their contributions.</p>
+
+
+
+<p>We also finalised a lot of the tweaks to surveys that will being in week #469 and beyond. As part of the sell to customers, they want to login and see the questions and flow. To do so, we basically need to have it ready. This week we generated 1000+ Polish MP3s and warmed-up a staff survey which won&#8217;t run for another month or two, but people want to review it now. A stitch in time, saves nine as they say. It is a bunch of work now, but it makes next month easier.</p>
+
+
+
+<p>We had a few small tweaks to an old project. <em>Note-to-self</em>, when hard-coding full URLS use //example.com rather than http://example.com. Someone rolled-out SSL and many of our includes were not loading since it was from an un-trusted source. It was an easy fix, but also easily preventable.</p>
+
+
+
+<p>More number crunching for O&#8217;Reilly Media on an upcoming survey about A.I. usage in your organization. It is the second year, while no trends yet, we have some comparisons to validate the data.</p>
+
+
+
+<p>Finally, more work on the Top Secret project. Making a full loop, we&#8217;re going back to the early test iOS app we made. This was developed along side the Web API. We needed to &#8216;dog-food&#8217; it and try to make the type of app people might make and in doing so, we could learn more about what needed to be in the API to be able to fetch.</p>
+
+
+
+<h2>Au Travail</h2>
+
+
+
+<p>In this section, we&#8217;re trying to focus a bit more about the business as a whole. Currently, we have 2 outstanding invoices, but to be fair we sent them out this week. Then there is one more project wrapping-up which we&#8217;ll invoice about soon.</p>
+
+
+
+<p>Generally, the accounts are in good shape and the workload is full for the foreseeable future.</p>
+
+
+
+<h2>Bric-à-brac</h2>
+
+
+
+<iframe width="700" height="395" src="https://www.youtube.com/embed/RA4P7IOwu6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+<p>This is a brilliant idea. Back in 01966, Bob shaw wrote a short Science Fiction storey called <a href="https://en.wikipedia.org/wiki/Light_of_Other_Days">Light of Other Days</a>. In it, there is something called &#8216;slow glass&#8217; which had an incredibly high refraction value. We see this affect in the difference between the refraction of light in air and water. Water is slower and therefore bends the light. &#8216;Slow Glass&#8217; value is so high it takes years for light to pass through. Therefore you get a short of time machine or window into the past. This screen is doing the same thing.</p>
+
+
+
+<p>On-a-side-note, this is also how we get <a href="https://en.wikipedia.org/wiki/Cherenkov_radiation">Cherenkov Radiation</a>. The electron is moving through the medium faster than light can move in that medium. It is a visual &#8216;sonic boom&#8217;.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../../../../tag/cherenkov/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1e1b74">cherenkov</a>, <a href="../../../../tag/speed-of-light/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #93211d">speed of light</a>, <a href="http://optional.is/required/tag/surveys/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #feae57">surveys</a>, <a href="../../../../tag/translations/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2ed18f">translations</a>, <a href="http://optional.is/required/tag/triagemail/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #54d2fc">triagemail</a>, <a href="../../../../tag/weeknote/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #672e60">weeknote</a></p>			  </div>
+			
+		<div class="navigation">
+			<div class="prev"><div class="time">29 January 02020</div><a href="../../29/material-responsive-clothing-nina-walia/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2e39a7">&laquo; Material: Responsive Clothing – Nina Walia</a></div>
+			<div class="next"></div>
+		</div>
+
+			</div>
+			<!-- call out footer -->
+			<div class="callout-footer" style="padding-top: 1em; border-top: 2px solid #8ec064; border-bottom: 2px solid #8ec064; font-size: 120%">
+			<p>You've been reading optional.is/required/ a blog about technology, culture, paper and other interesting topics, since 02009. The easiest way to stay current is to grab the <a href="http://feeds2.feedburner.com/optional?format=xml">RSS Feed</a>.</p>
+
+			<p><a href="../../../../../newsletter/index.html">Subscribe to the quarterly mailing list</a> to receive interesting stories, links and updates.</p>
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+  <div style="float: left; font-size: 16px;">
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+</div> 
+<a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.276 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2020-01-31 16:09:25 -->
+
+<!-- super cache -->

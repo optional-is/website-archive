@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Week #461, #462 &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="https://optional.is/required/wp-content/themes/optional/style.css" type="text/css" media="all" />
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="https://optional.is/required/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@optionalBot">
+<meta name="twitter:title" content="Week #461, #462">
+<meta name="twitter:description" content="A double weeknote catching-up before closing down.">
+<meta name="twitter:creator" content="@optionalBot">
+<meta name="twitter:domain" content="http://optional.is">
+</head>
+<body>
+<div id="header">
+<h1><a href="https://optional.is/required/">(optional.is)</a></h1>
+</div>
+			
+		<div class="post-4382 post type-post status-publish format-standard hentry category-briefs category-weeknotes tag-fablab tag-qr-code tag-stickers" id="post-4382">
+			<h2 style="border-bottom: 2px solid #e80d9d">Week #461, #462</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2019-12-20T11:11:00+00:00">Friday, December 20th, 02019 at 11:11 UTC</abbr></div>
+				
+<p>This is a double weeknote. Last friend was the UK Elections and the results and discussion all day long took the steam out of everything.</p>
+
+
+
+<h2>Week 461</h2>
+
+
+
+<p>We progressed a lot on the <a href="https://material.is/2020/">Material Conference</a>. We finalised another speaker and met with a few local potential speakers as well. Some really great discussions about <a href="https://en.wikipedia.org/wiki/Haidinger%27s_brush">Haidinger&#8217;s brush</a>, <a href="http://dziga.com/graffiti/">Butterfly Graffiti</a>, Harmonics and all the things that are invisible to us.</p>
+
+
+
+<p>We also finished-up some chart generation and small analysis for an upcoming O&#8217;Reilly report about Data Quality.</p>
+
+
+
+<p>Tuesday a big storm came through, hurricane level winds. In Reykjavik, it wasn&#8217;t too bad, but it meant a bunch of prep and more stress around meetings and availability. We got through it fine here, but in some parts of the country they were without power for a few days.</p>
+
+
+
+<p>Spent Wednesday onsite working with a client continuing our peer programming efforts. We made great progress one some data importing. Which should be much more self-service now as things grow on their side.</p>
+
+
+
+<p>Friday, we spent debugging some issues around our surveys. Occasionally, we get requests to regenerate random access codes to login because a student has forgotten or inadvertently locked themselves out. This month, we&#8217;ve gotten a lot more requests than normal. We hadn&#8217;t really done anything to the code, so we began to investigate! One way we offer students to login, is via a QR code. It is basically a link with a few query parameters which do the login for you. After you agree to the informed consent we change your access key to keep anonymity. At this point, some students would attempt to re-use the QR code to login again, but that deep link now had incorrect query parameters since the access code had changed.</p>
+
+
+
+<p>This was a good learning moment. QR Codes are starting to become more useful as schools adopt more tablets and those tablets natively recognise QR Codes with their cameras. The downside is that QR Codes are pretty opaque and when they fail it is hard to know why! We changed the login flow a bit, which should account for and deal with most of these hiccups.</p>
+
+
+
+<p><a href="https://optional.is/required/2009/06/02/what-are-2d-barcodes/">We wrote about QR Codes and 2D Barcodes over 10 years ago!</a> Much of which is still true today.</p>
+
+
+
+<p>We&#8217;re also sitting on a side-project since our collaboration with a company in the UK has been wavering. They are going through some changes and our partnership is up in the air. In the meantime, we&#8217;re still pressing forward and had a great meeting with some local furniture designers to potentially step-in in their place. Or, if we can manage to make this collaboration work, we now have a potential new collaborator as well.</p>
+
+
+
+<p>Ah, lots of things cooking which we wish we could be more detailed about, but once others are involved, it isn&#8217;t yet the best time to disclose information about all the fun stuff (not yet)</p>
+
+
+
+<h2>Week #462</h2>
+
+
+
+<p>This week is back to some health survey tasks. Lots of little tweaks to some of the report charts meant re-caching everything. These things aren&#8217;t difficult, just time consuming. Later in the week, we had a discussion about the fun in programming is directly proportional to the speed of the feedback loop. If you can write something, press GO and see it. It is a lot of fun to iterate. If you write code, press GO and it takes an hour to compile, upload, deploy dependencies, cache, start, then give you an answer, the fun drops enormously!</p>
+
+
+
+<p>Tuesday afternoon was spent at the local <a href="https://www.fablab.is">FabLab</a>. We needed some new window stickers which listed the names and companies in the house. So while we were there, we went ahead and made a bunch of fun things.</p>
+
+
+
+<figure class="banner"><img src="../../../../wp-content/uploads/2019/12/tiles-pattern-1024x856.png" alt="icelandic themed tiles" /><figcaption>A series of tiles with Icelandic themes are arranged.</figcaption></figure>
+
+
+
+<figure class="banner"><img src="../../../../wp-content/uploads/2019/12/door-sticker.jpg" alt="Vinyl window stickers"/><figcaption>Vinyl sticker for window glass. Cut in reverse.</figcaption></figure>
+
+
+
+<p>Wednesday was a half-day onsite with a client and a half-day reviewing most of the reports changes earlier in the week.</p>
+
+
+
+<p>The rest of the week has been mostly administrative. People and companies are starting to slow-down as the holiday season approaches, so we&#8217;ve finished-up a few tasks, tallied-up some hours for invoices and sent off a few final emails of 02019!</p>
+
+
+
+<p><strong>We&#8217;ll be back in 02020!</strong></p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../../../../tag/fablab/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8f4645">fablab</a>, <a href="../../../../tag/qr-code/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0b9d04">qr code</a>, <a href="../../../../tag/stickers/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a41837">stickers</a></p>			  </div>
+			
+		<div class="navigation">
+			<div class="prev"><div class="time">10 December 02019</div><a href="../../10/material-2017-synopses/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a71be4">&laquo; Material: 2017 Synopses</a></div>
+			<div class="next"><div class="time">06 January 02020</div><a href="../../../../2020/01/06/omnibus-02019/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #88c8c9">Omnibus 02019 &raquo;</a></div>
+		</div>
+
+			</div>
+			<!-- call out footer -->
+			<div class="callout-footer" style="padding-top: 1em; border-top: 2px solid #e80d9d; border-bottom: 2px solid #e80d9d; font-size: 120%">
+			<p>You've been reading optional.is/required/ a blog about technology, culture, paper and other interesting topics, since 02009. The easiest way to stay current is to grab the <a href="http://feeds2.feedburner.com/optional?format=xml">RSS Feed</a>.</p>
+
+			<p><a href="../../../../../newsletter/index.html">Subscribe to the quarterly mailing list</a> to receive interesting stories, links and updates.</p>
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+  <div style="float: left; font-size: 16px;">
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+</div> 
+<a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.231 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2020-01-31 16:34:17 -->
+
+<!-- super cache -->

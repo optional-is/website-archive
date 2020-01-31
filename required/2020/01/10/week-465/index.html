@@ -1,0 +1,614 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Week #465 &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="https://optional.is/required/wp-content/themes/optional/style.css" type="text/css" media="all" />
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="https://optional.is/required/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@optionalBot">
+<meta name="twitter:title" content="Week #465">
+<meta name="twitter:description" content="A busy first week back, we made a small prototype weaving pattern generator.">
+<meta name="twitter:creator" content="@optionalBot">
+<meta name="twitter:domain" content="http://optional.is">
+</head>
+<body>
+<div id="header">
+<h1><a href="https://optional.is/required/">(optional.is)</a></h1>
+</div>
+			
+		<div class="post-4428 post type-post status-publish format-standard hentry category-weeknotes tag-calls tag-loom tag-robocall tag-sip tag-weaving tag-weeknotes" id="post-4428">
+			<h2 style="border-bottom: 2px solid #aba3cb">Week #465</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2020-01-10T13:31:43+00:00">Friday, January 10th, 02020 at 13:31 UTC</abbr></div>
+				
+<p>We shutdown for weeks #463 &amp; #464, but we&#8217;re back with a great week #465.</p>
+
+
+
+<p>This week share&#8217;s its name with <a href="https://en.wikipedia.org/wiki/Triangular_number">465 the triangular number</a>. If you had 465 objects, you could arrange them into a nice equilateral triangle, 1, 2 3, 4, 5, &#8230; in each row. If you totalled them, they would equal 465! It is also name to the <a href="https://en.wikipedia.org/wiki/British_Rail_Class_465">British Rail Class 465<em> Networker</em></a>, a series of electric british trains, <a href="https://en.wikipedia.org/wiki/465_Alekto">465 Alekto</a> a minor planet and an <a href="https://en.wikipedia.org/wiki/465_(film)">Indian horror film</a>.</p>
+
+
+
+<h2>Weaving Patterns</h2>
+
+
+
+<p>It is post-christmas and all the bookstores would rather give you 20-50% off the price than send them back to the distributors. So we picked-up this amazing book about Loom Weaving called <em>Listin að vefa</em>.</p>
+
+
+
+<figure class="banner"><img src="../../../../wp-content/uploads/2020/01/Listin_ad_vefa_72-798x1024.jpg" alt="Listin að vefa" class="wp-image-4432" srcset="../../../../wp-content/uploads/2020/01/Listin_ad_vefa_72-798x1024.jpg 798w, ../../../../wp-content/uploads/2020/01/Listin_ad_vefa_72-234x300.jpg 234w, ../../../../wp-content/uploads/2020/01/Listin_ad_vefa_72-768x985.jpg 768w, ../../../../wp-content/uploads/2020/01/Listin_ad_vefa_72.jpg 1000w" sizes="(max-width: 798px) 100vw, 798px" /><figcaption><cite>Listin að vefa</cite></figcaption></figure>
+
+
+
+<p>In it there are lots of patterns and instructions on how to setup your loom. There are three main aspects, the vertical threads, the horizontal treadles and the tie-up box which connects the other two. Once you decode the instructions, the patterns fall into place.</p>
+
+
+
+<figure class="banner"><img src="../../../../wp-content/uploads/2020/01/IMG_7822-1024x920.jpg" alt="A Page from the book showing four weaving patterns." /><figcaption>A Page from the book showing four weaving patterns.</figcaption></figure>
+
+
+
+<p>These are four patterns from the book showing how you&#8217;d setup your loom to weave them. We took those instructions and made a bit of javascript and form elements to allow you to experiment and make your own patterns.</p>
+
+
+
+<figure class="banner"><img src="../../../../wp-content/uploads/2020/01/Screen-Shot-2020-01-09-at-09.53.59-1024x503.png" alt="Prototype webpage for loom pattern generator" /><figcaption>Prototype of an online weaving pattern generator.</figcaption></figure>
+
+
+
+<p>It was a lot of fun making this quick prototype. When we have a bit of time, it would be good to try and clean it all up and make a proper URL for it so anyone can make something for themselves.</p>
+
+
+
+<style>
+			td { width: 30px; height: 30px; text-align: center; }
+			.box { background-color: #fff; }
+			.th { background-color: #fdfdfd; }
+		</style>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<form>
+		<table>
+			<tr>
+				<td class="color" id="1_1"></td>
+				<td class="color" id="1_2"></td>
+				<td class="color" id="1_3"></td>
+				<td class="color" id="1_4"></td>
+				<td class="color" id="1_5"></td>
+				<td class="color" id="1_6"></td>
+				<td class="color" id="1_7"></td>
+				<td class="color" id="1_8"></td>
+				<td class="color" id="1_9"></td>
+				<td class="color" id="1_10"></td>
+				<td class="color" id="1_11"></td>
+				<td class="color" id="1_12"></td>
+				<td class="color" id="1_13"></td>
+				<td class="color" id="1_14"></td>
+				<td class="color" id="1_15"></td>
+				<td class="color" id="1_16"></td>
+				<td class="color" id="1_17"></td>
+				<td class="color" id="1_18"></td>
+				<td class="color" id="1_19"></td>
+				<td class="color" id="1_20"></td>
+
+				<td class="th"><input id="r11" type="radio" name="a_1" value="0" checked="checked"/></td>
+				<td class="th"><input id="r12" type="radio" name="a_1" value="0"/></td>
+				<td class="th"><input id="r13" type="radio" name="a_1" value="0"/></td>
+				<td class="th"><input id="r14" type="radio" name="a_1" value="0"/></td>
+				<td class="th"><input id="r1_c" type="text" value="#dedede"/></td>
+			</tr>
+			<tr>
+				<td class="color" id="2_1"></td>
+				<td class="color" id="2_2"></td>
+				<td class="color" id="2_3"></td>
+				<td class="color" id="2_4"></td>
+				<td class="color" id="2_5"></td>
+				<td class="color" id="2_6"></td>
+				<td class="color" id="2_7"></td>
+				<td class="color" id="2_8"></td>
+				<td class="color" id="2_9"></td>
+				<td class="color" id="2_10"></td>
+				<td class="color" id="2_11"></td>
+				<td class="color" id="2_12"></td>
+				<td class="color" id="2_13"></td>
+				<td class="color" id="2_14"></td>
+				<td class="color" id="2_15"></td>
+				<td class="color" id="2_16"></td>
+				<td class="color" id="2_17"></td>
+				<td class="color" id="2_18"></td>
+				<td class="color" id="2_19"></td>
+				<td class="color" id="2_20"></td>
+
+				<td class="th"><input type="radio" id="r21" name="a_2" value="0"/></td>
+				<td class="th"><input type="radio" id="r22" name="a_2" value="0" checked="checked"/></td>
+				<td class="th"><input type="radio" id="r23" name="a_2" value="0"/></td>
+				<td class="th"><input type="radio" id="r24" name="a_2" value="0"/></td>
+				<td class="th"><input id="r2_c" type="text" value="#dedede"/></td>
+			</tr>
+			<tr>
+				<td class="color" id="3_1"></td>
+				<td class="color" id="3_2"></td>
+				<td class="color" id="3_3"></td>
+				<td class="color" id="3_4"></td>
+				<td class="color" id="3_5"></td>
+				<td class="color" id="3_6"></td>
+				<td class="color" id="3_7"></td>
+				<td class="color" id="3_8"></td>
+				<td class="color" id="3_9"></td>
+				<td class="color" id="3_10"></td>
+				<td class="color" id="3_11"></td>
+				<td class="color" id="3_12"></td>
+				<td class="color" id="3_13"></td>
+				<td class="color" id="3_14"></td>
+				<td class="color" id="3_15"></td>
+				<td class="color" id="3_16"></td>
+				<td class="color" id="3_17"></td>
+				<td class="color" id="3_18"></td>
+				<td class="color" id="3_19"></td>
+				<td class="color" id="3_20"></td>
+
+				<td class="th"><input id="r31" type="radio" name="a_3" value="0"/></td>
+				<td class="th"><input id="r32" type="radio" name="a_3" value="0"/></td>
+				<td class="th"><input id="r33" type="radio" name="a_3" value="0" checked="checked"/></td>
+				<td class="th"><input id="r34" type="radio" name="a_3" value="0"/></td>
+				<td class="th"><input id="r3_c" type="text" value="#dedede"/></td>
+			</tr>
+			<tr>
+				<td class="color" id="4_1"></td>
+				<td class="color" id="4_2"></td>
+				<td class="color" id="4_3"></td>
+				<td class="color" id="4_4"></td>
+				<td class="color" id="4_5"></td>
+				<td class="color" id="4_6"></td>
+				<td class="color" id="4_7"></td>
+				<td class="color" id="4_8"></td>
+				<td class="color" id="4_9"></td>
+				<td class="color" id="4_10"></td>
+				<td class="color" id="4_11"></td>
+				<td class="color" id="4_12"></td>
+				<td class="color" id="4_13"></td>
+				<td class="color" id="4_14"></td>
+				<td class="color" id="4_15"></td>
+				<td class="color" id="4_16"></td>
+				<td class="color" id="4_17"></td>
+				<td class="color" id="4_18"></td>
+				<td class="color" id="4_19"></td>
+				<td class="color" id="4_20"></td>
+
+				<td class="th"><input type="radio" id="r41" name="a_4" value="0"/></td>
+				<td class="th"><input type="radio" id="r42" name="a_4" value="0"/></td>
+				<td class="th"><input type="radio" id="r43" name="a_4" value="0"/></td>
+				<td class="th"><input type="radio" id="r44" name="a_4" value="0" checked="checked"/></td>
+				<td class="th"><input id="r4_c" type="text" value="#dedede"/></td>
+			</tr>
+			<tr>
+				<td class="color" id="5_1"></td>
+				<td class="color" id="5_2"></td>
+				<td class="color" id="5_3"></td>
+				<td class="color" id="5_4"></td>
+				<td class="color" id="5_5"></td>
+				<td class="color" id="5_6"></td>
+				<td class="color" id="5_7"></td>
+				<td class="color" id="5_8"></td>
+				<td class="color" id="5_9"></td>
+				<td class="color" id="5_10"></td>
+				<td class="color" id="5_11"></td>
+				<td class="color" id="5_12"></td>
+				<td class="color" id="5_13"></td>
+				<td class="color" id="5_14"></td>
+				<td class="color" id="5_15"></td>
+				<td class="color" id="5_16"></td>
+				<td class="color" id="5_17"></td>
+				<td class="color" id="5_18"></td>
+				<td class="color" id="5_19"></td>
+				<td class="color" id="5_20"></td>
+
+				<td class="th"><input id="r51" type="radio" name="a_5" value="0"/></td>
+				<td class="th"><input id="r52" type="radio" name="a_5" value="0"/></td>
+				<td class="th"><input id="r53" type="radio" name="a_5" value="0" checked="checked"/></td>
+				<td class="th"><input id="r54" type="radio" name="a_5" value="0"/></td>
+				<td class="th"><input id="r5_c" type="text" value="#dedede"/></td>
+
+			</tr>
+			<tr>
+				<td class="color" id="6_1"></td>
+				<td class="color" id="6_2"></td>
+				<td class="color" id="6_3"></td>
+				<td class="color" id="6_4"></td>
+				<td class="color" id="6_5"></td>
+				<td class="color" id="6_6"></td>
+				<td class="color" id="6_7"></td>
+				<td class="color" id="6_8"></td>
+				<td class="color" id="6_9"></td>
+				<td class="color" id="6_10"></td>
+				<td class="color" id="6_11"></td>
+				<td class="color" id="6_12"></td>
+				<td class="color" id="6_13"></td>
+				<td class="color" id="6_14"></td>
+				<td class="color" id="6_15"></td>
+				<td class="color" id="6_16"></td>
+				<td class="color" id="6_17"></td>
+				<td class="color" id="6_18"></td>
+				<td class="color" id="6_19"></td>
+				<td class="color" id="6_20"></td>
+
+				<td class="th"><input type="radio" id="r61" name="a_6" value="0"/></td>
+				<td class="th"><input type="radio" id="r62" name="a_6" value="0" checked="checked"/></td>
+				<td class="th"><input type="radio" id="r63" name="a_6" value="0"/></td>
+				<td class="th"><input type="radio" id="r64" name="a_6" value="0"/></td>
+				<td class="th"><input id="r6_c" type="text" value="#dedede"/></td>
+			</tr>
+
+			<tr>
+				<td class="color" id="7_1"></td>
+				<td class="color" id="7_2"></td>
+				<td class="color" id="7_3"></td>
+				<td class="color" id="7_4"></td>
+				<td class="color" id="7_5"></td>
+				<td class="color" id="7_6"></td>
+				<td class="color" id="7_7"></td>
+				<td class="color" id="7_8"></td>
+				<td class="color" id="7_9"></td>
+				<td class="color" id="7_10"></td>
+				<td class="color" id="7_11"></td>
+				<td class="color" id="7_12"></td>
+				<td class="color" id="7_13"></td>
+				<td class="color" id="7_14"></td>
+				<td class="color" id="7_15"></td>
+				<td class="color" id="7_16"></td>
+				<td class="color" id="7_17"></td>
+				<td class="color" id="7_18"></td>
+				<td class="color" id="7_19"></td>
+				<td class="color" id="7_20"></td>
+
+				<td class="th"><input type="radio" id="r71" name="a_7" value="0" checked="checked"/></td>
+				<td class="th"><input type="radio" id="r72" name="a_7" value="0"/></td>
+				<td class="th"><input type="radio" id="r73" name="a_7" value="0"/></td>
+				<td class="th"><input type="radio" id="r74" name="a_7" value="0"/></td>
+				<td class="th"><input id="r7_c" type="text" value="#dedede"/></td>
+			</tr>
+			<tr>
+				<td class="color" id="8_1"></td>
+				<td class="color" id="8_2"></td>
+				<td class="color" id="8_3"></td>
+				<td class="color" id="8_4"></td>
+				<td class="color" id="8_5"></td>
+				<td class="color" id="8_6"></td>
+				<td class="color" id="8_7"></td>
+				<td class="color" id="8_8"></td>
+				<td class="color" id="8_9"></td>
+				<td class="color" id="8_10"></td>
+				<td class="color" id="8_11"></td>
+				<td class="color" id="8_12"></td>
+				<td class="color" id="8_13"></td>
+				<td class="color" id="8_14"></td>
+				<td class="color" id="8_15"></td>
+				<td class="color" id="8_16"></td>
+				<td class="color" id="8_17"></td>
+				<td class="color" id="8_18"></td>
+				<td class="color" id="8_19"></td>
+				<td class="color" id="8_20"></td>
+
+				<td class="th"><input type="radio" id="r81" name="a_8" value="0"/></td>
+				<td class="th"><input type="radio" id="r82" name="a_8" value="0" checked="checked"/></td>
+				<td class="th"><input type="radio" id="r83" name="a_8" value="0"/></td>
+				<td class="th"><input type="radio" id="r84" name="a_8" value="0"/></td>
+				<td class="th"><input id="r8_c" type="text" value="#dedede"/></td>
+			</tr>
+			<tr>
+				<td class="color" id="9_1"></td>
+				<td class="color" id="9_2"></td>
+				<td class="color" id="9_3"></td>
+				<td class="color" id="9_4"></td>
+				<td class="color" id="9_5"></td>
+				<td class="color" id="9_6"></td>
+				<td class="color" id="9_7"></td>
+				<td class="color" id="9_8"></td>
+				<td class="color" id="9_9"></td>
+				<td class="color" id="9_10"></td>
+				<td class="color" id="9_11"></td>
+				<td class="color" id="9_12"></td>
+				<td class="color" id="9_13"></td>
+				<td class="color" id="9_14"></td>
+				<td class="color" id="9_15"></td>
+				<td class="color" id="9_16"></td>
+				<td class="color" id="9_17"></td>
+				<td class="color" id="9_18"></td>
+				<td class="color" id="9_19"></td>
+				<td class="color" id="9_20"></td>
+
+				<td class="th"><input type="radio" id="r91" name="a_9" value="0" checked="checked"/></td>
+				<td class="th"><input type="radio" id="r92" name="a_9" value="0"/></td>
+				<td class="th"><input type="radio" id="r93" name="a_9" value="0"/></td>
+				<td class="th"><input type="radio" id="r94" name="a_9" value="0"/></td>
+				<td class="th"><input id="r9_c" type="text" value="#dedede"/></td>
+			</tr>
+
+
+			<tr>
+				<td><input type="radio" id="r1_1" name="t_1" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r1_2" name="t_2" value="0" /></td>
+				<td><input type="radio" id="r1_3" name="t_3" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r1_4" name="t_4" value="0" /></td>
+				<td><input type="radio" id="r1_5" name="t_5" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r1_6" name="t_6" value="0" /></td>
+				<td><input type="radio" id="r1_7" name="t_7" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r1_8" name="t_8" value="0" /></td>
+				<td><input type="radio" id="r1_9" name="t_9" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r1_10" name="t_10" value="0" /></td>
+				<td><input type="radio" id="r1_11" name="t_11" value="0" /></td>
+				<td><input type="radio" id="r1_12" name="t_12" value="0" /></td>
+				<td><input type="radio" id="r1_13" name="t_13" value="0" /></td>
+				<td><input type="radio" id="r1_14" name="t_14" value="0" /></td>
+				<td><input type="radio" id="r1_15" name="t_15" value="0" /></td>
+				<td><input type="radio" id="r1_16" name="t_16" value="0" /></td>
+				<td><input type="radio" id="r1_17" name="t_17" value="0" /></td>
+				<td><input type="radio" id="r1_18" name="t_18" value="0" /></td>
+				<td><input type="radio" id="r1_19" name="t_19" value="0" /></td>
+				<td><input type="radio" id="r1_20" name="t_20" value="0" /></td>
+
+				<td class="box"><input type="checkbox" id="a11" value="0" checked="checked"/></td>
+				<td class="box"><input type="checkbox" id="a12" value="1"/></td>
+				<td class="box"><input type="checkbox" id="a13" value="0" checked="checked"/></td>
+				<td class="box"><input type="checkbox" id="a14" value="1" checked="checked"/></td>
+			</tr>
+			<tr>
+				<td><input type="radio" id="r2_1" name="t_1" value="0"/></td>
+				<td><input type="radio" id="r2_2" name="t_2" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r2_3" name="t_3" value="0"/></td>
+				<td><input type="radio" id="r2_4" name="t_4" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r2_5" name="t_5" value="0"/></td>
+				<td><input type="radio" id="r2_6" name="t_6" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r2_7" name="t_7" value="0"/></td>
+				<td><input type="radio" id="r2_8" name="t_8" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r2_9" name="t_9" value="0"/></td>
+				<td><input type="radio" id="r2_10" name="t_10" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r2_11" name="t_11" value="0"/></td>
+				<td><input type="radio" id="r2_12" name="t_12" value="0"/></td>
+				<td><input type="radio" id="r2_13" name="t_13" value="0"/></td>
+				<td><input type="radio" id="r2_14" name="t_14" value="0"/></td>
+				<td><input type="radio" id="r2_15" name="t_15" value="0"/></td>
+				<td><input type="radio" id="r2_16" name="t_16" value="0"/></td>
+				<td><input type="radio" id="r2_17" name="t_17" value="0"/></td>
+				<td><input type="radio" id="r2_18" name="t_18" value="0"/></td>
+				<td><input type="radio" id="r2_19" name="t_19" value="0"/></td>
+				<td><input type="radio" id="r2_20" name="t_20" value="0"/></td>
+
+				<td class="box"><input type="checkbox" class="box"  id="a21" value="0" /></td>
+				<td class="box"><input type="checkbox" class="box"  id="a22" value="1" checked="checked"/></td>
+				<td class="box"><input type="checkbox" class="box"  id="a23" value="0" /></td>
+				<td class="box"><input type="checkbox" class="box"  id="a24" value="1" checked="checked"/></td>
+			</tr>
+
+						<tr>
+				<td><input type="radio" id="r3_1" name="t_1" value="0" /></td>
+				<td><input type="radio" id="r3_2" name="t_2" value="0" /></td>
+				<td><input type="radio" id="r3_3" name="t_3" value="0" /></td>
+				<td><input type="radio" id="r3_4" name="t_4" value="0" /></td>
+				<td><input type="radio" id="r3_5" name="t_5" value="0" /></td>
+				<td><input type="radio" id="r3_6" name="t_6" value="0" /></td>
+				<td><input type="radio" id="r3_7" name="t_7" value="0" /></td>
+				<td><input type="radio" id="r3_8" name="t_8" value="0" /></td>
+				<td><input type="radio" id="r3_9" name="t_9" value="0" /></td>
+				<td><input type="radio" id="r3_10" name="t_10" value="0"/></td>
+				<td><input type="radio" id="r3_11" name="t_11" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r3_12" name="t_12" value="0"/></td>
+				<td><input type="radio" id="r3_13" name="t_13" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r3_14" name="t_14" value="0"/></td>
+				<td><input type="radio" id="r3_15" name="t_15" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r3_16" name="t_16" value="0"/></td>
+				<td><input type="radio" id="r3_17" name="t_17" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r3_18" name="t_18" value="0"/></td>
+				<td><input type="radio" id="r3_19" name="t_19" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r3_20" name="t_20" value="0"/></td>
+
+				<td class="box"><input type="checkbox" class="box" id="a31" value="0" checked="checked"/></td>
+				<td class="box"><input type="checkbox" class="box" id="a32" value="1"/></td>
+				<td class="box"><input type="checkbox" class="box" id="a33" value="0" checked="checked"/></td>
+				<td class="box"><input type="checkbox" class="box" id="a34" value="1"/></td>
+			</tr>
+			<tr>
+				<td><input type="radio" id="r4_1" name="t_1" value="0"/></td>
+				<td><input type="radio" id="r4_2" name="t_2" value="0"/></td>
+				<td><input type="radio" id="r4_3" name="t_3" value="0"/></td>
+				<td><input type="radio" id="r4_4" name="t_4" value="0"/></td>
+				<td><input type="radio" id="r4_5" name="t_5" value="0"/></td>
+				<td><input type="radio" id="r4_6" name="t_6" value="0"/></td>
+				<td><input type="radio" id="r4_7" name="t_7" value="0"/></td>
+				<td><input type="radio" id="r4_8" name="t_8" value="0"/></td>
+				<td><input type="radio" id="r4_9" name="t_9" value="0"/></td>
+				<td><input type="radio" id="r4_10" name="t_10" value="0"/></td>
+				<td><input type="radio" id="r4_11" name="t_11" value="0"/></td>
+				<td><input type="radio" id="r4_12" name="t_12" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r4_13" name="t_13" value="0"/></td>
+				<td><input type="radio" id="r4_14" name="t_14" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r4_15" name="t_15" value="0"/></td>
+				<td><input type="radio" id="r4_16" name="t_16" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r4_17" name="t_17" value="0"/></td>
+				<td><input type="radio" id="r4_18" name="t_18" value="0" checked="checked"/></td>
+				<td><input type="radio" id="r4_19" name="t_19" value="0"/></td>
+				<td><input type="radio" id="r4_20" name="t_20" value="0" checked="checked"/></td>
+
+				<td class="box"><input type="checkbox" class="box" id="a41" value="0" checked="checked"/></td>
+				<td class="box"><input type="checkbox" class="box" id="a42" value="0" checked="checked"/></td>
+				<td class="box"><input type="checkbox" class="box" id="a43" value="0"/></td>
+				<td class="box"><input type="checkbox" class="box" id="a44" value="0"/></td>
+			</tr>
+
+			<tr>
+				<td><input type="input" id="c1_c"  value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c2_c"  value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c3_c"  value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c4_c"  value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c5_c"  value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c6_c"  value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c7_c"  value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c8_c"  value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c9_c"  value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c10_c" value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c11_c" value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c12_c" value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c13_c" value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c14_c" value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c15_c" value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c16_c" value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c17_c" value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c18_c" value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c19_c" value="#000000" style="width:20px"/></td>
+				<td><input type="input" id="c20_c" value="#000000" style="width:20px"/></td>
+
+			</tr>
+
+		</table>
+		</form>
+		<script type="text/javascript">
+			$('input').click(function(){
+				draw()
+			})
+
+			function draw(){
+				th_rows = 9
+				th_cols = 20
+				for(var i = 1; i<=th_rows; i++){
+					peddle = $('input[name=a_'+i+']:checked').attr('id').substring(2,3)
+					for(var j = 1; j<=th_cols; j++){
+						hook = $('input[name=t_'+j+']:checked').attr('id').substring(1,2)
+						//console.log('i='+i+' || j='+j)
+						//console.log(peddle)
+						//console.log(hook)
+						//console.log($('#a'+hook+''+peddle).is(':checked'))
+
+						if ($('#a'+hook+''+peddle).is(':checked')){
+							$('#'+i+'_'+j).css('background-color',$('#r'+i+'_c').val())
+						} else {
+							$('#'+i+'_'+j).css('background-color',$('#c'+j+'_c').val())
+						}
+					}
+				}
+			}
+			draw()
+		</script>
+
+
+
+<p>Go ahead and click around, type in some new hex color values and see what you can create.</p>
+
+
+
+<h2>SIP Calls</h2>
+
+
+
+<p>As part of our survey tools, we offer the ability to make human phone calls to participants to remind them to finish the survey. This week we build a small beta tool which uses Twilio's ability to make automated outbound calls. These are known as Robocalls! Normally, this is a spammy grey-to-illegal areas, but the the participants in our survey have accepted to take part, they (as all of us) need some encouragement and reminders to finish.</p>
+
+
+
+<p>Human calling is tiresome, long and expensive. That's why we first try to remind people via email, the SMS, then email, then finally after we've gotten as far with our participation rate as we can, we switch to human calling. </p>
+
+
+
+<p>Soon, we'll test one more step before getting humans involved and that's our robocall. It both reminds people to take part in multiple languages, but also allows them to get a link to the survey resent to their email. We'll A/B this on some customers and based on feedback and results, continue or not.</p>
+
+
+
+<h2>Material Conference</h2>
+
+
+
+<p>This week we locked down the venue for the event. That way we at least have something for the 20th of March. In the next few weeks we'll make the decision if we move to something larger very nearby.</p>
+
+
+
+<p>After finishing all the <a href="https://optional.is/required/category/material/">02017 synopses</a>, we started in on the 2018 sessions. First-up was <a href="../../08/material-craft-on-the-web-charlotte-dann/index.html">Charlotte Dann's <em>Craft on the Web</em></a>. The plan is to keep posting one a week right up until the 2020 event.</p>
+
+
+
+<h2>Projects</h2>
+
+
+
+<p>Finally, we managed to do a bunch of work on our Stealth Project, getting more API and push notification tools integrated into the website.</p>
+
+
+
+<p>We did a quick analysis on some AI Survey data for O'Reilly which should be available in a few months.</p>
+
+
+
+<p>Spent some pair-programming time. It is amazing how you can bang your head against a wall trying to get something to work for 3 hours, then go for a 10 minute walk and it all clicks! At least next week, we can go back to making more progress.</p>
+
+
+
+<p>We had a few other meetings regarding our eBike idea, some of our Icelandic design patterns and with another survey client to help plan the year.</p>
+
+
+
+<h2>On Business</h2>
+
+
+
+<p>We have 1 outstanding invoice. It usually gets paid by the middle of the month, so we'll start worrying next weeknote if it's still not there.</p>
+
+
+
+<p>More than six monhs ago, we were contact by a potential client who wanted some help with data viz work. We pestered off and on and he was apologetic and was going to get back to me. Finally, we learnt he's been so frustrated he's taking 02020 off on a sabbatical. Maybe next year we can start again discussing this project. That's business.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../../../../tag/calls/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f2bb91">calls</a>, <a href="../../../../tag/loom/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f8d1ce">loom</a>, <a href="../../../../tag/robocall/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #beeeb6">robocall</a>, <a href="../../../../tag/sip/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #06b15d">sip</a>, <a href="../../../../tag/weaving/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d50b5f">weaving</a>, <a href="http://optional.is/required/tag/weeknotes/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p>			  </div>
+			
+		<div class="navigation">
+			<div class="prev"><div class="time">08 January 02020</div><a href="../../08/material-craft-on-the-web-charlotte-dann/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ceb3c5">&laquo; Material: Craft on the Web - Charlotte Dann</a></div>
+			<div class="next"><div class="time">15 January 02020</div><a href="../../15/material-worldmapper-benjamin-hennig/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d2baaf">Material: Worldmapper - Benjamin Hennig &raquo;</a></div>
+		</div>
+
+			</div>
+			<!-- call out footer -->
+			<div class="callout-footer" style="padding-top: 1em; border-top: 2px solid #aba3cb; border-bottom: 2px solid #aba3cb; font-size: 120%">
+			<p>You've been reading optional.is/required/ a blog about technology, culture, paper and other interesting topics, since 02009. The easiest way to stay current is to grab the <a href="http://feeds2.feedburner.com/optional?format=xml">RSS Feed</a>.</p>
+
+			<p><a href="../../../../../newsletter/index.html">Subscribe to the quarterly mailing list</a> to receive interesting stories, links and updates.</p>
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+  <div style="float: left; font-size: 16px;">
+<form method="get" id="searchform" action="../../../../index.html" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+</div> 
+<a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.274 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2020-01-31 16:34:16 -->
+
+<!-- super cache -->
