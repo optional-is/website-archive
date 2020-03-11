@@ -1,99 +1,568 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<base href="" />
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-	<meta http-equiv="Content-Language" content="en-us" />
-	<meta name="google-site-verification" content="NU2VGyLRaV2ouJZYY7Yw2J8cMccR7hU-GsRC-i_inKU" />
-	<link rel="apple-touch-icon-precomposed" href="../../../images/apple-touch-icon-precomposed.png"/>
-	<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" /> 
-
-	<title>(optional.is)</title>
-	<style type="text/css">
-        html, body	{ background-color: #f4f4f4; margin: 0 auto; text-align: center; font: 100%/1.5 "Lucida Grande",Helvetica,Arial,sans-serif; }
-	h1, h2 { margin: 0; padding: 0; border-top: 5px solid #70047c;}
-        body { font-size: 80%;}
-        img { border: 0;}
-        a { color: black; text-decoration: none; }
-        ul li a:hover { background-color: #ccc; }
-	ul li a { display: block; padding: 2px 5px }
-        
-        ul { padding: 0; margin: 0;}
-        li { list-style-type: none; }
-	.feed { background-image:url("https://suda.co.uk/images/feed.gif"); background-position:3px 50%; background-repeat:no-repeat; 
-padding-left:20px; }
-	.navigation a, .readmore { font-weight: bold; color: #003F87; text-decoration: underline;}
-
-
-@font-face {
-  font-family: 'optional';
-    src: url("../../../fonts/optional.eot");
-    src: local('optional'),
-       url("../../../fonts/optional.svg") format('svg'),
-       url("../../../fonts/optional.otf") format('opentype');
-}
-#header h1 { border-top: 0; font-weight: normal; }
-#header h1 a { font-family: optional; text-decoration: none; font-size: 65px; line-height: 140px; text-align: left; }
-#footer .url { font-family: optional; text-decoration: none; font-size: 26px; }
-
-	</style>
-
-</head>
-<body>
-    <div style="width: 960px; margin: 0 auto; position: relative;">
-        <div style="text-align: left; height: 161px;">
-            <div id="header">
-		<h1><a href="../../index.html">(optional.is)</a></h1>
-	    </div>
-
-	    <div id="toolbar" style="text-align: right; position: absolute; top: 3px; left: 496px; width: 464px;">
-<a class="feed" href="http://feeds2.feedburner.com/optional?format=xml">Feed</a> <form style="display: inline" action="https://optional.is/required/" method="get"><input type="text" name="s" /><input type="submit" 
-value="search" 
-/></form></div>
-        </div>
-
-
-
-
-	<div style="position: absolute; top: 161px; left: 0px; text-align: left; width: 787px">
-					
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Language" content="en-us">
+		<meta name="google-site-verification" content="NU2VGyLRaV2ouJZYY7Yw2J8cMccR7hU-GsRC-i_inKU">
+		<link rel="apple-touch-icon-precomposed" href="../../../images/apple-touch-icon-precomposed.png">
+		<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@optionalBot">
+		<meta name="twitter:title" content="(optional.is)">
+		<meta name="twitter:domain" content="https://optional.is"><meta name="twitter:description" content="A small company based out of Reykjavik, Iceland specializing in future thinking projects">
+		<meta name="twitter:creator" content="@optionalBot">
+		<title>(optional.is)</title>
+		<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<style>
+html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding: 0; }
+			html, body { background-color: #f7f7f7; font-family: Helvetica, Arial, sanserif}
 			
-		 				<h1 style="border-color: #11ce72">Chained Libraries</h1>
- 			<p style="color: #aaa; font-weight: bold">Thursday, August 12th, 02010</p>
-			<p><p>From the middle ages up to the 18th century, books were so valuable that chains were attached to the books to prevent them from wandering off. In this day and age, books are so cheap and ubiquitous that we are less concerned about their material value. The new chains are DRM, the excuse of control and value are the same even though the digital product costs effectively nothing.</p>
-</p>
-		 	<a style="margin-bottom: 60px; display: block"  class="readmore" href="https://optional.is/required/2010/08/12/chained-libraries/" title="Permanent Link to Chained Libraries">Read more about Chained Libraries</a>
-         	
-		 				<div class="navigation">
-				<div class="prev"></div>
-				<div class="next"></div>
+			p, h1, h2, h3, ul, ol, li, form, iframe { margin: 0 auto; padding:0; font-size: 14px; line-height: 30px;  width: 100%; text-align: center; color: #444; }
+			div, p, h1, h2, h3, li { text-align: left; }
+			
+			
+			p { line-height: 24px; padding-bottom: 12px;}
+			li { list-style: none;}
+			
+			h1 { clear: both; font-size: 22px; line-height: 58px; color: #222; text-transform: uppercase; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica-Light", "Helvetica Light","Helvetica Neue"; font-weight: normal; margin-bottom: 18px; border-top: 1px solid #dedede; zborder-bottom: 1px solid #dedede;  }
+			
+			h2 { border-top: 1px solid #dedede; font-size: 18px; line-height: 28px; padding: 8px 0px; color: #222; text-transform: uppercase; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica-Light", "Helvetica Light","Helvetica Neue"; font-weight: normal; }
+			.sub h2 {  border: none; line-height: 45px;  }
+			
+			
+			img { width: 100%; height: 100%;}
+			img.logos { width: auto; height: auto; vertical-align: middle; padding: 0 1em;}
+			.center { text-align: center; }
+			
+			.row { clear: both; margin: 0 auto; width: 960px;  }
+			.box1 { width: 470px; float: left; margin-right: 20px; }
+			.box2 { width: 225px; float: left; margin-right: 20px; }
+			.inverted { background-color: #d4d4d4; }
+			.inverted>* { padding: 0 .5em; width: auto; }
+			.row div:last-child { margin-right: 0; }
+			.main, .feature { width: 100%; height: 353px; margin-bottom: 10px; }
+			.sub { width: 100%; height: 146px; margin-bottom: 10px; }
+			.call-out { margin-bottom: 18px; border-top: 1px solid #dedede; border-bottom: 1px solid #dedede; }
+			.call-out a { width: 100%; display: block; font-weight: bold; }
+			.call-out a:hover,li a:hover { background-color: #dedede; }
+			a span { padding-left: 5px;}
+			
+			.thumbnail { height: 186px; margin-bottom: 20px;}
+			.thumbnail a { display: block; height: 100%; width: 100%; text-indent: -9999px; padding: 0; margin: 0; overflow: hidden; }
+			.feature.stretched { height: 393px;  }
+			.sub.stretched { height: 186px;  border-bottom: 1px solid #dedede; }
+			.main.stretched { height: 392px; border-bottom: 1px solid #dedede; }
+			a { font-weight: normal; color: #003F87; text-decoration: underline;}
+			a:active { position: relative; top:1px; }
+			
+			#categories li, #address li { width: 32%; float: left;}
+			
+			@media only screen and (max-width: 960px) {
+				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
+				.row { width: 470px}
+				.box2 { width: 225px; }
+				.box2+.box2 { margin-right: 0px;  }
+				.box2+.box2+.box2 {  margin-right: 20px; }
+				.box2+.box2+.box2+.box2 {  margin-right: 0px; }
+			}
+			@media only screen and (max-width: 480px) {
+				.row { width: 100%; }
+				.box1 { clear: both; float: none; margin-right: 0; width: 100%; height: auto; }
+				.box2 { margin-right: 0; width: 100%; }
+				.stretched, .main, .sub, .feature { height: auto; }
+				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
+				
+				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				.thumbnail a { max-height: 200px; }
+				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
+				#address li { width: auto; float: none;}
+			}
+			
+			@font-face {
+					  font-family: 'optional';
+					    src: url("../../../fonts/optional.eot");
+					    src: local('optional'),
+					       url("../../../fonts/optional.svg") format('svg'),
+					       url("../../../fonts/optional.otf") format('opentype');
+					}
+			.branded { font-family: optional; }
+			ul li a { display: block; width:100%; }
+			ul li a span { display: block; width: auto;}
+			.section { padding-top: 50px; }
+			xstrong { background-color: #FFFACD; padding: 2px 3px;}
+			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+		</style>
+	</head>
+	<body>
+				<style>
+			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			#header { font-family: optional; font-weight: normal; font-size: 28px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
+
+			.complication { width: 30px; height: 30px; border-radius: 5px; border: 1px solid #f0f0f0; padding: 0; margin: 1em 0.25em; float: right; text-align: center; background-color: #fafafa; }
+			.complication .line1 { font-size: 8px; line-height: 13px; text-align: center; text-transform: uppercase;  color: #999;}
+			.complication .line2 { font-size: 14px; line-height: 14px; text-align: center; color: #aaa; }
+			.complication .line2.small { font-size: 11px; line-height: 15px; text-align: center; }
+			.complication .simple { text-align: center; font-size: 12px; line-height: 30px; }
+		</style>
+		<header>
+			<a href="../../../index.html" id="header">(optional.is)</a>
+
+			<div class="complication">
+				<div class="line1">RVK</div>
+				<div class="line2 small">13:56</div>
 			</div>
-		
+			<div class="complication">
+				<div class="line1">Mar</div>
+				<div class="line2">11</div>
+			</div>
+			<!--
+			<div class="complication">
+				<div class="simple">12℃</div>
+			</div>
+			-->
+		</header>
+		<main>
+					<div class="row">
+			<div class="box2">
+				<h2>ransomware</h2><p></p>			</div>
+			<div class="box2">
+				<h2>Search</h2>
+				<form method="get" id="searchform" action="http://optional.is/required/" style="text-align: center;">
+				<div><input type="text" value="" name="s" id="s"><input type="submit" id="searchsubmit" value="Search"></div>
+			</form>
+			</div>
+			<div class="box1">
+				<h2>Categories</h2>
+					<ul  style="clear: both;" id="categories">
+						<li><a href="https://optional.is/required/category/applications//"><span style="border-left: 10px solid #1ddf33;">Applications</span></a></li><li><a href="../../category/briefs/index.html"><span style="border-left: 10px solid #aa8c5b;">Briefs</span></a></li><li><a href="https://optional.is/required/category/cartography//"><span style="border-left: 10px solid #992978;">Cartography</span></a></li><li><a href="https://optional.is/required/category/case-studies//"><span style="border-left: 10px solid #a0d2b6;">Case Studies</span></a></li><li><a href="https://optional.is/required/category/chromatics//"><span style="border-left: 10px solid #1e7940;">Chromatics</span></a></li><li><a href="https://optional.is/required/category/community//"><span style="border-left: 10px solid #7d6198;">Community</span></a></li><li><a href="https://optional.is/required/category/conferences//"><span style="border-left: 10px solid #d70b59;">Conferences</span></a></li><li><a href="https://optional.is/required/category/education//"><span style="border-left: 10px solid #de7a22;">Education</span></a></li><li><a href="https://optional.is/required/category/experiments//"><span style="border-left: 10px solid #482926;">Experiments</span></a></li><li><a href="../../category/forecast/index.html"><span style="border-left: 10px solid #89c126;">Forecast</span></a></li><li><a href="https://optional.is/required/category/interfaces//"><span style="border-left: 10px solid #756640;">Interfaces</span></a></li><li><a href="https://optional.is/required/category/material//"><span style="border-left: 10px solid #d92a83;">Material</span></a></li><li><a href="../../category/meta/index.html"><span style="border-left: 10px solid #b6755d;">Meta</span></a></li><li><a href="https://optional.is/required/category/paper//"><span style="border-left: 10px solid #d0a662;">Paper</span></a></li><li><a href="https://optional.is/required/category/place//"><span style="border-left: 10px solid #7b9cf0;">Place</span></a></li><li><a href="https://optional.is/required/category/privacy//"><span style="border-left: 10px solid #c5f29b;">Privacy</span></a></li><li><a href="https://optional.is/required/category/sports//"><span style="border-left: 10px solid #918e18;">Sports</span></a></li><li><a href="https://optional.is/required/category/storytelling//"><span style="border-left: 10px solid #d4ccb5;">Storytelling</span></a></li><li><a href="https://optional.is/required/category/t-shirts//"><span style="border-left: 10px solid #bafe5c;">T-Shirts</span></a></li><li><a href="https://optional.is/required/category/temporality//"><span style="border-left: 10px solid #504c77;">Temporality</span></a></li><li><a href="https://optional.is/required/category/travel//"><span style="border-left: 10px solid #1fb0f9;">Travel</span></a></li><li><a href="https://optional.is/required/category/tutorial//"><span style="border-left: 10px solid #368fe7;">Tutorial</span></a></li><li><a href="https://optional.is/required/category/visualizations//"><span style="border-left: 10px solid #b10ac6;">Visualizations</span></a></li><li><a href="https://optional.is/required/category/weeknotes//"><span style="border-left: 10px solid #138567;">Weeknotes</span></a></li><li><a href="https://optional.is/required/category/youre-doing-it-wrong//"><span style="border-left: 10px solid #96e20d;">You're doing it wrong</span></a></li>					</ul>
+			</div>
+		</div>
+							<div class="row section" id="post-1415"  >
+				<h1 class="p-name entry-title" style="border-top: 1px solid #11ce72">Chained Libraries</h1>
+			<div class="box1" >
+				<time class="dt-published date published" datetime="2010-08-12T12:21:42+00:00" style="color: #aaa; font-weight: bold">Thursday, August 12th, 02010</time>
+				<p class="p-summary entry-summary"><p>From the middle ages up to the 18th century, books were so valuable that chains were attached to the books to prevent them from wandering off. In this day and age, books are so cheap and ubiquitous that we are less concerned about their material value. The new chains are DRM, the excuse of control and value are the same even though the digital product costs effectively nothing.</p>
+</p>
+				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2010/08/12/chained-libraries/" rel="bookmark" title="Permanent Link to Chained Libraries">Read more about Chained Libraries</a></p>
+			</div>
+			<div class="box1 postmetadata">
+
+				<p><strong>Categories:</strong> <a href="../../category/youre-doing-it-wrong/index.html" title="View all articles in You're doing it wrong" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #96e20d">You're doing it wrong</a></p><p><strong>Tags:</strong> <a href="../chained-libraries/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b0535d">chained libraries</a>, <a href="../chains/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #99469f">chains</a>, <a href="../copyright/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2ae41f">copyright</a>, <a href="../drm/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #275e52">DRM</a>, <a href="../ebooks/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #72b751">eBooks</a>, <a href="../libraries/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #550d74">libraries</a>, <a href="../prince/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #97c8f6">Prince</a>, <a href="../printing-press/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e115cd">printing press</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #70047c">ransomware</a>, <a href="../scribes/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6af053">scribes</a>, <a href="../velum/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b22905">velum</a></p>				<p style="color: #999">1509 words<br/>Read Time: 8 minutes</p>
+			</div>
+		</div>
+				
+			<div class="row section">
+		<div class="navigation">
+			<div class="prev"></div>
+			<div class="next"></div>
+		</div>
+			</div>
 
 
 	</div>
+</main>
+	<svg class="svgs" version="1.1" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<symbol id="icon_arrowR" viewBox="0 0 33.453 19.57">
+		<path stroke="currentColor" stroke-width="2" stroke-miterlimit="10" d="M22.451 18.845l9.549-9.059-9.549-9.061" fill="none"/>
+		<path stroke="currentColor" stroke-width="2" stroke-miterlimit="10" fill="none" d="M0 9.784h32"/>
+	</symbol>
 
-	<div style="position: absolute; top: 161px; left: 797px; width: 161px; text-align: left; border-left: 1px solid #eee; 
-padding: 0 0 0 10px">
+	<symbol id="icon_triagemail" viewBox="0 0 26.725 26.726">
+	<g>
+		<defs>
+			<path id="SVGID_1_" d="M13.362,25.716c-6.822,0-12.353-5.53-12.353-12.354C1.009,6.54,6.54,1.01,13.362,1.01
+				s12.353,5.53,12.353,12.353C25.715,20.186,20.185,25.716,13.362,25.716z M23.806,12.563h-9.489v11.179
+				c5.333-0.455,9.519-4.929,9.519-10.38C23.836,13.094,23.826,12.827,23.806,12.563z M3.03,12.563C3.011,12.827,3,13.094,3,13.362
+				c0,5.376,4.071,9.8,9.298,10.359V12.563H3.03z M5.751,6.31h15.335c-1.904-2.068-4.635-3.365-7.668-3.365S7.655,4.241,5.751,6.31z
+				 M4.295,8.329c-0.384,0.693-0.69,1.437-0.909,2.216h20.065c-0.219-0.779-0.526-1.522-0.909-2.216H4.295z"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_2_)">
+			<defs>
+				<rect id="SVGID_3_" x="-0.982" y="-0.981" width="28.716" height="28.717"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  overflow="visible"/>
+			</clipPath>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+		</g>
+	</g>
+	</symbol>
+	<symbol id="icon_newsletter" viewBox="0 0 26.725 26.726">
+	<g display="inline">
+		<defs>
+			<path id="SVGID_5_" d="M13.363,25.741c-6.837,0-12.379-5.542-12.379-12.378c0-6.837,5.542-12.379,12.379-12.379
+				c6.836,0,12.378,5.542,12.378,12.379C25.741,20.199,20.199,25.741,13.363,25.741z M10.584,23.413
+				c0.589,0.165,1.198,0.28,1.823,0.341V2.972c-0.625,0.061-1.234,0.176-1.823,0.341V23.413z M16.254,3.312
+				c-0.589-0.165-1.197-0.28-1.823-0.341v20.782c0.626-0.061,1.234-0.176,1.823-0.341V3.312z M22.234,7.769v11.188
+				c1.029-1.616,1.624-3.535,1.624-5.593C23.858,11.305,23.264,9.386,22.234,7.769z M20.211,5.435
+				c-0.591-0.507-1.239-0.948-1.935-1.314v18.485c0.695-0.366,1.344-0.808,1.935-1.314V5.435z M4.604,18.956V7.769
+				c-1.028,1.617-1.624,3.536-1.624,5.595C2.979,15.421,3.575,17.34,4.604,18.956z M6.627,21.291
+				c0.591,0.507,1.24,0.948,1.935,1.314V4.12C7.867,4.486,7.218,4.928,6.627,5.435V21.291z"/>
+		</defs>
+		<use xlink:href="#SVGID_5_"  overflow="visible" fill-rule="evenodd" clip-rule="evenodd"/>
+		<clipPath id="SVGID_6_">
+			<use xlink:href="#SVGID_5_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_6_)">
+			<defs>
+				<rect id="SVGID_7_" x="-0.87" y="-1.039" width="28.775" height="28.775"/>
+			</defs>
+			<use xlink:href="#SVGID_7_"  overflow="visible"/>
+			<clipPath id="SVGID_8_">
+				<use xlink:href="#SVGID_7_"  overflow="visible"/>
+			</clipPath>
+			<rect x="0.844" y="0.844" opacity="0.96" clip-path="url(#SVGID_8_)" width="25.038" height="25.038"/>
+		</g>
+	</g>
+	</symbol>
+	<symbol id="af_chaotic"  viewBox="0 0 26.725 26.726">
+	<path d="M12.94,22.678c-4.773,0-8.656-3.883-8.656-8.656v-0.558L24.561,0.946l1.051,1.701L6.306,14.565
+		c0.278,3.417,3.147,6.112,6.634,6.112c3.669,0,6.655-2.986,6.655-6.656h2C21.595,18.795,17.713,22.678,12.94,22.678z"/>
+	<path d="M12.932,25.779c-6.517,0-11.819-5.302-11.819-11.818h2c0,5.414,4.405,9.818,9.819,9.818s9.819-4.404,9.819-9.818h2
+		C24.75,20.478,19.449,25.779,12.932,25.779z"/>
+	</symbol>
+	<symbol id="af_thin"  viewBox="0 0 26.725 26.726">
+	<path d="M12.981,24.482c-5.035,0-9.131-4.097-9.131-9.132v-0.588L25.24,1.555l1.109,1.794L5.982,15.922
+	c0.293,3.605,3.32,6.448,6.999,6.448c3.871,0,7.021-3.149,7.021-7.021h2.11C22.112,20.385,18.017,24.482,12.981,24.482z"/>
+	</symbol>
 
-	<h1>Tag: ransomware</h1>
-
-	
-
-	<ul style="clear: both; padding-top: 10px; border-top: 1px solid #70047c">
-	<li style="border-left: 10px solid #1ddf33;"><a href="../../category/applications/index.html">Applications</a></li><li style="border-left: 10px solid #aa8c5b;"><a href="../../category/briefs/index.html">Briefs</a></li><li style="border-left: 10px solid #992978;"><a href="../../category/cartography/index.html">Cartography</a></li><li style="border-left: 10px solid #a0d2b6;"><a href="../../category/case-studies/index.html">Case Studies</a></li><li style="border-left: 10px solid #1e7940;"><a href="../../category/chromatics/index.html">Chromatics</a></li><li style="border-left: 10px solid #7d6198;"><a href="../../category/community/index.html">Community</a></li><li style="border-left: 10px solid #d70b59;"><a href="../../category/conferences/index.html">Conferences</a></li><li style="border-left: 10px solid #de7a22;"><a href="../../category/education/index.html">Education</a></li><li style="border-left: 10px solid #482926;"><a href="../../category/experiments/index.html">Experiments</a></li><li style="border-left: 10px solid #89c126;"><a href="../../category/forecast/index.html">Forecast</a></li><li style="border-left: 10px solid #756640;"><a href="../../category/interfaces/index.html">Interfaces</a></li><li style="border-left: 10px solid #d92a83;"><a href="../../category/material/index.html">Material</a></li><li style="border-left: 10px solid #b6755d;"><a href="../../category/meta/index.html">Meta</a></li><li style="border-left: 10px solid #d0a662;"><a href="../../category/paper/index.html">Paper</a></li><li style="border-left: 10px solid #7b9cf0;"><a href="../../category/place/index.html">Place</a></li><li style="border-left: 10px solid #c5f29b;"><a href="../../category/privacy/index.html">Privacy</a></li><li style="border-left: 10px solid #918e18;"><a href="../../category/sports/index.html">Sports</a></li><li style="border-left: 10px solid #d4ccb5;"><a href="../../category/storytelling/index.html">Storytelling</a></li><li style="border-left: 10px solid #bafe5c;"><a href="../../category/t-shirts/index.html">T-Shirts</a></li><li style="border-left: 10px solid #504c77;"><a href="../../category/temporality/index.html">Temporality</a></li><li style="border-left: 10px solid #1fb0f9;"><a href="../../category/travel/index.html">Travel</a></li><li style="border-left: 10px solid #368fe7;"><a href="../../category/tutorial/index.html">Tutorial</a></li><li style="border-left: 10px solid #b10ac6;"><a href="../../category/visualizations/index.html">Visualizations</a></li><li style="border-left: 10px solid #138567;"><a href="../../category/weeknotes/index.html">Weeknotes</a></li><li style="border-left: 10px solid #96e20d;"><a href="../../category/youre-doing-it-wrong/index.html">You're doing it wrong</a></li>	
-	</ul>
-
-
-	    <div style="padding-top: 20px"><a href="http://designingwithdata.com/"><img src="../../../dwd.png" 
-alt="Designing with Data book Link" /></a></div>
-
-	</div>
-        
 
 
 
 
+	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
+	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
+	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
+		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
+		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
+		c0-0.44-0.15-0.578-0.59-0.578h-0.74c-0.439,0-0.578,0.138-0.578,0.578v0.74C-1379.235-1115.886-1379.097-1115.76-1378.657-1115.76
+		z M-1374.479-1115.76h0.728c0.451,0,0.59-0.126,0.59-0.564v-0.74c0-0.44-0.139-0.578-0.59-0.578h-0.728
+		c-0.44,0-0.59,0.138-0.59,0.578v0.74C-1375.068-1115.886-1374.919-1115.76-1374.479-1115.76z M-1370.312-1115.76h0.74
+		c0.438,0,0.59-0.126,0.59-0.564v-0.74c0-0.44-0.151-0.578-0.59-0.578h-0.74c-0.439,0-0.59,0.138-0.59,0.578v0.74
+		C-1370.901-1115.886-1370.751-1115.76-1370.312-1115.76z M-1382.824-1111.656h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
+		c0-0.439-0.15-0.564-0.59-0.564h-0.74c-0.439,0-0.59,0.125-0.59,0.564v0.74
+		C-1383.414-1111.782-1383.264-1111.656-1382.824-1111.656z M-1378.657-1111.656h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
+		c0-0.439-0.15-0.564-0.59-0.564h-0.74c-0.439,0-0.578,0.125-0.578,0.564v0.74
+		C-1379.235-1111.782-1379.097-1111.656-1378.657-1111.656z M-1374.479-1111.656h0.728c0.451,0,0.59-0.126,0.59-0.564v-0.74
+		c0-0.439-0.139-0.564-0.59-0.564h-0.728c-0.44,0-0.59,0.125-0.59,0.564v0.74
+		C-1375.068-1111.782-1374.919-1111.656-1374.479-1111.656z M-1370.312-1111.656h0.74c0.438,0,0.59-0.126,0.59-0.564v-0.74
+		c0-0.439-0.151-0.564-0.59-0.564h-0.74c-0.439,0-0.59,0.125-0.59,0.564v0.74
+		C-1370.901-1111.782-1370.751-1111.656-1370.312-1111.656z M-1382.824-1107.54h0.74c0.439,0,0.59-0.138,0.59-0.577v-0.74
+		c0-0.439-0.15-0.564-0.59-0.564h-0.74c-0.439,0-0.59,0.125-0.59,0.564v0.74C-1383.414-1107.678-1383.264-1107.54-1382.824-1107.54z
+		 M-1378.657-1107.54h0.74c0.439,0,0.59-0.138,0.59-0.577v-0.74c0-0.439-0.15-0.564-0.59-0.564h-0.74
+		c-0.439,0-0.578,0.125-0.578,0.564v0.74C-1379.235-1107.678-1379.097-1107.54-1378.657-1107.54z M-1374.479-1107.54h0.728
+		c0.451,0,0.59-0.138,0.59-0.577v-0.74c0-0.439-0.139-0.564-0.59-0.564h-0.728c-0.44,0-0.59,0.125-0.59,0.564v0.74
+		C-1375.068-1107.678-1374.919-1107.54-1374.479-1107.54z"/>
+	</g>
+	</symbol>
+	<symbol id="optional-logo" viewBox="0 0 284.478 66.043">
+	<path d="M14.128,33.557c0-4.464,1.599-8.264,4.798-11.39c3.185-3.131,7.081-4.704,11.673-4.704c4.607,0,8.519,1.586,11.739,4.736
+		c3.164,3.148,4.75,7.021,4.75,11.612c0,4.629-1.586,8.513-4.784,11.64c-3.22,3.108-7.164,4.665-11.84,4.665
+		c-4.63,0-8.508-1.584-11.64-4.76C15.695,42.226,14.128,38.293,14.128,33.557z M21.427,33.685c0,3.088,0.824,5.527,2.472,7.324
+		c1.699,1.821,3.922,2.734,6.701,2.734c2.788,0,5.023-0.898,6.692-2.702c1.673-1.797,2.507-4.198,2.507-7.202
+		c0-3.003-0.834-5.404-2.507-7.202c-1.698-1.814-3.922-2.727-6.692-2.727c-2.734,0-4.948,0.912-6.635,2.727
+		C22.273,28.456,21.427,30.809,21.427,33.685z"/>
+	<path d="M57.723,66.043H50.58V18.326h7.143v3.364c2.817-2.809,6.004-4.228,9.583-4.228c4.248,0,7.75,1.573,10.5,4.704
+		c2.792,3.109,4.188,7.032,4.188,11.771c0,4.63-1.382,8.492-4.154,11.573c-2.75,3.069-6.218,4.604-10.405,4.604
+		c-3.618,0-6.851-1.45-9.711-4.351V66.043z M74.702,33.967c0-2.961-0.813-5.373-2.417-7.236c-1.626-1.875-3.68-2.82-6.158-2.82
+		c-2.623,0-4.747,0.912-6.372,2.727c-1.627,1.819-2.448,4.211-2.448,7.175c0,2.894,0.82,5.283,2.448,7.169
+		c1.609,1.84,3.721,2.763,6.345,2.763c2.473,0,4.514-0.938,6.123-2.794C73.871,39.089,74.702,36.761,74.702,33.967z"/>
+	<path d="M94.226,24.988v24.237h-7.138V24.988h-3.041v-6.662h3.041V6.997h7.138v11.329h3.113v6.662H94.226z"/>
+	<path d="M100.306,7.103c0-1.257,0.453-2.328,1.365-3.236c0.907-0.906,1.999-1.366,3.271-1.366c1.289,0,2.384,0.46,3.298,1.366
+		c0.905,0.891,1.365,1.975,1.365,3.27c0,1.289-0.46,2.386-1.365,3.299c-0.886,0.912-1.981,1.365-3.271,1.365
+		c-1.288,0-2.39-0.453-3.297-1.365C100.759,9.521,100.306,8.415,100.306,7.103z M108.526,18.326v30.899h-7.148V18.326H108.526z"/>
+	<path d="M112.045,33.557c0-4.464,1.599-8.264,4.789-11.39c3.194-3.131,7.093-4.704,11.673-4.704c4.614,0,8.532,1.586,11.745,4.736
+		c3.171,3.148,4.759,7.021,4.759,11.612c0,4.629-1.599,8.513-4.791,11.64c-3.214,3.108-7.158,4.665-11.834,4.665
+		c-4.63,0-8.513-1.584-11.644-4.76C113.61,42.226,112.045,38.293,112.045,33.557z M119.341,33.685c0,3.088,0.824,5.527,2.473,7.324
+		c1.694,1.821,3.927,2.734,6.693,2.734c2.794,0,5.025-0.898,6.701-2.702c1.669-1.797,2.5-4.198,2.5-7.202
+		c0-3.003-0.832-5.404-2.5-7.202c-1.694-1.814-3.93-2.727-6.701-2.727c-2.722,0-4.934,0.912-6.626,2.727
+		C120.187,28.456,119.341,30.809,119.341,33.685z"/>
+	<path d="M148.502,18.326h7.169v2.854c2.496-2.475,5.306-3.718,8.443-3.718c3.59,0,6.389,1.142,8.401,3.4
+		c1.733,1.93,2.602,5.064,2.602,9.425v18.938h-7.171V31.993c0-3.043-0.425-5.146-1.271-6.309c-0.819-1.178-2.324-1.774-4.503-1.774
+		c-2.375,0-4.055,0.784-5.04,2.346c-0.979,1.537-1.461,4.237-1.461,8.075v14.895h-7.169V18.326z"/>
+	<path d="M202.845,18.326h7.176v30.899h-7.176v-3.233c-2.938,2.753-6.103,4.124-9.489,4.124c-4.269,0-7.799-1.539-10.593-4.634
+		c-2.771-3.15-4.154-7.083-4.154-11.798c0-4.637,1.383-8.497,4.154-11.584c2.772-3.088,6.24-4.638,10.406-4.638
+		c3.596,0,6.822,1.484,9.676,4.45V18.326z M185.905,33.685c0,2.96,0.79,5.373,2.373,7.232c1.632,1.878,3.683,2.826,6.158,2.826
+		c2.644,0,4.783-0.913,6.41-2.734c1.627-1.882,2.445-4.27,2.445-7.17c0-2.893-0.818-5.284-2.445-7.169
+		c-1.627-1.835-3.738-2.76-6.346-2.76c-2.451,0-4.502,0.927-6.157,2.792C186.719,28.584,185.905,30.915,185.905,33.685z"/>
+	<path d="M222.102,7.014v42.212h-7.135V7.014H222.102z"/>
+	<path d="M225.76,44.864c0-1.188,0.437-2.211,1.3-3.08c0.867-0.864,1.902-1.299,3.108-1.299s2.246,0.435,3.109,1.299
+		c0.869,0.869,1.305,1.901,1.305,3.108c0,1.228-0.436,2.274-1.305,3.145c-0.846,0.838-1.882,1.266-3.109,1.266
+		c-1.25,0-2.295-0.428-3.138-1.266C226.179,47.188,225.76,46.13,225.76,44.864z"/>
+	<path d="M237.121,7.103c0-1.257,0.454-2.328,1.368-3.236c0.912-0.906,1.996-1.366,3.27-1.366c1.287,0,2.389,0.46,3.296,1.366
+		c0.908,0.891,1.361,1.975,1.361,3.27c0,1.289-0.453,2.386-1.361,3.299c-0.891,0.912-1.974,1.365-3.265,1.365
+		c-1.294,0-2.389-0.453-3.301-1.365C237.575,9.521,237.121,8.415,237.121,7.103z M245.338,18.326v30.899h-7.131V18.326H245.338z"/>
+	<path d="M269.089,23.594l-5.893,3.137c-0.936-1.875-2.087-2.82-3.464-2.82c-0.659,0-1.216,0.215-1.683,0.651
+		c-0.463,0.433-0.697,0.985-0.697,1.66c0,1.185,1.379,2.355,4.128,3.519c3.784,1.633,6.335,3.127,7.64,4.499
+		c1.312,1.376,1.971,3.223,1.971,5.546c0,2.979-1.1,5.472-3.305,7.477c-2.129,1.903-4.712,2.854-7.738,2.854
+		c-5.186,0-8.846-2.528-11.004-7.579l6.086-2.826c0.848,1.482,1.494,2.422,1.937,2.826c0.868,0.802,1.903,1.206,3.109,1.206
+		c2.411,0,3.617-1.1,3.617-3.305c0-1.265-0.935-2.45-2.794-3.558c-0.72-0.354-1.432-0.7-2.152-1.04
+		c-0.725-0.343-1.455-0.686-2.19-1.051c-2.075-1.019-3.535-2.029-4.383-3.041c-1.071-1.295-1.614-2.95-1.614-4.986
+		c0-2.688,0.918-4.898,2.761-6.66c1.874-1.753,4.167-2.64,6.85-2.64C264.225,17.463,267.168,19.512,269.089,23.594z"/>
+	<path d="M5.212,7.544l4.951,1.903C8.43,13.585,7.214,17.41,6.522,20.916c-0.348,1.775-0.608,3.646-0.785,5.605
+		c-0.171,1.958-0.265,4.092-0.265,6.411c0,2.336,0.093,4.479,0.265,6.438c0.177,1.96,0.437,3.823,0.785,5.606
+		c0.681,3.483,1.893,7.3,3.641,11.438l-4.951,1.902C1.742,51.078,0,42.615,0,32.933C0,23.257,1.742,14.793,5.212,7.544z"/>
+	<path d="M279.288,58.503l-4.951-1.903c1.748-4.149,2.961-7.955,3.646-11.446c0.713-3.489,1.068-7.501,1.068-12.042
+		c0-4.505-0.355-8.516-1.068-12.02c-0.697-3.505-1.913-7.334-3.646-11.466l4.951-1.908c3.464,7.252,5.189,15.717,5.189,25.394
+		C284.478,42.785,282.752,51.245,279.288,58.503z"/>
+	</symbol>
+
+</svg>
+
+		<style>
+			footer {
+				padding: 1em 32px;
+				color: #555;
+				text-align: center;
+				font-size: 12px;
+				line-height: 14px;
+				clear: both;
+			}
+			footer div { padding: 1em 0; font-size: 12px; text-align: center; font-size: 12px; line-height: 14px; }
+			footer div img { padding: 8em 0; }
+
+			footer #stripe {
+				background-color: #eee;
+				max-width: 1216px;
+				margin: 0 auto;
+				padding: 0;
+				text-align: center;
+				margin-bottom: 5em;
+			}
+			footer #stripe .items {
+				margin: 0 auto;
+				padding: 0;
+				width: 768px;
+				height: 128px;
+				column-width: 128px;
+				column-count: 4;
+				column-gap: 32px;
+			}
+
+			footer #stripe .item {
+				vertical-align: top;
+				width: 128px;
+				height: 128px;
+				overflow: hidden;
+				padding: 0;
+				margin: 0 32px;
+				display: block;
+				color: #333;
+			}
+
+			footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover {
+				text-decoration: none;
+				color: #333;
+			}
+
+			@media (max-width: 831px) {
+				footer #stripe .items {
+					width: 384px;
+					height: 256px;
+					column-count: 2;
+					column-gap: 32px;
+				}
+			}
+			@media (max-width: 415px) {
+				footer #stripe .items {
+					width: 299px;
+					height: 256px;
+					column-gap: 0px;
+					column-count: 2;
+				}
+				footer #stripe .item {
+					margin: 0 auto;
+				}
+			}
+
+			footer #stripe .item svg {
+				margin-left: -20px;
+				padding: 15px 0 10px 0;
+			}
+			footer #stripe .item h3 {
+				text-align: left;
+				text-transform: uppercase;
+				font-size: 13px;
+				line-height: 14px;
+				font-weight: bold;
+			}
+			footer #stripe .item h3 a { font-weight: bold; }
+			footer #stripe .item h3 svg {
+				margin: 0;
+				padding: 0;
+			}
+
+			footer #stripe .item div {
+				padding: 6px 0;
+				text-align: left;
+				color: #888;
+			}
+
+			footer #stripe .item div:after {
+				width: 16px;
+				height: 2px;
+				margin: 10px 0 16px;
+				content: "";
+				display: block;
+				background-color: #000;
+			}
+
+			footer #links {
+				margin: 0 auto;
+				width: 960px;
+				text-align: left;
+			}
+
+			footer #links .column {
+				vertical-align: top;
+				width: 192px;
+				padding: 0 0 20px 0;
+				margin: 0 auto;
+				display: inline-block;
+				text-align: left;
+			}
+
+			@media (max-width: 1023px) {
+				footer #links {
+					width: 576px;
+				}
+			}
+			@media (max-width: 643px) {
+				footer #links {
+					width: 100%;
+				}
+			}
+			@media (max-width: 415px) {
+				footer #links .column {
+					width: 154px;
+				}
+			}
+
+			footer #links .column ul, footer #links .column ul li {
+				margin: 0;
+				padding:0;
+				list-style: none;
+				line-height: 14px;
+				font-size: 12px;
+			}
+			footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus {
+				color: #666;
+				text-decoration: none;
+			}
+			footer #links .column ul li a:hover {
+				color: #000;
+				background-color: transparent;
+			}			
+			footer #links .column ul li {
+				padding: 0.4em 0;
+			}
+
+			footer #links .column h3 {
+				color: #000;
+				line-height: 14px;
+			}
+			footer #links .column h3:after {
+				width: 16px;
+				height: 2px;
+				margin: 16px 0 16px;
+				content: "";
+				display: block;
+				background-color: #000;
+			}
+
+			footer #links .column:last-child {
+				margin: 0;
+			}
+
+			footer .logo {
+				padding: 5em 0; 
+				width: 384px; 
+				margin: 0 auto;
+			}
+			@media (max-width: 384px) {
+				footer .logo {
+					width: 256px; 
+				}
+			}
+
+		</style>
+
+		<footer>
+			<div id="stripe">
+				<div class="items">
+				<div class="item">
+					<svg width="40" height="40">
+						<use xlink:href="#icon_triagemail"/>
+					</svg>
+					<h3><a href="mailto:optional@optional.is">Contact <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
+					<div>Say Hello!</div>
+				</div><div class="item"><svg width="40" height="40">
+						<use xlink:href="#icon_newsletter"/>
+					</svg>
+					<h3><a href="../../../newsletter/archive/index.html">Newsletter <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
+					<div>Quarterly Updates</div></div><div class="item"><svg width="40" height="40">
+						<use xlink:href="#icon_weeknotes"/>
+					</svg>
+					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
+					<div>Week #474</div></div><div class="item"><svg width="40" height="40">
+						<use xlink:href="#af_chaotic"/>
+					</svg>
+					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
+					<div>Availability Forecast</div></div>
+				</div>
+			</div>
+			<div id="links">
+				<div class="column">
+					<h3>Company</h3>
+					<ul>
+						<li>kt. 470211-1130</li>
+						<li>VAT №. 108875</li>	
+						<li>+354.868.0795</li>
+						<li><a href="mailto:optional@optional.is">optional@optional.is</a></li>
+						<li><a href="http://feeds2.feedburner.com/optional?format=xml">RSS Feed</a></li>
+						<li><a href="../../../newsletter/archive/index.html">Newsletter</a></li>
+					
+					</ul>
+				</div><div class="column"><h3>Material</h3>
+					<ul>
+						<li><a href="https://podcasts.apple.com/us/podcast/material/id1279787564" target="_blank">Podcast</a></li>
+						<li><a href="https://material.is/archive" target="_blank">Archive</a></li>
+						<li><a href="https://material.is/2020" target="_blank">2020</a></li>
+						<li><a href="https://material.is/2018" target="_blank">2018</a></li>
+						<li><a href="https://material.is/2017" target="_blank">2017</a></li>						
+					</ul></div><div class="column"><h3>iOS Apps</h3>
+					<ul>
+						<li><a href="https://itunes.apple.com/us/app/dashbones/id1071726287?mt=8">Dashbones</a></li>						
+						<li><a href="https://itunes.apple.com/us/app/emoji-calendar/id1286750440?mt=8">Emoji Calendar</a></li>
+						<li><a href="https://itunes.apple.com/us/app/floræ-linnaeus-flower-clock/id1192847405?mt=8">Florae</a></li>						
+						<li><a href="https://itunes.apple.com/us/app/how-far-iceland/id1311872083?mt=8">How Far: Iceland</a></li>						
+						<li><a href="https://itunes.apple.com/us/app/red-days-holiday-countdown/id1128247890?mt=8" target="_blank">Red Days</a></li>
+						<li><a href="https://itunes.apple.com/us/app/shipping-forecast-mindfulness/id1226922380?mt=8">Shipping Forecast</a></li>						
+						<li><a href="https://itunes.apple.com/us/app/text-stats/id1373463793?mt=8">Text Stats</a></li>
+						<li><a href="https://itunes.apple.com/us/app/triagemail/id1124659536?mt=8">Triagemail</a></li>						
+					</ul></div><div class="column"><h3>Analog Notebooks</h3>
+					<ul>
+						<li><a href="https://store.analog.is/product/red-letterpress-notebook-graph-paper-eyjafjallajokull-glacier" target="_blank">Eyjafjallajökull</a></li>
+						<li><a href="https://store.analog.is/product/mars-island" target="_blank">Mars Island</a></li>
+						<li><a href="https://store.analog.is/product/island-series-6-pack" target="_blank">Island Series</a></li>
+						<li><a href="https://store.analog.is/category/accessories" target="_blank">Point Markers</a></li>						
+					</ul></div><div class="column"><h3>Workshops</h3>
+					<ul>
+						<li>Designing With Data</li>
+						<li>Futurecasting</li>
+					</ul></div>
+			</div>
+			<div class="logo"><svg width="100%" ><use xlink:href="#optional-logo"/></svg></div>
+			<div style="font-size: 12px">LAUFÁSVEGUR 26, 101 REYKJAVÍK, ICELAND</div>
+			<div style="font-size: 12px">copyright 2019</div>
+		</footer>
 
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? 
@@ -110,8 +579,3 @@ pageTracker._trackPageview();
 </html>
 
 
-
-<!-- Dynamic page generated in 0.168 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2020-01-31 16:45:26 -->
-
-<!-- super cache -->

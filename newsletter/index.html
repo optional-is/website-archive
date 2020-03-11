@@ -1,960 +1,678 @@
-<!DOCTYPE html>
-<!--[if lte IE 7]> <html class="ie-lte7" dir="ltr"> <![endif]-->
-<!--[if lte IE 9]> <html class="ie-lte9" dir="ltr"> <![endif]-->
-<!--[if !IE]><!--> <html dir="ltr">             <!--<![endif]-->
-<head>
-        <title>(optional.is) List</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <meta name="description" content="(optional.is) List Email Forms">
-        <meta name="keywords" content="(optional.is) List">
-        <script src="https://twemoji.maxcdn.com/2/twemoji.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.8/dojo/dojo.js"></script>
-<script type="text/javascript">
-    require([
-        "dojo/query",
-        "dojo/dom",
-        "dojo/dom-geometry",
-        "dojo/dom-class",
-        "dojo/dom-style",
-        "dojo/dom-construct",
-        "dijit/focus",
-        "dojo/parser",
-        "dijit/form/DateTextBox",
-        "dojo/NodeList-traverse",
-        "dojo/domReady!"
-    ], function(query, dom, domGeom, domClass, domStyle, domConstruct, focusUtil, parser){
-
-        // Move the focused-field class to the field-group that contains the focused input.
-        var handle = focusUtil.watch("curNode", function(name, oldValue, newValue){
-            var parent = query(newValue).closest('.field-group');
-            if(!domClass.contains(parent, "focused-field")) {
-                query('.focused-field').removeClass('focused-field');
-                parent.addClass('focused-field');
-            }
-        });
-
-        // Add error class to parent wrapper and only show error borders on empty fields in addresses
-        query('.feedback.error').closest('.field-group').addClass('error');
-        query('.addressfield input:text[value=""]').addClass('empty');
-
-        // Focus first input of birthdayfield or phonefield-us when parent wrapper is clicked
-        query('div.subfields').on("click", function(e){
-            var firstInput = query('input', e.target)[0];
-            focusUtil.focus(firstInput);
-        });
-
-        // Prevent image blowout in IE6 since it doesn't support max-width
-        if (domClass.contains(query('html')[0], "ie-lte7")){
-
-            query('img').forEach(function(node){
-                var computedStyle = domStyle.getComputedStyle(node);
-                var w = domGeom.getContentBox(node, computedStyle).w;
-                console.log(w);
-                if(w >= 600){
-                    domStyle.set(node, "width", "600px");
-                }
-            });
-        }
-
-        // Use native checkboxes and radio buttons outside the app
-        dojo.query(".radio input, .checkbox input").removeAttr("data-dojo-type");
-
-        // Render DateTextBoxes
-        parser.parse();
-
-        query('form').on("submit",function(e){
-            var invalidDate = dojo.query('.dijitTextBoxError');
-            if(invalidDate.length){
-                query('.dijitDateTextBox ~ .feedback.error').forEach(domConstruct.destroy);
-                invalidDate.forEach(function(node) {
-                    domConstruct.place('<div class="feedback error"><div class="errorText">Please enter a valid date</div></div>', node, 'after');
-                });
-                e.preventDefault();
-            }
-        });
-
-        twemoji.parse(document.body, { size: 72 });
-
-        query(".emoji").forEach(function(emoji){
-            domStyle.set(emoji, {
-                width: "16px",
-                height: "16px"
-            });
-        });
-    });
-</script>
-
-<script src='https://www.google.com/recaptcha/api.js' async defer></script>
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-
-        
-        
-	<style type="text/css">/* Forms */
-
-label {
-    display:block;
-    width:auto;
-    margin-top:8px;
-    font-weight:bold;
-}
-
-.mergeRow {
-    padding:0 0 6px 0 !important;
-    clear:both;
-}
-
-.field-group {
-    position:relative;
-    margin:3px 0 12px 0;
-    overflow:hidden;
-    background:transparent !important;
-}
-.mergeRow-radio .field-group, .mergeRow-interests-checkboxes .field-group {margin-bottom:6px;}
-
-input, textarea, select {
-    display:block;
-    margin:0;
-    padding:10px;
-    background:#fff;
-    width:100%;
-    border:2px solid #d0d0d0 !important;
-    border-radius:3px;
-    -webkit-appearance: none;
-}
-
-.field-group input, select, textarea, .dijitInputField {
-    font-size: 14px;
-}
-
-.field-group.error > input,
-.field-group.error > select,
-.field-group.error .addressfield input.empty,
-.field-group.error .birthdayfield,
-.field-group.error .subfields,
-.field-group.error .datefield .dijitInputInner,
-.datefield .dijitTextBoxError .dijitInputInner,
-.field-group.error textarea {
-    border-color:#e85c41 !important;
-}
-
-textarea {
-    font:14px/18px 'Helvetica', Arial, sans-serif;
-    width:100%;
-    height:150px;
-    overflow:auto;
-}
-
-select {
-    background:#fff url(https://us2.list-manage.com/images/icons/signup-sprite.png) no-repeat right -295px;
-    background:#fff url(https://us2.list-manage.com/images/icons/signup-sprite.png) no-repeat right -295px, -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f1f1f1));
-    background:#fff url(https://us2.list-manage.com/images/icons/signup-sprite.png) no-repeat right -295px, -webkit-linear-gradient(top, #fff, #f1f1f1);
-    background:#fff url(https://us2.list-manage.com/images/icons/signup-sprite.png) no-repeat right -295px,     -ms-linear-gradient(top, #fff, #f1f1f1);
-    background:#fff url(https://us2.list-manage.com/images/icons/signup-sprite.png) no-repeat right -295px,         linear-gradient(to bottom, #fff, #f1f1f1);
-}
-html[dir="rtl"] select {background-position:14px -295px;}
-
-/* Firefox always displays native select arrow button, so hide the background image arrow. */
-@-moz-document url-prefix() {
-select {
-    padding: 8px;
-    background-position: -99px 0 !important;
-    -moz-appearance: none;
-}
-}
-
-input:focus, textarea:focus, select:focus, .focused-field .subfields {
-border-color:#5d5d5d !important;
-outline:none;
-}
-
-/* Prevent Chrome's autofill yellow box shadow */
-input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px white inset !important;
-}
-
-
-.field-help {
-    display:block;
-    font-weight:normal;
-    position:static;
-    float:none;
-    clear:both;
-    margin:0;
-    padding:0;
-    max-height:0;
-    overflow:hidden;
-    -webkit-transition: all .25s;
-    -moz-transition: all .25s;
-    -ms-transition: all .25s;
-    transition: all .25s;
-}
-.focused-field .field-help, input:focus + .field-help {
-    display:block;
-    padding:10px 0;
-    max-height:100px;
-}
-
-.field-help .help {
-    min-height:16px;
-    text-decoration: none;
-}
-
-
-/* Error container */
-.feedback {
-    padding:10px 0;
-    line-height:16px;
-    font-size:14px;
-}
-
-.feedback br {display:none;}
-
-.feedback div {
-    font:14px/20px 'Helvetica', Arial, sans-serif !important;
-    padding:0 !important;
-    margin:0 !important;
-}
-
-.indicates-required {text-align:right;}
-.indicates-required span {
-    font-size:150%;
-    font-weight:bold;
-    display:inline !important;
-}
-
-.formstatus {
-    margin-bottom:12px;
-    font-size:18px;
-}
-
-.alert {
-    background:#e4f3d4;
-    border:2px solid #5ca000;
-    font-size:14px;
-    color:#4e7e0e !important;
-    margin:10px 0;
-    padding:10px;
-}
-
-
-/* Groups, checkboxes, radio buttons */
-ul.interestgroup_field,
-ul.interestgroup_field li,
-ul.unsub-options,
-ul.unsub-options li,
-.interestgroup_row {
-    display:block;
-    padding:0;
-    margin:0;
-    list-style:none;
-}
-label.checkbox, label.radio {
-    font-weight:normal;
-    position:relative;
-    line-height:24px;
-}
-.checkbox input, .radio input {
-    width:auto !important;
-    display:inline-block;
-    margin-right:5px;
-    padding:0;
-    border:none;
-    background-color:transparent;
-}
-
-/* Address blocks */
-.addressfield span {display:block; margin:3px 0 15px 0;}
-.addressfield label {display:none;}
-.cityfield {width:35%; float:left; padding-right:12px;}
-.statefield {width:30%; float:left; padding-right:12px;}
-.zipfield {width:35%; float:left;}
-.countryfield {clear:both;}
-
-/* Date picker */
-.dijitCalendarPopup {position:absolute;}
-.dijitComboBox.dijitDateTextBox .dijitArrowButtonContainer {
-    cursor:pointer;
-    position:absolute;
-    top:3px;
-    right:2px;
-    background:url(https://us2.list-manage.com/images/icons/signup-sprite.png) no-repeat 10px -235px;
-    height:34px;
-    width:42px;
-    opacity:.5;
-    padding:0 5px;
-}
-.dijitComboBox.dijitDateTextBox .dijitArrowButtonContainer input {visibility:hidden;}
-.dijitComboBox.dijitDateTextBox .dijitArrowButtonContainer:hover {opacity:1;}
-.dijitValidationContainer {display:none;}
-
-/* Input placeholder color */
-.dijitPlaceHolder {position:absolute; top:10px; left:10px; color:#ababab !important; font-weight:normal;}
-::-webkit-input-placeholder {color:#ababab;}
-:-moz-placeholder {color:#ababab; opacity:1;}
-::-moz-placeholder {color:#ababab; opacity:1;}
-:-ms-input-placeholder {color:#ababab;}
-
-html[dir="rtl"] .dijitComboBox.dijitDateTextBox .dijitArrowButtonContainer {left:6px; right:auto;}
-html[dir="rtl"] .dijitPlaceHolder {left:auto; right:10px;}
-
-
-/* Birthday & US phone field */
-.subfields {
-    display:block;
-    margin:0;
-    padding:8px 10px;
-    background:#fff;
-    width:100%;
-    border:2px solid #d0d0d0;
-    border-radius:3px;
-    color:#d0d0d0
-}
-.subfields input {
-    display:inline-block;
-    margin:0;
-    padding:0;
-    width:2.5em;
-    border:none !important;
-    text-align:center;
-}
-.subfields label {display:none;}
-.phonedetail2 input {width:3.4em;}
-.birthdayfield input {width:1.7em;}
-
-/* Forward to friend */
-.captcha {
-    float:left;
-    width:320px;
-    margin-right:20px;
-    min-height:150px;
-}
-.captcha input {display:inline;}
-
-/* Archive list */
-#archive-list {
-    display:block;
-    margin:15px 0;
-    padding:0;
-    border-top:1px solid #eee;
-}
-#archive-list li {
-    display:block;
-    list-style:none;
-    margin:0;
-    padding:6px 10px;
-    border-bottom:1px solid #eee;
-}
-
-.borderbox, .field-help, input, textarea, select {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.field-shift {
-    left: -9999px; position: absolute;
-}
-
-html[dir="rtl"] .field-shift {
-    right: -9999px;
-    left: auto;
-}
-
-
-/* Image replacement for checkbox and radio buttons. */
-/* Placing in @media block forces browsers that don't support :checked to fall back to native inputs. */
-@media only screen {
-    .mergeRow-radio .field-group, .mergeRow-interests-checkboxes .field-group {margin:0 -6px 11px -6px;}
-
-    .checkbox, .radio {
-        margin:9px 0 0 0;
-        padding:0;
-    }
-
-    /* Position and hide the real checkboxes and radio buttons */
-    .checkbox input, .radio input {
-        position:absolute;
-        width:24px;
-        height:24px;
-        overflow:hidden;
-        margin:0;
-        padding:0;
-        outline:0;
-        opacity:0;
-    }
-
-    .checkbox input + span, .radio input + span {
-        display:block;
-        border-radius:3px;
-        padding:6px 6px 6px 38px;
-    }
-
-    .checkbox:hover span,
-    .checkbox input:focus + span,
-    .radio:hover span,
-    .radio input:focus + span {
-        background:rgba(0,0,0,.05);
-    }
-
-    /* Insert a pseudo element inside each label with a background sprite.  */
-    .checkbox input + span:before, .radio input + span:before {
-        display:block;
-        position:absolute;
-        top:6px;
-        left:6px;
-        width:24px;
-        height:24px;
-        background:url(https://us2.list-manage.com/images/icons/signup-sprite.png) no-repeat;
-        content:" ";
-        vertical-align:top;
-    }
-
-    /* Position the background sprite based on state of checkbox/radio. */
-    .radio input:focus + span:before { background-position:0 -30px; }
-    .radio input:checked + span:before { background-position:0 -60px; }
-    .radio input:checked:focus + span:before { background-position:-0 -90px; }
-    .checkbox input + span:before { background-position:0 -120px; }
-    .checkbox input:focus + span:before { background-position:0 -150px; }
-    .checkbox input:checked + span:before { background-position:0 -180px; }
-    .checkbox input:checked:focus + span:before { background-position:0 -210px; }
-
-    /* Right-to-left checkbox/radio modifications */
-    html[dir="rtl"] .checkbox input + span:before, html[dir="rtl"] .radio input + span:before {left:auto; right:0;}
-    html[dir="rtl"] .checkbox input + span, html[dir="rtl"] .radio input + span {padding:6px 38px 6px 6px;}
-}
-
-/* Use high-res sprite for retina displays */
-@media (-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 1.5dppx) {
-    .checkbox input + span:before, .radio input + span:before, .calendar-icon {
-        background-image:url(https://us2.list-manage.com/images/icons/signup-sprite-2x.png);
-        background-size: 24px;
-    }
-}
-
-/* IE6 and 7 overrides */
-.ie-lte7 .field-group input, .ie-lte7 .subfields {width:535px;}
-.ie-lte7 .cityfield input {width:170px;}
-.ie-lte7 .statefield input {width:121px;}
-.ie-lte7 .zipfield input {width:170px;}
-.ie-lte7 .subfields input {width:40px;}
-.ie-lte7 .hidden-from-view {display:none;}
-.ie-lte7 select {
-    display:inline-block;
-    width:560px;
-}
-
-/* IE doesn't support input placeholders until v10, show labels on addresses */
-.ie-lte7 .addressfield label, .ie-lte9 .addressfield label {display:block; font-weight:normal; font-size:14px;}
-
-/* Dijit styles for date picker */
-.dijitPopup .dijitReset{margin:0;border:0;padding:0;font:inherit;line-height:normal;color:inherit;font-family:"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif}
-.dijitPopup .dj_a11y .dijitReset{-moz-appearance:none;}
-.dijitPopup .dijitInline{display:inline-block;border:0;padding:0;vertical-align:middle}
-.dijitPopup .dijitInline{display:inline-table;box-sizing:content-box;-moz-box-sizing:content-box}
-.dijitPopup .dijitHidden{display:none !important}
-.dijitPopup .dijitVisible{display:block !important;position:relative;}
-.dijitPopup .dijitInputContainer{overflow:hidden;float:none !important;position:relative}
-.dijitPopup .dj_ie .dijitSelect input,
-.dijitPopup .dj_ie input.dijitTextBox,
-.dijitPopup .dj_ie .dijitTextBox input{font-size:100%}
-.dijitPopup .dijitSelect .dijitButtonText{float:left;vertical-align:top}
-.dijitPopup .dijitSelect{padding:0 !important;}
-.dijitPopup .dijitTextBox .dijitSpinnerButtonContainer,
-.dijitPopup .dijitTextBox .dijitArrowButtonContainer,
-.dijitPopup .dijitValidationTextBox .dijitValidationContainer{float:right;text-align:center}
-.dijitPopup .dijitSelect input.dijitInputField,
-.dijitPopup .dijitTextBox input.dijitInputField{padding-left:0 !important;padding-right:0 !important}
-.dijitPopup .dijitValidationTextBox .dijitValidationContainer{display:none}
-.dijitPopup .dijitTeeny{font-size:1px;line-height:1px}
-.dijitPopup .dijitOffScreen{position:absolute !important;left:50% !important;top:-10000px !important}
-.dijitPopup .dijitPositionOnly{padding:0 !important;border:0 !important;background-color:transparent !important;background-image:none !important;height:auto !important;width:auto !important}
-.dijitPopup .dijitNonPositionOnly{float:none !important;position:static !important;margin:0 0 0 0 !important;vertical-align:middle !important}
-.dijitPopup .dijitBackgroundIframe{position:absolute;left:0;top:0;width:100%;height:100%;z-index:-1;border:0;padding:0;margin:0}
-.dijitPopup .dijitDisplayNone{display:none !important}
-.dijitPopup .dijitContainer{overflow:hidden;}
-
-.dijitPopup{position:absolute;background-color:transparent;margin:0;border:0;padding:0}
-.dijitPopup{-webkit-box-shadow:0 6px 6px 1px rgba(0, 0, 0, 0.1);box-shadow:0 6px 6px 1px rgba(0, 0, 0, 0.1);border-radius:6px}
-@media screen and (max-width:40em){
-    .dijitPopup{width:96% !important;left:50% !important;margin:0 auto 0 -48%}
-}
-.dijitPopup .dijitMenuTable{width:100% !important}
-
-.dijitMenu{border:1px solid #000;background-color:#fff}
-.dijitMenuTable{border-collapse:collapse;border-width:0;background-color:#fff}
-.dj_webkit .dijitMenuTable td[colspan="2"]{border-right:hidden}
-.dijitMenuItem{text-align:left;white-space:nowrap;padding:.1em .2em;cursor:pointer}
-.dijitMenuItem:focus{outline:none}
-.dijitMenuItemIcon,
-.dijitMenuExpand{background-repeat:no-repeat}
-.dijitMenuItemDisabled *{opacity:.5;cursor:default}
-.dj_ie .dj_a11y .dijitMenuItemDisabled,
-.dj_ie .dj_a11y .dijitMenuItemDisabled *,
-.dj_ie .dijitMenuItemDisabled *{color:#808080;filter:alpha(opacity=35)}
-.dijitMenuItemLabel{position:relative;vertical-align:middle}
-.dj_a11y .dijitMenuItemSelected{border:1px dotted #000 !important;}
-.dj_ff3 .dj_a11y .dijitMenuItem td{padding:0 !important;background:none !important}
-.dj_a11y .dijitMenuItemSelected .dijitMenuItemLabel{border-width:1px;border-style:solid}
-.dj_ie8 .dj_a11y .dijitMenuItemLabel{position:static}
-.dijitMenuExpandA11y{display:none}
-.dj_a11y .dijitMenuExpandA11y{display:inline}
-.dijitMenuSeparator td{border:0;padding:0}
-.dijitMenuSeparatorTop{height:50%;margin:0;margin-top:3px;font-size:1px}
-.dijitMenuSeparatorBottom{height:50%;margin:0;margin-bottom:3px;font-size:1px}
-.dijitCheckedMenuItemIconChar{vertical-align:middle;visibility:hidden}
-.dijitCheckedMenuItemChecked .dijitCheckedMenuItemIconChar{visibility:visible}
-.dj_a11y .dijitCheckedMenuItemIconChar{display:inline !important}
-.dj_a11y .dijitCheckedMenuItemIcon{display:none}
-.dj_ie .dj_a11y .dijitMenuBar .dijitMenuItem{margin:0}
-
-
-
-.dijitCalendarContainer{width:auto;}
-.dijitCalendarContainer th,
-.dijitCalendarContainer td{padding:0;vertical-align:middle}
-.dijitCalendarYearLabel{white-space:nowrap;}
-.dijitCalendarNextYear{margin:0 0 0 .55em}
-.dijitCalendarPreviousYear{margin:0 .55em 0 0}
-.dijitCalendarIncrementControl{vertical-align:middle}
-.dijitCalendarIncrementControl,
-.dijitCalendarDateTemplate,
-.dijitCalendarMonthLabel,
-.dijitCalendarPreviousYear,
-.dijitCalendarNextYear{cursor:pointer}
-.dijitCalendarDisabledDate{color:#808080;text-decoration:line-through;cursor:default}
-.dijitSpacer{position:relative;height:1px;overflow:hidden;visibility:hidden}
-.dijitCalendarMonthMenu .dijitCalendarMonthLabel{text-align:center}
-
-.dijitCalendar{border:solid 1px #cfcfcf;background-color:#fff;text-align:center;padding:18px;border-radius:6px;border-collapse:separate}
-.dijitCalendar img{border:none}
-.dijitCalendarMonthContainer th{text-align:center;vertical-align:middle}
-.dijitCalendarMonthLabel{color:#595959;font-size:.9375em;font-weight:bold;padding:6px 12px}
-.dijitA11ySideArrow{display:none}
-
-.dijitCalendarArrow{cursor:pointer;border:1px solid transparent;position:relative;}
-.dijitCalendarArrow img {display:none;}
-.dijitCalendarArrow:hover{background-color:#f2f2f2;border-color:#d0d0d0}
-.dijitCalendarArrow:after{content:" "; width:0; height:0; border:6px solid transparent; border-left:6px solid #333; display:block; position:absolute; top:25%; left:45%}
-.dijitCalendarArrow:first-child:before{content:" "; width:0; height:0; border:6px solid transparent; border-right:6px solid #333; display:block; position:absolute; top:25%; left:45%}
-.dijitCalendarArrow:first-child:after{border:none;}
-
-.dijitCalendarCurrentDate {background:#eee;}
-.dijitCalendarDayLabelTemplate{text-align:center;font-weight:bold;padding:8px 12px}
-.dijitCalendarDayLabel{font-weight:bold;font-size:.9375em;text-align:center;color:#595959}
-.dijitCalendarDateTemplate{border-bottom:0 none;font-size:.9375em;font-weight:500;letter-spacing:.05em;text-align:center;color:#595959}
-.dijitCalendarPreviousMonth,
-.dijitCalendarNextMonth{border-bottom:0 none}
-.dijitCalendarDateTemplate .dijitCalendarDateLabel{text-decoration:none;display:block;padding:6px 10px;border:1px solid transparent;-webkit-transition-property:background-color,border;-ms-transition-property:background-color,border;transition-property:background-color,border;-webkit-transition-duration:.35s;-ms-transition-duration:.35s;transition-duration:.35s}
-.dijitCalendarPreviousMonth .dijitCalendarDateLabel,
-.dijitCalendarNextMonth .dijitCalendarDateLabel{color:#ababab;border-color:#fff;}
-.dijitCalendarYearContainer{vertical-align:middle}
-.dijitCalendarYearControl{padding:1px 2px 2px 2px}
-.dijitCalendarYearLabel{padding:8px 0 0;margin:0;font-size:.9375em}
-.dijitCalendarYearLabel span{vertical-align:middle}
-.dijitCalendarSelectedYear{padding:0 6px;font-size:.9375em;color:#52bad5}
-.dijitCalendarNextYear,
-.dijitCalendarPreviousYear{font-size:.9375em;border:1px solid transparent;padding:6px 12px}
-.dijitCalendarHoveredDate .dijitCalendarDateLabel,
-.dijitCalendarEnabledDate:hover .dijitCalendarDateLabel{background-color:#b1e0ec;border:solid 1px #52bad5;color:#595959;-webkit-transition-duration:.2s;-ms-transition-duration:.2s;transition-duration:.2s}
-.dijitCalendarNextYearHover,
-.dijitCalendarNextYear:hover,
-.dijitCalendarPreviousYearHover,
-.dijitCalendarPreviousYear:hover{color:#595959;background-color:#f2f2f2;border-color:#d0d0d0}
-.dijitCalendarNextYearActive,
-.dijitCalendarNextYear:active .dijitCalendarPreviousYearActive,
-.dijitCalendarPreviousYear:active{background-color:#c7c7c7}
-.dijitCalendarActiveDate .dijitCalendarDateLabel,
-.dijitCalendarEnabledDate:active .dijitCalendarDateLabel{border:solid 1px #fff;-webkit-transition-duration:.1s;-ms-transition-duration:.1s;transition-duration:.1s}
-.dijitCalendarSelectedDate .dijitCalendarDateLabel{color:#595959;background-color:#b1e0ec;border:solid 1px #52bad5}
-.dijitCalendarDisabledDate .dijitCalendarDateLabel{color:#808080;text-decoration:line-through}
-.dijitCalendar .dijitDropDownButton{margin:0;background-color:transparent}
-.dijitCalendar .dijitDropDownButtonHover .dijitButtonNode,
-.dijitCalendar .dijitDropDownButton:hover .dijitButtonNode{background-color:transparent;border:0 none}
-.dijitCalendarMonthMenu{border-color:#ababab;background-color:#fff;text-align:center;background-image:none}
-.dijitCalendarMonthMenu .dijitCalendarMonthLabel{border-top:solid 1px transparent;border-bottom:solid 1px transparent}
-.dijitCalendarMonthMenu .dijitCalendarMonthLabelHover,
-.dijitCalendarMonthMenu .dijitCalendarMonthLabel:hover{background-color:#b1e0ec;border-color:#52bad5;border-width:1px 0}
-
-.dijitTooltip{display:none !important;}
-
-</style><style type="text/css">
-		body{
-			font:14px/20px 'Helvetica', Arial, sans-serif;
-			margin:0;
-			padding:75px 0 0 0;
-			text-align:center;
-			-webkit-text-size-adjust:none;
-			background-color:#FFFFFF;
-		}
-		p{
-			padding:0 0 10px 0;
-		}
-		h1 img{
-			max-width:100%;
-			height:auto !important;
-			vertical-align:bottom;
-		}
-		h2{
-			font-size:22px;
-			line-height:28px;
-			margin:0 0 12px 0;
-		}
-		h3{
-			margin:0 0 12px 0;
-		}
-		.headerBar{
-			background:none;
-			padding:0;
-			border:none;
-		}
-		.wrapper{
-			width:600px;
-			margin:0 auto 10px auto;
-			text-align:left;
-		}
-		input.formEmailButton{
-			border:none !important;
-		}
-		.formEmailButton{
-			display:inline-block;
-			font-weight:500;
-			font-size:16px;
-			line-height:42px;
-			font-family:'Helvetica', Arial, sans-serif;
-			width:auto;
-			white-space:nowrap;
-			height:42px;
-			margin:12px 5px 12px 0;
-			padding:0 22px;
-			text-decoration:none;
-			text-align:center;
-			cursor:pointer;
-			border:0;
-			border-radius:3px;
-			vertical-align:top;
-		}
-		.formEmailButton span{
-			display:inline;
-			font-family:'Helvetica', Arial, sans-serif;
-			text-decoration:none;
-			font-weight:500;
-			font-style:normal;
-			font-size:16px;
-			line-height:42px;
-			cursor:pointer;
-			border:none;
-		}
-		.rounded6{
-			border-radius:6px;
-		}
-		.poweredWrapper{
-			padding:20px 0;
-			width:560px;
-			margin:0 auto;
-		}
-		.poweredBy{
-			display:block;
-		}
-		span.or{
-			display:inline-block;
-			height:32px;
-			line-height:32px;
-			padding:0 5px;
-			margin:5px 5px 0 0;
-		}
-		.clear{
-			clear:both;
-		}
-		.profile-list{
-			display:block;
-			margin:15px 20px;
-			padding:0;
-			list-style:none;
-			border-top:1px solid #eee;
-		}
-		.profile-list li{
-			display:block;
-			margin:0;
-			padding:5px 0;
-			border-bottom:1px solid #eee;
-		}
-		html[dir=rtl] .wrapper,html[dir=rtl] .container,html[dir=rtl] label{
-			text-align:right !important;
-		}
-		html[dir=rtl] ul.interestgroup_field label{
-			padding:0;
-		}
-		html[dir=rtl] ul.interestgroup_field input{
-			margin-left:5px;
-		}
-		html[dir=rtl] .hidden-from-view{
-			right:-5000px;
-			left:auto;
-		}
-		body,#bodyTable{
-			background-color:#222222;
-		}
-		h1{
-			font-size:28px;
-			line-height:110%;
-			margin-bottom:30px;
-			margin-top:0;
-			padding:0;
-		}
-		#templateContainer{
-			background-color:#222222;
-		}
-		#templateBody{
-			background-color:#FFFFFF;
-		}
-		.bodyContent{
-			line-height:150%;
-			font-family:Helvetica;
-			font-size:14px;
-			color:#333333;
-			padding:20px;
-		}
-		a:link,a:active,a:visited,a{
-			color:#336699;
-		}
-		.formEmailButton:link,.formEmailButton:active,.formEmailButton:visited,.formEmailButton,.formEmailButton span{
-			background-color:#5d5d5d !important;
-			color:#ffffff !important;
-		}
-		.formEmailButton:hover{
-			background-color:#444444 !important;
-			color:#ffffff !important;
-		}
-		label{
-			line-height:150%;
-			font-family:Helvetica;
-			font-size:16px;
-			color:#5d5d5d;
-		}
-		.field-group input,select,textarea,.dijitInputField{
-			font-family:Helvetica;
-			color:#5d5d5d !important;
-		}
-		.asterisk{
-			color:#cc6600;
-			font-size:20px;
-		}
-		label .asterisk{
-			visibility:hidden;
-		}
-		.indicates-required{
-			display:none;
-		}
-		.field-help{
-			color:#777;
-		}
-		.error,.errorText{
-			color:#e85c41;
-			font-weight:bold;
-		}
-	@media (max-width: 620px){
-		body{
-			width:100%;
-			-webkit-font-smoothing:antialiased;
-			padding:10px 0 0 0 !important;
-			min-width:300px !important;
-		}
-
-}	@media (max-width: 620px){
-		.wrapper,.poweredWrapper{
-			width:auto !important;
-			max-width:600px !important;
-			padding:0 10px;
-		}
-
-}	@media (max-width: 620px){
-		#templateContainer,#templateBody,#templateContainer table{
-			width:100% !important;
-			-moz-box-sizing:border-box;
-			-webkit-box-sizing:border-box;
-			box-sizing:border-box;
-		}
-
-}	@media (max-width: 620px){
-		.addressfield span{
-			width:auto;
-			float:none;
-			padding-right:0;
-		}
-
-}	@media (max-width: 620px){
-		.captcha{
-			width:auto;
-			float:none;
-		}
-
-}		.gdpr-mergeRow{
-			margin:10px 0;
-			color:#4a4a4a;
-			font-family:Helvetica;
-		}
-		.gdpr-content{
-			margin:0 -20px 0 -20px;
-			padding:20px;
-			background:rgba(255, 255, 255, 0.8);
-		}
-		#gdpr-label{
-			margin-top:0;
-		}
-		#gdpr-description{
-			margin-top:6px;
-			margin-bottom:0;
-			padding-bottom:11px;
-		}
-		.gdpr-content p{
-			color:#4a4a4a;
-			font-size:13px;
-			line-height:1.5;
-		}
-		.gdpr-content .checkbox-group label{
-			font-weight:normal;
-			font-size:13px;
-		}
-		#gdpr-legal{
-			padding-top:20px;
-			margin:0;
-		}
-		.gdpr-footer{
-			margin:0 -20px 0 -20px;
-			padding:20px;
-			background:rgba(255, 255, 255, 0.9);
-			overflow:auto;
-			color:#6d6d6d;
-		}
-		.gdpr-footer p{
-			font-size:10px;
-			line-height:1.5;
-			margin-bottom:0;
-		}
-		.gdpr-footer a{
-			color:#206578;
-		}
-		.gdpr-footer img{
-			width:65px;
-			float:left;
-			margin-right:15px;
-		}
-		#templateHeader{
-			padding:0px;
-			background-color:#003f87;
-		}
-		.button:link,.button:active,.button:visited,.button,.button span,.button-small:link,.button-small:active,.button-small:visited,.button-small{
-			background-color:#222222;
-		}
-</style></head>
+<html>
+	<head>
+		<meta http-equiv="Content-Language" content="en-us">
+		<link rel="apple-touch-icon-precomposed" href="../images/apple-touch-icon-precomposed.png">
+		<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@optionalBot">
+		<meta name="twitter:title" content="(optional.is)">
+		<meta name="twitter:domain" content="https://optional.is"><meta name="twitter:description" content="A small company based out of Reykjavik, Iceland specializing in future thinking projects">
+		<meta name="twitter:creator" content="@optionalBot">
+		<title>(optional.is) Newsletter</title>
+		<style>			
+			html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding: 0; }
+			html, body { background-color: #f7f7f7; font-family: Helvetica, Arial, sanserif}
+			/*
+			html, body, div, p, h1, h2, h3, ul, ol, li, form, iframe { margin: 0 auto; padding:0; font-size: 14px; line-height: 30px;  width: 100%; text-align: center; color: #444; }
+			div, p, h1, h2, h3, li { text-align: left; }
+			*/
+			main p { line-height: 24px; padding-bottom: 12px;}
+			header, main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+
+			main h1 { border-top: 1px solid #dedede; clear: both; font-size: 22px;
+line-height: 58px; color: #222; text-transform: uppercase;  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica-Light", "Helvetica Light","Helvetica Neue"; font-weight: normal;   }
+			
+			main h2 { font-size: 18px; line-height: 28px; padding: 8px 0px; color: #222; text-transform: uppercase; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica-Light", "Helvetica Light","Helvetica Neue"; font-weight: normal; }			
+			.center, .optional_app_list { text-align: center; }
+			
+
+			
+
+
+			.meta { color: #666; font-size: 12px; }
+			ul { padding: 0; margin: 0; }
+			li { padding: 0 0 20px 0; list-style: none; margin: 0; }
+
+			a { font-weight: normal; color: #003F87; text-decoration: underline;}
+			a:active { position: relative; top:1px; }
+			.subject a { font-weight: bold; }
+
+
+			.section { padding-top: 50px; }
+			.row { clear: both; margin: 0 auto; width: 960px;  }
+			.row div:last-child { margin-right: 0; }
+			.box1 { width: 470px; float: left; margin-right: 20px; }
+			.box2 { width: 225px; float: left; margin-right: 20px; }
+
+
+			@media only screen and (max-width: 960px) {
+				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
+				.row { width: 470px}
+				.box2 { width: 225px; }
+				.box2+.box2 { margin-right: 0px;  }
+				.box2+.box2+.box2 {  margin-right: 20px; }
+				.box2+.box2+.box2+.box2 {  margin-right: 0px; }
+			}
+			@media only screen and (max-width: 480px) {
+				.row { width: 100%; }
+				.box1 { clear: both; float: none; margin-right: 0; width: 100%; height: auto; }
+				.box2 { margin-right: 0; width: 100%; }			
+			}
+
+			</style>
+	</head>
 	<body>
+				<style>
+			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			#header { font-family: optional; font-weight: normal; font-size: 28px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-		<div class="wrapper rounded6" id="templateContainer">
-		    <h1 class="masthead">(optional.is) List</h1>
+			.complication { width: 30px; height: 30px; border-radius: 5px; border: 1px solid #f0f0f0; padding: 0; margin: 1em 0.25em; float: right; text-align: center; background-color: #fafafa; }
+			.complication .line1 { font-size: 8px; line-height: 13px; text-align: center; text-transform: uppercase;  color: #999;}
+			.complication .line2 { font-size: 14px; line-height: 14px; text-align: center; color: #aaa; }
+			.complication .line2.small { font-size: 11px; line-height: 15px; text-align: center; }
+			.complication .simple { text-align: center; font-size: 12px; line-height: 30px; }
+		</style>
+		<header>
+			<a href="../index.html" id="header">(optional.is)</a>
 
-		    <div id="templateBody" class="bodyContent rounded6">
-	
-        
-        
-        
-        
-        <div id="subscribeFormWelcome">Sign-up for a low-volume email with links to interesting articles, ideas and events.<br>
-<br>
-<a href="http://us2.campaign-archive2.com/home/?u=980d7e7c822ddb46c6693388d&id=4b11c60bdb">View previous newsletters to get a feel for the topics, length and content.</a>
-</div>
-<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+			<div class="complication">
+				<div class="line1">RVK</div>
+				<div class="line2 small">13:35</div>
+			</div>
+			<div class="complication">
+				<div class="line1">Mar</div>
+				<div class="line2">11</div>
+			</div>
+			<!--
+			<div class="complication">
+				<div class="simple">12℃</div>
+			</div>
+			-->
+		</header>
+		<main>
+			<h1>Newsletter</h1>
+			<div class="row">
+				<div class="box1">
+					<div class="feature stretched" >
+						<p>Sign-up for our quarterly newsletter. It is a low-volume, informative and fun email with nuggets of great ideas.</p>
 
-
-
-<form action="https://optional.us2.list-manage.com/subscribe/post" method="POST">
-    <input type="hidden" name="u" value="980d7e7c822ddb46c6693388d">
-    <input type="hidden" name="id" value="4b11c60bdb">
-    
-
-    <!-- people should not fill these in and expect good things -->
-    <div class="field-shift" aria-label="Please leave the following three fields empty">
-        <label for="b_name">Name: </label>
-        <input type="text" name="b_name" tabindex="-1" value="" placeholder="Freddie" id="b_name">
-
-        <label for="b_email">Email: </label>
-        <input type="email" name="b_email" tabindex="-1" value="" placeholder="youremail@gmail.com" id="b_email">
-
-        <label for="b_comment">Comment: </label>
-        <textarea name="b_comment" tabindex="-1" placeholder="Please comment" id="b_comment"></textarea>
-    </div>
-
-    <div id="mergeTable" class="mergeTable">
-        
-        
-        <div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
-            <label for="MERGE0">Email Address <span class="req asterisk">*</span></label>
-            <div class="field-group">
-                <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
-                
-                
-            </div>
-            
-        </div>
-        
-        
-        
-        <div class="mergeRow dojoDndItem mergeRow-text" id="mergeRow-1">
-            <label for="MERGE1">First Name</label>
-            <div class="field-group">
-                <input type="text" name="MERGE1" id="MERGE1" size="25" value="">
-                
-                
-            </div>
-            
-        </div>
-        
-        
-        
-        <div class="mergeRow dojoDndItem mergeRow-text" id="mergeRow-2">
-            <label for="MERGE2">Last Name</label>
-            <div class="field-group">
-                <input type="text" name="MERGE2" id="MERGE2" size="25" value="">
-                
-                
-            </div>
-            
-        </div>
-        
-        
-
-
-        
-
-        
-
-        
-    </div>
-
-    <div class="submit_container clear">
-        <input type="submit" class="formEmailButton" name="submit" value="Subscribe">
-    </div>
-    <input type="hidden" name="ht" value="751a41a07ab95caf2402c4faa3a0f2ef64afb4fe:MTU4MDQ4ODQ3Ni4xNDU=">
-    <input type="hidden" name="mc_signupsource" value="hosted">
-</form>
+						<form action="https://optional.us2.list-manage.com/subscribe/post?u=980d7e7c822ddb46c6693388d&amp;id=4b11c60bdb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="" style="height: 30px">
+							<input type="email" placeholder="Email Address" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="width: 130px"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+						</form>
+					</div>
+				</div>
+				<div class="box2">
+					<div class="main">
+						<p>The sendering address is <span style="background-color: #FFFACD">newsletter@optional.is</span> Please add this to your white-list to help with any future filtering.</p>
+					</div>
+				</div>
+				<div class="box2">
+					<div class="main" style="text-align: center">
+					<svg height="180" width="180" viewBox="0 0 26.725 26.726">
+					<g display="inline">
+						<defs>
+							<path id="mSVGID_5_" d="M13.363,25.741c-6.837,0-12.379-5.542-12.379-12.378c0-6.837,5.542-12.379,12.379-12.379
+								c6.836,0,12.378,5.542,12.378,12.379C25.741,20.199,20.199,25.741,13.363,25.741z M10.584,23.413
+								c0.589,0.165,1.198,0.28,1.823,0.341V2.972c-0.625,0.061-1.234,0.176-1.823,0.341V23.413z M16.254,3.312
+								c-0.589-0.165-1.197-0.28-1.823-0.341v20.782c0.626-0.061,1.234-0.176,1.823-0.341V3.312z M22.234,7.769v11.188
+								c1.029-1.616,1.624-3.535,1.624-5.593C23.858,11.305,23.264,9.386,22.234,7.769z M20.211,5.435
+								c-0.591-0.507-1.239-0.948-1.935-1.314v18.485c0.695-0.366,1.344-0.808,1.935-1.314V5.435z M4.604,18.956V7.769
+								c-1.028,1.617-1.624,3.536-1.624,5.595C2.979,15.421,3.575,17.34,4.604,18.956z M6.627,21.291
+								c0.591,0.507,1.24,0.948,1.935,1.314V4.12C7.867,4.486,7.218,4.928,6.627,5.435V21.291z"/>
+						</defs>
+						<use xlink:href="#mSVGID_5_"  overflow="visible" fill-rule="evenodd" 				clip-rule="evenodd"/>
+						<clipPath id="mSVGID_6_">
+							<use xlink:href="#mSVGID_5_"  overflow="visible"/>
+						</clipPath>
+						<g clip-path="url(#mSVGID_6_)">
+							<defs>
+								<rect id="mSVGID_7_" x="-0.87" y="-1.039" width="28.775" height=				"28.775"/>
+							</defs>
+							<use xlink:href="#mSVGID_7_"  overflow="visible"/>
+							<clipPath id="mSVGID_8_">
+								<use xlink:href="#mSVGID_7_"  overflow="visible"/>
+							</clipPath>
+							<rect x="0.844" y="0.844" opacity="0.96" clip-path="url(#mSVGID_8_)"				 width="25.038" height="25.038"/>
+						</g>
+					</g>
+					</svg>
+					</div>
+				</div>
+			</div>
 
 
-		    </div>
+			<div class="row section">
+			<h2>Archives</h2>
+			<p>Checkout the Archive to see what you're missing.</p>
+			<ul>
+
+				<li>
+					<div class="subject"><a href="02020Q1/index.html">02020Q1: ◍ (optional.is) 02020Q1</a></div>
+					<div class="meta">Read Time: ~5.5 minutes. ~730 words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02018Q3/index.html">02018Q3: 🐟🏪 Ye olde fish shoppe</a></div>
+					<div class="meta">Read Time: ~6.5 minutes. ~1275 words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02018Q2/index.html">02018Q2: Sweet tooth of knowledge 🍬🍭</a></div>
+					<div class="meta">Read Time: ~5 minutes. ~975 words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02018Q1/index.html">02018Q1: 🦊🐵👍 Emojis Take Over🤓✉️🎉</a></div>
+					<div class="meta">Read Time: ~4.5 minutes. 850+ words.</div>
+				</li>
+
+				<li>
+					<div class="subject"><a href="02017Q4/index.html">02017Q4: Binendum 🚗 to Bematist 👣</a></div>
+					<div class="meta">Read Time: ~2 minutes. ~400 words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02017Q3/index.html">02017Q3: 📊 Salaries, 🥔 Potatoes, 🎆 Darkness and more</a></div>
+					<div class="meta">Read Time: ~2 minutes. ~400 words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02017Q2/index.html">02017Q2: Macro and micro art 🏢🌼🎨</a></div>
+					<div class="meta">Read Time: ~3 minutes. 625+ words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02017Q1/index.html">02017Q1: Planning for the future ☎🚀🌛</a></div>
+					<div class="meta">Read Time: ~3 minutes. ~590 words.</div>
+				</li>
+
+
+				<li>
+					<div class="subject"><a href="02016Q4/index.html">02016Q4: We need a map! 🌍🌎🌏</a></div>
+					<div class="meta">Read Time: ~3 minutes. 600+ words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02016Q3/index.html">02016Q3: Yan, tan, tethera ... Go! 🐏</a></div>
+					<div class="meta">Read Time: ~2.5 minutes. 475+ words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02016Q2/index.html">02016Q2: Summer cleansing of the spirit 🔆🚿👹</a></div>
+					<div class="meta">Read Time: ~2 minutes. 400+ words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02016Q1/index.html">02016Q1: ☀️ Summer is near</a></div>
+					<div class="meta">Read Time: ~2 minutes. ~375 words.</div>
+				</li>
+
+
+				<li>
+					<div class="subject"><a href="02015Q4/index.html">02015Q4: Newsletter: 💰💵</a></div>
+					<div class="meta">Read Time: ~3.5 minutes. ~700 words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02015Q3/index.html">02015Q3: Society for more open browser tabs.</a></div>
+					<div class="meta">Read Time: ~1.5 minutes. 300+ words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02015Q2/index.html">02015Q2: Losing Light ☀🔆🔅</a></div>
+					<div class="meta">Read Time: ~2 minutes. 400+ words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02015Q1/index.html">02015Q1: Can you taste the revolution? 👅</a></div>
+					<div class="meta">Read Time: ~3 minutes. 550+ words.</div>
+				</li>
+
+
+				<li>
+					<div class="subject"><a href="02014Q4/index.html">02014Q4: The Sensors of Smell</a></div>
+					<div class="meta">Read Time: ~3 minutes. ~575 words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02014Q3/index.html">02014Q3: Jafndægur</a></div>
+					<div class="meta">Read Time: ~2 minutes. ~400 words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02014Q2/index.html">02014Q2: Electric Boogaloo</a></div>
+					<div class="meta">Read Time: ~2 minutes. 460+ words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02014Q1/index.html">02014Q1: Winter Wonderland</a></div>
+					<div class="meta">Read Time: ~3 minutes. 560+ words.</div>
+				</li>
+
+				<li>
+					<div class="subject"><a href="02013Q4/index.html">02013Q4: Friends, fun and food</a></div>
+					<div class="meta">Read Time: ~2 minutes. ~420 words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02013Q3/index.html">02013Q3: Crowds, Colors & CERN</a></div>
+					<div class="meta">Read Time: ~2 minutes. ~375 words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02013Q2/index.html">02013Q2: Travelling Circus</a></div>
+					<div class="meta">Read Time: ~2 minutes. 425+ words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02013Q1/index.html">02013Q1: Paper and Production</a></div>
+					<div class="meta">Read Time: ~3 minutes. ~630 words.</div>
+				</li>
+
+
+				<li>
+					<div class="subject"><a href="02012Q4/index.html">02012Q4: Art, Inspiration &amp; Remarkability</a></div>
+					<div class="meta">Read Time: ~3 minutes. ~620 words.</div>
+				</li>
+
+				<li>
+					<div class="subject"><a href="02012Q3/index.html">02012Q3: An (optional) autumn</a></div>
+					<div class="meta">Read Time: ~3 minutes. ~550 words.</div>
+				</li>
+
+				<li>
+					<div class="subject"><a href="02012Q2/index.html">02012Q2: Summer Time In the Arctic</a></div>
+					<div class="meta">Read Time: ~3 minutes. 625+ words.</div>
+				</li>
+
+				<li>
+					<div class="subject"><a href="02012Q1/index.html">02012Q1: First newsletter, I hope you enjoy.</a></div>
+					<div class="meta">Read Time: ~2 minutes. 450+ words.</div>
+				</li>
+			</ul>
 		</div>
+		</main>
+			<svg class="svgs" version="1.1" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<symbol id="icon_arrowR" viewBox="0 0 33.453 19.57">
+		<path stroke="currentColor" stroke-width="2" stroke-miterlimit="10" d="M22.451 18.845l9.549-9.059-9.549-9.061" fill="none"/>
+		<path stroke="currentColor" stroke-width="2" stroke-miterlimit="10" fill="none" d="M0 9.784h32"/>
+	</symbol>
 
-        
-		<div class="poweredWrapper">
-			<span class="poweredBy"><a href="http://www.mailchimp.com/monkey-rewards/?utm_source=freemium_newsletter&utm_medium=email&utm_campaign=monkey_rewards&aid=980d7e7c822ddb46c6693388d&afl=1"><img src="https://gallery.mailchimp.com/089443193dd93823f3fed78b4/images/postmark_mailchimp_red.gif" border="0" alt="Email Marketing Powered by Mailchimp" title="Mailchimp Email Marketing"></a></span>
-		</div>
-		
-    <script type="text/javascript" >var _cf = _cf || []; _cf.push(['_setFsp', true]); _cf.push(['_setBm', true]); _cf.push(['_setAu', '/static/b6aa825e69223523b79d310376e80b1']);</script><script type="text/javascript"  src="https://us2.list-manage.com/static/b6aa825e69223523b79d310376e80b1"></script></body>
+	<symbol id="icon_triagemail" viewBox="0 0 26.725 26.726">
+	<g>
+		<defs>
+			<path id="SVGID_1_" d="M13.362,25.716c-6.822,0-12.353-5.53-12.353-12.354C1.009,6.54,6.54,1.01,13.362,1.01
+				s12.353,5.53,12.353,12.353C25.715,20.186,20.185,25.716,13.362,25.716z M23.806,12.563h-9.489v11.179
+				c5.333-0.455,9.519-4.929,9.519-10.38C23.836,13.094,23.826,12.827,23.806,12.563z M3.03,12.563C3.011,12.827,3,13.094,3,13.362
+				c0,5.376,4.071,9.8,9.298,10.359V12.563H3.03z M5.751,6.31h15.335c-1.904-2.068-4.635-3.365-7.668-3.365S7.655,4.241,5.751,6.31z
+				 M4.295,8.329c-0.384,0.693-0.69,1.437-0.909,2.216h20.065c-0.219-0.779-0.526-1.522-0.909-2.216H4.295z"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_2_)">
+			<defs>
+				<rect id="SVGID_3_" x="-0.982" y="-0.981" width="28.716" height="28.717"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  overflow="visible"/>
+			</clipPath>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+		</g>
+	</g>
+	</symbol>
+	<symbol id="icon_newsletter" viewBox="0 0 26.725 26.726">
+	<g display="inline">
+		<defs>
+			<path id="SVGID_5_" d="M13.363,25.741c-6.837,0-12.379-5.542-12.379-12.378c0-6.837,5.542-12.379,12.379-12.379
+				c6.836,0,12.378,5.542,12.378,12.379C25.741,20.199,20.199,25.741,13.363,25.741z M10.584,23.413
+				c0.589,0.165,1.198,0.28,1.823,0.341V2.972c-0.625,0.061-1.234,0.176-1.823,0.341V23.413z M16.254,3.312
+				c-0.589-0.165-1.197-0.28-1.823-0.341v20.782c0.626-0.061,1.234-0.176,1.823-0.341V3.312z M22.234,7.769v11.188
+				c1.029-1.616,1.624-3.535,1.624-5.593C23.858,11.305,23.264,9.386,22.234,7.769z M20.211,5.435
+				c-0.591-0.507-1.239-0.948-1.935-1.314v18.485c0.695-0.366,1.344-0.808,1.935-1.314V5.435z M4.604,18.956V7.769
+				c-1.028,1.617-1.624,3.536-1.624,5.595C2.979,15.421,3.575,17.34,4.604,18.956z M6.627,21.291
+				c0.591,0.507,1.24,0.948,1.935,1.314V4.12C7.867,4.486,7.218,4.928,6.627,5.435V21.291z"/>
+		</defs>
+		<use xlink:href="#SVGID_5_"  overflow="visible" fill-rule="evenodd" clip-rule="evenodd"/>
+		<clipPath id="SVGID_6_">
+			<use xlink:href="#SVGID_5_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_6_)">
+			<defs>
+				<rect id="SVGID_7_" x="-0.87" y="-1.039" width="28.775" height="28.775"/>
+			</defs>
+			<use xlink:href="#SVGID_7_"  overflow="visible"/>
+			<clipPath id="SVGID_8_">
+				<use xlink:href="#SVGID_7_"  overflow="visible"/>
+			</clipPath>
+			<rect x="0.844" y="0.844" opacity="0.96" clip-path="url(#SVGID_8_)" width="25.038" height="25.038"/>
+		</g>
+	</g>
+	</symbol>
+	<symbol id="af_chaotic"  viewBox="0 0 26.725 26.726">
+	<path d="M12.94,22.678c-4.773,0-8.656-3.883-8.656-8.656v-0.558L24.561,0.946l1.051,1.701L6.306,14.565
+		c0.278,3.417,3.147,6.112,6.634,6.112c3.669,0,6.655-2.986,6.655-6.656h2C21.595,18.795,17.713,22.678,12.94,22.678z"/>
+	<path d="M12.932,25.779c-6.517,0-11.819-5.302-11.819-11.818h2c0,5.414,4.405,9.818,9.819,9.818s9.819-4.404,9.819-9.818h2
+		C24.75,20.478,19.449,25.779,12.932,25.779z"/>
+	</symbol>
+	<symbol id="af_thin"  viewBox="0 0 26.725 26.726">
+	<path d="M12.981,24.482c-5.035,0-9.131-4.097-9.131-9.132v-0.588L25.24,1.555l1.109,1.794L5.982,15.922
+	c0.293,3.605,3.32,6.448,6.999,6.448c3.871,0,7.021-3.149,7.021-7.021h2.11C22.112,20.385,18.017,24.482,12.981,24.482z"/>
+	</symbol>
+
+
+
+
+
+	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
+	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
+	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
+		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
+		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
+		c0-0.44-0.15-0.578-0.59-0.578h-0.74c-0.439,0-0.578,0.138-0.578,0.578v0.74C-1379.235-1115.886-1379.097-1115.76-1378.657-1115.76
+		z M-1374.479-1115.76h0.728c0.451,0,0.59-0.126,0.59-0.564v-0.74c0-0.44-0.139-0.578-0.59-0.578h-0.728
+		c-0.44,0-0.59,0.138-0.59,0.578v0.74C-1375.068-1115.886-1374.919-1115.76-1374.479-1115.76z M-1370.312-1115.76h0.74
+		c0.438,0,0.59-0.126,0.59-0.564v-0.74c0-0.44-0.151-0.578-0.59-0.578h-0.74c-0.439,0-0.59,0.138-0.59,0.578v0.74
+		C-1370.901-1115.886-1370.751-1115.76-1370.312-1115.76z M-1382.824-1111.656h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
+		c0-0.439-0.15-0.564-0.59-0.564h-0.74c-0.439,0-0.59,0.125-0.59,0.564v0.74
+		C-1383.414-1111.782-1383.264-1111.656-1382.824-1111.656z M-1378.657-1111.656h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
+		c0-0.439-0.15-0.564-0.59-0.564h-0.74c-0.439,0-0.578,0.125-0.578,0.564v0.74
+		C-1379.235-1111.782-1379.097-1111.656-1378.657-1111.656z M-1374.479-1111.656h0.728c0.451,0,0.59-0.126,0.59-0.564v-0.74
+		c0-0.439-0.139-0.564-0.59-0.564h-0.728c-0.44,0-0.59,0.125-0.59,0.564v0.74
+		C-1375.068-1111.782-1374.919-1111.656-1374.479-1111.656z M-1370.312-1111.656h0.74c0.438,0,0.59-0.126,0.59-0.564v-0.74
+		c0-0.439-0.151-0.564-0.59-0.564h-0.74c-0.439,0-0.59,0.125-0.59,0.564v0.74
+		C-1370.901-1111.782-1370.751-1111.656-1370.312-1111.656z M-1382.824-1107.54h0.74c0.439,0,0.59-0.138,0.59-0.577v-0.74
+		c0-0.439-0.15-0.564-0.59-0.564h-0.74c-0.439,0-0.59,0.125-0.59,0.564v0.74C-1383.414-1107.678-1383.264-1107.54-1382.824-1107.54z
+		 M-1378.657-1107.54h0.74c0.439,0,0.59-0.138,0.59-0.577v-0.74c0-0.439-0.15-0.564-0.59-0.564h-0.74
+		c-0.439,0-0.578,0.125-0.578,0.564v0.74C-1379.235-1107.678-1379.097-1107.54-1378.657-1107.54z M-1374.479-1107.54h0.728
+		c0.451,0,0.59-0.138,0.59-0.577v-0.74c0-0.439-0.139-0.564-0.59-0.564h-0.728c-0.44,0-0.59,0.125-0.59,0.564v0.74
+		C-1375.068-1107.678-1374.919-1107.54-1374.479-1107.54z"/>
+	</g>
+	</symbol>
+	<symbol id="optional-logo" viewBox="0 0 284.478 66.043">
+	<path d="M14.128,33.557c0-4.464,1.599-8.264,4.798-11.39c3.185-3.131,7.081-4.704,11.673-4.704c4.607,0,8.519,1.586,11.739,4.736
+		c3.164,3.148,4.75,7.021,4.75,11.612c0,4.629-1.586,8.513-4.784,11.64c-3.22,3.108-7.164,4.665-11.84,4.665
+		c-4.63,0-8.508-1.584-11.64-4.76C15.695,42.226,14.128,38.293,14.128,33.557z M21.427,33.685c0,3.088,0.824,5.527,2.472,7.324
+		c1.699,1.821,3.922,2.734,6.701,2.734c2.788,0,5.023-0.898,6.692-2.702c1.673-1.797,2.507-4.198,2.507-7.202
+		c0-3.003-0.834-5.404-2.507-7.202c-1.698-1.814-3.922-2.727-6.692-2.727c-2.734,0-4.948,0.912-6.635,2.727
+		C22.273,28.456,21.427,30.809,21.427,33.685z"/>
+	<path d="M57.723,66.043H50.58V18.326h7.143v3.364c2.817-2.809,6.004-4.228,9.583-4.228c4.248,0,7.75,1.573,10.5,4.704
+		c2.792,3.109,4.188,7.032,4.188,11.771c0,4.63-1.382,8.492-4.154,11.573c-2.75,3.069-6.218,4.604-10.405,4.604
+		c-3.618,0-6.851-1.45-9.711-4.351V66.043z M74.702,33.967c0-2.961-0.813-5.373-2.417-7.236c-1.626-1.875-3.68-2.82-6.158-2.82
+		c-2.623,0-4.747,0.912-6.372,2.727c-1.627,1.819-2.448,4.211-2.448,7.175c0,2.894,0.82,5.283,2.448,7.169
+		c1.609,1.84,3.721,2.763,6.345,2.763c2.473,0,4.514-0.938,6.123-2.794C73.871,39.089,74.702,36.761,74.702,33.967z"/>
+	<path d="M94.226,24.988v24.237h-7.138V24.988h-3.041v-6.662h3.041V6.997h7.138v11.329h3.113v6.662H94.226z"/>
+	<path d="M100.306,7.103c0-1.257,0.453-2.328,1.365-3.236c0.907-0.906,1.999-1.366,3.271-1.366c1.289,0,2.384,0.46,3.298,1.366
+		c0.905,0.891,1.365,1.975,1.365,3.27c0,1.289-0.46,2.386-1.365,3.299c-0.886,0.912-1.981,1.365-3.271,1.365
+		c-1.288,0-2.39-0.453-3.297-1.365C100.759,9.521,100.306,8.415,100.306,7.103z M108.526,18.326v30.899h-7.148V18.326H108.526z"/>
+	<path d="M112.045,33.557c0-4.464,1.599-8.264,4.789-11.39c3.194-3.131,7.093-4.704,11.673-4.704c4.614,0,8.532,1.586,11.745,4.736
+		c3.171,3.148,4.759,7.021,4.759,11.612c0,4.629-1.599,8.513-4.791,11.64c-3.214,3.108-7.158,4.665-11.834,4.665
+		c-4.63,0-8.513-1.584-11.644-4.76C113.61,42.226,112.045,38.293,112.045,33.557z M119.341,33.685c0,3.088,0.824,5.527,2.473,7.324
+		c1.694,1.821,3.927,2.734,6.693,2.734c2.794,0,5.025-0.898,6.701-2.702c1.669-1.797,2.5-4.198,2.5-7.202
+		c0-3.003-0.832-5.404-2.5-7.202c-1.694-1.814-3.93-2.727-6.701-2.727c-2.722,0-4.934,0.912-6.626,2.727
+		C120.187,28.456,119.341,30.809,119.341,33.685z"/>
+	<path d="M148.502,18.326h7.169v2.854c2.496-2.475,5.306-3.718,8.443-3.718c3.59,0,6.389,1.142,8.401,3.4
+		c1.733,1.93,2.602,5.064,2.602,9.425v18.938h-7.171V31.993c0-3.043-0.425-5.146-1.271-6.309c-0.819-1.178-2.324-1.774-4.503-1.774
+		c-2.375,0-4.055,0.784-5.04,2.346c-0.979,1.537-1.461,4.237-1.461,8.075v14.895h-7.169V18.326z"/>
+	<path d="M202.845,18.326h7.176v30.899h-7.176v-3.233c-2.938,2.753-6.103,4.124-9.489,4.124c-4.269,0-7.799-1.539-10.593-4.634
+		c-2.771-3.15-4.154-7.083-4.154-11.798c0-4.637,1.383-8.497,4.154-11.584c2.772-3.088,6.24-4.638,10.406-4.638
+		c3.596,0,6.822,1.484,9.676,4.45V18.326z M185.905,33.685c0,2.96,0.79,5.373,2.373,7.232c1.632,1.878,3.683,2.826,6.158,2.826
+		c2.644,0,4.783-0.913,6.41-2.734c1.627-1.882,2.445-4.27,2.445-7.17c0-2.893-0.818-5.284-2.445-7.169
+		c-1.627-1.835-3.738-2.76-6.346-2.76c-2.451,0-4.502,0.927-6.157,2.792C186.719,28.584,185.905,30.915,185.905,33.685z"/>
+	<path d="M222.102,7.014v42.212h-7.135V7.014H222.102z"/>
+	<path d="M225.76,44.864c0-1.188,0.437-2.211,1.3-3.08c0.867-0.864,1.902-1.299,3.108-1.299s2.246,0.435,3.109,1.299
+		c0.869,0.869,1.305,1.901,1.305,3.108c0,1.228-0.436,2.274-1.305,3.145c-0.846,0.838-1.882,1.266-3.109,1.266
+		c-1.25,0-2.295-0.428-3.138-1.266C226.179,47.188,225.76,46.13,225.76,44.864z"/>
+	<path d="M237.121,7.103c0-1.257,0.454-2.328,1.368-3.236c0.912-0.906,1.996-1.366,3.27-1.366c1.287,0,2.389,0.46,3.296,1.366
+		c0.908,0.891,1.361,1.975,1.361,3.27c0,1.289-0.453,2.386-1.361,3.299c-0.891,0.912-1.974,1.365-3.265,1.365
+		c-1.294,0-2.389-0.453-3.301-1.365C237.575,9.521,237.121,8.415,237.121,7.103z M245.338,18.326v30.899h-7.131V18.326H245.338z"/>
+	<path d="M269.089,23.594l-5.893,3.137c-0.936-1.875-2.087-2.82-3.464-2.82c-0.659,0-1.216,0.215-1.683,0.651
+		c-0.463,0.433-0.697,0.985-0.697,1.66c0,1.185,1.379,2.355,4.128,3.519c3.784,1.633,6.335,3.127,7.64,4.499
+		c1.312,1.376,1.971,3.223,1.971,5.546c0,2.979-1.1,5.472-3.305,7.477c-2.129,1.903-4.712,2.854-7.738,2.854
+		c-5.186,0-8.846-2.528-11.004-7.579l6.086-2.826c0.848,1.482,1.494,2.422,1.937,2.826c0.868,0.802,1.903,1.206,3.109,1.206
+		c2.411,0,3.617-1.1,3.617-3.305c0-1.265-0.935-2.45-2.794-3.558c-0.72-0.354-1.432-0.7-2.152-1.04
+		c-0.725-0.343-1.455-0.686-2.19-1.051c-2.075-1.019-3.535-2.029-4.383-3.041c-1.071-1.295-1.614-2.95-1.614-4.986
+		c0-2.688,0.918-4.898,2.761-6.66c1.874-1.753,4.167-2.64,6.85-2.64C264.225,17.463,267.168,19.512,269.089,23.594z"/>
+	<path d="M5.212,7.544l4.951,1.903C8.43,13.585,7.214,17.41,6.522,20.916c-0.348,1.775-0.608,3.646-0.785,5.605
+		c-0.171,1.958-0.265,4.092-0.265,6.411c0,2.336,0.093,4.479,0.265,6.438c0.177,1.96,0.437,3.823,0.785,5.606
+		c0.681,3.483,1.893,7.3,3.641,11.438l-4.951,1.902C1.742,51.078,0,42.615,0,32.933C0,23.257,1.742,14.793,5.212,7.544z"/>
+	<path d="M279.288,58.503l-4.951-1.903c1.748-4.149,2.961-7.955,3.646-11.446c0.713-3.489,1.068-7.501,1.068-12.042
+		c0-4.505-0.355-8.516-1.068-12.02c-0.697-3.505-1.913-7.334-3.646-11.466l4.951-1.908c3.464,7.252,5.189,15.717,5.189,25.394
+		C284.478,42.785,282.752,51.245,279.288,58.503z"/>
+	</symbol>
+
+</svg>
+
+		<style>
+			footer {
+				padding: 1em 32px;
+				color: #555;
+				text-align: center;
+				font-size: 12px;
+				line-height: 14px;
+				clear: both;
+			}
+			footer div { padding: 1em 0; font-size: 12px; text-align: center; font-size: 12px; line-height: 14px; }
+			footer div img { padding: 8em 0; }
+
+			footer #stripe {
+				background-color: #eee;
+				max-width: 1216px;
+				margin: 0 auto;
+				padding: 0;
+				text-align: center;
+				margin-bottom: 5em;
+			}
+			footer #stripe .items {
+				margin: 0 auto;
+				padding: 0;
+				width: 768px;
+				height: 128px;
+				column-width: 128px;
+				column-count: 4;
+				column-gap: 32px;
+			}
+
+			footer #stripe .item {
+				vertical-align: top;
+				width: 128px;
+				height: 128px;
+				overflow: hidden;
+				padding: 0;
+				margin: 0 32px;
+				display: block;
+				color: #333;
+			}
+
+			footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover {
+				text-decoration: none;
+				color: #333;
+			}
+
+			@media (max-width: 831px) {
+				footer #stripe .items {
+					width: 384px;
+					height: 256px;
+					column-count: 2;
+					column-gap: 32px;
+				}
+			}
+			@media (max-width: 415px) {
+				footer #stripe .items {
+					width: 299px;
+					height: 256px;
+					column-gap: 0px;
+					column-count: 2;
+				}
+				footer #stripe .item {
+					margin: 0 auto;
+				}
+			}
+
+			footer #stripe .item svg {
+				margin-left: -20px;
+				padding: 15px 0 10px 0;
+			}
+			footer #stripe .item h3 {
+				text-align: left;
+				text-transform: uppercase;
+				font-size: 13px;
+				line-height: 14px;
+				font-weight: bold;
+			}
+			footer #stripe .item h3 a { font-weight: bold; }
+			footer #stripe .item h3 svg {
+				margin: 0;
+				padding: 0;
+			}
+
+			footer #stripe .item div {
+				padding: 6px 0;
+				text-align: left;
+				color: #888;
+			}
+
+			footer #stripe .item div:after {
+				width: 16px;
+				height: 2px;
+				margin: 10px 0 16px;
+				content: "";
+				display: block;
+				background-color: #000;
+			}
+
+			footer #links {
+				margin: 0 auto;
+				width: 960px;
+				text-align: left;
+			}
+
+			footer #links .column {
+				vertical-align: top;
+				width: 192px;
+				padding: 0 0 20px 0;
+				margin: 0 auto;
+				display: inline-block;
+				text-align: left;
+			}
+
+			@media (max-width: 1023px) {
+				footer #links {
+					width: 576px;
+				}
+			}
+			@media (max-width: 643px) {
+				footer #links {
+					width: 100%;
+				}
+			}
+			@media (max-width: 415px) {
+				footer #links .column {
+					width: 154px;
+				}
+			}
+
+			footer #links .column ul, footer #links .column ul li {
+				margin: 0;
+				padding:0;
+				list-style: none;
+				line-height: 14px;
+				font-size: 12px;
+			}
+			footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus {
+				color: #666;
+				text-decoration: none;
+			}
+			footer #links .column ul li a:hover {
+				color: #000;
+				background-color: transparent;
+			}			
+			footer #links .column ul li {
+				padding: 0.4em 0;
+			}
+
+			footer #links .column h3 {
+				color: #000;
+				line-height: 14px;
+			}
+			footer #links .column h3:after {
+				width: 16px;
+				height: 2px;
+				margin: 16px 0 16px;
+				content: "";
+				display: block;
+				background-color: #000;
+			}
+
+			footer #links .column:last-child {
+				margin: 0;
+			}
+
+			footer .logo {
+				padding: 5em 0; 
+				width: 384px; 
+				margin: 0 auto;
+			}
+			@media (max-width: 384px) {
+				footer .logo {
+					width: 256px; 
+				}
+			}
+
+		</style>
+
+		<footer>
+			<div id="stripe">
+				<div class="items">
+				<div class="item">
+					<svg width="40" height="40">
+						<use xlink:href="#icon_triagemail"/>
+					</svg>
+					<h3><a href="mailto:optional@optional.is">Contact <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
+					<div>Say Hello!</div>
+				</div><div class="item"><svg width="40" height="40">
+						<use xlink:href="#icon_newsletter"/>
+					</svg>
+					<h3><a href="archive/index.html">Newsletter <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
+					<div>Quarterly Updates</div></div><div class="item"><svg width="40" height="40">
+						<use xlink:href="#icon_weeknotes"/>
+					</svg>
+					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
+					<div>Week #474</div></div><div class="item"><svg width="40" height="40">
+						<use xlink:href="#af_chaotic"/>
+					</svg>
+					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
+					<div>Availability Forecast</div></div>
+				</div>
+			</div>
+			<div id="links">
+				<div class="column">
+					<h3>Company</h3>
+					<ul>
+						<li>kt. 470211-1130</li>
+						<li>VAT №. 108875</li>	
+						<li>+354.868.0795</li>
+						<li><a href="mailto:optional@optional.is">optional@optional.is</a></li>
+						<li><a href="http://feeds2.feedburner.com/optional?format=xml">RSS Feed</a></li>
+						<li><a href="archive/index.html">Newsletter</a></li>
+					
+					</ul>
+				</div><div class="column"><h3>Material</h3>
+					<ul>
+						<li><a href="https://podcasts.apple.com/us/podcast/material/id1279787564" target="_blank">Podcast</a></li>
+						<li><a href="https://material.is/archive" target="_blank">Archive</a></li>
+						<li><a href="https://material.is/2020" target="_blank">2020</a></li>
+						<li><a href="https://material.is/2018" target="_blank">2018</a></li>
+						<li><a href="https://material.is/2017" target="_blank">2017</a></li>						
+					</ul></div><div class="column"><h3>iOS Apps</h3>
+					<ul>
+						<li><a href="https://itunes.apple.com/us/app/dashbones/id1071726287?mt=8">Dashbones</a></li>						
+						<li><a href="https://itunes.apple.com/us/app/emoji-calendar/id1286750440?mt=8">Emoji Calendar</a></li>
+						<li><a href="https://itunes.apple.com/us/app/floræ-linnaeus-flower-clock/id1192847405?mt=8">Florae</a></li>						
+						<li><a href="https://itunes.apple.com/us/app/how-far-iceland/id1311872083?mt=8">How Far: Iceland</a></li>						
+						<li><a href="https://itunes.apple.com/us/app/red-days-holiday-countdown/id1128247890?mt=8" target="_blank">Red Days</a></li>
+						<li><a href="https://itunes.apple.com/us/app/shipping-forecast-mindfulness/id1226922380?mt=8">Shipping Forecast</a></li>						
+						<li><a href="https://itunes.apple.com/us/app/text-stats/id1373463793?mt=8">Text Stats</a></li>
+						<li><a href="https://itunes.apple.com/us/app/triagemail/id1124659536?mt=8">Triagemail</a></li>						
+					</ul></div><div class="column"><h3>Analog Notebooks</h3>
+					<ul>
+						<li><a href="https://store.analog.is/product/red-letterpress-notebook-graph-paper-eyjafjallajokull-glacier" target="_blank">Eyjafjallajökull</a></li>
+						<li><a href="https://store.analog.is/product/mars-island" target="_blank">Mars Island</a></li>
+						<li><a href="https://store.analog.is/product/island-series-6-pack" target="_blank">Island Series</a></li>
+						<li><a href="https://store.analog.is/category/accessories" target="_blank">Point Markers</a></li>						
+					</ul></div><div class="column"><h3>Workshops</h3>
+					<ul>
+						<li>Designing With Data</li>
+						<li>Futurecasting</li>
+					</ul></div>
+			</div>
+			<div class="logo"><svg width="100%" ><use xlink:href="#optional-logo"/></svg></div>
+			<div style="font-size: 12px">LAUFÁSVEGUR 26, 101 REYKJAVÍK, ICELAND</div>
+			<div style="font-size: 12px">copyright 2019</div>
+		</footer>	</body>
 </html>
-<script type="text/javascript">
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-2497164-9', {'allowLinker': true});
-            ga('set', 'hostname', '.list-manage.com');
-            ga('send', 'pageview');
-        </script>

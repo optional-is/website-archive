@@ -1,0 +1,812 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <!-- Facebook sharing information tags -->
+        <meta property="og:title" content="Paper and Production">
+        
+        <title>Paper and Production</title>
+		<style type="text/css">
+			/* Client-specific Styles */
+			#outlook a{padding:0;} /* Force Outlook to provide a "view in browser" button. */
+			body{width:100% !important;} .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+			body{-webkit-text-size-adjust:none;} /* Prevent Webkit platforms from changing default text sizes. */
+			
+			/* Reset Styles */
+			body{margin:0; padding:0;}
+			img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
+			table td{border-collapse:collapse;}
+			#backgroundTable{height:100% !important; margin:0; padding:0; width:100% !important;}
+			
+			/* Template Styles */
+			
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: COMMON PAGE ELEMENTS /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Page
+			* @section background color
+			* @tip Set the background color for your email. You may want to choose one that matches your company's branding.
+			* @theme page
+			*/
+			body, #backgroundTable{
+				/*@editable*/ background-color:#FAFAFA;
+				/*@editable*/ background-image:url('../../images/mail/bg.png');
+			}
+			
+			/**
+			* @tab Page
+			* @section email border
+			* @tip Set the border for your email.
+			*/
+			#templateContainer{
+				/*@editable*/ border: 1px solid #DDDDDD;
+			}
+			
+			/**
+			* @tab Page
+			* @section heading 1
+			* @tip Set the styling for all first-level headings in your emails. These should be the largest of your headings.
+			* @style heading 1
+			*/
+			h1, .h1{
+				/*@editable*/ color:#202020;
+				display:block;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:34px;
+				/*@editable*/ font-weight:bold;
+				/*@editable*/ line-height:100%;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				/*@editable*/ text-align:left;
+			}
+
+			/**
+			* @tab Page
+			* @section heading 2
+			* @tip Set the styling for all second-level headings in your emails.
+			* @style heading 2
+			*/
+			h2, .h2{
+				/*@editable*/ color:#202020;
+				display:block;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:22px;
+				/*@editable*/ font-weight:bold;
+				/*@editable*/ line-height:100%;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				/*@editable*/ text-align:left;
+			}
+
+			/**
+			* @tab Page
+			* @section heading 3
+			* @tip Set the styling for all third-level headings in your emails.
+			* @style heading 3
+			*/
+			h3, .h3{
+				/*@editable*/ color:#404040;
+				display:block;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:20px;
+				/*@editable*/ font-weight:bold;
+				/*@editable*/ line-height:100%;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				/*@editable*/ text-align:left;
+			}
+
+			/**
+			* @tab Page
+			* @section heading 4
+			* @tip Set the styling for all fourth-level headings in your emails. These should be the smallest of your headings.
+			* @style heading 4
+			*/
+			h4, .h4{
+				/*@editable*/ color:#202020;
+				display:block;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:22px;
+				/*@editable*/ font-weight:bold;
+				/*@editable*/ line-height:100%;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				/*@editable*/ text-align:left;
+			}
+			
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: PREHEADER /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Header
+			* @section preheader style
+			* @tip Set the background color for your email's preheader area.
+			* @theme page
+			*/
+			#templatePreheader{
+				/*@editable*/ background-color:transparent;
+			}
+			
+			/**
+			* @tab Header
+			* @section preheader text
+			* @tip Set the styling for your email's preheader text. Choose a size and color that is easy to read.
+			*/
+			.preheaderContent div{
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:10px;
+				/*@editable*/ line-height:100%;
+				/*@editable*/ text-align:left;
+			}
+			
+			/**
+			* @tab Header
+			* @section preheader link
+			* @tip Set the styling for your email's preheader links. Choose a color that helps them stand out from your text.
+			*/
+			.preheaderContent div a:link, .preheaderContent div a:visited, /* Yahoo! Mail Override */ .preheaderContent div a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#336699;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:underline;
+			}
+			
+
+			
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: HEADER /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Header
+			* @section header style
+			* @tip Set the background color and border for your email's header area.
+			* @theme header
+			*/
+			#templateHeader{
+				/*@editable*/ background-color:#FFFFFF;
+				/*@editable*/ border-bottom:0;
+			}
+			
+			/**
+			* @tab Header
+			* @section header text
+			* @tip Set the styling for your email's header text. Choose a size and color that is easy to read.
+			*/
+			.headerContent{
+				/*@editable*/ color:#202020;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:34px;
+				/*@editable*/ font-weight:bold;
+				/*@editable*/ line-height:100%;
+				/*@editable*/ padding:0;
+				/*@editable*/ text-align:center;
+				/*@editable*/ vertical-align:middle;
+			}
+			
+			/**
+			* @tab Header
+			* @section header link
+			* @tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
+			*/
+			.headerContent a:link, .headerContent a:visited, /* Yahoo! Mail Override */ .headerContent a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#336699;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:underline;
+			}
+			
+			#headerImage{
+				height:auto;
+				max-width:600px;
+			}
+			
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: MAIN BODY & FULL-WIDTH BAND /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Body
+			* @section body style
+			* @tip Set the background color for your email's body area.
+			*/
+			#templateContainer, .bodyContent, .fullWidthBandContent{
+				/*@editable*/ background-color:#FFFFFF;
+			}
+			
+			/**
+			* @tab Body
+			* @section body text
+			* @tip Set the styling for your email's main content text. Choose a size and color that is easy to read.
+			* @theme main
+			*/
+			.bodyContent div, .fullWidthBandContent div{
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:14px;
+				/*@editable*/ line-height:150%;
+				/*@editable*/ text-align:left;
+			}
+			
+			/**
+			* @tab Body
+			* @section body link
+			* @tip Set the styling for your email's main content links. Choose a color that helps them stand out from your text.
+			*/
+			.bodyContent div a:link, .bodyContent div a:visited, /* Yahoo! Mail Override */ .bodyContent div a .yshortcuts /* Yahoo! Mail Override */, .fullWidthBandContent div a:link, .fullWidthBandContent div a:visited, /* Yahoo! Mail Override */ .fullWidthBandContent div a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#336699;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:underline;
+			}
+			
+			.bodyContent img, .fullWidthBandContent img{
+				display:inline;
+				height:auto;
+			}
+
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: MIDDLE COLUMNS; ONE, TWO, THREE, FOUR /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Middle Columns
+			* @section column one text
+			* @tip Set the styling for your email's first column text. Choose a size and color that is easy to read.
+			*/
+			.columnOneContent{
+				/*@editable*/ background-color:#FFFFFF;
+			}
+			
+			/**
+			* @tab Middle Columns
+			* @section column one text
+			* @tip Set the styling for your email's first column text. Choose a size and color that is easy to read.
+			*/
+			.columnOneContent div{
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:12px;
+				/*@editable*/ line-height:150%;
+				/*@editable*/ text-align:left;
+			}
+			
+			/**
+			* @tab Middle Columns
+			* @section column one link
+			* @tip Set the styling for your email's first column links. Choose a color that helps them stand out from your text.
+			*/
+			.columnOneContent div a:link, .columnOneContent div a:visited, /* Yahoo! Mail Override */ .columnOneContent div a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#336699;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:underline;
+			}
+			
+			.columnOneContent img{
+				display:inline;
+				height:auto;
+			}
+			
+			/**
+			* @tab Middle Columns
+			* @section column two text
+			* @tip Set the styling for your email's second column text. Choose a size and color that is easy to read.
+			*/
+			.columnTwoContent{
+				/*@editable*/ background-color:#FFFFFF;
+			}
+			
+			/**
+			* @tab Middle Columns
+			* @section column two text
+			* @tip Set the styling for your email's second column text. Choose a size and color that is easy to read.
+			*/
+			.columnTwoContent div{
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:12px;
+				/*@editable*/ line-height:150%;
+				/*@editable*/ text-align:left;
+			}
+			
+			/**
+			* @tab Middle Columns
+			* @section column two link
+			* @tip Set the styling for your email's second column links. Choose a color that helps them stand out from your text.
+			*/
+			.columnTwoContent div a:link, .columnTwoContent div a:visited, /* Yahoo! Mail Override */ .columnTwoContent div a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#336699;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:underline;
+			}
+			
+			.columnTwoContent img{
+				display:inline;
+				height:auto;
+			}
+			
+			/**
+			* @tab Middle Columns
+			* @section column three text
+			* @tip Set the styling for your email's third column text. Choose a size and color that is easy to read.
+			*/
+			.columnThreeContent{
+				/*@editable*/ background-color:#FFFFFF;
+			}
+			
+			/**
+			* @tab Middle Columns
+			* @section column three text
+			* @tip Set the styling for your email's third column text. Choose a size and color that is easy to read.
+			*/
+			.columnThreeContent div{
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:12px;
+				/*@editable*/ line-height:150%;
+				/*@editable*/ text-align:left;
+			}
+			
+			/**
+			* @tab Middle Columns
+			* @section column three link
+			* @tip Set the styling for your email's third column links. Choose a color that helps them stand out from your text.
+			*/
+			.columnThreeContent div a:link, .columnThreeContent div a:visited, /* Yahoo! Mail Override */ .columnThreeContent div a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#336699;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:underline;
+			}
+			
+			.columnThreeContent img{
+				display:inline;
+				height:auto;
+			}
+			
+			/**
+			* @tab Middle Columns
+			* @section column four text
+			* @tip Set the styling for your email's fourth column text. Choose a size and color that is easy to read.
+			*/
+			.columnFourContent{
+				/*@editable*/ background-color:#FFFFFF;
+			}
+			
+			/**
+			* @tab Middle Columns
+			* @section column four text
+			* @tip Set the styling for your email's fourth column text. Choose a size and color that is easy to read.
+			*/
+			.columnFourContent div{
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:12px;
+				/*@editable*/ line-height:150%;
+				/*@editable*/ text-align:left;
+			}
+			
+			/**
+			* @tab Middle Columns
+			* @section column four link
+			* @tip Set the styling for your email's fourth column links. Choose a color that helps them stand out from your text.
+			*/
+			.columnFourContent div a:link, .columnFourContent div a:visited, /* Yahoo! Mail Override */ .columnFourContent div a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#336699;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:underline;
+			}
+			
+			.columnFourContent img{
+				display:inline;
+				height:auto;
+			}
+
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: LOWER COLUMNS; LEFT, CENTER, RIGHT /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Lower Columns
+			* @section left column text
+			* @tip Set the styling for your email's left column text. Choose a size and color that is easy to read.
+			*/
+			.leftLowerColumnContent{
+				/*@editable*/ background-color:#FFFFFF;
+			}
+			
+			/**
+			* @tab Lower Columns
+			* @section left column text
+			* @tip Set the styling for your email's left column text. Choose a size and color that is easy to read.
+			*/
+			.leftLowerColumnContent div{
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:14px;
+				/*@editable*/ line-height:150%;
+				/*@editable*/ text-align:left;
+			}
+			
+			/**
+			* @tab Lower Columns
+			* @section left column link
+			* @tip Set the styling for your email's left column links. Choose a color that helps them stand out from your text.
+			*/
+			.leftLowerColumnContent div a:link, .leftLowerColumnContent div a:visited, /* Yahoo! Mail Override */ .leftLowerColumnContent div a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#336699;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:underline;
+			}
+			
+			.leftLowerColumnContent img{
+				display:inline;
+				height:auto;
+			}
+			
+			/**
+			* @tab Lower Columns
+			* @section right column text
+			* @tip Set the styling for your email's right column text. Choose a size and color that is easy to read.
+			*/
+			.rightLowerColumnContent{
+				/*@editable*/ background-color:#FFFFFF;
+			}
+			
+			/**
+			* @tab Lower Columns
+			* @section right column text
+			* @tip Set the styling for your email's right column text. Choose a size and color that is easy to read.
+			*/
+			.rightLowerColumnContent div{
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:14px;
+				/*@editable*/ line-height:150%;
+				/*@editable*/ text-align:left;
+			}
+			
+			/**
+			* @tab Lower Columns
+			* @section right column link
+			* @tip Set the styling for your email's right column links. Choose a color that helps them stand out from your text.
+			*/
+			.rightLowerColumnContent div a:link, .rightLowerColumnContent div a:visited, /* Yahoo! Mail Override */ .rightLowerColumnContent div a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#336699;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:underline;
+			}
+			
+			.rightLowerColumnContent img{
+				display:inline;
+				height:auto;
+			}
+			
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: FOOTER /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Footer
+			* @section footer style
+			* @tip Set the background color and top border for your email's footer area.
+			* @theme footer
+			*/
+			#templateFooter{
+				/*@editable*/ background-color:#FFFFFF;
+				/*@editable*/ border-top:0;
+			}
+			
+			/**
+			* @tab Footer
+			* @section footer text
+			* @tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
+			* @theme footer
+			*/
+			.footerContent div{
+				/*@editable*/ color:#707070;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:12px;
+				/*@editable*/ line-height:125%;
+				/*@editable*/ text-align:left;
+			}
+			
+			/**
+			* @tab Footer
+			* @section footer link
+			* @tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
+			*/
+			.footerContent div a:link, .footerContent div a:visited, /* Yahoo! Mail Override */ .footerContent div a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#336699;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:underline;
+			}
+			
+			.footerContent img{
+				display:inline;
+			}
+			
+			/**
+			* @tab Footer
+			* @section social bar style
+			* @tip Set the background color and border for your email's footer social bar.
+			* @theme footer
+			*/
+			#social{
+				/*@editable*/ background-color:#FAFAFA;
+				/*@editable*/ border:0;
+			}
+			
+			/**
+			* @tab Footer
+			* @section social bar style
+			* @tip Set the background color and border for your email's footer social bar.
+			*/
+			#social div{
+				/*@editable*/ text-align:center;
+			}
+			
+			/**
+			* @tab Footer
+			* @section utility bar style
+			* @tip Set the background color and border for your email's footer utility bar.
+			* @theme footer
+			*/
+			#utility{
+				/*@editable*/ background-color:#FFFFFF;
+				/*@editable*/ border:0;
+			}
+
+			/**
+			* @tab Footer
+			* @section utility bar style
+			* @tip Set the background color and border for your email's footer utility bar.
+			*/
+			#utility div{
+				/*@editable*/ text-align:center;
+			}
+			
+			#monkeyRewards img{
+				max-width:190px;
+			}
+		</style>
+	</head>
+    <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+    	<center>
+        	<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable">
+            	<tr>
+                	<td align="center" valign="top">
+                        <!-- // Begin Template Preheader \\ -->
+                        <table border="0" cellpadding="10" cellspacing="0" width="600" id="templatePreheader">
+                            <tr>
+                                <td valign="top" class="preheaderContent">
+                                
+                                	<!-- // Begin Module: Standard Preheader \ -->
+                                    <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                                    	<tr>
+                                        	<td valign="top">
+                                            	<div mc:edit="std_preheader_content">
+                                                	 Brian Suda's 5th quarterly email newsletter. <a href="../index.html">Check out the archive if you missed any!</a>
+                                                </div>
+                                            </td>
+                                            <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+											<td valign="top" width="190">
+                                            	<div mc:edit="std_preheader_links">
+                                                </div>
+                                            </td>
+											<!-- *|END:IF|* -->
+                                        </tr>
+                                    </table>
+                                	<!-- // End Module: Standard Preheader \ -->
+                                
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- // End Template Preheader \\ -->
+                    	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateContainer">
+                        	<tr>
+                            	<td align="center" valign="top">
+                                    <!-- // Begin Template Header \\ -->
+                                	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateHeader">
+                                        <tr>
+                                            <td class="headerContent">
+                                            
+                                            	<!-- // Begin Module: Standard Header Image \\ -->
+                                            	<img src="../../images/mail/header.png" style="max-width:600px;" id="headerImage campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner="" mc:allowtext="">
+                                            	<!-- // End Module: Standard Header Image \\ -->
+                                            
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // End Template Header \\ -->
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td align="center" valign="top">
+                                    <!-- // Begin Template Body \\ -->
+                                	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
+                                    	<tr>
+                                        	<td colspan="4" valign="top" class="bodyContent">
+
+                                                <!-- // Begin Module: Standard Content \\ -->
+                                                <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td valign="top">
+                                                            <div mc:edit="std_content00">
+                                                                <h1 class="h1">Q1: Paper and Production</h1>
+                                                                <strong>02013-Q1 Reykjavik, ICELAND:</strong> After experimenting, 02013 was determined to be our year of paper. With a few projects like the notebooks and business cards under our belts, we're expanding our range a bit further a field with some interesting projects in the pipe-line.</div>
+														</td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // End Module: Standard Content \\ -->
+
+                                            </td>
+                                        </tr>
+
+
+										<tr>
+                                        	<td colspan="2" valign="top" class="leftLowerColumnContent">
+                                                <!-- // Begin Module: Top Image with Content \\ -->
+                                                <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                                    <tr mc:repeatable="">
+                                                        <td valign="top">
+															
+                                                            <div mc:edit="tiwc300_content01">
+ 	                                                           	<h2 class="h2">Symbol Fonts</h2>
+																	<p>I recently wrote a short (7,000 words) eBook for <a href="http://www.fivesimplesteps.com">Five Simple Steps</a> entitled <cite><a href="http://www.fivesimplesteps.com/products/creating-symbol-fonts">A Pocket Guide to Creating Symbol Fonts</a></cite>. The book focuses on the nitty-gritty of how to create your own symbol fonts for use on the web and all the advantages and reasons why.</p>
+																	<a href="http://www.fivesimplesteps.com/products/creating-symbol-fonts"><img src="../../images/mail/02013Q1-fss-symbol-fonts.jpg" style="max-width:260px; padding-bottom: 13px" mc:label="image" mc:edit="tiwc300_image01"></a>
+																	<p>Ironically, the book is <strong>not</strong> available in paper, only digital. It's available in several formats for <strong>2 GBP</strong> or as part of the <a href="http://www.fivesimplesteps.com/products/pocket-guides-collection-one">1st collection</a> along with three other great books for <strong>6 GBP</strong>. If you are still on the fence about the price, you can use the offer code: <samp>15%OFFCREATINGSYMBOLFONTS</samp> to get a 15% discount for the first 100 customers.</p>
+																																		<p>I also wrote an article for <a href="http://alistapart.com/article/the-era-of-symbol-fonts">A List Apart on <cite>The Era of Symbol Fonts</cite></a>, focusing more on performance benefits than creation.</p>
+																</div>
+												     </td>
+		                                           </tr>
+		                                           <tr mc:repeatable="">
+		                                               <td valign="top">			
+												   
+												           <img src="../../images/mail/02013Q1-ala.png" style="max-width:260px; padding-bottom: 13px" mc:label="image" mc:edit="tiwc300_image01">
+                                                           <div mc:edit="tiwc300_content01">
+	                                                           <h2 class="h2">Long-Form Writing</h2>
+																<p></p>
+																<ul>
+																	<li><a href="http://optional.is/required/2013/01/01/omnibus-02012/">Omnibus 02012</a></li>
+																 	<li><a href="../../required/2013/01/21/getting-to-your-minimum-hourly-rate/index.html">Getting your minimum hourly rate</a></li>
+																 	<li><a href="http://optional.is/required/2013/02/08/02012-annual-report/">02012 Annual Report</a></li>
+																	<li><a href="http://alistapart.com/article/the-era-of-symbol-fonts">The Era of Symbol Fonts (A List Apart)</a></li>
+																	<li><a href="http://the-pastry-box-project.net/baker/brian-suda/">One thought a month (the pastry box project)</a></li>
+																</ul>
+															<div><a href="../../required/random/index.html">Go Pot-Luck and view a random article</a></div>
+															<div><a href="http://feeds2.feedburner.com/optional">Subscribe to the RSS Feed</a></div>
+															</div>
+														 	</td>
+		                                             </tr>		
+													 <tr mc:repeatable="">
+					                                        <td valign="top">
+																<div mc:edit="tiwc300_content01">
+															<p><a href="https://twitter.com/EdwardTufte/status/317490753062436864"><img src="../../images/mail/02013Q1-ET-twitter-quote.png" alt="Edward Tufte Twitter Quote"></a></p>
+															<p>An older article about data visualisations made the rounds this last week. <a href="http://www.netmagazine.com/features/top-20-data-visualisation-tools">The top 20 data visualisation tools</a> was written about 6 months ago, but the list of tools is still relevant and a great place to start. Stay tuned for a follow-up article in the near future.</p>
+                                                    	</div></td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // End Module: Top Image with Content \\ -->
+
+                                            </td>
+                                        	<td colspan="2" valign="top" class="rightLowerColumnContent">
+
+                                                <!-- // Begin Module: Top Image with Content \\ -->
+                                                <table border="0" cellpadding="20" cellspacing="0" width="100%">
+	                                                <tr mc:repeatable="">
+                                                        <td valign="top">
+
+                                                            <div mc:edit="tiwc300_content01">
+																	<p><a href="http://beautifuldecay.com/2009/09/04/roland-tiangco’s-dirt-poster/"><img src="../../images/mail/02013Q1-paper-poster.jpg" alt="The future belongs to the few of us still willing to get our hands dirty."></a></p>
+																	<p>A great paper poster design which only comes alive if you are willing to work for it, by Roland Tiangco.</p>
+																</div>
+												     </td>
+		                                           </tr>
+                                                    <tr mc:repeatable="">
+                                                        <td valign="top">
+                                                            <div mc:edit="tiwc300_content01">
+ 	                                                           <h2 class="h2">Upcoming Conferences</h2>
+																<img src="../../images/mail/me.jpg" style="max-width:260px; padding-bottom: 13px" mc:label="image" mc:edit="tiwc300_image01">
+																<ul>
+																	<li><a href="http://mmconf.com">Mobile Mobile Conf</a>: Sensors and Sensibility, April 18-19 Krakow Poland</li>
+																	<li>August 22nd 02013: UIE Online Seminar about Data Visualisations.</li>
+																</ul>
+	                                                            
+																<strong><a href="http://www.flickr.com/photos/zeldman/5811770538/">Photo by Jeffery Zeldman</a></strong>
+                                                            </div>
+	                                                        </td>
+	                                                    </tr>
+	                                                    <tr mc:repeatable="">
+	                                                        <td valign="top">
+                                                            <div mc:edit="tiwc300_content01">
+ 	                                                           <h2 class="h2">Contest Winner</h2>
+																<p>Q1's Letterpressed Eyjafjallajökull notebook winner was Tony in Ibaraki, Japan. The randomly chosen co-ordinates where <a href="https://maps.google.com/maps?q=16.125+152.8&hl=enh&z=3">Lat: 16.125 Lon: 152.8</a> over 2560km away.</p>
+																<p>Remember, <a href="http://optional.is/contest">You can't win, if you don't enter!</a></p>
+																<p>02013 is the second anniversary of (optional.is) so the theme all year is paper. This quarter we'll be giving away a set of <a href="http://optional.is/required/2012/06/12/blank-business-cards/">letter pressed blank business cards</a>.</p>
+																<img src="../../images/mail/02013Q1-blank-business-cards.jpg" style="max-width:260px; padding-bottom: 13px" mc:label="image" mc:edit="tiwc300_image01">
+																
+																<p>These cards are locally letter pressed in Reykjavík, Iceland. With a strong red ink and heavy paper, they stand-out and make a statement.</p>
+																</div>
+                                                        </td>
+                                                    </tr>
+
+                                                </table>
+                                                <!-- // End Module: Top Image with Content \\ -->
+
+                                            </td>
+                                        </tr>
+
+										<tr>
+                                        	<td colspan="4" valign="top" class="leftLowerColumnContent">
+
+                                                <!-- // Begin Module: Top Image with Content \\ -->
+                                                <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                                    <tr mc:repeatable="">
+                                                        <td valign="top">
+                                                            <div mc:edit="tiwc300_content01" style="background-color: #dedede">
+ 	                                                           <a href="http://www.flickr.com/photos/suda/5526518354/"><img src="../../images/mail/02013Q1-japan-joy.jpg" alt="Japan"></a>
+                                                               <p style="padding: 0 10px">Most of June will be spent travelling around Japan. The details of the plan are open-ended, while the goals of this trip are to meet with some interesting manufacturers, designers and technologists. We're planting the seeds for future projects and ideas.</p>
+	
+																<p style="padding: 0 10px 10px 10px">If anyone wants to meet-up, pick our brain, or have us present, contact us at <a href="mailto:optional@optional.is">optional@optional.is</a> We're more than happy to connect.</p>
+															</div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // End Module: Top Image with Content \\ -->
+
+                                            </td>
+                                        </tr>
+										<tr>
+                                        	<td colspan="2" valign="top" class="leftLowerColumnContent">
+
+                                                <!-- // Begin Module: Top Image with Content \\ -->
+                                                <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                                    <tr mc:repeatable="">
+                                                        <td valign="top">
+                                                            <div mc:edit="tiwc300_content01">
+ 	                                                           <h2 class="h2">Ukiyo-e Heroes</h2>
+																<p><a href="http://www.ukiyoeheroes.com"><img src="../../images/mail/02013Q1-rickshaw-cart.jpg" alt="Rickshaw Cart"></a></p>
+																<p>Rickshaw Cart, a Ukiyo-e version of one of my personal favourite games, Mario Kart.</p>
+																<p>Ukiyo-e Heroes is a series of beautiful woodblock print of famous video games in the style of <a href="http://en.wikipedia.org/wiki/Ukiyo-e">Japanese Ukiyo-e style prints</a>.</p>
+																<p>Growing-up playing 8-bit games, then seeing these beautiful posters has made me nostalgic. Check out the ever-growing collection.</p>
+																<p><a href="http://www.ukiyoeheroes.com">http://www.ukiyoeheroes.com</a></p>
+																
+																
+															</div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // End Module: Top Image with Content \\ -->
+
+                                            </td>
+                                        	<td colspan="2" valign="top" class="rightLowerColumnContent">
+
+                                                <!-- // Begin Module: Top Image with Content \\ -->
+                                                <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                                    <tr mc:repeatable="">
+                                                        <td valign="top">
+                                                            <div mc:edit="tiwc300_content01">
+ 	                                                           <h2 class="h2">Film: Jiro Dreams of Sushi</h2>
+
+                                                               <p>The critically acclaimed documentary film <cite><a href="http://en.wikipedia.org/wiki/Jiro_Dreams_of_Sushi">Jiro Dreams of Sushi</a></cite> was released in 02011. It follows the life of Jiro Ono, the 85-year-old owner of a Michelin three-star sushi restaurant. His quest for perfection is an interesting look at Japanese culture as well as a bizarre twist on innovation.</p>
+															<p>If you haven't seen the film, I recommend you do. While the food presentation is beautiful, and I'm sure the taste delicious, you still get this strange sense around the whole experience as he stares as you while you eat.</p>
+															                                                            <a href="http://en.wikipedia.org/wiki/Jiro_Dreams_of_Sushi"><img src="../../images/mail/02013Q1-jiro.jpg" style="max-width:260px; padding-bottom: 13px" mc:label="image" mc:edit="tiwc300_image01"></a>
+															<p>Originally, the director planned to travel around interviewing several sushi chefs and restaurants, but Jiro was so fascinating, the documentary changed to simply be about this one man.</p>
+															</div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // End Module: Top Image with Content \\ -->
+
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // End Template Body \\ -->
+                                </td>
+                            </tr>
+
+                        	
+                        </table>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>
