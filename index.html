@@ -108,14 +108,119 @@
 				<p>We bring past experience of projects ranging from boarding pass design, natural language text processing and visualizations  through to online surveys, analysis and reporting.</p>
 			</div>
 			<div class="box2">
-				<div class="thumbnail" style="min-height: 100px;  background: transparent url('images/availability-forecast-02020Q2.png') 50% 50%"><a href="https://optional.is/required/2014/09/30/availability-forecast/"><span>Availability Forecast</span></a></div>
-				<div class="sub">
-					<p>Our forecast is <strong>Chaotic</strong>. We are ~10% availabile in Q2 for interesting projects.</p>
-					<p><strong>If we can help, <a href="mailto:optional@optional.is">get in contact</a> and we'll chat.</strong></p>
-				</div>
-				<!--
-				<div class="call-out"><a href="//optional.is/required/2014/09/30/availability-forecast/"><span>Availability Forecast Symbols</span></a></div>
-				-->
+				<style>
+#availability_forecast {text-align: center; 
+	background: #ccc; 
+	background: linear-gradient(180deg, rgba(227,227,227,1) 0%, rgba(199,199,199,1) 100%);
+	margin: 0; padding: 0;
+	border: 1px solid rgba(255,255,255,0.8);
+	font-size: 18px;
+}
+#availability_forecast figure { 
+	margin: 0; padding: 0; 
+	border-top: 1px solid rgba(255,255,255,0.8);
+}
+#availability_forecast figure img { 
+	height: 95px;
+	padding: 7px;
+}
+
+
+#availability_forecast figcaption { 
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 600;
+	margin: 0;
+	padding: 6px;
+	font-size: 22px;
+	border-top: 1px solid rgba(255,255,255,0.8);
+	 }
+#availability_forecast .metadata { 
+	margin: 0 auto;
+	display: table;
+	width: 160px;
+}
+#availability_forecast .metadata .time {
+	border-left: 1px solid rgba(255,255,255,0.8);
+	width: 40px;
+	height: 40px;
+}
+#availability_forecast .metadata .time, #availability_forecast .metadata .availability, #availability_forecast .metadata .projects { 
+	border-right: 1px solid rgba(255,255,255,0.8);
+	display: table-cell;
+	padding: 0;
+	vertical-align: middle;
+}
+#availability_forecast .metadata .time .year {
+	font-size: 11px;
+	text-align: center;
+	line-height: 12px;
+}
+#availability_forecast .metadata .time .quarter {
+	font-size: 20px; font-weight: 600;
+	text-align: center;
+	line-height: 22px;
+}
+
+#availability_forecast .metadata .projects {
+ 	background: repeating-linear-gradient(-45deg, transparent, 
+		transparent 28px, 
+		rgba(255,255,255,0.8) 28px, 
+		rgba(255,255,255,0.8) 29px);
+	width: 40px;
+	height: 40px;
+}
+
+#availability_forecast .metadata .availability  {
+	padding: 0 10px;
+	font-size: 18px;
+	width: 60px;
+	line-height: 22px;
+}
+ #availability_forecast .metadata .availability div {
+	font-size: 14px;
+	text-align: left;
+	line-height: 14px;
+}
+#availability_forecast .metadata .projects .in {
+	margin-left: -8px;
+	line-height: 20px;
+	text-align: center;
+	font-size: 18px;
+}
+#availability_forecast .metadata .projects .out {
+	margin-left: 9px;
+	line-height: 20px;
+	margin-top: -4px;
+	text-align: center;
+	font-size: 18px;
+}
+
+</style>
+<div id="availability_forecast">
+	<div class="metadata">
+		<div class="time">
+			<div class="year">2020</div>
+			<div class="quarter">Q3</div>
+		</div>
+		<div class="availability">
+			<div style="width: 1em; padding-top: 2px;font-size: 8px; float: left; line-height: 7px; padding-right: 5px">■<br/>■<br/>■<br/>■<br/>■<br/></div>
+			90%
+			<div>±10</div>
+		</div>
+		<div class="projects">
+			<div class="in" title="1 projects starting">1</div>
+			<div class="out"  title="0 projects finishing">0</div>
+		</div>
+	</div>
+	<figure>
+	<img src="images/af_icons/chaotic.svg" />
+	<figcaption>chaotic</figcaption>
+	</figure>
+</div>
+
+<p>Our workload is <strong>chaotic</strong>. We are ~10% availabile in Q3 for interesting projects.</p>
+<p><strong>If we can help, <a href="mailto:optional@optional.is">get in contact</a> and we'll chat.</strong></p>
 			</div>
 		</div>
 
@@ -124,7 +229,7 @@
 			<h1>Material: A Conference exploring the concept of the Web as a material</h1>
 			<div class="box2">
 				<div class="feature">
-										<iframe width="100%" src="https://www.youtube.com/embed/kJ-H7qKULss" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+										<iframe width="100%" src="https://www.youtube.com/embed/_laFfvKHIiM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 					<p><strong>119 attendees, 18 sessions, and 481 minutes</strong> of amazing, insightful, thought provoking videos from Wool, Chocolate, Meditation, Photography, Art History and Psycology, the event runs through many disciplines.</p>
 				</div>
 				<div class="call-out"><a href="https://material.is/archive/"><span>Browse the video archive</span></a></div>
@@ -174,7 +279,7 @@
 				</div>
 			</div>
 			<div class="box2">
-				<div class="thumbnail" style="background: transparent url('images/testflight-plane.png') 50% 50% no-repeat; min-height: 120px"><a href="http://www.testflightapp.com">TestFlight</a></div>
+				<div class="thumbnail" style="background: transparent url('images/testflight-plane.png') 50% 50% no-repeat; min-height: 120px"><a href="https://testflight.apple.com">TestFlight</a></div>
 				<div class="sub" >
 					
 					<p>Working with the team at Burstly, we prototyped several iterations of their popular <strong>TestFlight</strong> tool and unreleased <strong>FlightPath</strong> service before they were acquired by Apple.</p>
@@ -189,10 +294,10 @@
 			</div>
 			<div class="box2">
 				<div class="main">
-					<h2>Material: 2018 Synopses</h2><p>This was our second event. Taking what we learnt from the first one and iterating, we're creating something more and more unique and special.</p>
+					<h2>Week #487-500</h2><p>We're back from a long summer holiday and a bunch of tasks apon return. So this is a quadruple weeknote to make-up for it.</p>
 			<form method="get" id="searchform" action="required/index.html" style="text-align: center; margin-top: 50px">
 							<div><input type="text" value="" name="s" id="s"><input type="submit" id="searchsubmit" value="Search"></div>
-			</form></div><div class="call-out"><a href="required/2020/03/11/material-2018-synopses/index.html">
+			</form></div><div class="call-out"><a href="required/2020/09/11/week-487-500/index.html">
 					
 
 <span>Read More</span></a></div>					
@@ -250,7 +355,7 @@
 				<div class="main">
 					<h2>Recent Articles</h2>
 					<ul>
-						<li><a href="required/2020/03/11/material-2018-synopses/index.html"><span style="border-left: 10px solid #954347;">Material: 2018 Synopses</span></a></li><li><a href="required/2020/03/04/material-hierarchies-and-systems-some-futures-for-material-debbie-chachra/index.html"><span style="border-left: 10px solid #706b96;">Material: Hierarchies and Systems: Some Futures for Material - Debbie Chachra</span></a></li><li><a href="required/2020/02/26/material-catch-of-the-day-bjorn-steinar/index.html"><span style="border-left: 10px solid #2f1447;">Material: Catch of the Day - Björn Steinar</span></a></li><li><a href="required/2020/02/19/material-misanthropic-principals-matt-jones/index.html"><span style="border-left: 10px solid #1b099c;">Material: Misanthropic Principals - Matt Jones</span></a></li><li><a href="required/2020/02/12/material-being-an-inter-multi-disciplinary-creative-dan-rubin/index.html"><span style="border-left: 10px solid #d86185;">Material: Being an Inter-multi-disciplinary Creative - Dan Rubin</span></a></li>						</ul>
+						<li><a href="required/2020/05/19/ninja-edc-shinobi-rokugu/index.html"><span style="border-left: 10px solid #f4239d;">Ninja EDC: Shinobi Rokugu</span></a></li><li><a href="required/2020/03/11/material-2018-synopses/index.html"><span style="border-left: 10px solid #954347;">Material: 2018 Synopses</span></a></li><li><a href="required/2020/03/04/material-hierarchies-and-systems-some-futures-for-material-debbie-chachra/index.html"><span style="border-left: 10px solid #706b96;">Material: Hierarchies and Systems: Some Futures for Material - Debbie Chachra</span></a></li><li><a href="required/2020/02/26/material-catch-of-the-day-bjorn-steinar/index.html"><span style="border-left: 10px solid #2f1447;">Material: Catch of the Day - Björn Steinar</span></a></li><li><a href="required/2020/02/19/material-misanthropic-principals-matt-jones/index.html"><span style="border-left: 10px solid #1b099c;">Material: Misanthropic Principals - Matt Jones</span></a></li>						</ul>
 
 				</div>
 				<div class="call-out readmore"><a href="required/index.html"><span>Full Archives</span></a></div>
@@ -259,9 +364,9 @@
 			<div class="box2">
 				<div class="main">
 					<h2>Weeknotes</h2>
-					<p>The company is <strong>474 weeks old</strong>. We try to have a small weekly update of what we're up too. Here are the most recent:</p>
+					<p>The company is <strong>501 weeks old</strong>. We try to have a small weekly update of what we're up too. Here are the most recent:</p>
 					<ul style="clear: both;" id="weeknotes">
-						<li><a href="required/2020/02/21/week-470-471/index.html"><span style="border-left: 10px solid #90eac0;">Week #470-471</span></a></li><li><a href="required/2020/02/07/week-469/index.html"><span style="border-left: 10px solid #576408;">Week #469</span></a></li><li><a href="required/2020/01/31/week-466-467-468/index.html"><span style="border-left: 10px solid #8ec064;">Week #466-467-468</span></a></li><li><a href="required/2020/01/10/week-465/index.html"><span style="border-left: 10px solid #aba3cb;">Week #465</span></a></li><li><a href="required/2019/12/20/week-461-462/index.html"><span style="border-left: 10px solid #e80d9d;">Week #461, #462</span></a></li>						</ul>
+						<li><a href="required/2020/09/11/week-487-500/index.html"><span style="border-left: 10px solid #6d63c6;">Week #487-500</span></a></li><li><a href="required/2020/07/17/week-492/index.html"><span style="border-left: 10px solid #e65932;">Week #492</span></a></li><li><a href="required/2020/07/10/week-488-489-490-491/index.html"><span style="border-left: 10px solid #de3dd4;">Week #488-489-490-491</span></a></li><li><a href="required/2020/06/12/week-485-486-487/index.html"><span style="border-left: 10px solid #d24da1;">Week #485-486-487</span></a></li><li><a href="required/2020/05/22/week-481-482-483-484/index.html"><span style="border-left: 10px solid #7c3a7f;">Week #481-482-483-484</span></a></li>						</ul>
 				</div>
 				<div class="call-out readmore"><a href="https://optional.is/required/category/weeknotes/"><span>View all weeknotes</span></a></div>
 			</div>
@@ -275,7 +380,7 @@
 						
 						                <li><a 
 						href="https://optional.is/required/category/applications/"><span style="border-left: 10px solid #1ddf33;">Applications</span></a></li><li><a 
-						href="required/category/briefs/index.html"><span style="border-left: 10px solid #aa8c5b;">Briefs</span></a></li><li><a 
+						href="https://optional.is/required/category/briefs/"><span style="border-left: 10px solid #aa8c5b;">Briefs</span></a></li><li><a 
 						href="https://optional.is/required/category/cartography/"><span style="border-left: 10px solid #992978;">Cartography</span></a></li><li><a 
 						href="https://optional.is/required/category/case-studies/"><span style="border-left: 10px solid #a0d2b6;">Case Studies</span></a></li><li><a 
 						href="https://optional.is/required/category/chromatics/"><span style="border-left: 10px solid #1e7940;">Chromatics</span></a></li><li><a 
@@ -283,10 +388,10 @@
 						href="https://optional.is/required/category/conferences/"><span style="border-left: 10px solid #d70b59;">Conferences</span></a></li><li><a 
 						href="https://optional.is/required/category/education/"><span style="border-left: 10px solid #de7a22;">Education</span></a></li><li><a 
 						href="https://optional.is/required/category/experiments/"><span style="border-left: 10px solid #482926;">Experiments</span></a></li><li><a 
-						href="required/category/forecast/index.html"><span style="border-left: 10px solid #89c126;">Forecast</span></a></li><li><a 
+						href="https://optional.is/required/category/forecast/"><span style="border-left: 10px solid #89c126;">Forecast</span></a></li><li><a 
 						href="https://optional.is/required/category/interfaces/"><span style="border-left: 10px solid #756640;">Interfaces</span></a></li><li><a 
 						href="https://optional.is/required/category/material/"><span style="border-left: 10px solid #d92a83;">Material</span></a></li><li><a 
-						href="required/category/meta/index.html"><span style="border-left: 10px solid #b6755d;">Meta</span></a></li><li><a 
+						href="https://optional.is/required/category/meta/"><span style="border-left: 10px solid #b6755d;">Meta</span></a></li><li><a 
 						href="https://optional.is/required/category/paper/"><span style="border-left: 10px solid #d0a662;">Paper</span></a></li><li><a 
 						href="https://optional.is/required/category/place/"><span style="border-left: 10px solid #7b9cf0;">Place</span></a></li><li><a 
 						href="https://optional.is/required/category/privacy/"><span style="border-left: 10px solid #c5f29b;">Privacy</span></a></li><li><a 
@@ -705,7 +810,7 @@
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #474</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #501</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -736,7 +841,8 @@
 						<li><a href="https://itunes.apple.com/us/app/dashbones/id1071726287?mt=8">Dashbones</a></li>						
 						<li><a href="https://itunes.apple.com/us/app/emoji-calendar/id1286750440?mt=8">Emoji Calendar</a></li>
 						<li><a href="https://itunes.apple.com/us/app/floræ-linnaeus-flower-clock/id1192847405?mt=8">Florae</a></li>						
-						<li><a href="https://itunes.apple.com/us/app/how-far-iceland/id1311872083?mt=8">How Far: Iceland</a></li>						
+						<li><a href="https://itunes.apple.com/us/app/how-far-iceland/id1311872083?mt=8">How Far: Iceland</a></li>	
+						<li><a href="https://apps.apple.com/us/app/newsletters/id1455564424?ls=1&mt=8">Newsletters</a></li>
 						<li><a href="https://itunes.apple.com/us/app/red-days-holiday-countdown/id1128247890?mt=8" target="_blank">Red Days</a></li>
 						<li><a href="https://itunes.apple.com/us/app/shipping-forecast-mindfulness/id1226922380?mt=8">Shipping Forecast</a></li>						
 						<li><a href="https://itunes.apple.com/us/app/text-stats/id1373463793?mt=8">Text Stats</a></li>

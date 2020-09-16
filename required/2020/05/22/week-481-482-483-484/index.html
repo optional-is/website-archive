@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Week #481-482-483-484 &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="https://optional.is/required/wp-content/themes/optional/style.css" type="text/css" media="all" />
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="https://optional.is/required/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@optionalBot">
+<meta name="twitter:title" content="Week #481-482-483-484">
+<meta name="twitter:description" content="A long quadruple weeknote. It was a busy month and each friday seems to have presented it's own challenge to get this written, but here we are!">
+<meta name="twitter:creator" content="@optionalBot">
+<meta name="twitter:domain" content="http://optional.is">
+</head>
+<body>
+<div id="header">
+<h1><a href="../../../../index.html">(optional.is)</a></h1>
+</div>
+			
+		<div class="post-4661 post type-post status-publish format-standard hentry category-briefs category-weeknotes tag-economics tag-moniac tag-simulator tag-surveys" id="post-4661">
+			<h2 style="border-bottom: 2px solid #7c3a7f">Week #481-482-483-484</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2020-05-22T11:11:00+00:00">Friday, May 22nd, 02020 at 11:11 UTC</abbr></div>
+				
+<p>A quadruple weeknote! Each week, we start a new text file that lists out our tasks day-by-day. When it comes time to write these notes, it makes it easy to go back over and see what we&#8217;ve been up to. Jumping back a whole month isn&#8217;t a problem when it comes to the tasks, but the more ephemeral ideas, links and thoughts tend to get lost.</p>
+
+
+
+<p>Part of the reason this has slipped to a giant weeknote is because every Friday when we&#8217;re ready to sit down and write something, a deadline, task, sickness, holiday or something more gets in the way. It reminds us of the Mike Tyson Quote: &#8220;Everyone&#8217;s got a plan  until they get punched in the face&#8221;.</p>
+
+
+
+<h2>Week #481</h2>
+
+
+
+<p>On Wednesday we started our pair programming sessions again. Getting caught-up on modelling the in-game economy to see if it is a bit &#8216;leaky&#8217;. We started simple with inspiration from <a href="https://en.wikipedia.org/wiki/MONIAC">MONIAC, the water based computer to help understand the economy</a>. It looks at all the inputs and outputs of real or virtual currency. How you get it and how you spend it. We have exhausted this simple example, but atleast now have data for each of the inputs and outputs. The next steps are to look into more complex models to see if they can yield any further insights.</p>
+
+
+
+<iframe width="700" height="395" src="https://www.youtube.com/embed/rAZavOcEnLg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+
+
+<p>We also pushed a bunch of small changes to our top secret project. As the system becomes more and more robust, that means external dependencies. While they are reliable, we can&#8217;t always depend on them. This called for some &#8216;feature flags&#8217;. These are simple Boolean values that we can set to turn on and off functionality. For instance, we allow file uploads to S3. If, for some reason, we need to turn that off, we added a feature flag that will remove that functionality system wide until we can debug and restore it.</p>
+
+
+
+<h2>Week #482</h2>
+
+
+
+<p>Iceland has been doing great in managing the COVID-19 virus. Enough that we managed to meet some friends for lunch at a restaurant. It is good to chat about interesting projects, life and to support small, local businesses.</p>
+
+
+
+<p>This was the start of a new month, so we sent off several invoices. Billing is not the reason we get up in the morning, but it is the lifeblood of the company. While we lost some customers due to the virus and a lot of hours were cut, we still managed to keep things flowing. Now that it is May, Iceland is relaxing more restrictions and we&#8217;ll be able to resume some of our normal activities again.</p>
+
+
+
+<p>This week we sent out of Q2 newsletter. <a href="../../../../../newsletter/archive/index.html">You can read it online and subscribe so you never miss future editions</a>. It was all about emojis, triscuts and thunderclappers!</p>
+
+
+
+<p>We managed to get back to consulting/programming on our economic model. We took the previous version and iterated on it again. The first version only looked at the total inputs and outputs. This iteration looked at each step in the process and was was earned and spent. This accumulating things each turn per customer rather than a grand economic overview.</p>
+
+
+
+<p>We needed to make this programatically, but at the same time let non-programmers tweak all the settings. We did this by splitting the project into data input via an online spreadsheet. Anyone can adjust the probabilities and rewards/costs just by typing new values in the cells. Then we have an online python notebook consume that, run the state machine and output the values back to a different spreadsheet. That way anyone can manipulate the results with existing CSV/Spreadsheet tools.</p>
+
+
+
+<p>As a sort of accident, we stumbled upon a big realisation. One of the probabilities in the spreadsheet was the customers willingness to take out their credit card and buy. We had this set to a &#8216;normal&#8217; value. As a test, we set it to 100% just to make sure all the code-paths were working. That simulated customer who would buy something 100% of the time the opportunity present itself isn&#8217;t. The results was that they weren&#8217;t spend any more money than a simulated person who would spend at 30% chance. That was a big wake-up. It was showing that there wasn&#8217;t enough opportunities for them to buy. That was a happy accident that justified a lot of the work on the project.</p>
+
+
+
+<p>This week we did a short interview with BBC Research about data collection. When that gets mixed down to a final podcast, we&#8217;ll link to it for anyone to listen too. It was a great feeling to start to get out again and promote some of our expertise and past projects.</p>
+
+
+
+<h2>Week #483</h2>
+
+
+
+<p>This week was mostly spent on two main projects. Our online school surveys for April were sporadic due to a lot of closures and uncertainty. Some of the surveys were pushed to May. We have been updating code and keeping an eye on the process. </p>
+
+
+
+<p>For the data collection, we are moving to a more self-service model. With GDPR, the list of participants is becoming more and more problematic. Password protected spreadsheets, missing values, etc. By allowing our customers to directly upload, review and submit their own lists, it (hopefully) removes a bunch of the small, day-to-day issues we encounter each time we start a new survey.</p>
+
+
+
+<p>On the top secret project front, we added email notification settings. As part of the website, you get email updates when various interactions occur. Rather than have a blanket on/off for email notifications, we started to get more granule. We needed to add something in preferences, then sprinkle the code around the site to check for the customer&#8217;s settings before sending any emails. After a few bugs, that seems to be working again. We only did this for emails, we could look into doing this for Push Notifications, but those are fewer and can be turned on/off at a device level.</p>
+
+
+
+<h2>Week #484</h2>
+
+
+
+<p>Back focused on two main projects, but then also getting back to an idea we&#8217;ve been kicking around for years!</p>
+
+
+
+<p>On the survey front, we continue to work on the list upload and validation tool. Things are coming along nicely and after testing it on several old lists, we continue to add more warnings and errors. After May, when the schools are quiet, we&#8217;ll roll this into our main code branch and start to connect everything to work with the live database.</p>
+
+
+
+<p>This has also caused us to realise a few more gotcha&#8217;s. Previously, when we handled all the list collection and importing, we could mark each customer in our CRM to say they have sent in a list. This makes it easy for us to contact customers who said they are participating, but have not sent us a list to survey. If they can upload their own list, we lose some of that knowledge and might pester people who&#8217;ve already imported their own list. We added an API endpoint to register all list imports, so hopefully that will solve the problem!</p>
+
+
+
+<p>On the top secret project front, we had 4 different people we know try to use the system and follow all the steps. It was not successful, which strangely means the test was a success! Now we need to go away and fix a bunch of these issues, which is exactly why we conducted the test in the first place. There are a lot of moving parts to the system: a website, iOS app, android app, windows and mac installer and a few more scripts to glue it all together. These seem to be working pretty well, but the hardware and manufacturer&#8217;s app seem to be causing some issues. These concern us less, but we&#8217;ll fix the web and api issues and keep iterating!</p>
+
+
+
+<p>With all our economic modelling, we got inspired to look back at an old idea we had for a game. We&#8217;ve had several false starts, but now rather than starting in code, we are starting with a model of the whole system. We can then adjust the costs/rewards and watch that trickle through all our equations. If it isn&#8217;t &#8216;balanced&#8217; we can tweak the equation or the costs/rewards and re-run the simulation. If that goes smoothly, we can wrap that up in the bigger narrative. We&#8217;ll give this a codename soon and hopefully move it up the queue!</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../../../../tag/economics/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6b9ed7">economics</a>, <a href="../../../../tag/moniac/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9adc69">moniac</a>, <a href="../../../../tag/simulator/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a9d9e8">simulator</a>, <a href="http://optional.is/required/tag/surveys/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #feae57">surveys</a></p>			  </div>
+			
+		<div class="navigation">
+			<div class="prev"><div class="time">19 May 02020</div><a href="../../19/ninja-edc-shinobi-rokugu/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f4239d">&laquo; Ninja EDC: Shinobi Rokugu</a></div>
+			<div class="next"><div class="time">12 June 02020</div><a href="../../../06/12/week-485-486-487/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d24da1">Week #485-486-487 &raquo;</a></div>
+		</div>
+
+			</div>
+			<!-- call out footer -->
+			<div class="callout-footer" style="padding-top: 1em; border-top: 2px solid #7c3a7f; border-bottom: 2px solid #7c3a7f; font-size: 120%">
+			<p>You've been reading optional.is/required/ a blog about technology, culture, paper and other interesting topics, since 02009. The easiest way to stay current is to grab the <a href="http://feeds2.feedburner.com/optional?format=xml">RSS Feed</a>.</p>
+
+			<p><a href="../../../../../newsletter/index.html">Subscribe to the quarterly mailing list</a> to receive interesting stories, links and updates.</p>
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+  <div style="float: left; font-size: 16px;">
+<form method="get" id="searchform" action="http://optional.is/required/" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+</div> 
+<a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+
+</body>
+</html>
