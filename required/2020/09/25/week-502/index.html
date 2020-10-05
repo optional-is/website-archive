@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Week #502 &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="https://optional.is/required/wp-content/themes/optional/style.css" type="text/css" media="all" />
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="https://optional.is/required/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@optionalBot">
+<meta name="twitter:title" content="Week #502">
+<meta name="twitter:description" content="A week dominated by great meetings, new opportunities and some interesting ideas.">
+<meta name="twitter:creator" content="@optionalBot">
+<meta name="twitter:domain" content="http://optional.is">
+</head>
+<body>
+<div id="header">
+<h1><a href="../../../../index.html">(optional.is)</a></h1>
+</div>
+			
+		<div class="post-4741 post type-post status-publish format-standard hentry category-briefs category-weeknotes tag-castlemilk tag-modelling tag-prototypes tag-revenue tag-surveys tag-weeknote" id="post-4741">
+			<h2 style="border-bottom: 2px solid #21745b">Week #502</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2020-09-25T13:31:33+00:00">Friday, September 25th, 02020 at 13:31 UTC</abbr></div>
+				
+<p>The week saw the start of the Old Icelandic Month of Haustmánuður, or Autumn month.</p>
+
+
+
+<p>This week also shares its name with <strong>Server Error 502, Bad Gateway</strong>. It is also the USA&#8217;s phone area code for apart of Kentucky, primarily Louisville. In any other week, that wouldn&#8217;t be quite so significant, but in week #502 the city has erupted into protests over the acquittal of the police over <a href="https://en.wikipedia.org/wiki/Shooting_of_Breonna_Taylor">the shooting of  Breonna Taylor</a>. Maybe in the future we&#8217;ll look back at this week, (or any week in 02020) and have a better overview. Until then, the Black Lives Matter movement continues to show us all the inconsistencies in Policing, violence and justice.</p>
+
+
+
+<h2>Surveys</h2>
+
+
+
+<p>We finished up two one-off surveys this week. We tend not to conduct too many of these customised surveys, they always take longer (and cost more) than you think for just a few hundred responses. But this is a long-time customer and we aim to please, so we said yes. Now the data has been collected and reported. It is just the final touches to review and add descriptions to some of the charts and it&#8217;s off to the customer.</p>
+
+
+
+<p>Our survey tool really excels when we have lots of customers all taking the same survey. That gives everyone a great cross-comparison, but it also means we can streamline our time and therefore the cost. There is always a fixed time to setup servers, make questionnaires, translations, etc. If that can be amortised across lots of customers, then that fixed setup time because a tiny portion of the overall cost.</p>
+
+
+
+<h2>Prototypes</h2>
+
+
+
+<p>We finished-up and demo&#8217;ed a time entry prototype for a plumbing company in Australia. This was to move from a paper input to something online which saves straight into their accounting software, xero.</p>
+
+
+
+<p>The budget for the prototype was 15h and after a bunch of little meetings, small changes and a few API snags, we logged 19.75h. So at the moment we&#8217;re out ~5h, but we can make that up if they are willing to move this to a full scale project, otherwise we learn to estimate a bit better next time. Swings and roundabouts.</p>
+
+
+
+<h2>Revenue Modelling</h2>
+
+
+
+<p>We continue to look into In App Purchases and ad revenue to both make some estimates and recommendations for changes to an in game economy, but also a change from one-off purchases to a subscription model.</p>
+
+
+
+<p>In the game, there is an IAP to remove ads in the game forever. That costs $2.99. The question then becomes a large multi-variate equations with the variables being &#8220;Lifetime of a player&#8221;, &#8220;Number of IAPs currently, and how much revenue that generates&#8221;, &#8220;New subscription cost&#8221;, &#8220;Difference in revenue from not seeing ads, versus cost of IAP&#8221;, and a few others. Based on this we can start to estimate the impact of a cheaper, but multi-payment subscription on the game&#8217;s population.</p>
+
+
+
+<p>Then also deciding if/what other exclusive benefits a subscription might give you. Either way, it is a bunch of number crunching and stitching of multiple data sources together to get a player Life Time Value, then segment on In App Purchases, etc. Hopefully, some of our recommendations will help.</p>
+
+
+
+<h2>Castlemilk</h2>
+
+
+
+<p>We had two minor break throughs this week on the <em>castlemilk</em> project. We now have a rough growth equation. (Assuming a perfect world) we estimate the increase in population size each turn. Once we know the maximum, we can start to add modifiers based on other factors to slow it or push it to this maximum.</p>
+
+
+
+<p>We also had the revelation that maybe we are thinking about the population growth completely wrong. Maybe this is the seed of a different project, but rather than your actions influencing the growth, the growth is inevitable and you are just trying to keep-up and make sure everyone is as happy as possible as things spiral out of your control!</p>
+
+
+
+<p>Our next steps are to build a simple mock-up in code and every hour (or X minutes) simulate a &#8220;turn&#8221; and increase the population the maximum amount and just start walking through all the milestones. Then we can add more and more interactivity to allow you to influence that growth. But more on this probably next week.</p>
+
+
+
+<h2>Meetings</h2>
+
+
+
+<p>This week was also full of meetings on our top secret project. After all the events these last few weeks, we have continued to post-pone any sort of announcement. Instead, we&#8217;ve had several meetings with companies and onboarded a few more alpha testers.</p>
+
+
+
+<p>Lots of good feedback, a few bug fixes, some recommendations and finally a big west-coast meeting well after we&#8217;re done on Friday local Icelandic time.</p>
+
+
+
+<h2>Next Week</h2>
+
+
+
+<p>We are getting back into a rhythm. COVID, Summer break and working on West Coast time threw us for a while, but things are settling down again. We took part in <a href="http://interconnected.org/home/2020/09/24/unoffice_hours">Matt Webb&#8217;s Unoffice Hours</a> a few weeks ago. That both inspired us to try and set aside Fridays for more internal projects, like <em>Castlemilk</em>, but also to try and engage more with the community. If we can continue to keep Fridays blocked for things like weeknotes, writing and internal projects, we&#8217;d love to start our own Unoffice Hours and let anyone book meetings with us.</p>
+
+
+
+<p>We&#8217;ve also started a publishing plan. Our problem seems to not be ideas or writing, but instead that last 5%. We stub an idea, write the article, but then need one image or chart, or a translation or screen shot, or &#8230; there is always one last little thing that derails the whole project. Now, with a proper publishing schedule we&#8217;re going to be more pro-active in what is missing and focus on getting this backlog of writing published.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../../../../tag/castlemilk/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1d4e35">castlemilk</a>, <a href="../../../../tag/modelling/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b9347c">modelling</a>, <a href="../../../../tag/prototypes/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #142a27">prototypes</a>, <a href="../../../../tag/revenue/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #67362d">revenue</a>, <a href="../../../../tag/surveys/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #feae57">surveys</a>, <a href="../../../../tag/weeknote/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #672e60">weeknote</a></p>			  </div>
+			
+		<div class="navigation">
+			<div class="prev"><div class="time">18 September 02020</div><a href="../../18/week-501/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #24f4a9">&laquo; Week #501</a></div>
+			<div class="next"><div class="time">28 September 02020</div><a href="../../28/name-your-price/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a5a148">Name Your Price &raquo;</a></div>
+		</div>
+
+			</div>
+			<!-- call out footer -->
+			<div class="callout-footer" style="padding-top: 1em; border-top: 2px solid #21745b; border-bottom: 2px solid #21745b; font-size: 120%">
+			<p>You've been reading optional.is/required/ a blog about technology, culture, paper and other interesting topics, since 02009. The easiest way to stay current is to grab the <a href="http://feeds2.feedburner.com/optional?format=xml">RSS Feed</a>.</p>
+
+			<p><a href="../../../../../newsletter/index.html">Subscribe to the quarterly mailing list</a> to receive interesting stories, links and updates.</p>
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+  <div style="float: left; font-size: 16px;">
+<form method="get" id="searchform" action="http://optional.is/required/" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+</div> 
+<a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+
+</body>
+</html>
