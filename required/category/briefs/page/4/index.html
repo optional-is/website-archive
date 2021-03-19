@@ -99,30 +99,47 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 	<body>
 				<style>
 			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 28px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
+			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			.complication { width: 30px; height: 30px; border-radius: 5px; border: 1px solid #f0f0f0; padding: 0; margin: 1em 0.25em; float: right; text-align: center; background-color: #fafafa; }
-			.complication .line1 { font-size: 8px; line-height: 13px; text-align: center; text-transform: uppercase;  color: #999;}
-			.complication .line2 { font-size: 14px; line-height: 14px; text-align: center; color: #aaa; }
-			.complication .line2.small { font-size: 11px; line-height: 15px; text-align: center; }
-			.complication .simple { text-align: center; font-size: 12px; line-height: 30px; }
+			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
+			form.single input:focus { border: none; outline: none; }
+
+			form.single button {
+			 	margin: 0;
+			 	padding: 0 1em;
+			 	color: #333;
+			 	background-color: #ffe24d;
+			 	border: none;
+			 	border-top-right-radius: 10px;
+			 	border-bottom-right-radius: 10px;
+			 	line-height: 40px;
+			}
+			form.single input {
+			 	border: none;
+			 	background-color: #eee;
+			 	border-top-left-radius: 10px;
+			 	border-bottom-left-radius: 10px;
+			 	line-height: 40px;
+			 	margin:0;
+			 	padding:0 1em;
+			 	box-sizing: border-box;
+			}
+			form.single button:hover {
+			 	background-color: #1b1700;
+				color: white;
+			}
+			form.single button:active {
+			 	background-color: #007f3f;
+				color: white;
+			}
+
 		</style>
 		<header>
 			<a href="../../../../../index.html" id="header">(optional.is)</a>
 
-			<div class="complication">
-				<div class="line1">RVK</div>
-				<div class="line2 small">14:34</div>
-			</div>
-			<div class="complication">
-				<div class="line1">Dec</div>
-				<div class="line2">10</div>
-			</div>
-			<!--
-			<div class="complication">
-				<div class="simple">12℃</div>
-			</div>
-			-->
+			<form action="../../../../index.html" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
+				<input type="text" value="" name="s" id="s"><button>Search</button>
+			</form>
 		</header>
 		<main>
 					<div class="row">
@@ -141,76 +158,75 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<li><a href="https://optional.is/required/category/applications//"><span style="border-left: 10px solid #1ddf33;">Applications</span></a></li><li><a href="https://optional.is/required/category/briefs//"><span style="border-left: 10px solid #aa8c5b;">Briefs</span></a></li><li><a href="https://optional.is/required/category/cartography//"><span style="border-left: 10px solid #992978;">Cartography</span></a></li><li><a href="https://optional.is/required/category/case-studies//"><span style="border-left: 10px solid #a0d2b6;">Case Studies</span></a></li><li><a href="https://optional.is/required/category/chromatics//"><span style="border-left: 10px solid #1e7940;">Chromatics</span></a></li><li><a href="https://optional.is/required/category/community//"><span style="border-left: 10px solid #7d6198;">Community</span></a></li><li><a href="https://optional.is/required/category/conferences//"><span style="border-left: 10px solid #d70b59;">Conferences</span></a></li><li><a href="https://optional.is/required/category/education//"><span style="border-left: 10px solid #de7a22;">Education</span></a></li><li><a href="https://optional.is/required/category/experiments//"><span style="border-left: 10px solid #482926;">Experiments</span></a></li><li><a href="https://optional.is/required/category/forecast//"><span style="border-left: 10px solid #89c126;">Forecast</span></a></li><li><a href="https://optional.is/required/category/interfaces//"><span style="border-left: 10px solid #756640;">Interfaces</span></a></li><li><a href="https://optional.is/required/category/material//"><span style="border-left: 10px solid #d92a83;">Material</span></a></li><li><a href="https://optional.is/required/category/meta//"><span style="border-left: 10px solid #b6755d;">Meta</span></a></li><li><a href="https://optional.is/required/category/paper//"><span style="border-left: 10px solid #d0a662;">Paper</span></a></li><li><a href="https://optional.is/required/category/place//"><span style="border-left: 10px solid #7b9cf0;">Place</span></a></li><li><a href="https://optional.is/required/category/privacy//"><span style="border-left: 10px solid #c5f29b;">Privacy</span></a></li><li><a href="https://optional.is/required/category/sports//"><span style="border-left: 10px solid #918e18;">Sports</span></a></li><li><a href="https://optional.is/required/category/storytelling//"><span style="border-left: 10px solid #d4ccb5;">Storytelling</span></a></li><li><a href="https://optional.is/required/category/t-shirts//"><span style="border-left: 10px solid #bafe5c;">T-Shirts</span></a></li><li><a href="https://optional.is/required/category/temporality//"><span style="border-left: 10px solid #504c77;">Temporality</span></a></li><li><a href="https://optional.is/required/category/travel//"><span style="border-left: 10px solid #1fb0f9;">Travel</span></a></li><li><a href="https://optional.is/required/category/tutorial//"><span style="border-left: 10px solid #368fe7;">Tutorial</span></a></li><li><a href="https://optional.is/required/category/visualizations//"><span style="border-left: 10px solid #b10ac6;">Visualizations</span></a></li><li><a href="https://optional.is/required/category/weeknotes//"><span style="border-left: 10px solid #138567;">Weeknotes</span></a></li><li><a href="https://optional.is/required/category/youre-doing-it-wrong//"><span style="border-left: 10px solid #96e20d;">You're doing it wrong</span></a></li>					</ul>
 			</div>
 		</div>
-							<div class="row section" id="post-4644"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #ad126d">Week #477-478-479-480</h1>
+							<div class="row section" id="post-4357"  >
+				<h1 class="p-name entry-title" style="border-top: 1px solid #943317">Annual Calendar Posters</h1>
 			<div class="box1" >
-				<time class="dt-published date published" datetime="2020-04-24T11:11:00+00:00" style="color: #aaa; font-weight: bold">Friday, April 24th, 02020</time>
-				<p class="p-summary entry-summary"><p>A quadruple weeknote. This month went by both fast and slow, if that&#8217;s even possible. </p>
-<p>This is a quick overview of that time.</p>
+				<time class="dt-published date published" datetime="2020-10-05T13:31:00+00:00" style="color: #aaa; font-weight: bold">Monday, October 5th, 02020</time>
+				<p class="p-summary entry-summary"><p>It&#8217;s another year, time for another printed A0 annual calendar poster.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="../../../../2020/04/24/week-477-478-479-480/index.html" rel="bookmark" title="Permanent Link to Week #477-478-479-480">Read more about Week #477-478-479-480</a></p>
+				<p><a style="display: block"  class="readmore" href="../../../../2020/10/05/annual-calendar-posters/index.html" rel="bookmark" title="Permanent Link to Annual Calendar Posters">Read more about Annual Calendar Posters</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../../../../tag/cellular-automata/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ef4002">cellular automata</a>, <a href="../../../../tag/covid/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #979d5b">covid</a>, <a href="https://optional.is/required/tag/covid-19/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5b7f9f">covid-19</a>, <a href="https://optional.is/required/tag/emoji/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ba323c">emoji</a>, <a href="https://optional.is/required/tag/finances/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #26a72d">finances</a>, <a href="../../../../tag/ios/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1bdf60">iOS</a>, <a href="../../../../tag/newsletter/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9e438d">newsletter</a>, <a href="../../../../tag/twitch/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c1fb0b">twitch</a></p>				<p style="color: #999">1174 words<br/>Read Time: 7 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="https://optional.is/required/category/temporality/" title="View all articles in Temporality" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #504c77">Temporality</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/calendar/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0e7b2">calendar</a>, <a href="https://optional.is/required/tag/code/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c13367">code</a>, <a href="https://optional.is/required/tag/php/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e1bfd7">php</a>, <a href="https://optional.is/required/tag/time/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #07cc69">time</a></p>				<p style="color: #999">429 words<br/>Read Time: 2 minutes</p>
 			</div>
 		</div>
-				<div class="row section" id="post-4640"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #79c9f0">Week #476</h1>
+				<div class="row section" id="post-4781"  >
+				<h1 class="p-name entry-title" style="border-top: 1px solid #3dec8b">Week #503</h1>
 			<div class="box1" >
-				<time class="dt-published date published" datetime="2020-03-27T22:22:06+00:00" style="color: #aaa; font-weight: bold">Friday, March 27th, 02020</time>
-				<p class="p-summary entry-summary"><p>The company metabolism is slowing down as we conserve energy, funds and sanity until the pandemic is more under control.</p>
+				<time class="dt-published date published" datetime="2020-10-02T15:51:42+00:00" style="color: #aaa; font-weight: bold">Friday, October 2nd, 02020</time>
+				<p class="p-summary entry-summary"><p>A busy week data warehouse cleaning and experimenting with our  castlemilk project.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="../../../../2020/03/27/week-476/index.html" rel="bookmark" title="Permanent Link to Week #476">Read more about Week #476</a></p>
+				<p><a style="display: block"  class="readmore" href="../../../../2020/10/02/week-503/index.html" rel="bookmark" title="Permanent Link to Week #503">Read more about Week #503</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/covid-19/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5b7f9f">covid-19</a>, <a href="https://optional.is/required/tag/income/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #34ae67">income</a>, <a href="https://optional.is/required/tag/oreilly/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cdb635">oreilly</a>, <a href="https://optional.is/required/tag/surveys/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #feae57">surveys</a></p>				<p style="color: #999">498 words<br/>Read Time: 3 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/bigquery/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #fa84e2">bigquery</a>, <a href="https://optional.is/required/tag/castlemilk/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1d4e35">castlemilk</a>, <a href="https://optional.is/required/tag/covid/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #979d5b">covid</a>, <a href="https://optional.is/required/tag/database/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #11e0ee">database</a></p>				<p style="color: #999">684 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
-				<div class="row section" id="post-4630"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #1532cd">Week #475</h1>
+				<div class="row section" id="post-4744"  >
+				<h1 class="p-name entry-title" style="border-top: 1px solid #a5a148">Name Your Price</h1>
 			<div class="box1" >
-				<time class="dt-published date published" datetime="2020-03-20T15:51:35+00:00" style="color: #aaa; font-weight: bold">Friday, March 20th, 02020</time>
-				<p class="p-summary entry-summary"><p>Laying low and in self-social-distancing-isolation. &#x1f9a0;It is COVID-19 getting the best of most businesses.</p>
+				<time class="dt-published date published" datetime="2020-09-28T13:31:30+00:00" style="color: #aaa; font-weight: bold">Monday, September 28th, 02020</time>
+				<p class="p-summary entry-summary"><p>&#x1f92f; Value-based product pricing. An e-commerce platform experimenting with variable priced based on survey feedback.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="../../../../2020/03/20/week-475/index.html" rel="bookmark" title="Permanent Link to Week #475">Read more about Week #475</a></p>
+				<p><a style="display: block"  class="readmore" href="../../../../2020/09/28/name-your-price/index.html" rel="bookmark" title="Permanent Link to Name Your Price">Read more about Name Your Price</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../../../../tag/covid/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #979d5b">covid</a>, <a href="https://optional.is/required/tag/covid-19/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5b7f9f">covid-19</a>, <a href="https://optional.is/required/tag/material/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eec34d">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bc5b2b">material conference</a>, <a href="https://optional.is/required/tag/robocall/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #beeeb6">robocall</a>, <a href="https://optional.is/required/tag/weeknote/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #672e60">weeknote</a></p>				<p style="color: #999">682 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/youre-doing-it-wrong/" title="View all articles in You're doing it wrong" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #96e20d">You're doing it wrong</a></p><p><strong>Tags:</strong> <a href="../../../../tag/ecommerce/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #db96ff">ecommerce</a>, <a href="../../../../tag/pay/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b02a45">pay</a>, <a href="../../../../tag/payments/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #84d5ea">payments</a>, <a href="https://optional.is/required/tag/survey/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2fa7b0">survey</a></p>				<p style="color: #999">936 words<br/>Read Time: 5 minutes</p>
 			</div>
 		</div>
-				<div class="row section" id="post-4566"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #b041d4">Week #472-473-474</h1>
+				<div class="row section" id="post-4741"  >
+				<h1 class="p-name entry-title" style="border-top: 1px solid #21745b">Week #502</h1>
 			<div class="box1" >
-				<time class="dt-published date published" datetime="2020-03-13T11:11:00+00:00" style="color: #aaa; font-weight: bold">Friday, March 13th, 02020</time>
-				<p class="p-summary entry-summary"><p>A triple-weeknote, but you must forgive us given everything happening around the world with the covid-19 pandemic</p>
+				<time class="dt-published date published" datetime="2020-09-25T13:31:33+00:00" style="color: #aaa; font-weight: bold">Friday, September 25th, 02020</time>
+				<p class="p-summary entry-summary"><p>A week dominated by great meetings, new opportunities and some interesting ideas.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="../../../../2020/03/13/week-472-473-474/index.html" rel="bookmark" title="Permanent Link to Week #472-473-474">Read more about Week #472-473-474</a></p>
+				<p><a style="display: block"  class="readmore" href="../../../../2020/09/25/week-502/index.html" rel="bookmark" title="Permanent Link to Week #502">Read more about Week #502</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/coronavirus/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #29f4a4">coronavirus</a>, <a href="https://optional.is/required/tag/covid-19/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5b7f9f">covid-19</a>, <a href="https://optional.is/required/tag/material/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eec34d">material</a>, <a href="https://optional.is/required/tag/surveys/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #feae57">surveys</a></p>				<p style="color: #999">809 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/castlemilk/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1d4e35">castlemilk</a>, <a href="https://optional.is/required/tag/modelling/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b9347c">modelling</a>, <a href="https://optional.is/required/tag/prototypes/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #142a27">prototypes</a>, <a href="https://optional.is/required/tag/revenue/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #67362d">revenue</a>, <a href="https://optional.is/required/tag/surveys/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #feae57">surveys</a>, <a href="https://optional.is/required/tag/weeknote/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #672e60">weeknote</a></p>				<p style="color: #999">957 words<br/>Read Time: 5 minutes</p>
 			</div>
 		</div>
-				<div class="row section" id="post-4555"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #90eac0">Week #470-471</h1>
+				<div class="row section" id="post-4734"  >
+				<h1 class="p-name entry-title" style="border-top: 1px solid #24f4a9">Week #501</h1>
 			<div class="box1" >
-				<time class="dt-published date published" datetime="2020-02-21T11:11:20+00:00" style="color: #aaa; font-weight: bold">Friday, February 21st, 02020</time>
-				<p class="p-summary entry-summary"><p>A double weeknote due to a big storm last friday and everything was cancelled.</p>
+				<time class="dt-published date published" datetime="2020-09-18T14:41:59+00:00" style="color: #aaa; font-weight: bold">Friday, September 18th, 02020</time>
+				<p class="p-summary entry-summary"><p>A quick weeknote. There were lots of tech events this week, all of which we kept an eye on as they impact our projects in some way or another.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="../../../../2020/02/21/week-470-471/index.html" rel="bookmark" title="Permanent Link to Week #470-471">Read more about Week #470-471</a></p>
+				<p><a style="display: block"  class="readmore" href="../../../../2020/09/18/week-501/index.html" rel="bookmark" title="Permanent Link to Week #501">Read more about Week #501</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/material/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eec34d">material</a>, <a href="https://optional.is/required/tag/robocall/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #beeeb6">robocall</a>, <a href="https://optional.is/required/tag/storm/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #849c82">storm</a>, <a href="https://optional.is/required/tag/surveys/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #feae57">surveys</a>, <a href="https://optional.is/required/tag/universe/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7d9a0d">universe</a></p>				<p style="color: #999">805 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/oculus/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f924f3">oculus</a>, <a href="https://optional.is/required/tag/vr/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ef8a9f">VR</a>, <a href="https://optional.is/required/tag/weeknote/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #672e60">weeknote</a>, <a href="https://optional.is/required/tag/weeknotes/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p>				<p style="color: #999">800 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				
 			<div class="row section">
 		<div class="navigation">
-			<div class="prev"><a href="../5/index.html" >&laquo; Older Entries</a></div>
+			<div class="prev"><a href="https://optional.is/required/category/briefs/page/5/" >&laquo; Older Entries</a></div>
 			<div class="next"><a href="../3/index.html" >Newer Entries &raquo;</a></div>
 		</div>
 			</div>
@@ -540,7 +556,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				width: 384px; 
 				margin: 0 auto;
 			}
-			@media (max-width: 384px) {
+			@media (max-width: 415px) {
 				footer .logo {
 					width: 256px; 
 				}
@@ -565,7 +581,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #513</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>

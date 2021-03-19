@@ -99,30 +99,47 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 	<body>
 				<style>
 			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 28px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
+			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			.complication { width: 30px; height: 30px; border-radius: 5px; border: 1px solid #f0f0f0; padding: 0; margin: 1em 0.25em; float: right; text-align: center; background-color: #fafafa; }
-			.complication .line1 { font-size: 8px; line-height: 13px; text-align: center; text-transform: uppercase;  color: #999;}
-			.complication .line2 { font-size: 14px; line-height: 14px; text-align: center; color: #aaa; }
-			.complication .line2.small { font-size: 11px; line-height: 15px; text-align: center; }
-			.complication .simple { text-align: center; font-size: 12px; line-height: 30px; }
+			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
+			form.single input:focus { border: none; outline: none; }
+
+			form.single button {
+			 	margin: 0;
+			 	padding: 0 1em;
+			 	color: #333;
+			 	background-color: #ffe24d;
+			 	border: none;
+			 	border-top-right-radius: 10px;
+			 	border-bottom-right-radius: 10px;
+			 	line-height: 40px;
+			}
+			form.single input {
+			 	border: none;
+			 	background-color: #eee;
+			 	border-top-left-radius: 10px;
+			 	border-bottom-left-radius: 10px;
+			 	line-height: 40px;
+			 	margin:0;
+			 	padding:0 1em;
+			 	box-sizing: border-box;
+			}
+			form.single button:hover {
+			 	background-color: #1b1700;
+				color: white;
+			}
+			form.single button:active {
+			 	background-color: #007f3f;
+				color: white;
+			}
+
 		</style>
 		<header>
 			<a href="../../../index.html" id="header">(optional.is)</a>
 
-			<div class="complication">
-				<div class="line1">RVK</div>
-				<div class="line2 small">14:36</div>
-			</div>
-			<div class="complication">
-				<div class="line1">Dec</div>
-				<div class="line2">10</div>
-			</div>
-			<!--
-			<div class="complication">
-				<div class="simple">12℃</div>
-			</div>
-			-->
+			<form action="../../index.html" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
+				<input type="text" value="" name="s" id="s"><button>Search</button>
+			</form>
 		</header>
 		<main>
 					<div class="row">
@@ -130,7 +147,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				<h2>filters</h2><p></p>			</div>
 			<div class="box2">
 				<h2>Search</h2>
-				<form method="get" id="searchform" action="http://optional.is/required/" style="text-align: center;">
+				<form method="get" id="searchform" action="../../index.html" style="text-align: center;">
 				<div><input type="text" value="" name="s" id="s"><input type="submit" id="searchsubmit" value="Search"></div>
 			</form>
 			</div>
@@ -146,11 +163,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				<time class="dt-published date published" datetime="2009-04-09T13:31:32+00:00" style="color: #aaa; font-weight: bold">Thursday, April 9th, 02009</time>
 				<p class="p-summary entry-summary"><p>2× Paper is an attempt at double packing the amount of data into a single unit of area. There are several possible ways to increase information density, some are more realistic than others. This is an exploration of using simple and existing tools to deal with isolating information density.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2009/04/09/2x-paper/" rel="bookmark" title="Permanent Link to 2× Paper">Read more about 2× Paper</a></p>
+				<p><a style="display: block"  class="readmore" href="../../2009/04/09/2x-paper/index.html" rel="bookmark" title="Permanent Link to 2× Paper">Read more about 2× Paper</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/paper/index.html" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a></p><p><strong>Tags:</strong> <a href="../2x-paper/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #777f67">2x paper</a>, <a href="../3d-glasses/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #89dd37">3d glasses</a>, <a href="../blue/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #48d621">blue</a>, <a href="../color-wheel/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2413a1">color wheel</a>, <a href="../double-pack/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #294f88">double pack</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2c9885">filters</a>, <a href="../paper/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="../red/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bda964">red</a>, <a href="../wavelengths/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #55c7c1">wavelengths</a></p>				<p style="color: #999">1717 words<br/>Read Time: 10 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a></p><p><strong>Tags:</strong> <a href="../2x-paper/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #777f67">2x paper</a>, <a href="../3d-glasses/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #89dd37">3d glasses</a>, <a href="../blue/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #48d621">blue</a>, <a href="../color-wheel/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2413a1">color wheel</a>, <a href="../double-pack/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #294f88">double pack</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2c9885">filters</a>, <a href="https://optional.is/required/tag/paper/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="../red/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bda964">red</a>, <a href="../wavelengths/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #55c7c1">wavelengths</a></p>				<p style="color: #999">1717 words<br/>Read Time: 10 minutes</p>
 			</div>
 		</div>
 				
@@ -486,7 +503,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				width: 384px; 
 				margin: 0 auto;
 			}
-			@media (max-width: 384px) {
+			@media (max-width: 415px) {
 				footer .logo {
 					width: 256px; 
 				}
@@ -511,7 +528,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #513</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>

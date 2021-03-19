@@ -99,30 +99,47 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 	<body>
 				<style>
 			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 28px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
+			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			.complication { width: 30px; height: 30px; border-radius: 5px; border: 1px solid #f0f0f0; padding: 0; margin: 1em 0.25em; float: right; text-align: center; background-color: #fafafa; }
-			.complication .line1 { font-size: 8px; line-height: 13px; text-align: center; text-transform: uppercase;  color: #999;}
-			.complication .line2 { font-size: 14px; line-height: 14px; text-align: center; color: #aaa; }
-			.complication .line2.small { font-size: 11px; line-height: 15px; text-align: center; }
-			.complication .simple { text-align: center; font-size: 12px; line-height: 30px; }
+			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
+			form.single input:focus { border: none; outline: none; }
+
+			form.single button {
+			 	margin: 0;
+			 	padding: 0 1em;
+			 	color: #333;
+			 	background-color: #ffe24d;
+			 	border: none;
+			 	border-top-right-radius: 10px;
+			 	border-bottom-right-radius: 10px;
+			 	line-height: 40px;
+			}
+			form.single input {
+			 	border: none;
+			 	background-color: #eee;
+			 	border-top-left-radius: 10px;
+			 	border-bottom-left-radius: 10px;
+			 	line-height: 40px;
+			 	margin:0;
+			 	padding:0 1em;
+			 	box-sizing: border-box;
+			}
+			form.single button:hover {
+			 	background-color: #1b1700;
+				color: white;
+			}
+			form.single button:active {
+			 	background-color: #007f3f;
+				color: white;
+			}
+
 		</style>
 		<header>
 			<a href="../../../index.html" id="header">(optional.is)</a>
 
-			<div class="complication">
-				<div class="line1">RVK</div>
-				<div class="line2 small">14:30</div>
-			</div>
-			<div class="complication">
-				<div class="line1">Dec</div>
-				<div class="line2">10</div>
-			</div>
-			<!--
-			<div class="complication">
-				<div class="simple">12℃</div>
-			</div>
-			-->
+			<form action="../../index.html" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
+				<input type="text" value="" name="s" id="s"><button>Search</button>
+			</form>
 		</header>
 		<main>
 					<div class="row">
@@ -130,7 +147,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				<h2>stocks</h2><p></p>			</div>
 			<div class="box2">
 				<h2>Search</h2>
-				<form method="get" id="searchform" action="http://optional.is/required/" style="text-align: center;">
+				<form method="get" id="searchform" action="../../index.html" style="text-align: center;">
 				<div><input type="text" value="" name="s" id="s"><input type="submit" id="searchsubmit" value="Search"></div>
 			</form>
 			</div>
@@ -146,11 +163,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				<time class="dt-published date published" datetime="2013-06-01T15:51:39+00:00" style="color: #aaa; font-weight: bold">Saturday, June 1st, 02013</time>
 				<p class="p-summary entry-summary"><p>One idea for a futuristic short-story we&#8217;ve been kicking around has turned out to not be so futuristic. As technology begins to dominate our lives and interactions, strange things begin to happen. Instant interactions we didn&#8217;t expect along with strange consequences. For those who know how to harness these feedback loops, there is an opportunity to exploit the system, just like there always has. This time it is digital and instantaneous.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2013/06/01/tricking-the-stock-market/" rel="bookmark" title="Permanent Link to Tricking the Stock Market">Read more about Tricking the Stock Market</a></p>
+				<p><a style="display: block"  class="readmore" href="../../2013/06/01/tricking-the-stock-market/index.html" rel="bookmark" title="Permanent Link to Tricking the Stock Market">Read more about Tricking the Stock Market</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/storytelling/index.html" title="View all articles in Storytelling" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d4ccb5">Storytelling</a></p><p><strong>Tags:</strong> <a href="../prediction-market/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f9b62f">prediction market</a>, <a href="../predictions/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #361ed8">predictions</a>, <a href="../short-story/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7a9b4d">short story</a>, <a href="../social-media/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #56b7bb">social media</a>, <a href="../stock-market/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5180b0">stock market</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4cd2f6">stocks</a>, <a href="../twitter/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b73c2d">twitter</a></p>				<p style="color: #999">1147 words<br/>Read Time: 6 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/storytelling/" title="View all articles in Storytelling" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d4ccb5">Storytelling</a></p><p><strong>Tags:</strong> <a href="../prediction-market/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f9b62f">prediction market</a>, <a href="https://optional.is/required/tag/predictions/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #361ed8">predictions</a>, <a href="../short-story/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7a9b4d">short story</a>, <a href="../social-media/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #56b7bb">social media</a>, <a href="../stock-market/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5180b0">stock market</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4cd2f6">stocks</a>, <a href="https://optional.is/required/tag/twitter/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b73c2d">twitter</a></p>				<p style="color: #999">1147 words<br/>Read Time: 6 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-783"  >
@@ -159,11 +176,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				<time class="dt-published date published" datetime="2009-08-14T01:10:46+00:00" style="color: #aaa; font-weight: bold">Friday, August 14th, 02009</time>
 				<p class="p-summary entry-summary"><p>When you gather a suitably diverse group of people together, ask them a question and average their answers, the result tends to be more accurate than the result of any one person including experts. The implication of this, is that the crowd as a whole can make better informed judgements than traditional experts. There just needs to be an ideal way to extract those tiny bits of relative information from individuals in a consistent manner. Enter the prediction market.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2009/08/14/prediction-markets/" rel="bookmark" title="Permanent Link to Introduction to Prediction Markets">Read more about Introduction to Prediction Markets</a></p>
+				<p><a style="display: block"  class="readmore" href="../../2009/08/14/prediction-markets/index.html" rel="bookmark" title="Permanent Link to Introduction to Prediction Markets">Read more about Introduction to Prediction Markets</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/forecast/index.html" title="View all articles in Forecast" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #89c126">Forecast</a></p><p><strong>Tags:</strong> <a href="../future/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #da907a">future</a>, <a href="../group-think/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7ab19e">group think</a>, <a href="../herd/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cc249d">herd</a>, <a href="../markets/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cabb7e">markets</a>, <a href="../prediction-markets/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #11d3a0">prediction markets</a>, <a href="../predictions/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #361ed8">predictions</a>, <a href="../probability/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7290d6">probability</a>, <a href="../shares/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eb34cb">shares</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4cd2f6">stocks</a></p>				<p style="color: #999">2791 words<br/>Read Time: 16 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/forecast/" title="View all articles in Forecast" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #89c126">Forecast</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/future/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #da907a">future</a>, <a href="https://optional.is/required/tag/group-think/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7ab19e">group think</a>, <a href="https://optional.is/required/tag/herd/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cc249d">herd</a>, <a href="https://optional.is/required/tag/markets/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cabb7e">markets</a>, <a href="https://optional.is/required/tag/prediction-markets/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #11d3a0">prediction markets</a>, <a href="https://optional.is/required/tag/predictions/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #361ed8">predictions</a>, <a href="https://optional.is/required/tag/probability/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7290d6">probability</a>, <a href="https://optional.is/required/tag/shares/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eb34cb">shares</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4cd2f6">stocks</a></p>				<p style="color: #999">2791 words<br/>Read Time: 16 minutes</p>
 			</div>
 		</div>
 				
@@ -499,7 +516,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				width: 384px; 
 				margin: 0 auto;
 			}
-			@media (max-width: 384px) {
+			@media (max-width: 415px) {
 				footer .logo {
 					width: 256px; 
 				}
@@ -524,7 +541,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #513</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>

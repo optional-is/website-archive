@@ -99,30 +99,47 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 	<body>
 				<style>
 			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 28px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
+			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			.complication { width: 30px; height: 30px; border-radius: 5px; border: 1px solid #f0f0f0; padding: 0; margin: 1em 0.25em; float: right; text-align: center; background-color: #fafafa; }
-			.complication .line1 { font-size: 8px; line-height: 13px; text-align: center; text-transform: uppercase;  color: #999;}
-			.complication .line2 { font-size: 14px; line-height: 14px; text-align: center; color: #aaa; }
-			.complication .line2.small { font-size: 11px; line-height: 15px; text-align: center; }
-			.complication .simple { text-align: center; font-size: 12px; line-height: 30px; }
+			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
+			form.single input:focus { border: none; outline: none; }
+
+			form.single button {
+			 	margin: 0;
+			 	padding: 0 1em;
+			 	color: #333;
+			 	background-color: #ffe24d;
+			 	border: none;
+			 	border-top-right-radius: 10px;
+			 	border-bottom-right-radius: 10px;
+			 	line-height: 40px;
+			}
+			form.single input {
+			 	border: none;
+			 	background-color: #eee;
+			 	border-top-left-radius: 10px;
+			 	border-bottom-left-radius: 10px;
+			 	line-height: 40px;
+			 	margin:0;
+			 	padding:0 1em;
+			 	box-sizing: border-box;
+			}
+			form.single button:hover {
+			 	background-color: #1b1700;
+				color: white;
+			}
+			form.single button:active {
+			 	background-color: #007f3f;
+				color: white;
+			}
+
 		</style>
 		<header>
 			<a href="../../../index.html" id="header">(optional.is)</a>
 
-			<div class="complication">
-				<div class="line1">RVK</div>
-				<div class="line2 small">14:18</div>
-			</div>
-			<div class="complication">
-				<div class="line1">Dec</div>
-				<div class="line2">10</div>
-			</div>
-			<!--
-			<div class="complication">
-				<div class="simple">12℃</div>
-			</div>
-			-->
+			<form action="http://optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
+				<input type="text" value="" name="s" id="s"><button>Search</button>
+			</form>
 		</header>
 		<main>
 					<div class="row">
@@ -140,7 +157,20 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<li><a href="https://optional.is/required/category/applications//"><span style="border-left: 10px solid #1ddf33;">Applications</span></a></li><li><a href="https://optional.is/required/category/briefs//"><span style="border-left: 10px solid #aa8c5b;">Briefs</span></a></li><li><a href="https://optional.is/required/category/cartography//"><span style="border-left: 10px solid #992978;">Cartography</span></a></li><li><a href="https://optional.is/required/category/case-studies//"><span style="border-left: 10px solid #a0d2b6;">Case Studies</span></a></li><li><a href="https://optional.is/required/category/chromatics//"><span style="border-left: 10px solid #1e7940;">Chromatics</span></a></li><li><a href="https://optional.is/required/category/community//"><span style="border-left: 10px solid #7d6198;">Community</span></a></li><li><a href="https://optional.is/required/category/conferences//"><span style="border-left: 10px solid #d70b59;">Conferences</span></a></li><li><a href="https://optional.is/required/category/education//"><span style="border-left: 10px solid #de7a22;">Education</span></a></li><li><a href="https://optional.is/required/category/experiments//"><span style="border-left: 10px solid #482926;">Experiments</span></a></li><li><a href="https://optional.is/required/category/forecast//"><span style="border-left: 10px solid #89c126;">Forecast</span></a></li><li><a href="https://optional.is/required/category/interfaces//"><span style="border-left: 10px solid #756640;">Interfaces</span></a></li><li><a href="https://optional.is/required/category/material//"><span style="border-left: 10px solid #d92a83;">Material</span></a></li><li><a href="https://optional.is/required/category/meta//"><span style="border-left: 10px solid #b6755d;">Meta</span></a></li><li><a href="https://optional.is/required/category/paper//"><span style="border-left: 10px solid #d0a662;">Paper</span></a></li><li><a href="https://optional.is/required/category/place//"><span style="border-left: 10px solid #7b9cf0;">Place</span></a></li><li><a href="https://optional.is/required/category/privacy//"><span style="border-left: 10px solid #c5f29b;">Privacy</span></a></li><li><a href="https://optional.is/required/category/sports//"><span style="border-left: 10px solid #918e18;">Sports</span></a></li><li><a href="https://optional.is/required/category/storytelling//"><span style="border-left: 10px solid #d4ccb5;">Storytelling</span></a></li><li><a href="https://optional.is/required/category/t-shirts//"><span style="border-left: 10px solid #bafe5c;">T-Shirts</span></a></li><li><a href="https://optional.is/required/category/temporality//"><span style="border-left: 10px solid #504c77;">Temporality</span></a></li><li><a href="https://optional.is/required/category/travel//"><span style="border-left: 10px solid #1fb0f9;">Travel</span></a></li><li><a href="https://optional.is/required/category/tutorial//"><span style="border-left: 10px solid #368fe7;">Tutorial</span></a></li><li><a href="https://optional.is/required/category/visualizations//"><span style="border-left: 10px solid #b10ac6;">Visualizations</span></a></li><li><a href="https://optional.is/required/category/weeknotes//"><span style="border-left: 10px solid #138567;">Weeknotes</span></a></li><li><a href="https://optional.is/required/category/youre-doing-it-wrong//"><span style="border-left: 10px solid #96e20d;">You're doing it wrong</span></a></li>					</ul>
 			</div>
 		</div>
-							<div class="row section" id="post-4060"  >
+							<div class="row section" id="post-4860"  >
+				<h1 class="p-name entry-title" style="border-top: 1px solid #962b43">First Word Instance</h1>
+			<div class="box1" >
+				<time class="dt-published date published" datetime="2021-01-18T11:11:00+00:00" style="color: #aaa; font-weight: bold">Monday, January 18th, 02021</time>
+				<p class="p-summary entry-summary"><p>There is a twitter bot called @NYT_first_said which pretty much does what it says on the tin. Tweets words when they appear in the New York Times for the first time. @NYT_first_said It seems to be a pretty straight-forward bit of code. It gets new articles published daily. Then splits the text into words. It [&hellip;]</p>
+</p>
+				<p><a style="display: block"  class="readmore" href="../../2021/01/18/first-word-instance/index.html" rel="bookmark" title="Permanent Link to First Word Instance">Read more about First Word Instance</a></p>
+			</div>
+			<div class="box1 postmetadata">
+
+				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Applications" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1ddf33">Applications</a>, <a href="../briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../meta/index.html" title="View all articles in Meta" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b6755d">Meta</a></p><p><strong>Tags:</strong> <a href="../../tag/nlp/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4c5adb">nlp</a>, <a href="../../tag/text/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1cb251">text</a>, <a href="../../tag/words/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #89759e">words</a></p>				<p style="color: #999">556 words<br/>Read Time: 3 minutes</p>
+			</div>
+		</div>
+				<div class="row section" id="post-4060"  >
 				<h1 class="p-name entry-title" style="border-top: 1px solid #810aa3">Text Stats App</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2020-10-26T13:31:00+00:00" style="color: #aaa; font-weight: bold">Monday, October 26th, 02020</time>
@@ -150,7 +180,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Applications" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1ddf33">Applications</a></p><p><strong>Tags:</strong> <a href="http://optional.is/required/tag/app/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d2a57d">app</a>, <a href="http://optional.is/required/tag/app-store/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #caeaf4">app store</a>, <a href="http://optional.is/required/tag/apps/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9a6dd2">apps</a>, <a href="http://optional.is/required/tag/ios/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1bdf60">iOS</a>, <a href="http://optional.is/required/tag/ipad/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #09401f">ipad</a>, <a href="http://optional.is/required/tag/iphone/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #867e57">iPhone</a>, <a href="http://optional.is/required/tag/stats/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #446501">stats</a>, <a href="http://optional.is/required/tag/text/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1cb251">text</a>, <a href="http://optional.is/required/tag/text-stats/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6c1160">text stats</a>, <a href="http://optional.is/required/tag/writing/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1cea53">writing</a></p>				<p style="color: #999">2157 words<br/>Read Time: 12 minutes</p>
+				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Applications" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1ddf33">Applications</a></p><p><strong>Tags:</strong> <a href="../../tag/app/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d2a57d">app</a>, <a href="../../tag/app-store/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #caeaf4">app store</a>, <a href="../../tag/apps/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9a6dd2">apps</a>, <a href="../../tag/ios/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1bdf60">iOS</a>, <a href="../../tag/ipad/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #09401f">ipad</a>, <a href="../../tag/iphone/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #867e57">iPhone</a>, <a href="../../tag/stats/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #446501">stats</a>, <a href="../../tag/text/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1cb251">text</a>, <a href="../../tag/text-stats/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6c1160">text stats</a>, <a href="../../tag/writing/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1cea53">writing</a></p>				<p style="color: #999">2157 words<br/>Read Time: 12 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3916"  >
@@ -163,7 +193,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Applications" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1ddf33">Applications</a>, <a href="../temporality/index.html" title="View all articles in Temporality" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #504c77">Temporality</a></p><p><strong>Tags:</strong> <a href="http://optional.is/required/tag/app/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d2a57d">app</a>, <a href="../../tag/clock/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #05531b">clock</a>, <a href="../../tag/complications/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e46029">complications</a>, <a href="../../tag/flowers/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7d37c5">flowers</a>, <a href="http://optional.is/required/tag/time/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #07cc69">time</a>, <a href="../../tag/watch/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d2974c">watch</a></p>				<p style="color: #999">751 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Applications" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1ddf33">Applications</a>, <a href="../temporality/index.html" title="View all articles in Temporality" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #504c77">Temporality</a></p><p><strong>Tags:</strong> <a href="../../tag/app/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d2a57d">app</a>, <a href="../../tag/clock/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #05531b">clock</a>, <a href="../../tag/complications/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e46029">complications</a>, <a href="../../tag/flowers/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7d37c5">flowers</a>, <a href="../../tag/time/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #07cc69">time</a>, <a href="../../tag/watch/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d2974c">watch</a></p>				<p style="color: #999">751 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3785"  >
@@ -176,7 +206,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Applications" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1ddf33">Applications</a>, <a href="../experiments/index.html" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a>, <a href="../temporality/index.html" title="View all articles in Temporality" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #504c77">Temporality</a></p><p><strong>Tags:</strong> <a href="http://optional.is/required/tag/app/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d2a57d">app</a>, <a href="../../tag/apple/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1f3870">apple</a>, <a href="../../tag/holidays/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d016b2">holidays</a>, <a href="http://optional.is/required/tag/ios/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1bdf60">iOS</a>, <a href="http://optional.is/required/tag/iphone/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #867e57">iPhone</a>, <a href="../../tag/programming/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7e73d0">programming</a>, <a href="../../tag/red-days/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6f5a0e">red days</a>, <a href="../../tag/swift/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #818056">swift</a></p>				<p style="color: #999">908 words<br/>Read Time: 5 minutes</p>
+				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Applications" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1ddf33">Applications</a>, <a href="../experiments/index.html" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a>, <a href="../temporality/index.html" title="View all articles in Temporality" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #504c77">Temporality</a></p><p><strong>Tags:</strong> <a href="../../tag/app/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d2a57d">app</a>, <a href="../../tag/apple/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1f3870">apple</a>, <a href="../../tag/holidays/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d016b2">holidays</a>, <a href="../../tag/ios/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1bdf60">iOS</a>, <a href="../../tag/iphone/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #867e57">iPhone</a>, <a href="../../tag/programming/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7e73d0">programming</a>, <a href="../../tag/red-days/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6f5a0e">red days</a>, <a href="../../tag/swift/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #818056">swift</a></p>				<p style="color: #999">908 words<br/>Read Time: 5 minutes</p>
 			</div>
 		</div>
 				
@@ -512,7 +542,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				width: 384px; 
 				margin: 0 auto;
 			}
-			@media (max-width: 384px) {
+			@media (max-width: 415px) {
 				footer .logo {
 					width: 256px; 
 				}
@@ -537,7 +567,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #513</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>

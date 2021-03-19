@@ -99,30 +99,47 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 	<body>
 				<style>
 			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 28px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
+			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			.complication { width: 30px; height: 30px; border-radius: 5px; border: 1px solid #f0f0f0; padding: 0; margin: 1em 0.25em; float: right; text-align: center; background-color: #fafafa; }
-			.complication .line1 { font-size: 8px; line-height: 13px; text-align: center; text-transform: uppercase;  color: #999;}
-			.complication .line2 { font-size: 14px; line-height: 14px; text-align: center; color: #aaa; }
-			.complication .line2.small { font-size: 11px; line-height: 15px; text-align: center; }
-			.complication .simple { text-align: center; font-size: 12px; line-height: 30px; }
+			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
+			form.single input:focus { border: none; outline: none; }
+
+			form.single button {
+			 	margin: 0;
+			 	padding: 0 1em;
+			 	color: #333;
+			 	background-color: #ffe24d;
+			 	border: none;
+			 	border-top-right-radius: 10px;
+			 	border-bottom-right-radius: 10px;
+			 	line-height: 40px;
+			}
+			form.single input {
+			 	border: none;
+			 	background-color: #eee;
+			 	border-top-left-radius: 10px;
+			 	border-bottom-left-radius: 10px;
+			 	line-height: 40px;
+			 	margin:0;
+			 	padding:0 1em;
+			 	box-sizing: border-box;
+			}
+			form.single button:hover {
+			 	background-color: #1b1700;
+				color: white;
+			}
+			form.single button:active {
+			 	background-color: #007f3f;
+				color: white;
+			}
+
 		</style>
 		<header>
 			<a href="../../../index.html" id="header">(optional.is)</a>
 
-			<div class="complication">
-				<div class="line1">RVK</div>
-				<div class="line2 small">14:29</div>
-			</div>
-			<div class="complication">
-				<div class="line1">Dec</div>
-				<div class="line2">10</div>
-			</div>
-			<!--
-			<div class="complication">
-				<div class="simple">12℃</div>
-			</div>
-			-->
+			<form action="http://optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
+				<input type="text" value="" name="s" id="s"><button>Search</button>
+			</form>
 		</header>
 		<main>
 					<div class="row">
@@ -140,7 +157,20 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<li><a href="https://optional.is/required/category/applications//"><span style="border-left: 10px solid #1ddf33;">Applications</span></a></li><li><a href="https://optional.is/required/category/briefs//"><span style="border-left: 10px solid #aa8c5b;">Briefs</span></a></li><li><a href="https://optional.is/required/category/cartography//"><span style="border-left: 10px solid #992978;">Cartography</span></a></li><li><a href="https://optional.is/required/category/case-studies//"><span style="border-left: 10px solid #a0d2b6;">Case Studies</span></a></li><li><a href="https://optional.is/required/category/chromatics//"><span style="border-left: 10px solid #1e7940;">Chromatics</span></a></li><li><a href="https://optional.is/required/category/community//"><span style="border-left: 10px solid #7d6198;">Community</span></a></li><li><a href="https://optional.is/required/category/conferences//"><span style="border-left: 10px solid #d70b59;">Conferences</span></a></li><li><a href="https://optional.is/required/category/education//"><span style="border-left: 10px solid #de7a22;">Education</span></a></li><li><a href="https://optional.is/required/category/experiments//"><span style="border-left: 10px solid #482926;">Experiments</span></a></li><li><a href="https://optional.is/required/category/forecast//"><span style="border-left: 10px solid #89c126;">Forecast</span></a></li><li><a href="https://optional.is/required/category/interfaces//"><span style="border-left: 10px solid #756640;">Interfaces</span></a></li><li><a href="https://optional.is/required/category/material//"><span style="border-left: 10px solid #d92a83;">Material</span></a></li><li><a href="https://optional.is/required/category/meta//"><span style="border-left: 10px solid #b6755d;">Meta</span></a></li><li><a href="https://optional.is/required/category/paper//"><span style="border-left: 10px solid #d0a662;">Paper</span></a></li><li><a href="https://optional.is/required/category/place//"><span style="border-left: 10px solid #7b9cf0;">Place</span></a></li><li><a href="https://optional.is/required/category/privacy//"><span style="border-left: 10px solid #c5f29b;">Privacy</span></a></li><li><a href="https://optional.is/required/category/sports//"><span style="border-left: 10px solid #918e18;">Sports</span></a></li><li><a href="https://optional.is/required/category/storytelling//"><span style="border-left: 10px solid #d4ccb5;">Storytelling</span></a></li><li><a href="https://optional.is/required/category/t-shirts//"><span style="border-left: 10px solid #bafe5c;">T-Shirts</span></a></li><li><a href="https://optional.is/required/category/temporality//"><span style="border-left: 10px solid #504c77;">Temporality</span></a></li><li><a href="https://optional.is/required/category/travel//"><span style="border-left: 10px solid #1fb0f9;">Travel</span></a></li><li><a href="https://optional.is/required/category/tutorial//"><span style="border-left: 10px solid #368fe7;">Tutorial</span></a></li><li><a href="https://optional.is/required/category/visualizations//"><span style="border-left: 10px solid #b10ac6;">Visualizations</span></a></li><li><a href="https://optional.is/required/category/weeknotes//"><span style="border-left: 10px solid #138567;">Weeknotes</span></a></li><li><a href="https://optional.is/required/category/youre-doing-it-wrong//"><span style="border-left: 10px solid #96e20d;">You're doing it wrong</span></a></li>					</ul>
 			</div>
 		</div>
-							<div class="row section" id="post-3955"  >
+							<div class="row section" id="post-4848"  >
+				<h1 class="p-name entry-title" style="border-top: 1px solid #b68864">02020 Annual Report</h1>
+			<div class="box1" >
+				<time class="dt-published date published" datetime="2021-03-08T13:31:00+00:00" style="color: #aaa; font-weight: bold">Monday, March 8th, 02021</time>
+				<p class="p-summary entry-summary"><p>A look back over the 02020 business year. We examine how and where we spent out time and money. The pandemic put more than one crinkle in our plans!</p>
+</p>
+				<p><a style="display: block"  class="readmore" href="../../2021/03/08/02020-annual-report/index.html" rel="bookmark" title="Permanent Link to 02020 Annual Report">Read more about 02020 Annual Report</a></p>
+			</div>
+			<div class="box1 postmetadata">
+
+				<p><strong>Categories:</strong> <a href="../../category/meta/index.html" title="View all articles in Meta" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b6755d">Meta</a></p><p><strong>Tags:</strong> <a href="../02020/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #74ede1">02020</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0c1ce">annual report</a>, <a href="../finances/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #26a72d">finances</a>, <a href="../services/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #10cd39">services</a>, <a href="../work-load/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9c1160">work load</a></p>				<p style="color: #999">1504 words<br/>Read Time: 8 minutes</p>
+			</div>
+		</div>
+				<div class="row section" id="post-3955"  >
 				<h1 class="p-name entry-title" style="border-top: 1px solid #7a04c4">02017 Annual Report</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2018-03-06T13:31:58+00:00" style="color: #aaa; font-weight: bold">Tuesday, March 6th, 02018</time>
@@ -190,19 +220,6 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<div class="box1 postmetadata">
 
 				<p><strong>Categories:</strong> <a href="../../category/meta/index.html" title="View all articles in Meta" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b6755d">Meta</a></p><p><strong>Tags:</strong> <a href="../02014/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a83d2e">02014</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0c1ce">annual report</a>, <a href="../finances/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #26a72d">finances</a>, <a href="../work-load/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9c1160">work load</a>, <a href="../year-in-review/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bd4af2">year in review</a></p>				<p style="color: #999">1819 words<br/>Read Time: 10 minutes</p>
-			</div>
-		</div>
-				<div class="row section" id="post-2934"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #8746b7">02013 Annual Report</h1>
-			<div class="box1" >
-				<time class="dt-published date published" datetime="2014-01-22T22:22:42+00:00" style="color: #aaa; font-weight: bold">Wednesday, January 22nd, 02014</time>
-				<p class="p-summary entry-summary"><p>A look back at 02013 to discover how and where our time went and money came from. Hopefully others will find some of these metrics useful in their businesses.</p>
-</p>
-				<p><a style="display: block"  class="readmore" href="../../2014/01/22/02013-annual-report/index.html" rel="bookmark" title="Permanent Link to 02013 Annual Report">Read more about 02013 Annual Report</a></p>
-			</div>
-			<div class="box1 postmetadata">
-
-				<p><strong>Categories:</strong> <a href="../../category/meta/index.html" title="View all articles in Meta" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b6755d">Meta</a></p><p><strong>Tags:</strong> <a href="../02013/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aab571">02013</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0c1ce">annual report</a>, <a href="../projects/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #35a286">projects</a>, <a href="../services/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #10cd39">services</a>, <a href="../time-tracking/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3d18b5">time tracking</a></p>				<p style="color: #999">2005 words<br/>Read Time: 11 minutes</p>
 			</div>
 		</div>
 				
@@ -538,7 +555,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				width: 384px; 
 				margin: 0 auto;
 			}
-			@media (max-width: 384px) {
+			@media (max-width: 415px) {
 				footer .logo {
 					width: 256px; 
 				}
@@ -563,7 +580,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #513</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>

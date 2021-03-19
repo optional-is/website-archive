@@ -99,30 +99,47 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 	<body>
 				<style>
 			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 28px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
+			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			.complication { width: 30px; height: 30px; border-radius: 5px; border: 1px solid #f0f0f0; padding: 0; margin: 1em 0.25em; float: right; text-align: center; background-color: #fafafa; }
-			.complication .line1 { font-size: 8px; line-height: 13px; text-align: center; text-transform: uppercase;  color: #999;}
-			.complication .line2 { font-size: 14px; line-height: 14px; text-align: center; color: #aaa; }
-			.complication .line2.small { font-size: 11px; line-height: 15px; text-align: center; }
-			.complication .simple { text-align: center; font-size: 12px; line-height: 30px; }
+			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
+			form.single input:focus { border: none; outline: none; }
+
+			form.single button {
+			 	margin: 0;
+			 	padding: 0 1em;
+			 	color: #333;
+			 	background-color: #ffe24d;
+			 	border: none;
+			 	border-top-right-radius: 10px;
+			 	border-bottom-right-radius: 10px;
+			 	line-height: 40px;
+			}
+			form.single input {
+			 	border: none;
+			 	background-color: #eee;
+			 	border-top-left-radius: 10px;
+			 	border-bottom-left-radius: 10px;
+			 	line-height: 40px;
+			 	margin:0;
+			 	padding:0 1em;
+			 	box-sizing: border-box;
+			}
+			form.single button:hover {
+			 	background-color: #1b1700;
+				color: white;
+			}
+			form.single button:active {
+			 	background-color: #007f3f;
+				color: white;
+			}
+
 		</style>
 		<header>
 			<a href="../../../index.html" id="header">(optional.is)</a>
 
-			<div class="complication">
-				<div class="line1">RVK</div>
-				<div class="line2 small">14:18</div>
-			</div>
-			<div class="complication">
-				<div class="line1">Dec</div>
-				<div class="line2">10</div>
-			</div>
-			<!--
-			<div class="complication">
-				<div class="simple">12℃</div>
-			</div>
-			-->
+			<form action="http://optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
+				<input type="text" value="" name="s" id="s"><button>Search</button>
+			</form>
 		</header>
 		<main>
 					<div class="row">
@@ -151,7 +168,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../paper/index.html" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="index.html" title="View all articles in Temporality" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #504c77">Temporality</a>, <a href="../visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="http://optional.is/required/tag/calendar/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0e7b2">calendar</a>, <a href="http://optional.is/required/tag/code/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c13367">code</a>, <a href="http://optional.is/required/tag/php/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e1bfd7">php</a>, <a href="http://optional.is/required/tag/time/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #07cc69">time</a></p>				<p style="color: #999">429 words<br/>Read Time: 2 minutes</p>
+				<p><strong>Categories:</strong> <a href="../briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../paper/index.html" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="index.html" title="View all articles in Temporality" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #504c77">Temporality</a>, <a href="../visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../tag/calendar/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0e7b2">calendar</a>, <a href="../../tag/code/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c13367">code</a>, <a href="../../tag/php/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e1bfd7">php</a>, <a href="../../tag/time/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #07cc69">time</a></p>				<p style="color: #999">429 words<br/>Read Time: 2 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3916"  >
@@ -164,7 +181,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../applications/index.html" title="View all articles in Applications" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1ddf33">Applications</a>, <a href="index.html" title="View all articles in Temporality" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #504c77">Temporality</a></p><p><strong>Tags:</strong> <a href="http://optional.is/required/tag/app/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d2a57d">app</a>, <a href="../../tag/clock/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #05531b">clock</a>, <a href="../../tag/complications/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e46029">complications</a>, <a href="../../tag/flowers/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7d37c5">flowers</a>, <a href="http://optional.is/required/tag/time/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #07cc69">time</a>, <a href="../../tag/watch/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d2974c">watch</a></p>				<p style="color: #999">751 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="../applications/index.html" title="View all articles in Applications" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1ddf33">Applications</a>, <a href="index.html" title="View all articles in Temporality" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #504c77">Temporality</a></p><p><strong>Tags:</strong> <a href="../../tag/app/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d2a57d">app</a>, <a href="../../tag/clock/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #05531b">clock</a>, <a href="../../tag/complications/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e46029">complications</a>, <a href="../../tag/flowers/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7d37c5">flowers</a>, <a href="../../tag/time/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #07cc69">time</a>, <a href="../../tag/watch/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d2974c">watch</a></p>				<p style="color: #999">751 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3785"  >
@@ -177,7 +194,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../applications/index.html" title="View all articles in Applications" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1ddf33">Applications</a>, <a href="../experiments/index.html" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a>, <a href="index.html" title="View all articles in Temporality" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #504c77">Temporality</a></p><p><strong>Tags:</strong> <a href="http://optional.is/required/tag/app/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d2a57d">app</a>, <a href="../../tag/apple/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1f3870">apple</a>, <a href="../../tag/holidays/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d016b2">holidays</a>, <a href="http://optional.is/required/tag/ios/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1bdf60">iOS</a>, <a href="http://optional.is/required/tag/iphone/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #867e57">iPhone</a>, <a href="../../tag/programming/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7e73d0">programming</a>, <a href="../../tag/red-days/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6f5a0e">red days</a>, <a href="../../tag/swift/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #818056">swift</a></p>				<p style="color: #999">908 words<br/>Read Time: 5 minutes</p>
+				<p><strong>Categories:</strong> <a href="../applications/index.html" title="View all articles in Applications" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1ddf33">Applications</a>, <a href="../experiments/index.html" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a>, <a href="index.html" title="View all articles in Temporality" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #504c77">Temporality</a></p><p><strong>Tags:</strong> <a href="../../tag/app/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d2a57d">app</a>, <a href="../../tag/apple/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1f3870">apple</a>, <a href="../../tag/holidays/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d016b2">holidays</a>, <a href="../../tag/ios/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1bdf60">iOS</a>, <a href="../../tag/iphone/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #867e57">iPhone</a>, <a href="../../tag/programming/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7e73d0">programming</a>, <a href="../../tag/red-days/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6f5a0e">red days</a>, <a href="../../tag/swift/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #818056">swift</a></p>				<p style="color: #999">908 words<br/>Read Time: 5 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3258"  >
@@ -186,11 +203,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				<time class="dt-published date published" datetime="2014-08-27T12:21:40+00:00" style="color: #aaa; font-weight: bold">Wednesday, August 27th, 02014</time>
 				<p class="p-summary entry-summary"><p>Staying organized means knowing what is ahead of you. The simplest way we&#8217;ve managed to keep-up with requests, new projects and deadlines are simple paper calendars. You can run the world on a page a day calendar.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2014/08/27/paper-calendars/" rel="bookmark" title="Permanent Link to Paper Calendars">Read more about Paper Calendars</a></p>
+				<p><a style="display: block"  class="readmore" href="../../2014/08/27/paper-calendars/index.html" rel="bookmark" title="Permanent Link to Paper Calendars">Read more about Paper Calendars</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../paper/index.html" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="index.html" title="View all articles in Temporality" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #504c77">Temporality</a>, <a href="../visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../tag/a4/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0c2f3a">A4</a>, <a href="../../tag/a5/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c6f2f9">A5</a>, <a href="../../tag/a7/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #be523b">A7</a>, <a href="../../tag/booklets/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3fa338">booklets</a>, <a href="../../tag/calendars/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5f12b7">calendars</a>, <a href="../../tag/foldable/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d08cff">foldable</a>, <a href="../../tag/paper/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="http://optional.is/required/tag/php/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e1bfd7">php</a>, <a href="../../tag/svg/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ae8eb9">svg</a></p>				<p style="color: #999">1245 words<br/>Read Time: 7 minutes</p>
+				<p><strong>Categories:</strong> <a href="../paper/index.html" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="index.html" title="View all articles in Temporality" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #504c77">Temporality</a>, <a href="../visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../tag/a4/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0c2f3a">A4</a>, <a href="../../tag/a5/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c6f2f9">A5</a>, <a href="../../tag/a7/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #be523b">A7</a>, <a href="../../tag/booklets/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3fa338">booklets</a>, <a href="../../tag/calendars/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5f12b7">calendars</a>, <a href="../../tag/foldable/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d08cff">foldable</a>, <a href="../../tag/paper/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="../../tag/php/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e1bfd7">php</a>, <a href="../../tag/svg/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ae8eb9">svg</a></p>				<p style="color: #999">1245 words<br/>Read Time: 7 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-1685"  >
@@ -539,7 +556,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				width: 384px; 
 				margin: 0 auto;
 			}
-			@media (max-width: 384px) {
+			@media (max-width: 415px) {
 				footer .logo {
 					width: 256px; 
 				}
@@ -564,7 +581,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #513</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>

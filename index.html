@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -13,71 +12,122 @@
 		<meta name="twitter:domain" content="https://optional.is"><meta name="twitter:description" content="A small company based out of Reykjavik, Iceland specializing in future thinking projects">
 		<meta name="twitter:creator" content="@optionalBot">
 		<title>(optional.is)</title>
-		<!--[if lt IE 9]>
-		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
 		<style>
-			html, body { background-color: #f7f7f7; font-family: Helvetica, Arial, sanserif}
-			html, body, div, p, h1, h2, h3, ul, ol, li, form, iframe { margin: 0 auto; padding:0; font-size: 14px; line-height: 30px;  width: 100%; text-align: center; color: #444; }
-			div, p, h1, h2, h3, li { text-align: left; }
-			p { line-height: 24px; padding-bottom: 12px;}
-			li { list-style: none;}
-			
-			h1 { clear: both; font-size: 22px; line-height: 58px; color: #222; text-transform: uppercase; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica-Light", "Helvetica Light","Helvetica Neue"; font-weight: normal; margin-bottom: 18px; border-top: 1px solid #dedede; zborder-bottom: 1px solid #dedede;  }
-			
-			h2 { border-top: 1px solid #dedede; font-size: 18px; line-height: 28px; padding: 8px 0px; color: #222; text-transform: uppercase; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica-Light", "Helvetica Light","Helvetica Neue"; font-weight: normal; }
-			.sub h2 {  border: none; line-height: 45px;  }
-			
-			
-			img { width: 100%; height: 100%;}
-			img.logos { width: auto; height: auto; vertical-align: middle; padding: 0 1em;}
-			.center { text-align: center; }
-			
-			.row { clear: both; margin: 0 auto; width: 960px;  }
-			.box1 { width: 470px; float: left; margin-right: 20px; }
-			.box2 { width: 225px; float: left; margin-right: 20px; }
-			.inverted { background-color: #d4d4d4; }
-			.inverted>* { padding: 0 .5em; width: auto; }
-			.row div:last-child { margin-right: 0; }
-			.main, .feature { width: 100%; height: 353px; margin-bottom: 10px; }
-			.sub { width: 100%; height: 146px; margin-bottom: 10px; }
-			.call-out { margin-bottom: 18px; border-top: 1px solid #dedede; border-bottom: 1px solid #dedede; }
-			.call-out a { width: 100%; display: block; font-weight: bold; }
-			.call-out a:hover,li a:hover { background-color: #dedede; }
-			a span { padding-left: 5px;}
-			
-			.thumbnail { height: 186px; margin-bottom: 20px;}
-			.thumbnail a { display: block; height: 100%; width: 100%; text-indent: -9999px; padding: 0; margin: 0; overflow: hidden; }
-			.feature.stretched { height: 393px;  }
-			.sub.stretched { height: 186px;  border-bottom: 1px solid #dedede; }
-			.main.stretched { height: 392px; border-bottom: 1px solid #dedede; }
-			a { font-weight: normal; color: #003F87; text-decoration: underline;}
-			a:active { position: relative; top:1px; }
-			
-			#categories li, #address li { width: 32%; float: left;}
-			#header { font-family: optional; font-weight: normal; font-size: 65px; line-height: 140px; }
-			
-			@media only screen and (max-width: 960px) {
-				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
-				.row { width: 470px}
-				.box2 { width: 225px; }
-				.box2+.box2 { margin-right: 0px;  }
-				.box2+.box2+.box2 {  margin-right: 20px; }
-				.box2+.box2+.box2+.box2 {  margin-right: 0px; }
+			html, body {
+				margin: 0 auto;
+				padding: 0;
+				text-align: center;
+				background-color: #f7f7f7;
+				font-family: -apple-system,"SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 			}
-			@media only screen and (max-width: 480px) {
-				.row { width: 100%; }
-				.box1 { clear: both; float: none; margin-right: 0; width: 100%; height: auto; }
-				.box2 { margin-right: 0; width: 100%; }
-				.stretched, .main, .sub, .feature { height: auto; }
-				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
-				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
-				.thumbnail a { max-height: 200px; }
-				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
-				#address li { width: auto; float: none;}
+			h1, h2, h3, ul, ol, li, form, iframe { margin: 0 auto; padding:0; }
+			main {
+				margin: 0 auto;
+				max-width: 2560px;
+
 			}
-			
+			section { 
+				margin: 0 auto;
+				text-align: center;
+			 }
+			 a {
+			 	color: #2997ff;
+				text-decoration: none;
+			 }
+			 a.pill {
+			 	border: 1px solid #fff;
+			 	background-color: #fff;
+			 	color: #000;
+			 	line-height: 60px;
+			 	padding: 10px 20px;
+			 	border-radius: 30px;
+			 	color: #000;
+				transition: all ease 0.5s ;
+			 }
+			 a.pill:hover {
+			 	background-color: transparent;
+			 	color: #fff;
+				transition: all ease 0.5s ;
+			 }
+
+
+			 
+			 
+			section { padding: 7px 0; }
+			section.feature, section.box {  display: grid;  grid-gap: 14px;  }
+			section.feature div, section.box div { background-color: #f4f4f4; }
+			section.feature { grid-template-columns: 1fr 1fr; min-height: 500px; }
+			section.feature h1 { font-weight: 600; color: #1d1d1f; font-size: 40px; margin: 0; padding: 50px 0 0px 0; }
+			section.feature p { line-height: 1.2381; font-weight: 300; letter-spacing: .016em; padding: 4px 0 20px 0; color: #1d1d1f; font-size:21px; margin:0 }
+
+			section.box { grid-template-columns: 1fr 1fr 1fr 1fr; min-height: 200px; }
+
+			section.feature div:nth-child(odd) { margin-left: 14px; }
+			section.feature div:nth-child(even) { margin-right: 14px; }
+
+			@media only screen and (max-width: 1160px) {
+				section.feature > div { margin: 0 14px; min-height: 400px;  }
+				section.feature { display: block; }
+				section.feature > div:nth-child(even) { margin-top: 14px }
+				#header { padding: 0 20px; }
+			}
+
+			 #header {
+				font-family: optional;
+				font-weight: normal;
+				font-size: 45px;
+				line-height: 100px;
+				max-width: 1024px;
+				margin: 0 auto;
+				color: #000;
+				text-align: left;
+				display: grid; 
+				grid-gap: 0; 
+				grid-template-columns: auto 300px;
+			}
+			#search { padding: 20px 0; height: 30px; vertical-align: middle; } 
+
+			@media only screen and (max-width: 520px) {
+				#header { display: block; text-align: center;}
+				#search { display: block;  width: 100%; }
+			}
+
+			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
+			form.single input:focus { border: none; outline: none; }
+
+
+
+			form.single button {
+			 	margin: 0;
+			 	padding: 0 1em;
+			 	color: #fff;
+			 	background-color: #6a6a6a;
+			 	border: none;
+			 	border-top-right-radius: 10px;
+			 	border-bottom-right-radius: 10px;
+			 	line-height: 40px;
+			 	transition: all ease 0.5s ;
+			}
+			form.single input {
+			 	border: none;
+			 	background-color: #eee;
+			 	border-top-left-radius: 10px;
+			 	border-bottom-left-radius: 10px;
+			 	line-height: 40px;
+			 	margin:0;
+			 	padding:0 1em;
+			 	box-sizing: border-box;
+			}
+			form.single button:hover {
+			 	background-color: #1b1700;
+				color: white;
+				transition: all ease 0.5s ;
+			}
+			form.single button:active {
+			 	background-color: #007f3f;
+				color: white;
+			}
+
 			@font-face {
 					  font-family: 'optional';
 					    src: url("fonts/optional.eot");
@@ -85,337 +135,228 @@
 					       url("fonts/optional.svg") format('svg'),
 					       url("fonts/optional.otf") format('opentype');
 					}
-			.branded { font-family: optional; }
-			ul li a { display: block; width:100%; }
-			ul li a span { display: block; width: auto;}
-			.section { padding-top: 50px; }
-			xstrong { background-color: #FFFACD; padding: 2px 3px;}
+
+
+			
+
 		</style>
 	</head>
 	<body>
-		<div class="row">
-			<header id="header" style="color: #000; text-align: left;">(optional.is)</header>
-			<div class="box1">
-				<h2>Available For Projects</h2>
-				<p>If you need help with small projects, starting anywhere from 10&ndash;100 hours, creating web or iOS-based software and prototypes, <a href="mailto:optional@optional.is">contact us</a>. We want to help solve problems with interesting, diverse teams.</p>
-				<p><strong>We help companies in simple, yet powerful ways</strong> to convert messy, out-dated workflows into apps that give a clear picture and visualize data.</p>
-				<p>Even if you have a small budget or are short on time, we can help to build a fully-functional prototype. This can unlock more budget, more resources and <strong>make you the office hero.</strong></p>
-				<p>Everyone thinks they have the next big idea. Don't waste time and money chasing a dud. Let us prove the viability of your idea first.</p>
-			</div>
-			<div class="box2">
-				<h2>Our Work</h2>
-				<p>Over the years we've had the good fortune to work with lots of great companies. From creating dashboards to problem solving, we help with strategy and special projects.</p>
-				<p>We bring past experience of projects ranging from boarding pass design, natural language text processing and visualizations  through to online surveys, analysis and reporting.</p>
-			</div>
-			<div class="box2">
+		<header id="header" >
+			<span>(optional.is)</span>
+
+			<form id="search" class="single" action="https://optional.is/required" >
+				<input type="text" name="s"  placeholder="Find..." /><button>Search</button>
+			</form>
+		</header>
+		<main>
+			<section id="lead">
 				<style>
-#availability_forecast {text-align: center; 
-	background: #ccc; 
-	background: linear-gradient(180deg, rgba(227,227,227,1) 0%, rgba(199,199,199,1) 100%);
-	margin: 0; padding: 0;
-	border: 1px solid rgba(255,255,255,0.8);
-	font-size: 18px;
-}
-#availability_forecast figure { 
-	margin: 0; padding: 0; 
-	border-top: 1px solid rgba(255,255,255,0.8);
-}
-#availability_forecast figure img { 
-	height: 95px;
-	padding: 7px;
-}
+					#lead { padding: 60px 0; max-width: 980px; text-align: left;}
+					#lead h1 {
+						font-size: 140px;
+						line-height: .85754;
+						font-weight: 600;
+						letter-spacing: -.008em;
+						margin: 0;
+					}
+					#lead div {
+						margin-left: 50%;
+						margin-top: 80px;
+						font-size: 24px;
+						line-height: 1.16667;
+						font-weight: 500;
+						letter-spacing: .009em;
+						font-style: normal;
+						
+					}
 
+					@media only screen and (max-width: 860px) {
+						#lead h1 { font-size: 120px; }
+						#lead div { margin-left: 30%; }
+					}
 
-#availability_forecast figcaption { 
-	text-transform: uppercase;
-	text-align: center;
-	font-weight: 600;
-	margin: 0;
-	padding: 6px;
-	font-size: 22px;
-	border-top: 1px solid rgba(255,255,255,0.8);
-	 }
-#availability_forecast .metadata { 
-	margin: 0 auto;
-	display: table;
-	width: 160px;
-}
-#availability_forecast .metadata .time {
-	border-left: 1px solid rgba(255,255,255,0.8);
-	width: 40px;
-	height: 40px;
-}
-#availability_forecast .metadata .time, #availability_forecast .metadata .availability, #availability_forecast .metadata .projects { 
-	border-right: 1px solid rgba(255,255,255,0.8);
-	display: table-cell;
-	padding: 0;
-	vertical-align: middle;
-}
-#availability_forecast .metadata .time .year {
-	font-size: 11px;
-	text-align: center;
-	line-height: 12px;
-}
-#availability_forecast .metadata .time .quarter {
-	font-size: 20px; font-weight: 600;
-	text-align: center;
-	line-height: 22px;
-}
+					@media only screen and (max-width: 600px) {
+						#lead h1 { font-size: 60px; padding: 0 15px; }
+						#lead div { margin-left: 0%; margin-top: 20px; font-size: 18px; padding: 0 15px;}
+					}
 
-#availability_forecast .metadata .projects {
- 	background: repeating-linear-gradient(-45deg, transparent, 
-		transparent 28px, 
-		rgba(255,255,255,0.8) 28px, 
-		rgba(255,255,255,0.8) 29px);
-	width: 40px;
-	height: 40px;
-}
+				</style>
+				<h1>Prototypes to Products.</h1>
+				<div>We work with teams to realize their ideas. From workshops to prototypes to products, we're there to help. With over 10 years experience working with small to enterprise companies, we have a unique perspective on what's possible.</div>
+			</section>
 
-#availability_forecast .metadata .availability  {
-	padding: 0 10px;
-	font-size: 18px;
-	width: 60px;
-	line-height: 22px;
-}
- #availability_forecast .metadata .availability div {
-	font-size: 14px;
-	text-align: left;
-	line-height: 14px;
-}
-#availability_forecast .metadata .projects .in {
-	margin-left: -8px;
-	line-height: 20px;
-	text-align: center;
-	font-size: 18px;
-}
-#availability_forecast .metadata .projects .out {
-	margin-left: 9px;
-	line-height: 20px;
-	margin-top: -4px;
-	text-align: center;
-	font-size: 18px;
-}
-
-</style>
-<div id="availability_forecast">
-	<div class="metadata">
-		<div class="time">
-			<div class="year">2020</div>
-			<div class="quarter">Q4</div>
-		</div>
-		<div class="availability">
-			<div style="width: 1em; padding-top: 2px;font-size: 8px; float: left; line-height: 7px; padding-right: 5px">■<br/>■<br/>■<br/>■<br/>■<br/></div>
-			90%
-			<div>±10</div>
-		</div>
-		<div class="projects">
-			<div class="in" title="1 projects starting">1</div>
-			<div class="out"  title="0 projects finishing">0</div>
-		</div>
-	</div>
-	<figure>
-	<img src="images/af_icons/chaotic.svg" />
-	<figcaption>chaotic</figcaption>
-	</figure>
-</div>
-
-<p>Our workload is <strong>chaotic</strong>. We are ~10% availabile in Q4 for interesting projects.</p>
-<p><strong>If we can help, <a href="mailto:optional@optional.is">get in contact</a> and we'll chat.</strong></p>
-			</div>
-		</div>
-
-				<div class="row section">
-			<h1>Material: A Conference exploring the concept of the Web as a material</h1>
-			<div class="box2">
-				<div class="feature">
-										<iframe width="100%" src="https://www.youtube.com/embed/UW_NHpV71oI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					<p><strong>119 attendees, 18 sessions, and 481 minutes</strong> of amazing, insightful, thought provoking videos from Wool, Chocolate, Meditation, Photography, Art History and Psycology, the event runs through many disciplines.</p>
+			<!--
+			<section id="capabilities">
+				<style>
+					#capabilities div { background: linear-gradient(180deg, rgba(2,0,27,1) 0%, rgba(48,51,91,1) 100%); height: 400px; }
+					#capabilities div h1 { font-size: 64px;
+						line-height: 1.8;
+						font-weight: 600;
+						letter-spacing: -.008em;
+						margin: 0; color: #fff; }
+				</style>
+				<div>
+					<h1 style="">Capabilities</h1>
 				</div>
-				<div class="call-out"><a href="https://material.is/archive/"><span>Browse the video archive</span></a></div>
-			</div>
-			<div class="box2">
-				<div class="feature">
+			</section>
+			-->
 
-					<p>20+ years of the Web and we are still at the very beginning of understanding and implementing digitization.</p>
-					<!--
-					<p>For the first time we are facing a generation that never got to know the offline world. By nature they are riding the wave without ever having touched the ground.</p>
-				-->
-					<p>We might have unlearned our ancestors' knowledge about materials and crafts, it's easy to overlook the intrinsic characteristics of the Web in favour of the newest framework or boilerplate.</p>
+			<section class="feature">
+				<!-- Writting -->
+				<div id="articles">
+					<style>
+						#articles h1 { color: rgba(255,255,255,0.9); padding-top: 80px; font-size: 80px;}
+						#articles p { color: rgba(255,255,255,0.9); font-size: 30px; }
+						#articles { 
+							background-image: linear-gradient(60deg, #fb7185, #d946ef, #6366f1);
+						  }
+						  #articles  {
+							  animation: gradients 20s ease forwards;
+							  animation-iteration-count: infinite;
+							  background-size: 200% 200%;
+							  background-repeat: no-repeat;
+							}
 
-					<div style="text-align: center" >
-						<img src="https://material.is/2020/img/m-logo-calcium.svg" style="height: 70px; width: 70px;" alt="Material Conference Logo" />
+							@keyframes gradients {
+							  0%{background-position:0% 86%}
+							  50%{background-position:100% 15%}
+							  100%{background-position:0% 86%}
+							}
+					</style>
+					<h1>Articles</h1>
+					<p>Write. Rinse. Repeat.</p>
+					<p style="font-size: 21px;"><a class="pill" href="required/index.html">Read More</a></p>
+				</div>
+				<!-- Designing with Data -->
+				<div id="dwd">
+					<style>
+						.feature #dwd { 
+							background: url('images/data-hero.png') 50% 100% no-repeat, linear-gradient(180deg, rgba(255,126,57,1) 0%, rgba(255,162,0,1) 100%);
+							min-height: 500px;}
+						#dwd a.pill { color: rgb(240, 144, 69); }
+						#dwd a.pill:hover { color: #fff; }
+						#dwd h1 { color: #fff }
+						#dwd h1+p { color: rgba(255,255,255, 0.8) }
+					</style>
+					<h1>Designing With Data</h1>
+					<p>An eBook about data visualizations</p>
+					<p style="padding-bottom: 290px"><a class="pill"  href="http://designingwithdata.com">Read it online</a></p>
+				</div>
+			</section>
+
+			
+			<section class="feature">
+				<!-- iOS Apps -->
+				<div>
+					<style>
+						.app-icon {
+							border-radius: 20px; 
+							border: 1px solid #ccc; 
+							padding: 0; 
+							margin: 0.5em .75em;
+							height: 110px;
+							width: 110px; 
+							vertical-align: middle;
+							box-shadow: 0px 0px 20px rgba(0, 0, 0, .4)
+						}
+					</style>
+					<h1>iOS Apps</h1>
+					<p style="padding-bottom: 30px">Little utilities to save you big</p>
+					<a href="https://itunes.apple.com/us/app/dashbones/id1071726287?ls=1&amp;mt=8">
+						<img class="app-icon" src="https://is4-ssl.mzstatic.com/image/thumb/Purple124/v4/6f/9e/58/6f9e5846-2fb2-40a9-45cd-4ed4e06f1562/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/340x340bb-80.png" alt="Download Dashbones on the App Store" />
+					</a>
+					<a href="https://apps.apple.com/us/app/newsletters/id1455564424?ls=1&amp;mt=8">
+						<img class="app-icon" src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/e7/fc/aa/e7fcaaa9-e4b4-43c9-70ff-9155d89ba893/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/150x150bb-80.png" alt="Download Newsletters on the App Store">
+					</a>
+					<a href="https://itunes.apple.com/us/app/triagemail/id1124659536?ls=1&amp;mt=8">
+						<img class="app-icon" src="https://is2-ssl.mzstatic.com/image/thumb/Purple123/v4/dc/69/9f/dc699f0a-a9ae-4119-cc5e-bd09668492f1/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/246x0w.jpg" alt="Download Triagemail on the App Store">
+					</a>
+					<a href="https://itunes.apple.com/us/app/text-stats/id1373463793?ls=1&amp;mt=8">
+						<img class="app-icon" src="https://is5-ssl.mzstatic.com/image/thumb/Purple124/v4/f4/f8/ee/f4f8ee2f-5e9f-75c0-ca7d-021091d83997/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/340x340bb-80.png" alt="Download Text Stats on the App Store">
+					</a>
+				</div>
+
+				<!-- Newsletter -->
+				<div>
+					<h1>Our Quarterly Newsletter</h1>
+					<p>Something for every season</p>
+					<div style="text-align: center; margin-bottom: 30px">
+						<svg height="150" width="150" viewBox="0 0 26.725 26.726">
+							<g display="inline">
+								<defs>
+									<path id="mSVGID_5_" d="M13.363,25.741c-6.837,0-12.379-5.542-12.379-12.378c0-6.837,5.542-12.379,12.379-12.379
+										c6.836,0,12.378,5.542,12.378,12.379C25.741,20.199,20.199,25.741,13.363,25.741z M10.584,23.413
+										c0.589,0.165,1.198,0.28,1.823,0.341V2.972c-0.625,0.061-1.234,0.176-1.823,0.341V23.413z M16.254,3.312
+										c-0.589-0.165-1.197-0.28-1.823-0.341v20.782c0.626-0.061,1.234-0.176,1.823-0.341V3.312z M22.234,7.769v11.188
+										c1.029-1.616,1.624-3.535,1.624-5.593C23.858,11.305,23.264,9.386,22.234,7.769z M20.211,5.435
+										c-0.591-0.507-1.239-0.948-1.935-1.314v18.485c0.695-0.366,1.344-0.808,1.935-1.314V5.435z M4.604,18.956V7.769
+										c-1.028,1.617-1.624,3.536-1.624,5.595C2.979,15.421,3.575,17.34,4.604,18.956z M6.627,21.291
+										c0.591,0.507,1.24,0.948,1.935,1.314V4.12C7.867,4.486,7.218,4.928,6.627,5.435V21.291z"></path>
+								</defs>
+								<use xlink:href="#mSVGID_5_" overflow="visible" fill-rule="evenodd" clip-rule="evenodd"></use>
+								<clipPath id="mSVGID_6_">
+									<use xlink:href="#mSVGID_5_" overflow="visible"></use>
+								</clipPath>
+								<g clip-path="url(#mSVGID_6_)">
+									<defs>
+										<rect id="mSVGID_7_" x="-0.87" y="-1.039" width="28.775" height="28.775"></rect>
+									</defs>
+									<use xlink:href="#mSVGID_7_" overflow="visible"></use>
+									<clipPath id="mSVGID_8_">
+										<use xlink:href="#mSVGID_7_" overflow="visible"></use>
+									</clipPath>
+									<rect x="0.844" y="0.844" opacity="0.96" clip-path="url(#mSVGID_8_)" width="25.038" height="25.038"></rect>
+								</g>
+							</g>
+						</svg>
 					</div>
 
-				</div>
-				<div class="call-out"><a href="https://optional.is/required/category/material/"><span>Read Material Synopses</span></a></div>
-			</div>
+					<form id="newsletter" class="single" style="max-width: 400px; text-align: center; margin: 0 auto; padding-bottom: 20px">
+						<input type="text" name="email"  placeholder="email address" /><button>Subscribe</button>
+					</form>
 
-			<div class="box1">
-				<div class="feature stretched" style="outline: 1px solid #ccc; background: #fff url('images/material-conference-aalto-bistro.jpg') 50% 50% no-repeat;">
-				</div>
-			</div>
-		</div>		<!-- Case Studies -->
-		<div class="row section">
-			<h1>Case Studies</h1>
-			<div class="box2">
-				<div class="thumbnail" style="background: #fff url('images/pwc-dashboard.jpg') 50% 0% no-repeat; min-height: 180px"><a href="http://pwc.com">PwC</a></div>
-				<div class="sub">
-					
-					<p>We worked with <strong>PwC</strong> for close to a year to build-up their internal data vizualization team and create beautiful, mobile friendly, internal dashboards.</p>
-				</div>
-			</div>
-			<div class="box2">
-				<div class="thumbnail" style="background: transparent url('images/uefa-logo.jpg') 50% 50% no-repeat; min-height: 180px"><a href="http://calendars.uefa.com/en/">UEFA Calendar</a></div>
-				<div class="sub">
-					
-					<p>For <strong>UEFA</strong>, we created a fully-customizable online calendar tool to follow teams, leagues and events so you'd never miss a game.</p>
-				</div>
-			</div>
-			<div class="box2">
-				<div class="thumbnail" style="background: #fff url('images/fundingcircle.jpg') 50% 20% no-repeat; min-height: 180px"><a href="http://fundingcircle.com">Funding Circle</a></div>
-				<div class="sub">
-					<p>At <strong>Funding Circle</strong> we built a micro-site for each of the 600 constituencies in the run-up an election. Each site showcased Funding Circle's impact.</p>
-				</div>
-			</div>
-			<div class="box2">
-				<div class="thumbnail" style="background: transparent url('images/testflight-plane.png') 50% 50% no-repeat; min-height: 120px"><a href="https://testflight.apple.com">TestFlight</a></div>
-				<div class="sub" >
-					
-					<p>Working with the team at Burstly, we prototyped several iterations of their popular <strong>TestFlight</strong> tool and unreleased <strong>FlightPath</strong> service before they were acquired by Apple.</p>
-				</div>
-			</div>
-		</div>
-		<div class="row section">
-		<h1>Writing</h1>
-			<div class="box1">
-				<div class="feature stretched" style="outline: 1px solid #ccc; background: #fff url('images/blueberry-iceland.jpg') 50% 30px no-repeat;">
-				</div>
-			</div>
-			<div class="box2">
-				<div class="main">
-					<h2>Week #510</h2><p>A busy week, we're almost back on track.</p>
-			<form method="get" id="searchform" action="required/index.html" style="text-align: center; margin-top: 50px">
-							<div><input type="text" value="" name="s" id="s"><input type="submit" id="searchsubmit" value="Search"></div>
-			</form></div><div class="call-out"><a href="required/2020/11/20/week-510/index.html">
-					
-
-<span>Read More</span></a></div>					
-			</div>
-			
-			<div class="box2" >
-				<!--
-				<div class="thumbnail" style="min-height: 100px; background: transparent url('//optional.is/images/mailing-list-logo.png') 50% 50%"><a href="//optional.is/newsletter/"><span>Join the Mailing List</span></a></div>
-				-->
-				
-				<div class="feature">
-					<div style="text-align: center">
-					<svg height="180" width="180" viewBox="0 0 26.725 26.726">
-					<g display="inline">
-						<defs>
-							<path id="mSVGID_5_" d="M13.363,25.741c-6.837,0-12.379-5.542-12.379-12.378c0-6.837,5.542-12.379,12.379-12.379
-								c6.836,0,12.378,5.542,12.378,12.379C25.741,20.199,20.199,25.741,13.363,25.741z M10.584,23.413
-								c0.589,0.165,1.198,0.28,1.823,0.341V2.972c-0.625,0.061-1.234,0.176-1.823,0.341V23.413z M16.254,3.312
-								c-0.589-0.165-1.197-0.28-1.823-0.341v20.782c0.626-0.061,1.234-0.176,1.823-0.341V3.312z M22.234,7.769v11.188
-								c1.029-1.616,1.624-3.535,1.624-5.593C23.858,11.305,23.264,9.386,22.234,7.769z M20.211,5.435
-								c-0.591-0.507-1.239-0.948-1.935-1.314v18.485c0.695-0.366,1.344-0.808,1.935-1.314V5.435z M4.604,18.956V7.769
-								c-1.028,1.617-1.624,3.536-1.624,5.595C2.979,15.421,3.575,17.34,4.604,18.956z M6.627,21.291
-								c0.591,0.507,1.24,0.948,1.935,1.314V4.12C7.867,4.486,7.218,4.928,6.627,5.435V21.291z"/>
-						</defs>
-						<use xlink:href="#mSVGID_5_"  overflow="visible" fill-rule="evenodd" 				clip-rule="evenodd"/>
-						<clipPath id="mSVGID_6_">
-							<use xlink:href="#mSVGID_5_"  overflow="visible"/>
-						</clipPath>
-						<g clip-path="url(#mSVGID_6_)">
-							<defs>
-								<rect id="mSVGID_7_" x="-0.87" y="-1.039" width="28.775" height=				"28.775"/>
-							</defs>
-							<use xlink:href="#mSVGID_7_"  overflow="visible"/>
-							<clipPath id="mSVGID_8_">
-								<use xlink:href="#mSVGID_7_"  overflow="visible"/>
-							</clipPath>
-							<rect x="0.844" y="0.844" opacity="0.96" clip-path="url(#mSVGID_8_)"				 width="25.038" height="25.038"/>
-						</g>
-					</g>
-				</svg></div>
-					<p><strong>Sign-up for our quarterly newsletter.</strong> It is a low-volume, informative and fun email with nuggets of great ideas.</p>
-					
-					<p><a href="newsletter/archive/index.html">Checkout the Archive</a> to see what you're missing.</p>
-				</div>
-				<div class="call-out"><form action="https://optional.us2.list-manage.com/subscribe/post?u=980d7e7c822ddb46c6693388d&amp;id=4b11c60bdb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="height: 30px">
-				<input type="email" placeholder="Email Address" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="width: 130px"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-				</form>
-				</div>
-			</div>
-		</div>
-		
-		<div class="row">
-
-			<div class="box2">
-				<div class="main">
-					<h2>Recent Articles</h2>
-					<ul>
-						<li><a href="required/2020/11/02/paying-for-contrast/index.html"><span style="border-left: 10px solid #17f94f;">Paying for Contrast</span></a></li><li><a href="required/2020/10/26/text-stats-app/index.html"><span style="border-left: 10px solid #810aa3;">Text Stats App</span></a></li><li><a href="required/2020/10/05/annual-calendar-posters/index.html"><span style="border-left: 10px solid #943317;">Annual Calendar Posters</span></a></li><li><a href="required/2020/09/28/name-your-price/index.html"><span style="border-left: 10px solid #a5a148;">Name Your Price</span></a></li><li><a href="required/2020/05/19/ninja-edc-shinobi-rokugu/index.html"><span style="border-left: 10px solid #f4239d;">Ninja EDC: Shinobi Rokugu</span></a></li>						</ul>
+					<p><a href="newsletter/archive/index.html">Past Newsletters</a></p>
 
 				</div>
-				<div class="call-out readmore"><a href="required/index.html"><span>Full Archives</span></a></div>
-			</div>
+			</section>
 
-			<div class="box2">
-				<div class="main">
-					<h2>Weeknotes</h2>
-					<p>The company is <strong>513 weeks old</strong>. We try to have a small weekly update of what we're up too. Here are the most recent:</p>
-					<ul style="clear: both;" id="weeknotes">
-						<li><a href="required/2020/11/20/week-510/index.html"><span style="border-left: 10px solid #03c1ef;">Week #510</span></a></li><li><a href="required/2020/11/13/week-508-509/index.html"><span style="border-left: 10px solid #e28797;">Week #508 & #509</span></a></li><li><a href="required/2020/10/30/week-505-506-507/index.html"><span style="border-left: 10px solid #fcab40;">Week #505, 506, 507</span></a></li><li><a href="required/2020/10/09/week-504/index.html"><span style="border-left: 10px solid #5a1ae2;">Week #504</span></a></li><li><a href="required/2020/10/02/week-503/index.html"><span style="border-left: 10px solid #3dec8b;">Week #503</span></a></li>						</ul>
+
+			<section id="material">
+				<style>
+					#material { background-color: #111; max-width: 100%; margin: 0 auto; }
+					#material div { max-width: 980px; margin: 0 auto; padding: 120px 0; text-align: center; color: white; }
+					#material div h1 { 
+						font-size: 64px;
+						line-height: 1;
+						font-weight: 600;
+						letter-spacing: -.008em;
+						margin: 0; 
+						padding: 20px 0;
+					}
+					#material div p { color: rgba(255,255,255,0.7); font-size: 20px; margin: 0; padding: 0 0 0.75em 0; }
+
+				</style>
+				<div>
+					<img src="https://material.is/2020/img/m-logo-white.svg" style="height: 100px; width: 100px;" alt="Material Conference Logo">
+
+					<h1>Material Conference</h1>
+					<p>Exploring the concept of the Web as a Material.</p>
+					<!--
+					<p>119 attendees, 18 sessions, and 481 minutes of amazing, insightful, thought provoking videos from Wool, Chocolate, Meditation, Photography, Art History and Psycology, the event runs through many disciplines.</p>
+					<p>Browse the video archive</p>
+					<p>20+ years of the Web and we are still at the very beginning of understanding and implementing digitization.</p>
+					<p>We might have unlearned our ancestors' knowledge about materials and crafts, it's easy to overlook the intrinsic characteristics of the Web in favour of the newest framework or boilerplate.</p>
+					-->
+					<p><a class="pill" href="https://material.is">Learn More</a></p>
+
 				</div>
-				<div class="call-out readmore"><a href="https://optional.is/required/category/weeknotes/"><span>View all weeknotes</span></a></div>
-			</div>
+			</section>
 
+		</main>
 
-
-			<div class="box1" >
-				<div class="">
-					<h2>Categories</h2>
-					<ul style="clear: both;" id="categories">
-						
-						                <li><a 
-						href="https://optional.is/required/category/applications/"><span style="border-left: 10px solid #1ddf33;">Applications</span></a></li><li><a 
-						href="https://optional.is/required/category/briefs/"><span style="border-left: 10px solid #aa8c5b;">Briefs</span></a></li><li><a 
-						href="https://optional.is/required/category/cartography/"><span style="border-left: 10px solid #992978;">Cartography</span></a></li><li><a 
-						href="https://optional.is/required/category/case-studies/"><span style="border-left: 10px solid #a0d2b6;">Case Studies</span></a></li><li><a 
-						href="https://optional.is/required/category/chromatics/"><span style="border-left: 10px solid #1e7940;">Chromatics</span></a></li><li><a 
-						href="https://optional.is/required/category/community/"><span style="border-left: 10px solid #7d6198;">Community</span></a></li><li><a 
-						href="https://optional.is/required/category/conferences/"><span style="border-left: 10px solid #d70b59;">Conferences</span></a></li><li><a 
-						href="https://optional.is/required/category/education/"><span style="border-left: 10px solid #de7a22;">Education</span></a></li><li><a 
-						href="https://optional.is/required/category/experiments/"><span style="border-left: 10px solid #482926;">Experiments</span></a></li><li><a 
-						href="https://optional.is/required/category/forecast/"><span style="border-left: 10px solid #89c126;">Forecast</span></a></li><li><a 
-						href="https://optional.is/required/category/interfaces/"><span style="border-left: 10px solid #756640;">Interfaces</span></a></li><li><a 
-						href="https://optional.is/required/category/material/"><span style="border-left: 10px solid #d92a83;">Material</span></a></li><li><a 
-						href="https://optional.is/required/category/meta/"><span style="border-left: 10px solid #b6755d;">Meta</span></a></li><li><a 
-						href="https://optional.is/required/category/paper/"><span style="border-left: 10px solid #d0a662;">Paper</span></a></li><li><a 
-						href="https://optional.is/required/category/place/"><span style="border-left: 10px solid #7b9cf0;">Place</span></a></li><li><a 
-						href="https://optional.is/required/category/privacy/"><span style="border-left: 10px solid #c5f29b;">Privacy</span></a></li><li><a 
-						href="https://optional.is/required/category/sports/"><span style="border-left: 10px solid #918e18;">Sports</span></a></li><li><a 
-						href="https://optional.is/required/category/storytelling/"><span style="border-left: 10px solid #d4ccb5;">Storytelling</span></a></li><li><a 
-						href="https://optional.is/required/category/t-shirts/"><span style="border-left: 10px solid #bafe5c;">T-Shirts</span></a></li><li><a 
-						href="https://optional.is/required/category/temporality/"><span style="border-left: 10px solid #504c77;">Temporality</span></a></li><li><a 
-						href="https://optional.is/required/category/travel/"><span style="border-left: 10px solid #1fb0f9;">Travel</span></a></li><li><a 
-						href="https://optional.is/required/category/tutorial/"><span style="border-left: 10px solid #368fe7;">Tutorial</span></a></li><li><a 
-						href="https://optional.is/required/category/visualizations/"><span style="border-left: 10px solid #b10ac6;">Visualizations</span></a></li><li><a 
-						href="https://optional.is/required/category/weeknotes/"><span style="border-left: 10px solid #138567;">Weeknotes</span></a></li><li><a 
-						href="https://optional.is/required/category/youre-doing-it-wrong/"><span style="border-left: 10px solid #96e20d;">You're doing it wrong</span></a></li>						
-						</ul>
-				</div>
-			</div>
-		</div>
-		
-		
-		
-
-
-		
-		
-
-			<svg class="svgs" version="1.1" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- footer -->
+		<svg class="svgs" version="1.1" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<symbol id="icon_arrowR" viewBox="0 0 33.453 19.57">
 		<path stroke="currentColor" stroke-width="2" stroke-miterlimit="10" d="M22.451 18.845l9.549-9.059-9.549-9.061" fill="none"/>
 		<path stroke="currentColor" stroke-width="2" stroke-miterlimit="10" fill="none" d="M0 9.784h32"/>
@@ -737,7 +678,7 @@
 				width: 384px; 
 				margin: 0 auto;
 			}
-			@media (max-width: 384px) {
+			@media (max-width: 415px) {
 				footer .logo {
 					width: 256px; 
 				}
@@ -762,7 +703,7 @@
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #513</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -814,20 +755,5 @@
 			<div class="logo"><svg width="100%" ><use xlink:href="#optional-logo"/></svg></div>
 			<div style="font-size: 12px">LAUFÁSVEGUR 26, 101 REYKJAVÍK, ICELAND</div>
 			<div style="font-size: 12px">copyright 2019</div>
-		</footer>		
-		
-		
-		<script type="text/javascript">
-		var gaJsHost = (("https:" == document.location.protocol) ? 
-		"https://ssl." : "http://www.");
-		document.write(unescape("%3Cscript src='" + gaJsHost + 
-		"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-		</script>
-		<script type="text/javascript">
-		try {
-		var pageTracker = _gat._getTracker("UA-2497164-9");
-		pageTracker._trackPageview();
-		} catch(err) {}</script>
-
-	</body>
+		</footer>	</body>
 </html>

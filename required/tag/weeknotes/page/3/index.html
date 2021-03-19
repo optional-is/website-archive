@@ -99,30 +99,47 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 	<body>
 				<style>
 			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 28px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
+			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			.complication { width: 30px; height: 30px; border-radius: 5px; border: 1px solid #f0f0f0; padding: 0; margin: 1em 0.25em; float: right; text-align: center; background-color: #fafafa; }
-			.complication .line1 { font-size: 8px; line-height: 13px; text-align: center; text-transform: uppercase;  color: #999;}
-			.complication .line2 { font-size: 14px; line-height: 14px; text-align: center; color: #aaa; }
-			.complication .line2.small { font-size: 11px; line-height: 15px; text-align: center; }
-			.complication .simple { text-align: center; font-size: 12px; line-height: 30px; }
+			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
+			form.single input:focus { border: none; outline: none; }
+
+			form.single button {
+			 	margin: 0;
+			 	padding: 0 1em;
+			 	color: #333;
+			 	background-color: #ffe24d;
+			 	border: none;
+			 	border-top-right-radius: 10px;
+			 	border-bottom-right-radius: 10px;
+			 	line-height: 40px;
+			}
+			form.single input {
+			 	border: none;
+			 	background-color: #eee;
+			 	border-top-left-radius: 10px;
+			 	border-bottom-left-radius: 10px;
+			 	line-height: 40px;
+			 	margin:0;
+			 	padding:0 1em;
+			 	box-sizing: border-box;
+			}
+			form.single button:hover {
+			 	background-color: #1b1700;
+				color: white;
+			}
+			form.single button:active {
+			 	background-color: #007f3f;
+				color: white;
+			}
+
 		</style>
 		<header>
 			<a href="../../../../../index.html" id="header">(optional.is)</a>
 
-			<div class="complication">
-				<div class="line1">RVK</div>
-				<div class="line2 small">14:37</div>
-			</div>
-			<div class="complication">
-				<div class="line1">Dec</div>
-				<div class="line2">10</div>
-			</div>
-			<!--
-			<div class="complication">
-				<div class="simple">12℃</div>
-			</div>
-			-->
+			<form action="../../../../index.html" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
+				<input type="text" value="" name="s" id="s"><button>Search</button>
+			</form>
 		</header>
 		<main>
 					<div class="row">
@@ -146,7 +163,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				<time class="dt-published date published" datetime="2013-10-18T13:31:11+00:00" style="color: #aaa; font-weight: bold">Friday, October 18th, 02013</time>
 				<p class="p-summary entry-summary"><p>We had a bit of fun this week testing out some new hardware ideas. While it gets darker and darker each day, the norther lights have come out to impress!</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2013/10/18/week-140/" rel="bookmark" title="Permanent Link to Week #140">Read more about Week #140</a></p>
+				<p><a style="display: block"  class="readmore" href="../../../../2013/10/18/week-140/index.html" rel="bookmark" title="Permanent Link to Week #140">Read more about Week #140</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
@@ -176,7 +193,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../../../asteroids/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d02ebb">asteroids</a>, <a href="https://optional.is/required/tag/cern/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c7b3f7">cern</a>, <a href="https://optional.is/required/tag/dabba/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cd5245">dabba</a>, <a href="https://optional.is/required/tag/delivery/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #710853">delivery</a>, <a href="https://optional.is/required/tag/education-2/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0bb80">education</a>, <a href="https://optional.is/required/tag/film-fest/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f1f082">film fest</a>, <a href="https://optional.is/required/tag/lhcb/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #70aef6">LHCb</a>, <a href="https://optional.is/required/tag/school/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7516c3">school</a>, <a href="https://optional.is/required/tag/switzerland/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0d9c57">switzerland</a>, <a href="https://optional.is/required/tag/weeknotes/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p>				<p style="color: #999">575 words<br/>Read Time: 3 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/asteroids/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d02ebb">asteroids</a>, <a href="https://optional.is/required/tag/cern/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c7b3f7">cern</a>, <a href="https://optional.is/required/tag/dabba/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cd5245">dabba</a>, <a href="https://optional.is/required/tag/delivery/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #710853">delivery</a>, <a href="https://optional.is/required/tag/education-2/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0bb80">education</a>, <a href="https://optional.is/required/tag/film-fest/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f1f082">film fest</a>, <a href="https://optional.is/required/tag/lhcb/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #70aef6">LHCb</a>, <a href="https://optional.is/required/tag/school/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7516c3">school</a>, <a href="https://optional.is/required/tag/switzerland/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0d9c57">switzerland</a>, <a href="https://optional.is/required/tag/weeknotes/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p>				<p style="color: #999">575 words<br/>Read Time: 3 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2673"  >
@@ -185,7 +202,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				<time class="dt-published date published" datetime="2013-09-13T13:31:03+00:00" style="color: #aaa; font-weight: bold">Friday, September 13th, 02013</time>
 				<p class="p-summary entry-summary"><p>Thanks to an incredible conference and travel, we missed week 134, so this is a double weeknote to get back on track.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2013/09/13/weeks-134-135/" rel="bookmark" title="Permanent Link to Weeks #134-135">Read more about Weeks #134-135</a></p>
+				<p><a style="display: block"  class="readmore" href="../../../../2013/09/13/weeks-134-135/index.html" rel="bookmark" title="Permanent Link to Weeks #134-135">Read more about Weeks #134-135</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
@@ -199,7 +216,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				<p class="p-summary entry-summary"><p>Week 133: A not very exciting number, but a strange an exciting week. It has been crammed with meetings, prospective projects, deadlines and code deploys.</p>
 <p>With odd discussions of Charles Darwin&#8217;s bizarre eating habits and Napoleon Bonaparte fan clubs, we can safely say 133 wasn&#8217;t a normal week.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2013/08/30/week-133/" rel="bookmark" title="Permanent Link to Week #133">Read more about Week #133</a></p>
+				<p><a style="display: block"  class="readmore" href="../../../../2013/08/30/week-133/index.html" rel="bookmark" title="Permanent Link to Week #133">Read more about Week #133</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
@@ -539,7 +556,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				width: 384px; 
 				margin: 0 auto;
 			}
-			@media (max-width: 384px) {
+			@media (max-width: 415px) {
 				footer .logo {
 					width: 256px; 
 				}
@@ -564,7 +581,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #513</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>

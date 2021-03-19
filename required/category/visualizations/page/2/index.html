@@ -99,30 +99,47 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 	<body>
 				<style>
 			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 28px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
+			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			.complication { width: 30px; height: 30px; border-radius: 5px; border: 1px solid #f0f0f0; padding: 0; margin: 1em 0.25em; float: right; text-align: center; background-color: #fafafa; }
-			.complication .line1 { font-size: 8px; line-height: 13px; text-align: center; text-transform: uppercase;  color: #999;}
-			.complication .line2 { font-size: 14px; line-height: 14px; text-align: center; color: #aaa; }
-			.complication .line2.small { font-size: 11px; line-height: 15px; text-align: center; }
-			.complication .simple { text-align: center; font-size: 12px; line-height: 30px; }
+			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
+			form.single input:focus { border: none; outline: none; }
+
+			form.single button {
+			 	margin: 0;
+			 	padding: 0 1em;
+			 	color: #333;
+			 	background-color: #ffe24d;
+			 	border: none;
+			 	border-top-right-radius: 10px;
+			 	border-bottom-right-radius: 10px;
+			 	line-height: 40px;
+			}
+			form.single input {
+			 	border: none;
+			 	background-color: #eee;
+			 	border-top-left-radius: 10px;
+			 	border-bottom-left-radius: 10px;
+			 	line-height: 40px;
+			 	margin:0;
+			 	padding:0 1em;
+			 	box-sizing: border-box;
+			}
+			form.single button:hover {
+			 	background-color: #1b1700;
+				color: white;
+			}
+			form.single button:active {
+			 	background-color: #007f3f;
+				color: white;
+			}
+
 		</style>
 		<header>
 			<a href="../../../../../index.html" id="header">(optional.is)</a>
 
-			<div class="complication">
-				<div class="line1">RVK</div>
-				<div class="line2 small">14:21</div>
-			</div>
-			<div class="complication">
-				<div class="line1">Dec</div>
-				<div class="line2">10</div>
-			</div>
-			<!--
-			<div class="complication">
-				<div class="simple">12℃</div>
-			</div>
-			-->
+			<form action="../../../../index.html" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
+				<input type="text" value="" name="s" id="s"><button>Search</button>
+			</form>
 		</header>
 		<main>
 					<div class="row">
@@ -147,11 +164,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				<time class="dt-published date published" datetime="2013-12-17T13:31:34+00:00" style="color: #aaa; font-weight: bold">Tuesday, December 17th, 02013</time>
 				<p class="p-summary entry-summary"><p>Alternative symbols for colors is a very interesting idea. Offering a non-color based solution for conveying information is always interesting. There are plenty of solutions including thickness, styles or even shape. That&#8217;s exactly what colorAdd does, offer shaped alternatives.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2013/12/17/color-symbols/" rel="bookmark" title="Permanent Link to Color Symbols">Read more about Color Symbols</a></p>
+				<p><a style="display: block"  class="readmore" href="../../../../2013/12/17/color-symbols/index.html" rel="bookmark" title="Permanent Link to Color Symbols">Read more about Color Symbols</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/chromatics/" title="View all articles in Chromatics" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1e7940">Chromatics</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/color/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #70dda5">color</a>, <a href="https://optional.is/required/tag/coloradd/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4f117b">coloradd</a>, <a href="https://optional.is/required/tag/icons/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bd2119">icons</a>, <a href="https://optional.is/required/tag/pencils/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6ec285">pencils</a>, <a href="https://optional.is/required/tag/portugal/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ae0eea">portugal</a>, <a href="https://optional.is/required/tag/symbols/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #550357">symbols</a></p>				<p style="color: #999">499 words<br/>Read Time: 3 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/chromatics/" title="View all articles in Chromatics" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1e7940">Chromatics</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/color/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #70dda5">color</a>, <a href="../../../../tag/coloradd/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4f117b">coloradd</a>, <a href="../../../../tag/icons/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bd2119">icons</a>, <a href="https://optional.is/required/tag/pencils/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6ec285">pencils</a>, <a href="https://optional.is/required/tag/portugal/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ae0eea">portugal</a>, <a href="https://optional.is/required/tag/symbols/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #550357">symbols</a></p>				<p style="color: #999">499 words<br/>Read Time: 3 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2832"  >
@@ -160,11 +177,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				<time class="dt-published date published" datetime="2013-11-05T12:21:39+00:00" style="color: #aaa; font-weight: bold">Tuesday, November 5th, 02013</time>
 				<p class="p-summary entry-summary"><p>Metrics are the life-blood of a company. From finances to quality control, you need to have an understanding of what is happening. Dashboards are one way to help surface some of these metrics in a way that is easily understandable and actionable.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2013/11/05/metrics-and-dashboards/" rel="bookmark" title="Permanent Link to Metrics and Dashboards">Read more about Metrics and Dashboards</a></p>
+				<p><a style="display: block"  class="readmore" href="../../../../2013/11/05/metrics-and-dashboards/index.html" rel="bookmark" title="Permanent Link to Metrics and Dashboards">Read more about Metrics and Dashboards</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/storytelling/" title="View all articles in Storytelling" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d4ccb5">Storytelling</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/dashboards/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #126c4c">dashboards</a>, <a href="https://optional.is/required/tag/deming/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #dfa8c7">deming</a>, <a href="https://optional.is/required/tag/errors/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #07213a">errors</a>, <a href="https://optional.is/required/tag/leadership/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e9b747">leadership</a>, <a href="https://optional.is/required/tag/metrics/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa59d6">metrics</a>, <a href="https://optional.is/required/tag/tracking/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #187996">tracking</a>, <a href="https://optional.is/required/tag/visualizations/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p>				<p style="color: #999">2020 words<br/>Read Time: 11 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/storytelling/" title="View all articles in Storytelling" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d4ccb5">Storytelling</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/dashboards/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #126c4c">dashboards</a>, <a href="../../../../tag/deming/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #dfa8c7">deming</a>, <a href="../../../../tag/errors/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #07213a">errors</a>, <a href="../../../../tag/leadership/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e9b747">leadership</a>, <a href="https://optional.is/required/tag/metrics/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa59d6">metrics</a>, <a href="https://optional.is/required/tag/tracking/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #187996">tracking</a>, <a href="https://optional.is/required/tag/visualizations/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p>				<p style="color: #999">2020 words<br/>Read Time: 11 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2766"  >
@@ -173,11 +190,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				<time class="dt-published date published" datetime="2013-10-15T12:21:47+00:00" style="color: #aaa; font-weight: bold">Tuesday, October 15th, 02013</time>
 				<p class="p-summary entry-summary"><p>A single tactile calendar to keep the company in sync is a pipe dream no matter how beautiful it might be.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2013/10/15/lego-calendar/" rel="bookmark" title="Permanent Link to LEGO Calendar">Read more about LEGO Calendar</a></p>
+				<p><a style="display: block"  class="readmore" href="../../../../2013/10/15/lego-calendar/index.html" rel="bookmark" title="Permanent Link to LEGO Calendar">Read more about LEGO Calendar</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a>, <a href="https://optional.is/required/category/interfaces/" title="View all articles in Interfaces" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #756640">Interfaces</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../../../tag/calendar/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0e7b2">calendar</a>, <a href="https://optional.is/required/tag/lego/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3a22c9">lego</a>, <a href="https://optional.is/required/tag/sync/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #63ad9d">sync</a></p>				<p style="color: #999">890 words<br/>Read Time: 5 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a>, <a href="https://optional.is/required/category/interfaces/" title="View all articles in Interfaces" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #756640">Interfaces</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/calendar/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0e7b2">calendar</a>, <a href="https://optional.is/required/tag/lego/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3a22c9">lego</a>, <a href="https://optional.is/required/tag/sync/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #63ad9d">sync</a></p>				<p style="color: #999">890 words<br/>Read Time: 5 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2164"  >
@@ -186,7 +203,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				<time class="dt-published date published" datetime="2013-07-18T11:11:55+00:00" style="color: #aaa; font-weight: bold">Thursday, July 18th, 02013</time>
 				<p class="p-summary entry-summary"><p>Inspiration can come from just about anywhere. I saw an interesting t-shirt which lead to an interesting experiment in crowd sourcing to get a new design. As with every good idea, it endeds-up on a t-shirt.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2013/07/18/lethal-t-shirt/" rel="bookmark" title="Permanent Link to Lethal T-Shirt!">Read more about Lethal T-Shirt!</a></p>
+				<p><a style="display: block"  class="readmore" href="../../../../2013/07/18/lethal-t-shirt/index.html" rel="bookmark" title="Permanent Link to Lethal T-Shirt!">Read more about Lethal T-Shirt!</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
@@ -203,7 +220,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/meta/" title="View all articles in Meta" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b6755d">Meta</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/02012/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2ce22a">02012</a>, <a href="https://optional.is/required/tag/annual-report/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0c1ce">annual report</a>, <a href="https://optional.is/required/tag/billing/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8efdd1">billing</a>, <a href="https://optional.is/required/tag/clients/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #fac04c">clients</a>, <a href="https://optional.is/required/tag/customers/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4b6f7d">customers</a>, <a href="https://optional.is/required/tag/finance/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #57336a">finance</a>, <a href="https://optional.is/required/tag/financial/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6d84a9">financial</a>, <a href="https://optional.is/required/tag/hours/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #73cddd">hours</a></p>				<p style="color: #999">2237 words<br/>Read Time: 12 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/meta/" title="View all articles in Meta" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b6755d">Meta</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../../../tag/02012/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2ce22a">02012</a>, <a href="https://optional.is/required/tag/annual-report/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0c1ce">annual report</a>, <a href="https://optional.is/required/tag/billing/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8efdd1">billing</a>, <a href="../../../../tag/clients/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #fac04c">clients</a>, <a href="../../../../tag/customers/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4b6f7d">customers</a>, <a href="../../../../tag/finance/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #57336a">finance</a>, <a href="../../../../tag/financial/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6d84a9">financial</a>, <a href="../../../../tag/hours/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #73cddd">hours</a></p>				<p style="color: #999">2237 words<br/>Read Time: 12 minutes</p>
 			</div>
 		</div>
 				
@@ -539,7 +556,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				width: 384px; 
 				margin: 0 auto;
 			}
-			@media (max-width: 384px) {
+			@media (max-width: 415px) {
 				footer .logo {
 					width: 256px; 
 				}
@@ -564,7 +581,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #513</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>

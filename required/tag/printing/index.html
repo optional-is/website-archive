@@ -99,30 +99,47 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 	<body>
 				<style>
 			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 28px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
+			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			.complication { width: 30px; height: 30px; border-radius: 5px; border: 1px solid #f0f0f0; padding: 0; margin: 1em 0.25em; float: right; text-align: center; background-color: #fafafa; }
-			.complication .line1 { font-size: 8px; line-height: 13px; text-align: center; text-transform: uppercase;  color: #999;}
-			.complication .line2 { font-size: 14px; line-height: 14px; text-align: center; color: #aaa; }
-			.complication .line2.small { font-size: 11px; line-height: 15px; text-align: center; }
-			.complication .simple { text-align: center; font-size: 12px; line-height: 30px; }
+			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
+			form.single input:focus { border: none; outline: none; }
+
+			form.single button {
+			 	margin: 0;
+			 	padding: 0 1em;
+			 	color: #333;
+			 	background-color: #ffe24d;
+			 	border: none;
+			 	border-top-right-radius: 10px;
+			 	border-bottom-right-radius: 10px;
+			 	line-height: 40px;
+			}
+			form.single input {
+			 	border: none;
+			 	background-color: #eee;
+			 	border-top-left-radius: 10px;
+			 	border-bottom-left-radius: 10px;
+			 	line-height: 40px;
+			 	margin:0;
+			 	padding:0 1em;
+			 	box-sizing: border-box;
+			}
+			form.single button:hover {
+			 	background-color: #1b1700;
+				color: white;
+			}
+			form.single button:active {
+			 	background-color: #007f3f;
+				color: white;
+			}
+
 		</style>
 		<header>
 			<a href="../../../index.html" id="header">(optional.is)</a>
 
-			<div class="complication">
-				<div class="line1">RVK</div>
-				<div class="line2 small">14:22</div>
-			</div>
-			<div class="complication">
-				<div class="line1">Dec</div>
-				<div class="line2">10</div>
-			</div>
-			<!--
-			<div class="complication">
-				<div class="simple">12℃</div>
-			</div>
-			-->
+			<form action="http://optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
+				<input type="text" value="" name="s" id="s"><button>Search</button>
+			</form>
 		</header>
 		<main>
 					<div class="row">
@@ -176,7 +193,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../api/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8a5da5">api</a>, <a href="http://optional.is/required/tag/calendar/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0e7b2">calendar</a>, <a href="../posters/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ca9bd8">posters</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2d0072">printing</a>, <a href="../sf-symbols/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cfed0c">Sf Symbols</a>, <a href="../twitter/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b73c2d">twitter</a></p>				<p style="color: #999">677 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../api/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8a5da5">api</a>, <a href="../calendar/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0e7b2">calendar</a>, <a href="../posters/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ca9bd8">posters</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2d0072">printing</a>, <a href="../sf-symbols/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cfed0c">Sf Symbols</a>, <a href="../twitter/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b73c2d">twitter</a></p>				<p style="color: #999">677 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3866"  >
@@ -185,11 +202,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				<time class="dt-published date published" datetime="2016-12-02T09:09:13+00:00" style="color: #aaa; font-weight: bold">Friday, December 2nd, 02016</time>
 				<p class="p-summary entry-summary"><p>A sextet weeknote, we always seem to run out of time each week to finish-up our notes. A strange last few weeks getting back into the swing of things.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2016/12/02/week-298-303/" rel="bookmark" title="Permanent Link to Week #298-303">Read more about Week #298-303</a></p>
+				<p><a style="display: block"  class="readmore" href="../../2016/12/02/week-298-303/index.html" rel="bookmark" title="Permanent Link to Week #298-303">Read more about Week #298-303</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../elections/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b9dd4e">elections</a>, <a href="../flu/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9fe934">flu</a>, <a href="http://optional.is/required/tag/newsletter/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9e438d">newsletter</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2d0072">printing</a>, <a href="../triagemail/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #54d2fc">triagemail</a></p>				<p style="color: #999">1114 words<br/>Read Time: 6 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../elections/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b9dd4e">elections</a>, <a href="../flu/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9fe934">flu</a>, <a href="../newsletter/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9e438d">newsletter</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2d0072">printing</a>, <a href="../triagemail/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #54d2fc">triagemail</a></p>				<p style="color: #999">1114 words<br/>Read Time: 6 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2987"  >
@@ -202,7 +219,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../bikes/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3dd5e3">bikes</a>, <a href="../conferences-2/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1f72a0">conferences</a>, <a href="../fonts/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #980d14">fonts</a>, <a href="../heroku/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3115fb">heroku</a>, <a href="../hindber/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8db7b6">hindber</a>, <a href="../internet-of-things/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #52179b">internet of things</a>, <a href="../iot/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #97c209">iot</a>, <a href="http://optional.is/required/tag/japan/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #578ed5">japan</a>, <a href="../lisbon/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #fbfa69">lisbon</a>, <a href="../postcodes/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c72ec2">postcodes</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2d0072">printing</a>, <a href="../zoeptrope/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #37f38f">zoeptrope</a></p>				<p style="color: #999">815 words<br/>Read Time: 5 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../bikes/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3dd5e3">bikes</a>, <a href="../conferences-2/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1f72a0">conferences</a>, <a href="../fonts/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #980d14">fonts</a>, <a href="../heroku/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3115fb">heroku</a>, <a href="../hindber/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8db7b6">hindber</a>, <a href="../internet-of-things/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #52179b">internet of things</a>, <a href="../iot/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #97c209">iot</a>, <a href="../japan/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #578ed5">japan</a>, <a href="../lisbon/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #fbfa69">lisbon</a>, <a href="../postcodes/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c72ec2">postcodes</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2d0072">printing</a>, <a href="../zoeptrope/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #37f38f">zoeptrope</a></p>				<p style="color: #999">815 words<br/>Read Time: 5 minutes</p>
 			</div>
 		</div>
 				
@@ -538,7 +555,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				width: 384px; 
 				margin: 0 auto;
 			}
-			@media (max-width: 384px) {
+			@media (max-width: 415px) {
 				footer .logo {
 					width: 256px; 
 				}
@@ -563,7 +580,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #513</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>

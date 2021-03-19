@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>First Word Instance &laquo;  optional.is/required</title>
+
+<link rel="stylesheet" href="https://optional.is/required/wp-content/themes/optional/style.css" type="text/css" media="all" />
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="https://optional.is/required/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@optionalBot">
+<meta name="twitter:title" content="First Word Instance">
+<meta name="twitter:description" content="">
+<meta name="twitter:creator" content="@optionalBot">
+<meta name="twitter:domain" content="http://optional.is">
+</head>
+<body>
+<div id="header">
+<h1><a href="../../../../index.html">(optional.is)</a></h1>
+</div>
+			
+		<div class="post-4860 post type-post status-publish format-standard hentry category-applications category-briefs category-meta tag-nlp tag-text tag-words" id="post-4860">
+			<h2 style="border-bottom: 2px solid #962b43">First Word Instance</h2>
+
+			<div class="entry">
+<div class="time"><abbr title="2021-01-18T11:11:00+00:00">Monday, January 18th, 02021 at 11:11 UTC</abbr></div>
+				
+<p>There is a twitter bot called <a href="https://twitter.com/NYT_first_said">@NYT_first_said</a> which pretty much does what it says on the tin. </p>
+
+
+
+<blockquote class="wp-block-quote"><p>Tweets words when they appear in the New York Times for the first time.</p><cite><a href="https://twitter.com/NYT_first_said">@NYT_first_said</a></cite></blockquote>
+
+
+
+<p>It seems to be a pretty straight-forward bit of code. It gets new articles published daily. Then splits the text into words. It skips a few words here and there if they are proper nouns or contain numbers, etc. Finally, it checks the archive to see if the word has been previously used. If not, it sends out the word as a tweet.</p>
+
+
+
+<p>The most recent tweet was:</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-twitter wp-block-embed-twitter"><div class="wp-block-embed__wrapper">
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true"><p lang="en" dir="ltr">legendness</p>&mdash; New New York Times (@NYT_first_said) <a href="https://twitter.com/NYT_first_said/status/1351085045067493377?ref_src=twsrc%5Etfw">January 18, 2021</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div></figure>
+
+
+
+<p>This got us thinking that it wouldn&#8217;t be hard to replicate such a concept. We built a small application to fetch every published post in our WordPress database. The archive isn&#8217;t huge, which means we can look at every single article and see the unique words (the first time it was used) compared to the previous. </p>
+
+
+
+<p>Over time, each new article has less and less of a probability of using a new word and therefore they become even more unique when they do.</p>
+
+
+
+<p>We have published 260 articles which contain 14,100+ unique words. A sample of recent words used for the first time include:</p>
+
+
+
+<ul><li>omnibuses</li><li>consultancy</li><li>competencies</li><li>instalment</li><li>swept</li><li>ebikes</li><li>tug</li><li>commodity</li><li>bespoke</li><li>cobblers</li><li>dc</li><li>terrorists</li><li>impeached</li><li>tripled</li><li>headsets</li><li>heath</li><li>exceptionally</li></ul>
+
+
+
+<p>You can see that we haven&#8217;t yet exhausted regular English words yet. We have a ways to go before the only new unique words we use are new word creations.</p>
+
+
+
+<h2>Potential Improvements</h2>
+
+
+
+<p>There is a lot or room for improvement, but also overtime, these correct themselves. For instance, we could try to lemmetize words. This means that words like <em>jump</em>, <em>jumps</em>, <em>jumped</em> and <em>jumping</em> all are reduced to their base-form: jump. Then we wouldn&#8217;t have 4 unique words, just one. With enough articles, we&#8217;ll have written all the different forms and it is unlikely any future occurrence will be considered &#8216;unique&#8217; with or without lemmatisation.</p>
+
+
+
+<p>Words with numbers are ignored. We mix letters and numbers when talking  about units: 5h or 10h or 30min. All of these will be ignored. That&#8217;s probably fine, otherwise we&#8217;ll be finding infinite amount of  new words which are simply a number reference.</p>
+
+
+
+<p>Spelling-mistakes, while mistakes, are new words! (Unless, we are consistent mis-spellers). There could be some list of common mis-spellings or dictionary cross-reference, but this is probably pushing it too far for a fun, hobby project.</p>
+
+
+
+<p>The NYTimes bot skips capital letter words. These start sentences, but are probably elsewhere too so they will eventually get picked-up and indexed. What it does mean is that it skips proper nouns like place names and surnames used in articles. For them, that probably makes sense as they get quotes or references from people. We decided to make all input lowercase and the look for unique words.</p>
+
+
+
+<p>Much like the <a href="https://twitter.com/NYT_first_said">@NYT_first_said</a> bot that posts to twitter, we can also reuse the <a href="https://twitter.com/optionalBot">@optionalBot</a> to post any new words found in our articles.</p>
+
+
+
+<h2>Googlewack</h2>
+
+
+
+<p>A <a href="https://en.wikipedia.org/wiki/Googlewhack">Googlewack</a> is when you google a term and it only appears once. </p>
+
+
+
+<p>Ironically, as we find articles with words used for the first time (which only appear on a single page), then tweet or write about them in some Omnibus, they will appear on two pages and immediately disqualifying them from ever being a googlewack.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/applications/index.html" title="View all articles in Applications" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1ddf33">Applications</a>, <a href="../../../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../../../category/meta/index.html" title="View all articles in Meta" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b6755d">Meta</a></p><p><strong>Tags:</strong> <a href="../../../../tag/nlp/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4c5adb">nlp</a>, <a href="../../../../tag/text/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1cb251">text</a>, <a href="../../../../tag/words/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #89759e">words</a></p>			  </div>
+			
+		<div class="navigation">
+			<div class="prev"><div class="time">15 January 02021</div><a href="../../15/week-517-518/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8fd855">&laquo; Week #517, #518</a></div>
+			<div class="next"><div class="time">22 January 02021</div><a href="../../22/week-519/index.html" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cc9154">Week #519 &raquo;</a></div>
+		</div>
+
+			</div>
+			<!-- call out footer -->
+			<div class="callout-footer" style="padding-top: 1em; border-top: 2px solid #962b43; border-bottom: 2px solid #962b43; font-size: 120%">
+			<p>You've been reading optional.is/required/ a blog about technology, culture, paper and other interesting topics, since 02009. The easiest way to stay current is to grab the <a href="http://feeds2.feedburner.com/optional?format=xml">RSS Feed</a>.</p>
+
+			<p><a href="../../../../../newsletter/index.html">Subscribe to the quarterly mailing list</a> to receive interesting stories, links and updates.</p>
+			</div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+
+<div id="footer" class="vcard">
+  <div>
+  <div style="float: left; font-size: 16px;">
+<form method="get" id="searchform" action="http://optional.is/required/" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+</div> 
+<a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+
+</body>
+</html>

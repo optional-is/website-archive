@@ -99,30 +99,47 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 	<body>
 				<style>
 			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 28px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
+			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			.complication { width: 30px; height: 30px; border-radius: 5px; border: 1px solid #f0f0f0; padding: 0; margin: 1em 0.25em; float: right; text-align: center; background-color: #fafafa; }
-			.complication .line1 { font-size: 8px; line-height: 13px; text-align: center; text-transform: uppercase;  color: #999;}
-			.complication .line2 { font-size: 14px; line-height: 14px; text-align: center; color: #aaa; }
-			.complication .line2.small { font-size: 11px; line-height: 15px; text-align: center; }
-			.complication .simple { text-align: center; font-size: 12px; line-height: 30px; }
+			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
+			form.single input:focus { border: none; outline: none; }
+
+			form.single button {
+			 	margin: 0;
+			 	padding: 0 1em;
+			 	color: #333;
+			 	background-color: #ffe24d;
+			 	border: none;
+			 	border-top-right-radius: 10px;
+			 	border-bottom-right-radius: 10px;
+			 	line-height: 40px;
+			}
+			form.single input {
+			 	border: none;
+			 	background-color: #eee;
+			 	border-top-left-radius: 10px;
+			 	border-bottom-left-radius: 10px;
+			 	line-height: 40px;
+			 	margin:0;
+			 	padding:0 1em;
+			 	box-sizing: border-box;
+			}
+			form.single button:hover {
+			 	background-color: #1b1700;
+				color: white;
+			}
+			form.single button:active {
+			 	background-color: #007f3f;
+				color: white;
+			}
+
 		</style>
 		<header>
 			<a href="../../../index.html" id="header">(optional.is)</a>
 
-			<div class="complication">
-				<div class="line1">RVK</div>
-				<div class="line2 small">14:36</div>
-			</div>
-			<div class="complication">
-				<div class="line1">Dec</div>
-				<div class="line2">10</div>
-			</div>
-			<!--
-			<div class="complication">
-				<div class="simple">12℃</div>
-			</div>
-			-->
+			<form action="../../index.html" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
+				<input type="text" value="" name="s" id="s"><button>Search</button>
+			</form>
 		</header>
 		<main>
 					<div class="row">
@@ -130,7 +147,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				<h2>science fair project</h2><p></p>			</div>
 			<div class="box2">
 				<h2>Search</h2>
-				<form method="get" id="searchform" action="http://optional.is/required/" style="text-align: center;">
+				<form method="get" id="searchform" action="../../index.html" style="text-align: center;">
 				<div><input type="text" value="" name="s" id="s"><input type="submit" id="searchsubmit" value="Search"></div>
 			</form>
 			</div>
@@ -150,7 +167,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/experiments/index.html" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a></p><p><strong>Tags:</strong> <a href="../coke/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cb2a6b">coke</a>, <a href="../cola/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a1e05e">cola</a>, <a href="../cola-challenge/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b8e489">cola challenge</a>, <a href="../cola-wars/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b73c76">cola wars</a>, <a href="../double-blind-test/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #40eba8">double blind test</a>, <a href="../drinks/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b77135">drinks</a>, <a href="../experiment/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ee455d">experiment</a>, <a href="../opencola/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b8eb6d">opencola</a>, <a href="../pepsi/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #184b3f">pepsi</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #30b7d4">science fair project</a>, <a href="../sip-test/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3f0687">sip test</a>, <a href="http://optional.is/required/tag/survey/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2fa7b0">survey</a>, <a href="../taste/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cad1c0">taste</a>, <a href="../taste-test/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #073c85">taste test</a>, <a href="../test/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #098f6b">test</a></p>				<p style="color: #999">1336 words<br/>Read Time: 7 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a></p><p><strong>Tags:</strong> <a href="../coke/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cb2a6b">coke</a>, <a href="../cola/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a1e05e">cola</a>, <a href="../cola-challenge/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b8e489">cola challenge</a>, <a href="../cola-wars/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b73c76">cola wars</a>, <a href="../double-blind-test/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #40eba8">double blind test</a>, <a href="../drinks/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b77135">drinks</a>, <a href="../experiment/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ee455d">experiment</a>, <a href="../opencola/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b8eb6d">opencola</a>, <a href="../pepsi/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #184b3f">pepsi</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #30b7d4">science fair project</a>, <a href="../sip-test/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3f0687">sip test</a>, <a href="https://optional.is/required/tag/survey/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2fa7b0">survey</a>, <a href="https://optional.is/required/tag/taste/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cad1c0">taste</a>, <a href="../taste-test/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #073c85">taste test</a>, <a href="../test/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #098f6b">test</a></p>				<p style="color: #999">1336 words<br/>Read Time: 7 minutes</p>
 			</div>
 		</div>
 				
@@ -486,7 +503,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				width: 384px; 
 				margin: 0 auto;
 			}
-			@media (max-width: 384px) {
+			@media (max-width: 415px) {
 				footer .logo {
 					width: 256px; 
 				}
@@ -511,7 +528,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #513</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>

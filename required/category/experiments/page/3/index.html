@@ -99,30 +99,47 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 	<body>
 				<style>
 			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 28px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
+			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			.complication { width: 30px; height: 30px; border-radius: 5px; border: 1px solid #f0f0f0; padding: 0; margin: 1em 0.25em; float: right; text-align: center; background-color: #fafafa; }
-			.complication .line1 { font-size: 8px; line-height: 13px; text-align: center; text-transform: uppercase;  color: #999;}
-			.complication .line2 { font-size: 14px; line-height: 14px; text-align: center; color: #aaa; }
-			.complication .line2.small { font-size: 11px; line-height: 15px; text-align: center; }
-			.complication .simple { text-align: center; font-size: 12px; line-height: 30px; }
+			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
+			form.single input:focus { border: none; outline: none; }
+
+			form.single button {
+			 	margin: 0;
+			 	padding: 0 1em;
+			 	color: #333;
+			 	background-color: #ffe24d;
+			 	border: none;
+			 	border-top-right-radius: 10px;
+			 	border-bottom-right-radius: 10px;
+			 	line-height: 40px;
+			}
+			form.single input {
+			 	border: none;
+			 	background-color: #eee;
+			 	border-top-left-radius: 10px;
+			 	border-bottom-left-radius: 10px;
+			 	line-height: 40px;
+			 	margin:0;
+			 	padding:0 1em;
+			 	box-sizing: border-box;
+			}
+			form.single button:hover {
+			 	background-color: #1b1700;
+				color: white;
+			}
+			form.single button:active {
+			 	background-color: #007f3f;
+				color: white;
+			}
+
 		</style>
 		<header>
 			<a href="../../../../../index.html" id="header">(optional.is)</a>
 
-			<div class="complication">
-				<div class="line1">RVK</div>
-				<div class="line2 small">14:29</div>
-			</div>
-			<div class="complication">
-				<div class="line1">Dec</div>
-				<div class="line2">10</div>
-			</div>
-			<!--
-			<div class="complication">
-				<div class="simple">12℃</div>
-			</div>
-			-->
+			<form action="../../../../index.html" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
+				<input type="text" value="" name="s" id="s"><button>Search</button>
+			</form>
 		</header>
 		<main>
 					<div class="row">
@@ -151,7 +168,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a></p><p><strong>Tags:</strong> <a href="../../../../tag/brainwash/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1838aa">brainwash</a>, <a href="../../../../tag/brainwashing/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0118be">brainwashing</a>, <a href="../../../../tag/cheating/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2465f0">cheating</a>, <a href="../../../../tag/declaration/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1c2294">declaration</a>, <a href="../../../../tag/oath/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f10822">oath</a>, <a href="../../../../tag/profession/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4ac8c8">profession</a>, <a href="../../../../tag/professional/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #27ade1">professional</a>, <a href="../../../../tag/public-declaration/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6909cf">public declaration</a>, <a href="../../../../tag/signature/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ac201f">signature</a></p>				<p style="color: #999">1308 words<br/>Read Time: 7 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/brainwash/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1838aa">brainwash</a>, <a href="https://optional.is/required/tag/brainwashing/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0118be">brainwashing</a>, <a href="https://optional.is/required/tag/cheating/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2465f0">cheating</a>, <a href="https://optional.is/required/tag/declaration/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1c2294">declaration</a>, <a href="https://optional.is/required/tag/oath/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f10822">oath</a>, <a href="https://optional.is/required/tag/profession/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4ac8c8">profession</a>, <a href="https://optional.is/required/tag/professional/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #27ade1">professional</a>, <a href="https://optional.is/required/tag/public-declaration/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6909cf">public declaration</a>, <a href="https://optional.is/required/tag/signature/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ac201f">signature</a></p>				<p style="color: #999">1308 words<br/>Read Time: 7 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-670"  >
@@ -160,11 +177,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				<time class="dt-published date published" datetime="2009-08-03T03:30:45+00:00" style="color: #aaa; font-weight: bold">Monday, August 3rd, 02009</time>
 				<p class="p-summary entry-summary"><p>After a month of experimenting with Polyphasic sleep, there was much learnt about the process, what to expect, possible gains and drawbacks.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="../../../../2009/08/03/hacking-sleep/index.html" rel="bookmark" title="Permanent Link to Hacking Sleep">Read more about Hacking Sleep</a></p>
+				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2009/08/03/hacking-sleep/" rel="bookmark" title="Permanent Link to Hacking Sleep">Read more about Hacking Sleep</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/hacks/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7524d1">hacks</a>, <a href="../../../../tag/nap/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4d3b2b">nap</a>, <a href="../../../../tag/polyphasic/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4597e7">polyphasic</a>, <a href="https://optional.is/required/tag/polyphasic-sleep/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #32940d">polyphasic sleep</a>, <a href="../../../../tag/sleep/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c9fab3">sleep</a>, <a href="https://optional.is/required/tag/sleep-hacks/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #54e8b3">sleep hacks</a></p>				<p style="color: #999">1969 words<br/>Read Time: 11 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/hacks/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7524d1">hacks</a>, <a href="https://optional.is/required/tag/nap/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4d3b2b">nap</a>, <a href="https://optional.is/required/tag/polyphasic/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4597e7">polyphasic</a>, <a href="https://optional.is/required/tag/polyphasic-sleep/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #32940d">polyphasic sleep</a>, <a href="https://optional.is/required/tag/sleep/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c9fab3">sleep</a>, <a href="https://optional.is/required/tag/sleep-hacks/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #54e8b3">sleep hacks</a></p>				<p style="color: #999">1969 words<br/>Read Time: 11 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-565"  >
@@ -177,7 +194,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a></p><p><strong>Tags:</strong> <a href="../../../../tag/biphasic/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d07008">biphasic</a>, <a href="https://optional.is/required/tag/experiment/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ee455d">experiment</a>, <a href="../../../../tag/microsleep/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #802b27">microsleep</a>, <a href="../../../../tag/monophasic/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1fcd12">monophasic</a>, <a href="../../../../tag/mood-chart/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #efd20a">mood chart</a>, <a href="../../../../tag/nap/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4d3b2b">nap</a>, <a href="../../../../tag/polyphasic/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4597e7">polyphasic</a>, <a href="../../../../tag/siesta/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #deb5af">siesta</a>, <a href="../../../../tag/sleep/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c9fab3">sleep</a>, <a href="../../../../tag/uberman-sleep-cycle/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d17352">uberman sleep cycle</a></p>				<p style="color: #999">1596 words<br/>Read Time: 9 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/biphasic/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d07008">biphasic</a>, <a href="../../../../tag/experiment/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ee455d">experiment</a>, <a href="https://optional.is/required/tag/microsleep/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #802b27">microsleep</a>, <a href="https://optional.is/required/tag/monophasic/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1fcd12">monophasic</a>, <a href="https://optional.is/required/tag/mood-chart/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #efd20a">mood chart</a>, <a href="https://optional.is/required/tag/nap/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4d3b2b">nap</a>, <a href="https://optional.is/required/tag/polyphasic/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4597e7">polyphasic</a>, <a href="https://optional.is/required/tag/siesta/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #deb5af">siesta</a>, <a href="https://optional.is/required/tag/sleep/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c9fab3">sleep</a>, <a href="https://optional.is/required/tag/uberman-sleep-cycle/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d17352">uberman sleep cycle</a></p>				<p style="color: #999">1596 words<br/>Read Time: 9 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-259"  >
@@ -190,7 +207,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/coke/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cb2a6b">coke</a>, <a href="https://optional.is/required/tag/cola/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a1e05e">cola</a>, <a href="https://optional.is/required/tag/cola-challenge/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b8e489">cola challenge</a>, <a href="https://optional.is/required/tag/cola-wars/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b73c76">cola wars</a>, <a href="https://optional.is/required/tag/double-blind-test/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #40eba8">double blind test</a>, <a href="https://optional.is/required/tag/drinks/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b77135">drinks</a>, <a href="https://optional.is/required/tag/experiment/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ee455d">experiment</a>, <a href="https://optional.is/required/tag/opencola/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b8eb6d">opencola</a>, <a href="https://optional.is/required/tag/pepsi/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #184b3f">pepsi</a>, <a href="https://optional.is/required/tag/science-fair-project/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #30b7d4">science fair project</a>, <a href="https://optional.is/required/tag/sip-test/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3f0687">sip test</a>, <a href="../../../../tag/survey/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2fa7b0">survey</a>, <a href="https://optional.is/required/tag/taste/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cad1c0">taste</a>, <a href="https://optional.is/required/tag/taste-test/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #073c85">taste test</a>, <a href="https://optional.is/required/tag/test/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #098f6b">test</a></p>				<p style="color: #999">1336 words<br/>Read Time: 7 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a></p><p><strong>Tags:</strong> <a href="../../../../tag/coke/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cb2a6b">coke</a>, <a href="../../../../tag/cola/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a1e05e">cola</a>, <a href="../../../../tag/cola-challenge/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b8e489">cola challenge</a>, <a href="../../../../tag/cola-wars/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b73c76">cola wars</a>, <a href="../../../../tag/double-blind-test/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #40eba8">double blind test</a>, <a href="../../../../tag/drinks/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b77135">drinks</a>, <a href="../../../../tag/experiment/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ee455d">experiment</a>, <a href="../../../../tag/opencola/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b8eb6d">opencola</a>, <a href="../../../../tag/pepsi/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #184b3f">pepsi</a>, <a href="../../../../tag/science-fair-project/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #30b7d4">science fair project</a>, <a href="../../../../tag/sip-test/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3f0687">sip test</a>, <a href="https://optional.is/required/tag/survey/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2fa7b0">survey</a>, <a href="https://optional.is/required/tag/taste/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cad1c0">taste</a>, <a href="../../../../tag/taste-test/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #073c85">taste test</a>, <a href="../../../../tag/test/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #098f6b">test</a></p>				<p style="color: #999">1336 words<br/>Read Time: 7 minutes</p>
 			</div>
 		</div>
 				
@@ -526,7 +543,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				width: 384px; 
 				margin: 0 auto;
 			}
-			@media (max-width: 384px) {
+			@media (max-width: 415px) {
 				footer .logo {
 					width: 256px; 
 				}
@@ -551,7 +568,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #513</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>

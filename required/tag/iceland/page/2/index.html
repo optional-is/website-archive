@@ -99,30 +99,47 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 	<body>
 				<style>
 			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 28px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
+			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			.complication { width: 30px; height: 30px; border-radius: 5px; border: 1px solid #f0f0f0; padding: 0; margin: 1em 0.25em; float: right; text-align: center; background-color: #fafafa; }
-			.complication .line1 { font-size: 8px; line-height: 13px; text-align: center; text-transform: uppercase;  color: #999;}
-			.complication .line2 { font-size: 14px; line-height: 14px; text-align: center; color: #aaa; }
-			.complication .line2.small { font-size: 11px; line-height: 15px; text-align: center; }
-			.complication .simple { text-align: center; font-size: 12px; line-height: 30px; }
+			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
+			form.single input:focus { border: none; outline: none; }
+
+			form.single button {
+			 	margin: 0;
+			 	padding: 0 1em;
+			 	color: #333;
+			 	background-color: #ffe24d;
+			 	border: none;
+			 	border-top-right-radius: 10px;
+			 	border-bottom-right-radius: 10px;
+			 	line-height: 40px;
+			}
+			form.single input {
+			 	border: none;
+			 	background-color: #eee;
+			 	border-top-left-radius: 10px;
+			 	border-bottom-left-radius: 10px;
+			 	line-height: 40px;
+			 	margin:0;
+			 	padding:0 1em;
+			 	box-sizing: border-box;
+			}
+			form.single button:hover {
+			 	background-color: #1b1700;
+				color: white;
+			}
+			form.single button:active {
+			 	background-color: #007f3f;
+				color: white;
+			}
+
 		</style>
 		<header>
 			<a href="../../../../../index.html" id="header">(optional.is)</a>
 
-			<div class="complication">
-				<div class="line1">RVK</div>
-				<div class="line2 small">14:26</div>
-			</div>
-			<div class="complication">
-				<div class="line1">Dec</div>
-				<div class="line2">10</div>
-			</div>
-			<!--
-			<div class="complication">
-				<div class="simple">12℃</div>
-			</div>
-			-->
+			<form action="../../../../index.html" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
+				<input type="text" value="" name="s" id="s"><button>Search</button>
+			</form>
 		</header>
 		<main>
 					<div class="row">
@@ -140,7 +157,33 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<li><a href="https://optional.is/required/category/applications//"><span style="border-left: 10px solid #1ddf33;">Applications</span></a></li><li><a href="https://optional.is/required/category/briefs//"><span style="border-left: 10px solid #aa8c5b;">Briefs</span></a></li><li><a href="https://optional.is/required/category/cartography//"><span style="border-left: 10px solid #992978;">Cartography</span></a></li><li><a href="https://optional.is/required/category/case-studies//"><span style="border-left: 10px solid #a0d2b6;">Case Studies</span></a></li><li><a href="https://optional.is/required/category/chromatics//"><span style="border-left: 10px solid #1e7940;">Chromatics</span></a></li><li><a href="https://optional.is/required/category/community//"><span style="border-left: 10px solid #7d6198;">Community</span></a></li><li><a href="https://optional.is/required/category/conferences//"><span style="border-left: 10px solid #d70b59;">Conferences</span></a></li><li><a href="https://optional.is/required/category/education//"><span style="border-left: 10px solid #de7a22;">Education</span></a></li><li><a href="https://optional.is/required/category/experiments//"><span style="border-left: 10px solid #482926;">Experiments</span></a></li><li><a href="https://optional.is/required/category/forecast//"><span style="border-left: 10px solid #89c126;">Forecast</span></a></li><li><a href="https://optional.is/required/category/interfaces//"><span style="border-left: 10px solid #756640;">Interfaces</span></a></li><li><a href="https://optional.is/required/category/material//"><span style="border-left: 10px solid #d92a83;">Material</span></a></li><li><a href="https://optional.is/required/category/meta//"><span style="border-left: 10px solid #b6755d;">Meta</span></a></li><li><a href="https://optional.is/required/category/paper//"><span style="border-left: 10px solid #d0a662;">Paper</span></a></li><li><a href="https://optional.is/required/category/place//"><span style="border-left: 10px solid #7b9cf0;">Place</span></a></li><li><a href="https://optional.is/required/category/privacy//"><span style="border-left: 10px solid #c5f29b;">Privacy</span></a></li><li><a href="https://optional.is/required/category/sports//"><span style="border-left: 10px solid #918e18;">Sports</span></a></li><li><a href="https://optional.is/required/category/storytelling//"><span style="border-left: 10px solid #d4ccb5;">Storytelling</span></a></li><li><a href="https://optional.is/required/category/t-shirts//"><span style="border-left: 10px solid #bafe5c;">T-Shirts</span></a></li><li><a href="https://optional.is/required/category/temporality//"><span style="border-left: 10px solid #504c77;">Temporality</span></a></li><li><a href="https://optional.is/required/category/travel//"><span style="border-left: 10px solid #1fb0f9;">Travel</span></a></li><li><a href="https://optional.is/required/category/tutorial//"><span style="border-left: 10px solid #368fe7;">Tutorial</span></a></li><li><a href="https://optional.is/required/category/visualizations//"><span style="border-left: 10px solid #b10ac6;">Visualizations</span></a></li><li><a href="https://optional.is/required/category/weeknotes//"><span style="border-left: 10px solid #138567;">Weeknotes</span></a></li><li><a href="https://optional.is/required/category/youre-doing-it-wrong//"><span style="border-left: 10px solid #96e20d;">You're doing it wrong</span></a></li>					</ul>
 			</div>
 		</div>
-							<div class="row section" id="post-2583"  >
+							<div class="row section" id="post-2806"  >
+				<h1 class="p-name entry-title" style="border-top: 1px solid #812776">Week #142</h1>
+			<div class="box1" >
+				<time class="dt-published date published" datetime="2013-11-01T15:51:42+00:00" style="color: #aaa; font-weight: bold">Friday, November 1st, 02013</time>
+				<p class="p-summary entry-summary"><p>As week 142 comes to an end and an uneventful halloween passes us by. We&#8217;re planning for a busy November.</p>
+</p>
+				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2013/11/01/week-142/" rel="bookmark" title="Permanent Link to Week #142">Read more about Week #142</a></p>
+			</div>
+			<div class="box1 postmetadata">
+
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/cats/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0832c1">cats</a>, <a href="https://optional.is/required/tag/film/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bdbd6d">film</a>, <a href="https://optional.is/required/tag/iceland/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #83166c">iceland</a>, <a href="https://optional.is/required/tag/kickstarter/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #87ee9f">kickstarter</a>, <a href="https://optional.is/required/tag/meetings/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #06cf60">meetings</a>, <a href="https://optional.is/required/tag/movie/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aed34b">movie</a>, <a href="https://optional.is/required/tag/teching/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a9ee83">teching</a></p>				<p style="color: #999">456 words<br/>Read Time: 3 minutes</p>
+			</div>
+		</div>
+				<div class="row section" id="post-2757"  >
+				<h1 class="p-name entry-title" style="border-top: 1px solid #672462">Week #139</h1>
+			<div class="box1" >
+				<time class="dt-published date published" datetime="2013-10-12T13:31:49+00:00" style="color: #aaa; font-weight: bold">Saturday, October 12th, 02013</time>
+				<p class="p-summary entry-summary"><p>After spending a few days learning about computer security, reviewing some of our own projects we&#8217;ve learnt a great deal about issues around security.</p>
+</p>
+				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2013/10/12/week-139/" rel="bookmark" title="Permanent Link to Week #139">Read more about Week #139</a></p>
+			</div>
+			<div class="box1 postmetadata">
+
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ab3049">conference</a>, <a href="https://optional.is/required/tag/disney/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f240a4">disney</a>, <a href="https://optional.is/required/tag/hackers/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #dc5d6e">hackers</a>, <a href="https://optional.is/required/tag/iceland/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #83166c">iceland</a>, <a href="https://optional.is/required/tag/kindergarten/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0b7058">kindergarten</a>, <a href="https://optional.is/required/tag/maps/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7e9447">maps</a>, <a href="https://optional.is/required/tag/music-and-audiology/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #04341d">Music and Audiology</a>, <a href="https://optional.is/required/tag/security/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e91e63">security</a></p>				<p style="color: #999">804 words<br/>Read Time: 4 minutes</p>
+			</div>
+		</div>
+				<div class="row section" id="post-2583"  >
 				<h1 class="p-name entry-title" style="border-top: 1px solid #db35ac">Bead Art</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-08-02T12:21:00+00:00" style="color: #aaa; font-weight: bold">Friday, August 2nd, 02013</time>
@@ -179,36 +222,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/forecast/" title="View all articles in Forecast" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #89c126">Forecast</a>, <a href="https://optional.is/required/category/youre-doing-it-wrong/" title="View all articles in You're doing it wrong" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #96e20d">You're doing it wrong</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/bait-and-switch/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b71060">bait and switch</a>, <a href="https://optional.is/required/tag/big-mac-index/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7fe849">Big Mac Index</a>, <a href="https://optional.is/required/tag/collapse/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1a721f">collapse</a>, <a href="https://optional.is/required/tag/currency/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1af038">currency</a>, <a href="https://optional.is/required/tag/economics/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6b9ed7">economics</a>, <a href="https://optional.is/required/tag/ice-cream/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2d6cfc">ice cream</a>, <a href="https://optional.is/required/tag/iceland/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #83166c">iceland</a>, <a href="https://optional.is/required/tag/ipod/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d7a6e5">iPod</a>, <a href="https://optional.is/required/tag/mcdonalds/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5179b2">mcdonalds</a>, <a href="https://optional.is/required/tag/metro/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3282d4">Metro</a></p>				<p style="color: #999">1021 words<br/>Read Time: 6 minutes</p>
 			</div>
 		</div>
-				<div class="row section" id="post-1059"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #67e3fb">Þjóðfundur 02009: data mining a government</h1>
-			<div class="box1" >
-				<time class="dt-published date published" datetime="2009-11-22T15:51:17+00:00" style="color: #aaa; font-weight: bold">Sunday, November 22nd, 02009</time>
-				<p class="p-summary entry-summary"><p>On November 14th, 02009, 1200+ Icelanders came together to discuss their vision for the future of their nation. As they spent the day discussion and jotting down their ideas, all of their data was catalogued and index. This information has been made freely available to anyone to further augment, visualize and mine it for more information. So we did.</p>
-</p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2009/11/22/%c3%bejo%c3%b0fundur-02009-data-mining-a-government/" rel="bookmark" title="Permanent Link to Þjóðfundur 02009: data mining a government">Read more about Þjóðfundur 02009: data mining a government</a></p>
-			</div>
-			<div class="box1 postmetadata">
-
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/conferences/" title="View all articles in Conferences" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d70b59">Conferences</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/althingi/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d25e31">althingi</a>, <a href="https://optional.is/required/tag/al%c3%beingi/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bcadc5">alþingi</a>, <a href="https://optional.is/required/tag/data/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8d777f">data</a>, <a href="https://optional.is/required/tag/government/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #306184">government</a>, <a href="https://optional.is/required/tag/iceland/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #83166c">iceland</a>, <a href="https://optional.is/required/tag/meeting/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d48788">meeting</a>, <a href="https://optional.is/required/tag/open-data/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5d69fa">open data</a>, <a href="https://optional.is/required/tag/thf09/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9ce6da">thf09</a>, <a href="https://optional.is/required/tag/thjodfundur/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #493a3d">thjodfundur</a>, <a href="https://optional.is/required/tag/%c3%bejo%c3%b0fundar/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #fe0763">Þjóðfundar</a></p>				<p style="color: #999">1863 words<br/>Read Time: 10 minutes</p>
-			</div>
-		</div>
-				<div class="row section" id="post-329"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #c0a1f5">Skólapúlsinn: Educational Assessment</h1>
-			<div class="box1" >
-				<time class="dt-published date published" datetime="2009-07-03T03:30:12+00:00" style="color: #aaa; font-weight: bold">Friday, July 3rd, 02009</time>
-				<p class="p-summary entry-summary"><p>How could a father, a student and a foreigner change the way an entire country looks at educational surveys and improve the quality life for thousands of students? Skólapúlsinn was built to create a very easy environment for schools to conduct continuous random sampling over 21 psychometric scales to evaluation their performance nationally. The results in the first 9 months of operation have been staggering as well as eye opening to us and the schools.</p>
-</p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2009/07/03/skolapulsinn-educational-assessment/" rel="bookmark" title="Permanent Link to Skólapúlsinn: Educational Assessment">Read more about Skólapúlsinn: Educational Assessment</a></p>
-			</div>
-			<div class="box1 postmetadata">
-
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/case-studies/" title="View all articles in Case Studies" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0d2b6">Case Studies</a>, <a href="https://optional.is/required/category/education/" title="View all articles in Education" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #de7a22">Education</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/business/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f5d7e2">business</a>, <a href="https://optional.is/required/tag/data-security/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a340cc">data security</a>, <a href="https://optional.is/required/tag/graphs/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e8706a">graphs</a>, <a href="https://optional.is/required/tag/iceland/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #83166c">iceland</a>, <a href="https://optional.is/required/tag/school-pulse/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ab5c52">school pulse</a>, <a href="https://optional.is/required/tag/skolapulsinn/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #992eae">skolapulsinn</a>, <a href="../../../survey/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2fa7b0">survey</a></p>				<p style="color: #999">3458 words<br/>Read Time: 19 minutes</p>
-			</div>
-		</div>
 				
 			<div class="row section">
 		<div class="navigation">
-			<div class="prev"></div>
+			<div class="prev"><a href="../3/index.html" >&laquo; Older Entries</a></div>
 			<div class="next"><a href="https://optional.is/required/tag/iceland/" >Newer Entries &raquo;</a></div>
 		</div>
 			</div>
@@ -538,7 +555,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				width: 384px; 
 				margin: 0 auto;
 			}
-			@media (max-width: 384px) {
+			@media (max-width: 415px) {
 				footer .logo {
 					width: 256px; 
 				}
@@ -563,7 +580,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #513</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
