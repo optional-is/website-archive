@@ -59,6 +59,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			a:active { position: relative; top:1px; }
 			
 			#categories li, #address li { width: 32%; float: left;}
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 			
 			@media only screen and (max-width: 960px) {
 				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
@@ -75,7 +79,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				.stretched, .main, .sub, .feature { height: auto; }
 				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
 				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				h1, h2, p, .call-out a span { width: auto; clear:both }
 				.thumbnail a { max-height: 200px; }
 				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 				#address li { width: auto; float: none;}
@@ -94,6 +98,18 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			.section { padding-top: 50px; }
 			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
+				a { color: #75b6ff; }
+				.call-out a:hover, li a:hover { background-color: #444;}
+				h1, h2 { color: #ddd; border-top: 1px solid #444; }
+				p { color: #ccc; }
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -133,6 +149,9 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				color: white;
 			}
 
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
 		</style>
 		<header>
 			<a href="../../../../../index.html" id="header">(optional.is)</a>
@@ -158,7 +177,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 		</div>
 							<div class="row section" id="post-3762"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #a6d6e7">Week #266-267</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #266-267</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2016-03-25T14:41:39+00:00" style="color: #aaa; font-weight: bold">Friday, March 25th, 02016</time>
 				<p class="p-summary entry-summary"><p>A look back over two weeks of working on some Data visualisation VR projects.</p>
@@ -167,11 +186,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/data-visualizations/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c3f670">data visualizations</a>, <a href="https://optional.is/required/tag/data-viz/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ed59ea">data viz</a>, <a href="https://optional.is/required/tag/muji/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1fe27e">muji</a>, <a href="https://optional.is/required/tag/tokyo/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ef0cc1">tokyo</a>, <a href="https://optional.is/required/tag/vr/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ef8a9f">VR</a></p>				<p style="color: #999">534 words<br/>Read Time: 3 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/data-visualizations/" rel="tag" class="tag">data visualizations</a>, <a href="https://optional.is/required/tag/data-viz/" rel="tag" class="tag">data viz</a>, <a href="https://optional.is/required/tag/muji/" rel="tag" class="tag">muji</a>, <a href="https://optional.is/required/tag/tokyo/" rel="tag" class="tag">tokyo</a>, <a href="https://optional.is/required/tag/vr/" rel="tag" class="tag">VR</a></p>				<p style="color: #999">534 words<br/>Read Time: 3 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3752"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #c299ff">Week #264-265</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #264-265</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2016-03-11T11:11:58+00:00" style="color: #aaa; font-weight: bold">Friday, March 11th, 02016</time>
 				<p class="p-summary entry-summary"><p>It is a double weeknote for weeks #264-265. Lots of events, conferences and prototypes being sent and received. </p>
@@ -180,11 +199,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/conferences-2/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1f72a0">conferences</a>, <a href="https://optional.is/required/tag/holograms/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c72a40">holograms</a>, <a href="https://optional.is/required/tag/kickstarter/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #87ee9f">kickstarter</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8c0d9f">material.is</a>, <a href="https://optional.is/required/tag/prototypes/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #142a27">prototypes</a>, <a href="https://optional.is/required/tag/t-shirts/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1fd18b">t-shirts</a>, <a href="https://optional.is/required/tag/vr/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ef8a9f">VR</a></p>				<p style="color: #999">510 words<br/>Read Time: 3 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/conferences-2/" rel="tag" class="tag">conferences</a>, <a href="https://optional.is/required/tag/holograms/" rel="tag" class="tag">holograms</a>, <a href="https://optional.is/required/tag/kickstarter/" rel="tag" class="tag">kickstarter</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" class="tag">material.is</a>, <a href="https://optional.is/required/tag/prototypes/" rel="tag" class="tag">prototypes</a>, <a href="https://optional.is/required/tag/t-shirts/" rel="tag" class="tag">t-shirts</a>, <a href="https://optional.is/required/tag/vr/" rel="tag" class="tag">VR</a></p>				<p style="color: #999">510 words<br/>Read Time: 3 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3735"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #acc271">Week #262-263</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #262-263</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2016-02-26T15:51:54+00:00" style="color: #aaa; font-weight: bold">Friday, February 26th, 02016</time>
 				<p class="p-summary entry-summary"><p>After a week of sickness, we&#8217;re back on track with this week&#8217;s weeknote.</p>
@@ -193,11 +212,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/dashbones/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ba6c05">dashbones</a>, <a href="https://optional.is/required/tag/sickness/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #419d77">sickness</a>, <a href="https://optional.is/required/tag/vr/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ef8a9f">VR</a></p>				<p style="color: #999">556 words<br/>Read Time: 3 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/dashbones/" rel="tag" class="tag">dashbones</a>, <a href="https://optional.is/required/tag/sickness/" rel="tag" class="tag">sickness</a>, <a href="https://optional.is/required/tag/vr/" rel="tag" class="tag">VR</a></p>				<p style="color: #999">556 words<br/>Read Time: 3 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3700"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #a958f4">Week #259</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #259</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2016-01-29T22:22:08+00:00" style="color: #aaa; font-weight: bold">Friday, January 29th, 02016</time>
 				<p class="p-summary entry-summary"><p>Time flies by and we&#8217;re at another weeknote. This time we&#8217;ve been exploring some Virtual Reality.</p>
@@ -206,11 +225,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../../../frames/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #dcdc1a">frames</a>, <a href="https://optional.is/required/tag/ios/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1bdf60">iOS</a>, <a href="https://optional.is/required/tag/material/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eec34d">material</a>, <a href="https://optional.is/required/tag/vr/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ef8a9f">VR</a>, <a href="../../../werner-herzog/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #00a83b">werner herzog</a></p>				<p style="color: #999">434 words<br/>Read Time: 2 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../../../frames/index.html" rel="tag" class="tag">frames</a>, <a href="https://optional.is/required/tag/ios/" rel="tag" class="tag">iOS</a>, <a href="https://optional.is/required/tag/material/" rel="tag" class="tag">material</a>, <a href="https://optional.is/required/tag/vr/" rel="tag" class="tag">VR</a>, <a href="../../../werner-herzog/index.html" rel="tag" class="tag">werner herzog</a></p>				<p style="color: #999">434 words<br/>Read Time: 2 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3693"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #a9b251">Week #258</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #258</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2016-01-22T23:32:50+00:00" style="color: #aaa; font-weight: bold">Friday, January 22nd, 02016</time>
 				<p class="p-summary entry-summary"><p>A quick week! Some good news, some bad, but we&#8217;re making progress and meeting some new and interesting people.</p>
@@ -219,7 +238,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/design/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #31c13f">design</a>, <a href="https://optional.is/required/tag/lhi/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b019dd">lhi</a>, <a href="https://optional.is/required/tag/planets/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f4ebb2">planets</a>, <a href="https://optional.is/required/tag/students/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #75d37c">students</a>, <a href="https://optional.is/required/tag/vr/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ef8a9f">VR</a></p>				<p style="color: #999">472 words<br/>Read Time: 3 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/design/" rel="tag" class="tag">design</a>, <a href="https://optional.is/required/tag/lhi/" rel="tag" class="tag">lhi</a>, <a href="https://optional.is/required/tag/planets/" rel="tag" class="tag">planets</a>, <a href="https://optional.is/required/tag/students/" rel="tag" class="tag">students</a>, <a href="https://optional.is/required/tag/vr/" rel="tag" class="tag">VR</a></p>				<p style="color: #999">472 words<br/>Read Time: 3 minutes</p>
 			</div>
 		</div>
 				
@@ -258,7 +277,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
-			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" width="24.986" height="24.985"/>
 		</g>
 	</g>
 	</symbol>
@@ -307,7 +326,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
 	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
-	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+	<path  d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
 		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
 		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
 		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
@@ -561,6 +580,16 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				}
 			}
 
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus, footer #stripe .item div, footer #links .column ul li { color: #aaa; }
+				footer #stripe {
+					background-color: #444;
+				}
+				footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover, footer #links .column h3 { color: #eee; }
+				footer #stripe .item div:after, footer #links .column h3:after { background-color: #eee; }
+				footer .logo, footer .item svg { fill: #eee; }
+			}
+
 		</style>
 
 		<footer>
@@ -580,7 +609,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -649,3 +678,8 @@ pageTracker._trackPageview();
 </html>
 
 
+
+<!-- Dynamic page generated in 0.227 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-04-16 14:08:21 -->
+
+<!-- super cache -->

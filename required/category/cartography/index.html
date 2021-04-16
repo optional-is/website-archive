@@ -59,6 +59,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			a:active { position: relative; top:1px; }
 			
 			#categories li, #address li { width: 32%; float: left;}
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 			
 			@media only screen and (max-width: 960px) {
 				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
@@ -75,7 +79,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				.stretched, .main, .sub, .feature { height: auto; }
 				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
 				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				h1, h2, p, .call-out a span { width: auto; clear:both }
 				.thumbnail a { max-height: 200px; }
 				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 				#address li { width: auto; float: none;}
@@ -94,6 +98,18 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			.section { padding-top: 50px; }
 			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
+				a { color: #75b6ff; }
+				.call-out a:hover, li a:hover { background-color: #444;}
+				h1, h2 { color: #ddd; border-top: 1px solid #444; }
+				p { color: #ccc; }
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -133,6 +149,9 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				color: white;
 			}
 
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
 		</style>
 		<header>
 			<a href="../../../index.html" id="header">(optional.is)</a>
@@ -159,7 +178,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 		</div>
 							<div class="row section" id="post-3877"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #750338">Diatom Map Art</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Diatom Map Art</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2016-11-15T13:31:12+00:00" style="color: #aaa; font-weight: bold">Tuesday, November 15th, 02016</time>
 				<p class="p-summary entry-summary"><p>You know that feeling when you think you&#8217;ve seen this before? History and art tend to repeat themselves in ideas, but just in a new context with a new focus.</p>
@@ -168,11 +187,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Cartography" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #992978">Cartography</a></p><p><strong>Tags:</strong> <a href="../../tag/art/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2c5f64">art</a>, <a href="../../tag/diatom/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3cdabc">diatom</a>, <a href="../../tag/jenny-odell/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eed095">jenny odell</a>, <a href="../../tag/klaus-kemp/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #14c803">Klaus Kemp</a>, <a href="../../tag/maps/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7e9447">maps</a>, <a href="../../tag/victorians/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ad9cb8">victorians</a></p>				<p style="color: #999">374 words<br/>Read Time: 2 minutes</p>
+				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Cartography" rel="tag category" class="category">Cartography</a></p><p><strong>Tags:</strong> <a href="../../tag/art/index.html" rel="tag" class="tag">art</a>, <a href="../../tag/diatom/index.html" rel="tag" class="tag">diatom</a>, <a href="../../tag/jenny-odell/index.html" rel="tag" class="tag">jenny odell</a>, <a href="../../tag/klaus-kemp/index.html" rel="tag" class="tag">Klaus Kemp</a>, <a href="../../tag/maps/index.html" rel="tag" class="tag">maps</a>, <a href="../../tag/victorians/index.html" rel="tag" class="tag">victorians</a></p>				<p style="color: #999">374 words<br/>Read Time: 2 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2503"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #c97606">Gestalten: A Map of the World</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Gestalten: A Map of the World</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-05-14T21:12:22+00:00" style="color: #aaa; font-weight: bold">Tuesday, May 14th, 02013</time>
 				<p class="p-summary entry-summary"><p>The publisher Gestalten asked permission to print a few of our projects in their newest book, A Map of the World. It is a beautiful book full of wonderous maps from various artists around the world.</p>
@@ -181,11 +200,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Cartography" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #992978">Cartography</a>, <a href="../paper/index.html" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a></p><p><strong>Tags:</strong> <a href="../../tag/borgarmynd/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9fe76f">borgarmynd</a>, <a href="../../tag/gestalten/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b5a592">gestalten</a>, <a href="../../tag/maps/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7e9447">maps</a>, <a href="../../tag/reykjavik/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6f3e9f">reykjavik</a></p>				<p style="color: #999">440 words<br/>Read Time: 2 minutes</p>
+				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Cartography" rel="tag category" class="category">Cartography</a>, <a href="../paper/index.html" title="View all articles in Paper" rel="tag category" class="category">Paper</a></p><p><strong>Tags:</strong> <a href="../../tag/borgarmynd/index.html" rel="tag" class="tag">borgarmynd</a>, <a href="../../tag/gestalten/index.html" rel="tag" class="tag">gestalten</a>, <a href="../../tag/maps/index.html" rel="tag" class="tag">maps</a>, <a href="../../tag/reykjavik/index.html" rel="tag" class="tag">reykjavik</a></p>				<p style="color: #999">440 words<br/>Read Time: 2 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-1944"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #1a080f">City Swatches</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">City Swatches</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2011-04-26T14:41:57+00:00" style="color: #aaa; font-weight: bold">Tuesday, April 26th, 02011</time>
 				<p class="p-summary entry-summary"><p>City Swatches are quick and simple thumbnails of geographic locations, usually cities of similar latitudes and longitudes. Laying out all the city swatches gives a quick and interesting overview of any locations place in the larger scheme of the entire globe.</p>
@@ -194,11 +213,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Cartography" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #992978">Cartography</a>, <a href="../visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../tag/city-swatches/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #338939">city swatches</a>, <a href="../../tag/estonia/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5c6298">estonia</a>, <a href="../../tag/geonames/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f9c6c0">geonames</a>, <a href="../../tag/iceland/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #83166c">iceland</a>, <a href="../../tag/latitude/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #28c1e3">latitude</a>, <a href="../../tag/longitude/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ba569b">longitude</a>, <a href="../../tag/maps/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7e9447">maps</a></p>				<p style="color: #999">1359 words<br/>Read Time: 8 minutes</p>
+				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Cartography" rel="tag category" class="category">Cartography</a>, <a href="../visualizations/index.html" title="View all articles in Visualizations" rel="tag category" class="category">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../tag/city-swatches/index.html" rel="tag" class="tag">city swatches</a>, <a href="../../tag/estonia/index.html" rel="tag" class="tag">estonia</a>, <a href="../../tag/geonames/index.html" rel="tag" class="tag">geonames</a>, <a href="../../tag/iceland/index.html" rel="tag" class="tag">iceland</a>, <a href="../../tag/latitude/index.html" rel="tag" class="tag">latitude</a>, <a href="../../tag/longitude/index.html" rel="tag" class="tag">longitude</a>, <a href="../../tag/maps/index.html" rel="tag" class="tag">maps</a></p>				<p style="color: #999">1359 words<br/>Read Time: 8 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-1624"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #4d26a5">HLS World Map</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">HLS World Map</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2010-12-13T13:31:29+00:00" style="color: #aaa; font-weight: bold">Monday, December 13th, 02010</time>
 				<p class="p-summary entry-summary"><p>There are several algorithms out there to programatically generate a color from text, but this takes it one step further and generates a color based on a physical location. </p>
@@ -207,11 +226,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Cartography" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #992978">Cartography</a>, <a href="../chromatics/index.html" title="View all articles in Chromatics" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1e7940">Chromatics</a>, <a href="../visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../tag/algorithm/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ed4696">algorithm</a>, <a href="../../tag/color/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #70dda5">color</a>, <a href="../../tag/dopplr/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #874e0a">dopplr</a>, <a href="../../tag/equation/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1fc3e5">equation</a>, <a href="../../tag/geonames/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f9c6c0">geonames</a>, <a href="../../tag/hls/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6b517d">hls</a>, <a href="../../tag/map/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1d78dc">map</a>, <a href="../../tag/svg/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ae8eb9">svg</a>, <a href="../../tag/visualizations/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p>				<p style="color: #999">1295 words<br/>Read Time: 7 minutes</p>
+				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Cartography" rel="tag category" class="category">Cartography</a>, <a href="../chromatics/index.html" title="View all articles in Chromatics" rel="tag category" class="category">Chromatics</a>, <a href="../visualizations/index.html" title="View all articles in Visualizations" rel="tag category" class="category">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../tag/algorithm/index.html" rel="tag" class="tag">algorithm</a>, <a href="../../tag/color/index.html" rel="tag" class="tag">color</a>, <a href="../../tag/dopplr/index.html" rel="tag" class="tag">dopplr</a>, <a href="../../tag/equation/index.html" rel="tag" class="tag">equation</a>, <a href="../../tag/geonames/index.html" rel="tag" class="tag">geonames</a>, <a href="../../tag/hls/index.html" rel="tag" class="tag">hls</a>, <a href="../../tag/map/index.html" rel="tag" class="tag">map</a>, <a href="../../tag/svg/index.html" rel="tag" class="tag">svg</a>, <a href="../../tag/visualizations/index.html" rel="tag" class="tag">Visualizations</a></p>				<p style="color: #999">1295 words<br/>Read Time: 7 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-1418"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #add21e">Geonames Maps</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Geonames Maps</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2010-06-28T10:01:09+00:00" style="color: #aaa; font-weight: bold">Monday, June 28th, 02010</time>
 				<p class="p-summary entry-summary"><p>Using geonames&#8217; free data set and a few quick lines of scripting, it was possible to convert a table of boring data in to a sovereign country. Even on a blank page, the borders are distinctly visible without the need to draw them explicitly.</p>
@@ -220,7 +239,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Cartography" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #992978">Cartography</a>, <a href="../visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../tag/geonames/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f9c6c0">geonames</a>, <a href="../../tag/map/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1d78dc">map</a>, <a href="../../tag/maps/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7e9447">maps</a>, <a href="../../tag/svg/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ae8eb9">svg</a>, <a href="../../tag/visualizations/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p>				<p style="color: #999">1130 words<br/>Read Time: 6 minutes</p>
+				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Cartography" rel="tag category" class="category">Cartography</a>, <a href="../visualizations/index.html" title="View all articles in Visualizations" rel="tag category" class="category">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../tag/geonames/index.html" rel="tag" class="tag">geonames</a>, <a href="../../tag/map/index.html" rel="tag" class="tag">map</a>, <a href="../../tag/maps/index.html" rel="tag" class="tag">maps</a>, <a href="../../tag/svg/index.html" rel="tag" class="tag">svg</a>, <a href="../../tag/visualizations/index.html" rel="tag" class="tag">Visualizations</a></p>				<p style="color: #999">1130 words<br/>Read Time: 6 minutes</p>
 			</div>
 		</div>
 				
@@ -259,7 +278,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
-			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" width="24.986" height="24.985"/>
 		</g>
 	</g>
 	</symbol>
@@ -308,7 +327,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
 	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
-	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+	<path  d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
 		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
 		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
 		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
@@ -562,6 +581,16 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				}
 			}
 
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus, footer #stripe .item div, footer #links .column ul li { color: #aaa; }
+				footer #stripe {
+					background-color: #444;
+				}
+				footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover, footer #links .column h3 { color: #eee; }
+				footer #stripe .item div:after, footer #links .column h3:after { background-color: #eee; }
+				footer .logo, footer .item svg { fill: #eee; }
+			}
+
 		</style>
 
 		<footer>
@@ -581,7 +610,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -650,3 +679,8 @@ pageTracker._trackPageview();
 </html>
 
 
+
+<!-- Dynamic page generated in 0.215 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-04-16 14:10:45 -->
+
+<!-- super cache -->

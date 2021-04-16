@@ -59,6 +59,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			a:active { position: relative; top:1px; }
 			
 			#categories li, #address li { width: 32%; float: left;}
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 			
 			@media only screen and (max-width: 960px) {
 				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
@@ -75,7 +79,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				.stretched, .main, .sub, .feature { height: auto; }
 				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
 				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				h1, h2, p, .call-out a span { width: auto; clear:both }
 				.thumbnail a { max-height: 200px; }
 				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 				#address li { width: auto; float: none;}
@@ -94,6 +98,18 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			.section { padding-top: 50px; }
 			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
+				a { color: #75b6ff; }
+				.call-out a:hover, li a:hover { background-color: #444;}
+				h1, h2 { color: #ddd; border-top: 1px solid #444; }
+				p { color: #ccc; }
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -133,6 +149,9 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				color: white;
 			}
 
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
 		</style>
 		<header>
 			<a href="../../../../../index.html" id="header">(optional.is)</a>
@@ -159,7 +178,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 		</div>
 							<div class="row section" id="post-2583"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #db35ac">Bead Art</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Bead Art</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-08-02T12:21:00+00:00" style="color: #aaa; font-weight: bold">Friday, August 2nd, 02013</time>
 				<p class="p-summary entry-summary"><p>Moving from bits to atoms every once and awhile has its advantages. We spent several hours over the course of a few weeks putting together a massive bead art project. From code to pattern generation to ironing them together, we learnt a lot about the issues, tolerances and resilience of these tiny plastic beads.</p>
@@ -168,11 +187,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/art/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2c5f64">art</a>, <a href="https://optional.is/required/tag/beads/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #894701">beads</a>, <a href="https://optional.is/required/tag/hama/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #97dcc8">hama</a>, <a href="https://optional.is/required/tag/iceland/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #83166c">iceland</a>, <a href="https://optional.is/required/tag/open-source/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0db2f">open source</a>, <a href="https://optional.is/required/tag/philatelist/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c6cff7">philatelist</a>, <a href="https://optional.is/required/tag/stamps/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #829281">stamps</a></p>				<p style="color: #999">636 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" class="category">Experiments</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/art/" rel="tag" class="tag">art</a>, <a href="https://optional.is/required/tag/beads/" rel="tag" class="tag">beads</a>, <a href="https://optional.is/required/tag/hama/" rel="tag" class="tag">hama</a>, <a href="https://optional.is/required/tag/iceland/" rel="tag" class="tag">iceland</a>, <a href="https://optional.is/required/tag/open-source/" rel="tag" class="tag">open source</a>, <a href="https://optional.is/required/tag/philatelist/" rel="tag" class="tag">philatelist</a>, <a href="https://optional.is/required/tag/stamps/" rel="tag" class="tag">stamps</a></p>				<p style="color: #999">636 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2164"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #5dffa9">Lethal T-Shirt!</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Lethal T-Shirt!</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-07-18T11:11:55+00:00" style="color: #aaa; font-weight: bold">Thursday, July 18th, 02013</time>
 				<p class="p-summary entry-summary"><p>Inspiration can come from just about anywhere. I saw an interesting t-shirt which lead to an interesting experiment in crowd sourcing to get a new design. As with every good idea, it endeds-up on a t-shirt.</p>
@@ -181,11 +200,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/community/" title="View all articles in Community" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7d6198">Community</a>, <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a>, <a href="https://optional.is/required/category/t-shirts/" title="View all articles in T-Shirts" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bafe5c">T-Shirts</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/dangerous/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0a8113">dangerous</a>, <a href="https://optional.is/required/tag/lethal/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0587dc">lethal</a>, <a href="https://optional.is/required/tag/mechanical-turk/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7c81c1">mechanical turk</a>, <a href="https://optional.is/required/tag/mturk/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ae4406">mturk</a>, <a href="https://optional.is/required/tag/shirt/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c9507f">shirt</a>, <a href="https://optional.is/required/tag/t-shirt/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7cc481">t-shirt</a></p>				<p style="color: #999">1097 words<br/>Read Time: 6 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/community/" title="View all articles in Community" rel="tag category" class="category">Community</a>, <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" class="category">Experiments</a>, <a href="https://optional.is/required/category/t-shirts/" title="View all articles in T-Shirts" rel="tag category" class="category">T-Shirts</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" class="category">Visualizations</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/dangerous/" rel="tag" class="tag">dangerous</a>, <a href="https://optional.is/required/tag/lethal/" rel="tag" class="tag">lethal</a>, <a href="https://optional.is/required/tag/mechanical-turk/" rel="tag" class="tag">mechanical turk</a>, <a href="https://optional.is/required/tag/mturk/" rel="tag" class="tag">mturk</a>, <a href="https://optional.is/required/tag/shirt/" rel="tag" class="tag">shirt</a>, <a href="https://optional.is/required/tag/t-shirt/" rel="tag" class="tag">t-shirt</a></p>				<p style="color: #999">1097 words<br/>Read Time: 6 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2251"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #3d5e0b">Blank Business Cards</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Blank Business Cards</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2012-06-12T12:21:14+00:00" style="color: #aaa; font-weight: bold">Tuesday, June 12th, 02012</time>
 				<p class="p-summary entry-summary"><p>For everyone who forgets to bring their business cards with them to events. I have a solution.</p>
@@ -194,11 +213,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a>, <a href="https://optional.is/required/category/youre-doing-it-wrong/" title="View all articles in You're doing it wrong" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #96e20d">You're doing it wrong</a></p><p><strong>Tags:</strong> <a href="../../../../tag/brand/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8c4d3a">brand</a>, <a href="https://optional.is/required/tag/business-cards/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e103cf">business cards</a>, <a href="https://optional.is/required/tag/cards/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #492e66">cards</a>, <a href="../../../../tag/contact-info/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b98b48">contact info</a>, <a href="../../../../tag/visiting-card/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #790fd0">visiting card</a></p>				<p style="color: #999">1254 words<br/>Read Time: 7 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" class="category">Experiments</a>, <a href="https://optional.is/required/category/youre-doing-it-wrong/" title="View all articles in You're doing it wrong" rel="tag category" class="category">You're doing it wrong</a></p><p><strong>Tags:</strong> <a href="../../../../tag/brand/index.html" rel="tag" class="tag">brand</a>, <a href="https://optional.is/required/tag/business-cards/" rel="tag" class="tag">business cards</a>, <a href="https://optional.is/required/tag/cards/" rel="tag" class="tag">cards</a>, <a href="../../../../tag/contact-info/index.html" rel="tag" class="tag">contact info</a>, <a href="../../../../tag/visiting-card/index.html" rel="tag" class="tag">visiting card</a></p>				<p style="color: #999">1254 words<br/>Read Time: 7 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-1618"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #ea51ec">Protected Cultural Property</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Protected Cultural Property</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2011-01-29T12:21:18+00:00" style="color: #aaa; font-weight: bold">Saturday, January 29th, 02011</time>
 				<p class="p-summary entry-summary"><p>On May 14, 1954 the Hague Convention set out to prevent the destruction of culturally important artifacts. In the aftermath of the second world war where many of Europe&#8217;s cultural and social works of art and history were destroyed, something needed to be done to prevent this from happening again.</p>
@@ -207,11 +226,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a>, <a href="https://optional.is/required/category/t-shirts/" title="View all articles in T-Shirts" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bafe5c">T-Shirts</a>, <a href="https://optional.is/required/category/temporality/" title="View all articles in Temporality" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #504c77">Temporality</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/armed-conflict/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b4b100">armed conflict</a>, <a href="https://optional.is/required/tag/broken-windows-theory/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #84925e">broken windows theory</a>, <a href="https://optional.is/required/tag/egypt/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4635c9">egypt</a>, <a href="https://optional.is/required/tag/germany/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #28ef36">germany</a>, <a href="https://optional.is/required/tag/graffitti/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0d89b0">graffitti</a>, <a href="https://optional.is/required/tag/hague/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3ab853">hague</a>, <a href="https://optional.is/required/tag/history/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3cd15f">history</a>, <a href="https://optional.is/required/tag/plaque/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6b4a67">plaque</a>, <a href="https://optional.is/required/tag/protection/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #152f5d">protection</a>, <a href="https://optional.is/required/tag/symbols/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #550357">symbols</a>, <a href="https://optional.is/required/tag/t-shirt/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7cc481">t-shirt</a>, <a href="https://optional.is/required/tag/tunisia/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6b07fd">tunisia</a></p>				<p style="color: #999">1181 words<br/>Read Time: 7 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" class="category">Experiments</a>, <a href="https://optional.is/required/category/t-shirts/" title="View all articles in T-Shirts" rel="tag category" class="category">T-Shirts</a>, <a href="https://optional.is/required/category/temporality/" title="View all articles in Temporality" rel="tag category" class="category">Temporality</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/armed-conflict/" rel="tag" class="tag">armed conflict</a>, <a href="https://optional.is/required/tag/broken-windows-theory/" rel="tag" class="tag">broken windows theory</a>, <a href="https://optional.is/required/tag/egypt/" rel="tag" class="tag">egypt</a>, <a href="https://optional.is/required/tag/germany/" rel="tag" class="tag">germany</a>, <a href="https://optional.is/required/tag/graffitti/" rel="tag" class="tag">graffitti</a>, <a href="https://optional.is/required/tag/hague/" rel="tag" class="tag">hague</a>, <a href="https://optional.is/required/tag/history/" rel="tag" class="tag">history</a>, <a href="https://optional.is/required/tag/plaque/" rel="tag" class="tag">plaque</a>, <a href="https://optional.is/required/tag/protection/" rel="tag" class="tag">protection</a>, <a href="https://optional.is/required/tag/symbols/" rel="tag" class="tag">symbols</a>, <a href="https://optional.is/required/tag/t-shirt/" rel="tag" class="tag">t-shirt</a>, <a href="https://optional.is/required/tag/tunisia/" rel="tag" class="tag">tunisia</a></p>				<p style="color: #999">1181 words<br/>Read Time: 7 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-1017"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #544679">Miracle Fruit Berries</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Miracle Fruit Berries</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2010-06-12T14:41:30+00:00" style="color: #aaa; font-weight: bold">Saturday, June 12th, 02010</time>
 				<p class="p-summary entry-summary"><p>The Miracle Fruit Berry (Synsepalum dulcificum) is a real fruit, not some chemical concoction. After dissolving the Miracle Fruit in your mouth, sour food tastes sweet. This was something to strange to believe, so as an experiment, we ordered and tested them on various sour food products.</p>
@@ -220,7 +239,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/experimemt/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e970fe">experimemt</a>, <a href="https://optional.is/required/tag/gastronomy/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #83589f">gastronomy</a>, <a href="https://optional.is/required/tag/lemons/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #238ad5">lemons</a>, <a href="https://optional.is/required/tag/limes/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a78393">limes</a>, <a href="https://optional.is/required/tag/miracle-fruit-berries/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aebadb">miracle fruit berries</a>, <a href="https://optional.is/required/tag/sour/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f50e6c">sour</a>, <a href="https://optional.is/required/tag/sweet/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e549a2">sweet</a>, <a href="https://optional.is/required/tag/taste/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cad1c0">taste</a></p>				<p style="color: #999">806 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/experiments/" title="View all articles in Experiments" rel="tag category" class="category">Experiments</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/experimemt/" rel="tag" class="tag">experimemt</a>, <a href="https://optional.is/required/tag/gastronomy/" rel="tag" class="tag">gastronomy</a>, <a href="https://optional.is/required/tag/lemons/" rel="tag" class="tag">lemons</a>, <a href="https://optional.is/required/tag/limes/" rel="tag" class="tag">limes</a>, <a href="https://optional.is/required/tag/miracle-fruit-berries/" rel="tag" class="tag">miracle fruit berries</a>, <a href="https://optional.is/required/tag/sour/" rel="tag" class="tag">sour</a>, <a href="https://optional.is/required/tag/sweet/" rel="tag" class="tag">sweet</a>, <a href="https://optional.is/required/tag/taste/" rel="tag" class="tag">taste</a></p>				<p style="color: #999">806 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				
@@ -259,7 +278,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
-			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" width="24.986" height="24.985"/>
 		</g>
 	</g>
 	</symbol>
@@ -308,7 +327,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
 	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
-	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+	<path  d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
 		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
 		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
 		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
@@ -562,6 +581,16 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				}
 			}
 
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus, footer #stripe .item div, footer #links .column ul li { color: #aaa; }
+				footer #stripe {
+					background-color: #444;
+				}
+				footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover, footer #links .column h3 { color: #eee; }
+				footer #stripe .item div:after, footer #links .column h3:after { background-color: #eee; }
+				footer .logo, footer .item svg { fill: #eee; }
+			}
+
 		</style>
 
 		<footer>
@@ -581,7 +610,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -650,3 +679,8 @@ pageTracker._trackPageview();
 </html>
 
 
+
+<!-- Dynamic page generated in 0.181 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-04-16 14:04:12 -->
+
+<!-- super cache -->

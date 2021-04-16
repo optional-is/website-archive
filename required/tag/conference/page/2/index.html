@@ -59,6 +59,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			a:active { position: relative; top:1px; }
 			
 			#categories li, #address li { width: 32%; float: left;}
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 			
 			@media only screen and (max-width: 960px) {
 				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
@@ -75,7 +79,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				.stretched, .main, .sub, .feature { height: auto; }
 				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
 				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				h1, h2, p, .call-out a span { width: auto; clear:both }
 				.thumbnail a { max-height: 200px; }
 				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 				#address li { width: auto; float: none;}
@@ -94,6 +98,18 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			.section { padding-top: 50px; }
 			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
+				a { color: #75b6ff; }
+				.call-out a:hover, li a:hover { background-color: #444;}
+				h1, h2 { color: #ddd; border-top: 1px solid #444; }
+				p { color: #ccc; }
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -133,6 +149,9 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				color: white;
 			}
 
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
 		</style>
 		<header>
 			<a href="../../../../../index.html" id="header">(optional.is)</a>
@@ -158,7 +177,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 		</div>
 							<div class="row section" id="post-3680"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #aa6a7f">Week #256</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #256</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2016-01-08T21:12:55+00:00" style="color: #aaa; font-weight: bold">Friday, January 8th, 02016</time>
 				<p class="p-summary entry-summary"><p>Week #256 is a programmer&#8217;s goto value. We&#8217;re getting back into the swing of things in 02016 with weekly weeknotes.</p>
@@ -167,24 +186,24 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/app-store/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #caeaf4">app store</a>, <a href="https://optional.is/required/tag/conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ab3049">conference</a>, <a href="https://optional.is/required/tag/dashboard/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #dc7161">dashboard</a>, <a href="https://optional.is/required/tag/dashbones/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ba6c05">dashbones</a>, <a href="https://optional.is/required/tag/geocolor/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cf92f8">geocolor</a>, <a href="https://optional.is/required/tag/ios/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1bdf60">iOS</a>, <a href="https://optional.is/required/tag/material/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eec34d">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bc5b2b">material conference</a></p>				<p style="color: #999">666 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/app-store/" rel="tag" class="tag">app store</a>, <a href="https://optional.is/required/tag/conference/" rel="tag" class="tag">conference</a>, <a href="https://optional.is/required/tag/dashboard/" rel="tag" class="tag">dashboard</a>, <a href="https://optional.is/required/tag/dashbones/" rel="tag" class="tag">dashbones</a>, <a href="https://optional.is/required/tag/geocolor/" rel="tag" class="tag">geocolor</a>, <a href="https://optional.is/required/tag/ios/" rel="tag" class="tag">iOS</a>, <a href="https://optional.is/required/tag/material/" rel="tag" class="tag">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" class="tag">material conference</a></p>				<p style="color: #999">666 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3364"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #d83b18">Week #194-195</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #194-195</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2014-11-07T20:02:40+00:00" style="color: #aaa; font-weight: bold">Friday, November 7th, 02014</time>
 				<p class="p-summary entry-summary"><p>A double-weeknote where we spent most of it in Berlin for the Beyond Tellerrand conference, but also focusing closely on conducting a few surveys.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2014/11/07/week-194-195/" rel="bookmark" title="Permanent Link to Week #194-195">Read more about Week #194-195</a></p>
+				<p><a style="display: block"  class="readmore" href="../../../../2014/11/07/week-194-195/index.html" rel="bookmark" title="Permanent Link to Week #194-195">Read more about Week #194-195</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/berlin/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d35a02">berlin</a>, <a href="https://optional.is/required/tag/conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ab3049">conference</a>, <a href="https://optional.is/required/tag/joli/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #65b8c5">joli</a>, <a href="https://optional.is/required/tag/leather/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #73bbd5">leather</a>, <a href="https://optional.is/required/tag/sleeve/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #361a55">sleeve</a>, <a href="https://optional.is/required/tag/space/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ff2364">space</a>, <a href="https://optional.is/required/tag/surveys/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #feae57">surveys</a></p>				<p style="color: #999">634 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/berlin/" rel="tag" class="tag">berlin</a>, <a href="https://optional.is/required/tag/conference/" rel="tag" class="tag">conference</a>, <a href="https://optional.is/required/tag/joli/" rel="tag" class="tag">joli</a>, <a href="https://optional.is/required/tag/leather/" rel="tag" class="tag">leather</a>, <a href="https://optional.is/required/tag/sleeve/" rel="tag" class="tag">sleeve</a>, <a href="https://optional.is/required/tag/space/" rel="tag" class="tag">space</a>, <a href="https://optional.is/required/tag/surveys/" rel="tag" class="tag">surveys</a></p>				<p style="color: #999">634 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3352"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #e4a78c">Week #191-192-193</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #191-192-193</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2014-10-25T22:22:59+00:00" style="color: #aaa; font-weight: bold">Saturday, October 25th, 02014</time>
 				<p class="p-summary entry-summary"><p>A triple weeknote that is already behind schedule. A quick look at the last three weeks and a trip to Oslo, Norway for Webdagene conference.</p>
@@ -193,11 +212,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/asteroids/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d02ebb">asteroids</a>, <a href="https://optional.is/required/tag/conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ab3049">conference</a>, <a href="https://optional.is/required/tag/oslo/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8cfbfa">oslo</a>, <a href="https://optional.is/required/tag/paperclips/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #92b1dc">paperclips</a>, <a href="https://optional.is/required/tag/rosetta/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #975790">rosetta</a>, <a href="https://optional.is/required/tag/virkisfell/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #238cb4">virkisfell</a>, <a href="https://optional.is/required/tag/webdagene/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #62e7df">webdagene</a></p>				<p style="color: #999">456 words<br/>Read Time: 3 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/asteroids/" rel="tag" class="tag">asteroids</a>, <a href="https://optional.is/required/tag/conference/" rel="tag" class="tag">conference</a>, <a href="https://optional.is/required/tag/oslo/" rel="tag" class="tag">oslo</a>, <a href="https://optional.is/required/tag/paperclips/" rel="tag" class="tag">paperclips</a>, <a href="https://optional.is/required/tag/rosetta/" rel="tag" class="tag">rosetta</a>, <a href="https://optional.is/required/tag/virkisfell/" rel="tag" class="tag">virkisfell</a>, <a href="https://optional.is/required/tag/webdagene/" rel="tag" class="tag">webdagene</a></p>				<p style="color: #999">456 words<br/>Read Time: 3 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2993"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #21bf52">Week #156-157</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #156-157</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2014-02-14T15:51:10+00:00" style="color: #aaa; font-weight: bold">Friday, February 14th, 02014</time>
 				<p class="p-summary entry-summary"><p>Weeks 156-157 saw us get out of the office a bit and spend some time on new projects.</p>
@@ -206,11 +225,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ab3049">conference</a>, <a href="https://optional.is/required/tag/doors/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #57d0a8">doors</a>, <a href="https://optional.is/required/tag/dots/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e9c6cf">dots</a>, <a href="https://optional.is/required/tag/goats/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9037a0">goats</a>, <a href="https://optional.is/required/tag/raspberry-pi/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #028442">raspberry pi</a>, <a href="https://optional.is/required/tag/snails/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #23436a">snails</a>, <a href="https://optional.is/required/tag/utmessan/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5bb509">utmessan</a></p>				<p style="color: #999">1016 words<br/>Read Time: 6 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/conference/" rel="tag" class="tag">conference</a>, <a href="https://optional.is/required/tag/doors/" rel="tag" class="tag">doors</a>, <a href="https://optional.is/required/tag/dots/" rel="tag" class="tag">dots</a>, <a href="https://optional.is/required/tag/goats/" rel="tag" class="tag">goats</a>, <a href="https://optional.is/required/tag/raspberry-pi/" rel="tag" class="tag">raspberry pi</a>, <a href="https://optional.is/required/tag/snails/" rel="tag" class="tag">snails</a>, <a href="https://optional.is/required/tag/utmessan/" rel="tag" class="tag">utmessan</a></p>				<p style="color: #999">1016 words<br/>Read Time: 6 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2757"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #672462">Week #139</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #139</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-10-12T13:31:49+00:00" style="color: #aaa; font-weight: bold">Saturday, October 12th, 02013</time>
 				<p class="p-summary entry-summary"><p>After spending a few days learning about computer security, reviewing some of our own projects we&#8217;ve learnt a great deal about issues around security.</p>
@@ -219,7 +238,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ab3049">conference</a>, <a href="https://optional.is/required/tag/disney/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f240a4">disney</a>, <a href="https://optional.is/required/tag/hackers/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #dc5d6e">hackers</a>, <a href="https://optional.is/required/tag/iceland/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #83166c">iceland</a>, <a href="https://optional.is/required/tag/kindergarten/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0b7058">kindergarten</a>, <a href="https://optional.is/required/tag/maps/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7e9447">maps</a>, <a href="https://optional.is/required/tag/music-and-audiology/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #04341d">Music and Audiology</a>, <a href="https://optional.is/required/tag/security/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e91e63">security</a></p>				<p style="color: #999">804 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/conference/" rel="tag" class="tag">conference</a>, <a href="https://optional.is/required/tag/disney/" rel="tag" class="tag">disney</a>, <a href="https://optional.is/required/tag/hackers/" rel="tag" class="tag">hackers</a>, <a href="https://optional.is/required/tag/iceland/" rel="tag" class="tag">iceland</a>, <a href="https://optional.is/required/tag/kindergarten/" rel="tag" class="tag">kindergarten</a>, <a href="https://optional.is/required/tag/maps/" rel="tag" class="tag">maps</a>, <a href="https://optional.is/required/tag/music-and-audiology/" rel="tag" class="tag">Music and Audiology</a>, <a href="https://optional.is/required/tag/security/" rel="tag" class="tag">security</a></p>				<p style="color: #999">804 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				
@@ -258,7 +277,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
-			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" width="24.986" height="24.985"/>
 		</g>
 	</g>
 	</symbol>
@@ -307,7 +326,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
 	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
-	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+	<path  d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
 		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
 		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
 		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
@@ -561,6 +580,16 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				}
 			}
 
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus, footer #stripe .item div, footer #links .column ul li { color: #aaa; }
+				footer #stripe {
+					background-color: #444;
+				}
+				footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover, footer #links .column h3 { color: #eee; }
+				footer #stripe .item div:after, footer #links .column h3:after { background-color: #eee; }
+				footer .logo, footer .item svg { fill: #eee; }
+			}
+
 		</style>
 
 		<footer>
@@ -580,7 +609,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -649,3 +678,8 @@ pageTracker._trackPageview();
 </html>
 
 
+
+<!-- Dynamic page generated in 0.174 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-04-16 13:57:49 -->
+
+<!-- super cache -->

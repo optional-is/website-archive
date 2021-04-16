@@ -59,6 +59,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			a:active { position: relative; top:1px; }
 			
 			#categories li, #address li { width: 32%; float: left;}
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 			
 			@media only screen and (max-width: 960px) {
 				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
@@ -75,7 +79,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				.stretched, .main, .sub, .feature { height: auto; }
 				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
 				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				h1, h2, p, .call-out a span { width: auto; clear:both }
 				.thumbnail a { max-height: 200px; }
 				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 				#address li { width: auto; float: none;}
@@ -94,6 +98,18 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			.section { padding-top: 50px; }
 			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
+				a { color: #75b6ff; }
+				.call-out a:hover, li a:hover { background-color: #444;}
+				h1, h2 { color: #ddd; border-top: 1px solid #444; }
+				p { color: #ccc; }
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -133,6 +149,9 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				color: white;
 			}
 
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
 		</style>
 		<header>
 			<a href="../../../../../index.html" id="header">(optional.is)</a>
@@ -159,7 +178,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 		</div>
 							<div class="row section" id="post-3660"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #f397eb">Omnibus 02015</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Omnibus 02015</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2016-01-03T12:21:42+00:00" style="color: #aaa; font-weight: bold">Sunday, January 3rd, 02016</time>
 				<p class="p-summary entry-summary"><p>A look back over the articles for 02015 and earlier to update any information since publication.</p>
@@ -168,11 +187,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/meta/" title="View all articles in Meta" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b6755d">Meta</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2015/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #65d2ea">2015</a>, <a href="https://optional.is/required/tag/omnibus/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #90b8b6">omnibus</a>, <a href="https://optional.is/required/tag/travel/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1fb0f9">Travel</a></p>				<p style="color: #999">450 words<br/>Read Time: 2 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../index.html" title="View all articles in Meta" rel="tag category" class="category">Meta</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2015/" rel="tag" class="tag">2015</a>, <a href="../../../../tag/omnibus/index.html" rel="tag" class="tag">omnibus</a>, <a href="https://optional.is/required/tag/travel/" rel="tag" class="tag">Travel</a></p>				<p style="color: #999">450 words<br/>Read Time: 2 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3383"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #f63433">02014 Annual Report</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">02014 Annual Report</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2015-01-19T15:51:15+00:00" style="color: #aaa; font-weight: bold">Monday, January 19th, 02015</time>
 				<p class="p-summary entry-summary"><p>A look at how the company was run for 02014, where our income came from and a breakdown of time spent on various projects and activities.</p>
@@ -181,11 +200,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/meta/" title="View all articles in Meta" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b6755d">Meta</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/02014/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a83d2e">02014</a>, <a href="https://optional.is/required/tag/annual-report/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0c1ce">annual report</a>, <a href="https://optional.is/required/tag/finances/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #26a72d">finances</a>, <a href="https://optional.is/required/tag/work-load/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9c1160">work load</a>, <a href="https://optional.is/required/tag/year-in-review/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bd4af2">year in review</a></p>				<p style="color: #999">1819 words<br/>Read Time: 10 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../index.html" title="View all articles in Meta" rel="tag category" class="category">Meta</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/02014/" rel="tag" class="tag">02014</a>, <a href="https://optional.is/required/tag/annual-report/" rel="tag" class="tag">annual report</a>, <a href="https://optional.is/required/tag/finances/" rel="tag" class="tag">finances</a>, <a href="https://optional.is/required/tag/work-load/" rel="tag" class="tag">work load</a>, <a href="https://optional.is/required/tag/year-in-review/" rel="tag" class="tag">year in review</a></p>				<p style="color: #999">1819 words<br/>Read Time: 10 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3385"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #a09de9">Omnibus 02014</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Omnibus 02014</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2015-01-01T14:41:38+00:00" style="color: #aaa; font-weight: bold">Thursday, January 1st, 02015</time>
 				<p class="p-summary entry-summary"><p>A look back over 02014&#8217;s articles with any updates and new discoveries since they were written.</p>
@@ -194,11 +213,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/meta/" title="View all articles in Meta" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b6755d">Meta</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/02014/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a83d2e">02014</a>, <a href="https://optional.is/required/tag/02015/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e4e613">02015</a>, <a href="https://optional.is/required/tag/2014/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cee8d6">2014</a>, <a href="https://optional.is/required/tag/articles/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #dba5d9">articles</a>, <a href="https://optional.is/required/tag/calendars/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5f12b7">calendars</a>, <a href="https://optional.is/required/tag/dashboards/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #126c4c">dashboards</a>, <a href="https://optional.is/required/tag/omnibus/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #90b8b6">omnibus</a>, <a href="https://optional.is/required/tag/paper/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="https://optional.is/required/tag/travel/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1fb0f9">Travel</a>, <a href="../../../../tag/updates/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d05257">updates</a>, <a href="https://optional.is/required/tag/weeknotes/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p>				<p style="color: #999">1032 words<br/>Read Time: 6 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../index.html" title="View all articles in Meta" rel="tag category" class="category">Meta</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/02014/" rel="tag" class="tag">02014</a>, <a href="../../../../tag/02015/index.html" rel="tag" class="tag">02015</a>, <a href="../../../../tag/2014/index.html" rel="tag" class="tag">2014</a>, <a href="../../../../tag/articles/index.html" rel="tag" class="tag">articles</a>, <a href="https://optional.is/required/tag/calendars/" rel="tag" class="tag">calendars</a>, <a href="https://optional.is/required/tag/dashboards/" rel="tag" class="tag">dashboards</a>, <a href="../../../../tag/omnibus/index.html" rel="tag" class="tag">omnibus</a>, <a href="https://optional.is/required/tag/paper/" rel="tag" class="tag">Paper</a>, <a href="https://optional.is/required/tag/travel/" rel="tag" class="tag">Travel</a>, <a href="../../../../tag/updates/index.html" rel="tag" class="tag">updates</a>, <a href="https://optional.is/required/tag/weeknotes/" rel="tag" class="tag">Weeknotes</a></p>				<p style="color: #999">1032 words<br/>Read Time: 6 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3323"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #21ad44">Availability Forecast</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Availability Forecast</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2014-09-30T13:31:46+00:00" style="color: #aaa; font-weight: bold">Tuesday, September 30th, 02014</time>
 				<p class="p-summary entry-summary"><p>Sometimes crazy ideas lead of a day of design challenges. We took our internal availability levels and visualised them as if it were a weather report.</p>
@@ -207,20 +226,20 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/forecast/" title="View all articles in Forecast" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #89c126">Forecast</a>, <a href="https://optional.is/required/category/meta/" title="View all articles in Meta" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b6755d">Meta</a></p><p><strong>Tags:</strong> <a href="../../../../tag/availability/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f24431">availability</a>, <a href="../../../../tag/clouds/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #073cae">clouds</a>, <a href="../../../../tag/forecast-2/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d4e677">forecast</a>, <a href="../../../../tag/icons/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bd2119">icons</a>, <a href="../../../../tag/weather/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aab92e">weather</a>, <a href="../../../../tag/widget/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9d2b1a">widget</a></p>				<p style="color: #999">1012 words<br/>Read Time: 6 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="../../../forecast/index.html" title="View all articles in Forecast" rel="tag category" class="category">Forecast</a>, <a href="../../index.html" title="View all articles in Meta" rel="tag category" class="category">Meta</a></p><p><strong>Tags:</strong> <a href="../../../../tag/availability/index.html" rel="tag" class="tag">availability</a>, <a href="../../../../tag/clouds/index.html" rel="tag" class="tag">clouds</a>, <a href="../../../../tag/forecast-2/index.html" rel="tag" class="tag">forecast</a>, <a href="../../../../tag/icons/index.html" rel="tag" class="tag">icons</a>, <a href="../../../../tag/weather/index.html" rel="tag" class="tag">weather</a>, <a href="../../../../tag/widget/index.html" rel="tag" class="tag">widget</a></p>				<p style="color: #999">1012 words<br/>Read Time: 6 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2934"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #8746b7">02013 Annual Report</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">02013 Annual Report</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2014-01-22T22:22:42+00:00" style="color: #aaa; font-weight: bold">Wednesday, January 22nd, 02014</time>
 				<p class="p-summary entry-summary"><p>A look back at 02013 to discover how and where our time went and money came from. Hopefully others will find some of these metrics useful in their businesses.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="../../../../2014/01/22/02013-annual-report/index.html" rel="bookmark" title="Permanent Link to 02013 Annual Report">Read more about 02013 Annual Report</a></p>
+				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2014/01/22/02013-annual-report/" rel="bookmark" title="Permanent Link to 02013 Annual Report">Read more about 02013 Annual Report</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/meta/" title="View all articles in Meta" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b6755d">Meta</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/02013/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aab571">02013</a>, <a href="https://optional.is/required/tag/annual-report/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0c1ce">annual report</a>, <a href="https://optional.is/required/tag/projects/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #35a286">projects</a>, <a href="https://optional.is/required/tag/services/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #10cd39">services</a>, <a href="https://optional.is/required/tag/time-tracking/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3d18b5">time tracking</a></p>				<p style="color: #999">2005 words<br/>Read Time: 11 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../index.html" title="View all articles in Meta" rel="tag category" class="category">Meta</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/02013/" rel="tag" class="tag">02013</a>, <a href="https://optional.is/required/tag/annual-report/" rel="tag" class="tag">annual report</a>, <a href="https://optional.is/required/tag/projects/" rel="tag" class="tag">projects</a>, <a href="https://optional.is/required/tag/services/" rel="tag" class="tag">services</a>, <a href="https://optional.is/required/tag/time-tracking/" rel="tag" class="tag">time tracking</a></p>				<p style="color: #999">2005 words<br/>Read Time: 11 minutes</p>
 			</div>
 		</div>
 				
@@ -259,7 +278,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
-			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" width="24.986" height="24.985"/>
 		</g>
 	</g>
 	</symbol>
@@ -308,7 +327,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
 	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
-	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+	<path  d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
 		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
 		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
 		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
@@ -562,6 +581,16 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				}
 			}
 
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus, footer #stripe .item div, footer #links .column ul li { color: #aaa; }
+				footer #stripe {
+					background-color: #444;
+				}
+				footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover, footer #links .column h3 { color: #eee; }
+				footer #stripe .item div:after, footer #links .column h3:after { background-color: #eee; }
+				footer .logo, footer .item svg { fill: #eee; }
+			}
+
 		</style>
 
 		<footer>
@@ -581,7 +610,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -650,3 +679,8 @@ pageTracker._trackPageview();
 </html>
 
 
+
+<!-- Dynamic page generated in 0.222 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-04-16 14:13:22 -->
+
+<!-- super cache -->

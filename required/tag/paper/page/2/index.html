@@ -59,6 +59,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			a:active { position: relative; top:1px; }
 			
 			#categories li, #address li { width: 32%; float: left;}
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 			
 			@media only screen and (max-width: 960px) {
 				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
@@ -75,7 +79,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				.stretched, .main, .sub, .feature { height: auto; }
 				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
 				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				h1, h2, p, .call-out a span { width: auto; clear:both }
 				.thumbnail a { max-height: 200px; }
 				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 				#address li { width: auto; float: none;}
@@ -94,6 +98,18 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			.section { padding-top: 50px; }
 			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
+				a { color: #75b6ff; }
+				.call-out a:hover, li a:hover { background-color: #444;}
+				h1, h2 { color: #ddd; border-top: 1px solid #444; }
+				p { color: #ccc; }
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -133,6 +149,9 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				color: white;
 			}
 
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
 		</style>
 		<header>
 			<a href="../../../../../index.html" id="header">(optional.is)</a>
@@ -158,20 +177,20 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 		</div>
 							<div class="row section" id="post-3063"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #46d4e9">Week #163</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #163</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2014-03-28T21:12:17+00:00" style="color: #aaa; font-weight: bold">Friday, March 28th, 02014</time>
 				<p class="p-summary entry-summary"><p>Another busy and interesting week, 163 is wild and crazy number. A few set-backs, but we&#8217;ve launched our new project: analog.is</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2014/03/28/week-163/" rel="bookmark" title="Permanent Link to Week #163">Read more about Week #163</a></p>
+				<p><a style="display: block"  class="readmore" href="../../../../2014/03/28/week-163/index.html" rel="bookmark" title="Permanent Link to Week #163">Read more about Week #163</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/adam-buxton/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bb4369">adam buxton</a>, <a href="https://optional.is/required/tag/analog/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #02c9ad">analog</a>, <a href="../../../dconstruct/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5d7e97">dconstruct</a>, <a href="https://optional.is/required/tag/design-march/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9414a5">design march</a>, <a href="https://optional.is/required/tag/kickstarter/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #87ee9f">kickstarter</a>, <a href="https://optional.is/required/tag/neon/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a63728">neon</a>, <a href="https://optional.is/required/tag/oreo/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3417d0">Oreo</a>, <a href="https://optional.is/required/tag/paper/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a></p>				<p style="color: #999">288 words<br/>Read Time: 2 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/adam-buxton/" rel="tag" class="tag">adam buxton</a>, <a href="https://optional.is/required/tag/analog/" rel="tag" class="tag">analog</a>, <a href="../../../dconstruct/index.html" rel="tag" class="tag">dconstruct</a>, <a href="https://optional.is/required/tag/design-march/" rel="tag" class="tag">design march</a>, <a href="https://optional.is/required/tag/kickstarter/" rel="tag" class="tag">kickstarter</a>, <a href="https://optional.is/required/tag/neon/" rel="tag" class="tag">neon</a>, <a href="https://optional.is/required/tag/oreo/" rel="tag" class="tag">Oreo</a>, <a href="https://optional.is/required/tag/paper/" rel="tag" class="tag">Paper</a></p>				<p style="color: #999">288 words<br/>Read Time: 2 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2605"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #067413">Week #130</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #130</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-08-09T14:41:41+00:00" style="color: #aaa; font-weight: bold">Friday, August 9th, 02013</time>
 				<p class="p-summary entry-summary"><p>Weeknotes are a quick and brief review of what we&#8217;ve been up to for the last 7 days. Since this is our first weeknote and we missed the last 129, it&#8217;s a little longer than normal.</p>
@@ -181,11 +200,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/blafell/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cf15c9">blafell</a>, <a href="https://optional.is/required/tag/calendars/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5f12b7">calendars</a>, <a href="https://optional.is/required/tag/dashboard/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #dc7161">dashboard</a>, <a href="https://optional.is/required/tag/hama/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #97dcc8">hama</a>, <a href="https://optional.is/required/tag/helgahell/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9b97ca">helgahell</a>, <a href="https://optional.is/required/tag/mosfell/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a74f77">mosfell</a>, <a href="https://optional.is/required/tag/mountains/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7c4436">mountains</a>, <a href="https://optional.is/required/tag/paper/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="https://optional.is/required/tag/peppers/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eabdea">peppers</a>, <a href="https://optional.is/required/tag/projects/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #35a286">projects</a>, <a href="https://optional.is/required/tag/weeknotes/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p>				<p style="color: #999">957 words<br/>Read Time: 5 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/blafell/" rel="tag" class="tag">blafell</a>, <a href="https://optional.is/required/tag/calendars/" rel="tag" class="tag">calendars</a>, <a href="https://optional.is/required/tag/dashboard/" rel="tag" class="tag">dashboard</a>, <a href="https://optional.is/required/tag/hama/" rel="tag" class="tag">hama</a>, <a href="https://optional.is/required/tag/helgahell/" rel="tag" class="tag">helgahell</a>, <a href="https://optional.is/required/tag/mosfell/" rel="tag" class="tag">mosfell</a>, <a href="https://optional.is/required/tag/mountains/" rel="tag" class="tag">mountains</a>, <a href="https://optional.is/required/tag/paper/" rel="tag" class="tag">Paper</a>, <a href="https://optional.is/required/tag/peppers/" rel="tag" class="tag">peppers</a>, <a href="https://optional.is/required/tag/projects/" rel="tag" class="tag">projects</a>, <a href="https://optional.is/required/tag/weeknotes/" rel="tag" class="tag">Weeknotes</a></p>				<p style="color: #999">957 words<br/>Read Time: 5 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-326"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #f93893">What are 2D Barcodes?</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">What are 2D Barcodes?</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2009-06-02T20:02:32+00:00" style="color: #aaa; font-weight: bold">Tuesday, June 2nd, 02009</time>
 				<p class="p-summary entry-summary"><p>The world of barcodes is truly black and white. These tiny print-outs of lines and dots act as physical pointers to more digital information. In the past, they have pointed to UPC values in a database, but now their abilities have expanded to much more. The next generation of barcode, the 2D Barcodes could become as ubiquitous as blue hyperlinks as on the web—only time will tell.</p>
@@ -194,11 +213,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a></p><p><strong>Tags:</strong> <a href="../../../2d-barcodes/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f409a4">2D Barcodes</a>, <a href="https://optional.is/required/tag/barcode/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1c80f2">barcode</a>, <a href="https://optional.is/required/tag/barcodes/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e5200a">barcodes</a>, <a href="https://optional.is/required/tag/black-and-white-squares/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #29c87a">black and white squares</a>, <a href="https://optional.is/required/tag/data-matrix/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7dacc9">data matrix</a>, <a href="https://optional.is/required/tag/hyperlink/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0f6811">hyperlink</a>, <a href="https://optional.is/required/tag/maxicode/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b3e72e">maxicode</a>, <a href="https://optional.is/required/tag/paper/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="https://optional.is/required/tag/pdf417/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #43e30e">pdf417</a>, <a href="https://optional.is/required/tag/qr-code/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0b9d04">qr code</a>, <a href="https://optional.is/required/tag/stickers/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a41837">stickers</a></p>				<p style="color: #999">2775 words<br/>Read Time: 15 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" class="category">Paper</a></p><p><strong>Tags:</strong> <a href="../../../2d-barcodes/index.html" rel="tag" class="tag">2D Barcodes</a>, <a href="https://optional.is/required/tag/barcode/" rel="tag" class="tag">barcode</a>, <a href="../../../barcodes/index.html" rel="tag" class="tag">barcodes</a>, <a href="../../../black-and-white-squares/index.html" rel="tag" class="tag">black and white squares</a>, <a href="../../../data-matrix/index.html" rel="tag" class="tag">data matrix</a>, <a href="../../../hyperlink/index.html" rel="tag" class="tag">hyperlink</a>, <a href="../../../maxicode/index.html" rel="tag" class="tag">maxicode</a>, <a href="https://optional.is/required/tag/paper/" rel="tag" class="tag">Paper</a>, <a href="../../../pdf417/index.html" rel="tag" class="tag">pdf417</a>, <a href="../../../qr-code/index.html" rel="tag" class="tag">qr code</a>, <a href="../../../stickers/index.html" rel="tag" class="tag">stickers</a></p>				<p style="color: #999">2775 words<br/>Read Time: 15 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-15"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #b5fefe">Introducing: The PaperNet</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Introducing: The PaperNet</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2009-04-29T01:10:43+00:00" style="color: #aaa; font-weight: bold">Wednesday, April 29th, 02009</time>
 				<p class="p-summary entry-summary"><p>The PaperNet is an attempt at surfing the web on paper rather than a computer. Connecting the digital world to the tactile world of paper is not only possible, but in many respects is a better experience than on a computer screen. The ability to print-on-demand, customized paperNet browsers to suit your needs demonstrates the flexibility of Internet data on a printed medium.</p>
@@ -208,11 +227,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/dynamic/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b72f3b">dynamic</a>, <a href="https://optional.is/required/tag/internet/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c35815">internet</a>, <a href="https://optional.is/required/tag/maps/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7e9447">maps</a>, <a href="https://optional.is/required/tag/microprinter/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #dc3f60">microprinter</a>, <a href="https://optional.is/required/tag/moleskine/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a4bce1">moleskine</a>, <a href="https://optional.is/required/tag/paper/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="https://optional.is/required/tag/paper-browser/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2fa11e">paper browser</a>, <a href="https://optional.is/required/tag/papernet/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a2458a">papernet</a>, <a href="https://optional.is/required/tag/paperwiki/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bd42c9">paperwiki</a>, <a href="https://optional.is/required/tag/papyrus/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2e378c">papyrus</a>, <a href="https://optional.is/required/tag/parchment/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cc1681">parchment</a>, <a href="https://optional.is/required/tag/pocketmod/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #fe8e85">pocketmod</a>, <a href="https://optional.is/required/tag/print-on-demand/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a96e7c">print-on-demand</a>, <a href="https://optional.is/required/tag/silk/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #533907">silk</a>, <a href="https://optional.is/required/tag/travel/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1fb0f9">Travel</a>, <a href="https://optional.is/required/tag/vellum/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f9d629">vellum</a></p>				<p style="color: #999">3077 words<br/>Read Time: 17 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" class="category">Paper</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/dynamic/" rel="tag" class="tag">dynamic</a>, <a href="https://optional.is/required/tag/internet/" rel="tag" class="tag">internet</a>, <a href="https://optional.is/required/tag/maps/" rel="tag" class="tag">maps</a>, <a href="https://optional.is/required/tag/microprinter/" rel="tag" class="tag">microprinter</a>, <a href="https://optional.is/required/tag/moleskine/" rel="tag" class="tag">moleskine</a>, <a href="https://optional.is/required/tag/paper/" rel="tag" class="tag">Paper</a>, <a href="https://optional.is/required/tag/paper-browser/" rel="tag" class="tag">paper browser</a>, <a href="https://optional.is/required/tag/papernet/" rel="tag" class="tag">papernet</a>, <a href="https://optional.is/required/tag/paperwiki/" rel="tag" class="tag">paperwiki</a>, <a href="https://optional.is/required/tag/papyrus/" rel="tag" class="tag">papyrus</a>, <a href="https://optional.is/required/tag/parchment/" rel="tag" class="tag">parchment</a>, <a href="https://optional.is/required/tag/pocketmod/" rel="tag" class="tag">pocketmod</a>, <a href="https://optional.is/required/tag/print-on-demand/" rel="tag" class="tag">print-on-demand</a>, <a href="https://optional.is/required/tag/silk/" rel="tag" class="tag">silk</a>, <a href="https://optional.is/required/tag/travel/" rel="tag" class="tag">Travel</a>, <a href="https://optional.is/required/tag/vellum/" rel="tag" class="tag">vellum</a></p>				<p style="color: #999">3077 words<br/>Read Time: 17 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-231"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #397a93">2× Paper</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">2× Paper</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2009-04-09T13:31:32+00:00" style="color: #aaa; font-weight: bold">Thursday, April 9th, 02009</time>
 				<p class="p-summary entry-summary"><p>2× Paper is an attempt at double packing the amount of data into a single unit of area. There are several possible ways to increase information density, some are more realistic than others. This is an exploration of using simple and existing tools to deal with isolating information density.</p>
@@ -221,7 +240,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a></p><p><strong>Tags:</strong> <a href="../../../2x-paper/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #777f67">2x paper</a>, <a href="../../../3d-glasses/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #89dd37">3d glasses</a>, <a href="../../../blue/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #48d621">blue</a>, <a href="../../../color-wheel/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2413a1">color wheel</a>, <a href="../../../double-pack/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #294f88">double pack</a>, <a href="../../../filters/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2c9885">filters</a>, <a href="https://optional.is/required/tag/paper/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="../../../red/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bda964">red</a>, <a href="../../../wavelengths/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #55c7c1">wavelengths</a></p>				<p style="color: #999">1717 words<br/>Read Time: 10 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" class="category">Paper</a></p><p><strong>Tags:</strong> <a href="../../../2x-paper/index.html" rel="tag" class="tag">2x paper</a>, <a href="../../../3d-glasses/index.html" rel="tag" class="tag">3d glasses</a>, <a href="../../../blue/index.html" rel="tag" class="tag">blue</a>, <a href="../../../color-wheel/index.html" rel="tag" class="tag">color wheel</a>, <a href="../../../double-pack/index.html" rel="tag" class="tag">double pack</a>, <a href="../../../filters/index.html" rel="tag" class="tag">filters</a>, <a href="https://optional.is/required/tag/paper/" rel="tag" class="tag">Paper</a>, <a href="../../../red/index.html" rel="tag" class="tag">red</a>, <a href="../../../wavelengths/index.html" rel="tag" class="tag">wavelengths</a></p>				<p style="color: #999">1717 words<br/>Read Time: 10 minutes</p>
 			</div>
 		</div>
 				
@@ -260,7 +279,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
-			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" width="24.986" height="24.985"/>
 		</g>
 	</g>
 	</symbol>
@@ -309,7 +328,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
 	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
-	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+	<path  d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
 		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
 		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
 		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
@@ -563,6 +582,16 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				}
 			}
 
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus, footer #stripe .item div, footer #links .column ul li { color: #aaa; }
+				footer #stripe {
+					background-color: #444;
+				}
+				footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover, footer #links .column h3 { color: #eee; }
+				footer #stripe .item div:after, footer #links .column h3:after { background-color: #eee; }
+				footer .logo, footer .item svg { fill: #eee; }
+			}
+
 		</style>
 
 		<footer>
@@ -582,7 +611,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -651,3 +680,8 @@ pageTracker._trackPageview();
 </html>
 
 
+
+<!-- Dynamic page generated in 0.163 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-04-16 14:13:33 -->
+
+<!-- super cache -->

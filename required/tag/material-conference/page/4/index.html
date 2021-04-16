@@ -59,6 +59,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			a:active { position: relative; top:1px; }
 			
 			#categories li, #address li { width: 32%; float: left;}
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 			
 			@media only screen and (max-width: 960px) {
 				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
@@ -75,7 +79,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				.stretched, .main, .sub, .feature { height: auto; }
 				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
 				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				h1, h2, p, .call-out a span { width: auto; clear:both }
 				.thumbnail a { max-height: 200px; }
 				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 				#address li { width: auto; float: none;}
@@ -94,6 +98,18 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			.section { padding-top: 50px; }
 			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
+				a { color: #75b6ff; }
+				.call-out a:hover, li a:hover { background-color: #444;}
+				h1, h2 { color: #ddd; border-top: 1px solid #444; }
+				p { color: #ccc; }
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -133,6 +149,9 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				color: white;
 			}
 
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
 		</style>
 		<header>
 			<a href="../../../../../index.html" id="header">(optional.is)</a>
@@ -157,8 +176,21 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<li><a href="https://optional.is/required/category/applications//"><span style="border-left: 10px solid #1ddf33;">Applications</span></a></li><li><a href="https://optional.is/required/category/briefs//"><span style="border-left: 10px solid #aa8c5b;">Briefs</span></a></li><li><a href="https://optional.is/required/category/cartography//"><span style="border-left: 10px solid #992978;">Cartography</span></a></li><li><a href="https://optional.is/required/category/case-studies//"><span style="border-left: 10px solid #a0d2b6;">Case Studies</span></a></li><li><a href="https://optional.is/required/category/chromatics//"><span style="border-left: 10px solid #1e7940;">Chromatics</span></a></li><li><a href="https://optional.is/required/category/community//"><span style="border-left: 10px solid #7d6198;">Community</span></a></li><li><a href="https://optional.is/required/category/conferences//"><span style="border-left: 10px solid #d70b59;">Conferences</span></a></li><li><a href="https://optional.is/required/category/education//"><span style="border-left: 10px solid #de7a22;">Education</span></a></li><li><a href="https://optional.is/required/category/experiments//"><span style="border-left: 10px solid #482926;">Experiments</span></a></li><li><a href="https://optional.is/required/category/forecast//"><span style="border-left: 10px solid #89c126;">Forecast</span></a></li><li><a href="https://optional.is/required/category/interfaces//"><span style="border-left: 10px solid #756640;">Interfaces</span></a></li><li><a href="https://optional.is/required/category/material//"><span style="border-left: 10px solid #d92a83;">Material</span></a></li><li><a href="https://optional.is/required/category/meta//"><span style="border-left: 10px solid #b6755d;">Meta</span></a></li><li><a href="https://optional.is/required/category/paper//"><span style="border-left: 10px solid #d0a662;">Paper</span></a></li><li><a href="https://optional.is/required/category/place//"><span style="border-left: 10px solid #7b9cf0;">Place</span></a></li><li><a href="https://optional.is/required/category/privacy//"><span style="border-left: 10px solid #c5f29b;">Privacy</span></a></li><li><a href="https://optional.is/required/category/sports//"><span style="border-left: 10px solid #918e18;">Sports</span></a></li><li><a href="https://optional.is/required/category/storytelling//"><span style="border-left: 10px solid #d4ccb5;">Storytelling</span></a></li><li><a href="https://optional.is/required/category/t-shirts//"><span style="border-left: 10px solid #bafe5c;">T-Shirts</span></a></li><li><a href="https://optional.is/required/category/temporality//"><span style="border-left: 10px solid #504c77;">Temporality</span></a></li><li><a href="https://optional.is/required/category/travel//"><span style="border-left: 10px solid #1fb0f9;">Travel</span></a></li><li><a href="https://optional.is/required/category/tutorial//"><span style="border-left: 10px solid #368fe7;">Tutorial</span></a></li><li><a href="https://optional.is/required/category/visualizations//"><span style="border-left: 10px solid #b10ac6;">Visualizations</span></a></li><li><a href="https://optional.is/required/category/weeknotes//"><span style="border-left: 10px solid #138567;">Weeknotes</span></a></li><li><a href="https://optional.is/required/category/youre-doing-it-wrong//"><span style="border-left: 10px solid #96e20d;">You're doing it wrong</span></a></li>					</ul>
 			</div>
 		</div>
-							<div class="row section" id="post-4155"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #9db997">Material:  Stories and the web &#8211; BBC R&#038;D &#8211; Tristan Ferne</h1>
+							<div class="row section" id="post-4145"  >
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Material: Flow meditation &#8211; Tristan Gribbin</h1>
+			<div class="box1" >
+				<time class="dt-published date published" datetime="2019-11-05T11:11:51+00:00" style="color: #aaa; font-weight: bold">Tuesday, November 5th, 02019</time>
+				<p class="p-summary entry-summary"><p>Tristan walks the audience through some basic meditation techniques and we learn more about how technology is helping us achieve calm in a new and faster way.</p>
+</p>
+				<p><a style="display: block"  class="readmore" href="../../../../2019/11/05/material-flow-meditation-tristan-gribbin/index.html" rel="bookmark" title="Permanent Link to Material: Flow meditation &#8211; Tristan Gribbin">Read more about Material: Flow meditation &#8211; Tristan Gribbin</a></p>
+			</div>
+			<div class="box1 postmetadata">
+
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" class="category">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2017/" rel="tag" class="tag">2017</a>, <a href="https://optional.is/required/tag/flow/" rel="tag" class="tag">flow</a>, <a href="https://optional.is/required/tag/iceland/" rel="tag" class="tag">iceland</a>, <a href="https://optional.is/required/tag/material/" rel="tag" class="tag">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" class="tag">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" class="tag">material.is</a>, <a href="https://optional.is/required/tag/meditation/" rel="tag" class="tag">meditation</a>, <a href="https://optional.is/required/tag/mindfullness/" rel="tag" class="tag">mindfullness</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" class="tag">Synopses</a>, <a href="https://optional.is/required/tag/vr/" rel="tag" class="tag">VR</a></p>				<p style="color: #999">574 words<br/>Read Time: 3 minutes</p>
+			</div>
+		</div>
+				<div class="row section" id="post-4155"  >
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Material:  Stories and the web &#8211; BBC R&#038;D &#8211; Tristan Ferne</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2019-10-29T11:11:02+00:00" style="color: #aaa; font-weight: bold">Tuesday, October 29th, 02019</time>
 				<p class="p-summary entry-summary"><p>Tristan Ferne, the lead producer at BBC Research &#038; Development, talks to us about stories, storytelling and how the BBC is experimenting with perceptive media.</p>
@@ -167,11 +199,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d92a83">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2017/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8d8818">2017</a>, <a href="https://optional.is/required/tag/audio/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a5ca0b">audio</a>, <a href="https://optional.is/required/tag/bbc/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a61d00">BBC</a>, <a href="https://optional.is/required/tag/cake/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a1b858">cake</a>, <a href="https://optional.is/required/tag/cooking/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #739b1f">cooking</a>, <a href="https://optional.is/required/tag/material/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eec34d">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bc5b2b">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8c0d9f">material.is</a>, <a href="https://optional.is/required/tag/perceptive-media/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c704fc">Perceptive Media</a>, <a href="https://optional.is/required/tag/radio/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1f32d2">Radio</a>, <a href="https://optional.is/required/tag/stories/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5e0bfe">stories</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #35e5f9">Synopses</a>, <a href="https://optional.is/required/tag/tv/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #271ddf">TV</a></p>				<p style="color: #999">575 words<br/>Read Time: 3 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" class="category">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2017/" rel="tag" class="tag">2017</a>, <a href="https://optional.is/required/tag/audio/" rel="tag" class="tag">audio</a>, <a href="https://optional.is/required/tag/bbc/" rel="tag" class="tag">BBC</a>, <a href="https://optional.is/required/tag/cake/" rel="tag" class="tag">cake</a>, <a href="https://optional.is/required/tag/cooking/" rel="tag" class="tag">cooking</a>, <a href="https://optional.is/required/tag/material/" rel="tag" class="tag">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" class="tag">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" class="tag">material.is</a>, <a href="https://optional.is/required/tag/perceptive-media/" rel="tag" class="tag">Perceptive Media</a>, <a href="https://optional.is/required/tag/radio/" rel="tag" class="tag">Radio</a>, <a href="https://optional.is/required/tag/stories/" rel="tag" class="tag">stories</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" class="tag">Synopses</a>, <a href="https://optional.is/required/tag/tv/" rel="tag" class="tag">TV</a></p>				<p style="color: #999">575 words<br/>Read Time: 3 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-4165"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #287b04">Material: Fine art ingredient of the web &#8211; Goddur</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Material: Fine art ingredient of the web &#8211; Goddur</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2019-10-22T11:11:16+00:00" style="color: #aaa; font-weight: bold">Tuesday, October 22nd, 02019</time>
 				<p class="p-summary entry-summary"><p>The context of ideas from classical art such as the vanishing point and the perspective of the renaissance to the pixels of Mondrian and Kazimir Malevich. The devices and the tools that the creators of the web have permanently at hand.</p>
@@ -180,11 +212,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d92a83">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2017/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8d8818">2017</a>, <a href="https://optional.is/required/tag/analog/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #02c9ad">analog</a>, <a href="https://optional.is/required/tag/design/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #31c13f">design</a>, <a href="https://optional.is/required/tag/material/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eec34d">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bc5b2b">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8c0d9f">material.is</a>, <a href="https://optional.is/required/tag/stories/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5e0bfe">stories</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #35e5f9">Synopses</a></p>				<p style="color: #999">402 words<br/>Read Time: 2 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" class="category">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2017/" rel="tag" class="tag">2017</a>, <a href="https://optional.is/required/tag/analog/" rel="tag" class="tag">analog</a>, <a href="https://optional.is/required/tag/design/" rel="tag" class="tag">design</a>, <a href="https://optional.is/required/tag/material/" rel="tag" class="tag">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" class="tag">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" class="tag">material.is</a>, <a href="https://optional.is/required/tag/stories/" rel="tag" class="tag">stories</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" class="tag">Synopses</a></p>				<p style="color: #999">402 words<br/>Read Time: 2 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-4138"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #e1d69c">Material: Poco Apollo &#8211; Halldór Eldjárn</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Material: Poco Apollo &#8211; Halldór Eldjárn</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2019-10-15T11:11:35+00:00" style="color: #aaa; font-weight: bold">Tuesday, October 15th, 02019</time>
 				<p class="p-summary entry-summary"><p>Halldór Eldjárn is a musician &#038; audio developer who will tell us a little story about how he took 15,000 public domain photos from NASA&#8217;s Apollo Space Mission and created a unique soundscape for every single one. </p>
@@ -193,11 +225,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d92a83">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2017/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8d8818">2017</a>, <a href="https://optional.is/required/tag/apollo/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #31f238">apollo</a>, <a href="https://optional.is/required/tag/audio/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a5ca0b">audio</a>, <a href="https://optional.is/required/tag/generative-art/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #23504c">generative art</a>, <a href="https://optional.is/required/tag/material/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eec34d">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bc5b2b">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8c0d9f">material.is</a>, <a href="https://optional.is/required/tag/nasa/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1f9977">NASA</a>, <a href="https://optional.is/required/tag/sound/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0b8263">sound</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #35e5f9">Synopses</a></p>				<p style="color: #999">785 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" class="category">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2017/" rel="tag" class="tag">2017</a>, <a href="https://optional.is/required/tag/apollo/" rel="tag" class="tag">apollo</a>, <a href="https://optional.is/required/tag/audio/" rel="tag" class="tag">audio</a>, <a href="https://optional.is/required/tag/generative-art/" rel="tag" class="tag">generative art</a>, <a href="https://optional.is/required/tag/material/" rel="tag" class="tag">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" class="tag">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" class="tag">material.is</a>, <a href="https://optional.is/required/tag/nasa/" rel="tag" class="tag">NASA</a>, <a href="https://optional.is/required/tag/sound/" rel="tag" class="tag">sound</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" class="tag">Synopses</a></p>				<p style="color: #999">785 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-4190"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #38beea">Material: Psychology and the Web &#8211; Amber Wilson</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Material: Psychology and the Web &#8211; Amber Wilson</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2019-10-08T11:11:01+00:00" style="color: #aaa; font-weight: bold">Tuesday, October 8th, 02019</time>
 				<p class="p-summary entry-summary"><p>Amber Wilson worked in the field of Psychology for many years and is now a budding Web developer at a design agency in Brighton. New to Web development, she is continually eager to improve her skills.</p>
@@ -206,20 +238,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d92a83">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2017/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8d8818">2017</a>, <a href="https://optional.is/required/tag/material/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eec34d">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bc5b2b">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8c0d9f">material.is</a>, <a href="https://optional.is/required/tag/psycology/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #365e8c">psycology</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #35e5f9">Synopses</a>, <a href="https://optional.is/required/tag/web/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2567a5">web</a></p>				<p style="color: #999">748 words<br/>Read Time: 4 minutes</p>
-			</div>
-		</div>
-				<div class="row section" id="post-4131"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #90dc01">Material: Omnom Chocolate</h1>
-			<div class="box1" >
-				<time class="dt-published date published" datetime="2019-10-01T11:11:28+00:00" style="color: #aaa; font-weight: bold">Tuesday, October 1st, 02019</time>
-				<p class="p-summary entry-summary"><p>Michael from Omnom Chocoolate walked us through the history of the company. From how it all started in an old petrol station to moving to a new factory and growing the business.</p>
-</p>
-				<p><a style="display: block"  class="readmore" href="../../../../2019/10/01/material-omnom-chocolate/index.html" rel="bookmark" title="Permanent Link to Material: Omnom Chocolate">Read more about Material: Omnom Chocolate</a></p>
-			</div>
-			<div class="box1 postmetadata">
-
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d92a83">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2017/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8d8818">2017</a>, <a href="../../../beans/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e2bbb0">beans</a>, <a href="https://optional.is/required/tag/chocolate/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c37898">chocolate</a>, <a href="../../../cocoa/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1ed76d">cocoa</a>, <a href="https://optional.is/required/tag/material/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eec34d">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bc5b2b">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8c0d9f">material.is</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #35e5f9">Synopses</a></p>				<p style="color: #999">1024 words<br/>Read Time: 6 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" class="category">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2017/" rel="tag" class="tag">2017</a>, <a href="https://optional.is/required/tag/material/" rel="tag" class="tag">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" class="tag">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" class="tag">material.is</a>, <a href="https://optional.is/required/tag/psycology/" rel="tag" class="tag">psycology</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" class="tag">Synopses</a>, <a href="https://optional.is/required/tag/web/" rel="tag" class="tag">web</a></p>				<p style="color: #999">748 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				
@@ -258,7 +277,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
-			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" width="24.986" height="24.985"/>
 		</g>
 	</g>
 	</symbol>
@@ -307,7 +326,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
 	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
-	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+	<path  d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
 		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
 		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
 		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
@@ -561,6 +580,16 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				}
 			}
 
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus, footer #stripe .item div, footer #links .column ul li { color: #aaa; }
+				footer #stripe {
+					background-color: #444;
+				}
+				footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover, footer #links .column h3 { color: #eee; }
+				footer #stripe .item div:after, footer #links .column h3:after { background-color: #eee; }
+				footer .logo, footer .item svg { fill: #eee; }
+			}
+
 		</style>
 
 		<footer>
@@ -580,7 +609,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -649,3 +678,8 @@ pageTracker._trackPageview();
 </html>
 
 
+
+<!-- Dynamic page generated in 0.225 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-04-16 14:16:11 -->
+
+<!-- super cache -->

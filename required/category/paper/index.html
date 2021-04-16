@@ -59,6 +59,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			a:active { position: relative; top:1px; }
 			
 			#categories li, #address li { width: 32%; float: left;}
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 			
 			@media only screen and (max-width: 960px) {
 				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
@@ -75,7 +79,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				.stretched, .main, .sub, .feature { height: auto; }
 				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
 				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				h1, h2, p, .call-out a span { width: auto; clear:both }
 				.thumbnail a { max-height: 200px; }
 				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 				#address li { width: auto; float: none;}
@@ -94,6 +98,18 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			.section { padding-top: 50px; }
 			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
+				a { color: #75b6ff; }
+				.call-out a:hover, li a:hover { background-color: #444;}
+				h1, h2 { color: #ddd; border-top: 1px solid #444; }
+				p { color: #ccc; }
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -133,6 +149,9 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				color: white;
 			}
 
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
 		</style>
 		<header>
 			<a href="../../../index.html" id="header">(optional.is)</a>
@@ -159,7 +178,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 		</div>
 							<div class="row section" id="post-4357"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #943317">Annual Calendar Posters</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Annual Calendar Posters</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2020-10-05T13:31:00+00:00" style="color: #aaa; font-weight: bold">Monday, October 5th, 02020</time>
 				<p class="p-summary entry-summary"><p>It&#8217;s another year, time for another printed A0 annual calendar poster.</p>
@@ -168,24 +187,24 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="index.html" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="../temporality/index.html" title="View all articles in Temporality" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #504c77">Temporality</a>, <a href="../visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../tag/calendar/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0e7b2">calendar</a>, <a href="../../tag/code/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c13367">code</a>, <a href="../../tag/php/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e1bfd7">php</a>, <a href="../../tag/time/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #07cc69">time</a></p>				<p style="color: #999">429 words<br/>Read Time: 2 minutes</p>
+				<p><strong>Categories:</strong> <a href="../briefs/index.html" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="index.html" title="View all articles in Paper" rel="tag category" class="category">Paper</a>, <a href="../temporality/index.html" title="View all articles in Temporality" rel="tag category" class="category">Temporality</a>, <a href="../visualizations/index.html" title="View all articles in Visualizations" rel="tag category" class="category">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../tag/calendar/index.html" rel="tag" class="tag">calendar</a>, <a href="../../tag/code/index.html" rel="tag" class="tag">code</a>, <a href="../../tag/php/index.html" rel="tag" class="tag">php</a>, <a href="../../tag/time/index.html" rel="tag" class="tag">time</a></p>				<p style="color: #999">429 words<br/>Read Time: 2 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-4260"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #411900">SF Symbols Font</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">SF Symbols Font</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2019-11-27T11:11:16+00:00" style="color: #aaa; font-weight: bold">Wednesday, November 27th, 02019</time>
 				<p class="p-summary entry-summary"><p>Apple recently released SF Symbols font. We got all excited and made ourselves a poster of all the options. Here&#8217;s how we and you can do it!</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2019/11/27/sf-symbols-font/" rel="bookmark" title="Permanent Link to SF Symbols Font">Read more about SF Symbols Font</a></p>
+				<p><a style="display: block"  class="readmore" href="../../2019/11/27/sf-symbols-font/index.html" rel="bookmark" title="Permanent Link to SF Symbols Font">Read more about SF Symbols Font</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="../visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../tag/apple/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1f3870">apple</a>, <a href="../../tag/font/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #47a282">font</a>, <a href="../../tag/glyphs/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2feaa1">glyphs</a>, <a href="../../tag/sf-symbols/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cfed0c">Sf Symbols</a>, <a href="../../tag/symbols/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #550357">symbols</a></p>				<p style="color: #999">923 words<br/>Read Time: 5 minutes</p>
+				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Paper" rel="tag category" class="category">Paper</a>, <a href="../visualizations/index.html" title="View all articles in Visualizations" rel="tag category" class="category">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../tag/apple/index.html" rel="tag" class="tag">apple</a>, <a href="../../tag/font/index.html" rel="tag" class="tag">font</a>, <a href="../../tag/glyphs/index.html" rel="tag" class="tag">glyphs</a>, <a href="../../tag/sf-symbols/index.html" rel="tag" class="tag">Sf Symbols</a>, <a href="../../tag/symbols/index.html" rel="tag" class="tag">symbols</a></p>				<p style="color: #999">923 words<br/>Read Time: 5 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3835"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #c04903">Bookblock Original</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Bookblock Original</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2016-10-25T15:51:49+00:00" style="color: #aaa; font-weight: bold">Tuesday, October 25th, 02016</time>
 				<p class="p-summary entry-summary"><p>Many, many months ago, we were asked to submit a design for the new Bookblock Original Series of notebooks. We went through our archive and found something interesting and challenging to test. The results are beyond expectation.</p>
@@ -194,11 +213,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a></p><p><strong>Tags:</strong> <a href="../../tag/bookblock-original/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0abe34">bookblock original</a>, <a href="../../tag/design/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #31c13f">design</a>, <a href="../../tag/japan/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #578ed5">japan</a>, <a href="../../tag/notebook/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #fb5d1b">notebook</a>, <a href="../../tag/shibuya/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2b1e51">Shibuya</a>, <a href="../../tag/tokyo/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ef0cc1">tokyo</a></p>				<p style="color: #999">405 words<br/>Read Time: 2 minutes</p>
+				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Paper" rel="tag category" class="category">Paper</a></p><p><strong>Tags:</strong> <a href="../../tag/bookblock-original/index.html" rel="tag" class="tag">bookblock original</a>, <a href="../../tag/design/index.html" rel="tag" class="tag">design</a>, <a href="../../tag/japan/index.html" rel="tag" class="tag">japan</a>, <a href="../../tag/notebook/index.html" rel="tag" class="tag">notebook</a>, <a href="../../tag/shibuya/index.html" rel="tag" class="tag">Shibuya</a>, <a href="../../tag/tokyo/index.html" rel="tag" class="tag">tokyo</a></p>				<p style="color: #999">405 words<br/>Read Time: 2 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3706"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #3e05ac">Paper Case Packaging</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Paper Case Packaging</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2016-02-17T12:21:11+00:00" style="color: #aaa; font-weight: bold">Wednesday, February 17th, 02016</time>
 				<p class="p-summary entry-summary"><p>After years of sitting on some designs, it wasn&#8217;t until we received a package that we found-out it wasn&#8217;t as unique as we had thought.</p>
@@ -207,11 +226,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="index.html" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a></p><p><strong>Tags:</strong> <a href="../../tag/business-cards/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e103cf">business cards</a>, <a href="../../tag/case/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cd14c3">case</a>, <a href="../../tag/japan/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #578ed5">japan</a>, <a href="../../tag/packaging/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #869b29">packaging</a>, <a href="../../tag/pattern/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #240bf0">pattern</a></p>				<p style="color: #999">427 words<br/>Read Time: 2 minutes</p>
+				<p><strong>Categories:</strong> <a href="../briefs/index.html" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="index.html" title="View all articles in Paper" rel="tag category" class="category">Paper</a></p><p><strong>Tags:</strong> <a href="../../tag/business-cards/index.html" rel="tag" class="tag">business cards</a>, <a href="../../tag/case/index.html" rel="tag" class="tag">case</a>, <a href="../../tag/japan/index.html" rel="tag" class="tag">japan</a>, <a href="../../tag/packaging/index.html" rel="tag" class="tag">packaging</a>, <a href="../../tag/pattern/index.html" rel="tag" class="tag">pattern</a></p>				<p style="color: #999">427 words<br/>Read Time: 2 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3258"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #9322db">Paper Calendars</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Paper Calendars</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2014-08-27T12:21:40+00:00" style="color: #aaa; font-weight: bold">Wednesday, August 27th, 02014</time>
 				<p class="p-summary entry-summary"><p>Staying organized means knowing what is ahead of you. The simplest way we&#8217;ve managed to keep-up with requests, new projects and deadlines are simple paper calendars. You can run the world on a page a day calendar.</p>
@@ -220,7 +239,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="../temporality/index.html" title="View all articles in Temporality" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #504c77">Temporality</a>, <a href="../visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../tag/a4/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0c2f3a">A4</a>, <a href="../../tag/a5/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c6f2f9">A5</a>, <a href="../../tag/a7/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #be523b">A7</a>, <a href="../../tag/booklets/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3fa338">booklets</a>, <a href="../../tag/calendars/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5f12b7">calendars</a>, <a href="../../tag/foldable/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d08cff">foldable</a>, <a href="../../tag/paper/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="../../tag/php/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e1bfd7">php</a>, <a href="../../tag/svg/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ae8eb9">svg</a></p>				<p style="color: #999">1245 words<br/>Read Time: 7 minutes</p>
+				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Paper" rel="tag category" class="category">Paper</a>, <a href="../temporality/index.html" title="View all articles in Temporality" rel="tag category" class="category">Temporality</a>, <a href="../visualizations/index.html" title="View all articles in Visualizations" rel="tag category" class="category">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../tag/a4/index.html" rel="tag" class="tag">A4</a>, <a href="../../tag/a5/index.html" rel="tag" class="tag">A5</a>, <a href="../../tag/a7/index.html" rel="tag" class="tag">A7</a>, <a href="../../tag/booklets/index.html" rel="tag" class="tag">booklets</a>, <a href="../../tag/calendars/index.html" rel="tag" class="tag">calendars</a>, <a href="../../tag/foldable/index.html" rel="tag" class="tag">foldable</a>, <a href="../../tag/paper/index.html" rel="tag" class="tag">Paper</a>, <a href="../../tag/php/index.html" rel="tag" class="tag">php</a>, <a href="../../tag/svg/index.html" rel="tag" class="tag">svg</a></p>				<p style="color: #999">1245 words<br/>Read Time: 7 minutes</p>
 			</div>
 		</div>
 				
@@ -259,7 +278,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
-			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" width="24.986" height="24.985"/>
 		</g>
 	</g>
 	</symbol>
@@ -308,7 +327,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
 	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
-	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+	<path  d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
 		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
 		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
 		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
@@ -562,6 +581,16 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				}
 			}
 
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus, footer #stripe .item div, footer #links .column ul li { color: #aaa; }
+				footer #stripe {
+					background-color: #444;
+				}
+				footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover, footer #links .column h3 { color: #eee; }
+				footer #stripe .item div:after, footer #links .column h3:after { background-color: #eee; }
+				footer .logo, footer .item svg { fill: #eee; }
+			}
+
 		</style>
 
 		<footer>
@@ -581,7 +610,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -650,3 +679,8 @@ pageTracker._trackPageview();
 </html>
 
 
+
+<!-- Dynamic page generated in 0.181 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-04-16 14:07:13 -->
+
+<!-- super cache -->

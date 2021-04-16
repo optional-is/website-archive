@@ -59,6 +59,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			a:active { position: relative; top:1px; }
 			
 			#categories li, #address li { width: 32%; float: left;}
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 			
 			@media only screen and (max-width: 960px) {
 				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
@@ -75,7 +79,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				.stretched, .main, .sub, .feature { height: auto; }
 				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
 				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				h1, h2, p, .call-out a span { width: auto; clear:both }
 				.thumbnail a { max-height: 200px; }
 				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 				#address li { width: auto; float: none;}
@@ -94,6 +98,18 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			.section { padding-top: 50px; }
 			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
+				a { color: #75b6ff; }
+				.call-out a:hover, li a:hover { background-color: #444;}
+				h1, h2 { color: #ddd; border-top: 1px solid #444; }
+				p { color: #ccc; }
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -133,6 +149,9 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				color: white;
 			}
 
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
 		</style>
 		<header>
 			<a href="../../../../../index.html" id="header">(optional.is)</a>
@@ -159,7 +178,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 		</div>
 							<div class="row section" id="post-2295"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #f636a6">Calendar Business Cards</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Calendar Business Cards</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2012-08-20T12:21:22+00:00" style="color: #aaa; font-weight: bold">Monday, August 20th, 02012</time>
 				<p class="p-summary entry-summary"><p>As a challenge, is it possible to re-invent the year calendar through a different lens? Rather than appointments, red days or other events, what if we put the days of the week first rather than the number? Then, to top it all off, what if you had to fit it onto a business card? This articles walks you through the process, the pitfalls and links to some code so you can make your own designs.</p>
@@ -168,11 +187,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="https://optional.is/required/category/storytelling/" title="View all articles in Storytelling" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d4ccb5">Storytelling</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/business-cards/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e103cf">business cards</a>, <a href="https://optional.is/required/tag/calendar/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0e7b2">calendar</a>, <a href="../../../../tag/moo/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b7d192">moo</a>, <a href="https://optional.is/required/tag/time/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #07cc69">time</a></p>				<p style="color: #999">1441 words<br/>Read Time: 8 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" class="category">Paper</a>, <a href="https://optional.is/required/category/storytelling/" title="View all articles in Storytelling" rel="tag category" class="category">Storytelling</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" class="category">Visualizations</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/business-cards/" rel="tag" class="tag">business cards</a>, <a href="https://optional.is/required/tag/calendar/" rel="tag" class="tag">calendar</a>, <a href="../../../../tag/moo/index.html" rel="tag" class="tag">moo</a>, <a href="https://optional.is/required/tag/time/" rel="tag" class="tag">time</a></p>				<p style="color: #999">1441 words<br/>Read Time: 8 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-1897"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #8e565d">Titanic: Behind the numbers</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Titanic: Behind the numbers</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2012-04-25T10:01:29+00:00" style="color: #aaa; font-weight: bold">Wednesday, April 25th, 02012</time>
 				<p class="p-summary entry-summary"><p>100 years ago, the RMS Titanic set of on her maiden voyage only to strike tragedy two days later. If we look at the passenger list, what sort of additional information can be gleaned from the data?</p>
@@ -181,11 +200,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/storytelling/" title="View all articles in Storytelling" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d4ccb5">Storytelling</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/anniversary/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #69ebc8">anniversary</a>, <a href="https://optional.is/required/tag/charts/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cc1889">charts</a>, <a href="../../../../tag/crash/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #dcaa9f">crash</a>, <a href="../../../../tag/death/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2e8d6d">death</a>, <a href="https://optional.is/required/tag/graphs/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e8706a">graphs</a>, <a href="../../../../tag/iceberg/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #46ebfd">iceberg</a>, <a href="../../../../tag/skype/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d421c3">skype</a>, <a href="../../../../tag/survivors/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #02ddbd">survivors</a>, <a href="../../../../tag/titanic/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7f1167">titanic</a>, <a href="https://optional.is/required/tag/visualizations/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p>				<p style="color: #999">1658 words<br/>Read Time: 9 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/storytelling/" title="View all articles in Storytelling" rel="tag category" class="category">Storytelling</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" class="category">Visualizations</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/anniversary/" rel="tag" class="tag">anniversary</a>, <a href="https://optional.is/required/tag/charts/" rel="tag" class="tag">charts</a>, <a href="../../../../tag/crash/index.html" rel="tag" class="tag">crash</a>, <a href="../../../../tag/death/index.html" rel="tag" class="tag">death</a>, <a href="https://optional.is/required/tag/graphs/" rel="tag" class="tag">graphs</a>, <a href="../../../../tag/iceberg/index.html" rel="tag" class="tag">iceberg</a>, <a href="../../../../tag/skype/index.html" rel="tag" class="tag">skype</a>, <a href="../../../../tag/survivors/index.html" rel="tag" class="tag">survivors</a>, <a href="../../../../tag/titanic/index.html" rel="tag" class="tag">titanic</a>, <a href="https://optional.is/required/tag/visualizations/" rel="tag" class="tag">Visualizations</a></p>				<p style="color: #999">1658 words<br/>Read Time: 9 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2055"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #856532">1,000 year game challenge!</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">1,000 year game challenge!</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2011-08-22T14:41:34+00:00" style="color: #aaa; font-weight: bold">Monday, August 22nd, 02011</time>
 				<p class="p-summary entry-summary"><p>The official submissions for the 1,000 year game state that the rules should not be longer than 1,000 words. Since this was my first foray into game design, I also wanted to publish my thoughts and some of my decisions.</p>
@@ -194,11 +213,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/community/" title="View all articles in Community" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7d6198">Community</a>, <a href="https://optional.is/required/category/storytelling/" title="View all articles in Storytelling" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d4ccb5">Storytelling</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/1000-years/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9c3469">1000 years</a>, <a href="https://optional.is/required/tag/game/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c8d46d">game</a>, <a href="https://optional.is/required/tag/long-now/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #62ee23">long now</a>, <a href="https://optional.is/required/tag/oral-tradition/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6583c3">oral tradition</a></p>				<p style="color: #999">1139 words<br/>Read Time: 6 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/community/" title="View all articles in Community" rel="tag category" class="category">Community</a>, <a href="https://optional.is/required/category/storytelling/" title="View all articles in Storytelling" rel="tag category" class="category">Storytelling</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/1000-years/" rel="tag" class="tag">1000 years</a>, <a href="https://optional.is/required/tag/game/" rel="tag" class="tag">game</a>, <a href="https://optional.is/required/tag/long-now/" rel="tag" class="tag">long now</a>, <a href="https://optional.is/required/tag/oral-tradition/" rel="tag" class="tag">oral tradition</a></p>				<p style="color: #999">1139 words<br/>Read Time: 6 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2058"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #47c8b5">Millennium Saga</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Millennium Saga</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2011-08-22T14:41:07+00:00" style="color: #aaa; font-weight: bold">Monday, August 22nd, 02011</time>
 				<p class="p-summary entry-summary"><p>The Millennium Saga is a game which takes 1,000 years to complete. This is my submission to the Thousand Year Game competition. The idea is to get the players to think in the long term, and poetry which takes 1,000 years of compromise, revision and history certain forces you avoid short-term gains.</p>
@@ -207,11 +226,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/community/" title="View all articles in Community" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7d6198">Community</a>, <a href="https://optional.is/required/category/storytelling/" title="View all articles in Storytelling" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d4ccb5">Storytelling</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/1000-years/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9c3469">1000 years</a>, <a href="https://optional.is/required/tag/game/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c8d46d">game</a>, <a href="https://optional.is/required/tag/long-now/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #62ee23">long now</a>, <a href="https://optional.is/required/tag/oral-tradition/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6583c3">oral tradition</a></p>				<p style="color: #999">894 words<br/>Read Time: 5 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/community/" title="View all articles in Community" rel="tag category" class="category">Community</a>, <a href="https://optional.is/required/category/storytelling/" title="View all articles in Storytelling" rel="tag category" class="category">Storytelling</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/1000-years/" rel="tag" class="tag">1000 years</a>, <a href="https://optional.is/required/tag/game/" rel="tag" class="tag">game</a>, <a href="https://optional.is/required/tag/long-now/" rel="tag" class="tag">long now</a>, <a href="https://optional.is/required/tag/oral-tradition/" rel="tag" class="tag">oral tradition</a></p>				<p style="color: #999">894 words<br/>Read Time: 5 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-1529"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #4f1e10">The Monkey and the Wizard</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">The Monkey and the Wizard</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2010-09-29T13:31:48+00:00" style="color: #aaa; font-weight: bold">Wednesday, September 29th, 02010</time>
 				<p class="p-summary entry-summary"><p>Journey to the West is regarded as one of the four great Chinese classics. Many stories have lifted a similar premise of the travelers&#8217; tale, but aren&#8217;t quite the same. There are striking similarities and difference when looking at the story line of Monkey when compared to The Wonderful Wizard of Oz. Both of which are very popular tales. But how can we apply this narrative structure in other endeavors such as game design?</p>
@@ -220,7 +239,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/storytelling/" title="View all articles in Storytelling" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d4ccb5">Storytelling</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/buddhism/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3db247">Buddhism</a>, <a href="https://optional.is/required/tag/games/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9cfa7a">games</a>, <a href="https://optional.is/required/tag/gaming/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #967ef2">gaming</a>, <a href="https://optional.is/required/tag/india/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7d31e0">India</a>, <a href="https://optional.is/required/tag/journey-to-the-west/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7a3a22">Journey to the West</a>, <a href="https://optional.is/required/tag/levels/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #836eb5">levels</a>, <a href="https://optional.is/required/tag/loop/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e48b98">loop</a>, <a href="https://optional.is/required/tag/monkey/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #412696">Monkey</a>, <a href="https://optional.is/required/tag/oz/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0adaee">Oz</a>, <a href="https://optional.is/required/tag/progression/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9dc57f">progression</a>, <a href="https://optional.is/required/tag/video-games/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2800cc">video games</a>, <a href="https://optional.is/required/tag/wizard/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5af874">Wizard</a>, <a href="https://optional.is/required/tag/wizard-of-oz/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c02799">Wizard of Oz</a></p>				<p style="color: #999">1644 words<br/>Read Time: 9 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/storytelling/" title="View all articles in Storytelling" rel="tag category" class="category">Storytelling</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/buddhism/" rel="tag" class="tag">Buddhism</a>, <a href="https://optional.is/required/tag/games/" rel="tag" class="tag">games</a>, <a href="https://optional.is/required/tag/gaming/" rel="tag" class="tag">gaming</a>, <a href="../../../../tag/india/index.html" rel="tag" class="tag">India</a>, <a href="https://optional.is/required/tag/journey-to-the-west/" rel="tag" class="tag">Journey to the West</a>, <a href="https://optional.is/required/tag/levels/" rel="tag" class="tag">levels</a>, <a href="https://optional.is/required/tag/loop/" rel="tag" class="tag">loop</a>, <a href="https://optional.is/required/tag/monkey/" rel="tag" class="tag">Monkey</a>, <a href="https://optional.is/required/tag/oz/" rel="tag" class="tag">Oz</a>, <a href="https://optional.is/required/tag/progression/" rel="tag" class="tag">progression</a>, <a href="https://optional.is/required/tag/video-games/" rel="tag" class="tag">video games</a>, <a href="https://optional.is/required/tag/wizard/" rel="tag" class="tag">Wizard</a>, <a href="https://optional.is/required/tag/wizard-of-oz/" rel="tag" class="tag">Wizard of Oz</a></p>				<p style="color: #999">1644 words<br/>Read Time: 9 minutes</p>
 			</div>
 		</div>
 				
@@ -259,7 +278,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
-			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" width="24.986" height="24.985"/>
 		</g>
 	</g>
 	</symbol>
@@ -308,7 +327,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
 	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
-	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+	<path  d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
 		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
 		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
 		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
@@ -562,6 +581,16 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				}
 			}
 
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus, footer #stripe .item div, footer #links .column ul li { color: #aaa; }
+				footer #stripe {
+					background-color: #444;
+				}
+				footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover, footer #links .column h3 { color: #eee; }
+				footer #stripe .item div:after, footer #links .column h3:after { background-color: #eee; }
+				footer .logo, footer .item svg { fill: #eee; }
+			}
+
 		</style>
 
 		<footer>
@@ -581,7 +610,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -650,3 +679,8 @@ pageTracker._trackPageview();
 </html>
 
 
+
+<!-- Dynamic page generated in 0.177 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-04-16 14:05:06 -->
+
+<!-- super cache -->

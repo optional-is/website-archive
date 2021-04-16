@@ -59,6 +59,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			a:active { position: relative; top:1px; }
 			
 			#categories li, #address li { width: 32%; float: left;}
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 			
 			@media only screen and (max-width: 960px) {
 				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
@@ -75,7 +79,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				.stretched, .main, .sub, .feature { height: auto; }
 				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
 				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				h1, h2, p, .call-out a span { width: auto; clear:both }
 				.thumbnail a { max-height: 200px; }
 				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 				#address li { width: auto; float: none;}
@@ -94,6 +98,18 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			.section { padding-top: 50px; }
 			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
+				a { color: #75b6ff; }
+				.call-out a:hover, li a:hover { background-color: #444;}
+				h1, h2 { color: #ddd; border-top: 1px solid #444; }
+				p { color: #ccc; }
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -133,6 +149,9 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				color: white;
 			}
 
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
 		</style>
 		<header>
 			<a href="../../../../../index.html" id="header">(optional.is)</a>
@@ -158,7 +177,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 		</div>
 							<div class="row section" id="post-3245"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #2bc733">Week #181-182</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #181-182</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2014-08-10T10:01:47+00:00" style="color: #aaa; font-weight: bold">Sunday, August 10th, 02014</time>
 				<p class="p-summary entry-summary"><p>Another fortnight passes with lots of random and interesting things happening. We&#8217;ve had our head down these weeks to try and manage all the projects that we have up in the air right now. Many deadlines have passed and we&#8217;re proud of the results.</p>
@@ -167,11 +186,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/analog/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #02c9ad">analog</a>, <a href="https://optional.is/required/tag/comet/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4b525f">comet</a>, <a href="https://optional.is/required/tag/design/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #31c13f">design</a>, <a href="https://optional.is/required/tag/heroku/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3115fb">heroku</a>, <a href="https://optional.is/required/tag/lamp/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #263add">lamp</a>, <a href="https://optional.is/required/tag/lathe/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e021b6">lathe</a>, <a href="https://optional.is/required/tag/mars/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #68834f">mars</a>, <a href="https://optional.is/required/tag/notebooks/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c2365e">notebooks</a>, <a href="https://optional.is/required/tag/oberon/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d806fe">oberon</a>, <a href="https://optional.is/required/tag/pencils/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6ec285">pencils</a>, <a href="https://optional.is/required/tag/prototypes/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #142a27">prototypes</a>, <a href="https://optional.is/required/tag/science/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #fb5c7f">science</a></p>				<p style="color: #999">937 words<br/>Read Time: 5 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/analog/" rel="tag" class="tag">analog</a>, <a href="https://optional.is/required/tag/comet/" rel="tag" class="tag">comet</a>, <a href="https://optional.is/required/tag/design/" rel="tag" class="tag">design</a>, <a href="https://optional.is/required/tag/heroku/" rel="tag" class="tag">heroku</a>, <a href="https://optional.is/required/tag/lamp/" rel="tag" class="tag">lamp</a>, <a href="https://optional.is/required/tag/lathe/" rel="tag" class="tag">lathe</a>, <a href="https://optional.is/required/tag/mars/" rel="tag" class="tag">mars</a>, <a href="https://optional.is/required/tag/notebooks/" rel="tag" class="tag">notebooks</a>, <a href="https://optional.is/required/tag/oberon/" rel="tag" class="tag">oberon</a>, <a href="https://optional.is/required/tag/pencils/" rel="tag" class="tag">pencils</a>, <a href="https://optional.is/required/tag/prototypes/" rel="tag" class="tag">prototypes</a>, <a href="https://optional.is/required/tag/science/" rel="tag" class="tag">science</a></p>				<p style="color: #999">937 words<br/>Read Time: 5 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2652"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #b6c4c8">Intuitive Design or something else &#8230;</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Intuitive Design or something else &#8230;</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-09-03T13:31:25+00:00" style="color: #aaa; font-weight: bold">Tuesday, September 3rd, 02013</time>
 				<p class="p-summary entry-summary"><p>Next time you say &#8220;Intuitive&#8221; listen to the words exiting your mouth and think. Intuitive is relative to culture, education and past experiences. If you&#8217;re entire system relies one some past knowledge, then you&#8217;d better have a good system in place to education your readers, but there is a much simpler other option.</p>
@@ -180,11 +199,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/youre-doing-it-wrong/" title="View all articles in You're doing it wrong" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #96e20d">You're doing it wrong</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/design/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #31c13f">design</a>, <a href="../../../design-patterns/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #66c337">design patterns</a>, <a href="../../../explicit/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e2a330">explicit</a>, <a href="../../../intuitive/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #891538">intuitive</a>, <a href="https://optional.is/required/tag/ui/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #71ff71">UI</a>, <a href="https://optional.is/required/tag/ux/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e07841">UX</a></p>				<p style="color: #999">478 words<br/>Read Time: 3 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/youre-doing-it-wrong/" title="View all articles in You're doing it wrong" rel="tag category" class="category">You're doing it wrong</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/design/" rel="tag" class="tag">design</a>, <a href="https://optional.is/required/tag/design-patterns/" rel="tag" class="tag">design patterns</a>, <a href="https://optional.is/required/tag/explicit/" rel="tag" class="tag">explicit</a>, <a href="https://optional.is/required/tag/intuitive/" rel="tag" class="tag">intuitive</a>, <a href="https://optional.is/required/tag/ui/" rel="tag" class="tag">UI</a>, <a href="https://optional.is/required/tag/ux/" rel="tag" class="tag">UX</a></p>				<p style="color: #999">478 words<br/>Read Time: 3 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2478"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #6d9f93">Tapped out</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Tapped out</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-04-09T20:02:03+00:00" style="color: #aaa; font-weight: bold">Tuesday, April 9th, 02013</time>
 				<p class="p-summary entry-summary"><p>The office sink is so poorly designed, it triggered this article about everything that&#8217;s wrong with it, and how it can be improved.</p>
@@ -194,11 +213,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/interfaces/" title="View all articles in Interfaces" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #756640">Interfaces</a>, <a href="https://optional.is/required/category/youre-doing-it-wrong/" title="View all articles in You're doing it wrong" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #96e20d">You're doing it wrong</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/design/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #31c13f">design</a>, <a href="https://optional.is/required/tag/faucet/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ce992c">faucet</a>, <a href="https://optional.is/required/tag/kitchen/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #09228d">kitchen</a>, <a href="https://optional.is/required/tag/sink/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f6e041">sink</a>, <a href="https://optional.is/required/tag/tap/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8f9864">tap</a>, <a href="https://optional.is/required/tag/ui/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #71ff71">UI</a>, <a href="https://optional.is/required/tag/user-experience/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5aa540">user experience</a>, <a href="https://optional.is/required/tag/ux/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e07841">UX</a>, <a href="https://optional.is/required/tag/water/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #946037">water</a></p>				<p style="color: #999">881 words<br/>Read Time: 5 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/interfaces/" title="View all articles in Interfaces" rel="tag category" class="category">Interfaces</a>, <a href="https://optional.is/required/category/youre-doing-it-wrong/" title="View all articles in You're doing it wrong" rel="tag category" class="category">You're doing it wrong</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/design/" rel="tag" class="tag">design</a>, <a href="https://optional.is/required/tag/faucet/" rel="tag" class="tag">faucet</a>, <a href="https://optional.is/required/tag/kitchen/" rel="tag" class="tag">kitchen</a>, <a href="https://optional.is/required/tag/sink/" rel="tag" class="tag">sink</a>, <a href="https://optional.is/required/tag/tap/" rel="tag" class="tag">tap</a>, <a href="https://optional.is/required/tag/ui/" rel="tag" class="tag">UI</a>, <a href="https://optional.is/required/tag/user-experience/" rel="tag" class="tag">user experience</a>, <a href="https://optional.is/required/tag/ux/" rel="tag" class="tag">UX</a>, <a href="https://optional.is/required/tag/water/" rel="tag" class="tag">water</a></p>				<p style="color: #999">881 words<br/>Read Time: 5 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-1753"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #f9af05">Fast, Cheap, Good—Pick Two</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Fast, Cheap, Good—Pick Two</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2011-03-23T14:41:58+00:00" style="color: #aaa; font-weight: bold">Wednesday, March 23rd, 02011</time>
 				<p class="p-summary entry-summary"><p>Inspired by a talk and a few cliché sightings, I decided to create my own stylized triangular t-shirt design. This article details the background, process and final product available for purchase and/or download.</p>
@@ -207,11 +226,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/t-shirts/" title="View all articles in T-Shirts" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bafe5c">T-Shirts</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/cheap/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e40b34">cheap</a>, <a href="https://optional.is/required/tag/design/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #31c13f">design</a>, <a href="https://optional.is/required/tag/fast/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #31d454">fast</a>, <a href="https://optional.is/required/tag/good/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #755f85">good</a>, <a href="https://optional.is/required/tag/pick-two/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d1ba97">pick two</a>, <a href="https://optional.is/required/tag/russell-davies/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4fda1a">russell davies</a>, <a href="https://optional.is/required/tag/sketches/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8d492e">sketches</a>, <a href="https://optional.is/required/tag/t-shirt/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7cc481">t-shirt</a>, <a href="https://optional.is/required/tag/triangle/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cef44b">triangle</a></p>				<p style="color: #999">1025 words<br/>Read Time: 6 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/t-shirts/" title="View all articles in T-Shirts" rel="tag category" class="category">T-Shirts</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/cheap/" rel="tag" class="tag">cheap</a>, <a href="https://optional.is/required/tag/design/" rel="tag" class="tag">design</a>, <a href="https://optional.is/required/tag/fast/" rel="tag" class="tag">fast</a>, <a href="https://optional.is/required/tag/good/" rel="tag" class="tag">good</a>, <a href="https://optional.is/required/tag/pick-two/" rel="tag" class="tag">pick two</a>, <a href="https://optional.is/required/tag/russell-davies/" rel="tag" class="tag">russell davies</a>, <a href="https://optional.is/required/tag/sketches/" rel="tag" class="tag">sketches</a>, <a href="https://optional.is/required/tag/t-shirt/" rel="tag" class="tag">t-shirt</a>, <a href="https://optional.is/required/tag/triangle/" rel="tag" class="tag">triangle</a></p>				<p style="color: #999">1025 words<br/>Read Time: 6 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-1351"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #d62d25">Five Simple Steps: Designing with Data</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Five Simple Steps: Designing with Data</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2010-07-25T14:41:00+00:00" style="color: #aaa; font-weight: bold">Sunday, July 25th, 02010</time>
 				<p class="p-summary entry-summary"><p>Over the last 6-7 months, I have been working on an introductory book. It is over 40,000 words on the topic of charts and graphs. It is more interesting that it sounds. I managed to sneak past the editor sections about crop-circles and the holy grail.</p>
@@ -220,7 +239,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/case-studies/" title="View all articles in Case Studies" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0d2b6">Case Studies</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/charts/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cc1889">charts</a>, <a href="https://optional.is/required/tag/data/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8d777f">data</a>, <a href="https://optional.is/required/tag/design/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #31c13f">design</a>, <a href="https://optional.is/required/tag/designing-with-data/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ff03d4">designing with data</a>, <a href="https://optional.is/required/tag/ebook/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4684cd">ebook</a>, <a href="https://optional.is/required/tag/epub/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e9353c">epub</a>, <a href="https://optional.is/required/tag/five-simple-steps/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cd4bf3">five simple steps</a>, <a href="https://optional.is/required/tag/fss/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #534fed">FSS</a>, <a href="https://optional.is/required/tag/graphs/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e8706a">graphs</a>, <a href="https://optional.is/required/tag/pdf/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #437175">pdf</a>, <a href="https://optional.is/required/tag/published/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8f888f">published</a>, <a href="https://optional.is/required/tag/publishing/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5793ad">publishing</a></p>				<p style="color: #999">1377 words<br/>Read Time: 8 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/case-studies/" title="View all articles in Case Studies" rel="tag category" class="category">Case Studies</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" class="category">Visualizations</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/charts/" rel="tag" class="tag">charts</a>, <a href="https://optional.is/required/tag/data/" rel="tag" class="tag">data</a>, <a href="https://optional.is/required/tag/design/" rel="tag" class="tag">design</a>, <a href="https://optional.is/required/tag/designing-with-data/" rel="tag" class="tag">designing with data</a>, <a href="https://optional.is/required/tag/ebook/" rel="tag" class="tag">ebook</a>, <a href="https://optional.is/required/tag/epub/" rel="tag" class="tag">epub</a>, <a href="https://optional.is/required/tag/five-simple-steps/" rel="tag" class="tag">five simple steps</a>, <a href="https://optional.is/required/tag/fss/" rel="tag" class="tag">FSS</a>, <a href="https://optional.is/required/tag/graphs/" rel="tag" class="tag">graphs</a>, <a href="https://optional.is/required/tag/pdf/" rel="tag" class="tag">pdf</a>, <a href="https://optional.is/required/tag/published/" rel="tag" class="tag">published</a>, <a href="https://optional.is/required/tag/publishing/" rel="tag" class="tag">publishing</a></p>				<p style="color: #999">1377 words<br/>Read Time: 8 minutes</p>
 			</div>
 		</div>
 				
@@ -259,7 +278,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
-			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" width="24.986" height="24.985"/>
 		</g>
 	</g>
 	</symbol>
@@ -308,7 +327,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
 	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
-	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+	<path  d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
 		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
 		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
 		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
@@ -562,6 +581,16 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				}
 			}
 
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus, footer #stripe .item div, footer #links .column ul li { color: #aaa; }
+				footer #stripe {
+					background-color: #444;
+				}
+				footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover, footer #links .column h3 { color: #eee; }
+				footer #stripe .item div:after, footer #links .column h3:after { background-color: #eee; }
+				footer .logo, footer .item svg { fill: #eee; }
+			}
+
 		</style>
 
 		<footer>
@@ -581,7 +610,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -650,3 +679,8 @@ pageTracker._trackPageview();
 </html>
 
 
+
+<!-- Dynamic page generated in 0.223 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-04-16 14:12:17 -->
+
+<!-- super cache -->

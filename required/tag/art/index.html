@@ -59,6 +59,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			a:active { position: relative; top:1px; }
 			
 			#categories li, #address li { width: 32%; float: left;}
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 			
 			@media only screen and (max-width: 960px) {
 				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
@@ -75,7 +79,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				.stretched, .main, .sub, .feature { height: auto; }
 				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
 				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				h1, h2, p, .call-out a span { width: auto; clear:both }
 				.thumbnail a { max-height: 200px; }
 				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 				#address li { width: auto; float: none;}
@@ -94,6 +98,18 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			.section { padding-top: 50px; }
 			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
+				a { color: #75b6ff; }
+				.call-out a:hover, li a:hover { background-color: #444;}
+				h1, h2 { color: #ddd; border-top: 1px solid #444; }
+				p { color: #ccc; }
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -133,6 +149,9 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				color: white;
 			}
 
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
 		</style>
 		<header>
 			<a href="../../../index.html" id="header">(optional.is)</a>
@@ -158,7 +177,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 		</div>
 							<div class="row section" id="post-3888"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #2c8d24">Allemaal Artis</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Allemaal Artis</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2016-11-22T11:11:31+00:00" style="color: #aaa; font-weight: bold">Tuesday, November 22nd, 02016</time>
 				<p class="p-summary entry-summary"><p>A lovely gift from the Netherlands. These wooden blocks designed for form various animals can be used as a way of thinking about other projects. Small, loosely connected pieces forming something much more.</p>
@@ -167,11 +186,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a></p><p><strong>Tags:</strong> <a href="../animals/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a723e3">animals</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2c5f64">art</a>, <a href="../blocks/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e73496">blocks</a>, <a href="../dutch/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b43559">dutch</a>, <a href="../permutations/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #adeebd">permutations</a>, <a href="../play/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a3b34c">play</a></p>				<p style="color: #999">616 words<br/>Read Time: 3 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a></p><p><strong>Tags:</strong> <a href="../animals/index.html" rel="tag" class="tag">animals</a>, <a href="index.html" rel="tag" class="tag">art</a>, <a href="../blocks/index.html" rel="tag" class="tag">blocks</a>, <a href="../dutch/index.html" rel="tag" class="tag">dutch</a>, <a href="../permutations/index.html" rel="tag" class="tag">permutations</a>, <a href="../play/index.html" rel="tag" class="tag">play</a></p>				<p style="color: #999">616 words<br/>Read Time: 3 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3877"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #750338">Diatom Map Art</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Diatom Map Art</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2016-11-15T13:31:12+00:00" style="color: #aaa; font-weight: bold">Tuesday, November 15th, 02016</time>
 				<p class="p-summary entry-summary"><p>You know that feeling when you think you&#8217;ve seen this before? History and art tend to repeat themselves in ideas, but just in a new context with a new focus.</p>
@@ -180,24 +199,24 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/cartography/index.html" title="View all articles in Cartography" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #992978">Cartography</a></p><p><strong>Tags:</strong> <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2c5f64">art</a>, <a href="../diatom/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3cdabc">diatom</a>, <a href="../jenny-odell/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eed095">jenny odell</a>, <a href="../klaus-kemp/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #14c803">Klaus Kemp</a>, <a href="../maps/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7e9447">maps</a>, <a href="../victorians/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ad9cb8">victorians</a></p>				<p style="color: #999">374 words<br/>Read Time: 2 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../category/cartography/index.html" title="View all articles in Cartography" rel="tag category" class="category">Cartography</a></p><p><strong>Tags:</strong> <a href="index.html" rel="tag" class="tag">art</a>, <a href="../diatom/index.html" rel="tag" class="tag">diatom</a>, <a href="../jenny-odell/index.html" rel="tag" class="tag">jenny odell</a>, <a href="../klaus-kemp/index.html" rel="tag" class="tag">Klaus Kemp</a>, <a href="../maps/index.html" rel="tag" class="tag">maps</a>, <a href="../victorians/index.html" rel="tag" class="tag">victorians</a></p>				<p style="color: #999">374 words<br/>Read Time: 2 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3509"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #322540">Week #213-214</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #213-214</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2015-03-20T20:02:33+00:00" style="color: #aaa; font-weight: bold">Friday, March 20th, 02015</time>
 				<p class="p-summary entry-summary"><p>Another double weeknote. This time we had a short trip abroad for some on-site training and then some research and needs assessment with a local company for one of our future projects.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2015/03/20/week-213-214/" rel="bookmark" title="Permanent Link to Week #213-214">Read more about Week #213-214</a></p>
+				<p><a style="display: block"  class="readmore" href="../../2015/03/20/week-213-214/index.html" rel="bookmark" title="Permanent Link to Week #213-214">Read more about Week #213-214</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2c5f64">art</a>, <a href="../data-viz/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ed59ea">data viz</a>, <a href="../design/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #31c13f">design</a>, <a href="../eclipse/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6b7b65">eclipse</a>, <a href="../london/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bc180d">london</a>, <a href="../training/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c185dd">training</a>, <a href="../travel/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1fb0f9">Travel</a></p>				<p style="color: #999">1051 words<br/>Read Time: 6 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="index.html" rel="tag" class="tag">art</a>, <a href="../data-viz/index.html" rel="tag" class="tag">data viz</a>, <a href="../design/index.html" rel="tag" class="tag">design</a>, <a href="../eclipse/index.html" rel="tag" class="tag">eclipse</a>, <a href="../london/index.html" rel="tag" class="tag">london</a>, <a href="../training/index.html" rel="tag" class="tag">training</a>, <a href="../travel/index.html" rel="tag" class="tag">Travel</a></p>				<p style="color: #999">1051 words<br/>Read Time: 6 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3142"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #a7c941">Week #177</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #177</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2014-07-04T15:51:48+00:00" style="color: #aaa; font-weight: bold">Friday, July 4th, 02014</time>
 				<p class="p-summary entry-summary"><p>This week has been about hustling. Getting organized and working on proposals. It is a fine balance to find where your next invoice will come from and doing the work. The freelancer&#8217;s hunter/gatherer life-style hit hard this week.</p>
@@ -206,11 +225,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2c5f64">art</a>, <a href="../glass/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2570c9">glass</a>, <a href="../rivers/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c68757">rivers</a>, <a href="../tables/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9ab2ec">tables</a>, <a href="../topology/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8238c7">topology</a>, <a href="../water/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #946037">water</a>, <a href="../wood/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #22811d">wood</a></p>				<p style="color: #999">731 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="index.html" rel="tag" class="tag">art</a>, <a href="../glass/index.html" rel="tag" class="tag">glass</a>, <a href="../rivers/index.html" rel="tag" class="tag">rivers</a>, <a href="../tables/index.html" rel="tag" class="tag">tables</a>, <a href="../topology/index.html" rel="tag" class="tag">topology</a>, <a href="../water/index.html" rel="tag" class="tag">water</a>, <a href="../wood/index.html" rel="tag" class="tag">wood</a></p>				<p style="color: #999">731 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2583"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #db35ac">Bead Art</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Bead Art</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-08-02T12:21:00+00:00" style="color: #aaa; font-weight: bold">Friday, August 2nd, 02013</time>
 				<p class="p-summary entry-summary"><p>Moving from bits to atoms every once and awhile has its advantages. We spent several hours over the course of a few weeks putting together a massive bead art project. From code to pattern generation to ironing them together, we learnt a lot about the issues, tolerances and resilience of these tiny plastic beads.</p>
@@ -219,7 +238,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../category/experiments/index.html" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a></p><p><strong>Tags:</strong> <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2c5f64">art</a>, <a href="../beads/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #894701">beads</a>, <a href="../hama/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #97dcc8">hama</a>, <a href="../iceland/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #83166c">iceland</a>, <a href="../open-source/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0db2f">open source</a>, <a href="../philatelist/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c6cff7">philatelist</a>, <a href="../stamps/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #829281">stamps</a></p>				<p style="color: #999">636 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="../../category/experiments/index.html" title="View all articles in Experiments" rel="tag category" class="category">Experiments</a></p><p><strong>Tags:</strong> <a href="index.html" rel="tag" class="tag">art</a>, <a href="../beads/index.html" rel="tag" class="tag">beads</a>, <a href="../hama/index.html" rel="tag" class="tag">hama</a>, <a href="../iceland/index.html" rel="tag" class="tag">iceland</a>, <a href="../open-source/index.html" rel="tag" class="tag">open source</a>, <a href="../philatelist/index.html" rel="tag" class="tag">philatelist</a>, <a href="../stamps/index.html" rel="tag" class="tag">stamps</a></p>				<p style="color: #999">636 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				
@@ -258,7 +277,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
-			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" width="24.986" height="24.985"/>
 		</g>
 	</g>
 	</symbol>
@@ -307,7 +326,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
 	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
-	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+	<path  d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
 		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
 		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
 		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
@@ -561,6 +580,16 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				}
 			}
 
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus, footer #stripe .item div, footer #links .column ul li { color: #aaa; }
+				footer #stripe {
+					background-color: #444;
+				}
+				footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover, footer #links .column h3 { color: #eee; }
+				footer #stripe .item div:after, footer #links .column h3:after { background-color: #eee; }
+				footer .logo, footer .item svg { fill: #eee; }
+			}
+
 		</style>
 
 		<footer>
@@ -580,7 +609,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -649,3 +678,8 @@ pageTracker._trackPageview();
 </html>
 
 
+
+<!-- Dynamic page generated in 0.229 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-04-16 14:10:38 -->
+
+<!-- super cache -->

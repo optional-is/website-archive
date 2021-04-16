@@ -59,6 +59,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			a:active { position: relative; top:1px; }
 			
 			#categories li, #address li { width: 32%; float: left;}
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 			
 			@media only screen and (max-width: 960px) {
 				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
@@ -75,7 +79,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				.stretched, .main, .sub, .feature { height: auto; }
 				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
 				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				h1, h2, p, .call-out a span { width: auto; clear:both }
 				.thumbnail a { max-height: 200px; }
 				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 				#address li { width: auto; float: none;}
@@ -94,6 +98,18 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			.section { padding-top: 50px; }
 			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
+				a { color: #75b6ff; }
+				.call-out a:hover, li a:hover { background-color: #444;}
+				h1, h2 { color: #ddd; border-top: 1px solid #444; }
+				p { color: #ccc; }
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -133,6 +149,9 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				color: white;
 			}
 
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
 		</style>
 		<header>
 			<a href="../../../../../index.html" id="header">(optional.is)</a>
@@ -157,8 +176,22 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<li><a href="https://optional.is/required/category/applications//"><span style="border-left: 10px solid #1ddf33;">Applications</span></a></li><li><a href="https://optional.is/required/category/briefs//"><span style="border-left: 10px solid #aa8c5b;">Briefs</span></a></li><li><a href="https://optional.is/required/category/cartography//"><span style="border-left: 10px solid #992978;">Cartography</span></a></li><li><a href="https://optional.is/required/category/case-studies//"><span style="border-left: 10px solid #a0d2b6;">Case Studies</span></a></li><li><a href="https://optional.is/required/category/chromatics//"><span style="border-left: 10px solid #1e7940;">Chromatics</span></a></li><li><a href="https://optional.is/required/category/community//"><span style="border-left: 10px solid #7d6198;">Community</span></a></li><li><a href="https://optional.is/required/category/conferences//"><span style="border-left: 10px solid #d70b59;">Conferences</span></a></li><li><a href="https://optional.is/required/category/education//"><span style="border-left: 10px solid #de7a22;">Education</span></a></li><li><a href="https://optional.is/required/category/experiments//"><span style="border-left: 10px solid #482926;">Experiments</span></a></li><li><a href="https://optional.is/required/category/forecast//"><span style="border-left: 10px solid #89c126;">Forecast</span></a></li><li><a href="https://optional.is/required/category/interfaces//"><span style="border-left: 10px solid #756640;">Interfaces</span></a></li><li><a href="https://optional.is/required/category/material//"><span style="border-left: 10px solid #d92a83;">Material</span></a></li><li><a href="https://optional.is/required/category/meta//"><span style="border-left: 10px solid #b6755d;">Meta</span></a></li><li><a href="https://optional.is/required/category/paper//"><span style="border-left: 10px solid #d0a662;">Paper</span></a></li><li><a href="https://optional.is/required/category/place//"><span style="border-left: 10px solid #7b9cf0;">Place</span></a></li><li><a href="https://optional.is/required/category/privacy//"><span style="border-left: 10px solid #c5f29b;">Privacy</span></a></li><li><a href="https://optional.is/required/category/sports//"><span style="border-left: 10px solid #918e18;">Sports</span></a></li><li><a href="https://optional.is/required/category/storytelling//"><span style="border-left: 10px solid #d4ccb5;">Storytelling</span></a></li><li><a href="https://optional.is/required/category/t-shirts//"><span style="border-left: 10px solid #bafe5c;">T-Shirts</span></a></li><li><a href="https://optional.is/required/category/temporality//"><span style="border-left: 10px solid #504c77;">Temporality</span></a></li><li><a href="https://optional.is/required/category/travel//"><span style="border-left: 10px solid #1fb0f9;">Travel</span></a></li><li><a href="https://optional.is/required/category/tutorial//"><span style="border-left: 10px solid #368fe7;">Tutorial</span></a></li><li><a href="https://optional.is/required/category/visualizations//"><span style="border-left: 10px solid #b10ac6;">Visualizations</span></a></li><li><a href="https://optional.is/required/category/weeknotes//"><span style="border-left: 10px solid #138567;">Weeknotes</span></a></li><li><a href="https://optional.is/required/category/youre-doing-it-wrong//"><span style="border-left: 10px solid #96e20d;">You're doing it wrong</span></a></li>					</ul>
 			</div>
 		</div>
-							<div class="row section" id="post-4415"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #d9d5af">Material: Worldmapper &#8211; Benjamin Hennig</h1>
+							<div class="row section" id="post-4455"  >
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Material: GRID Spreadsheets run the world &#8211; Hjalmar Gislason</h1>
+			<div class="box1" >
+				<time class="dt-published date published" datetime="2020-01-22T11:11:00+00:00" style="color: #aaa; font-weight: bold">Wednesday, January 22nd, 02020</time>
+				<p class="p-summary entry-summary"><p>Spreadsheets run our lives. Hjalli does a deep-dive into their cultural relevance with his newest start-up, GRID. </p>
+<p>Exploring how the Web can empower people is certainly one of the aspects what makes the Web shine.</p>
+</p>
+				<p><a style="display: block"  class="readmore" href="../../../../2020/01/22/material-grid-spreadsheets-run-the-world-hjalmar-gislason/index.html" rel="bookmark" title="Permanent Link to Material: GRID Spreadsheets run the world &#8211; Hjalmar Gislason">Read more about Material: GRID Spreadsheets run the world &#8211; Hjalmar Gislason</a></p>
+			</div>
+			<div class="box1 postmetadata">
+
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" class="category">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2018/" rel="tag" class="tag">2018</a>, <a href="https://optional.is/required/tag/grid/" rel="tag" class="tag">GRID</a>, <a href="https://optional.is/required/tag/material/" rel="tag" class="tag">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" class="tag">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" class="tag">material.is</a>, <a href="https://optional.is/required/tag/programming/" rel="tag" class="tag">programming</a>, <a href="https://optional.is/required/tag/spreadsheets/" rel="tag" class="tag">spreadsheets</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" class="tag">Synopses</a></p>				<p style="color: #999">826 words<br/>Read Time: 5 minutes</p>
+			</div>
+		</div>
+				<div class="row section" id="post-4415"  >
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Material: Worldmapper &#8211; Benjamin Hennig</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2020-01-15T11:11:00+00:00" style="color: #aaa; font-weight: bold">Wednesday, January 15th, 02020</time>
 				<p class="p-summary entry-summary"><p>Worldmapper is a site which displays maps in a way you&#8217;ve probably never expected. Taking old technology of cartography and blending that with the Web produces some new and interesting opportunities.</p>
@@ -167,11 +200,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d92a83">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2018/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #84ddfb">2018</a>, <a href="https://optional.is/required/tag/cartography/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4b73c0">cartography</a>, <a href="https://optional.is/required/tag/geo/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ecc174">geo</a>, <a href="https://optional.is/required/tag/maps/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7e9447">maps</a>, <a href="https://optional.is/required/tag/material/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eec34d">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bc5b2b">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8c0d9f">material.is</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #35e5f9">Synopses</a></p>				<p style="color: #999">792 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" class="category">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2018/" rel="tag" class="tag">2018</a>, <a href="https://optional.is/required/tag/cartography/" rel="tag" class="tag">cartography</a>, <a href="https://optional.is/required/tag/geo/" rel="tag" class="tag">geo</a>, <a href="https://optional.is/required/tag/maps/" rel="tag" class="tag">maps</a>, <a href="https://optional.is/required/tag/material/" rel="tag" class="tag">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" class="tag">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" class="tag">material.is</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" class="tag">Synopses</a></p>				<p style="color: #999">792 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-4399"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #834b70">Material: Craft on the Web &#8211; Charlotte Dann</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Material: Craft on the Web &#8211; Charlotte Dann</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2020-01-08T11:11:00+00:00" style="color: #aaa; font-weight: bold">Wednesday, January 8th, 02020</time>
 				<p class="p-summary entry-summary"><p>Charlotte Dann talks about her journey from coding web pages, through to design school, to using the web to let customers create their own custom jewellery.</p>
@@ -180,46 +213,33 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d92a83">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2018/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #84ddfb">2018</a>, <a href="../../../craft/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #23ca2c">craft</a>, <a href="../../../jewellery/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a501e4">jewellery</a>, <a href="../../../jewelry/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #449de3">jewelry</a>, <a href="https://optional.is/required/tag/material/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eec34d">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bc5b2b">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8c0d9f">material.is</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #35e5f9">Synopses</a></p>				<p style="color: #999">649 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" class="category">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2018/" rel="tag" class="tag">2018</a>, <a href="../../../craft/index.html" rel="tag" class="tag">craft</a>, <a href="../../../jewellery/index.html" rel="tag" class="tag">jewellery</a>, <a href="../../../jewelry/index.html" rel="tag" class="tag">jewelry</a>, <a href="https://optional.is/required/tag/material/" rel="tag" class="tag">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" class="tag">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" class="tag">material.is</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" class="tag">Synopses</a></p>				<p style="color: #999">649 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-4192"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #4553f4">Material: A short talk &#8211; Dan Rubin</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Material: A short talk &#8211; Dan Rubin</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2019-11-19T11:11:12+00:00" style="color: #aaa; font-weight: bold">Tuesday, November 19th, 02019</time>
 				<p class="p-summary entry-summary"><p>A short talk about some thoughts about how the digital is missing the tactile aspect of material and if there is a way to incorporate or elude to it.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2019/11/19/material-a-short-talk-dan-rubin/" rel="bookmark" title="Permanent Link to Material: A short talk &#8211; Dan Rubin">Read more about Material: A short talk &#8211; Dan Rubin</a></p>
+				<p><a style="display: block"  class="readmore" href="../../../../2019/11/19/material-a-short-talk-dan-rubin/index.html" rel="bookmark" title="Permanent Link to Material: A short talk &#8211; Dan Rubin">Read more about Material: A short talk &#8211; Dan Rubin</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d92a83">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2017/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8d8818">2017</a>, <a href="https://optional.is/required/tag/material/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eec34d">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bc5b2b">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8c0d9f">material.is</a>, <a href="https://optional.is/required/tag/photography/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1b2072">photography</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #35e5f9">Synopses</a>, <a href="https://optional.is/required/tag/web/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2567a5">web</a></p>				<p style="color: #999">782 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" class="category">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2017/" rel="tag" class="tag">2017</a>, <a href="https://optional.is/required/tag/material/" rel="tag" class="tag">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" class="tag">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" class="tag">material.is</a>, <a href="https://optional.is/required/tag/photography/" rel="tag" class="tag">photography</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" class="tag">Synopses</a>, <a href="https://optional.is/required/tag/web/" rel="tag" class="tag">web</a></p>				<p style="color: #999">782 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-4162"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #0697d9">Material: Polaroid’s next chapter: the photograph, reimaged &#8211; Tommy Stadlen</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Material: Polaroid’s next chapter: the photograph, reimaged &#8211; Tommy Stadlen</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2019-11-12T11:11:41+00:00" style="color: #aaa; font-weight: bold">Tuesday, November 12th, 02019</time>
 				<p class="p-summary entry-summary"><p>Polaroid Swing reimagines analog photography in a digital, smart phone era. What can we learn for using what works best on each medium?</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2019/11/12/material-polaroids-next-chapter-the-photograph-reimaged-tommy-stadlen/" rel="bookmark" title="Permanent Link to Material: Polaroid’s next chapter: the photograph, reimaged &#8211; Tommy Stadlen">Read more about Material: Polaroid’s next chapter: the photograph, reimaged &#8211; Tommy Stadlen</a></p>
+				<p><a style="display: block"  class="readmore" href="../../../../2019/11/12/material-polaroids-next-chapter-the-photograph-reimaged-tommy-stadlen/index.html" rel="bookmark" title="Permanent Link to Material: Polaroid’s next chapter: the photograph, reimaged &#8211; Tommy Stadlen">Read more about Material: Polaroid’s next chapter: the photograph, reimaged &#8211; Tommy Stadlen</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d92a83">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2017/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8d8818">2017</a>, <a href="https://optional.is/required/tag/analog/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #02c9ad">analog</a>, <a href="https://optional.is/required/tag/material/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eec34d">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bc5b2b">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8c0d9f">material.is</a>, <a href="https://optional.is/required/tag/photography/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1b2072">photography</a>, <a href="https://optional.is/required/tag/polaroid/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #728c56">polaroid</a>, <a href="https://optional.is/required/tag/polaroid-swing/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #83baf0">polaroid swing</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #35e5f9">Synopses</a>, <a href="https://optional.is/required/tag/tactile/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1feb58">tactile</a>, <a href="https://optional.is/required/tag/web/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2567a5">web</a></p>				<p style="color: #999">680 words<br/>Read Time: 4 minutes</p>
-			</div>
-		</div>
-				<div class="row section" id="post-4145"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #3b03c5">Material: Flow meditation &#8211; Tristan Gribbin</h1>
-			<div class="box1" >
-				<time class="dt-published date published" datetime="2019-11-05T11:11:51+00:00" style="color: #aaa; font-weight: bold">Tuesday, November 5th, 02019</time>
-				<p class="p-summary entry-summary"><p>Tristan walks the audience through some basic meditation techniques and we learn more about how technology is helping us achieve calm in a new and faster way.</p>
-</p>
-				<p><a style="display: block"  class="readmore" href="../../../../2019/11/05/material-flow-meditation-tristan-gribbin/index.html" rel="bookmark" title="Permanent Link to Material: Flow meditation &#8211; Tristan Gribbin">Read more about Material: Flow meditation &#8211; Tristan Gribbin</a></p>
-			</div>
-			<div class="box1 postmetadata">
-
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d92a83">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2017/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8d8818">2017</a>, <a href="https://optional.is/required/tag/flow/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cff549">flow</a>, <a href="https://optional.is/required/tag/iceland/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #83166c">iceland</a>, <a href="https://optional.is/required/tag/material/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #eec34d">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bc5b2b">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8c0d9f">material.is</a>, <a href="https://optional.is/required/tag/meditation/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8a7ee2">meditation</a>, <a href="https://optional.is/required/tag/mindfullness/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #455043">mindfullness</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #35e5f9">Synopses</a>, <a href="https://optional.is/required/tag/vr/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ef8a9f">VR</a></p>				<p style="color: #999">574 words<br/>Read Time: 3 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/material/" title="View all articles in Material" rel="tag category" class="category">Material</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2017/" rel="tag" class="tag">2017</a>, <a href="https://optional.is/required/tag/analog/" rel="tag" class="tag">analog</a>, <a href="https://optional.is/required/tag/material/" rel="tag" class="tag">material</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" class="tag">material conference</a>, <a href="https://optional.is/required/tag/material-is/" rel="tag" class="tag">material.is</a>, <a href="https://optional.is/required/tag/photography/" rel="tag" class="tag">photography</a>, <a href="https://optional.is/required/tag/polaroid/" rel="tag" class="tag">polaroid</a>, <a href="https://optional.is/required/tag/polaroid-swing/" rel="tag" class="tag">polaroid swing</a>, <a href="https://optional.is/required/tag/synopses/" rel="tag" class="tag">Synopses</a>, <a href="https://optional.is/required/tag/tactile/" rel="tag" class="tag">tactile</a>, <a href="https://optional.is/required/tag/web/" rel="tag" class="tag">web</a></p>				<p style="color: #999">680 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				
@@ -258,7 +278,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
-			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" width="24.986" height="24.985"/>
 		</g>
 	</g>
 	</symbol>
@@ -307,7 +327,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
 	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
-	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+	<path  d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
 		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
 		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
 		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
@@ -561,6 +581,16 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				}
 			}
 
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus, footer #stripe .item div, footer #links .column ul li { color: #aaa; }
+				footer #stripe {
+					background-color: #444;
+				}
+				footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover, footer #links .column h3 { color: #eee; }
+				footer #stripe .item div:after, footer #links .column h3:after { background-color: #eee; }
+				footer .logo, footer .item svg { fill: #eee; }
+			}
+
 		</style>
 
 		<footer>
@@ -580,7 +610,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -649,3 +679,8 @@ pageTracker._trackPageview();
 </html>
 
 
+
+<!-- Dynamic page generated in 0.216 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-04-16 14:07:27 -->
+
+<!-- super cache -->

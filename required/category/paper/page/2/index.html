@@ -59,6 +59,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			a:active { position: relative; top:1px; }
 			
 			#categories li, #address li { width: 32%; float: left;}
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 			
 			@media only screen and (max-width: 960px) {
 				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
@@ -75,7 +79,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				.stretched, .main, .sub, .feature { height: auto; }
 				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
 				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				h1, h2, p, .call-out a span { width: auto; clear:both }
 				.thumbnail a { max-height: 200px; }
 				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 				#address li { width: auto; float: none;}
@@ -94,6 +98,18 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			.section { padding-top: 50px; }
 			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
+				a { color: #75b6ff; }
+				.call-out a:hover, li a:hover { background-color: #444;}
+				h1, h2 { color: #ddd; border-top: 1px solid #444; }
+				p { color: #ccc; }
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -133,6 +149,9 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				color: white;
 			}
 
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
 		</style>
 		<header>
 			<a href="../../../../../index.html" id="header">(optional.is)</a>
@@ -159,7 +178,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 		</div>
 							<div class="row section" id="post-3115"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #8a9a60">PDF Creation from HTML service</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">PDF Creation from HTML service</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2014-06-12T12:21:45+00:00" style="color: #aaa; font-weight: bold">Thursday, June 12th, 02014</time>
 				<p class="p-summary entry-summary"><p>If you are looking to create PDFs dynamically from HTML pages, then this project code might just save you time and effort. Follow these simple steps and have it easily running in no time.</p>
@@ -168,11 +187,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="https://optional.is/required/category/tutorial/" title="View all articles in Tutorial" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #368fe7">Tutorial</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/heroku/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3115fb">heroku</a>, <a href="https://optional.is/required/tag/html/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #fc35fd">html</a>, <a href="https://optional.is/required/tag/html2pdf/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #893cea">html2pdf</a>, <a href="https://optional.is/required/tag/paper/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="https://optional.is/required/tag/papernet/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a2458a">papernet</a>, <a href="https://optional.is/required/tag/pdf/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #437175">pdf</a>, <a href="https://optional.is/required/tag/tutorial-2/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0575c8">tutorial</a></p>				<p style="color: #999">1331 words<br/>Read Time: 7 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" class="category">Paper</a>, <a href="https://optional.is/required/category/tutorial/" title="View all articles in Tutorial" rel="tag category" class="category">Tutorial</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/heroku/" rel="tag" class="tag">heroku</a>, <a href="https://optional.is/required/tag/html/" rel="tag" class="tag">html</a>, <a href="https://optional.is/required/tag/html2pdf/" rel="tag" class="tag">html2pdf</a>, <a href="https://optional.is/required/tag/paper/" rel="tag" class="tag">Paper</a>, <a href="https://optional.is/required/tag/papernet/" rel="tag" class="tag">papernet</a>, <a href="https://optional.is/required/tag/pdf/" rel="tag" class="tag">pdf</a>, <a href="https://optional.is/required/tag/tutorial-2/" rel="tag" class="tag">tutorial</a></p>				<p style="color: #999">1331 words<br/>Read Time: 7 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2503"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #c97606">Gestalten: A Map of the World</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Gestalten: A Map of the World</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-05-14T21:12:22+00:00" style="color: #aaa; font-weight: bold">Tuesday, May 14th, 02013</time>
 				<p class="p-summary entry-summary"><p>The publisher Gestalten asked permission to print a few of our projects in their newest book, A Map of the World. It is a beautiful book full of wonderous maps from various artists around the world.</p>
@@ -181,11 +200,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/cartography/" title="View all articles in Cartography" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #992978">Cartography</a>, <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/borgarmynd/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9fe76f">borgarmynd</a>, <a href="https://optional.is/required/tag/gestalten/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b5a592">gestalten</a>, <a href="https://optional.is/required/tag/maps/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7e9447">maps</a>, <a href="https://optional.is/required/tag/reykjavik/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6f3e9f">reykjavik</a></p>				<p style="color: #999">440 words<br/>Read Time: 2 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/cartography/" title="View all articles in Cartography" rel="tag category" class="category">Cartography</a>, <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" class="category">Paper</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/borgarmynd/" rel="tag" class="tag">borgarmynd</a>, <a href="https://optional.is/required/tag/gestalten/" rel="tag" class="tag">gestalten</a>, <a href="https://optional.is/required/tag/maps/" rel="tag" class="tag">maps</a>, <a href="https://optional.is/required/tag/reykjavik/" rel="tag" class="tag">reykjavik</a></p>				<p style="color: #999">440 words<br/>Read Time: 2 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2295"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #f636a6">Calendar Business Cards</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Calendar Business Cards</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2012-08-20T12:21:22+00:00" style="color: #aaa; font-weight: bold">Monday, August 20th, 02012</time>
 				<p class="p-summary entry-summary"><p>As a challenge, is it possible to re-invent the year calendar through a different lens? Rather than appointments, red days or other events, what if we put the days of the week first rather than the number? Then, to top it all off, what if you had to fit it onto a business card? This articles walks you through the process, the pitfalls and links to some code so you can make your own designs.</p>
@@ -194,11 +213,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="https://optional.is/required/category/storytelling/" title="View all articles in Storytelling" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d4ccb5">Storytelling</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/business-cards/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e103cf">business cards</a>, <a href="https://optional.is/required/tag/calendar/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0e7b2">calendar</a>, <a href="../../../../tag/moo/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b7d192">moo</a>, <a href="https://optional.is/required/tag/time/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #07cc69">time</a></p>				<p style="color: #999">1441 words<br/>Read Time: 8 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" class="category">Paper</a>, <a href="https://optional.is/required/category/storytelling/" title="View all articles in Storytelling" rel="tag category" class="category">Storytelling</a>, <a href="https://optional.is/required/category/visualizations/" title="View all articles in Visualizations" rel="tag category" class="category">Visualizations</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/business-cards/" rel="tag" class="tag">business cards</a>, <a href="https://optional.is/required/tag/calendar/" rel="tag" class="tag">calendar</a>, <a href="../../../../tag/moo/index.html" rel="tag" class="tag">moo</a>, <a href="https://optional.is/required/tag/time/" rel="tag" class="tag">time</a></p>				<p style="color: #999">1441 words<br/>Read Time: 8 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-1279"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #3746ca">PaperNet Boarding Pass</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">PaperNet Boarding Pass</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2010-05-25T11:11:35+00:00" style="color: #aaa; font-weight: bold">Tuesday, May 25th, 02010</time>
 				<p class="p-summary entry-summary"><p>In an attempt to infuse some aspects of the Internet into an airlines boarding pass, many lessons where learnt about the airlines industries&#8217; needs and requirements. This is a look from a prototype to a final product of an international airlines printable boarding pass with a touch of useful dynamic data.</p>
@@ -207,11 +226,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/case-studies/" title="View all articles in Case Studies" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0d2b6">Case Studies</a>, <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="https://optional.is/required/category/travel/" title="View all articles in Travel" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1fb0f9">Travel</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2d-barcode/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c1c40e">2d barcode</a>, <a href="https://optional.is/required/tag/airlines/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8c0986">airlines</a>, <a href="https://optional.is/required/tag/barcode/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1c80f2">barcode</a>, <a href="https://optional.is/required/tag/boarding-pass/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6d3329">boarding pass</a>, <a href="https://optional.is/required/tag/flights/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ea276d">flights</a>, <a href="https://optional.is/required/tag/iata/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a6cbd5">IATA</a></p>				<p style="color: #999">3331 words<br/>Read Time: 19 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/case-studies/" title="View all articles in Case Studies" rel="tag category" class="category">Case Studies</a>, <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" class="category">Paper</a>, <a href="https://optional.is/required/category/travel/" title="View all articles in Travel" rel="tag category" class="category">Travel</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/2d-barcode/" rel="tag" class="tag">2d barcode</a>, <a href="https://optional.is/required/tag/airlines/" rel="tag" class="tag">airlines</a>, <a href="https://optional.is/required/tag/barcode/" rel="tag" class="tag">barcode</a>, <a href="https://optional.is/required/tag/boarding-pass/" rel="tag" class="tag">boarding pass</a>, <a href="https://optional.is/required/tag/flights/" rel="tag" class="tag">flights</a>, <a href="https://optional.is/required/tag/iata/" rel="tag" class="tag">IATA</a></p>				<p style="color: #999">3331 words<br/>Read Time: 19 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-995"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #02cea3">Print on Demand</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Print on Demand</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2010-02-16T02:20:28+00:00" style="color: #aaa; font-weight: bold">Tuesday, February 16th, 02010</time>
 				<p class="p-summary entry-summary"><p>The world of print has always been too complicated, expensive and elusive for most people, but now under economic pressures, doors that were never available are slowly being pried open so that we can print to a heidelberg just as easy as an inkjet.</p>
@@ -220,7 +239,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="https://optional.is/required/category/travel/" title="View all articles in Travel" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1fb0f9">Travel</a>, <a href="https://optional.is/required/category/youre-doing-it-wrong/" title="View all articles in You're doing it wrong" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #96e20d">You're doing it wrong</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/boarding-passes/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0a722a">boarding passes</a>, <a href="https://optional.is/required/tag/data/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8d777f">data</a>, <a href="https://optional.is/required/tag/homes/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f05380">homes</a>, <a href="https://optional.is/required/tag/newspaper-club/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5887c8">newspaper club</a>, <a href="https://optional.is/required/tag/newspapers/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3ad04d">newspapers</a>, <a href="https://optional.is/required/tag/papernet/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a2458a">papernet</a>, <a href="https://optional.is/required/tag/print-on-demand/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a96e7c">print-on-demand</a>, <a href="https://optional.is/required/tag/tickets/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f4ac41">tickets</a></p>				<p style="color: #999">2019 words<br/>Read Time: 11 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/paper/" title="View all articles in Paper" rel="tag category" class="category">Paper</a>, <a href="https://optional.is/required/category/travel/" title="View all articles in Travel" rel="tag category" class="category">Travel</a>, <a href="https://optional.is/required/category/youre-doing-it-wrong/" title="View all articles in You're doing it wrong" rel="tag category" class="category">You're doing it wrong</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/boarding-passes/" rel="tag" class="tag">boarding passes</a>, <a href="https://optional.is/required/tag/data/" rel="tag" class="tag">data</a>, <a href="https://optional.is/required/tag/homes/" rel="tag" class="tag">homes</a>, <a href="https://optional.is/required/tag/newspaper-club/" rel="tag" class="tag">newspaper club</a>, <a href="https://optional.is/required/tag/newspapers/" rel="tag" class="tag">newspapers</a>, <a href="https://optional.is/required/tag/papernet/" rel="tag" class="tag">papernet</a>, <a href="https://optional.is/required/tag/print-on-demand/" rel="tag" class="tag">print-on-demand</a>, <a href="https://optional.is/required/tag/tickets/" rel="tag" class="tag">tickets</a></p>				<p style="color: #999">2019 words<br/>Read Time: 11 minutes</p>
 			</div>
 		</div>
 				
@@ -259,7 +278,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
-			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" width="24.986" height="24.985"/>
 		</g>
 	</g>
 	</symbol>
@@ -308,7 +327,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
 	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
-	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+	<path  d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
 		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
 		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
 		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
@@ -562,6 +581,16 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				}
 			}
 
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus, footer #stripe .item div, footer #links .column ul li { color: #aaa; }
+				footer #stripe {
+					background-color: #444;
+				}
+				footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover, footer #links .column h3 { color: #eee; }
+				footer #stripe .item div:after, footer #links .column h3:after { background-color: #eee; }
+				footer .logo, footer .item svg { fill: #eee; }
+			}
+
 		</style>
 
 		<footer>
@@ -581,7 +610,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -650,3 +679,8 @@ pageTracker._trackPageview();
 </html>
 
 
+
+<!-- Dynamic page generated in 0.177 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-04-16 14:04:44 -->
+
+<!-- super cache -->

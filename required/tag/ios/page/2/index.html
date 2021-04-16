@@ -59,6 +59,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			a:active { position: relative; top:1px; }
 			
 			#categories li, #address li { width: 32%; float: left;}
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 			
 			@media only screen and (max-width: 960px) {
 				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
@@ -75,7 +79,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				.stretched, .main, .sub, .feature { height: auto; }
 				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
 				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				h1, h2, p, .call-out a span { width: auto; clear:both }
 				.thumbnail a { max-height: 200px; }
 				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 				#address li { width: auto; float: none;}
@@ -94,6 +98,18 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			.section { padding-top: 50px; }
 			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
+				a { color: #75b6ff; }
+				.call-out a:hover, li a:hover { background-color: #444;}
+				h1, h2 { color: #ddd; border-top: 1px solid #444; }
+				p { color: #ccc; }
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -133,6 +149,9 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				color: white;
 			}
 
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
 		</style>
 		<header>
 			<a href="../../../../../index.html" id="header">(optional.is)</a>
@@ -158,7 +177,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 		</div>
 							<div class="row section" id="post-4091"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #580378">Week #422-423</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #422-423</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2019-03-22T15:51:45+00:00" style="color: #aaa; font-weight: bold">Friday, March 22nd, 02019</time>
 				<p class="p-summary entry-summary"><p>A short double weeknote to get us back on track. The spring equinox has passed, but no one told the weather!</p>
@@ -167,11 +186,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../../../bwr/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e42ec2">BWR</a>, <a href="../../../django-2/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #320217">django 2</a>, <a href="https://optional.is/required/tag/ios/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1bdf60">iOS</a>, <a href="../../../localization/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0662a7">localization</a>, <a href="../../../measles/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3cb0ab">measles</a>, <a href="../../../migration/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b439f9">migration</a>, <a href="../../../python-3/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #864707">python 3</a>, <a href="https://optional.is/required/tag/surveys/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #feae57">surveys</a>, <a href="https://optional.is/required/tag/translations/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2ed18f">translations</a></p>				<p style="color: #999">931 words<br/>Read Time: 5 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/bwr/" rel="tag" class="tag">BWR</a>, <a href="https://optional.is/required/tag/django-2/" rel="tag" class="tag">django 2</a>, <a href="https://optional.is/required/tag/ios/" rel="tag" class="tag">iOS</a>, <a href="https://optional.is/required/tag/localization/" rel="tag" class="tag">localization</a>, <a href="https://optional.is/required/tag/measles/" rel="tag" class="tag">measles</a>, <a href="https://optional.is/required/tag/migration/" rel="tag" class="tag">migration</a>, <a href="https://optional.is/required/tag/python-3/" rel="tag" class="tag">python 3</a>, <a href="https://optional.is/required/tag/surveys/" rel="tag" class="tag">surveys</a>, <a href="https://optional.is/required/tag/translations/" rel="tag" class="tag">translations</a></p>				<p style="color: #999">931 words<br/>Read Time: 5 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-4011"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #cd0d4a">Week #368-369</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #368-369</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2018-03-12T13:31:17+00:00" style="color: #aaa; font-weight: bold">Monday, March 12th, 02018</time>
 				<p class="p-summary entry-summary"><p>A double weeknote due to some absences from the office and work piling-up, but here we go!</p>
@@ -180,11 +199,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/emoji-holiday/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f3aece">emoji holiday</a>, <a href="https://optional.is/required/tag/external/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6a21b6">external</a>, <a href="https://optional.is/required/tag/hembury/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #0443f3">Hembury</a>, <a href="https://optional.is/required/tag/how-far/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #87be71">how far</a>, <a href="https://optional.is/required/tag/internal/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d1efad">internal</a>, <a href="https://optional.is/required/tag/ios/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1bdf60">iOS</a>, <a href="https://optional.is/required/tag/red-days/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6f5a0e">red days</a>, <a href="https://optional.is/required/tag/solidwool/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #508be6">solidwool</a></p>				<p style="color: #999">699 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/emoji-holiday/" rel="tag" class="tag">emoji holiday</a>, <a href="https://optional.is/required/tag/external/" rel="tag" class="tag">external</a>, <a href="https://optional.is/required/tag/hembury/" rel="tag" class="tag">Hembury</a>, <a href="https://optional.is/required/tag/how-far/" rel="tag" class="tag">how far</a>, <a href="https://optional.is/required/tag/internal/" rel="tag" class="tag">internal</a>, <a href="https://optional.is/required/tag/ios/" rel="tag" class="tag">iOS</a>, <a href="https://optional.is/required/tag/red-days/" rel="tag" class="tag">red days</a>, <a href="https://optional.is/required/tag/solidwool/" rel="tag" class="tag">solidwool</a></p>				<p style="color: #999">699 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-4000"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #2ff329">Week #367</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #367</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2018-02-23T11:11:03+00:00" style="color: #aaa; font-weight: bold">Friday, February 23rd, 02018</time>
 				<p class="p-summary entry-summary"><p>This week we managed to get some time to focus on a few internal projects that we&#8217;ve been sitting on for ages. With a bit of love this week, they might just see the light of day!</p>
@@ -193,11 +212,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/ios/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1bdf60">iOS</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bc5b2b">material conference</a></p>				<p style="color: #999">777 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="https://optional.is/required/category/weeknotes/" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/ios/" rel="tag" class="tag">iOS</a>, <a href="https://optional.is/required/tag/material-conference/" rel="tag" class="tag">material conference</a></p>				<p style="color: #999">777 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3953"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #8da00e">Omnibus 02017</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Omnibus 02017</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2018-01-15T15:51:40+00:00" style="color: #aaa; font-weight: bold">Monday, January 15th, 02018</time>
 				<p class="p-summary entry-summary"><p>A quick look back over the year. Normally with updates to posts, but it was a pretty dry year for writing in 02017.</p>
@@ -206,11 +225,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/meta/" title="View all articles in Meta" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b6755d">Meta</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/ar/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5b61a1">AR</a>, <a href="https://optional.is/required/tag/gdpr/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4e94c8">GDPR</a>, <a href="https://optional.is/required/tag/ios/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1bdf60">iOS</a>, <a href="https://optional.is/required/tag/omnibus/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #90b8b6">omnibus</a>, <a href="https://optional.is/required/tag/travel/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1fb0f9">Travel</a>, <a href="https://optional.is/required/tag/vr/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ef8a9f">VR</a></p>				<p style="color: #999">437 words<br/>Read Time: 2 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../../../category/meta/index.html" title="View all articles in Meta" rel="tag category" class="category">Meta</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/ar/" rel="tag" class="tag">AR</a>, <a href="https://optional.is/required/tag/gdpr/" rel="tag" class="tag">GDPR</a>, <a href="https://optional.is/required/tag/ios/" rel="tag" class="tag">iOS</a>, <a href="../../../omnibus/index.html" rel="tag" class="tag">omnibus</a>, <a href="https://optional.is/required/tag/travel/" rel="tag" class="tag">Travel</a>, <a href="https://optional.is/required/tag/vr/" rel="tag" class="tag">VR</a></p>				<p style="color: #999">437 words<br/>Read Time: 2 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3907"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #a02e09">Omnibus 02016</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Omnibus 02016</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2017-01-16T14:41:33+00:00" style="color: #aaa; font-weight: bold">Monday, January 16th, 02017</time>
 				<p class="p-summary entry-summary"><p>A quick overview of the year, what we managed to write, where we traveled and what to expect in 02017.</p>
@@ -219,7 +238,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="https://optional.is/required/category/meta/" title="View all articles in Meta" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b6755d">Meta</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/articles/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #dba5d9">articles</a>, <a href="https://optional.is/required/tag/ios/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1bdf60">iOS</a>, <a href="https://optional.is/required/tag/omnibus/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #90b8b6">omnibus</a>, <a href="https://optional.is/required/tag/travel/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1fb0f9">Travel</a></p>				<p style="color: #999">336 words<br/>Read Time: 2 minutes</p>
+				<p><strong>Categories:</strong> <a href="https://optional.is/required/category/briefs/" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="../../../../category/meta/index.html" title="View all articles in Meta" rel="tag category" class="category">Meta</a></p><p><strong>Tags:</strong> <a href="../../../articles/index.html" rel="tag" class="tag">articles</a>, <a href="https://optional.is/required/tag/ios/" rel="tag" class="tag">iOS</a>, <a href="../../../omnibus/index.html" rel="tag" class="tag">omnibus</a>, <a href="https://optional.is/required/tag/travel/" rel="tag" class="tag">Travel</a></p>				<p style="color: #999">336 words<br/>Read Time: 2 minutes</p>
 			</div>
 		</div>
 				
@@ -258,7 +277,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
-			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" width="24.986" height="24.985"/>
 		</g>
 	</g>
 	</symbol>
@@ -307,7 +326,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
 	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
-	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+	<path  d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
 		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
 		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
 		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
@@ -561,6 +580,16 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				}
 			}
 
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus, footer #stripe .item div, footer #links .column ul li { color: #aaa; }
+				footer #stripe {
+					background-color: #444;
+				}
+				footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover, footer #links .column h3 { color: #eee; }
+				footer #stripe .item div:after, footer #links .column h3:after { background-color: #eee; }
+				footer .logo, footer .item svg { fill: #eee; }
+			}
+
 		</style>
 
 		<footer>
@@ -580,7 +609,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -649,3 +678,8 @@ pageTracker._trackPageview();
 </html>
 
 
+
+<!-- Dynamic page generated in 0.226 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-04-16 14:08:30 -->
+
+<!-- super cache -->

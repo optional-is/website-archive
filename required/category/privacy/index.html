@@ -59,6 +59,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			a:active { position: relative; top:1px; }
 			
 			#categories li, #address li { width: 32%; float: left;}
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 			
 			@media only screen and (max-width: 960px) {
 				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
@@ -75,7 +79,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				.stretched, .main, .sub, .feature { height: auto; }
 				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
 				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				h1, h2, p, .call-out a span { width: auto; clear:both }
 				.thumbnail a { max-height: 200px; }
 				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 				#address li { width: auto; float: none;}
@@ -94,6 +98,18 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			.section { padding-top: 50px; }
 			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
+				a { color: #75b6ff; }
+				.call-out a:hover, li a:hover { background-color: #444;}
+				h1, h2 { color: #ddd; border-top: 1px solid #444; }
+				p { color: #ccc; }
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -133,6 +149,9 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				color: white;
 			}
 
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
 		</style>
 		<header>
 			<a href="../../../index.html" id="header">(optional.is)</a>
@@ -159,29 +178,29 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 		</div>
 							<div class="row section" id="post-2387"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #90d2e8">Spimes: A Happy Birthday Story</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Spimes: A Happy Birthday Story</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-12-11T11:11:06+00:00" style="color: #aaa; font-weight: bold">Wednesday, December 11th, 02013</time>
 				<p class="p-summary entry-summary"><p>Over a year ago, Mike Stenhouse and I wrote and pitched a small piece of design fiction around Spimes. We anchored the discussion around one man&#8217;s birthday. In the year since, we&#8217;ve flushed out the story a bit more, but it is also amazing how many of these gadgets now exist.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2013/12/11/spimes-a-happy-birthday-story/" rel="bookmark" title="Permanent Link to Spimes: A Happy Birthday Story">Read more about Spimes: A Happy Birthday Story</a></p>
+				<p><a style="display: block"  class="readmore" href="../../2013/12/11/spimes-a-happy-birthday-story/index.html" rel="bookmark" title="Permanent Link to Spimes: A Happy Birthday Story">Read more about Spimes: A Happy Birthday Story</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../case-studies/index.html" title="View all articles in Case Studies" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0d2b6">Case Studies</a>, <a href="../forecast/index.html" title="View all articles in Forecast" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #89c126">Forecast</a>, <a href="../interfaces/index.html" title="View all articles in Interfaces" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #756640">Interfaces</a>, <a href="index.html" title="View all articles in Privacy" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c5f29b">Privacy</a>, <a href="../storytelling/index.html" title="View all articles in Storytelling" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d4ccb5">Storytelling</a></p><p><strong>Tags:</strong> <a href="../../tag/birthday/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cf673f">birthday</a>, <a href="../../tag/distopia/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5da642">distopia</a>, <a href="../../tag/spimes/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #dd50cd">spimes</a></p>				<p style="color: #999">7417 words<br/>Read Time: 41 minutes</p>
+				<p><strong>Categories:</strong> <a href="../case-studies/index.html" title="View all articles in Case Studies" rel="tag category" class="category">Case Studies</a>, <a href="http://optional.is/required/category/forecast/" title="View all articles in Forecast" rel="tag category" class="category">Forecast</a>, <a href="../interfaces/index.html" title="View all articles in Interfaces" rel="tag category" class="category">Interfaces</a>, <a href="index.html" title="View all articles in Privacy" rel="tag category" class="category">Privacy</a>, <a href="../storytelling/index.html" title="View all articles in Storytelling" rel="tag category" class="category">Storytelling</a></p><p><strong>Tags:</strong> <a href="../../tag/birthday/index.html" rel="tag" class="tag">birthday</a>, <a href="../../tag/distopia/index.html" rel="tag" class="tag">distopia</a>, <a href="../../tag/spimes/index.html" rel="tag" class="tag">spimes</a></p>				<p style="color: #999">7417 words<br/>Read Time: 41 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-98"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #c50b08">How dark is your data shadow?</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">How dark is your data shadow?</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2009-06-18T22:22:00+00:00" style="color: #aaa; font-weight: bold">Thursday, June 18th, 02009</time>
 				<p class="p-summary entry-summary"><p>Every transaction we make creates a shadow about ourselves. When we use the ATM, we leave a small piece or ourselves behind in the means of a time stamp, a withdrawal in a database, a location. As capture and storage costs asymptotically approach zero, it is easier to just keep everything rather than selectively choose what to trash. The more we do in this electronic world, the larger and darker our shadow becomes and the more potential for data leakage and problems arising.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="../../2009/06/18/how-dark-is-your-data-shadow/index.html" rel="bookmark" title="Permanent Link to How dark is your data shadow?">Read more about How dark is your data shadow?</a></p>
+				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2009/06/18/how-dark-is-your-data-shadow/" rel="bookmark" title="Permanent Link to How dark is your data shadow?">Read more about How dark is your data shadow?</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Privacy" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c5f29b">Privacy</a></p><p><strong>Tags:</strong> <a href="../../tag/atm/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #292f53">ATM</a>, <a href="../../tag/data/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8d777f">data</a>, <a href="../../tag/data-leak/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f818aa">data leak</a>, <a href="../../tag/data-shadow/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c20810">data shadow</a>, <a href="../../tag/information/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bb3ccd">information</a>, <a href="../../tag/privacy/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c5f29b">Privacy</a>, <a href="../../tag/records/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6e52c4">records</a>, <a href="../../tag/shibboleth/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a3134f">shibboleth</a>, <a href="../../tag/transactions/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c15b97">transactions</a>, <a href="../../tag/travel/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1fb0f9">Travel</a></p>				<p style="color: #999">1962 words<br/>Read Time: 11 minutes</p>
+				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Privacy" rel="tag category" class="category">Privacy</a></p><p><strong>Tags:</strong> <a href="../../tag/atm/index.html" rel="tag" class="tag">ATM</a>, <a href="../../tag/data/index.html" rel="tag" class="tag">data</a>, <a href="../../tag/data-leak/index.html" rel="tag" class="tag">data leak</a>, <a href="../../tag/data-shadow/index.html" rel="tag" class="tag">data shadow</a>, <a href="../../tag/information/index.html" rel="tag" class="tag">information</a>, <a href="../../tag/privacy/index.html" rel="tag" class="tag">Privacy</a>, <a href="../../tag/records/index.html" rel="tag" class="tag">records</a>, <a href="../../tag/shibboleth/index.html" rel="tag" class="tag">shibboleth</a>, <a href="../../tag/transactions/index.html" rel="tag" class="tag">transactions</a>, <a href="../../tag/travel/index.html" rel="tag" class="tag">Travel</a></p>				<p style="color: #999">1962 words<br/>Read Time: 11 minutes</p>
 			</div>
 		</div>
 				
@@ -220,7 +239,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
-			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" width="24.986" height="24.985"/>
 		</g>
 	</g>
 	</symbol>
@@ -269,7 +288,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
 	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
-	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+	<path  d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
 		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
 		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
 		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
@@ -523,6 +542,16 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				}
 			}
 
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus, footer #stripe .item div, footer #links .column ul li { color: #aaa; }
+				footer #stripe {
+					background-color: #444;
+				}
+				footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover, footer #links .column h3 { color: #eee; }
+				footer #stripe .item div:after, footer #links .column h3:after { background-color: #eee; }
+				footer .logo, footer .item svg { fill: #eee; }
+			}
+
 		</style>
 
 		<footer>
@@ -542,7 +571,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -611,3 +640,8 @@ pageTracker._trackPageview();
 </html>
 
 
+
+<!-- Dynamic page generated in 0.163 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-04-16 14:05:43 -->
+
+<!-- super cache -->

@@ -59,6 +59,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			a:active { position: relative; top:1px; }
 			
 			#categories li, #address li { width: 32%; float: left;}
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 			
 			@media only screen and (max-width: 960px) {
 				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
@@ -75,7 +79,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				.stretched, .main, .sub, .feature { height: auto; }
 				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
 				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				h1, h2, p, .call-out a span { width: auto; clear:both }
 				.thumbnail a { max-height: 200px; }
 				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 				#address li { width: auto; float: none;}
@@ -94,6 +98,18 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			.section { padding-top: 50px; }
 			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
+				a { color: #75b6ff; }
+				.call-out a:hover, li a:hover { background-color: #444;}
+				h1, h2 { color: #ddd; border-top: 1px solid #444; }
+				p { color: #ccc; }
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -133,6 +149,9 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				color: white;
 			}
 
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
 		</style>
 		<header>
 			<a href="../../../index.html" id="header">(optional.is)</a>
@@ -159,7 +178,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 		</div>
 							<div class="row section" id="post-2907"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #a1f79f">Spime inspiration</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Spime inspiration</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2014-01-20T14:41:59+00:00" style="color: #aaa; font-weight: bold">Monday, January 20th, 02014</time>
 				<p class="p-summary entry-summary"><p>Albert Einstein purportedly said &#8220;The secret to creativity is knowing how to hide your sources.&#8221; We want to share our inspiration to better understand and justify the choices of the spime birthday story.</p>
@@ -168,24 +187,24 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../meta/index.html" title="View all articles in Meta" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b6755d">Meta</a>, <a href="index.html" title="View all articles in Storytelling" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d4ccb5">Storytelling</a></p><p><strong>Tags:</strong> <a href="../../tag/future/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #da907a">future</a>, <a href="http://optional.is/required/tag/inspiration/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d3d35b">inspiration</a>, <a href="../../tag/spimes/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #dd50cd">spimes</a>, <a href="http://optional.is/required/tag/story/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #bec670">story</a>, <a href="http://optional.is/required/tag/technlogy/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #9b0ce1">technlogy</a></p>				<p style="color: #999">2769 words<br/>Read Time: 15 minutes</p>
+				<p><strong>Categories:</strong> <a href="../briefs/index.html" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="http://optional.is/required/category/meta/" title="View all articles in Meta" rel="tag category" class="category">Meta</a>, <a href="index.html" title="View all articles in Storytelling" rel="tag category" class="category">Storytelling</a></p><p><strong>Tags:</strong> <a href="../../tag/future/index.html" rel="tag" class="tag">future</a>, <a href="../../tag/inspiration/index.html" rel="tag" class="tag">inspiration</a>, <a href="../../tag/spimes/index.html" rel="tag" class="tag">spimes</a>, <a href="../../tag/story/index.html" rel="tag" class="tag">story</a>, <a href="../../tag/technlogy/index.html" rel="tag" class="tag">technlogy</a></p>				<p style="color: #999">2769 words<br/>Read Time: 15 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2387"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #90d2e8">Spimes: A Happy Birthday Story</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Spimes: A Happy Birthday Story</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-12-11T11:11:06+00:00" style="color: #aaa; font-weight: bold">Wednesday, December 11th, 02013</time>
 				<p class="p-summary entry-summary"><p>Over a year ago, Mike Stenhouse and I wrote and pitched a small piece of design fiction around Spimes. We anchored the discussion around one man&#8217;s birthday. In the year since, we&#8217;ve flushed out the story a bit more, but it is also amazing how many of these gadgets now exist.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2013/12/11/spimes-a-happy-birthday-story/" rel="bookmark" title="Permanent Link to Spimes: A Happy Birthday Story">Read more about Spimes: A Happy Birthday Story</a></p>
+				<p><a style="display: block"  class="readmore" href="../../2013/12/11/spimes-a-happy-birthday-story/index.html" rel="bookmark" title="Permanent Link to Spimes: A Happy Birthday Story">Read more about Spimes: A Happy Birthday Story</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../case-studies/index.html" title="View all articles in Case Studies" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0d2b6">Case Studies</a>, <a href="../forecast/index.html" title="View all articles in Forecast" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #89c126">Forecast</a>, <a href="../interfaces/index.html" title="View all articles in Interfaces" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #756640">Interfaces</a>, <a href="../privacy/index.html" title="View all articles in Privacy" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c5f29b">Privacy</a>, <a href="index.html" title="View all articles in Storytelling" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d4ccb5">Storytelling</a></p><p><strong>Tags:</strong> <a href="../../tag/birthday/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cf673f">birthday</a>, <a href="../../tag/distopia/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5da642">distopia</a>, <a href="../../tag/spimes/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #dd50cd">spimes</a></p>				<p style="color: #999">7417 words<br/>Read Time: 41 minutes</p>
+				<p><strong>Categories:</strong> <a href="../case-studies/index.html" title="View all articles in Case Studies" rel="tag category" class="category">Case Studies</a>, <a href="http://optional.is/required/category/forecast/" title="View all articles in Forecast" rel="tag category" class="category">Forecast</a>, <a href="../interfaces/index.html" title="View all articles in Interfaces" rel="tag category" class="category">Interfaces</a>, <a href="../privacy/index.html" title="View all articles in Privacy" rel="tag category" class="category">Privacy</a>, <a href="index.html" title="View all articles in Storytelling" rel="tag category" class="category">Storytelling</a></p><p><strong>Tags:</strong> <a href="../../tag/birthday/index.html" rel="tag" class="tag">birthday</a>, <a href="../../tag/distopia/index.html" rel="tag" class="tag">distopia</a>, <a href="../../tag/spimes/index.html" rel="tag" class="tag">spimes</a></p>				<p style="color: #999">7417 words<br/>Read Time: 41 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2832"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #081b0e">Metrics and Dashboards</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Metrics and Dashboards</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-11-05T12:21:39+00:00" style="color: #aaa; font-weight: bold">Tuesday, November 5th, 02013</time>
 				<p class="p-summary entry-summary"><p>Metrics are the life-blood of a company. From finances to quality control, you need to have an understanding of what is happening. Dashboards are one way to help surface some of these metrics in a way that is easily understandable and actionable.</p>
@@ -194,24 +213,24 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Storytelling" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d4ccb5">Storytelling</a>, <a href="../visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../tag/dashboards/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #126c4c">dashboards</a>, <a href="http://optional.is/required/tag/deming/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #dfa8c7">deming</a>, <a href="http://optional.is/required/tag/errors/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #07213a">errors</a>, <a href="http://optional.is/required/tag/leadership/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e9b747">leadership</a>, <a href="../../tag/metrics/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa59d6">metrics</a>, <a href="../../tag/tracking/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #187996">tracking</a>, <a href="../../tag/visualizations/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p>				<p style="color: #999">2020 words<br/>Read Time: 11 minutes</p>
+				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Storytelling" rel="tag category" class="category">Storytelling</a>, <a href="../visualizations/index.html" title="View all articles in Visualizations" rel="tag category" class="category">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../tag/dashboards/index.html" rel="tag" class="tag">dashboards</a>, <a href="../../tag/deming/index.html" rel="tag" class="tag">deming</a>, <a href="../../tag/errors/index.html" rel="tag" class="tag">errors</a>, <a href="../../tag/leadership/index.html" rel="tag" class="tag">leadership</a>, <a href="../../tag/metrics/index.html" rel="tag" class="tag">metrics</a>, <a href="../../tag/tracking/index.html" rel="tag" class="tag">tracking</a>, <a href="../../tag/visualizations/index.html" rel="tag" class="tag">Visualizations</a></p>				<p style="color: #999">2020 words<br/>Read Time: 11 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2713"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #1121dd">CERN: Line Mode Browser</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">CERN: Line Mode Browser</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-09-25T11:11:54+00:00" style="color: #aaa; font-weight: bold">Wednesday, September 25th, 02013</time>
 				<p class="p-summary entry-summary"><p>CERN is that often overlooked organization which straddles the boarder between Switzerland and France. Home to some of the most complex and sensitive machines humans have ever built, CERN has an amazing amount of technology and smarts. We were there to help document and simulate just one of their small side-projects: The Web.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2013/09/25/cern-line-mode-browser/" rel="bookmark" title="Permanent Link to CERN: Line Mode Browser">Read more about CERN: Line Mode Browser</a></p>
+				<p><a style="display: block"  class="readmore" href="../../2013/09/25/cern-line-mode-browser/index.html" rel="bookmark" title="Permanent Link to CERN: Line Mode Browser">Read more about CERN: Line Mode Browser</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../conferences/index.html" title="View all articles in Conferences" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d70b59">Conferences</a>, <a href="../experiments/index.html" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a>, <a href="../interfaces/index.html" title="View all articles in Interfaces" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #756640">Interfaces</a>, <a href="index.html" title="View all articles in Storytelling" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d4ccb5">Storytelling</a></p><p><strong>Tags:</strong> <a href="../../tag/browser/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8e3f1b">browser</a>, <a href="../../tag/cern/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c7b3f7">cern</a>, <a href="../../tag/first-website/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c4c5fd">first website</a>, <a href="../../tag/geneva/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #65519c">geneva</a>, <a href="../../tag/internet/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #c35815">internet</a>, <a href="../../tag/lhc/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #41c4e7">LHC</a>, <a href="../../tag/lhcb/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #70aef6">LHCb</a>, <a href="../../tag/next/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a36d6e">NeXT</a>, <a href="../../tag/physics/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8cfb10">physics</a>, <a href="../../tag/web/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2567a5">web</a>, <a href="../../tag/www/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4eae35">www</a></p>				<p style="color: #999">1627 words<br/>Read Time: 9 minutes</p>
+				<p><strong>Categories:</strong> <a href="../conferences/index.html" title="View all articles in Conferences" rel="tag category" class="category">Conferences</a>, <a href="../experiments/index.html" title="View all articles in Experiments" rel="tag category" class="category">Experiments</a>, <a href="../interfaces/index.html" title="View all articles in Interfaces" rel="tag category" class="category">Interfaces</a>, <a href="index.html" title="View all articles in Storytelling" rel="tag category" class="category">Storytelling</a></p><p><strong>Tags:</strong> <a href="../../tag/browser/index.html" rel="tag" class="tag">browser</a>, <a href="../../tag/cern/index.html" rel="tag" class="tag">cern</a>, <a href="../../tag/first-website/index.html" rel="tag" class="tag">first website</a>, <a href="../../tag/geneva/index.html" rel="tag" class="tag">geneva</a>, <a href="../../tag/internet/index.html" rel="tag" class="tag">internet</a>, <a href="../../tag/lhc/index.html" rel="tag" class="tag">LHC</a>, <a href="../../tag/lhcb/index.html" rel="tag" class="tag">LHCb</a>, <a href="../../tag/next/index.html" rel="tag" class="tag">NeXT</a>, <a href="../../tag/physics/index.html" rel="tag" class="tag">physics</a>, <a href="../../tag/web/index.html" rel="tag" class="tag">web</a>, <a href="../../tag/www/index.html" rel="tag" class="tag">www</a></p>				<p style="color: #999">1627 words<br/>Read Time: 9 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2499"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #3ba983">Tricking the Stock Market</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Tricking the Stock Market</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-06-01T15:51:39+00:00" style="color: #aaa; font-weight: bold">Saturday, June 1st, 02013</time>
 				<p class="p-summary entry-summary"><p>One idea for a futuristic short-story we&#8217;ve been kicking around has turned out to not be so futuristic. As technology begins to dominate our lives and interactions, strange things begin to happen. Instant interactions we didn&#8217;t expect along with strange consequences. For those who know how to harness these feedback loops, there is an opportunity to exploit the system, just like there always has. This time it is digital and instantaneous.</p>
@@ -220,7 +239,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Storytelling" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d4ccb5">Storytelling</a></p><p><strong>Tags:</strong> <a href="http://optional.is/required/tag/prediction-market/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f9b62f">prediction market</a>, <a href="../../tag/predictions/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #361ed8">predictions</a>, <a href="http://optional.is/required/tag/short-story/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #7a9b4d">short story</a>, <a href="http://optional.is/required/tag/social-media/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #56b7bb">social media</a>, <a href="http://optional.is/required/tag/stock-market/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5180b0">stock market</a>, <a href="http://optional.is/required/tag/stocks/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4cd2f6">stocks</a>, <a href="../../tag/twitter/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b73c2d">twitter</a></p>				<p style="color: #999">1147 words<br/>Read Time: 6 minutes</p>
+				<p><strong>Categories:</strong> <a href="index.html" title="View all articles in Storytelling" rel="tag category" class="category">Storytelling</a></p><p><strong>Tags:</strong> <a href="../../tag/prediction-market/index.html" rel="tag" class="tag">prediction market</a>, <a href="../../tag/predictions/index.html" rel="tag" class="tag">predictions</a>, <a href="../../tag/short-story/index.html" rel="tag" class="tag">short story</a>, <a href="../../tag/social-media/index.html" rel="tag" class="tag">social media</a>, <a href="../../tag/stock-market/index.html" rel="tag" class="tag">stock market</a>, <a href="../../tag/stocks/index.html" rel="tag" class="tag">stocks</a>, <a href="../../tag/twitter/index.html" rel="tag" class="tag">twitter</a></p>				<p style="color: #999">1147 words<br/>Read Time: 6 minutes</p>
 			</div>
 		</div>
 				
@@ -259,7 +278,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
-			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" width="24.986" height="24.985"/>
 		</g>
 	</g>
 	</symbol>
@@ -308,7 +327,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
 	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
-	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+	<path  d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
 		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
 		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
 		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
@@ -562,6 +581,16 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				}
 			}
 
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus, footer #stripe .item div, footer #links .column ul li { color: #aaa; }
+				footer #stripe {
+					background-color: #444;
+				}
+				footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover, footer #links .column h3 { color: #eee; }
+				footer #stripe .item div:after, footer #links .column h3:after { background-color: #eee; }
+				footer .logo, footer .item svg { fill: #eee; }
+			}
+
 		</style>
 
 		<footer>
@@ -581,7 +610,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -650,3 +679,8 @@ pageTracker._trackPageview();
 </html>
 
 
+
+<!-- Dynamic page generated in 0.209 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-04-16 14:05:44 -->
+
+<!-- super cache -->

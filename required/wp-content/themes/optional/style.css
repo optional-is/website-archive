@@ -77,6 +77,10 @@ li.comment { padding-bottom: 2em; }
 ::-moz-selection{ background: #FFD700; color:#000; text-shadow: none; }
 ::selection { background:#FFD700; color:#000; text-shadow: none; }
 
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 
 #header h1 a { font-family: optional; text-decoration: none; font-size: 65px; line-height: 140px; text-align: left; }
 #footer .url { font-family: optional; text-decoration: none; font-size: 26px; }

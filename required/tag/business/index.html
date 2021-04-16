@@ -59,6 +59,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			a:active { position: relative; top:1px; }
 			
 			#categories li, #address li { width: 32%; float: left;}
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 			
 			@media only screen and (max-width: 960px) {
 				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
@@ -75,7 +79,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				.stretched, .main, .sub, .feature { height: auto; }
 				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
 				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				h1, h2, p, .call-out a span { width: auto; clear:both }
 				.thumbnail a { max-height: 200px; }
 				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 				#address li { width: auto; float: none;}
@@ -94,6 +98,18 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			.section { padding-top: 50px; }
 			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
+				a { color: #75b6ff; }
+				.call-out a:hover, li a:hover { background-color: #444;}
+				h1, h2 { color: #ddd; border-top: 1px solid #444; }
+				p { color: #ccc; }
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -133,6 +149,9 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				color: white;
 			}
 
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
 		</style>
 		<header>
 			<a href="../../../index.html" id="header">(optional.is)</a>
@@ -158,7 +177,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 		</div>
 							<div class="row section" id="post-3804"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #080095">2000 Days</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">2000 Days</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2016-07-29T14:41:48+00:00" style="color: #aaa; font-weight: bold">Friday, July 29th, 02016</time>
 				<p class="p-summary entry-summary"><p>We&#8217;re not 2000 days old, here&#8217;s to our next 2000.</p>
@@ -167,24 +186,24 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/meta/index.html" title="View all articles in Meta" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b6755d">Meta</a></p><p><strong>Tags:</strong> <a href="../2000/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #08f90c">2000</a>, <a href="../anniversary/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #69ebc8">anniversary</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f5d7e2">business</a>, <a href="../company/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #93c731">company</a>, <a href="../money/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #972625">money</a>, <a href="../weeknotes/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p>				<p style="color: #999">1314 words<br/>Read Time: 7 minutes</p>
+				<p><strong>Categories:</strong> <a href="http://optional.is/required/category/meta/" title="View all articles in Meta" rel="tag category" class="category">Meta</a></p><p><strong>Tags:</strong> <a href="../2000/index.html" rel="tag" class="tag">2000</a>, <a href="../anniversary/index.html" rel="tag" class="tag">anniversary</a>, <a href="index.html" rel="tag" class="tag">business</a>, <a href="../company/index.html" rel="tag" class="tag">company</a>, <a href="../money/index.html" rel="tag" class="tag">money</a>, <a href="../weeknotes/index.html" rel="tag" class="tag">Weeknotes</a></p>				<p style="color: #999">1314 words<br/>Read Time: 7 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2830"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #3f7b6b">Week #143-144</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #143-144</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-11-15T13:31:08+00:00" style="color: #aaa; font-weight: bold">Friday, November 15th, 02013</time>
 				<p class="p-summary entry-summary"><p>A little over 13,400km (8300 miles) travelled this fortnight. What an adventure and busy two weeks.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2013/11/15/week-143-144/" rel="bookmark" title="Permanent Link to Week #143-144">Read more about Week #143-144</a></p>
+				<p><a style="display: block"  class="readmore" href="../../2013/11/15/week-143-144/index.html" rel="bookmark" title="Permanent Link to Week #143-144">Read more about Week #143-144</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f5d7e2">business</a>, <a href="../leads/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d74541">leads</a>, <a href="../newsfoo/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #3a187d">newsfoo</a>, <a href="../northern-lights/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6ced5b">northern lights</a>, <a href="../phoenix/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b3d977">phoenix</a>, <a href="../travel/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1fb0f9">Travel</a></p>				<p style="color: #999">498 words<br/>Read Time: 3 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="index.html" rel="tag" class="tag">business</a>, <a href="../leads/index.html" rel="tag" class="tag">leads</a>, <a href="../newsfoo/index.html" rel="tag" class="tag">newsfoo</a>, <a href="../northern-lights/index.html" rel="tag" class="tag">northern lights</a>, <a href="../phoenix/index.html" rel="tag" class="tag">phoenix</a>, <a href="../travel/index.html" rel="tag" class="tag">Travel</a></p>				<p style="color: #999">498 words<br/>Read Time: 3 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2575"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #3dca26">Business Metrics</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Business Metrics</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-07-28T13:31:53+00:00" style="color: #aaa; font-weight: bold">Sunday, July 28th, 02013</time>
 				<p class="p-summary entry-summary"><p>Looking back at what metrics we track to see if things are progressing, we boiled it down to the three first and most important aspects of starting a business.</p>
@@ -193,24 +212,24 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a></p><p><strong>Tags:</strong> <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f5d7e2">business</a>, <a href="http://optional.is/required/tag/customers/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #4b6f7d">customers</a>, <a href="../expenses/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #603af8">expenses</a>, <a href="../metrics/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa59d6">metrics</a>, <a href="../money/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #972625">money</a>, <a href="../tracking/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #187996">tracking</a>, <a href="../twitter/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b73c2d">twitter</a></p>				<p style="color: #999">378 words<br/>Read Time: 2 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a></p><p><strong>Tags:</strong> <a href="index.html" rel="tag" class="tag">business</a>, <a href="http://optional.is/required/tag/customers/" rel="tag" class="tag">customers</a>, <a href="http://optional.is/required/tag/expenses/" rel="tag" class="tag">expenses</a>, <a href="../metrics/index.html" rel="tag" class="tag">metrics</a>, <a href="../money/index.html" rel="tag" class="tag">money</a>, <a href="../tracking/index.html" rel="tag" class="tag">tracking</a>, <a href="../twitter/index.html" rel="tag" class="tag">twitter</a></p>				<p style="color: #999">378 words<br/>Read Time: 2 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2339"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #cf4713">Getting to your minimum hourly rate</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Getting to your minimum hourly rate</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-01-21T12:21:41+00:00" style="color: #aaa; font-weight: bold">Monday, January 21st, 02013</time>
 				<p class="p-summary entry-summary"><p>If you are starting your business or freelancing, you need to figure out your minimum hourly rate. It isn&#8217;t hard, but it probably factors in many more things you never considered. In this article, we&#8217;ll create a simple spreadsheet to let you know how to calculate your minimum hourly rate to keep the company afloat.</p>
 </p>
-				<p><a style="display: block"  class="readmore" href="https://optional.is/required/2013/01/21/getting-to-your-minimum-hourly-rate/" rel="bookmark" title="Permanent Link to Getting to your minimum hourly rate">Read more about Getting to your minimum hourly rate</a></p>
+				<p><a style="display: block"  class="readmore" href="../../2013/01/21/getting-to-your-minimum-hourly-rate/index.html" rel="bookmark" title="Permanent Link to Getting to your minimum hourly rate">Read more about Getting to your minimum hourly rate</a></p>
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/case-studies/index.html" title="View all articles in Case Studies" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0d2b6">Case Studies</a>, <a href="../../category/meta/index.html" title="View all articles in Meta" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b6755d">Meta</a></p><p><strong>Tags:</strong> <a href="../billing/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8efdd1">billing</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f5d7e2">business</a>, <a href="../costs/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #be9bd3">costs</a>, <a href="../day-rate/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #6e015b">day rate</a>, <a href="../hourly-rate/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2e8f8f">hourly rate</a>, <a href="../invoices/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #56deca">invoices</a>, <a href="../rate/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #679425">rate</a></p>				<p style="color: #999">2753 words<br/>Read Time: 15 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../category/case-studies/index.html" title="View all articles in Case Studies" rel="tag category" class="category">Case Studies</a>, <a href="http://optional.is/required/category/meta/" title="View all articles in Meta" rel="tag category" class="category">Meta</a></p><p><strong>Tags:</strong> <a href="../billing/index.html" rel="tag" class="tag">billing</a>, <a href="index.html" rel="tag" class="tag">business</a>, <a href="../costs/index.html" rel="tag" class="tag">costs</a>, <a href="../day-rate/index.html" rel="tag" class="tag">day rate</a>, <a href="../hourly-rate/index.html" rel="tag" class="tag">hourly rate</a>, <a href="../invoices/index.html" rel="tag" class="tag">invoices</a>, <a href="../rate/index.html" rel="tag" class="tag">rate</a></p>				<p style="color: #999">2753 words<br/>Read Time: 15 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-329"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #c0a1f5">Skólapúlsinn: Educational Assessment</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Skólapúlsinn: Educational Assessment</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2009-07-03T03:30:12+00:00" style="color: #aaa; font-weight: bold">Friday, July 3rd, 02009</time>
 				<p class="p-summary entry-summary"><p>How could a father, a student and a foreigner change the way an entire country looks at educational surveys and improve the quality life for thousands of students? Skólapúlsinn was built to create a very easy environment for schools to conduct continuous random sampling over 21 psychometric scales to evaluation their performance nationally. The results in the first 9 months of operation have been staggering as well as eye opening to us and the schools.</p>
@@ -219,7 +238,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/case-studies/index.html" title="View all articles in Case Studies" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0d2b6">Case Studies</a>, <a href="../../category/education/index.html" title="View all articles in Education" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #de7a22">Education</a></p><p><strong>Tags:</strong> <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #f5d7e2">business</a>, <a href="../data-security/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a340cc">data security</a>, <a href="../graphs/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e8706a">graphs</a>, <a href="../iceland/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #83166c">iceland</a>, <a href="../school-pulse/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #ab5c52">school pulse</a>, <a href="../skolapulsinn/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #992eae">skolapulsinn</a>, <a href="../survey/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2fa7b0">survey</a></p>				<p style="color: #999">3458 words<br/>Read Time: 19 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../category/case-studies/index.html" title="View all articles in Case Studies" rel="tag category" class="category">Case Studies</a>, <a href="../../category/education/index.html" title="View all articles in Education" rel="tag category" class="category">Education</a></p><p><strong>Tags:</strong> <a href="index.html" rel="tag" class="tag">business</a>, <a href="../data-security/index.html" rel="tag" class="tag">data security</a>, <a href="../graphs/index.html" rel="tag" class="tag">graphs</a>, <a href="../iceland/index.html" rel="tag" class="tag">iceland</a>, <a href="../school-pulse/index.html" rel="tag" class="tag">school pulse</a>, <a href="../skolapulsinn/index.html" rel="tag" class="tag">skolapulsinn</a>, <a href="../survey/index.html" rel="tag" class="tag">survey</a></p>				<p style="color: #999">3458 words<br/>Read Time: 19 minutes</p>
 			</div>
 		</div>
 				
@@ -258,7 +277,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
-			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" width="24.986" height="24.985"/>
 		</g>
 	</g>
 	</symbol>
@@ -307,7 +326,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
 	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
-	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+	<path  d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
 		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
 		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
 		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
@@ -561,6 +580,16 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				}
 			}
 
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus, footer #stripe .item div, footer #links .column ul li { color: #aaa; }
+				footer #stripe {
+					background-color: #444;
+				}
+				footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover, footer #links .column h3 { color: #eee; }
+				footer #stripe .item div:after, footer #links .column h3:after { background-color: #eee; }
+				footer .logo, footer .item svg { fill: #eee; }
+			}
+
 		</style>
 
 		<footer>
@@ -580,7 +609,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -649,3 +678,8 @@ pageTracker._trackPageview();
 </html>
 
 
+
+<!-- Dynamic page generated in 0.220 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-04-16 14:10:40 -->
+
+<!-- super cache -->

@@ -59,6 +59,10 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			a:active { position: relative; top:1px; }
 			
 			#categories li, #address li { width: 32%; float: left;}
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag:hover { background-color: #deebde }
+			.category { background-color: #dee9eb}
+			.category:hover { background-color: #dee9eb}
 			
 			@media only screen and (max-width: 960px) {
 				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
@@ -75,7 +79,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				.stretched, .main, .sub, .feature { height: auto; }
 				.feature img, .thumbnail img, .sub img { width: 100%; height: auto; }
 				
-				h1, h2, p, .call-out a span { margin-left: 10px; width: auto; clear:both }
+				h1, h2, p, .call-out a span { width: auto; clear:both }
 				.thumbnail a { max-height: 200px; }
 				#header { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 				#address li { width: auto; float: none;}
@@ -94,6 +98,18 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			.section { padding-top: 50px; }
 			xstrong { background-color: #FFFACD; padding: 2px 3px;}
 			main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			
+			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
+				a { color: #75b6ff; }
+				.call-out a:hover, li a:hover { background-color: #444;}
+				h1, h2 { color: #ddd; border-top: 1px solid #444; }
+				p { color: #ccc; }
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -133,6 +149,9 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				color: white;
 			}
 
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
 		</style>
 		<header>
 			<a href="../../../index.html" id="header">(optional.is)</a>
@@ -158,7 +177,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 		</div>
 							<div class="row section" id="post-4744"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #a5a148">Name Your Price</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Name Your Price</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2020-09-28T13:31:30+00:00" style="color: #aaa; font-weight: bold">Monday, September 28th, 02020</time>
 				<p class="p-summary entry-summary"><p>&#x1f92f; Value-based product pricing. An e-commerce platform experimenting with variable priced based on survey feedback.</p>
@@ -167,11 +186,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../category/youre-doing-it-wrong/index.html" title="View all articles in You're doing it wrong" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #96e20d">You're doing it wrong</a></p><p><strong>Tags:</strong> <a href="http://optional.is/required/tag/ecommerce/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #db96ff">ecommerce</a>, <a href="http://optional.is/required/tag/pay/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #b02a45">pay</a>, <a href="http://optional.is/required/tag/payments/" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #84d5ea">payments</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2fa7b0">survey</a></p>				<p style="color: #999">936 words<br/>Read Time: 5 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="../../category/youre-doing-it-wrong/index.html" title="View all articles in You're doing it wrong" rel="tag category" class="category">You're doing it wrong</a></p><p><strong>Tags:</strong> <a href="../ecommerce/index.html" rel="tag" class="tag">ecommerce</a>, <a href="../pay/index.html" rel="tag" class="tag">pay</a>, <a href="../payments/index.html" rel="tag" class="tag">payments</a>, <a href="index.html" rel="tag" class="tag">survey</a></p>				<p style="color: #999">936 words<br/>Read Time: 5 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-4255"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #1f93fd">Week #454-455</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #454-455</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2019-11-01T12:21:14+00:00" style="color: #aaa; font-weight: bold">Friday, November 1st, 02019</time>
 				<p class="p-summary entry-summary"><p>Another double weeknote. We&#8217;re still settling in, mostly focusing the last two weeks on one stealth project, with lots of paper links teasing us.</p>
@@ -180,11 +199,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../api/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8a5da5">api</a>, <a href="../paper/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #d0a662">Paper</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2fa7b0">survey</a></p>				<p style="color: #999">500 words<br/>Read Time: 3 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../api/index.html" rel="tag" class="tag">api</a>, <a href="../paper/index.html" rel="tag" class="tag">Paper</a>, <a href="index.html" rel="tag" class="tag">survey</a></p>				<p style="color: #999">500 words<br/>Read Time: 3 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-3008"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #8a216e">Week #158-159-160</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Week #158-159-160</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2014-03-07T12:21:05+00:00" style="color: #aaa; font-weight: bold">Friday, March 7th, 02014</time>
 				<p class="p-summary entry-summary"><p>The Alfa Romeo 158/159 shares its names with our fortnightly week note. The World Chess Federation (FIDE), currently has 158 member nations. 158 Kronois is a ~35km asteroid in the astroid belt. 159 on the other hand is CLIX in Roman Numerals. Strangly there is a disambiguation page on Wikipedia for CLIX. 160 is the number [&hellip;]</p>
@@ -193,11 +212,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #138567">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../car/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #e6d965">car</a>, <a href="../ikea/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #65d6b2">IKEA</a>, <a href="../interface/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #8eb58d">interface</a>, <a href="../iot/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #97c209">iot</a>, <a href="../lifx/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #171cc1">lifx</a>, <a href="../sheng/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #cdadd3">Sheng</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2fa7b0">survey</a>, <a href="../wifi/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #5f27dd">wifi</a></p>				<p style="color: #999">374 words<br/>Read Time: 2 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../car/index.html" rel="tag" class="tag">car</a>, <a href="../ikea/index.html" rel="tag" class="tag">IKEA</a>, <a href="../interface/index.html" rel="tag" class="tag">interface</a>, <a href="../iot/index.html" rel="tag" class="tag">iot</a>, <a href="../lifx/index.html" rel="tag" class="tag">lifx</a>, <a href="../sheng/index.html" rel="tag" class="tag">Sheng</a>, <a href="index.html" rel="tag" class="tag">survey</a>, <a href="../wifi/index.html" rel="tag" class="tag">wifi</a></p>				<p style="color: #999">374 words<br/>Read Time: 2 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2813"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #749159">Survey Archives</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Survey Archives</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-11-19T14:41:02+00:00" style="color: #aaa; font-weight: bold">Tuesday, November 19th, 02013</time>
 				<p class="p-summary entry-summary"><p>As we produce more and more data, we understand how to back it up and archive it, but re-activating it is what almost no one considers. We&#8217;re doing our best to preserve and save the state of the entire running system.</p>
@@ -206,11 +225,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../category/case-studies/index.html" title="View all articles in Case Studies" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #a0d2b6">Case Studies</a></p><p><strong>Tags:</strong> <a href="../archives/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #1a5572">archives</a>, <a href="../backups/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa5c56">backups</a>, <a href="../skolapulsinn/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #992eae">skolapulsinn</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2fa7b0">survey</a>, <a href="../visar/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #497540">visar</a></p>				<p style="color: #999">991 words<br/>Read Time: 6 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="../../category/case-studies/index.html" title="View all articles in Case Studies" rel="tag category" class="category">Case Studies</a></p><p><strong>Tags:</strong> <a href="../archives/index.html" rel="tag" class="tag">archives</a>, <a href="../backups/index.html" rel="tag" class="tag">backups</a>, <a href="../skolapulsinn/index.html" rel="tag" class="tag">skolapulsinn</a>, <a href="index.html" rel="tag" class="tag">survey</a>, <a href="../visar/index.html" rel="tag" class="tag">visar</a></p>				<p style="color: #999">991 words<br/>Read Time: 6 minutes</p>
 			</div>
 		</div>
 				<div class="row section" id="post-2778"  >
-				<h1 class="p-name entry-title" style="border-top: 1px solid #b9aac4">Pi in the Sky</h1>
+				<h1 class="p-name entry-title" style="border-top: 1px solid #aaa">Pi in the Sky</h1>
 			<div class="box1" >
 				<time class="dt-published date published" datetime="2013-10-20T12:21:24+00:00" style="color: #aaa; font-weight: bold">Sunday, October 20th, 02013</time>
 				<p class="p-summary entry-summary"><p>We tried to build an offline survey kiosk using a Raspberry Pi, but ran into a few issues. We&#8217;re more knowledgable now about the limitations.</p>
@@ -219,7 +238,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			</div>
 			<div class="box1 postmetadata">
 
-				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #aa8c5b">Briefs</a>, <a href="../../category/experiments/index.html" title="View all articles in Experiments" rel="tag category" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #482926">Experiments</a></p><p><strong>Tags:</strong> <a href="../offline/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #27a213">offline</a>, <a href="../pi/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #72ab8a">pi</a>, <a href="../raspberry-pi/index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #028442">raspberry pi</a>, <a href="index.html" rel="tag" style="background-color: #f4f4f4; text-decoration: none; border-bottom: 2px solid #2fa7b0">survey</a></p>				<p style="color: #999">655 words<br/>Read Time: 4 minutes</p>
+				<p><strong>Categories:</strong> <a href="../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="../../category/experiments/index.html" title="View all articles in Experiments" rel="tag category" class="category">Experiments</a></p><p><strong>Tags:</strong> <a href="../offline/index.html" rel="tag" class="tag">offline</a>, <a href="../pi/index.html" rel="tag" class="tag">pi</a>, <a href="../raspberry-pi/index.html" rel="tag" class="tag">raspberry pi</a>, <a href="index.html" rel="tag" class="tag">survey</a></p>				<p style="color: #999">655 words<br/>Read Time: 4 minutes</p>
 			</div>
 		</div>
 				
@@ -258,7 +277,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
-			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" fill="#222222" width="24.986" height="24.985"/>
+			<rect x="0.869" y="0.87" clip-path="url(#SVGID_4_)" width="24.986" height="24.985"/>
 		</g>
 	</g>
 	</symbol>
@@ -307,7 +326,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	<symbol id="icon_weeknotes" viewBox="0 0 25.024 23.104" >
 	<g id="Regular-M" transform="matrix(1 0 0 1 1388.71 1126)">
-	<path fill="#010101" d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
+	<path  d="M-1384.769-1102.896h17.142c2.624,0,3.94-1.305,3.94-3.891v-15.323c0-2.585-1.316-3.89-3.94-3.89h-17.142
 		c-2.611,0-3.941,1.292-3.941,3.89v15.323C-1388.71-1104.189-1387.38-1102.896-1384.769-1102.896z M-1384.944-1104.917
 		c-1.117,0-1.745-0.59-1.745-1.757v-11.835c0-1.153,0.628-1.757,1.745-1.757h17.48c1.117,0,1.758,0.604,1.758,1.757v11.835
 		c0,1.167-0.641,1.757-1.758,1.757H-1384.944z M-1378.657-1115.76h0.74c0.439,0,0.59-0.126,0.59-0.564v-0.74
@@ -561,6 +580,16 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				}
 			}
 
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links .column ul li a, footer #links .column ul li a:visited, footer #links .column ul li a:active, footer #links .column ul li a:focus, footer #stripe .item div, footer #links .column ul li { color: #aaa; }
+				footer #stripe {
+					background-color: #444;
+				}
+				footer #stripe .item a, footer #stripe .item a:visited, footer #stripe .item a:hover, footer #links .column h3 { color: #eee; }
+				footer #stripe .item div:after, footer #links .column h3:after { background-color: #eee; }
+				footer .logo, footer .item svg { fill: #eee; }
+			}
+
 		</style>
 
 		<footer>
@@ -580,7 +609,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
 					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #527</div></div><div class="item"><svg width="40" height="40">
+					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
 					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
@@ -649,3 +678,8 @@ pageTracker._trackPageview();
 </html>
 
 
+
+<!-- Dynamic page generated in 0.204 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-04-16 14:09:01 -->
+
+<!-- super cache -->
