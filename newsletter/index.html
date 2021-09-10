@@ -1,6 +1,8 @@
 <html>
 	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 		<meta http-equiv="Content-Language" content="en-us">
+		<meta name="google-site-verification" content="NU2VGyLRaV2ouJZYY7Yw2J8cMccR7hU-GsRC-i_inKU">
 		<link rel="apple-touch-icon-precomposed" href="../images/apple-touch-icon-precomposed.png">
 		<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,96 +13,104 @@
 		<meta name="twitter:creator" content="@optionalBot">
 		<title>(optional.is) Newsletter</title>
 		<style>
-			@font-face {
-			  font-family: 'optional';
-			    src: url("../fonts/optional.eot");
-			    src: local('optional'),
-			       url("../fonts/optional.svg") format('svg'),
-			       url("../fonts/optional.otf") format('opentype');
+			html, body {
+				margin: 0 auto;
+				padding: 0;
+				text-align: center;
+				background-color: #f7f7f7;
+				font-family: -apple-system,"SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+			}
+			h1, h2, h3, ul, ol, li, form, iframe { margin: 0 auto; padding:0; }
+			main {
+				margin: 0 auto;
+				max-width: 2560px;
+
+			}
+			section { 
+				margin: 0 auto;
+				text-align: center;
+			 }
+			 a {
+			 	color: #2997ff;
+				text-decoration: none;
+			 }
+			 a.pill {
+			 	border: 1px solid #fff;
+			 	background-color: #fff;
+			 	color: #000;
+			 	line-height: 60px;
+			 	padding: 10px 20px;
+			 	border-radius: 30px;
+			 	color: #000;
+				transition: all ease 0.5s ;
+			 }
+			 a.pill:hover {
+			 	background-color: transparent;
+			 	color: #fff;
+				transition: all ease 0.5s ;
+			 }
+
+
+			 
+			 
+			section { padding: 7px 0; }
+			section.feature, section.box {  display: grid;  grid-gap: 14px;  }
+			section.feature div, section.box div { background-color: #f4f4f4; }
+			section.feature { grid-template-columns: 1fr 1fr; min-height: 500px; }
+			section.feature h1 { font-weight: 600; color: #1d1d1f; font-size: 40px; margin: 0; padding: 50px 0 0px 0; }
+			section.feature p { line-height: 1.2381; font-weight: 300; letter-spacing: .016em; padding: 4px 0 20px 0; color: #1d1d1f; font-size:21px; margin:0 }
+
+			section.box { grid-template-columns: 1fr 1fr 1fr 1fr; min-height: 200px; }
+
+			section.feature div:nth-child(odd) { margin-left: 14px; }
+			section.feature div:nth-child(even) { margin-right: 14px; }
+
+			@media only screen and (max-width: 1160px) {
+				section.feature > div { margin: 0; min-height: 400px;  }
+				section.feature { display: block; }
+				section.feature > div:nth-child(even) { margin-top: 14px }
+				#header { padding: 0 20px; }
+
+				section.feature div:nth-child(odd) { margin-left: 0; }
+				section.feature div:nth-child(even) { margin-right: 0; }
+
 			}
 
-			
-			html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding: 0; }
-			html, body { background-color: #f7f7f7; font-family: Helvetica, Arial, sanserif}
-			/*
-			html, body, div, p, h1, h2, h3, ul, ol, li, form, iframe { margin: 0 auto; padding:0; font-size: 14px; line-height: 30px;  width: 100%; text-align: center; color: #444; }
-			div, p, h1, h2, h3, li { text-align: left; }
-			*/
-			main p { line-height: 24px; padding-bottom: 12px;}
-			header, main { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			
-
-			main h1 { border-top: 1px solid #dedede; clear: both; font-size: 22px;
-line-height: 58px; color: #222; text-transform: uppercase;  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica-Light", "Helvetica Light","Helvetica Neue"; font-weight: normal;   }
-			
-			main h2 { font-size: 18px; line-height: 28px; padding: 8px 0px; color: #222; text-transform: uppercase; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica-Light", "Helvetica Light","Helvetica Neue"; font-weight: normal; }			
-			.center, .optional_app_list { text-align: center; }
-			
-
-			
-
-
-			.meta { color: #666; font-size: 12px; }
-			ul { padding: 0; margin: 0; }
-			li { padding: 0 0 20px 0; list-style: none; margin: 0; }
-
-			a { font-weight: normal; color: #003F87; text-decoration: underline;}
-			a:active { position: relative; top:1px; }
-			.subject a { font-weight: bold; }
-
-
-			.section { padding-top: 50px; }
-			.row { clear: both; margin: 0 auto; width: 960px;  }
-			.row div:last-child { margin-right: 0; }
-			.box1 { width: 470px; float: left; margin-right: 20px; }
-			.box2 { width: 225px; float: left; margin-right: 20px; }
-
-
-			@media only screen and (max-width: 960px) {
-				.box1 { clear: both; float: none; margin-right: 0; width: 100%; }
-				.row { width: 470px}
-				.box2 { width: 225px; }
-				.box2+.box2 { margin-right: 0px;  }
-				.box2+.box2+.box2 {  margin-right: 20px; }
-				.box2+.box2+.box2+.box2 {  margin-right: 0px; }
+			 #header {
+				font-family: optional;
+				font-weight: normal;
+				font-size: 45px;
+				line-height: 100px;
+				max-width: 1024px;
+				margin: 0 auto;
+				color: #000;
+				text-align: left;
+				display: grid; 
+				grid-gap: 0; 
+				grid-template-columns: auto 300px;
 			}
-			@media only screen and (max-width: 480px) {
-				.row { width: 100%; }
-				.box1 { clear: both; float: none; margin-right: 0; width: 100%; height: auto; }
-				.box2 { margin-right: 0; width: 100%; }			
+			#search { padding: 20px 0; height: 30px; vertical-align: middle; } 
+
+			@media only screen and (max-width: 520px) {
+				#header { display: block; text-align: center;}
+				#search { display: block;  width: 100%; }
 			}
-
-			@media (prefers-color-scheme: dark) {
-				html, body {
-					background-color: #222;
-					color: #eee;
-				}
-
-				.subject a { color: #75b6ff; }
-				.meta { color: #ccc; }
-
-				svg { fill: #eee; }
-			}
-
-			</style>
-	</head>
-	<body>
-				<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
 			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
 			form.single input:focus { border: none; outline: none; }
 
+
+
 			form.single button {
 			 	margin: 0;
 			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
+			 	color: #fff;
+			 	background-color: #6a6a6a;
 			 	border: none;
 			 	border-top-right-radius: 10px;
 			 	border-bottom-right-radius: 10px;
 			 	line-height: 40px;
+			 	transition: all ease 0.5s ;
 			}
 			form.single input {
 			 	border: none;
@@ -115,79 +125,256 @@ line-height: 58px; color: #222; text-transform: uppercase;  font-family: "Helvet
 			form.single button:hover {
 			 	background-color: #1b1700;
 				color: white;
+				transition: all ease 0.5s ;
 			}
 			form.single button:active {
 			 	background-color: #007f3f;
 				color: white;
 			}
 
+			@font-face {
+					  font-family: 'optional';
+					    src: url("../fonts/optional.eot");
+					    src: local('optional'),
+					       url("../fonts/optional.svg") format('svg'),
+					       url("../fonts/optional.otf") format('opentype');
+					}
+
+
 			@media (prefers-color-scheme: dark) {
+				html, body {
+					background-color: #222;
+					color: #eee;
+				}
 				#header { color: #eee; }
+
+				section.feature div, section.box div { background-color: #333; }
+				section.feature h1 { color: #ddd; }
+				section.feature p { color: #ccc; }
+				svg { fill: #eee; }
+			}
+
+			.content { padding: 60px 0px; max-width: 980px; text-align: left;}
+			.pull { text-align: center; padding: 175px 0; }
+			.pull h1 {
+				font-size: 60px;
+				line-height: .85754;
+				font-weight: 600;
+				letter-spacing: -.008em;
+				margin: 0;
+				padding: 0 15px;
+			}
+			.pull div {
+				margin-top: 40px;
+				font-size: 32px;
+				line-height: 1.16667;
+				font-weight: 500;
+				letter-spacing: .009em;
+				font-style: normal;
+				padding: 0 15px;
+				
+			}
+
+			@media only screen and (max-width: 860px) {
+				.pull h1 { font-size: 60px; }
+			}
+
+			@media only screen and (max-width: 600px) {
+				.pull { text-align: center; padding: 100px 0; }
+				.pull h1 { font-size: 60px; padding: 0 15px; }
+				.pull div { margin-left: 0%; margin-top: 20px; font-size: 18px; padding: 0 15px;}
 			}
 		</style>
-		<header>
-			<a href="../index.html" id="header">(optional.is)</a>
+	</head>
+	<body>
+		<header id="header" >
+			<span>(optional.is)</span>
 
-			<form action="../required/index.html" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
+			<form id="search" class="single" action="https://optional.is/required" >
+				<input type="text" name="s"  placeholder="Find..." /><button>Search</button>
 			</form>
 		</header>
 		<main>
-			<h1>Newsletter</h1>
-			<div class="row">
-				<div class="box1">
-					<div class="feature stretched" >
-						<p>Sign-up for our quarterly newsletter. It is a low-volume, informative and fun email with nuggets of great ideas.</p>
+			<section id="lead" class="content">
+				<style>
+					#lead { padding: 60px 15px; }
+					#lead h1 {
+						font-size: 140px;
+						line-height: .85754;
+						font-weight: 600;
+						letter-spacing: -.008em;
+						margin: 0;
+					}
+					#lead div {
+						margin-top: 80px;
+						font-size: 32px;
+						line-height: 1.16667;
+						font-weight: 500;
+						letter-spacing: .009em;
+						font-style: normal;
+						
+					}
 
-						<form action="https://optional.us2.list-manage.com/subscribe/post?u=980d7e7c822ddb46c6693388d&amp;id=4b11c60bdb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="" style="height: 30px">
-							<input type="email" placeholder="Email Address" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="width: 130px"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+					@media only screen and (max-width: 860px) {
+						#lead h1 { font-size: 120px; }
+					}
+
+					@media only screen and (max-width: 600px) {
+						#lead h1 { font-size: 60px; padding: 0 15px; }
+						#lead div { margin-left: 0%; margin-top: 20px; font-size: 18px; padding: 0 15px;}
+					}
+
+				</style>
+				<h1>Newsletter</h1>
+				<div>A quarterly, low volume newsletter with interesting stories delivered to your inbox every three months.</div>
+			</section>
+
+
+			<section class="feature">
+				<div id="signup">
+					<style>
+						#signup h1 { color: rgba(0,0,0,0.9); 	}
+						#signup p { color: rgba(0,0,0,0.9); font-size: 30px; }
+						#signup, #signup  div { 
+							background: #fff; color: #111;
+						  }
+						  #prototypes div { background: #fff; }
+					@media (prefers-color-scheme: dark) {
+						#signup,  #signup h1, #signup p, #signup div  { background-color: #000; color: #fff; }
+						#signup div p { color: rgba(255,255,255,0.7); }
+					}
+					</style>
+					<h1>Something for every season</h1>
+					<p>Never miss a newsletter.</p>
+					<div style="text-align: center; margin-bottom: 30px">
+						<svg height="150" width="150" viewBox="0 0 26.725 26.726">
+							<g display="inline">
+								<defs>
+									<path id="mSVGID_5_" d="M13.363,25.741c-6.837,0-12.379-5.542-12.379-12.378c0-6.837,5.542-12.379,12.379-12.379
+										c6.836,0,12.378,5.542,12.378,12.379C25.741,20.199,20.199,25.741,13.363,25.741z M10.584,23.413
+										c0.589,0.165,1.198,0.28,1.823,0.341V2.972c-0.625,0.061-1.234,0.176-1.823,0.341V23.413z M16.254,3.312
+										c-0.589-0.165-1.197-0.28-1.823-0.341v20.782c0.626-0.061,1.234-0.176,1.823-0.341V3.312z M22.234,7.769v11.188
+										c1.029-1.616,1.624-3.535,1.624-5.593C23.858,11.305,23.264,9.386,22.234,7.769z M20.211,5.435
+										c-0.591-0.507-1.239-0.948-1.935-1.314v18.485c0.695-0.366,1.344-0.808,1.935-1.314V5.435z M4.604,18.956V7.769
+										c-1.028,1.617-1.624,3.536-1.624,5.595C2.979,15.421,3.575,17.34,4.604,18.956z M6.627,21.291
+										c0.591,0.507,1.24,0.948,1.935,1.314V4.12C7.867,4.486,7.218,4.928,6.627,5.435V21.291z"></path>
+								</defs>
+								<use xlink:href="#mSVGID_5_" overflow="visible" fill-rule="evenodd" clip-rule="evenodd"></use>
+								<clipPath id="mSVGID_6_">
+									<use xlink:href="#mSVGID_5_" overflow="visible"></use>
+								</clipPath>
+								<g clip-path="url(#mSVGID_6_)">
+									<defs>
+										<rect id="mSVGID_7_" x="-0.87" y="-1.039" width="28.775" height="28.775"></rect>
+									</defs>
+									<use xlink:href="#mSVGID_7_" overflow="visible"></use>
+									<clipPath id="mSVGID_8_">
+										<use xlink:href="#mSVGID_7_" overflow="visible"></use>
+									</clipPath>
+									<rect x="0.844" y="0.844" opacity="0.96" clip-path="url(#mSVGID_8_)" width="25.038" height="25.038"></rect>
+								</g>
+							</g>
+						</svg>
+					</div>
+
+					<form action="https://optional.us2.list-manage.com/subscribe/post?u=980d7e7c822ddb46c6693388d&amp;id=4b11c60bdb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" id="newsletter"  class="single validate" target="_blank" novalidate="" style="max-width: 400px; text-align: center; margin: 0 auto; padding-bottom: 20px">
+							<input type="email" placeholder="Email Address" value="" name="EMAIL" class="required email" id="mce-EMAIL" >
+							<button name="subscribe" id="mc-embedded-subscribe" class="button">Subscribe</button>
 						</form>
-					</div>
+
+					<p><a href="archive/index.html#archive">Past Newsletters</a></p>
 				</div>
-				<div class="box2">
-					<div class="main">
-						<p>The sendering address is newsletter@optional.is Please add this to your white-list to help with any future filtering.</p>
-					</div>
-				</div>
-				<div class="box2">
-					<div class="main" style="text-align: center">
-					<svg height="180" width="180" viewBox="0 0 26.725 26.726">
-					<g display="inline">
-						<defs>
-							<path id="mSVGID_5_" d="M13.363,25.741c-6.837,0-12.379-5.542-12.379-12.378c0-6.837,5.542-12.379,12.379-12.379
-								c6.836,0,12.378,5.542,12.378,12.379C25.741,20.199,20.199,25.741,13.363,25.741z M10.584,23.413
-								c0.589,0.165,1.198,0.28,1.823,0.341V2.972c-0.625,0.061-1.234,0.176-1.823,0.341V23.413z M16.254,3.312
-								c-0.589-0.165-1.197-0.28-1.823-0.341v20.782c0.626-0.061,1.234-0.176,1.823-0.341V3.312z M22.234,7.769v11.188
-								c1.029-1.616,1.624-3.535,1.624-5.593C23.858,11.305,23.264,9.386,22.234,7.769z M20.211,5.435
-								c-0.591-0.507-1.239-0.948-1.935-1.314v18.485c0.695-0.366,1.344-0.808,1.935-1.314V5.435z M4.604,18.956V7.769
-								c-1.028,1.617-1.624,3.536-1.624,5.595C2.979,15.421,3.575,17.34,4.604,18.956z M6.627,21.291
-								c0.591,0.507,1.24,0.948,1.935,1.314V4.12C7.867,4.486,7.218,4.928,6.627,5.435V21.291z"/>
-						</defs>
-						<use xlink:href="#mSVGID_5_"  overflow="visible" fill-rule="evenodd" 				clip-rule="evenodd"/>
-						<clipPath id="mSVGID_6_">
-							<use xlink:href="#mSVGID_5_"  overflow="visible"/>
-						</clipPath>
-						<g clip-path="url(#mSVGID_6_)">
-							<defs>
-								<rect id="mSVGID_7_" x="-0.87" y="-1.039" width="28.775" height=				"28.775"/>
-							</defs>
-							<use xlink:href="#mSVGID_7_"  overflow="visible"/>
-							<clipPath id="mSVGID_8_">
-								<use xlink:href="#mSVGID_7_"  overflow="visible"/>
-							</clipPath>
-							<rect x="0.844" y="0.844" opacity="0.96" clip-path="url(#mSVGID_8_)"				 width="25.038" height="25.038"/>
-						</g>
-					</g>
-					</svg>
-					</div>
-				</div>
+
+				<div id="instructions">
+					<style>
+						#instructions h1 { color: rgba(0,0,0,0.9); padding-top: 10px; font-size: 80px;}
+						#instructions p { color: rgba(0,0,0,0.7); font-size: 24px; padding: 1em; }
+						#instructions { 
+							background: #fff; color: #111;
+						  }
+						#instructions div { background: #fff; }
+					@media (prefers-color-scheme: dark) {
+						#instructions,  #instructions h1, #instructions p, #instructions div  { background-color: #000; color: #fff; }
+						#instructions div p { color: rgba(255,255,255,0.7); }
+					}
+					</style>
+					<div style="padding: 80px 0 40px 0">
+					<svg width="150px" height="150px" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				        <g id="Artboard" fill-rule="nonzero" fill="#000000">
+				            <g id="Regular-L">
+				                <path d="M74.8283203,149.203477 C82.9917578,149.203477 90.7832813,147.935078 98.2028906,145.398281 C105.622578,142.861563 112.441406,139.304375 118.659375,134.726719 C124.877344,130.149063 130.284766,124.751266 134.881641,118.533328 C139.477734,112.315367 143.044141,105.48707 145.580859,98.0484375 C148.118359,90.6097656 149.387109,82.8277734 149.387109,74.7024609 C149.387109,66.5390234 148.118359,58.7475 145.580859,51.3278906 C143.044141,43.9082813 139.477734,37.0895313 134.881641,30.8716406 C130.284766,24.6536719 124.877344,19.2463281 118.659375,14.6496094 C112.441406,10.0528906 105.613047,6.48613281 98.1742969,3.94933594 C90.735625,1.41253906 82.9345703,0.144140625 74.7711328,0.144140625 C66.6076953,0.144140625 58.8161719,1.41253906 51.3965625,3.94933594 C43.9769531,6.48613281 37.1677344,10.0528906 30.9689063,14.6496094 C24.77,19.2463281 19.3721875,24.6536719 14.7754688,30.8716406 C10.17875,37.0895313 6.6215625,43.9082813 4.10390625,51.3278906 C1.58617188,58.7475 0.327304687,66.5390234 0.327304687,74.7024609 C0.327304687,82.8277734 1.59570313,90.6097656 4.1325,98.0484375 C6.66921875,105.48707 10.2264063,112.315367 14.8040625,118.533328 C19.3817188,124.751266 24.7795313,130.149063 30.9975,134.726719 C37.2154688,139.304375 44.0342188,142.861563 51.45375,145.398281 C58.8733594,147.935078 66.6648828,149.203477 74.8283203,149.203477 Z M74.8283203,138.560508 C67.7711328,138.560508 61.0477344,137.482852 54.658125,135.327539 C48.2685156,133.172227 42.4225,130.149074 37.1200781,126.258082 C31.8176563,122.367098 27.2114063,117.760852 23.3013281,112.439344 C19.39125,107.117844 16.3680859,101.262281 14.2318359,94.8726563 C12.0956641,88.4830469 11.0275781,81.7596484 11.0275781,74.7024609 C11.0275781,67.6071484 12.0956641,60.8646875 14.2318359,54.4750781 C16.3680859,48.0853906 19.3817188,42.2298047 23.2727344,36.9083203 C27.1636719,31.5868359 31.7603906,26.9805859 37.0628906,23.0895703 C42.3653125,19.1986328 48.2113281,16.1850391 54.6009375,14.0487891 C60.9905469,11.9125391 67.7139453,10.8444141 74.7711328,10.8444141 C81.8664453,10.8444141 88.6089063,11.9125391 94.9985156,14.0487891 C101.388047,16.1850391 107.24375,19.1986328 112.565625,23.0895703 C117.886719,26.9805859 122.492969,31.5868359 126.384375,36.9083203 C130.275,42.2298047 133.298047,48.0853906 135.453516,54.4750781 C137.608984,60.8646875 138.686719,67.6071484 138.686719,74.7024609 C138.725,81.7596484 137.675781,88.4830469 135.539063,94.8726563 C133.403125,101.262281 130.380078,107.117844 126.469922,112.439344 C122.559766,117.760852 117.94375,122.367098 112.621875,126.258082 C107.300781,130.149074 101.44543,133.172227 95.0558203,135.327539 C88.6661328,137.482852 81.9236328,138.560508 74.8283203,138.560508 Z M55.9455469,118.190004 L93.8255859,118.190004 C95.6184766,118.190004 97.1729297,117.76085 98.4889453,116.902542 C99.8050391,116.044235 100.672891,114.928436 101.0925,113.555145 L101.26418,112.467961 L89.8773047,101.13832 L89.5339453,104.857641 C89.3432422,106.116484 88.56125,106.745906 87.1879688,106.745906 C85.5476563,106.745906 84.7465625,105.94482 84.7846875,104.342648 L85.1280469,96.3890625 L77.2316016,88.4926172 L77.2316016,104.342648 C77.2316016,105.94482 76.3732813,106.745906 74.6566406,106.745906 C72.9782031,106.745906 72.1389844,105.94482 72.1389844,104.342648 L72.1389844,83.3426953 L63.3270703,74.5307813 L64.5287109,104.342648 C64.5668359,105.067445 64.3760938,105.649188 63.9564844,106.087875 C63.536875,106.526563 62.9265234,106.745906 62.1254297,106.745906 C60.5613672,106.745906 59.7602734,105.982969 59.7221484,104.457094 L58.1199609,69.2664844 L45.4170703,56.5635938 L47.8775391,110.522461 C47.9537891,112.925719 48.7071875,114.804457 50.1377344,116.158676 C51.5682031,117.512895 53.5041406,118.190004 55.9455469,118.190004 Z M107.958984,111.895758 C108.569141,112.506102 109.284375,112.801738 110.104688,112.782668 C110.925,112.763598 111.621094,112.448887 112.192969,111.838535 C112.803906,111.228184 113.109375,110.512926 113.109375,109.692762 C113.109375,108.872605 112.803906,108.157352 112.192969,107.547 L42.5560547,37.8525 C41.9456641,37.2421094 41.2208594,36.9369141 40.3816406,36.9369141 C39.5424219,36.9369141 38.8366797,37.2421094 38.2644141,37.8525 C37.6159766,38.4628125 37.3012891,39.1780469 37.3203516,39.9982031 C37.3394141,40.8183594 37.6541016,41.5336328 38.2644141,42.1440234 L107.958984,111.895758 Z M102.80918,90.8385938 L104.640234,51.013125 L110.763281,51.013125 C111.564063,51.013125 112.250391,50.7270313 112.822266,50.1548438 C113.394922,49.5826563 113.68125,48.9150781 113.68125,48.1521094 C113.719531,47.3510938 113.442969,46.6739844 112.851563,46.1207813 C112.260156,45.5676563 111.564063,45.2910938 110.763281,45.2910938 L92.5666406,45.2910938 L92.5666406,39.0541406 C92.5666406,36.1549219 91.6416016,33.8375 89.7915234,32.101875 C87.9413672,30.3661719 85.4713281,29.4983203 82.3814063,29.4983203 L67.2180469,29.4983203 C64.128125,29.4983203 61.6771875,30.3661719 59.8652344,32.101875 C58.0532031,33.8375 57.1471875,36.1549219 57.1471875,39.0541406 L57.1471875,40.7135156 L57.1471875,42.4300781 L54.4006641,42.4300781 L73.340625,61.4273438 L73.340625,58.9095703 C73.5695313,58.4137109 74.0082031,58.1657813 74.6566406,58.1657813 C76.3732813,58.1657813 77.2316016,58.9668359 77.2316016,60.5689453 L77.2316016,65.2611328 L85.8718359,73.8441797 L86.4440625,60.5117578 C86.4822656,58.9477734 87.3405859,58.1657813 89.0190234,58.1657813 C90.7356641,58.1657813 91.5748828,58.9859375 91.5366797,60.62625 L90.6212109,78.650625 L102.80918,90.8385938 Z M63.7276172,45.2910938 L63.7276172,39.3973828 C63.7276172,38.3674609 64.0804688,37.5377734 64.7861719,36.9083203 C65.491875,36.2789453 66.3787891,35.9642578 67.4469141,35.9642578 L81.9236719,35.9642578 C83.0299219,35.9642578 83.9358984,36.2789453 84.6416016,36.9083203 C85.3473828,37.5377734 85.7002734,38.3674609 85.7002734,39.3973828 L85.7002734,45.2910938 L63.7276172,45.2910938 Z" id="Shape"></path>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
 			</div>
+					
+					<p>Add <strong>newsletter@optional.is</strong> to your email's allowed-list to prevent unwanted filtering.</p>
+				</div>
 
 
-			<div class="row section">
-			<h2>Archives</h2>
-			<p>Checkout the Archive to see what you're missing.</p>
+
+			</section>
+
+
+
+			<section id="tweet">
+				<style>
+					#tweet { background-color: #ddd; color: #333; max-width: 100%; margin: 0 auto; }
+					#tweet div { max-width: 980px; margin: 0 auto; padding: 120px 0; text-align: center;  }
+					#tweet div h1 { 
+						font-size: 64px;
+						line-height: 1;
+						font-weight: 600;
+						letter-spacing: -.008em;
+						margin: 0; 
+						padding: 20px 15px;
+					}
+					#tweet div p { color: rgba(51,51,51,0.7); font-size: 20px; margin: 0; padding: 0 0 0.75em 0; }
+					@media (prefers-color-scheme: dark) {
+						#tweet { background-color: #333; color: #ccc; }
+						#tweet div p { color: rgba(212,212,212,0.7); }
+					}
+					@media only screen and (max-width: 860px) {
+						#tweet div h1 { font-size: 44px; }
+					}
+
+					@media only screen and (max-width: 600px) {
+						#tweet div h1 { font-size: 34px; }
+					}
+				</style>
+				<div>
+					<h1>Hanging out with @briansuda is a bit like having your personal @boingboing</h1>
+					<p>@timoreilly Mar 27, 2011</p>
+					<p><a class="pill" href="https://twitter.com/i/web/status/51919528396988416">View Tweet</a></p>
+
+				</div>
+			</section>
+			<section id="archive">
+				<style>
+				#archive { max-width: 400px; margin: 0 auto; text-align: left; padding: 4em 20px; }
+
+
+				#archive  .meta { color: #666; font-size: 12px; }
+				#archive  .subject a { font-weight: bold; }
+				#archive  ul { padding: 0; margin: 0; }
+				#archive  li { padding: 0 0 20px 0; list-style: none; margin: 0; }
+
+
+				</style>
+			<h2>Past Newsletters</h2>
+			<p>Checkout the archive to see what you're missing.</p>
 			<ul>
+
+				<li>
+					<div class="subject"><a href="02021Q3/index.html">02021Q3: ◍ (optional.is) 02021Q3</a></div>
+					<div class="meta">Read Time: ~5.5 minutes. ~1100 words.</div>
+				</li>
+				<li>
+					<div class="subject"><a href="02021Q2/index.html">02021Q2: ◍ (optional.is) 02021Q2</a></div>
+					<div class="meta">Read Time: ~4 minutes. ~821 words.</div>
+				</li>
 				<li>
 					<div class="subject"><a href="02021Q1/index.html">02021Q1: ◍ (optional.is) 02021Q1</a></div>
 					<div class="meta">Read Time: ~4 minutes. ~880 words.</div>
@@ -330,9 +517,37 @@ line-height: 58px; color: #222; text-transform: uppercase;  font-family: "Helvet
 					<div class="meta">Read Time: ~2 minutes. 450+ words.</div>
 				</li>
 			</ul>
-		</div>
+			</section>
+			<!--
+			<section id="material2">
+				<style>
+					#material2 { background-color: #bbb; max-width: 100%; margin: 0 auto; }
+					#material2 div { max-width: 980px; margin: 0 auto; padding: 120px 0; text-align: center; color: white; }
+					#material2 div h1 { 
+						font-size: 64px;
+						line-height: 1;
+						font-weight: 600;
+						letter-spacing: -.008em;
+						margin: 0; 
+						padding: 20px 0;
+					}
+					#material2 div p { color: rgba(255,255,255,0.7); font-size: 20px; margin: 0; padding: 0 0 0.75em 0; }
+
+				</style>
+				<div>
+					<img src="https://material.is/2020/img/m-logo-white.svg" style="height: 100px; width: 100px;" alt="Material Conference Logo">
+
+					<h1>Material Conference</h1>
+					<p>Exploring the concept of the Web as a Material.</p>
+					<p><a class="pill" href="https://material.is">Learn More</a></p>
+
+				</div>
+			</section>
+			-->
 		</main>
-			<svg class="svgs" version="1.1" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<!-- footer -->
+		<svg class="svgs" version="1.1" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<symbol id="icon_arrowR" viewBox="0 0 33.453 19.57">
 		<path stroke="currentColor" stroke-width="2" stroke-miterlimit="10" d="M22.451 18.845l9.549-9.059-9.549-9.061" fill="none"/>
 		<path stroke="currentColor" stroke-width="2" stroke-miterlimit="10" fill="none" d="M0 9.784h32"/>
@@ -688,11 +903,11 @@ line-height: 58px; color: #222; text-transform: uppercase;  font-family: "Helvet
 					<div>Quarterly Updates</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#icon_weeknotes"/>
 					</svg>
-					<h3><a href="https://optional.is/required/category/weeknotes/">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
-					<div>Week #531</div></div><div class="item"><svg width="40" height="40">
+					<h3><a href="../required/category/weeknotes/index.html">Weeknotes <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
+					<div>Week #552</div></div><div class="item"><svg width="40" height="40">
 						<use xlink:href="#af_chaotic"/>
 					</svg>
-					<h3><a href="https://optional.is/required/2014/09/30/availability-forecast/">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
+					<h3><a href="../required/2014/09/30/availability-forecast/index.html">Chaotic <svg width="30" height="10"><use xlink:href="#icon_arrowR"/></svg></a></h3>
 					<div>Availability Forecast</div></div>
 				</div>
 			</div>
@@ -710,28 +925,28 @@ line-height: 58px; color: #222; text-transform: uppercase;  font-family: "Helvet
 					</ul>
 				</div><div class="column"><h3>Material</h3>
 					<ul>
-						<li><a href="https://podcasts.apple.com/us/podcast/material/id1279787564" target="_blank">Podcast</a></li>
-						<li><a href="https://material.is/archive" target="_blank">Archive</a></li>
-						<li><a href="https://material.is/2020" target="_blank">2020</a></li>
-						<li><a href="https://material.is/2018" target="_blank">2018</a></li>
-						<li><a href="https://material.is/2017" target="_blank">2017</a></li>						
+						<li><a rel="noreferrer" href="https://podcasts.apple.com/us/podcast/material/id1279787564" target="_blank">Podcast</a></li>
+						<li><a rel="noreferrer" href="https://material.is/archive" target="_blank">Archive</a></li>
+						<li><a rel="noreferrer" href="https://material.is/2020" target="_blank">2020</a></li>
+						<li><a rel="noreferrer" href="https://material.is/2018" target="_blank">2018</a></li>
+						<li><a rel="noreferrer" href="https://material.is/2017" target="_blank">2017</a></li>						
 					</ul></div><div class="column"><h3>iOS Apps</h3>
 					<ul>
-						<li><a href="https://itunes.apple.com/us/app/dashbones/id1071726287?mt=8">Dashbones</a></li>						
-						<li><a href="https://itunes.apple.com/us/app/emoji-calendar/id1286750440?mt=8">Emoji Calendar</a></li>
-						<li><a href="https://itunes.apple.com/us/app/floræ-linnaeus-flower-clock/id1192847405?mt=8">Florae</a></li>						
-						<li><a href="https://itunes.apple.com/us/app/how-far-iceland/id1311872083?mt=8">How Far: Iceland</a></li>	
-						<li><a href="https://apps.apple.com/us/app/newsletters/id1455564424?ls=1&mt=8">Newsletters</a></li>
-						<li><a href="https://itunes.apple.com/us/app/red-days-holiday-countdown/id1128247890?mt=8" target="_blank">Red Days</a></li>
-						<li><a href="https://itunes.apple.com/us/app/shipping-forecast-mindfulness/id1226922380?mt=8">Shipping Forecast</a></li>						
-						<li><a href="https://itunes.apple.com/us/app/text-stats/id1373463793?mt=8">Text Stats</a></li>
-						<li><a href="https://itunes.apple.com/us/app/triagemail/id1124659536?mt=8">Triagemail</a></li>						
+						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/dashbones/id1071726287?mt=8">Dashbones</a></li>						
+						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/emoji-calendar/id1286750440?mt=8">Emoji Calendar</a></li>
+						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/floræ-linnaeus-flower-clock/id1192847405?mt=8">Florae</a></li>						
+						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/how-far-iceland/id1311872083?mt=8">How Far: Iceland</a></li>	
+						<li><a rel="noreferrer" href="https://apps.apple.com/us/app/newsletters/id1455564424?ls=1&mt=8">Newsletters</a></li>
+						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/red-days-holiday-countdown/id1128247890?mt=8" target="_blank">Red Days</a></li>
+						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/shipping-forecast-mindfulness/id1226922380?mt=8">Shipping Forecast</a></li>						
+						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/text-stats/id1373463793?mt=8">Text Stats</a></li>
+						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/triagemail/id1124659536?mt=8">Triagemail</a></li>						
 					</ul></div><div class="column"><h3>Analog Notebooks</h3>
 					<ul>
-						<li><a href="https://store.analog.is/product/red-letterpress-notebook-graph-paper-eyjafjallajokull-glacier" target="_blank">Eyjafjallajökull</a></li>
-						<li><a href="https://store.analog.is/product/mars-island" target="_blank">Mars Island</a></li>
-						<li><a href="https://store.analog.is/product/island-series-6-pack" target="_blank">Island Series</a></li>
-						<li><a href="https://store.analog.is/category/accessories" target="_blank">Point Markers</a></li>						
+						<li><a rel="noreferrer" href="https://store.analog.is/product/red-letterpress-notebook-graph-paper-eyjafjallajokull-glacier" target="_blank">Eyjafjallajökull</a></li>
+						<li><a rel="noreferrer" href="https://store.analog.is/product/mars-island" target="_blank">Mars Island</a></li>
+						<li><a rel="noreferrer" href="https://store.analog.is/product/island-series-6-pack" target="_blank">Island Series</a></li>
+						<li><a rel="noreferrer" href="https://store.analog.is/category/accessories" target="_blank">Point Markers</a></li>						
 					</ul></div><div class="column"><h3>Workshops</h3>
 					<ul>
 						<li>Designing With Data</li>

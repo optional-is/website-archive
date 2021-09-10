@@ -8,9 +8,20 @@ html,body,div,span,iframe,figure,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acron
 					       url("../../../../fonts/optional.otf") format('opentype');
 					}
 figcaption { padding-bottom: 1em; }
-body { font: 100%/1.5 "Lucida Grande",Helvetica,Arial,sans-serif; margin: 0 auto; padding: 0 1.5em 1.5em 1.5em; max-width: 42em; background-color: #f7f7f7; color: #444;}
+body { font: 16px/1.8 Helvetica,Arial,sans-serif; margin: 0 auto; padding: 0 1.5em 1.5em 1.5em; max-width: 960px; background-color: #f7f7f7; color: #444;}
 #header { text-align: center; }
-h1,h2 { font-size: 1.5em; line-height: 1em; margin-bottom: 1em; text-align: left; }
+h1 { font-size: 140px; line-height: .85754; font-weight: 600; letter-spacing: -.008em; margin: 0; margin-bottom: 0.5em; text-align: left; }
+@media only screen and (max-width: 860px){
+h1 { font-size: 120px; }	
+}
+@media only screen and (max-width: 560px){
+h1 { font-size: 60px; }	
+}
+
+
+
+h2 { font-size: 1.5em; line-height: 1em; font-weight: 600; margin-bottom: 1em; text-align: left; }
+
 h3 { font-weight: bold;}
 h3, h4, h5, h6 { font-size: 1em; line-height: 1.5em; }
 p, ol, ul { font-size: 1em; line-height: 1.5em; padding: 0 0 1.5em; }
@@ -22,10 +33,11 @@ em { font-style: italic; }
 strong { font-weight: bold; }
 sub,sup { font-size: 50%; }
 sup { vertical-align:top; }
-a { color: black; background-color: #F3E88E; /* #FBEC5D; */}
-a:hover { background-color: #FFD700; }
-a:visited { background-color: #FFD700; }
-a:visited:hover { background-color: #FFD700; }
+a { font-weight: normal; color: #003F87; text-decoration: underline;}
+a:active { position: relative; top: 1px; }
+za:hover { background-color: #FFD700; }
+za:visited { background-color: #FFD700; }
+za:visited:hover { background-color: #FFD700; }
 a { -webkit-transition: all 0.5s linear; }
 table { font-size: 1em; line-height: 1.5em; margin: 0 0 1.5em 0; outline: 1px solid #ddd; width: 100%; }
 th, td {  padding: 0 .5em; line-height: 1.5em; text-align: center; }
@@ -41,7 +53,7 @@ code, pre, kbd { font-family: "Andale Mono", Monaco, Courier, "Courier New", ser
  }
 
 #header a, #header a:visited, #header a:active, #header a:focus { background-color: #f7f7f7; } 
-#footer a.url, #footer a.url:visited, #footer a.url:active, #footer a.url:focus { background-color: #f7f7f7; } 
+#footer a.url, #footer a.url:visited, #footer a.url:active, #footer a.url:focus { background-color: #f7f7f7; color: #333; } 
 #footer { clear: both; padding-top: 1em; }
 
 .banner { width: 100%; text-align: center; padding: 0 0 1.5em;}
@@ -61,7 +73,7 @@ ul li.archives { list-style-type: none; clear: both; }
 .archives li { margin-right: 8px; margin-bottom: 10px; float: left; width:160px; list-style-type: none;  }
 .archives li a { text-align: left; display: block; position: relative; }
 .archives li a span { position: absolute; right: 0 }
-.feed a { padding-left:20px; background-image: url('http://suda.co.uk/images/feed.gif'); background-position: 3px 50%; background-repeat: no-repeat
+.feed a { padding-left:20px; background-image: url('https://suda.co.uk/images/feed.gif'); background-position: 3px 50%; background-repeat: no-repeat
 }
 
 .navigation { clear: both; padding-bottom: 5em; }
@@ -81,8 +93,8 @@ li.comment { padding-bottom: 2em; }
 			.tag:hover { background-color: #deebde }
 			.category { background-color: #dee9eb}
 			.category:hover { background-color: #dee9eb}
-
-#header h1 a { font-family: optional; text-decoration: none; font-size: 65px; line-height: 140px; text-align: left; }
+#header h1 { letter-spacing: 0; margin: 0; }
+#header h1 a { font-family: optional; text-decoration: none; font-size: 65px; line-height: 140px; text-align: left; color: #333; letter-spacing: 0; margin: 0; }
 #footer .url { font-family: optional; text-decoration: none; font-size: 26px; }
 
 @media print{
@@ -93,3 +105,4 @@ li.comment { padding-bottom: 2em; }
 @media only screen and (max-width: 480px) {
 	#header h1 a  { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 }
+.postmetadata { font-size: 14px }

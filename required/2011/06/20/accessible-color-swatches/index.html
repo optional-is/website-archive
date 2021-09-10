@@ -8,7 +8,7 @@
 
 <link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" />
 <link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
-<link rel="pingback" href="http://optional.is/required/xmlrpc.php" />
+<link rel="pingback" href="https://optional.is/required/xmlrpc.php" />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
 <link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
@@ -21,16 +21,66 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
+	<!--
+		<style>
+			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
+			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
+
+			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
+			form.single input:focus { border: none; outline: none; }
+
+			form.single button {
+			 	margin: 0;
+			 	padding: 0 1em;
+			 	color: #333;
+			 	background-color: #ffe24d;
+			 	border: none;
+			 	border-top-right-radius: 10px;
+			 	border-bottom-right-radius: 10px;
+			 	line-height: 40px;
+			}
+			form.single input {
+			 	border: none;
+			 	background-color: #eee;
+			 	border-top-left-radius: 10px;
+			 	border-bottom-left-radius: 10px;
+			 	line-height: 40px;
+			 	margin:0;
+			 	padding:0 1em;
+			 	box-sizing: border-box;
+			}
+			form.single button:hover {
+			 	background-color: #1b1700;
+				color: white;
+			}
+			form.single button:active {
+			 	background-color: #007f3f;
+				color: white;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
+		</style>
+		<header>
+			<a href="/" id="header">(optional.is)</a>
+
+			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
+				<input type="text" value="" name="s" id="s"><button>Search</button>
+			</form>
+		</header>
+	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
+
 			
 		<div class="post-1626 post type-post status-publish format-standard hentry category-chromatics category-visualizations tag-accessibility tag-color tag-color-blind tag-color-chips tag-color-swatches tag-greyscale tag-swatches" id="post-1626">
-			<h2 style="border-bottom: 2px solid #3ba51e">Accessible Color Swatches</h2>
+			<h1>Accessible Color Swatches</h1>
+			<div style="border-bottom: 2px solid #3ba51e; padding: 2em 0; margin-bottom: 2em" class="time"><abbr title="2011-06-20T20:02:47+00:00">Monday, June 20th, 02011 at 20:02 UTC</abbr></div>
 
 			<div class="entry">
-<div class="time"><abbr title="2011-06-20T20:02:47+00:00">Monday, June 20th, 02011 at 20:02 UTC</abbr></div>
-				<p>Continuing on the theme of <a href="../../../../category/chromatics/index.html">chromatics</a>, first <a href="http://optional.is/required/2010/12/13/hls-world-map/">I experimented with generating unique colors based on a location</a> on the globe, then walked through <a href="../../../01/12/maximum-color-contrast/index.html">finding the highest contrasting color</a> to pair-up with deterministically created results. Finally, it is important to examine what happens to color when there are deficiencies, either genetic or technological.</p>
+				<p>Continuing on the theme of <a href="../../../../category/chromatics/index.html">chromatics</a>, first <a href="../../../../2010/12/13/hls-world-map/index.html">I experimented with generating unique colors based on a location</a> on the globe, then walked through <a href="../../../01/12/maximum-color-contrast/index.html">finding the highest contrasting color</a> to pair-up with deterministically created results. Finally, it is important to examine what happens to color when there are deficiencies, either genetic or technological.</p>
 <p>Many usability, accessibility and design sites emphasis that you should never use color to convey meaning. This is because a percentage of the population might not see the colors in the same way that you do, not to mention the device being unable to render color. In those cases, the meaning is lost. This is partly why traffic lights are always ordered in the same way and that road signs come in various shapes and sizes. Even without color, the reader is still able to glean the necessary information.</p>
 <p>As we create charts, graphs or any visual language, color plays an important role, but is also a source of potential confusion. Designers choose colors that look best or match some sort of corporate theme without considering the consequences. Even if we remove all the associations of cultural meaning in color, we still have potential problems with color clashes when the spectrum is reduced.</p>
 <p>In this article, we&#8217;ll get a list of colors which work well with various forms of color blindness and in greyscale by finding which have enough contrast across all the different issues. If you fall back to these color swatches, then you&#8217;re assured that no matter your audience or medium, a strong enough distinction between the values will be made and confusion minimized.</p>
@@ -38,7 +88,7 @@
 <p>About 10% males and a small percentage of females suffer from some sort of <a href="http://en.wikipedia.org/wiki/Color_blindness">color blind deficiency</a>. Color &#8220;blind&#8221; is not strictly speaking the correct term, people who have this affliction are not blind to color, but rather see a limited set of wavelengths differently.</p>
 <p>To see the world through someone else&#8217;s eyes, there is a great tool for both the Mac and PC called <a href="http://colororacle.cartography.ch/">Color Oracle</a>. This tiny applications puts your monitor into different modes so you can see what your designs look like by altering the wavelengths simulating various afflictions. This is a great tool to quickly switch back and forth to check for color problems.</p>
 <p>There are three major types of color blindness, Deutranopia, Protanopia and Tritanopia. To see how they compare, I have taken a sample photo and adjusted the wavelengths of the image to simulate these three issues from left to right, starting with the regular image.</p>
-<div class="banner"><img loading="lazy" class="alignnone size-full wp-image-2002" title="color oracle results" src="http://optional.is/required/wp-content/uploads/2011/06/color-oracle-results.png" alt="" width="700" height="525" srcset="../../../../wp-content/uploads/2011/06/color-oracle-results.png 700w, ../../../../wp-content/uploads/2011/06/color-oracle-results-300x225.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
+<div class="banner"><img loading="lazy" class="alignnone size-full wp-image-2002" title="color oracle results" src="../../../../wp-content/uploads/2011/06/color-oracle-results.png" alt="" width="700" height="525" srcset="../../../../wp-content/uploads/2011/06/color-oracle-results.png 700w, ../../../../wp-content/uploads/2011/06/color-oracle-results-300x225.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
 <p>As you can see, there are some fairly large differences. (If you don&#8217;t see a difference between some of the images, then you might want to have your eyes checked.) By testing your design you can quickly see that some of the colors you have chosen will look radically different to some people. <img loading="lazy" style="float: right; padding-left: 10px;" title="line-graph-color" src="../../../../wp-content/uploads/2011/06/line-graph-color.png" alt="" width="250" height="100" />This becomes a problem when you create visualizations such as a line graph. If you choose red and green colors for two of the lines and then correctly label them as company X&#8217;s monthly income versus company Y&#8217;s, you still have problems. For normal vision, those two lines jump right off the page as different colors, but for a small per centage of people, they have difficulty and it might be impossible to tell the difference, even with a key.</p>
 <p><img loading="lazy" style="float: right; padding-left: 10px;" title="line-graph-grey" src="../../../../wp-content/uploads/2011/06/line-graph-grey.png" alt="" width="250" height="99" />Beyond vision disabilities, you have even more common and simple issues of greyscale. This results from cheap ink jets printers, faxes or lazer printers. If we look again at the line chart, you can see that it is very difficult to identify the red and green lines, even with a key.</p>
 <p>This might seem like a silly issue to worry about, everyone has a color monitor—they can just look at the PDF or website. That isn&#8217;t completely true, even today some new devices such as the <a href="http://en.wikipedia.org/wiki/Kindle">Kindle</a> are being manufactured and sold as black and white devices.</p>
@@ -46,12 +96,12 @@
 <h2>Restricted Color Pallet</h2>
 <p>So what are the options? You want to select colors that are both high enough contrast that they can be distingusted by all 3 types of color blindness and at the same time work well in greyscale!</p>
 <p><img loading="lazy" style="float: right; padding-left: 10px;" title="color-chip" src="../../../../wp-content/uploads/2011/06/color-chip.png" alt="" width="186" height="301" />With some trial and error, I took various color swatches and ran them through each of the three color blind options and greyscale. For example, this shade of red (#ED1C24) comes out vastly differently when converted into the other four options. By itself, this isn&#8217;t very usuful because you need to be able to compare it to several other colors at once, because when this red moves to a yellow, will it conflict with that orange you are using? When in doubt, you should stick with a single monotone color palette, from white to black and a single hue in between. That way, if someone does have issues, all the colors will shift accordingly, including in greyscale. But what if you need to have more contrast or use multiple colors? It is possible. I have created a small set of swatches that work across the various issues with minimal confusion.</p>
-<div class="banner"><img loading="lazy" class="alignnone size-full wp-image-2000" title="color-chips-example" src="http://optional.is/required/wp-content/uploads/2011/06/color-chips-example.png" alt="" width="442" height="316" srcset="../../../../wp-content/uploads/2011/06/color-chips-example.png 442w, ../../../../wp-content/uploads/2011/06/color-chips-example-300x214.png 300w" sizes="(max-width: 442px) 100vw, 442px" /></div>
+<div class="banner"><img loading="lazy" class="alignnone size-full wp-image-2000" title="color-chips-example" src="../../../../wp-content/uploads/2011/06/color-chips-example.png" alt="" width="442" height="316" srcset="../../../../wp-content/uploads/2011/06/color-chips-example.png 442w, ../../../../wp-content/uploads/2011/06/color-chips-example-300x214.png 300w" sizes="(max-width: 442px) 100vw, 442px" /></div>
 <p>The first line is the regular color swatches. The following three lines are the major types of color blindness followed by greyscale. As you can see, no matter what set of colors you choose, they will not clash.</p>
 <p>Once you have this core colors pallette, you have a nice toolbox for choosing appropriate colors for your charts and graphs. Before going off and selecting your own colors, choose from a pre-made list which is known not to conflict, while it&#8217;s not the most extensive, it is guaranteed to work best in all situations simultaneously.</p>
 <p>If you are only dealing with two colors, then you should use the extremes, black and white. If a third color is needed, then choose one from the middle. If you need more colors, then try to space them out so their contrasts in greyscale minimize the similarities, such as the 1st, 3rd, 5th, and 7th colors.</p>
 <p>Someone told me that I should seek inspiration from board game companies. I thought this was a great idea, they have thousands of customers, they will certainly run into this problem with some small percentage. Monopoly was suggested to me because the currency is all different colors. I found the HEX values for the bills and ran the results through the Color Oracle. Sadly, they are in no way safe for color blindness or greyscale.</p>
-<div class="banner"><img loading="lazy" class="alignnone size-full wp-image-2001" title="color-chips-monopoly" src="http://optional.is/required/wp-content/uploads/2011/06/color-chips-monopoly.png" alt="" width="442" height="316" srcset="../../../../wp-content/uploads/2011/06/color-chips-monopoly.png 442w, ../../../../wp-content/uploads/2011/06/color-chips-monopoly-300x214.png 300w" sizes="(max-width: 442px) 100vw, 442px" /></div>
+<div class="banner"><img loading="lazy" class="alignnone size-full wp-image-2001" title="color-chips-monopoly" src="../../../../wp-content/uploads/2011/06/color-chips-monopoly.png" alt="" width="442" height="316" srcset="../../../../wp-content/uploads/2011/06/color-chips-monopoly.png 442w, ../../../../wp-content/uploads/2011/06/color-chips-monopoly-300x214.png 300w" sizes="(max-width: 442px) 100vw, 442px" /></div>
 <p>But that&#8217;s OK. They are not depending on color to convey meaning. On each of the currency notes is the more important value. The key to understanding the value is the printed number, not the color. This is also why the game pieces are not the same shape, but rather houses, cars, dogs, boats, etc. When you start to look around, you will notice that boardgames actually are aware of color issues and mark the objects with something more that just color sometimes it is a shape, text or others features to let the players distinguish the differences.</p>
 <h2>Conclusion</h2>
 <p>Be careful when selecting your color palette, by accident you might choose safe colors, but in the worst case you might create confusion which leads to something much worse! Imagine a scenario where you color code prescription drugs for different family members. If someone has any color deficiencies, it could lead to horrible consequences if they mistake the bottles.</p>
@@ -62,20 +112,65 @@
 </ul>
 
               <div class="postmetadata">
-					<p><strong>Categories:</strong> <a href="../../../../category/chromatics/index.html" title="View all articles in Chromatics" rel="tag category" style="text-decoration: none; border-bottom: 2px solid #1e7940">Chromatics</a>, <a href="../../../../category/visualizations/index.html" title="View all articles in Visualizations" rel="tag category" style="text-decoration: none; border-bottom: 2px solid #b10ac6">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../../../tag/accessibility/index.html" rel="tag" style="text-decoration: none; border-bottom: 2px solid #0ff85b">accessibility</a>, <a href="../../../../tag/color/index.html" rel="tag" style="text-decoration: none; border-bottom: 2px solid #70dda5">color</a>, <a href="../../../../tag/color-blind/index.html" rel="tag" style="text-decoration: none; border-bottom: 2px solid #a40522">color blind</a>, <a href="../../../../tag/color-chips/index.html" rel="tag" style="text-decoration: none; border-bottom: 2px solid #293dff">color chips</a>, <a href="../../../../tag/color-swatches/index.html" rel="tag" style="text-decoration: none; border-bottom: 2px solid #9b29b7">color swatches</a>, <a href="../../../../tag/greyscale/index.html" rel="tag" style="text-decoration: none; border-bottom: 2px solid #ae3bfc">greyscale</a>, <a href="../../../../tag/swatches/index.html" rel="tag" style="text-decoration: none; border-bottom: 2px solid #e828d8">swatches</a></p>			  </div>
+					<p><strong>Categories:</strong> <a href="../../../../category/chromatics/index.html" title="View all articles in Chromatics" rel="tag category" class="category">Chromatics</a>, <a href="../../../../category/visualizations/index.html" title="View all articles in Visualizations" rel="tag category" class="category">Visualizations</a></p><p><strong>Tags:</strong> <a href="../../../../tag/accessibility/index.html" rel="tag"  class="tag">accessibility</a>, <a href="../../../../tag/color/index.html" rel="tag"  class="tag">color</a>, <a href="../../../../tag/color-blind/index.html" rel="tag"  class="tag">color blind</a>, <a href="../../../../tag/color-chips/index.html" rel="tag"  class="tag">color chips</a>, <a href="../../../../tag/color-swatches/index.html" rel="tag"  class="tag">color swatches</a>, <a href="../../../../tag/greyscale/index.html" rel="tag"  class="tag">greyscale</a>, <a href="../../../../tag/swatches/index.html" rel="tag"  class="tag">swatches</a></p>			  </div>
 			
-		<div class="navigation">
-			<div class="prev"><div class="time">26 April 02011</div><a href="../../../04/26/city-swatches/index.html" style="text-decoration: none; border-bottom: 2px solid #1a080f">&laquo; City Swatches</a></div>
-			<div class="next"><div class="time">11 July 02011</div><a href="../../../07/11/the-great-sea-salt-saleman/index.html" style="text-decoration: none; border-bottom: 2px solid #71b522">The Great Sea Salt Saleman &raquo;</a></div>
+				
+   <div style="border-top: 4px solid #333; border-bottom: 1px solid #ddd; margin: 60px 0 100px 0">
+      <style>
+         .navigation {
+            display: grid;
+            grid-template-columns: minmax(200px, 1fr) minmax(20px, 1fr)  minmax(200px, 1fr);
+            grid-gap: 0px;
+            background-color: #f7f7f7;
+			padding-bottom: 0;
+         }
+         .navigation div a { display: block; height: 100%; text-decoration: none; color: #333; padding: 0 1em; background-color: #f7f7f7; }
+		 .navigation div a:visited { background-color: #f7f7f7; }
+         .navigation div a:hover { background-color: rgb(0,0,0,0.1); }
+         .navigation  div  { line-height: 20px; font-size: 14px; margin: 15px 0; }
+         .navigation div span { display: block; margin: 0; padding: 0 0 40px 0; font-weight: normal; color: #666; }
+        .navigation div span.time, .navigation div span.time { display: block; margin: 0; padding: 0; font-weight: 600; font-size: 24px; line-height: 48px; padding-top: 10px; color: #444;}
+         .navigation .prev, .navigation .next, .navigation .home  { margin: 0; padding: 0; text-align: left; } 
+		  @media screen and (max-width: 550px) {
+			  .navigation { display: block; }
+			  .navigation .prev,  .navigation .next { float: none; }
+			  .navigation .home { border: 1px solid #ddd; }
+		  } 
+		  
+		  
+		  
+      </style>
+      <div class="navigation">
+         <div class="prev" >
+<a href="../../../04/26/city-swatches/index.html" style="text-decoration: none;"><span class="time">26 April 02011</span><span>City Swatches</span></a>			 
+         </div>
+
+
+         <div class="home" style="border-left: 1px solid #ddd; border-right: 1px solid #ddd; text-align: center;">
+            <a href="../../../../../index.html"><svg width="50%"><use xlink:href="#optional-logo"></use></svg></a>
+         </div>
+
+         <div class="next">
+			 <a href="../../../07/11/the-great-sea-salt-saleman/index.html" style="text-decoration: none;"><span class="time">11 July 02011</span><span>The Great Sea Salt Saleman</span></a>         </div>
+      </div>
+   </div> 				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+		<!--		
+		<div class="navigation" style="border-bottom: 1px solid #aaa">
+			<div class="prev"><div class="time">26 April 02011</div><a href="/required/2011/04/26/city-swatches/" style="text-decoration: none;>&laquo; City Swatches</a></div>
+			<div class="next"><div class="time">11 July 02011</div><a href="/required/2011/07/11/the-great-sea-salt-saleman/" style="text-decoration: none;">The Great Sea Salt Saleman &raquo;</a></div>
 		</div>
-
+-->
 			</div>
-			<!-- call out footer -->
-			<div class="callout-footer" style="padding-top: 1em; border-top: 2px solid #3ba51e; border-bottom: 2px solid #3ba51e; font-size: 120%">
-			<p>You've been reading optional.is/required/ a blog about technology, culture, paper and other interesting topics, since 02009. The easiest way to stay current is to grab the <a href="http://feeds2.feedburner.com/optional?format=xml">RSS Feed</a>.</p>
-
-			<p><a href="../../../../../newsletter/index.html">Subscribe to the quarterly mailing list</a> to receive interesting stories, links and updates.</p>
-			</div>
+			
 		</div>
 
 	
@@ -89,7 +184,61 @@
 
 
 	
+<svg class="svgs" version="1.1" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
+   <symbol id="optional-logo" viewBox="0 0 284.478 66.043">
+   <path d="M14.128,33.557c0-4.464,1.599-8.264,4.798-11.39c3.185-3.131,7.081-4.704,11.673-4.704c4.607,0,8.519,1.586,11.739,4.736
+      c3.164,3.148,4.75,7.021,4.75,11.612c0,4.629-1.586,8.513-4.784,11.64c-3.22,3.108-7.164,4.665-11.84,4.665
+      c-4.63,0-8.508-1.584-11.64-4.76C15.695,42.226,14.128,38.293,14.128,33.557z M21.427,33.685c0,3.088,0.824,5.527,2.472,7.324
+      c1.699,1.821,3.922,2.734,6.701,2.734c2.788,0,5.023-0.898,6.692-2.702c1.673-1.797,2.507-4.198,2.507-7.202
+      c0-3.003-0.834-5.404-2.507-7.202c-1.698-1.814-3.922-2.727-6.692-2.727c-2.734,0-4.948,0.912-6.635,2.727
+      C22.273,28.456,21.427,30.809,21.427,33.685z"></path>
+   <path d="M57.723,66.043H50.58V18.326h7.143v3.364c2.817-2.809,6.004-4.228,9.583-4.228c4.248,0,7.75,1.573,10.5,4.704
+      c2.792,3.109,4.188,7.032,4.188,11.771c0,4.63-1.382,8.492-4.154,11.573c-2.75,3.069-6.218,4.604-10.405,4.604
+      c-3.618,0-6.851-1.45-9.711-4.351V66.043z M74.702,33.967c0-2.961-0.813-5.373-2.417-7.236c-1.626-1.875-3.68-2.82-6.158-2.82
+      c-2.623,0-4.747,0.912-6.372,2.727c-1.627,1.819-2.448,4.211-2.448,7.175c0,2.894,0.82,5.283,2.448,7.169
+      c1.609,1.84,3.721,2.763,6.345,2.763c2.473,0,4.514-0.938,6.123-2.794C73.871,39.089,74.702,36.761,74.702,33.967z"></path>
+   <path d="M94.226,24.988v24.237h-7.138V24.988h-3.041v-6.662h3.041V6.997h7.138v11.329h3.113v6.662H94.226z"></path>
+   <path d="M100.306,7.103c0-1.257,0.453-2.328,1.365-3.236c0.907-0.906,1.999-1.366,3.271-1.366c1.289,0,2.384,0.46,3.298,1.366
+      c0.905,0.891,1.365,1.975,1.365,3.27c0,1.289-0.46,2.386-1.365,3.299c-0.886,0.912-1.981,1.365-3.271,1.365
+      c-1.288,0-2.39-0.453-3.297-1.365C100.759,9.521,100.306,8.415,100.306,7.103z M108.526,18.326v30.899h-7.148V18.326H108.526z"></path>
+   <path d="M112.045,33.557c0-4.464,1.599-8.264,4.789-11.39c3.194-3.131,7.093-4.704,11.673-4.704c4.614,0,8.532,1.586,11.745,4.736
+      c3.171,3.148,4.759,7.021,4.759,11.612c0,4.629-1.599,8.513-4.791,11.64c-3.214,3.108-7.158,4.665-11.834,4.665
+      c-4.63,0-8.513-1.584-11.644-4.76C113.61,42.226,112.045,38.293,112.045,33.557z M119.341,33.685c0,3.088,0.824,5.527,2.473,7.324
+      c1.694,1.821,3.927,2.734,6.693,2.734c2.794,0,5.025-0.898,6.701-2.702c1.669-1.797,2.5-4.198,2.5-7.202
+      c0-3.003-0.832-5.404-2.5-7.202c-1.694-1.814-3.93-2.727-6.701-2.727c-2.722,0-4.934,0.912-6.626,2.727
+      C120.187,28.456,119.341,30.809,119.341,33.685z"></path>
+   <path d="M148.502,18.326h7.169v2.854c2.496-2.475,5.306-3.718,8.443-3.718c3.59,0,6.389,1.142,8.401,3.4
+      c1.733,1.93,2.602,5.064,2.602,9.425v18.938h-7.171V31.993c0-3.043-0.425-5.146-1.271-6.309c-0.819-1.178-2.324-1.774-4.503-1.774
+      c-2.375,0-4.055,0.784-5.04,2.346c-0.979,1.537-1.461,4.237-1.461,8.075v14.895h-7.169V18.326z"></path>
+   <path d="M202.845,18.326h7.176v30.899h-7.176v-3.233c-2.938,2.753-6.103,4.124-9.489,4.124c-4.269,0-7.799-1.539-10.593-4.634
+      c-2.771-3.15-4.154-7.083-4.154-11.798c0-4.637,1.383-8.497,4.154-11.584c2.772-3.088,6.24-4.638,10.406-4.638
+      c3.596,0,6.822,1.484,9.676,4.45V18.326z M185.905,33.685c0,2.96,0.79,5.373,2.373,7.232c1.632,1.878,3.683,2.826,6.158,2.826
+      c2.644,0,4.783-0.913,6.41-2.734c1.627-1.882,2.445-4.27,2.445-7.17c0-2.893-0.818-5.284-2.445-7.169
+      c-1.627-1.835-3.738-2.76-6.346-2.76c-2.451,0-4.502,0.927-6.157,2.792C186.719,28.584,185.905,30.915,185.905,33.685z"></path>
+   <path d="M222.102,7.014v42.212h-7.135V7.014H222.102z"></path>
+   <path d="M225.76,44.864c0-1.188,0.437-2.211,1.3-3.08c0.867-0.864,1.902-1.299,3.108-1.299s2.246,0.435,3.109,1.299
+      c0.869,0.869,1.305,1.901,1.305,3.108c0,1.228-0.436,2.274-1.305,3.145c-0.846,0.838-1.882,1.266-3.109,1.266
+      c-1.25,0-2.295-0.428-3.138-1.266C226.179,47.188,225.76,46.13,225.76,44.864z"></path>
+   <path d="M237.121,7.103c0-1.257,0.454-2.328,1.368-3.236c0.912-0.906,1.996-1.366,3.27-1.366c1.287,0,2.389,0.46,3.296,1.366
+      c0.908,0.891,1.361,1.975,1.361,3.27c0,1.289-0.453,2.386-1.361,3.299c-0.891,0.912-1.974,1.365-3.265,1.365
+      c-1.294,0-2.389-0.453-3.301-1.365C237.575,9.521,237.121,8.415,237.121,7.103z M245.338,18.326v30.899h-7.131V18.326H245.338z"></path>
+   <path d="M269.089,23.594l-5.893,3.137c-0.936-1.875-2.087-2.82-3.464-2.82c-0.659,0-1.216,0.215-1.683,0.651
+      c-0.463,0.433-0.697,0.985-0.697,1.66c0,1.185,1.379,2.355,4.128,3.519c3.784,1.633,6.335,3.127,7.64,4.499
+      c1.312,1.376,1.971,3.223,1.971,5.546c0,2.979-1.1,5.472-3.305,7.477c-2.129,1.903-4.712,2.854-7.738,2.854
+      c-5.186,0-8.846-2.528-11.004-7.579l6.086-2.826c0.848,1.482,1.494,2.422,1.937,2.826c0.868,0.802,1.903,1.206,3.109,1.206
+      c2.411,0,3.617-1.1,3.617-3.305c0-1.265-0.935-2.45-2.794-3.558c-0.72-0.354-1.432-0.7-2.152-1.04
+      c-0.725-0.343-1.455-0.686-2.19-1.051c-2.075-1.019-3.535-2.029-4.383-3.041c-1.071-1.295-1.614-2.95-1.614-4.986
+      c0-2.688,0.918-4.898,2.761-6.66c1.874-1.753,4.167-2.64,6.85-2.64C264.225,17.463,267.168,19.512,269.089,23.594z"></path>
+   <path d="M5.212,7.544l4.951,1.903C8.43,13.585,7.214,17.41,6.522,20.916c-0.348,1.775-0.608,3.646-0.785,5.605
+      c-0.171,1.958-0.265,4.092-0.265,6.411c0,2.336,0.093,4.479,0.265,6.438c0.177,1.96,0.437,3.823,0.785,5.606
+      c0.681,3.483,1.893,7.3,3.641,11.438l-4.951,1.902C1.742,51.078,0,42.615,0,32.933C0,23.257,1.742,14.793,5.212,7.544z"></path>
+   <path d="M279.288,58.503l-4.951-1.903c1.748-4.149,2.961-7.955,3.646-11.446c0.713-3.489,1.068-7.501,1.068-12.042
+      c0-4.505-0.355-8.516-1.068-12.02c-0.697-3.505-1.913-7.334-3.646-11.466l4.951-1.908c3.464,7.252,5.189,15.717,5.189,25.394
+      C284.478,42.785,282.752,51.245,279.288,58.503z"></path>
+   </symbol>
+
+</svg>
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
@@ -107,7 +256,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.173 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2021-04-16 14:16:17 -->
+<!-- Dynamic page generated in 0.450 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-09-10 15:09:25 -->
 
 <!-- super cache -->
