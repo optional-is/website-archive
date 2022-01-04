@@ -1,0 +1,665 @@
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta name="google-site-verification" content="NU2VGyLRaV2ouJZYY7Yw2J8cMccR7hU-GsRC-i_inKU">
+    <link rel="apple-touch-icon-precomposed" href="../../images/apple-touch-icon-precomposed.png">
+    <link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@optionalBot">
+    <meta name="twitter:title" content="(optional.is)">
+    <meta name="twitter:domain" content="https://optional.is"><meta name="twitter:description" content="A small company based out of Reykjavik, Iceland specializing in future thinking projects">
+    <meta name="twitter:creator" content="@optionalBot">
+    <title>(optional.is) Newsletter</title>
+    <style>
+      html, body {
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        background-color: #f7f7f7;
+        font-family: -apple-system,"SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+      }
+      h1, h2, h3, ul, ol, li, form, iframe { margin: 0 auto; padding:0; }
+      main {
+        margin: 0 auto;
+        max-width: 2560px;
+
+      }
+      section { 
+        margin: 0 auto;
+        text-align: center;
+       }
+       a {
+        color: #2997ff;
+        text-decoration: none;
+       }
+       a.pill {
+        border: 1px solid #fff;
+        background-color: #fff;
+        color: #000;
+        line-height: 60px;
+        padding: 10px 20px;
+        border-radius: 30px;
+        color: #000;
+        transition: all ease 0.5s ;
+       }
+       a.pill:hover {
+        background-color: transparent;
+        color: #fff;
+        transition: all ease 0.5s ;
+       }
+
+       button { cursor: pointer; }
+       
+       
+      section { padding: 7px 0; }
+      section.feature, section.box {  display: grid;  grid-gap: 14px;  }
+      section.feature div, section.box div { background-color: #f4f4f4; }
+      section.feature { grid-template-columns: 1fr 1fr; min-height: 500px; }
+      section.feature h1 { font-weight: 600; color: #1d1d1f; font-size: 40px; margin: 0; padding: 50px 0 0px 0; }
+      section.feature p { line-height: 1.2381; font-weight: 300; letter-spacing: .016em; padding: 4px 0 20px 0; color: #1d1d1f; font-size:21px; margin:0 }
+
+      section.box { grid-template-columns: 1fr 1fr 1fr 1fr; min-height: 200px; }
+
+      section.feature div:nth-child(odd) { margin-left: 14px; }
+      section.feature div:nth-child(even) { margin-right: 14px; }
+
+      @media only screen and (max-width: 1160px) {
+        section.feature > div { margin: 0; min-height: 400px;  }
+        section.feature { display: block; }
+        section.feature > div:nth-child(even) { margin-top: 14px }
+        #header { padding: 0 20px; }
+
+        section.feature div:nth-child(odd) { margin-left: 0; }
+        section.feature div:nth-child(even) { margin-right: 0; }
+
+      }
+
+       #header {
+        font-family: optional;
+        font-weight: normal;
+        font-size: 45px;
+        line-height: 100px;
+        max-width: 1024px;
+        margin: 0 auto;
+        color: #000;
+        text-align: left;
+        display: grid; 
+        grid-gap: 0; 
+        grid-template-columns: auto 300px;
+      }
+      #search { padding: 20px 0; height: 30px; vertical-align: middle; } 
+
+      @media only screen and (max-width: 520px) {
+        #header { display: block; text-align: center;}
+        #search { display: block;  width: 100%; }
+      }
+
+
+      .button {
+        margin: 0;
+        padding: 0 1em;
+        color: #fff;
+        background-color: #6a6a6a;
+        border: none;
+        border-radius: 10px;
+        line-height: 40px;
+        transition: all ease 0.5s ;
+        min-width: 200px;
+        font-size: 14px;
+        margin-top: 2em;
+      }
+
+      form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
+      form.single input:focus { border: none; outline: none; }
+
+
+
+      form.single button {
+        margin: 0;
+        padding: 0 1em;
+        color: #fff;
+        background-color: #6a6a6a;
+        border: none;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        line-height: 40px;
+        transition: all ease 0.5s ;
+        width: auto;
+      }
+      form.single input {
+        border: none;
+        background-color: #eee;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        line-height: 40px;
+        margin:0;
+        padding:0 1em;
+        box-sizing: border-box;
+      }
+      form.single button:hover {
+        background-color: #1b1700;
+        color: white;
+        transition: all ease 0.5s ;
+      }
+      form.single button:active {
+        background-color: #007f3f;
+        color: white;
+      }
+
+      @font-face {
+            font-family: 'optional';
+              src: url("../../fonts/optional.eot");
+              src: local('optional'),
+                 url("../../fonts/optional.svg") format('svg'),
+                 url("../../fonts/optional.otf") format('opentype');
+          }
+
+
+      @media (prefers-color-scheme: dark) {
+        html, body {
+          background-color: #222;
+          color: #eee;
+        }
+        #header { color: #eee; }
+
+        section.feature div, section.box div { background-color: #333; }
+        section.feature h1 { color: #ddd; }
+        section.feature p { color: #ccc; }
+        svg { fill: #eee; }
+      }
+
+      .content { padding: 60px 0px; max-width: 980px; text-align: left;}
+      .pull { text-align: center; padding: 175px 0; }
+      .pull h1 {
+        font-size: 60px;
+        line-height: .85754;
+        font-weight: 600;
+        letter-spacing: -.008em;
+        margin: 0;
+        padding: 0 15px;
+      }
+      .pull div {
+        margin-top: 40px;
+        font-size: 32px;
+        line-height: 1.16667;
+        font-weight: 500;
+        letter-spacing: .009em;
+        font-style: normal;
+        padding: 0 15px;
+        
+      }
+
+      @media only screen and (max-width: 860px) {
+        .pull h1 { font-size: 60px; }
+      }
+
+      @media only screen and (max-width: 600px) {
+        .pull { text-align: center; padding: 100px 0; }
+        .pull h1 { font-size: 60px; padding: 0 15px; }
+        .pull div { margin-left: 0%; margin-top: 20px; font-size: 18px; padding: 0 15px;}
+      }
+    </style>
+  </head>
+    <header id="header" >
+      <span>(optional.is)</span>
+
+      <form id="search" class="single" action="https://optional.is/required" >
+        <input type="text" name="s"  placeholder="Find..." /><button>Search</button>
+      </form>
+    </header>
+    <main>
+      <section id="lead" class="content">
+        <style>
+          #lead { padding: 60px 15px; }
+          #lead h1 {
+            font-size: 140px;
+            line-height: .85754;
+            font-weight: 600;
+            letter-spacing: -.008em;
+            margin: 0;
+          }
+          #lead div {
+            margin-top: 80px;
+            font-size: 32px;
+            line-height: 1.16667;
+            font-weight: 500;
+            letter-spacing: .009em;
+            font-style: normal;
+            
+          }
+
+          @media only screen and (max-width: 860px) {
+            #lead h1 { font-size: 120px; }
+          }
+
+          @media only screen and (max-width: 600px) {
+            #lead h1 { font-size: 60px; padding: 0 15px; }
+            #lead div { margin-left: 0%; margin-top: 20px; font-size: 18px; padding: 0 15px;}
+          }
+
+        </style>
+        <h1>Subscribe</h1>
+        <div>Come join us on an adventure.</div>
+      </section>
+
+
+      <section class="feature">
+        <div id="signup">
+          <style>
+            #signup h1 { color: rgba(0,0,0,0.9);  }
+            #signup p { color: rgba(0,0,0,0.9); font-size: 30px; }
+            #signup, #signup  div { 
+              background: #fff; color: #111;
+              }
+              #prototypes div { background: #fff; }
+              #signup .captcha span { background-color: #ddd;
+padding: 0.75em;
+line-height: 3em;
+border-radius: 0.5em;
+font-size: 22px; }
+          @media (prefers-color-scheme: dark) {
+            #signup,  #signup h1, #signup p, #signup div  { background-color: #000; color: #fff; }
+            #signup div p { color: rgba(255,255,255,0.7); }
+
+          }
+          </style>
+          <h1>Something for every season</h1><p>Never miss a newsletter.</p>
+            
+          <form action="index.html" method="post"  style="max-width: 400px; text-align: center; margin: 0 auto; padding-bottom: 20px">
+
+            <input type="email" placeholder="Email Address" value="" name="email" class="required email" id="email" style="width: 100%; font-size: 22px; margin-bottom: 1em"><div style="text-align: left; line-height: 1.5em;"><div style="margin: 0; padding: 0 0 1em 0"><label><input type="checkbox" name="1" checked="checked" /> <strong>◍ (optional.is) Quarterly                                                                                                                                                                                                                                      </strong><br/><span style="opacity: 0.6">Sent quarterly, a look at what's been happening and interesting tidbits from around the Web.</span></label></div><div style="margin: 0; padding: 0 0 1em 0"><label><input type="checkbox" name="2" checked="checked" /> <strong>⪮ Good Morning                                                                                                                                                                                                                                                 </strong><br/><span style="opacity: 0.6">(Season 1) Sent monthly, 1 photo, 2 thoughts and 3 links. All interesting stuff, no self-promotion.</span></label></div></div><button name="subscribe" class="button">Subscribe</button>
+
+          </form>
+        </div>
+
+                  <div id="instructions">
+          <style>
+            #instructions h1 { color: rgba(0,0,0,0.9); padding-top: 10px; font-size: 80px;}
+            #instructions p { color: rgba(0,0,0,0.7); font-size: 24px; padding: 1em; }
+            #instructions { 
+              background: #fff; color: #111;
+              }
+            #instructions div { background: #fff; }
+          @media (prefers-color-scheme: dark) {
+            #instructions,  #instructions h1, #instructions p, #instructions div  { background-color: #000; color: #fff; }
+            #instructions div p { color: rgba(255,255,255,0.7); }
+          }
+          </style>
+          <div style="padding: 80px 0 40px 0">
+          <svg width="150px" height="150px" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                <g id="Artboard" fill-rule="nonzero">
+                    <g id="Regular-L">
+                        <path d="M74.8283203,149.203477 C82.9917578,149.203477 90.7832813,147.935078 98.2028906,145.398281 C105.622578,142.861563 112.441406,139.304375 118.659375,134.726719 C124.877344,130.149063 130.284766,124.751266 134.881641,118.533328 C139.477734,112.315367 143.044141,105.48707 145.580859,98.0484375 C148.118359,90.6097656 149.387109,82.8277734 149.387109,74.7024609 C149.387109,66.5390234 148.118359,58.7475 145.580859,51.3278906 C143.044141,43.9082813 139.477734,37.0895313 134.881641,30.8716406 C130.284766,24.6536719 124.877344,19.2463281 118.659375,14.6496094 C112.441406,10.0528906 105.613047,6.48613281 98.1742969,3.94933594 C90.735625,1.41253906 82.9345703,0.144140625 74.7711328,0.144140625 C66.6076953,0.144140625 58.8161719,1.41253906 51.3965625,3.94933594 C43.9769531,6.48613281 37.1677344,10.0528906 30.9689063,14.6496094 C24.77,19.2463281 19.3721875,24.6536719 14.7754688,30.8716406 C10.17875,37.0895313 6.6215625,43.9082813 4.10390625,51.3278906 C1.58617188,58.7475 0.327304687,66.5390234 0.327304687,74.7024609 C0.327304687,82.8277734 1.59570313,90.6097656 4.1325,98.0484375 C6.66921875,105.48707 10.2264063,112.315367 14.8040625,118.533328 C19.3817188,124.751266 24.7795313,130.149063 30.9975,134.726719 C37.2154688,139.304375 44.0342188,142.861563 51.45375,145.398281 C58.8733594,147.935078 66.6648828,149.203477 74.8283203,149.203477 Z M74.8283203,138.560508 C67.7711328,138.560508 61.0477344,137.482852 54.658125,135.327539 C48.2685156,133.172227 42.4225,130.149074 37.1200781,126.258082 C31.8176563,122.367098 27.2114063,117.760852 23.3013281,112.439344 C19.39125,107.117844 16.3680859,101.262281 14.2318359,94.8726563 C12.0956641,88.4830469 11.0275781,81.7596484 11.0275781,74.7024609 C11.0275781,67.6071484 12.0956641,60.8646875 14.2318359,54.4750781 C16.3680859,48.0853906 19.3817188,42.2298047 23.2727344,36.9083203 C27.1636719,31.5868359 31.7603906,26.9805859 37.0628906,23.0895703 C42.3653125,19.1986328 48.2113281,16.1850391 54.6009375,14.0487891 C60.9905469,11.9125391 67.7139453,10.8444141 74.7711328,10.8444141 C81.8664453,10.8444141 88.6089063,11.9125391 94.9985156,14.0487891 C101.388047,16.1850391 107.24375,19.1986328 112.565625,23.0895703 C117.886719,26.9805859 122.492969,31.5868359 126.384375,36.9083203 C130.275,42.2298047 133.298047,48.0853906 135.453516,54.4750781 C137.608984,60.8646875 138.686719,67.6071484 138.686719,74.7024609 C138.725,81.7596484 137.675781,88.4830469 135.539063,94.8726563 C133.403125,101.262281 130.380078,107.117844 126.469922,112.439344 C122.559766,117.760852 117.94375,122.367098 112.621875,126.258082 C107.300781,130.149074 101.44543,133.172227 95.0558203,135.327539 C88.6661328,137.482852 81.9236328,138.560508 74.8283203,138.560508 Z M55.9455469,118.190004 L93.8255859,118.190004 C95.6184766,118.190004 97.1729297,117.76085 98.4889453,116.902542 C99.8050391,116.044235 100.672891,114.928436 101.0925,113.555145 L101.26418,112.467961 L89.8773047,101.13832 L89.5339453,104.857641 C89.3432422,106.116484 88.56125,106.745906 87.1879688,106.745906 C85.5476563,106.745906 84.7465625,105.94482 84.7846875,104.342648 L85.1280469,96.3890625 L77.2316016,88.4926172 L77.2316016,104.342648 C77.2316016,105.94482 76.3732813,106.745906 74.6566406,106.745906 C72.9782031,106.745906 72.1389844,105.94482 72.1389844,104.342648 L72.1389844,83.3426953 L63.3270703,74.5307813 L64.5287109,104.342648 C64.5668359,105.067445 64.3760938,105.649188 63.9564844,106.087875 C63.536875,106.526563 62.9265234,106.745906 62.1254297,106.745906 C60.5613672,106.745906 59.7602734,105.982969 59.7221484,104.457094 L58.1199609,69.2664844 L45.4170703,56.5635938 L47.8775391,110.522461 C47.9537891,112.925719 48.7071875,114.804457 50.1377344,116.158676 C51.5682031,117.512895 53.5041406,118.190004 55.9455469,118.190004 Z M107.958984,111.895758 C108.569141,112.506102 109.284375,112.801738 110.104688,112.782668 C110.925,112.763598 111.621094,112.448887 112.192969,111.838535 C112.803906,111.228184 113.109375,110.512926 113.109375,109.692762 C113.109375,108.872605 112.803906,108.157352 112.192969,107.547 L42.5560547,37.8525 C41.9456641,37.2421094 41.2208594,36.9369141 40.3816406,36.9369141 C39.5424219,36.9369141 38.8366797,37.2421094 38.2644141,37.8525 C37.6159766,38.4628125 37.3012891,39.1780469 37.3203516,39.9982031 C37.3394141,40.8183594 37.6541016,41.5336328 38.2644141,42.1440234 L107.958984,111.895758 Z M102.80918,90.8385938 L104.640234,51.013125 L110.763281,51.013125 C111.564063,51.013125 112.250391,50.7270313 112.822266,50.1548438 C113.394922,49.5826563 113.68125,48.9150781 113.68125,48.1521094 C113.719531,47.3510938 113.442969,46.6739844 112.851563,46.1207813 C112.260156,45.5676563 111.564063,45.2910938 110.763281,45.2910938 L92.5666406,45.2910938 L92.5666406,39.0541406 C92.5666406,36.1549219 91.6416016,33.8375 89.7915234,32.101875 C87.9413672,30.3661719 85.4713281,29.4983203 82.3814063,29.4983203 L67.2180469,29.4983203 C64.128125,29.4983203 61.6771875,30.3661719 59.8652344,32.101875 C58.0532031,33.8375 57.1471875,36.1549219 57.1471875,39.0541406 L57.1471875,40.7135156 L57.1471875,42.4300781 L54.4006641,42.4300781 L73.340625,61.4273438 L73.340625,58.9095703 C73.5695313,58.4137109 74.0082031,58.1657813 74.6566406,58.1657813 C76.3732813,58.1657813 77.2316016,58.9668359 77.2316016,60.5689453 L77.2316016,65.2611328 L85.8718359,73.8441797 L86.4440625,60.5117578 C86.4822656,58.9477734 87.3405859,58.1657813 89.0190234,58.1657813 C90.7356641,58.1657813 91.5748828,58.9859375 91.5366797,60.62625 L90.6212109,78.650625 L102.80918,90.8385938 Z M63.7276172,45.2910938 L63.7276172,39.3973828 C63.7276172,38.3674609 64.0804688,37.5377734 64.7861719,36.9083203 C65.491875,36.2789453 66.3787891,35.9642578 67.4469141,35.9642578 L81.9236719,35.9642578 C83.0299219,35.9642578 83.9358984,36.2789453 84.6416016,36.9083203 C85.3473828,37.5377734 85.7002734,38.3674609 85.7002734,39.3973828 L85.7002734,45.2910938 L63.7276172,45.2910938 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </svg>
+      </div>
+          
+          <p>Add <strong>newsletter@optional.is</strong> to your email's allowed-list to prevent unwanted filtering.</p>
+        </div>
+
+      </section>
+
+
+      <section id="tweet">
+  <style>
+    #tweet { background-color: #ddd; color: #333; max-width: 100%; margin: 0 auto; }
+    #tweet div { max-width: 980px; margin: 0 auto; padding: 120px 0; text-align: center;  }
+    #tweet div h1 { 
+      font-size: 64px;
+      line-height: 1;
+      font-weight: 600;
+      letter-spacing: -.008em;
+      margin: 0; 
+      padding: 20px 15px;
+    }
+    #tweet div p { color: rgba(51,51,51,0.7); font-size: 20px; margin: 0; padding: 0 0 0.75em 0; }
+    @media (prefers-color-scheme: dark) {
+      #tweet { background-color: #333; color: #ccc; }
+      #tweet div p { color: rgba(212,212,212,0.7); }
+    }
+    @media only screen and (max-width: 860px) {
+      #tweet div h1 { font-size: 44px; }
+    }
+
+    @media only screen and (max-width: 600px) {
+      #tweet div h1 { font-size: 34px; }
+    }
+  </style>
+  <div>
+    <h1>Hanging out with @briansuda is a bit like having your personal @boingboing</h1>
+    <p>@timoreilly Mar 27, 2011</p>
+    <p><a class="pill" href="https://twitter.com/i/web/status/51919528396988416">View Tweet</a></p>
+
+  </div>
+</section>      <section id="privacy-policy">
+  <style>
+    #privacy-policy div { margin: 0 auto; text-align: left; padding: 2em 1em 1em 1em; max-width: 1024px; color: #444; line-height: 1.4em; }
+	@media (prefers-color-scheme: dark) {
+      #privacy-policy div { color: #ccc; }
+    }
+  </style>
+  <div>
+    <h1>⚠︎ Privacy Policy</h1>
+    <p>For our newsletters we collect your email address and list preferences. It is accomplished: through a double opt-in email sent from this website, imported from previous mailing lists or potentially from attending a workshop.</p> 
+
+    <p>We only collect the minimum data needed, which is your email address. No other personal data is tracked on this site or via the newsletters.</p>
+
+    <p>We do not sell, trade or distribute personal information from our list.</p>
+
+    <p>At any time, you can remove yourself immediately from our database via the <a href="../unsubscribe">unsubscribe page</a>.</p>
+
+    <p>If you have any questions you can email newsletter@optional.is or find our contact information in the site footer.</p>
+
+    <p style="font-style: italic; font-size: 80%">Updated: 28. October 02021</p>
+  </div>
+</section>
+
+
+    </main>
+
+  <!-- footer -->
+  <svg class="svgs" version="1.1" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<symbol  id="m" viewBox="0 0 94 79">
+			<g stroke-width="1" fill="none" fill-rule="evenodd">
+                    <polygon id="Stroke-1" stroke-width="3" points="0.512256698 17.2216169 0.512256698 1.49829352 20.6427475 1.49829352"></polygon>
+                    <polygon id="Stroke-2" stroke-width="3" points="0.512256698 72 0.512256698 24.8294902 29.4174641 1.4979157 51.0963697 1.4979157 30.4495576 17.2217788 30.4495576 24.3226693 59.8710864 1.4979157 59.8710864 24.8294902 91.3579006 0.483734088 91.3579006 47.1468832 60.9037291 70.9858184 60.9037291 47.1468832 30.4495576 70.9858184 30.5786379 47.781084"></polygon>
+                    <polygon id="Stroke-3" stroke-width="2" points="5.41582652 27.9996849 25.417237 12.5300419 25.417237 43.4693279 5.41582652 59.8273918"></polygon>
+                    <path d="M10.4362827,24.007458 L10.4362827,30.4088385" id="Stroke-4" stroke-width="2"></path>
+                    <path d="M14.4426618,21.018294 L14.3196235,27.2080943" id="Stroke-5" stroke-width="2"></path>
+                    <path d="M17.5768972,18.2254893 L17.5768972,24.1135719" id="Stroke-6" stroke-width="2"></path>
+                    <path d="M21.4218435,15.2255304 L21.4218435,21.0180781" id="Stroke-7" stroke-width="2"></path>
+                    <path d="M9.88700468,55.8181629 L9.88700468,49.937097" id="Stroke-8" stroke-width="2"></path>
+                    <path d="M14.281229,52.4447542 L14.281229,46.5129522" id="Stroke-9" stroke-width="2"></path>
+                    <path d="M18.1261752,49.4787992 L18.1261752,43.723494" id="Stroke-10" stroke-width="2"></path>
+                    <path d="M21.9711215,45.8892764 L21.9711215,40.5533533" id="Stroke-11" stroke-width="2"></path>
+                    <polygon id="Stroke-12" stroke-width="2" points="35.9342636 27.9996849 55.935674 12.5300419 55.935674 43.4693279 35.9342636 59.8273918"></polygon>
+                    <path d="M40.6465748,24.007458 L40.6465748,30.4088385" id="Stroke-13" stroke-width="2"></path>
+                    <path d="M44.9608791,21.018294 L44.8378408,27.2080943" id="Stroke-14" stroke-width="2"></path>
+                    <path d="M48.3364673,18.2254893 L48.3364673,24.1135719" id="Stroke-15" stroke-width="2"></path>
+                    <path d="M52.1814136,15.2255304 L52.1814136,21.0180781" id="Stroke-16" stroke-width="2"></path>
+                    <path d="M40.6465748,55.8181629 L40.6465748,49.937097" id="Stroke-17" stroke-width="2"></path>
+                    <path d="M44.491521,52.4447542 L44.491521,46.5129522" id="Stroke-18" stroke-width="2"></path>
+                    <path d="M48.8857453,49.4787992 L48.8857453,43.723494" id="Stroke-19" stroke-width="2"></path>
+                    <path d="M52.7306916,45.8892764 L52.7306916,40.5533533" id="Stroke-20" stroke-width="2"></path>
+                    <polygon id="Stroke-21" stroke-width="2" points="65.8071341 27.9996849 85.8085446 12.5300419 85.8085446 43.4693279 65.8071341 59.8273918"></polygon>
+                    <path d="M70.8568668,24.007458 L70.8568668,30.4088385" id="Stroke-22" stroke-width="2"></path>
+                    <path d="M74.834299,21.018294 L74.7107114,27.2080943" id="Stroke-23" stroke-width="2"></path>
+                    <path d="M77.9974813,18.2254893 L77.9974813,24.1135719" id="Stroke-24" stroke-width="2"></path>
+                    <path d="M81.8424276,15.2255304 L81.8424276,21.0180781" id="Stroke-25" stroke-width="2"></path>
+                    <path d="M70.3075888,55.8181629 L70.3075888,49.937097" id="Stroke-26" stroke-width="2"></path>
+                    <path d="M74.7018131,52.4447542 L74.7018131,46.5129522" id="Stroke-27" stroke-width="2"></path>
+                    <path d="M78.5467594,49.4787992 L78.5467594,43.723494" id="Stroke-28" stroke-width="2"></path>
+                    <path d="M82.3917056,45.8892764 L82.3917056,40.5533533" id="Stroke-29" stroke-width="2"></path>
+                </g>
+	</symbol>
+
+	<symbol id="twitter_bird" viewBox="0 0 310 310" >
+	<path d="M302.973,57.388c-4.87,2.16-9.877,3.983-14.993,5.463c6.057-6.85,10.675-14.91,13.494-23.73
+		c0.632-1.977-0.023-4.141-1.648-5.434c-1.623-1.294-3.878-1.449-5.665-0.39c-10.865,6.444-22.587,11.075-34.878,13.783
+		c-12.381-12.098-29.197-18.983-46.581-18.983c-36.695,0-66.549,29.853-66.549,66.547c0,2.89,0.183,5.764,0.545,8.598
+		C101.163,99.244,58.83,76.863,29.76,41.204c-1.036-1.271-2.632-1.956-4.266-1.825c-1.635,0.128-3.104,1.05-3.93,2.467
+		c-5.896,10.117-9.013,21.688-9.013,33.461c0,16.035,5.725,31.249,15.838,43.137c-3.075-1.065-6.059-2.396-8.907-3.977
+		c-1.529-0.851-3.395-0.838-4.914,0.033c-1.52,0.871-2.473,2.473-2.513,4.224c-0.007,0.295-0.007,0.59-0.007,0.889
+		c0,23.935,12.882,45.484,32.577,57.229c-1.692-0.169-3.383-0.414-5.063-0.735c-1.732-0.331-3.513,0.276-4.681,1.597
+		c-1.17,1.32-1.557,3.16-1.018,4.84c7.29,22.76,26.059,39.501,48.749,44.605c-18.819,11.787-40.34,17.961-62.932,17.961
+		c-4.714,0-9.455-0.277-14.095-0.826c-2.305-0.274-4.509,1.087-5.294,3.279c-0.785,2.193,0.047,4.638,2.008,5.895
+		c29.023,18.609,62.582,28.445,97.047,28.445c67.754,0,110.139-31.95,133.764-58.753c29.46-33.421,46.356-77.658,46.356-121.367
+		c0-1.826-0.028-3.67-0.084-5.508c11.623-8.757,21.63-19.355,29.773-31.536c1.237-1.85,1.103-4.295-0.33-5.998
+		C307.394,57.037,305.009,56.486,302.973,57.388z"/>
+	</symbol>
+
+	<symbol id="optional-logo" viewBox="0 0 284.478 66.043">
+	<path d="M14.128,33.557c0-4.464,1.599-8.264,4.798-11.39c3.185-3.131,7.081-4.704,11.673-4.704c4.607,0,8.519,1.586,11.739,4.736
+		c3.164,3.148,4.75,7.021,4.75,11.612c0,4.629-1.586,8.513-4.784,11.64c-3.22,3.108-7.164,4.665-11.84,4.665
+		c-4.63,0-8.508-1.584-11.64-4.76C15.695,42.226,14.128,38.293,14.128,33.557z M21.427,33.685c0,3.088,0.824,5.527,2.472,7.324
+		c1.699,1.821,3.922,2.734,6.701,2.734c2.788,0,5.023-0.898,6.692-2.702c1.673-1.797,2.507-4.198,2.507-7.202
+		c0-3.003-0.834-5.404-2.507-7.202c-1.698-1.814-3.922-2.727-6.692-2.727c-2.734,0-4.948,0.912-6.635,2.727
+		C22.273,28.456,21.427,30.809,21.427,33.685z"/>
+	<path d="M57.723,66.043H50.58V18.326h7.143v3.364c2.817-2.809,6.004-4.228,9.583-4.228c4.248,0,7.75,1.573,10.5,4.704
+		c2.792,3.109,4.188,7.032,4.188,11.771c0,4.63-1.382,8.492-4.154,11.573c-2.75,3.069-6.218,4.604-10.405,4.604
+		c-3.618,0-6.851-1.45-9.711-4.351V66.043z M74.702,33.967c0-2.961-0.813-5.373-2.417-7.236c-1.626-1.875-3.68-2.82-6.158-2.82
+		c-2.623,0-4.747,0.912-6.372,2.727c-1.627,1.819-2.448,4.211-2.448,7.175c0,2.894,0.82,5.283,2.448,7.169
+		c1.609,1.84,3.721,2.763,6.345,2.763c2.473,0,4.514-0.938,6.123-2.794C73.871,39.089,74.702,36.761,74.702,33.967z"/>
+	<path d="M94.226,24.988v24.237h-7.138V24.988h-3.041v-6.662h3.041V6.997h7.138v11.329h3.113v6.662H94.226z"/>
+	<path d="M100.306,7.103c0-1.257,0.453-2.328,1.365-3.236c0.907-0.906,1.999-1.366,3.271-1.366c1.289,0,2.384,0.46,3.298,1.366
+		c0.905,0.891,1.365,1.975,1.365,3.27c0,1.289-0.46,2.386-1.365,3.299c-0.886,0.912-1.981,1.365-3.271,1.365
+		c-1.288,0-2.39-0.453-3.297-1.365C100.759,9.521,100.306,8.415,100.306,7.103z M108.526,18.326v30.899h-7.148V18.326H108.526z"/>
+	<path d="M112.045,33.557c0-4.464,1.599-8.264,4.789-11.39c3.194-3.131,7.093-4.704,11.673-4.704c4.614,0,8.532,1.586,11.745,4.736
+		c3.171,3.148,4.759,7.021,4.759,11.612c0,4.629-1.599,8.513-4.791,11.64c-3.214,3.108-7.158,4.665-11.834,4.665
+		c-4.63,0-8.513-1.584-11.644-4.76C113.61,42.226,112.045,38.293,112.045,33.557z M119.341,33.685c0,3.088,0.824,5.527,2.473,7.324
+		c1.694,1.821,3.927,2.734,6.693,2.734c2.794,0,5.025-0.898,6.701-2.702c1.669-1.797,2.5-4.198,2.5-7.202
+		c0-3.003-0.832-5.404-2.5-7.202c-1.694-1.814-3.93-2.727-6.701-2.727c-2.722,0-4.934,0.912-6.626,2.727
+		C120.187,28.456,119.341,30.809,119.341,33.685z"/>
+	<path d="M148.502,18.326h7.169v2.854c2.496-2.475,5.306-3.718,8.443-3.718c3.59,0,6.389,1.142,8.401,3.4
+		c1.733,1.93,2.602,5.064,2.602,9.425v18.938h-7.171V31.993c0-3.043-0.425-5.146-1.271-6.309c-0.819-1.178-2.324-1.774-4.503-1.774
+		c-2.375,0-4.055,0.784-5.04,2.346c-0.979,1.537-1.461,4.237-1.461,8.075v14.895h-7.169V18.326z"/>
+	<path d="M202.845,18.326h7.176v30.899h-7.176v-3.233c-2.938,2.753-6.103,4.124-9.489,4.124c-4.269,0-7.799-1.539-10.593-4.634
+		c-2.771-3.15-4.154-7.083-4.154-11.798c0-4.637,1.383-8.497,4.154-11.584c2.772-3.088,6.24-4.638,10.406-4.638
+		c3.596,0,6.822,1.484,9.676,4.45V18.326z M185.905,33.685c0,2.96,0.79,5.373,2.373,7.232c1.632,1.878,3.683,2.826,6.158,2.826
+		c2.644,0,4.783-0.913,6.41-2.734c1.627-1.882,2.445-4.27,2.445-7.17c0-2.893-0.818-5.284-2.445-7.169
+		c-1.627-1.835-3.738-2.76-6.346-2.76c-2.451,0-4.502,0.927-6.157,2.792C186.719,28.584,185.905,30.915,185.905,33.685z"/>
+	<path d="M222.102,7.014v42.212h-7.135V7.014H222.102z"/>
+	<path d="M225.76,44.864c0-1.188,0.437-2.211,1.3-3.08c0.867-0.864,1.902-1.299,3.108-1.299s2.246,0.435,3.109,1.299
+		c0.869,0.869,1.305,1.901,1.305,3.108c0,1.228-0.436,2.274-1.305,3.145c-0.846,0.838-1.882,1.266-3.109,1.266
+		c-1.25,0-2.295-0.428-3.138-1.266C226.179,47.188,225.76,46.13,225.76,44.864z"/>
+	<path d="M237.121,7.103c0-1.257,0.454-2.328,1.368-3.236c0.912-0.906,1.996-1.366,3.27-1.366c1.287,0,2.389,0.46,3.296,1.366
+		c0.908,0.891,1.361,1.975,1.361,3.27c0,1.289-0.453,2.386-1.361,3.299c-0.891,0.912-1.974,1.365-3.265,1.365
+		c-1.294,0-2.389-0.453-3.301-1.365C237.575,9.521,237.121,8.415,237.121,7.103z M245.338,18.326v30.899h-7.131V18.326H245.338z"/>
+	<path d="M269.089,23.594l-5.893,3.137c-0.936-1.875-2.087-2.82-3.464-2.82c-0.659,0-1.216,0.215-1.683,0.651
+		c-0.463,0.433-0.697,0.985-0.697,1.66c0,1.185,1.379,2.355,4.128,3.519c3.784,1.633,6.335,3.127,7.64,4.499
+		c1.312,1.376,1.971,3.223,1.971,5.546c0,2.979-1.1,5.472-3.305,7.477c-2.129,1.903-4.712,2.854-7.738,2.854
+		c-5.186,0-8.846-2.528-11.004-7.579l6.086-2.826c0.848,1.482,1.494,2.422,1.937,2.826c0.868,0.802,1.903,1.206,3.109,1.206
+		c2.411,0,3.617-1.1,3.617-3.305c0-1.265-0.935-2.45-2.794-3.558c-0.72-0.354-1.432-0.7-2.152-1.04
+		c-0.725-0.343-1.455-0.686-2.19-1.051c-2.075-1.019-3.535-2.029-4.383-3.041c-1.071-1.295-1.614-2.95-1.614-4.986
+		c0-2.688,0.918-4.898,2.761-6.66c1.874-1.753,4.167-2.64,6.85-2.64C264.225,17.463,267.168,19.512,269.089,23.594z"/>
+	<path d="M5.212,7.544l4.951,1.903C8.43,13.585,7.214,17.41,6.522,20.916c-0.348,1.775-0.608,3.646-0.785,5.605
+		c-0.171,1.958-0.265,4.092-0.265,6.411c0,2.336,0.093,4.479,0.265,6.438c0.177,1.96,0.437,3.823,0.785,5.606
+		c0.681,3.483,1.893,7.3,3.641,11.438l-4.951,1.902C1.742,51.078,0,42.615,0,32.933C0,23.257,1.742,14.793,5.212,7.544z"/>
+	<path d="M279.288,58.503l-4.951-1.903c1.748-4.149,2.961-7.955,3.646-11.446c0.713-3.489,1.068-7.501,1.068-12.042
+		c0-4.505-0.355-8.516-1.068-12.02c-0.697-3.505-1.913-7.334-3.646-11.466l4.951-1.908c3.464,7.252,5.189,15.717,5.189,25.394
+		C284.478,42.785,282.752,51.245,279.288,58.503z"/>
+	</symbol>
+
+	<symbol id="rss" viewBox="0 0 512 512"  >
+<path d="M476.292,0H35.708C16.018,0,0,16.018,0,35.708v440.584C0,495.982,16.018,512,35.708,512h440.584
+			c19.69,0,35.708-16.018,35.708-35.708V35.708C512,16.018,495.982,0,476.292,0z M134.761,434.88
+			c-24.967,0-45.207-20.24-45.207-45.207c0-24.967,20.24-45.207,45.207-45.207c24.967,0,45.207,20.24,45.207,45.207
+			C179.968,414.64,159.728,434.88,134.761,434.88z M305.703,408.046c0,9.574-7.762,17.335-17.335,17.335h-36.747
+			c-9.574,0-17.334-7.76-17.334-17.335v-18.374c0-57.01-46.381-103.39-103.391-103.39h-18.374c-9.574,0-17.334-7.76-17.334-17.334
+			v-36.747c0-9.574,7.762-17.334,17.334-17.334h18.374c96.388,0,174.807,78.418,174.807,174.807V408.046z M416.647,425.381h-36.747
+			c-9.574,0-17.335-7.76-17.335-17.335v-18.374c0-127.743-103.926-231.669-231.669-231.669h-18.374
+			c-9.574,0-17.334-7.76-17.334-17.334v-36.747c0-9.574,7.762-17.334,17.334-17.334h18.374c80.958,0,157.069,31.526,214.313,88.772
+			s88.772,133.357,88.772,214.313v18.373h0.001C433.983,417.62,426.221,425.381,416.647,425.381z"/>
+	</symbol>
+
+	<symbol id="newsletter_icon" viewBox="0 0 20 20">
+<path d="M18 3H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM4 10h6v1H4v-1zm8 4H4v-1h8v1zm5-6h-3V5h3v3z"/>
+	</symbol>
+
+</svg>
+
+		<style>
+			footer {
+				border-top: 1px solid #000;
+				padding: 0;
+				color: #555;
+				text-align: left;
+				font-size: 12px;
+				line-height: 14px;
+				clear: both;
+				margin: 0 auto;
+				max-width: 1024px;
+				margin-top: 40px;
+			
+			}
+
+			footer #links {
+				display: grid;
+				grid-gap: 14px; 
+				grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			}
+
+			footer #links h3 {
+				color: #000;
+				line-height: 14px;
+				padding: 1em 0	;
+			}
+
+			footer #links div {
+				padding-bottom: 2em;
+				line-height: 18px;
+			}
+
+			footer #links ul, footer #links ul li {
+				margin: 0;
+				padding:0;
+				list-style: none;
+				line-height: 14px;
+				font-size: 12px;
+			}
+			footer #links ul li a, footer #links ul li a:visited, footer #links ul li a:active, footer #links ul li a:focus {
+				color: #666;
+				text-decoration: none;
+			}
+			footer #links ul li a:hover {
+				color: #000;
+				background-color: transparent;
+			}			
+			footer #links  ul li {
+				padding: 0.4em 0;
+			}
+
+			footer .app-icon {
+				border-radius:  7px;
+				height: 30px;
+				width:  30px;
+				box-shadow: none;
+				margin: 0 0.5em 0 0;				
+				border: none; 
+				padding: 0; 
+				vertical-align: middle;
+			}
+
+			footer #links ul.subscribe_list li {
+				font-size: 140%;
+				font-weight: bold;
+				padding: 2px 0;
+			}
+
+			footer #links ul.subscribe_list svg {
+				vertical-align: middle;
+				padding-right:  0.25em;
+			}
+
+			#m {
+				stroke:  #333;
+			}
+
+
+			@media (max-width: 1023px) {
+				footer #links {
+					grid-row: 1;
+				}
+				footer {
+					margin-left: 2em;
+					margin-right: 2em;
+				}
+			}
+			@media (max-width: 900px) {
+				footer #links {
+					grid-template-columns: 1fr 1fr 1fr;
+				}
+			}
+			@media (max-width: 415px) {
+				footer #links {
+					display: block;
+				}
+			}
+
+
+			@media (prefers-color-scheme: dark) {
+				footer, footer #links  ul li a, footer #links  ul li a:visited, footer #links  ul li a:active, footer #links  ul li a:focus, footer #links  ul li { color: #aaa; }
+				footer #links  ul li a:hover { color: #eee; }
+				footer #links  h3 { color: #eee; }
+				footer .logo, footer svg { fill: #eee; }
+				footer { border-color: #979797; }
+				#m {
+					stroke:  #eee;
+				}
+			}
+		</style>
+
+		<footer>
+			<div class="logo">
+				<svg width="125" height="45"><use xlink:href="#optional-logo"></use></svg>
+			</div>
+			
+
+
+
+
+			<div id="links">
+				<div>
+					<h3>Company</h3>
+					<ul>
+						<li>kt. 520521-0540</li>
+						<li>VAT №. 141140</li>
+						<li>+354.868.0795</li>
+						<li><a href="mailto:optional@optional.is">optional@optional.is</a></li>
+					</ul>
+					<ul style="margin-top: 1em	">
+						<!-- <li>Capabilities</li> -->
+						<li><a href="../../required/index.html">Writing</a></li>
+						<li><a href="../../required/category/weeknotes/index.html">Weeknote #569</a></li>
+						<!--  <li>Media Kit</li> -->
+						<!--  <li>Open Source</li> -->
+					</ul>
+				</div>
+				<div><h3>Material</h3>
+					<ul>
+						<li><a rel="noreferrer" href="https://podcasts.apple.com/us/podcast/material/id1279787564" target="_blank">Podcast</a></li>
+						<li><a rel="noreferrer" href="https://material.is/archive" target="_blank">Archive</a></li>
+						<li><a rel="noreferrer" href="https://material.is/2020" target="_blank">2020</a></li>
+						<li><a rel="noreferrer" href="https://material.is/2018" target="_blank">2018</a></li>
+						<li><a rel="noreferrer" href="https://material.is/2017" target="_blank">2017</a></li>						
+					</ul></div><div><h3>iOS Apps</h3>
+					<ul>
+						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/dashbones/id1071726287?mt=8"><img class="app-icon" src="https://is4-ssl.mzstatic.com/image/thumb/Purple124/v4/6f/9e/58/6f9e5846-2fb2-40a9-45cd-4ed4e06f1562/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/340x340bb-80.png" alt="Download Dashbones on the App Store" /> Dashbones</a></li>
+						<li><a rel="noreferrer" href="https://apps.apple.com/us/app/newsletters/id1455564424?ls=1&mt=8"><img class="app-icon" src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/e7/fc/aa/e7fcaaa9-e4b4-43c9-70ff-9155d89ba893/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/150x150bb-80.png" alt="Download Newsletters on the App Store"> Newsletters</a></li>
+						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/text-stats/id1373463793?mt=8"><img class="app-icon" src="https://is5-ssl.mzstatic.com/image/thumb/Purple124/v4/f4/f8/ee/f4f8ee2f-5e9f-75c0-ca7d-021091d83997/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/340x340bb-80.png" alt="Download Text Stats on the App Store"> Text Stats</a></li>
+						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/triagemail/id1124659536?mt=8"><img class="app-icon" src="https://is2-ssl.mzstatic.com/image/thumb/Purple123/v4/dc/69/9f/dc699f0a-a9ae-4119-cc5e-bd09668492f1/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/246x0w.jpg" alt="Download Triagemail on the App Store"> Triagemail</a></li>
+
+						<li><a rel="noreferrer" href="../../apps/privacy/index.html" style="line-height: 26px; padding-left:  43px; margin-right: 0.5em">Privacy Policy</a></li>					
+
+					</ul>
+					</div>
+					<div>
+						<div style="padding-top: 12px"><svg width="125" height="100"><use xlink:href="#m"></use></svg></div>
+						<h3>Misseristal</h3>
+
+						<p style="margin:0">
+							Today is <strong>Týrsdagur</strong> the 14th day of the month of <strong>Mörsugur</strong>, the 3rd month of winter.
+						</p>
+				</div>
+				<div>
+					<h3>Subscribe</h3>
+					<ul class="subscribe_list">
+						<li><a href="http://feeds2.feedburner.com/optional?format=xml"><svg width="30" height="30"><use xlink:href="#rss"></use></svg> RSS Feed</a></li>
+						<li><a href="../archive/index.html"><svg width="30" height="30"><use xlink:href="#newsletter_icon"></use></svg> Newsletters</a></li>
+						<li><a href="https://twitter.com/optionalBot"><svg width="30" height="30"><use xlink:href="#twitter_bird"></use></svg> @optionalBot</a></li>
+
+					</ul>
+					<p></p>	
+				</div>
+			</div>
+			<div class="address" style="border-top: 1px solid #979797; padding: 5px 0 35px 0">
+				optional ehf. |  LAUFÁSVEGUR 26, 101 REYKJAVÍK, ICELAND
+			</div>
+		</footer>  
+  </body>
+</html>
