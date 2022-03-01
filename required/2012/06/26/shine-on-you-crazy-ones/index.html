@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -80,7 +33,7 @@
 			<div style="border-bottom: 2px solid #464607; padding: 2em 0; margin-bottom: 2em" class="time"><abbr title="2012-06-26T11:11:25+00:00">Tuesday, June 26th, 02012 at 11:11 UTC</abbr></div>
 
 			<div class="entry">
-				<p>Apple has recently released a demo of their new iOS6 operating system. While people love or hate the new features, there is one specific attention to detail worth calling out. <img loading="lazy" style="float: right; padding-left: 15px;" title="Animated Shinny Button" src="../../../../wp-content/uploads/2012/06/shinny-button.gif" alt="" width="273" height="273" />In the new iOS, there are several metallic style buttons and sliders. This in itself isn&#8217;t that spectacular, Apple is know for trying to make things in the digital world look exactly like things in the real world. These are called <a href="http://en.wikipedia.org/wiki/Skeuomorph">skeuomorphs</a> and people tend to fall on one side or the other of their usefulness. These metallic buttons have a nice reflection from a light-source above. They always have, but in iOS6, they have connected the reflection on the GUI widgets to the accelerometer. As you tip and tilt the phone, the reflection continues to rotate and change, just as it would in real life.</p>
+				<p>Apple has recently released a demo of their new iOS6 operating system. While people love or hate the new features, there is one specific attention to detail worth calling out. <img style="float: right; padding-left: 15px;" title="Animated Shinny Button" src="../../../../wp-content/uploads/2012/06/shinny-button.gif" alt="" width="273" height="273" />In the new iOS, there are several metallic style buttons and sliders. This in itself isn&#8217;t that spectacular, Apple is know for trying to make things in the digital world look exactly like things in the real world. These are called <a href="http://en.wikipedia.org/wiki/Skeuomorph">skeuomorphs</a> and people tend to fall on one side or the other of their usefulness. These metallic buttons have a nice reflection from a light-source above. They always have, but in iOS6, they have connected the reflection on the GUI widgets to the accelerometer. As you tip and tilt the phone, the reflection continues to rotate and change, just as it would in real life.</p>
 <p>Part of me says, &#8220;Wow, that&#8217;s attention to detail&#8221;, another part is thinking &#8220;What a waste of CPU cycles. They could have made the battery life longer, the memory footprint smaller and the rendering even faster if they weren&#8217;t wasting time updating the reflection on a button&#8221;, then a third part of me thinks that these sorts of new features have diminishing returns. It is an awesome new &#8220;feature&#8221; now, but as it becomes standard, we only notice it when it doesn&#8217;t change the reflection.</p>
 <p>The <a href="http://en.wikipedia.org/wiki/Kano_model">Kano Model</a> is the framework which helps you plot where your feature is located on the larger plane and helps you realise when it excites versus when it is status quo. Intercom.io&#8217;s article &#8220;<a href="http://blog.intercom.io/sustainable-advantages-for-start-ups/">Sustainable advantages for start-ups</a>&#8221; describes how, over time, a great new feature becomes a basic expectation.</p>
 <div style="font-size: 200%;">
@@ -228,9 +181,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -242,7 +201,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.400 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:35:41 -->
+<!-- Dynamic page generated in 0.469 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:29:01 -->
 
 <!-- super cache -->

@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -82,7 +35,7 @@
 			<div class="entry">
 				<p><a href="http://en.wikipedia.org/wiki/2014_FIFA_World_Cup">This year&#8217;s world cup</a> was another thriller. Here in Iceland, we narrowly lost out to Croatia to get into the tournament. The secondary fallback for the office was the USA. Partly due to some of our team having roots there, but also for the Icelandic player who choose to play for the US rather than his main citizenship, Iceland.</p>
 <p>A few years ago, we developed a simple PHP script to generate some SVG to show the flow of data to and from sources. We experimented with various use-cases. When one person sends an email to another, and receives email from a third. We originally created a wheel which showed incoming and outgoing messages. When the numbers got large, things got messy. It was hard to tell what was incoming and what was outgoing. Our second attempt at this was to have redundant actors, once across the top of the page and again at the bottom of the page. From that, it was easy to see what messages were out going and to whom. Also across the bottom it was easy to see incoming messages and from whom they came. This worked really well for communications, but we thought about other data that could easily fit this mold. Luckily, it was World Cup season 02010 and we quickly realized that teams both score goals and concede them, just like we send and receive messages. So we fired-up some code and generated some SVGs. This is what the raw output looked like:</p>
-<div class="banner"><img loading="lazy" class="alignnone size-full wp-image-3197" src="../../../../wp-content/uploads/2014/07/wc-02010-raw.png" alt="World Cup 2010 Raw Data" width="700" height="221" srcset="../../../../wp-content/uploads/2014/07/wc-02010-raw.png 700w, ../../../../wp-content/uploads/2014/07/wc-02010-raw-300x94.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
+<div class="banner"><img class="alignnone size-full wp-image-3197" src="../../../../wp-content/uploads/2014/07/wc-02010-raw.png" alt="World Cup 2010 Raw Data" width="700" height="221" srcset="../../../../wp-content/uploads/2014/07/wc-02010-raw.png 700w, ../../../../wp-content/uploads/2014/07/wc-02010-raw-300x94.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
 <p>We then took that data and brought it into Illustrator to add some notes, groups, team flags, etc. After those changes we got to something that looked more like this:</p>
 <div class="banner"><img loading="lazy" class="alignnone size-full wp-image-3196" src="../../../../wp-content/uploads/2014/07/wc-02010.png" alt="World Cup 2010" width="700" height="512" srcset="../../../../wp-content/uploads/2014/07/wc-02010.png 700w, ../../../../wp-content/uploads/2014/07/wc-02010-300x219.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
 <p>Fast-forward to 02014 and we&#8217;ve got another World Cup on our hands. We dug through the old code repository and updated the values with this year&#8217;s teams and goals. Within a few minutes we had our data visualization again. That&#8217;s the great thing about doing this in code rather than by hand, it might have taken a bit longer when we started, but now that the code is working, we can updated data very, very fast.</p>
@@ -370,9 +323,15 @@ function getKeyPos($list,$key){
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -429,7 +388,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 	}
 </script>
 
-<!-- Dynamic page generated in 0.505 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:35:00 -->
+<!-- Dynamic page generated in 0.447 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:28:18 -->
 
 <!-- super cache -->

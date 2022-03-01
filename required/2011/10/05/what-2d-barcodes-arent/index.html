@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -87,7 +40,7 @@
 <p>All these 2D barcodes tend to say something like &#8220;Visit our site for more info&#8221; next to the pattern. I can&#8217;t help but think to myself, great, what is your URL? Oh, you&#8217;ve obfuscated it behind these black and white squares.</p>
 <p>If you are going to use 2D barcodes, why oh why not ALSO give use the URL in human readable text? I&#8217;ve seen 2D barcodes on billboards, train stops, adverts on walls and other places where I can&#8217;t get out a $500 smart phone and take a photo in any reasonable amount of light, time and safety. If you added your URL using the alphabetic glyphs a human can read, then I might remember or write it down, but you didn&#8217;t, so I didn&#8217;t learn about your offer or product.</p>
 <p>If you must use 2D barcodes, then please also add a URL in human readable text as well. I don&#8217;t have a fancy smart phone, in fact, neither does over 80% of people who carry a phone. 4 out of 5 people can&#8217;t decode your 2D barcode and yet, you give them no other ways of accessing your information. Just a human, unfriendly block of black and white squares&#8230; well done attracting that next customer. All you worry about is click-thru rates, tracking, engagement and metrics. It probably never occurred to you that by using 2D barcodes to track click-thrus, you are omitting users. You can track the visits, but have no idea how many people saw the 2D barcode and couldn&#8217;t engage.</p>
-<p><img loading="lazy" style="float: right; padding-left: 15px;" title="2D Barcode on Car Door" src="../../../../wp-content/uploads/2011/10/IMG_20110930_112150-1.jpg" alt="" width="238" height="240" />I was recently send a picture of a 2D barcode on a car door. Ironically, the photo was taken via a camera on a phone, so it goes to show that people can take the photo, but can&#8217;t decode it either due to lack of software or ignorance of what it is. The 2D barcode did not have the URL printed nearby, without phones with decoding software, which is to say most people&#8217;s, this massive, prime real-estate, car-side door advertising space was wasted. In my head, I am wondering who thought this was a good idea!</p>
+<p><img style="float: right; padding-left: 15px;" title="2D Barcode on Car Door" src="../../../../wp-content/uploads/2011/10/IMG_20110930_112150-1.jpg" alt="" width="238" height="240" />I was recently send a picture of a 2D barcode on a car door. Ironically, the photo was taken via a camera on a phone, so it goes to show that people can take the photo, but can&#8217;t decode it either due to lack of software or ignorance of what it is. The 2D barcode did not have the URL printed nearby, without phones with decoding software, which is to say most people&#8217;s, this massive, prime real-estate, car-side door advertising space was wasted. In my head, I am wondering who thought this was a good idea!</p>
 <p>Salesman #1 says, &#8220;Lets put our logo on the side of a car.&#8221;</p>
 <p>Boss: &#8220;That&#8217;s a good idea!&#8221;</p>
 <p>Salesman #2: &#8220;What if we add our URL so people can shop online if they don&#8217;t recognize the logo!&#8221;</p>
@@ -245,9 +198,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -259,7 +218,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.436 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:43:42 -->
+<!-- Dynamic page generated in 0.380 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:24:09 -->
 
 <!-- super cache -->

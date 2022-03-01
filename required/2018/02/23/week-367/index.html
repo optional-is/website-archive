@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -87,7 +40,7 @@
 <p><a href="http://material.is">Be sure to get your ticket today!</a></p>
 <h3>iOS applications</h3>
 <p>This week we&#8217;ve continued to putter on two iOS projects. They are more internal to scratch an itch, but they eventually will make their way out into the real world. Now, we&#8217;re always big fans of the web, and when ever we can, we&#8217;d prefer to simply make this a webpage. That&#8217;s partly why the only apps we&#8217;re interested in working on are ones that are still in those corners where the web hasn&#8217;t fully reached yet. Our first app that we&#8217;ve been playing with for a long time now is called &#8220;How Far: Iceland&#8221;. We&#8217;ve taken several well known places in Iceland and are comparing their distances and heights to information we can access via the Health.app. As you move, your phone is tracking your steps and altitude changes, go ahead, open Health.app and you&#8217;ll see you have data in there. Our little How Far app takes that data, does some very simple division to tell you how many times you climbed the equivalent of the highest mountain in Iceland compared to the flights of stairs you take. It is fun, but requires it to be an app to access the HealthKit DataStore.</p>
-<div class="banner"><img loading="lazy" src="../../../../wp-content/uploads/2018/02/badges.png" alt="" width="700" height="100" /></div>
+<div class="banner"><img src="../../../../wp-content/uploads/2018/02/badges.png" alt="" width="700" height="100" /></div>
 <p>The other app, called Daycrement, is a calendaring app which also taps into the device&#8217;s event database. This means we only need to handle the display logic and not complicate ourselves with storing or managing events. We love calendars, and Daycrement is an attempt to try to visualise events as a timeline of things X days into the future. This is still early days and it is mostly scratching our own itch, but might be useful to someone else in the future too.</p>
 <h3>Projects</h3>
 <p>This week we focused mostly on two projects. Our survey tool continues to be enhanced with some tweaks and features from our customers. We&#8217;ve been migrating between servers and continuing to sort out any bugs and compartmentalise all the 3rd party plugins. After May, when the GDPR comes into affect, we will need to move ourselves from managing and collecting the data on their behalf, to simply their 3rd party contractor for software development. Therefore, we&#8217;re moving the servers and all the additional utilities, like email and SMS providers under their name. Since they are the ones collecting and processing the personal information, they are the legal entity and therefore need to be responsible for all the infrastructure. We certainly could be responsible, but that&#8217;s not our business model.</p>
@@ -231,9 +184,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -245,7 +204,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.737 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:45:02 -->
+<!-- Dynamic page generated in 1.722 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:32:55 -->
 
 <!-- super cache -->

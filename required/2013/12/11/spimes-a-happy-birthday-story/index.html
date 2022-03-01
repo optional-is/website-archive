@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -116,7 +69,7 @@
 <p>Then one card catches his eye, it&#8217;s from his parents. He looks over this print out more closely, reading through a long, rambling sentence from his mother. The act of taking the card out of the printer tray has triggered the spime to record the date and time it was read. Unknowing to Bill, his mother put a return-receipt request on the spime, so as he reads his mother is getting a ping-back saying the card has been opened. Within minutes Bill&#8217;s phone begins to ring, it&#8217;s his mother. &#8220;Hello Billy, did I wake you up?&#8221; Knowing full well she didn&#8217;t, but everyone plays that game to be polite and not freak out the recipient letting them know they are being tracked by their spimes. &#8220;I just wanted to wish you a happy birthday&#8230;&#8221;</p>
 <h3>8:30 am</h3>
 <p>After the call, Bill leaves his unfinished breakfast on the table. Sometime during the day, he&#8217;s not sure exactly when, the robo-cleaner will wake-up again and find the spime cutlery and dishes, wash them appropriately and fill them back with the others. One morning Bill moved all the plates to a different cabinet to see how smart the robo-cleaner was. Bill never taught it where to put the dishes and somehow it knew were they went. By moving them he was testing the machine. Will it put it where it normally does or find the others and put them together. To Bill&#8217;s surprise when he got home all the dishes had been put back where they were originally, confusing Bill even further. He was&#8217;t sure if the robo-cleaner was messing with his head or if it knew something he didn&#8217;t.</p>
-<div class="banner"><img loading="lazy" alt="spime radar app" src="../../../../wp-content/uploads/2013/12/spime-radar.gif" width="700" height="356" /></div>
+<div class="banner"><img alt="spime radar app" src="../../../../wp-content/uploads/2013/12/spime-radar.gif" width="700" height="356" /></div>
 <p>It was nearly time for Bill to set off on his designated route planning preference tour to work. He whips out his phone and does a quick spime search. First he filtered by everything tagged &#8216;work&#8217;. All these objects appeared on the screen as a radar map telling him which direction how far away they are. The physical objects also started to glow a soft blue haze to aid anyone not looking at the screen. He quickly grabbed his briefcase, tablet and a binder of papers. The system reports 4 search items returned and he only had 3. A quick glance around the apartment and he sees something glowing from behind the couch. Wondering how it got back there, but more importantly what it was, he leans over the back to discover an old bar-bell. He probably meant to label this &#8216;workout&#8217;, but auto-correct or fat fingers ended-up typing &#8216;work&#8217; and &#8216;out&#8217;. He makes a mental note to fix this later. He next does a quick search for anything in the apartment with an &#8216;owner&#8217; attribute of his employer. The only things that glow now are the tablet, the binder and a few pens and markers on the table.</p>
 <p>He&#8217;s got everything he needs and as he is heading out the door he notices the umbrella glowing a faint green. A quick check on the weather confirms his suspicions that its raining. This jolts him to the realisation that he doesn&#8217;t even know how he&#8217;s getting to work this morning! He was assigned a special route, woken-up early, but all for what? With a few taps to the screen by the door and his heart sinks, he&#8217;s on a bike today in the rain. As the umbrella in the corner glows and he thinks to himself, &#8220;Nice try, it knows it&#8217;s raining, but come-on, an umbrella on a bike?&#8221; Another quick search and he locates where the robo-cleaner has last placed his poncho, in the closet, top-shelf, behind the camping equipment. Only for a split second does Bill wonder &#8220;How did that little bean manage to put it way up there?&#8221;, but then a clap of thunder and flash of lightning brought Bill back to the reality that today was his birthday, his day, and it was raining, and he was on a bike, and he had a horrible breakfast. Nothing was going his way.</p>
 <h3>9:00 am</h3>
@@ -319,9 +272,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -333,7 +292,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.529 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:31:31 -->
+<!-- Dynamic page generated in 0.406 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:26:24 -->
 
 <!-- super cache -->

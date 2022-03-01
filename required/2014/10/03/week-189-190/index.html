@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -85,7 +38,7 @@
 <p>This week also saw the first local Data Visualisation meet-up. We gave a short introduction to our work on responsive chart design we built for Vísar/Skólapúlsinn. After us, QuizUp presented a bit about their wheel of interests that they have been developing.</p>
 <p>We have also been slowly making progress on a few bugs and UX issues with the Mosfell project. This is our long running internal project. Our goal is to get it up and running, but too many other projects keep getting in the way.</p>
 <p>Week #190 saw the start of the local film festival here in Reykjavik. The documentaries they bring each year are amazing. We&#8217;ve already seen <a href="http://www.imdb.com/title/tt3488668/">The Great Museum</a>, <a href="http://www.imdb.com/title/tt3654964">Art and Craft</a> and <a href="http://www.imdb.com/title/tt3438802/">ThuleTuvalu</a>. All of them are incredible films.</p>
-<div class="banner"><a href="http://www.wired.com/2014/10/things-we-love-september/#slide-id-1581111"><img loading="lazy" class="alignnone size-full wp-image-3347" src="../../../../wp-content/uploads/2014/10/2014-09-30-thingswelove-gallery-05.jpg" alt="Photo by JOSH VALCARCEL/WIRED" width="700" height="525" srcset="../../../../wp-content/uploads/2014/10/2014-09-30-thingswelove-gallery-05.jpg 700w, ../../../../wp-content/uploads/2014/10/2014-09-30-thingswelove-gallery-05-300x225.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" /></a></div>
+<div class="banner"><a href="http://www.wired.com/2014/10/things-we-love-september/#slide-id-1581111"><img class="alignnone size-full wp-image-3347" src="../../../../wp-content/uploads/2014/10/2014-09-30-thingswelove-gallery-05.jpg" alt="Photo by JOSH VALCARCEL/WIRED" width="700" height="525" srcset="../../../../wp-content/uploads/2014/10/2014-09-30-thingswelove-gallery-05.jpg 700w, ../../../../wp-content/uploads/2014/10/2014-09-30-thingswelove-gallery-05-300x225.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" /></a></div>
 <p>Our lovely side-project <a href="http://analog.is">Analog.is</a> also got some attention this week with the <a href="http://www.wired.com/2014/10/things-we-love-september/#slide-id-1581111">WIRED Gadget blog</a>. We were one of a few products featured in their September &#8220;must haves&#8221;. We got about 48h warning, which caused us to finish-up the online store to be ready for the traffic. So we subsequently launched <a href="http://store.analog.is">store.analog.is</a> The response so far has been amazing! From a technical stand-point we are using the Stripe payment gateway and BigCartel for the e-commerce store. If you are interested in why we chose those services over others, you can always email, but once things settle down we&#8217;ll do a longer write-up.</p>
 <p>Week #190 is also the start of Q4, so we have been diligently working on our Q3 newsletter which should go out soon. You should really <a href="../../../../../newsletter/index.html">sign-up for the mailing list if you haven&#8217;t already</a>.</p>
 <p>In this week we submitted two grant applications. One we are the main applicant to look for some funds to offset a new Analog.is project. The other we are the technical lead for a US customer. Once we know more about the outcomes we can discuss and share the process.</p>
@@ -226,9 +179,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -240,7 +199,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.543 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:35:54 -->
+<!-- Dynamic page generated in 0.404 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:29:16 -->
 
 <!-- super cache -->

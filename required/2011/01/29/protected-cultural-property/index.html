@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -80,7 +33,7 @@
 			<div style="border-bottom: 2px solid #ea51ec; padding: 2em 0; margin-bottom: 2em" class="time"><abbr title="2011-01-29T12:21:18+00:00">Saturday, January 29th, 02011 at 12:21 UTC</abbr></div>
 
 			<div class="entry">
-				<p>Back in September 02010, I attended the <a href="http://2010.dconstruct.org/">dConstruct</a> conference in Brighton. One of the speakers, <a href="http://shorttermmemoryloss.com/">James Bridle</a> gave a very interesting presentation on the Value of Ruins. In one part of the presentation he discussed the lose of cultural heritage, especially online. <img loading="lazy" style="float: right; padding-left: 15px;" title="Culturally Protected T-Shirt" src="../../../../wp-content/uploads/2011/01/shirt.png" alt="Culturally Protected T-Shirt" width="174" height="184" />It&#8217;s so easy to delete something, because it&#8217;s only ones and zeros and when you do so it&#8217;s gone forever. I personally wrestle with the conundrum of what to save and what to throw-out. One man&#8217;s trash is another man&#8217;s treasure. By ignoring, letting things fall into disrepear, neglecting or even deleting, it has an impact on the future. What if that was the only or last copy? What makes something &#8220;worthy&#8221; of cultural protection?</p>
+				<p>Back in September 02010, I attended the <a href="http://2010.dconstruct.org/">dConstruct</a> conference in Brighton. One of the speakers, <a href="http://shorttermmemoryloss.com/">James Bridle</a> gave a very interesting presentation on the Value of Ruins. In one part of the presentation he discussed the lose of cultural heritage, especially online. <img style="float: right; padding-left: 15px;" title="Culturally Protected T-Shirt" src="../../../../wp-content/uploads/2011/01/shirt.png" alt="Culturally Protected T-Shirt" width="174" height="184" />It&#8217;s so easy to delete something, because it&#8217;s only ones and zeros and when you do so it&#8217;s gone forever. I personally wrestle with the conundrum of what to save and what to throw-out. One man&#8217;s trash is another man&#8217;s treasure. By ignoring, letting things fall into disrepear, neglecting or even deleting, it has an impact on the future. What if that was the only or last copy? What makes something &#8220;worthy&#8221; of cultural protection?</p>
 <p>I am personally a big believer in the <a href="http://en.wikipedia.org/wiki/Broken_Windows">broken windows theory</a>, that says if it looks run-down it will only get worse. Crime begets crime. A building with just one broken window is much more likely to degrade than a building without. We saw this play-out in the 01980s with the adimant re-painting of subway cars in New York City. Having just a tiny bit of graffitti was an invitation to add more and more, until the paying customers felt unsafe. The 01984 film <a href="http://en.wikipedia.org/wiki/Style_Wars">Style Wars</a> is an interesting look into the battle between taggers and the Manhattan Transit Authority.</p>
 <p>A similar situation occurred post-Katrina hurricane in New Orleans. The &#8220;Gray Ghost&#8221; would re-paint any graffitti that he saw. This was logical according to the broken windows theory, except that he was painting over famous graffitti works by Banksy. So, where does art stop and vandalism begin? According to the law it is pretty clear, it is vandalism, but that is not what society says because we monitarily value Bansky&#8217;s work. If that is the case, should we paint over any graffitti for fear that it MIGHT be artwork?</p>
 <p>What about all those rude comments in public toilets or carved into tables? It is certainly interesting when we find old Victorian graffiti and we are glad no one removed it, but at the time it was a nuisance. Having it now gives us a window into the past. In <a href="http://en.wikipedia.org/wiki/Edinburgh_Castle">Edinburgh castle</a>, there is a wooden prison door that is carved-up by the then inmates. It has possibly, one of the earliest known cavings of the new United States flag. These are historically significant, only in retrospection.</p>
@@ -226,9 +179,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -240,7 +199,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.444 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:33:38 -->
+<!-- Dynamic page generated in 0.344 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:27:04 -->
 
 <!-- super cache -->

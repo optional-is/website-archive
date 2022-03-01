@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -86,7 +39,7 @@
 <p>It is interesting to see someone else&#8217;s work and get inspirated, but if you can&#8217;t execute on the idea yourself, then what good was the inspiration? This is where knowing your resources is key. For just about anything geographical, my first stop is <a title="Geonames" href="http://www.geonames.org/">Geonames.org</a>. I have used their code in several other projects, including the <a title="HLS World Map" href="../../../../2010/12/13/hls-world-map/index.html">HLS World Map</a> and <a title="Geonames Maps" href="../../../../2010/06/28/geonames-maps/index.html">Geonames maps</a>. It is as simple as it gets, a Comma Seperated Value list of places with plenty of metadata.</p>
 <p>If I wanted to replicate the thumbnail maps in the broshure, I knew I needed city names, and lots of them. In geonames, you can download a list of every town with a population over 1,000 people. Granted, this data might not be the most up-to-date, for most of my projects it&#8217;s fine. The next step was to pick a starting city. On the first go, I chose Reykjavík. While it makes sense as a local starting point, it isn&#8217;t geographically that interesting, we&#8217;ll see why in a bit. So I went with <a title="Saint Louis, MO USA on Wikipedia" href="http://en.wikipedia.org/wiki/St._Louis,_Missouri">Saint Louis, Missouri, USA</a>. A quick search on Wikipedia and I&#8217;ve got the Latitude and Longitude of the city; 38.627222,-90.197778.</p>
 <p>The next step is to choose and arbitrary tolerance in the number of degrees, sort of geographical error bars. I started with +/- 1.0 degrees. For Saint Louis, this would mean a Latitude of 37.627222 to 39.627222 and a Longitude of -91.197778 to -89.197778. This tolerance can be adjusted to taste.</p>
-<div class="banner"><img loading="lazy" title="Zone of Lat/Lon for Saint Louis" src="../../../../wp-content/uploads/2011/04/stl-lat-lon.png" alt="Zone of Lat/Lon for Saint Louis" width="700" height="463" /></div>
+<div class="banner"><img title="Zone of Lat/Lon for Saint Louis" src="../../../../wp-content/uploads/2011/04/stl-lat-lon.png" alt="Zone of Lat/Lon for Saint Louis" width="700" height="463" /></div>
 <p>Now that we have this thin band of acceptable latitude and longitude values, I looped through the complete list from geonames to find &#8220;sister&#8221; cities on the same latitude and repeat the process to find &#8220;sister&#8221; cities at the same longitude.</p>
 <p>The original map of Estonia was a series of thumbnails left and right, showing other large cities at the same latitude and a series of thumnails up and down showing cities at the same longitude. It was simple and interesting to see how geographically similar cities might have vastly different climates, cultures, language and history. Now, with some simple logic, a few lines of code and the geonames database, it&#8217;s easy to recreate this for any location!</p>
 <p>For Saint Louis there were many results, so I reduced the tolerance to only 0.25 degrees and limited the results to cities to those with a population of 100,000 or higher. The following cities matched her latitude:</p>
@@ -312,9 +265,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -326,7 +285,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.453 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:32:09 -->
+<!-- Dynamic page generated in 0.480 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:25:39 -->
 
 <!-- super cache -->

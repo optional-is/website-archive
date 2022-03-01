@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -97,7 +50,7 @@
 <p>Printing in multiple colors. I&#8217;m indifferent to this. There might be some research out there that claims more colors are better or vice versa. A big thing to consider is will it rub off? I keep a stack of cards in my wallet. One set I used to have was a single color back with the logo. Having them all in my wallet, front-to-back meant that the ink was being rubbed off the back of one card onto the front of another. Giving a card away sometime meant that the front was actually a faded version of the back of the previous card. Had they NOT been inked-up so heavily (or I didn&#8217;t carry them in my wallet) this would be less of a problem.</p>
 <p>With the rounded corner&nbsp;phenomenon&nbsp;in the world of web 2.0 sites translated business cards too. Having a die cut card means that parts are stamped out after they are printed on a normal rectangular card. There were plenty of companies selling little boxes that you put your business cards into, pressed down, and it would trim the corners into a nice round shape. Having a die cut doesn&#8217;t just mean rounded corners, you could easily punch out your logo or any other shape around the edge or right in the middle. Changing the shape does make an impact, but can also make it harder to write on and take notes. It also means that you need to take extra care in not beat-up your corners so they stay crisp and give a good impression.</p>
 <p>For awhile there was a craze of having business card CD-ROMs. These were small CDs, only containing 40 MB or so of data, in the shape of a business card. The idea being that you could hand them out as regular cards with information printed on one side. Then the customer could put them into their computer for more information. Luckily, these died out. The idea was there, but execution was poor. A URL now can achieve the same thing, while making it easier to update and keep current. (This is known in the programming world as pass-by-reference as opposed to pass-by-value). Once you burn that CD and give it away, you can&#8217;t change the contents. It will slow bit-rot, the data will go out of date, just like the software to play it. Giving a URL means that you control the message and can keep it up-to-date much better. Not to mention that the shape of these business card CD-ROMs didn&#8217;t work in slot-loading CD drives. If there wasn&#8217;t a tray, then you could never line them up correctly!</p>
-<div class="banner"><iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/4YBxeDN4tbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="banner"><iframe width="560" height="315" src="https://www.youtube.com/embed/4YBxeDN4tbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p>The infamous pitch man, Joel Bauer was part of a documentary called &#8220;The Pitch, Poker and the Public&#8221; in which he reviews a business cards. The clip went viral as&nbsp;<a href="http://www.youtube.com/watch?v=4YBxeDN4tbk">Your business card is crap</a>. While he is over the top, he does make a few interesting point, not all I would agree with, but others I do.</p>
 <p>If you are reading this and we happen to meet-up some day, you know what I&#8217;ll ask for, so be sure you are carrying some sort of business card that I can take away.</p>
 
@@ -232,9 +185,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -246,7 +205,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.427 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:31:41 -->
+<!-- Dynamic page generated in 0.390 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:27:38 -->
 
 <!-- super cache -->

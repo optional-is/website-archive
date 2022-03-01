@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -83,7 +36,7 @@
 				<p><a href="http://en.wikipedia.org/wiki/Road_coloring_problem">The road coloring problem</a> is proposed as a graph theory problem, but once you understand it, the applications can be stretched into other disciplines. What the conjecture asks is: using a single set of instructions, is it possible to reach or located a destination from any other point within the network. Now, &#8220;the network&#8221; can easily be abstracted to &#8220;the city&#8221;. Imagine you arrive in a foreign city you&#8217;ve never been too before. You can&#8217;t read the language, you have no idea how to get to your destination and it is getting late. Traditionally, you might have a paper map which has issues with localization and internationalization not to mention changes since it was printed. The first hurdle is that you need to know where your destination is on the map. Secondly, you need to know where you are on the map. Couple that with the lack of local knowledge about street restrictions and the best route between the two points and things get tricky. What is needed is a simple and concise set of instructions from every possible point in the city to another.</p>
 <p>With a road colored map, this is simple, because from any node in the network you can get to any other with the exact same set of instructions. In our case the network is made-up of city streets and intersections. Each intersection is equivalent of a node and every edge a street. Now you can get to your destination knowing a simple set of instructions from any intersection in the city. The same instructions to get you to your hotel would apply if you were standing on main street or the airport terminal. Let&#8217;s see how this works.</p>
 <p>If we look at this example, the network has 8 nodes and each node has 4 lines radiating from it. Each line has a direction, either pointing to the node or away from it. Think of this as 8 street corners each with a combination of 4 one-way streets coming in and out.</p>
-<p><img loading="lazy" style="float: left; padding-right: 15px;" title="Road Color Map" src="../../../../wp-content/uploads/2009/08/graph-road-color.png" alt="graph road color" width="238" height="237" />You can select any node in the graph and use the following set of instructions to get to node 1, Blue-Yellow-Yellow, Blue-Yellow-Yellow, Blue-Yellow-Yellow. It might not be the most efficient path, but it will always bring you to node 1.</p>
+<p><img style="float: left; padding-right: 15px;" title="Road Color Map" src="../../../../wp-content/uploads/2009/08/graph-road-color.png" alt="graph road color" width="238" height="237" />You can select any node in the graph and use the following set of instructions to get to node 1, Blue-Yellow-Yellow, Blue-Yellow-Yellow, Blue-Yellow-Yellow. It might not be the most efficient path, but it will always bring you to node 1.</p>
 <p>If you wanted to get to node 6 you use these instructions, Blue-Blue-Yellow, Blue-Blue-Yellow,Blue-Blue-Yellow. Every node in the city has a similar set of instructions so that no matter where you start, you will always end-up at the desired destination.</p>
 <p>Now, imagine this isn&#8217;t a contrived graph, but a map of a city with tourist attractions as the nodes. Node 1 might be a museum, node 2 the swimming pool. Instead of having different directions to get to every destination on the map, if the map where a &#8220;road colored map&#8221; the instructions would be simple—they would be identical. This would gives tourists an easy way to remember to how to get between places.</p>
 <div class="banner"><img loading="lazy" title="Map road colored" src="../../../../wp-content/uploads/2009/08/map-road-color.jpg" alt="Map road colored" width="700" height="202" /></div>
@@ -224,9 +177,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -238,7 +197,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.420 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:45:53 -->
+<!-- Dynamic page generated in 1.156 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:41:34 -->
 
 <!-- super cache -->

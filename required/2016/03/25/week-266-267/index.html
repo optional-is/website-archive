@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -83,7 +36,7 @@
 				<p>A note to put things into historical context for our future selves. Week #267 was a short one with all the Easter Holidays, so we didn&#8217;t manage to get as much done as in a normal week. It was also the week that Apple released their <a href="https://en.wikipedia.org/wiki/IPhone_SE">iPhone SE</a> (special edition). Many flags at half-mast this week, plus the passing of <a href="https://en.wikipedia.org/wiki/Garry_Shandling">Garry Shandling</a> at the age of 66.</p>
 <p>It has been the Spring Equinox in week #267 meaning that here in Iceland, being so far north, we are getting around 50/50 light/dark hours each day. The trend for more or less daylight follows a sin-wave. The troughs and peaks are the shortest and longest days where the equinoxes are in the middle ascending or descending. Which means that we are gaining around 8-10 minutes of extra sunlight each day. Over the course of a week, that is around 45 more minutes. This time of year it is a very noticeable change.</p>
 <p>These last two weeks have been pretty busy. We&#8217;ve been wrapping a project for the O&#8217;Reilly Strata Conference in San Jose in Week #268. We&#8217;ve been building three 3D data visualisations for them to work in a Virtual Reality environment.</p>
-<p><img loading="lazy" class="alignnone size-full wp-image-3771" src="../../../../wp-content/uploads/2016/03/money.jpg" alt="money" width="700" height="497" srcset="../../../../wp-content/uploads/2016/03/money.jpg 700w, ../../../../wp-content/uploads/2016/03/money-300x213.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" /></p>
+<p><img class="alignnone size-full wp-image-3771" src="../../../../wp-content/uploads/2016/03/money.jpg" alt="money" width="700" height="497" srcset="../../../../wp-content/uploads/2016/03/money.jpg 700w, ../../../../wp-content/uploads/2016/03/money-300x213.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" /></p>
 <p>The three that we have designed take steps slowly into more and more interaction. The first is an animation showing volumetric sizes of piles of $100 bills. The difference between $1,000,000 and $1,000,000,000 is only three little 000s, but the physical size of $1 million dollars in hundred dollar bills is smaller than a brief case. $1 Billion, on the other hand, is 100 times larger and takes-up considerably more space! Actually being able to walk around these amounts is quite impactful.</p>
 <p><img loading="lazy" class="alignnone size-full wp-image-3770" src="../../../../wp-content/uploads/2016/03/data-henge.jpg" alt="data-henge" width="700" height="460" srcset="../../../../wp-content/uploads/2016/03/data-henge.jpg 700w, ../../../../wp-content/uploads/2016/03/data-henge-300x197.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" /></p>
 <p>The second example is what we&#8217;ve been calling Data Henge (I know it&#8217;s not a <a href="https://en.wikipedia.org/wiki/Henge">henge</a>). We wanted something to show you in the round, all 360°. We wrapped a line graph of stock data around you, so no mater which way you looked you would see the data. We animated this to build slowly allowing you to peek at each node and get a pop-up of the real value. The best way to experience this visualisation is to be inside it!</p>
@@ -227,9 +180,15 @@ Having been to a few Muji shops, they are a minimalist, zen IKEA. It doesn&#8217
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -241,7 +200,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.422 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:36:12 -->
+<!-- Dynamic page generated in 0.338 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:29:33 -->
 
 <!-- super cache -->

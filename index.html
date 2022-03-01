@@ -71,32 +71,12 @@
 				section.feature > div { margin: 0; min-height: 400px;  }
 				section.feature { display: block; }
 				section.feature > div:nth-child(even) { margin-top: 14px }
-				#header { padding: 0 20px; }
 
 				section.feature div:nth-child(odd) { margin-left: 0; }
 				section.feature div:nth-child(even) { margin-right: 0; }
 
 			}
 
-			 #header {
-				___font-family: optional;
-				font-weight: normal;
-				font-size: 45px;
-				line-height: 100px;
-				max-width: 1024px;
-				margin: 0 auto;
-				color: #000;
-				text-align: left;
-				display: grid; 
-				grid-gap: 0; 
-				grid-template-columns: auto 300px;
-			}
-			#search { padding: 20px 0; height: 30px; vertical-align: middle; } 
-
-			@media only screen and (max-width: 520px) {
-				#header { display: block; text-align: center;}
-				#search { display: block;  width: 100%; }
-			}
 
 			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
 			form.single input:focus { border: none; outline: none; }
@@ -149,8 +129,7 @@
 					background-color: #222;
 					color: #eee;
 				}
-				#header { color: #eee; }
-
+	
 				section.feature div, section.box div { background-color: #333; }
 				section.feature h1 { color: #ddd; }
 				section.feature p { color: #ccc; }
@@ -160,14 +139,43 @@
 		</style>
 	</head>
 	<body>
+				<style>
+			 #header {
+				font-weight: normal;
+				font-size: 45px;
+				line-height: 100px;
+				max-width: 1024px;
+				margin: 0 auto;
+				color: #000;
+				text-align: left;
+				display: grid; 
+				grid-gap: 0; 
+				grid-template-columns: auto 300px;
+			}
+			#search { padding: 20px 0; height: 30px; vertical-align: middle; } 
+
+
+			@media only screen and (max-width: 1160px) {
+				#header { padding: 0 20px; }
+			}
+			@media only screen and (max-width: 520px) {
+				#header { display: block; text-align: center;}
+				#search { display: block;  width: 100%; }
+			}
+
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
+
+		</style>
 		<header id="header" >
 			<span><svg width="300" height="100" ><use xlink:href="#optional-logo"/></svg></span>
 
-			<form id="search" class="single" action="https://optional.is/required" >
-				<input type="text" name="s"  placeholder="Find..." /><button>Search</button>
+			<form id="search" class="single" action="https://duckduckgo.com/" >
+				<input type="hidden" name="sites" value="optional.is"/>
+				<input type="search" name="q"  placeholder="Find..." /><button>Search</button>
 			</form>
-		</header>
-		<main>
+		</header>		<main>
 			<section id="lead">
 				<style>
 					#lead { padding: 60px 0; max-width: 980px; text-align: left;}
@@ -204,21 +212,6 @@
 				<div>We work with teams to realize their ideas. From workshops to prototypes to products, we're there to help. With over 10 years experience working with small to enterprise companies, we have a unique perspective on what's possible.</div>
 			</section>
 
-			<!--
-			<section id="capabilities">
-				<style>
-					#capabilities div { background: linear-gradient(180deg, rgba(2,0,27,1) 0%, rgba(48,51,91,1) 100%); height: 400px; }
-					#capabilities div h1 { font-size: 64px;
-						line-height: 1.8;
-						font-weight: 600;
-						letter-spacing: -.008em;
-						margin: 0; color: #fff; }
-				</style>
-				<div>
-					<h1 style="">Capabilities</h1>
-				</div>
-			</section>
-			-->
 			<section class="feature">
 				<!-- Writting -->
 <div id="articles">
@@ -274,7 +267,7 @@
 
 			#newsletters h1 { color: rgba(0,0,0,0.9); padding-top: 30px; 	}
 			#newsletters p { color: rgba(0,0,0,0.9); font-size: 30px; }
-			#newsletters #email { width: 100%; font-size: 22px; margin-bottom: 1em; padding: 0.25em 1em; }
+			#newsletters #email { width: 80%; font-size: 22px; margin-bottom: 1em; padding: 0.25em 1em; }
 			#newsletters button {
 				margin: 0;
 				padding: 0 1em;
@@ -408,13 +401,13 @@
 	
 	<div  style="margin:0 auto; border: 2px solid #333; width: 200px; height: 200px; border-radius: 42px; background-color: #fff; box-shadow: 0px 0px 20px rgba(0, 0, 0, .4)	">
 	<p style="background-color: #900; border-top-left-radius: 40px; border-top-right-radius: 40px; color: #fff; font-weight: bold; margin: 0; padding: 0; line-height: 50px;">Week №</p>
-	<p style="line-height: 132px; margin: 0; padding: 0; font-weight: bold; font-size: 96px; letter-spacing: -0.05em; color: #333">571</p>	
+	<p style="line-height: 132px; margin: 0; padding: 0; font-weight: bold; font-size: 96px; letter-spacing: -0.05em; color: #333">577</p>	
 	</div>
 
 	<h1>Weeknotes</h1>
 	<p>A short, weekly recap.</p>
 	<p style="padding-bottom: 0px"><a class="pill"  href="https://optional.is/required/category/weeknotes">Read More</a></p>
-</div>							</section>
+</div>			</section>
 
 			<section id="material">
 	<style>
@@ -703,7 +696,7 @@
 					<ul style="margin-top: 1em	">
 						<!-- <li>Capabilities</li> -->
 						<li><a href="required/index.html">Writing</a></li>
-						<li><a href="required/category/weeknotes/index.html">Weeknote #571</a></li>
+						<li><a href="required/category/weeknotes/index.html">Weeknote #577</a></li>
 						<!--  <li>Media Kit</li> -->
 						<!--  <li>Open Source</li> -->
 					</ul>
@@ -722,7 +715,7 @@
 						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/text-stats/id1373463793?mt=8"><img class="app-icon" src="https://is5-ssl.mzstatic.com/image/thumb/Purple124/v4/f4/f8/ee/f4f8ee2f-5e9f-75c0-ca7d-021091d83997/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/340x340bb-80.png" alt="Download Text Stats on the App Store"> Text Stats</a></li>
 						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/triagemail/id1124659536?mt=8"><img class="app-icon" src="https://is2-ssl.mzstatic.com/image/thumb/Purple123/v4/dc/69/9f/dc699f0a-a9ae-4119-cc5e-bd09668492f1/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/246x0w.jpg" alt="Download Triagemail on the App Store"> Triagemail</a></li>
 
-						<li><a rel="noreferrer" href="apps/privacy/index.html" style="line-height: 26px; padding-left:  43px; margin-right: 0.5em">Privacy Policy</a></li>					
+						<li><a rel="noreferrer" href="apps/privacy/index.html" style="line-height: 26px; padding-left:  43px; margin-right: 0.5em;  width: auto">Privacy Policy</a></li>					
 
 					</ul>
 					</div>
@@ -731,7 +724,7 @@
 						<h3>Misseristal</h3>
 
 						<p style="margin:0">
-							Today is <strong>Þórsdagur</strong> the 0th day of the month of <strong>Þorri</strong>, the 4th month of winter.
+							Today is <strong>Mánadagur</strong> the 9th day of the month of <strong>Góa</strong>, the 5th month of winter.
 						</p>
 				</div>
 				<div>

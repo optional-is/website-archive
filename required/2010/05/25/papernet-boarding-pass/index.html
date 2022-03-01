@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -82,7 +35,7 @@
 			<div class="entry">
 				<p>A few years ago, I worked for an enterprise software company and have since served my penance. Looking back, it was great experience. It gave me opportunities to work on large scale projects that I would never have otherwise been able to play with and influence. In late 02007, one such interesting project crossed my desk. I was tasked with developing a printable boarding pass for a major international airlines. This was an excellent opportunity to break out of the boring static world of boarding passes and try to generate some more interesting and ultimately a more useful boarding passes. I didn&#8217;t want people to print it out, go to the airport and then throw it away. I wanted it to be printed and used during the entire journey. Sadly, this project never managed to get to its fullest potential for various reasons. Enough time has passed and now that I can discuss the project and I can tell you a little about my thought process during its creation. My version of the boarding pass is in use today (May 02010) having never been upgraded. In many ways it has been superseded by self-checking, there is no need to print anything at home before travelling to the airport, therefore it has probably waned to a point of redundancy within the airlines and industry as a whole. Maybe these ideas will be useful for others and could be integrated into the self-check-in system as well.</p>
 <p>The idea behind the printable boarding pass is that it allows you to avoid the long lines at the check-in desk. One of the restrictions from the airlines was that you could only print the boarding pass 22 hours before the flight. Since this was such a small window, it game me an opportunity to infuse the print-out with some dynamic paperNet ideas knowing it would not be too out-of-date by departure.</p>
-<p>The <a href="http://www.iata.org/">IATA</a> is the governing body which overseeing much of the air travel industry. <img loading="lazy" style="float: right; padding-left: 15px;" title="optional-qrcode" src="../../../../wp-content/uploads/2010/05/optional-qrcode.png" alt="" width="162" height="162" />One of their cost-saving measures was to implement a printable barcoded boarding passes for all airlines by 02010. 02008 saw the requirement of airlines to be able to read these barcodes, and shortly after that every boarding passes would be required in this format. This cuts the costs of the traditional paper print-outs with the magnetic backing, to a simpler paper print-out with a 2D barcode, which contains the same information as small squares of ink. The barcode style boarding pass also cuts down the number of check-in desk spaces required, making it more efficient to use the check-in area and pushes the cost of printing from the airlines to the customer. It changed the cost of printing by only a few pennies, but over thousands of flights a day it adds-up quickly.</p>
+<p>The <a href="http://www.iata.org/">IATA</a> is the governing body which overseeing much of the air travel industry. <img style="float: right; padding-left: 15px;" title="optional-qrcode" src="../../../../wp-content/uploads/2010/05/optional-qrcode.png" alt="" width="162" height="162" />One of their cost-saving measures was to implement a printable barcoded boarding passes for all airlines by 02010. 02008 saw the requirement of airlines to be able to read these barcodes, and shortly after that every boarding passes would be required in this format. This cuts the costs of the traditional paper print-outs with the magnetic backing, to a simpler paper print-out with a 2D barcode, which contains the same information as small squares of ink. The barcode style boarding pass also cuts down the number of check-in desk spaces required, making it more efficient to use the check-in area and pushes the cost of printing from the airlines to the customer. It changed the cost of printing by only a few pennies, but over thousands of flights a day it adds-up quickly.</p>
 <p>The amount of information required on the visible boarding pass is rather minimal, most of which is duplicated in the machine readable 2D barcode. This allows a quick reading of your ticket at various points throughout the airport, including security check-points, gate checks and terminal entry points. The rest of the space on the boarding pass was available for me to take some liberties in the organization and design. There is a short list of items required by the IATA, but after that I was free to roam.</p>
 <p>A 2D barcode is a matrix of white and black squares which is encoded in 2 directions, horizontally and vertically, hence the name 2D. The technical format used on these boarding passes to create the 2D barcode is called <a href="http://en.wikipedia.org/wiki/PDF417">PDF417</a>. There is also some control information on the sides to orient the barcode for the reader. This enables the barcode to be read from any direction, because the reader can internally rotate the barcode to the correct position based on the thick black lines representing the control information. It basically says to the computer &#8220;This side up&#8221;.</p>
 <p>The original boarding pass template design was based on SAS&#8217;s boarding pass. This was about 1/3 the size of an A4 page and contained basic information about flights, the carrier and the traveller. This pretty much mimics the traditional boarding pass that you are given at the check-in desk, but it is printable at home and contains the 2D barcode instead of the magnetic strip on the back duplicating the same information. It was a good start to know what was required, but it isn&#8217;t a very interesting design.</p>
@@ -276,9 +229,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -290,7 +249,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.673 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:43:37 -->
+<!-- Dynamic page generated in 1.117 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:32:59 -->
 
 <!-- super cache -->

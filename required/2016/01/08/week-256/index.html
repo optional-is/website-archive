@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -84,7 +37,7 @@
 <p>This week also shares it&#8217;s name with a large main belt asteroid named after a Belgian saint, <a href="https://en.wikipedia.org/wiki/256_Walpurga">256 Walpurga</a>.</p>
 <p>The workload has been light this week. People are slowly getting back into the swing of things after the holidays. We had a short phone meeting with some folks in Australia interested in some potential dashboard work. That is looking positive and we&#8217;re waiting for some potential wireframes before we can give a good estimate.</p>
 <p>We also publicly launched <a href="https://material.is">material.is</a> the website for our potential conference this fall. In week #257 we&#8217;re spending a few days planning. We&#8217;ll try to finalise a date, venue and budget. If time permits, we&#8217;ll also work on some video for our Kickstarter video. If you are interested in coming to Reykjavik, Iceland for a conference this fall with the theme of looking at the Web as a material not unlike wood, plastics or metal, then you should visit <a href="https://material.is">material.is</a> and add yourself to our mailing list!</p>
-<div class="banner"><img loading="lazy" src="../../../../wp-content/uploads/2016/01/Screen-Shot-2016-01-08-at-21.13.08.png" alt="iOS App Icons" width="517" height="194" /></div>
+<div class="banner"><img src="../../../../wp-content/uploads/2016/01/Screen-Shot-2016-01-08-at-21.13.08.png" alt="iOS App Icons" width="517" height="194" /></div>
 <p>The other thing we started this week was to slowly roll-out to our beta testers two new iOS apps we&#8217;ve been working on. Our first is called &#8220;GeoColor&#8221;. It is a very basic &#8220;hello world&#8221; style app which gets you latitude and longitude and echoes that back to you with your GeoColor. This is the hex and RGB values of your current location. It is based on the code we wrote back in 02010 for the <a href="../../../../2010/12/13/hls-world-map/index.html">HLS world map</a>. Now it is in app form. We are making a nice website for this explaining a bunch of our thought process. (Note: this sort of thing shouldn&#8217;t be an app, it should be just a website!) Since this was our first iOS app, we started with something simple to learn more about the whole iTunes Connect process. With a few tweaks, it should be available on the iTunes store for free. Our second app is again, something that shouldn&#8217;t have to exists, but it is scratching an itch that can&#8217;t be filled in any other way. The new Apple TVs allow you to write very similar code to that of an iOS device. One major drawback of the Apple TV is that it lacks a web browser, so while this second project should be a website, that means it isn&#8217;t accessible on the Apple TV. So we&#8217;re currently beta testing our own Artisanal Web Browser to display the content we need. More on this later.</p>
 <p>The Material conference and iOS/tvOS apps will be our projects for 02016. They are born out of things we want to discuss: the needs, properties and affordances of the Web, and working with new technologies that are connected, but lack a browser. These are devices like the Apple TV, but are true of many future Internet of Things toys.</p>
 <h2>Conferences</h2>
@@ -226,9 +179,15 @@ We pre-ordered the book back in November and it arrived this week. This video sh
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -240,7 +199,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.388 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:30:17 -->
+<!-- Dynamic page generated in 0.446 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:27:16 -->
 
 <!-- super cache -->

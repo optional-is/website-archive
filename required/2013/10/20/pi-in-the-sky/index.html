@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -81,7 +34,7 @@
 
 			<div class="entry">
 				<p>As part of Vísar&#8217;s ability to deploy a survey system we&#8217;ve tried to keep it with fairly low dependancies. The system is built with Django in python and requires some database access for survey response persistence and user data. Beyond that, it is pretty standard. This means we have the ability to run it on a variety of hosting providers, including places like AWS and Heroku. This makes deployments easy and highly portable. So portable infact that we decided to see if we could run the entire stack offline on a Raspberry Pi.</p>
-<div class="banner"><img loading="lazy" class="alignnone size-full wp-image-2782" alt="pi" src="../../../../wp-content/uploads/2013/10/pi.jpg" width="700" height="362" srcset="../../../../wp-content/uploads/2013/10/pi.jpg 700w, ../../../../wp-content/uploads/2013/10/pi-300x155.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
+<div class="banner"><img class="alignnone size-full wp-image-2782" alt="pi" src="../../../../wp-content/uploads/2013/10/pi.jpg" width="700" height="362" srcset="../../../../wp-content/uploads/2013/10/pi.jpg 700w, ../../../../wp-content/uploads/2013/10/pi-300x155.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
 <p>The great think about this solution is literally a survey system in a box. We could pre-program the survey and populate the possible respondents or create an anonymous survey. Then stick the box in the post and when you receive it, all you need to do is give it power and plug it into a monitor. The system would boot to the browser and be ready for any respondents. Or atleast that was the plan.</p>
 <p>We used a <a href="http://www.raspberrypi.org">Raspberry Pi</a> B, which has a few more features than the A series. After installing the OS onto an SD card, booting-up and prepping the system, we pulled all the code for the collection server from the git repo. Then installed all the dependancies. The first huddle was Gunicorn, which is used as the production server. We decided to simply skip this since we were certain only one user would be accessing the survey at a time, therefore we could us the built-in Django runserver command. With that out of the way, we hit our next roadblock with PostgreSQL. It required some jiggling and finagling, but in the end it worked. As a fallback we decided to just use SQLite, but with Django&#8217;s migration tool South, we ran into problems with some aspects of the models working. That forced us back to PostgreSQL.</p>
 <p>After getting everything working and running, we did successfully manage to connect to the localhost webserver and browse the survey. The downside was that page loads were taking a long time, too long for our needs. We suspect that the memory, processor speed, SD card writes all contributed to the slowness.</p>
@@ -226,9 +179,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -240,7 +199,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.411 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:29:17 -->
+<!-- Dynamic page generated in 0.350 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:23:37 -->
 
 <!-- super cache -->

@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -82,7 +35,7 @@
 			<div class="entry">
 				<p>The number 138 again brings us into space. The <a href="http://en.wikipedia.org/wiki/138_Tolosa">138 Tolosa</a> asteroid is a small rocky body in the main asteroid belt. Discovered in 1874 and named after Toulouse, France. The number 138 is also shared with a comet <a href="http://en.wikipedia.org/wiki/138P/Shoemaker-Levy">138P/Shoemaker–Levy</a>. This comet last made its appearance mid-02012. In the vernacular, the number 138 can also reference living in anonymity. The classic Misfits song &#8220;<a href="http://www.youtube.com/watch?v=SOqVs-K1eEo">We are 138</a>&#8221; and George Lucas&#8217; 01971 film <a href="http://www.imdb.com/title/tt0066434/">THX-1138</a> both reference this life-style. In subsequent George Lucas films he works in the number 1138, from cell numbers in Star Wars to notes in Indiana Jones, but we&#8217;ll leave that until week 1138.</p>
 <p>This week also starts the fourth quarter: <strong>02013Q4</strong>. We have <a href="../../../../../contest/index.html">a new contest to give-a-way a 24ways book</a>. This is a great book with 24 articles all about web design and development. We&#8217;re also prepping to send out the Q3 newsletter, so if you aren&#8217;t on the <a href="../../../../../newsletter/index.html">mailing list</a>, now is a great time to sign-up.</p>
-<div class="banner"><img loading="lazy" class="alignnone size-full wp-image-2751" alt="riff-movies" src="../../../../wp-content/uploads/2013/10/riff-movies.jpg" width="700" height="256" srcset="../../../../wp-content/uploads/2013/10/riff-movies.jpg 700w, ../../../../wp-content/uploads/2013/10/riff-movies-300x109.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
+<div class="banner"><img class="alignnone size-full wp-image-2751" alt="riff-movies" src="../../../../wp-content/uploads/2013/10/riff-movies.jpg" width="700" height="256" srcset="../../../../wp-content/uploads/2013/10/riff-movies.jpg 700w, ../../../../wp-content/uploads/2013/10/riff-movies-300x109.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
 <p>The Reykjavik International Film Fest is still on going. We saw two more films since last week. These included <a href="http://www.imdb.com/title/tt2433336/">Moo Man (02013)</a>, a story about a small dairy farmer in the UK and the love for his cows. The other film was <a href="http://www.imdb.com/title/tt2530936/?ref_=fn_al_tt_1">Expedition to the end of the world (02013)</a>, the story of a mis-match of folks travelling to the north of Greenland to explore, photograph and philosophise life.</p>
 <p>On the projects front, the first month of school ended so it was all hands on deck to crunch some numbers and adapt to the changes we&#8217;ve made in skólapúlsinn this year and then get these new values copied over to skólavogin. Everything went smoothly and we should be set for the rest of this school year now. From here on out it is general running and maintenance. Small fixes and improvements are planned, but we know how to deal with testing and staging. This month consisted of changes to the survey, which needed real results before the calculations could be analysed and performed.</p>
 <p>Projects for the City of Reykjavik have been handed off. They are launching a new website in the very near future and we supplied a small calendaring stop-gap solution.</p>
@@ -223,9 +176,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -237,7 +196,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.504 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:47:58 -->
+<!-- Dynamic page generated in 1.068 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:46:14 -->
 
 <!-- super cache -->

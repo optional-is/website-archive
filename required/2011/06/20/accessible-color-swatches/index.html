@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -88,7 +41,7 @@
 <p>About 10% males and a small percentage of females suffer from some sort of <a href="http://en.wikipedia.org/wiki/Color_blindness">color blind deficiency</a>. Color &#8220;blind&#8221; is not strictly speaking the correct term, people who have this affliction are not blind to color, but rather see a limited set of wavelengths differently.</p>
 <p>To see the world through someone else&#8217;s eyes, there is a great tool for both the Mac and PC called <a href="http://colororacle.cartography.ch/">Color Oracle</a>. This tiny applications puts your monitor into different modes so you can see what your designs look like by altering the wavelengths simulating various afflictions. This is a great tool to quickly switch back and forth to check for color problems.</p>
 <p>There are three major types of color blindness, Deutranopia, Protanopia and Tritanopia. To see how they compare, I have taken a sample photo and adjusted the wavelengths of the image to simulate these three issues from left to right, starting with the regular image.</p>
-<div class="banner"><img loading="lazy" class="alignnone size-full wp-image-2002" title="color oracle results" src="../../../../wp-content/uploads/2011/06/color-oracle-results.png" alt="" width="700" height="525" srcset="../../../../wp-content/uploads/2011/06/color-oracle-results.png 700w, ../../../../wp-content/uploads/2011/06/color-oracle-results-300x225.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
+<div class="banner"><img class="alignnone size-full wp-image-2002" title="color oracle results" src="../../../../wp-content/uploads/2011/06/color-oracle-results.png" alt="" width="700" height="525" srcset="../../../../wp-content/uploads/2011/06/color-oracle-results.png 700w, ../../../../wp-content/uploads/2011/06/color-oracle-results-300x225.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
 <p>As you can see, there are some fairly large differences. (If you don&#8217;t see a difference between some of the images, then you might want to have your eyes checked.) By testing your design you can quickly see that some of the colors you have chosen will look radically different to some people. <img loading="lazy" style="float: right; padding-left: 10px;" title="line-graph-color" src="../../../../wp-content/uploads/2011/06/line-graph-color.png" alt="" width="250" height="100" />This becomes a problem when you create visualizations such as a line graph. If you choose red and green colors for two of the lines and then correctly label them as company X&#8217;s monthly income versus company Y&#8217;s, you still have problems. For normal vision, those two lines jump right off the page as different colors, but for a small per centage of people, they have difficulty and it might be impossible to tell the difference, even with a key.</p>
 <p><img loading="lazy" style="float: right; padding-left: 10px;" title="line-graph-grey" src="../../../../wp-content/uploads/2011/06/line-graph-grey.png" alt="" width="250" height="99" />Beyond vision disabilities, you have even more common and simple issues of greyscale. This results from cheap ink jets printers, faxes or lazer printers. If we look again at the line chart, you can see that it is very difficult to identify the red and green lines, even with a key.</p>
 <p>This might seem like a silly issue to worry about, everyone has a color monitor—they can just look at the PDF or website. That isn&#8217;t completely true, even today some new devices such as the <a href="http://en.wikipedia.org/wiki/Kindle">Kindle</a> are being manufactured and sold as black and white devices.</p>
@@ -242,9 +195,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -256,7 +215,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.571 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:37:34 -->
+<!-- Dynamic page generated in 0.377 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:24:08 -->
 
 <!-- super cache -->

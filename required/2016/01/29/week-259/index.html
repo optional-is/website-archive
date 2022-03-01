@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -86,7 +39,7 @@
 <p>We also have uploaded another version of our iOS project and this time requested a proper review. The first app we tried this with was out-right rejected. This new app has a better chance. This is for the AppleTV. The last review process took about a week, so maybe by our next week note, we&#8217;ll have a link to share!</p>
 <p>The <a href="https://web.material.is/2016/">material conference</a> that we&#8217;re planning has also been taking shape behind the scenes. We have invited a few more speakers and awaiting their replies and requirements. We have also been working on our first newsletter. If you are not on the mailing list, you should sign-up! This will be a Kickstarter project, so we also have been putting together the rewards, the text for the site and a script for the video. Along with all that content, we&#8217;ll put most of it back on the website and then possibly into something physical.</p>
 <h2>Bric-à-brac</h2>
-<p><iframe loading="lazy" src="https://www.youtube.com/embed/BmqmgsAYJiI" width="700" height="394" frameborder="0" allowfullscreen="allowfullscreen"></iframe><br />
+<p><iframe src="https://www.youtube.com/embed/BmqmgsAYJiI" width="700" height="394" frameborder="0" allowfullscreen="allowfullscreen"></iframe><br />
 Since we have been researching a lot of VR best practices lately, we found this VR construction helmet very interesting. One very specific use-case and business vertical where VR and Augmented Reality can really benefit the experience.</p>
 <p><iframe loading="lazy" src="https://www.youtube.com/embed/FFsthmB3kMQ" width="700" height="394" frameborder="0" allowfullscreen="allowfullscreen"></iframe><br />
 These are the sorts of people, thoughts and crazy ideas we want to both showcase at the Material Conference, but also to get you inspired to think and see the world in a different way. This is a master frame maker rebuilding lost tools to carve intricate frames by machine.</p>
@@ -94,7 +47,7 @@ These are the sorts of people, thoughts and crazy ideas we want to both showcase
 A light hearted look at Werner Herzog reading Where&#8217;s Waldo. It isn&#8217;t really Werner Herzog, but a very good impression.</p>
 
               <div class="postmetadata">
-					<p><strong>Categories:</strong> <a href="../../../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="../../../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../../../../tag/frames/index.html" rel="tag"  class="tag">frames</a>, <a href="../../../../tag/ios/index.html" rel="tag"  class="tag">iOS</a>, <a href="../../../../tag/material/index.html" rel="tag"  class="tag">material</a>, <a href="../../../../tag/vr/index.html" rel="tag"  class="tag">VR</a>, <a href="../../../../tag/werner-herzog/index.html" rel="tag"  class="tag">werner herzog</a></p>			  </div>
+					<p><strong>Categories:</strong> <a href="../../../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="../../../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="https://optional.is/required/tag/frames/" rel="tag"  class="tag">frames</a>, <a href="../../../../tag/ios/index.html" rel="tag"  class="tag">iOS</a>, <a href="../../../../tag/material/index.html" rel="tag"  class="tag">material</a>, <a href="../../../../tag/vr/index.html" rel="tag"  class="tag">VR</a>, <a href="https://optional.is/required/tag/werner-herzog/" rel="tag"  class="tag">werner herzog</a></p>			  </div>
 			
 				
    <div style="border-top: 4px solid #333; border-bottom: 1px solid #ddd; margin: 60px 0 100px 0">
@@ -224,9 +177,15 @@ A light hearted look at Werner Herzog reading Where&#8217;s Waldo. It isn&#8217;
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -238,7 +197,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.503 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:48:11 -->
+<!-- Dynamic page generated in 0.816 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:46:46 -->
 
 <!-- super cache -->

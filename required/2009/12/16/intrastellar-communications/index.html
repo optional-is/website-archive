@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -84,7 +37,7 @@
 <p>We probably remember from school that it takes 8.5 minutes for the sun&#8217;s light to reach Earth. We are 1 AU (<a href="http://en.wikipedia.org/wiki/Astronomical_Unit">Astronomical Unit</a>), 149.60<span style="margin-left: 0.2em;">×<span style="margin-left: 0.1em;">10</span></span><sup>6</sup> km from the nearest star, our Sun. We also know that the fastest possible speed is the speed of light. There is no faster way to get information to and from two points than the speed of light. 299,792,458 meters per second is our upper bound, which sounds pretty fast, and it is, but over distances within our own solar system we&#8217;ll quickly see things fall apart.</p>
 <h2>Bandwidth</h2>
 <p>Back in 01996, I can remember getting my first 14.4 baud modem. This was 14.4 kilobits/second and was quickly replaced by the 28.8, then 56k! At that time, the bottleneck when transferring data was the bandwidth. You couldn&#8217;t get the data down fast enough due to the limited through-put. Loading a 70kb image on a 56K modem would take around 10 seconds, these days no one blinks an eye at a multi-megabyte flash animation, because the amount of information we can shove down the same pipe is much larger than those 14.4 days.</p>
-<p><img loading="lazy" style="float: right; padding-left: 10px;" title="speed-vs-bandwidth" src="../../../../wp-content/uploads/2009/12/speed-vs-bandwidth.png" alt="speed-vs-bandwidth" width="230" height="115" />There is a curve we can plot which is speed at which a page loads compared to bandwidth. At low-bandwidth connections, the page load time is determined by how fast we can download it. At high-bandwidth connections the load time is limited by the latency.</p>
+<p><img style="float: right; padding-left: 10px;" title="speed-vs-bandwidth" src="../../../../wp-content/uploads/2009/12/speed-vs-bandwidth.png" alt="speed-vs-bandwidth" width="230" height="115" />There is a curve we can plot which is speed at which a page loads compared to bandwidth. At low-bandwidth connections, the page load time is determined by how fast we can download it. At high-bandwidth connections the load time is limited by the latency.</p>
 <p>When we were all on 14.4 modems, it didn&#8217;t matter if the latency of fetching data took 250 or 300 milliseconds, you were always hindered by the bandwidth. As we are getting connections with larger and larger through-put, the most noticeable limitation is becoming the latency and we know that the fastest possible speed is constant, the speed of light.</p>
 <h2>Talking to the Moon</h2>
 <p>Our <a href="http://en.wikipedia.org/wiki/Moon">Moon</a> is approximately 384,403 kilometers away. That&#8217;s 1.25 light-seconds. This means that any message that we send to the moon takes about 1.25 seconds to get there, then another 1.25 seconds for someone to reply. This means an overall delay of about 2.5 seconds between messages in communications. This would be a pretty annoying and boring conversation if all the awkward pauses lasted 2.5 seconds and were after each sentence!</p>
@@ -291,9 +244,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -305,7 +264,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.475 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:31:29 -->
+<!-- Dynamic page generated in 0.356 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:27:29 -->
 
 <!-- super cache -->

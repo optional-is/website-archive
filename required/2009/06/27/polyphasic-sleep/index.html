@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -80,7 +33,7 @@
 			<div style="border-bottom: 2px solid #270d70; padding: 2em 0; margin-bottom: 2em" class="time"><abbr title="2009-06-27T12:21:25+00:00">Saturday, June 27th, 02009 at 12:21 UTC</abbr></div>
 
 			<div class="entry">
-				<p>This July, I am going to experiment with adapting my sleep patterns into a <a href="http://en.wikipedia.org/wiki/Polyphasic_sleep">Polyphasic Sleep</a> cycle. That&#8217;s just a fancy way of saying sleeping more than once in a single day. <img loading="lazy" style="float: right; padding: 15px 0 15px 15px" title="Monophasic Sleep 8 hours" src="../../../../wp-content/uploads/2009/06/monophasic-8hours.png" alt="Monophasic Sleep 8 hours" width="216" height="190" />Most of us choose a single long period of sleep durning the night, around about 7–8 hours to let the body rest and recuperate, but there are other options.</p>
+				<p>This July, I am going to experiment with adapting my sleep patterns into a <a href="http://en.wikipedia.org/wiki/Polyphasic_sleep">Polyphasic Sleep</a> cycle. That&#8217;s just a fancy way of saying sleeping more than once in a single day. <img style="float: right; padding: 15px 0 15px 15px" title="Monophasic Sleep 8 hours" src="../../../../wp-content/uploads/2009/06/monophasic-8hours.png" alt="Monophasic Sleep 8 hours" width="216" height="190" />Most of us choose a single long period of sleep durning the night, around about 7–8 hours to let the body rest and recuperate, but there are other options.</p>
 <p>Polyphasic sleep comes in several flavors, the most common is biphasic sleep. This means that your normal sleep pattern is split into two sleep periods. The siesta is a common example of this, an afternoon nap and then stay-up later in the evening. To start out with, I am going to attempt to do something similar and hopefully move into other more complex patterns.</p>
 <p>The basis for this is to increase the time available to conduct other tasks. Spending 1/3 of the day sleeping is not the most efficient, if it is possible to hack sleep so the body can completely rejuvenate and still have more awake time, why not try it?</p>
 <p>I am planning my day around a biphasic sleep schedule, two sessions, one 6 hours and a second shorter 2 hours. This would allow for a normal 8 hours total sleep, but be broken into two parts too acclimate the body. <img loading="lazy" style="float: right; padding: 15px 0 15px 15px" title="Biphasic Sleep 6'n'2 hours" src="../../../../wp-content/uploads/2009/06/biphasic-6-n-2hours.png" alt="Biphasic Sleep 6'n'2 hours" width="216" height="190" />The next phase of the experiment is to slowly decrease the larger block&#8217;s sleep length from 6 hours to only 4 hours, keeping the 2 hour nap. This would be a total of 6 hours of sleep per day which is an 8.3% increase in awake time, equating to 14 extra hours a week. The plan is to wake-up at 8am for work and return home around 6–7pm for dinner. Around 7–9pm I would take my second sleep, then stay awake until 4am, when I will return to sleep for 4 hours and awake again at 8am for work. That&#8217;s the plan, a mere 6 hours total.</p>
@@ -234,9 +187,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -248,7 +207,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.467 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:42:34 -->
+<!-- Dynamic page generated in 0.373 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:30:17 -->
 
 <!-- super cache -->

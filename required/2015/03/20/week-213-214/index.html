@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -84,7 +37,7 @@
 <p>We spent this week onsite working mostly around tracking and analytics. Everyone dealing with &#8220;big data&#8221; or &#8220;data mining&#8221; knows that they need to collect information about actions and behaviours, but how much is too much? Adding tracking EVERYWHERE is certainly possible, but it becomes more and more costly. These costs appear as storage and network requests. The more data being transferred means network chatter, which takes several hundred milliseconds. This is by far the slow of any application&#8217;s job, from rendering to data access to animation, network requests are where your users wait the most.</p>
 <p>What we&#8217;ve done is to break the project down into smaller functional pieces. Then start to ask high-level questions such as &#8220;Before a user buys a token, what were they doing right before that&#8221;. Then we can start to only add tracking to actions that will answer that question. We created actionable and hypothesises based on the data we could receive. Having this structure allows us to focus on the question we want answered rather than having an answer in mind and back-fitting it to a question. So far we&#8217;ve been marching through the tasks and the tracking being added to the application. We&#8217;re still a ways away from launching the changes, but when we do we already have a good set of questions, a method to get the data and a hypothesis to confirm. Or, if it doesn&#8217;t work an idea of how we can change it or bring in some qualitative methods to see where we went wrong.</p>
 <p>This was Design March here in Iceland. Lots of designers were on show around town.</p>
-<div class="banner"><img loading="lazy" src="../../../../wp-content/uploads/2015/03/design-march.jpg" alt="design-march" width="700" height="318" /></div>
+<div class="banner"><img src="../../../../wp-content/uploads/2015/03/design-march.jpg" alt="design-march" width="700" height="318" /></div>
 <p>We meet up with several friends during the week and brainstormed a bit about one of our new prototype projects revolving around concrete. It was a great chat because we discussed a few techniques that we hadn&#8217;t considered which might make the whole process much, much easier and more replicatable. We also got the contact details of some great folks working and pushing the limits on concrete when it comes to non-functional and functional design.</p>
 <div class="banner"><img loading="lazy" src="../../../../wp-content/uploads/2015/03/marsipan.jpg" alt="marsipan" width="700" height="348" /></div>
 <h2>Week #214</h2>
@@ -239,9 +192,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -253,7 +212,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.351 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:36:05 -->
+<!-- Dynamic page generated in 0.417 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:29:25 -->
 
 <!-- super cache -->

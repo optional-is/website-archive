@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -88,7 +41,7 @@
 <p>Then this will make a lot more sense.</p>
 <p>That story was written at the end of 02012 at the ClearLeft hack farm as one of the potential projects. <a href="http://suda.co.uk">Brian Suda</a> and <a href="http://www.donotremove.co.uk">Mike Stenhouse</a> laid out a potential day in the life in the near future for our protagonist. We pulled from many sources, some of which were our ideas, but many of which we saw in other formats and melded into this story.</p>
 <p>If you think some of the ideas are too crazy and out there, maybe some of the following links will demonstrate that these ideas are closer than you might think.</p>
-<p><img loading="lazy" style="float: right; padding-left: 10px;" alt="desk-printer" src="../../../../wp-content/uploads/2014/01/desk-printer.gif" width="267" height="200" />Years before BergCloud released their <a href="http://bergcloud.com/littleprinter/">Little Printer</a>, they were talking about the <a href="http://berglondon.com/blog/2006/10/06/my-printer-my-social-letterbox/">social letterbox</a>. One of the many events we regret not attending was PaperCamp in London back in 02009. That is where the <a href="https://vimeo.com/2859786">microprinter</a>, a connected receipt printer, made its first appearance. This is the seed for the Little Printer and the source of the birthday cards in the story.</p>
+<p><img style="float: right; padding-left: 10px;" alt="desk-printer" src="../../../../wp-content/uploads/2014/01/desk-printer.gif" width="267" height="200" />Years before BergCloud released their <a href="http://bergcloud.com/littleprinter/">Little Printer</a>, they were talking about the <a href="http://berglondon.com/blog/2006/10/06/my-printer-my-social-letterbox/">social letterbox</a>. One of the many events we regret not attending was PaperCamp in London back in 02009. That is where the <a href="https://vimeo.com/2859786">microprinter</a>, a connected receipt printer, made its first appearance. This is the seed for the Little Printer and the source of the birthday cards in the story.</p>
 <p><a href="http://adactio.com/extras/manekineko/">Maneki Neko</a>, By Bruce Sterling, is a great short story. It revolves around a karma, gift economy and a small device which allows its owner to send and receive messages. If you have faith in the device, it will ask you to conduct some pretty strange tasks, but in return many of your needs and wants are also rewarded. Simple acts like buying and extra coffee because it tells you too, and within a few minutes it tells you whom to give it too. Then randomly one day when you are sitting on a bench tired and sad, someone will had you your favorite drink. Some of the ideas behind the peer-to-peer postman came from this story.</p>
 <p>The direction guiding shoes is a riff on the haptic belt or haptic compass. These belts are used in military and civilian scenarios to help the wearer get a better sense of their location and heading. They are made-up of a series of gyroscopes and a digital compass. Which every way is north, that gyroscope quietly buzzes. As you turn your orientation, a new gyroscope will buzz, but always the north-facing side. As we see more and more sports companies becoming technology companies, I wouldn&#8217;t doubt we&#8217;ll see this feature is a high-end running shoe in the future.</p>
 <p>The <a href="http://en.wikipedia.org/wiki/Roomba">Roomba</a> is probably the most futuristic consumer good we can buy today. A small robot that cleans your house while you are away. Packed full of basic, cheap sensors, this device knows when it is hungry for power and returns home. Our bean device is the simple extrapolation of what the roomba could become with even more smarts and a few arms and legs.</p>
@@ -265,9 +218,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -279,7 +238,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.563 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:34:13 -->
+<!-- Dynamic page generated in 0.352 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:28:30 -->
 
 <!-- super cache -->

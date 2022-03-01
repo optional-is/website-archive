@@ -23,55 +23,8 @@ TweetCC is a simple way for you to declare how you want your tweets to be used a
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -82,7 +35,7 @@ TweetCC is a simple way for you to declare how you want your tweets to be used a
 			<div style="border-bottom: 2px solid #a00c6f; padding: 2em 0; margin-bottom: 2em" class="time"><abbr title="2010-01-18T10:01:23+00:00">Monday, January 18th, 02010 at 10:01 UTC</abbr></div>
 
 			<div class="entry">
-				<p><img loading="lazy" style="float: right; padding-left: 15px;" title="Rooster" src="../../../../wp-content/uploads/2009/05/sl375256.jpg" alt="Rooster" width="195" height="248" />At the end of January 02009 <a href="http://www.stuffandnonsense.co.uk/">Andy Clarke</a> was looking for a way to license twitter messages for an upcoming book. The publisher wanted to make sure the rights were cleared before any of the tweets could be re-used in print. This posed a problem, Andy needed a way for people to easily pledge their messages and a way to record it for future reference. This sparked a discussion about how this could be done as painless as possible. With a little PHP hackery we managed to piece together a basic three page site in short order.</p>
+				<p><img style="float: right; padding-left: 15px;" title="Rooster" src="../../../../wp-content/uploads/2009/05/sl375256.jpg" alt="Rooster" width="195" height="248" />At the end of January 02009 <a href="http://www.stuffandnonsense.co.uk/">Andy Clarke</a> was looking for a way to license twitter messages for an upcoming book. The publisher wanted to make sure the rights were cleared before any of the tweets could be re-used in print. This posed a problem, Andy needed a way for people to easily pledge their messages and a way to record it for future reference. This sparked a discussion about how this could be done as painless as possible. With a little PHP hackery we managed to piece together a basic three page site in short order.</p>
 <p><a href="http://twitter.com/">Twitter</a> is a microblogging system based around 140 character SMS length messages. The service offers an API, a way for other programs to extract data from each other, which was key in allowing us access to the messages and user information.</p>
 <p>We setup the twitter account <a href="http://twitter.com/tweetcc">@tweetcc</a> and instructed people to send it a message with how they wish to dedicate their tweets. The ability to reply to other users through the @username convention allowed us to watch for dedications across the millions of twitter accounts. We tried to make it as easy as possible by creating automatic links to post various Creative Common Licenses. As of writing, over 3,400 people have already pledged the messages in their twitter stream for others to use.</p>
 <p>Support for the project was garnered from the Creative Commons when they blogged about &#8220;<a href="http://creativecommons.org/weblog/entry/12942">TweetCC Lets You CC License Your Twitter Feed</a>&#8221; as well as a WIRED magazine article entitled: &#8220;<a href="http://blog.wired.com/business/2009/02/author-makes-a.html">Author Makes A Case for Creative Commons on Twitter</a>&#8220;. Andy weighed in with his thoughts on the process and the outcome of the project on his own blog with &#8220;<a href="http://forabeautifulweb.com/blog/about/designing_tweetcc/">Designing tweetCC</a>&#8220;. On top of all that, there were plenty of posts on the web excited about the idea and others chastising it. Even today, it&#8217;s really interesting to see the feedback, both direct and in-direct.</p>
@@ -244,9 +197,15 @@ TweetCC is a simple way for you to declare how you want your tweets to be used a
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -258,7 +217,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.471 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:43:28 -->
+<!-- Dynamic page generated in 1.088 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:48:32 -->
 
 <!-- super cache -->

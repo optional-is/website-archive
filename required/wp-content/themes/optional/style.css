@@ -42,6 +42,7 @@ a { -webkit-transition: all 0.5s linear; }
 table { font-size: 1em; line-height: 1.5em; margin: 0 0 1.5em 0; outline: 1px solid #ddd; width: 100%; }
 th, td {  padding: 0 .5em; line-height: 1.5em; text-align: center; }
 th { font-weight: bold; border-bottom: 1px solid #ccc; background-color: #ddd;}
+tfoot td {font-weight: bold; border-top: 1px solid #ccc; background-color: #ddd;  }
 td.item { text-align: left; }
 tr:nth-child(odd) { background-color: #eee;}
 code, pre, kbd { font-family: "Andale Mono", Monaco, Courier, "Courier New", serif; color: #666666; padding: 0 0 1.5em; 
@@ -89,7 +90,7 @@ li.comment { padding-bottom: 2em; }
 ::-moz-selection{ background: #FFD700; color:#000; text-shadow: none; }
 ::selection { background:#FFD700; color:#000; text-shadow: none; }
 
-			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 3px 8px;border-radius: 12px; color: #333; white-space:nowrap }
+			.tag, .category { text-decoration: none; background-color: #DEEBDE; padding: 2px 8px;border-radius: 12px; color: #333; white-space:nowrap }
 			.tag:hover { background-color: #deebde }
 			.category { background-color: #dee9eb}
 			.category:hover { background-color: #dee9eb}
@@ -106,3 +107,4 @@ li.comment { padding-bottom: 2em; }
 	#header h1 a  { font-family: optional; font-weight: normal; font-size: 55px; line-height: 140px; padding: 0 5px; }
 }
 .postmetadata { font-size: 14px }
+.postmetadata p { line-height: 1.75em }

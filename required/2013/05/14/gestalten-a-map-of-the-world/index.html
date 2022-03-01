@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -81,7 +34,7 @@
 
 			<div class="entry">
 				<p>One of the companies we&#8217;ve worked closely with over the last few years is a small, boutique, Reykjavík-based design studio called <a href="http://borgarmynd.com">Borgarmynd</a>. We&#8217;ve share projects, office space and collaborated to bring new ideas into the world.</p>
-<p><img loading="lazy" style="float: right; padding-left: 10px;" alt="Gestalten Book" src="../../../../wp-content/uploads/2013/04/map-book.jpg" width="220" height="265" />One of the main focuses where we&#8217;ve collaborated on is maps. Over the last 3-4 years they have steadily produced some incredibly high-quality maps of Reykjavík, Iceland, and other cities around the globe. Recently, the publisher <a href="http://gestalten.com">Gestalten</a> approached Borgarmynd about publishing a few of their maps in their newest book, <a href="http://www.amazon.com/Map-World-According-Illustrators-Storytellers/dp/3899554698">A Map of the World</a>. Two different maps produced by Borgarmynd made it into the publication, the TOC San Francisco map and the Reykjavík Center Map.</p>
+<p><img style="float: right; padding-left: 10px;" alt="Gestalten Book" src="../../../../wp-content/uploads/2013/04/map-book.jpg" width="220" height="265" />One of the main focuses where we&#8217;ve collaborated on is maps. Over the last 3-4 years they have steadily produced some incredibly high-quality maps of Reykjavík, Iceland, and other cities around the globe. Recently, the publisher <a href="http://gestalten.com">Gestalten</a> approached Borgarmynd about publishing a few of their maps in their newest book, <a href="http://www.amazon.com/Map-World-According-Illustrators-Storytellers/dp/3899554698">A Map of the World</a>. Two different maps produced by Borgarmynd made it into the publication, the TOC San Francisco map and the Reykjavík Center Map.</p>
 <p>Our role in the creation of these maps was low. Having been to San Francisco for several month-long stints, we made recommendations and comments about the city and all its peculiarities and wonders. Some of which made it into the final map, giving it a local feel. The original map was printed on a <a href="http://en.wikipedia.org/wiki/Tyvek">Tyvek</a> material. It is water-proof and tear-proof making it idea for any map. The other crazy aspect of the <a href="http://theopencompany.net/products/san-francisco-map">TOC San Francisco map</a> is the fold. It is a <a href="http://en.wikipedia.org/wiki/Miura_fold">Muira fold</a> which means it pops open and closed easily! It is a fascinating thing to hold in your hands and play with.</p>
 <div class="banner"><img loading="lazy" class="alignnone size-full wp-image-2524" alt="sf-map" src="../../../../wp-content/uploads/2013/04/sf-map.jpg" width="700" height="350" srcset="../../../../wp-content/uploads/2013/04/sf-map.jpg 700w, ../../../../wp-content/uploads/2013/04/sf-map-300x150.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
 <p>The Reykjavík Center Map is one of the longest running projects for Borgarmynd and we&#8217;ve worked together over the years getting off of paper and online. We built an online, slippy map version at <a href="http://reykjavikcentermap.com">reykjavikcentermap.com</a> which has continued to evolve and proven a steady source of income and traffic for new projects. The original hand-drawn and water coloured map has plenty of life in it. We&#8217;ve made plans to re-use many of the files for other projects ranging from other custom maps, to a base-layer for a video game and a board game already made from the design.</p>
@@ -220,9 +173,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -234,7 +193,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.359 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:32:07 -->
+<!-- Dynamic page generated in 0.399 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:25:36 -->
 
 <!-- super cache -->

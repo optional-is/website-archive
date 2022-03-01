@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -87,7 +40,7 @@
 <p>Using this, the string &#8220;Brian Suda&#8221; and this algorithm, you will always get #338c88 back. Changing the text ever so slightly makes a completely different color. The string &#8220;brian suda&#8221; produces #7864fd. This means that for a very large set of data, you can create a fairly unique color simply and easily. Dopplr uses this to giving each city it&#8217;s own color, giving you a nice little colored icon of upcoming destinations.</p>
 <p>The downside to the Dopplr algorithm is when you have two cities which were geographically close, yet could be completely different colors, there is no way to represent the concept of nearness. Take for instance London, it is the color #59ead8, but nearby Oxford is #f0dddd. Having radically different colors might be a good thing for some use cases, but it is confusing if you are trying to build a relationship of what is close.</p>
 <p>I wondered if it was possible to generate a color, not based on the string of the city name, but based on a location, therefore pushing more metadata into it at a glance. Geographically close locations would have varying shades of a similar color.</p>
-<p><img loading="lazy" style="float: right; padding-left: 15px" title="Worldflag system" src="../../../../wp-content/uploads/2010/12/worldflag-system.gif" alt="Worldflag system" width="212" height="190" />To do this, I didn&#8217;t use the standard RGB space we&#8217;re used too. My algorithm uses the HLS (Hue, Lightness, Saturation) color space. Originally, I saw a poster called &#8220;<a href="http://www.behance.net/gallery/Worldflag-System/317559">Worldflag System</a>&#8221; in which they made a new flag for each nation based on the GDP, population and location. It was an interesting way to glean more data about a country from just the flag. So I tried my hand at creating a similar algorithm to do encode the latitude and longitude of a single point into a color. That way it makes it much more generic and allows me to color more than just a country.</p>
+<p><img style="float: right; padding-left: 15px" title="Worldflag system" src="../../../../wp-content/uploads/2010/12/worldflag-system.gif" alt="Worldflag system" width="212" height="190" />To do this, I didn&#8217;t use the standard RGB space we&#8217;re used too. My algorithm uses the HLS (Hue, Lightness, Saturation) color space. Originally, I saw a poster called &#8220;<a href="http://www.behance.net/gallery/Worldflag-System/317559">Worldflag System</a>&#8221; in which they made a new flag for each nation based on the GDP, population and location. It was an interesting way to glean more data about a country from just the flag. So I tried my hand at creating a similar algorithm to do encode the latitude and longitude of a single point into a color. That way it makes it much more generic and allows me to color more than just a country.</p>
 <p>To get some seed data, I went to <a href="http://www.geonames.org/">GeoNames.org</a> and downloaded a list of all the cities with over 1,000 people in population. This gave me plenty of data and latitudes and longitudes to test. I used a very <a href="../../../06/28/geonames-maps/index.html">similar codebase as I did in my previous GeoNames experiments</a> to convert the text files into an image. I generated a point for every city based on the X,Y of the latitude, longitude, and made the color of the dot based on location data.</p>
 <p>Longitude wraps from -180° to +180°, that&#8217;s a 360° arc. The hue value in HLS is also from 0 to 360, so the conversion between the two is easy. Next, I mapped the latitude of +/-90° to the Lightness. In HLS the Lightness and Saturation are from 0 to 1, so I converted the total possible 180 degres into 0 to 1 values for the Lightness. This means the north pole is pure white and the south pole is pure black. Finally, I fixed the saturation at 1, but if you really wanted to experiment this could changed based on the altitude or another variable.</p>
 <p><img loading="lazy" style="float: right; padding-left: 15px;" title="Oymyakon" src="../../../../wp-content/uploads/2010/12/oymyakon.png" alt="Oymyakon" width="125" height="125" />Now any point on the planet can be given an HLS color based on this simple equation. HLS maps nicely back to RGB, which can be represented as a hex color for use online. Take for instance, <a href="http://en.wikipedia.org/wiki/Oymyakon">Oymyakon</a> a village with less than 1,000 people. You have probably never heard it and have no idea where it might be. When we feed in the latitude and longitude to the algorithmic, we get back #d80086, a light pink color. In relation to the full world map you can get a rough guess were it is located. Sure, this isn&#8217;t good enough for driving directions, but it will get you in the area pretty quickly on the scale of the globe.</p>
@@ -295,9 +248,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -309,7 +268,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.527 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:31:30 -->
+<!-- Dynamic page generated in 0.543 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:25:43 -->
 
 <!-- super cache -->

@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -92,7 +45,7 @@
 <p>Double the density of information per square unit on a piece of paper.</p>
 <p>The difficulty is to do this requiring only the most minimum amount of equipment needed to read each encoding. Something like adding a UV light source would almost defeat the weight saved from printing multiple pieces of paper  that double encoded the paper saves on space. Then you also have the problem of removing the visible light, the text you can normally see, when you want to only view the UV text. The same goes for the Infrared spectrum as well. It is best to limit our quest to only the visible spectrum, turning off and on colors as needed.</p>
 <p>There actually is a very simple way to do this, photographs use these tricks all the time. When you are looking through the lens of your camera, you can cover up the end with a colored filter. This makes the world awash with that color. So, for example, if you put a red filter onto your camera lens, then the world around you looks all shades of red. This has turned off all the other visible light because they have all been blocked in the spectrum.</p>
-<p><img loading="lazy" style="float: right; padding-left: 5px" title="Colour Wheel" src="../../../../wp-content/uploads/2009/05/colour-wheel.png" alt="Colour Wheel" width="228" height="225" />Do you remember in school when you used to mix paints together? When you mixed red and yellow you got orange and when you mixed red and blue you got purple. This is because there are three main primary colors, red, blue and yellow. And there are three secondary colors, orange, purple and green. The secondary colors are made from mixing two primary ones. When we draw this as a wheel, you can see how each primary color neighbor makes a secondary color inbetween. Now, if you look directly across the wheel you see the complimentary color. Every primary color&#8217;s compliment is a secondary color and vice-versa.</p>
+<p><img style="float: right; padding-left: 5px" title="Colour Wheel" src="../../../../wp-content/uploads/2009/05/colour-wheel.png" alt="Colour Wheel" width="228" height="225" />Do you remember in school when you used to mix paints together? When you mixed red and yellow you got orange and when you mixed red and blue you got purple. This is because there are three main primary colors, red, blue and yellow. And there are three secondary colors, orange, purple and green. The secondary colors are made from mixing two primary ones. When we draw this as a wheel, you can see how each primary color neighbor makes a secondary color inbetween. Now, if you look directly across the wheel you see the complimentary color. Every primary color&#8217;s compliment is a secondary color and vice-versa.</p>
 <p>Paints and inks are additive. As you mix them together you get darker and darker. If you continue mixing all the colors you eventually end-up with black. Light, on the other hand, is subtractive. The more you add, the closer you get to white. If you want to learn more, find a book about color theory. The important thing to remember is that complimentary colors are opposite colors.</p>
 <p>So back to our photographers with the red filters on their cameras. Everything they see is washed out in red. Now, if they add another filter onto their camera lens of the complimentary color, the two will cancel and they will be back to the image as normal. Photographers use this trick, not by putting two filters on their lens, but one filter on the lens and the second on their flash. Now, when the flash fires the people are basked in the complimentary color, which is negated by the filter. So now everything close to the camera looks normal and everything in the distance not covered by the flash is still red.</p>
 <p>Let&#8217;s take a similar approach with our double encoded paper. We need to select two colors along with cheap dispensable filters. The perfect candidate is the red-blue filters from 3D glasses.</p>
@@ -237,9 +190,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -251,7 +210,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.374 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:43:55 -->
+<!-- Dynamic page generated in 1.009 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:43:38 -->
 
 <!-- super cache -->

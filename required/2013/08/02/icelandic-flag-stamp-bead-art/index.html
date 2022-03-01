@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -80,7 +33,7 @@
 			<div style="border-bottom: 2px solid #db35ac; padding: 2em 0; margin-bottom: 2em" class="time"><abbr title="2013-08-02T12:21:00+00:00">Friday, August 2nd, 02013 at 12:21 UTC</abbr></div>
 
 			<div class="entry">
-				<p><img loading="lazy" style="float: right; padding-left: 10px;" src="../../../../wp-content/uploads/2013/05/bead.png" alt="bead" width="276" height="312"/>We&#8217;ve all see those little plastic, hollow cylinders that you arrange on the peg boards to later melt together to form some art work. It&#8217;s the sort of thing you see for young children. They go by many different names, pearls sometimes beads. One of the main manufacturers is a company called&nbsp;<a href="http://www.hama.dk">Hama</a>. In Iceland, they seem to be the most common brand on the shelves.</p>
+				<p><img style="float: right; padding-left: 10px;" src="../../../../wp-content/uploads/2013/05/bead.png" alt="bead" width="276" height="312"/>We&#8217;ve all see those little plastic, hollow cylinders that you arrange on the peg boards to later melt together to form some art work. It&#8217;s the sort of thing you see for young children. They go by many different names, pearls sometimes beads. One of the main manufacturers is a company called&nbsp;<a href="http://www.hama.dk">Hama</a>. In Iceland, they seem to be the most common brand on the shelves.</p>
 <p>This got me thinking a lot about basic pixel art. The grown-up use of these beads and peg boards is to revert to childhood 8-bit video game youth and re-create some of their favourite action characters. The problem in creating any of these characters is that you want some form of artsy authenticism. This requires you get the colours roughly correct.</p>
 <p>The lack of good colour matching was the problem I wanted to solve when dealing with the beads. There plenty of companies making these beads, but we needed a way to match a given coloured bead to an RGB value, or more accurately; given an RGB colour, what bead did it closely match.</p>
 <p>I wrote a very basic PHP program which loops through all the pixels in an image and fetches the RGB value. In return, it converts that to the closest bead colour from a list and creates both an SVG representation in the new colours, but also a shopping list of all colours and quantities of beads you&#8217;ll need to create it. The code to do this was very straight forward. I have posted&nbsp;<a href="https://github.com/optional-is/hama-pixels">Hama-Pixels&nbsp;on GitHub</a>&nbsp;for anyone to use. There is a JSON list of all the bead colours, so if PHP isn&#8217;t your thing, you can easily use the hama.json as a data source and write your own creation code.</p>
@@ -228,9 +181,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -242,7 +201,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.386 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:35:21 -->
+<!-- Dynamic page generated in 0.385 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:28:40 -->
 
 <!-- super cache -->

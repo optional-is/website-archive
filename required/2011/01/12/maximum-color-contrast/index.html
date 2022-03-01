@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -82,7 +35,7 @@
 			<div class="entry">
 				<p>In a previous article, <a href="../../../../2010/12/13/hls-world-map/index.html">I created a world map in the HLS color space based on the latitude and longitude of the city names</a>. I also demonstrated two different ways to deterministically create a unique color for a city name. The first was based on a hash of the location name and the other on the geolocation. There are plenty of other algorithms that could be used, but I focused on those two. The downside of giving yourself over to the algorithm completely is that you will sometimes get very light colors and other times very dark. The output you receive will run the full range of possible colors and you need to be prepared to deal with them in your design. To handle the unexpected, the function that returns a unique color needs a friend. This friendly helper algorithm will return black or white, depending on which has the higher contrast with your color.</p>
 <p>There are a few ways to determine the level of contrast between colors. In this article, I will examine three. They are easy to implement and all produce similar results. It isn&#8217;t a matter of which is best, but more the fact that you are using one at all!</p>
-<div class="banner"><img loading="lazy" title="Color Chips" src="../../../../wp-content/uploads/2010/12/color-chips.png" alt="Color Chips" width="700" height="120" /></div>
+<div class="banner"><img title="Color Chips" src="../../../../wp-content/uploads/2010/12/color-chips.png" alt="Color Chips" width="700" height="120" /></div>
 <p>Let&#8217;s have a look at four locations, <a href="http://en.wikipedia.org/wiki/Reykjavik">Reykjavík, Iceland</a>, <a href="http://en.wikipedia.org/wiki/London">London, England</a>, <a href="http://en.wikipedia.org/wiki/Lagos">Lagos, Nigeria</a> and <a href="http://en.wikipedia.org/wiki/Johannesburg">Johannesburg, South Africa</a>. When we run these places through both the Dopplr and the HLS Lat/Lon algorithms you see that we get different colors. The Dopplr colors are nice and unique based on a hash of the location name, but don&#8217;t tell you any additional information. The HLS Lat/Lon are based on the location therefore the results are getting darker and darker as you move southward. They are also shading from green to blue as you move eastward.</p>
 <p>Now that we have colors for each location we need to find out whether any accompanying text should be white or black based on which has a higher contrast.</p>
 <p>There are three functions I want to compare. The first I will simply called 50%. This takes the hex value and compares it to half-way between pure black and pure white. If the hex value is less than half, it returns white, if it is more than half it returns black.</p>
@@ -258,9 +211,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -272,7 +231,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.492 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:37:40 -->
+<!-- Dynamic page generated in 0.526 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:31:51 -->
 
 <!-- super cache -->

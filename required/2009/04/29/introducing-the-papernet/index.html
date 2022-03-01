@@ -23,55 +23,8 @@ This article looks at some paperNet examples, how they are use, how they can be 
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -84,7 +37,7 @@ This article looks at some paperNet examples, how they are use, how they can be 
 			<div class="entry">
 				<p>Back in 02007, I sat in a conference room in Paris listening to someone I&#8217;ve never heard of espouse the usefulness of paper. Conference sessions tend to blur together for me, this could have something to do with the late nights, the mix of interesting and uninteresting sessions as well as the boring to the sublime, but this presentation stuck with me. It was at XTECH which I first saw <a href="http://www.aaronstraupcope.com/">Aaron Straup Cope</a> talk about his newest farce, <a href="http://aaronland.info/talks/papernet/">the PaperNet</a>. The idea was simple and brilliant at the same time, I was hooked.</p>
 <p>His concept of the PaperNet struck such a cord with me, I have attempted many of my own PaperNet browser creations &#8211; some bearing more fruit than others. I have even given a few presentations about my adaptation of Aaron&#8217;s original idea. Everyone seems to look at it and say &#8220;Yes, that is exactly what we need&#8221; &#8211; then strangely no one ever calls me back. Still more evangelism to do.</p>
-<div class="banner" style="margin: auto; overflow: hidden; width: 100%; text-align: center;"><img loading="lazy" title="PaperNet mock-ups" src="../../../../wp-content/uploads/2009/04/papernet.jpg" alt="PaperNet Mock-ups" width="833" height="151" /></div>
+<div class="banner" style="margin: auto; overflow: hidden; width: 100%; text-align: center;"><img title="PaperNet mock-ups" src="../../../../wp-content/uploads/2009/04/papernet.jpg" alt="PaperNet Mock-ups" width="833" height="151" /></div>
 <h2>Evolution of Paper</h2>
 <p>Before we get to the describing what and how the PaperNet works, it is interesting to look at the history of paper to understand why we are so intrinsically connected to this technology.</p>
 <p>Before the advent of a writing medium, all transactions, histories, contracts and traditions where experiential and oral. Because of this, there was the possibility of drifts in the data. Surprisingly, that drift was very minimal in the oral tradition. Classic works such as the Illiad and Beowulf didn&#8217;t deviate greatly from the originals. Even the transmission of fables and fairy-tales across cultures remained mostly intact. A story we consider traditionally European appears in similar fashions in Indian, Middle-Eastern and Asian history.</p>
@@ -338,9 +291,15 @@ This article looks at some paperNet examples, how they are use, how they can be 
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -352,7 +311,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.404 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:46:12 -->
+<!-- Dynamic page generated in 0.499 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:31:48 -->
 
 <!-- super cache -->

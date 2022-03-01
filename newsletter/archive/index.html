@@ -69,31 +69,10 @@
 				section.feature > div { margin: 0; min-height: 400px;  }
 				section.feature { display: block; }
 				section.feature > div:nth-child(even) { margin-top: 14px }
-				#header { padding: 0 20px; }
 
 				section.feature div:nth-child(odd) { margin-left: 0; }
 				section.feature div:nth-child(even) { margin-right: 0; }
 
-			}
-
-			 #header {
-				font-family: optional;
-				font-weight: normal;
-				font-size: 45px;
-				line-height: 100px;
-				max-width: 1024px;
-				margin: 0 auto;
-				color: #000;
-				text-align: left;
-				display: grid; 
-				grid-gap: 0; 
-				grid-template-columns: auto 300px;
-			}
-			#search { padding: 20px 0; height: 30px; vertical-align: middle; } 
-
-			@media only screen and (max-width: 520px) {
-				#header { display: block; text-align: center;}
-				#search { display: block;  width: 100%; }
 			}
 
 
@@ -162,7 +141,6 @@
 					background-color: #222;
 					color: #eee;
 				}
-				#header { color: #eee; }
 
 				section.feature div, section.box div { background-color: #333; }
 				section.feature h1 { color: #ddd; }
@@ -203,14 +181,43 @@
 		</style>
 	</head>
 	<body>
-		<header id="header" >
-			<span>(optional.is)</span>
+				<style>
+			 #header {
+				font-weight: normal;
+				font-size: 45px;
+				line-height: 100px;
+				max-width: 1024px;
+				margin: 0 auto;
+				color: #000;
+				text-align: left;
+				display: grid; 
+				grid-gap: 0; 
+				grid-template-columns: auto 300px;
+			}
+			#search { padding: 20px 0; height: 30px; vertical-align: middle; } 
 
-			<form id="search" class="single" action="https://optional.is/required" >
-				<input type="text" name="s"  placeholder="Find..." /><button>Search</button>
+
+			@media only screen and (max-width: 1160px) {
+				#header { padding: 0 20px; }
+			}
+			@media only screen and (max-width: 520px) {
+				#header { display: block; text-align: center;}
+				#search { display: block;  width: 100%; }
+			}
+
+			@media (prefers-color-scheme: dark) {
+				#header { color: #eee; }
+			}
+
+		</style>
+		<header id="header" >
+			<span><svg width="300" height="100" ><use xlink:href="#optional-logo"/></svg></span>
+
+			<form id="search" class="single" action="https://duckduckgo.com/" >
+				<input type="hidden" name="sites" value="optional.is"/>
+				<input type="search" name="q"  placeholder="Find..." /><button>Search</button>
 			</form>
-		</header>
-		<main>
+		</header>		<main>
 			<section id="lead" class="content">
 				<style>
 					#lead { padding: 60px 15px; }
@@ -546,6 +553,10 @@
 				<h3>⪮ Good Morning</h3>
 				<ul>
 				<li>
+					<div class="subject"><a href="../s01e02/index.html">s01e02: Capture unique memories forever </a></div>
+					<div class="meta">Read Time: ~2 minutes. ~480 words.</div>
+				</li>
+				<li>
 					<div class="subject"><a href="../s01e01/index.html">s01e01: Runners to your marks</a></div>
 					<div class="meta">Read Time: ~2 minutes. ~380 words.</div>
 				</li>
@@ -832,7 +843,7 @@
 					<ul style="margin-top: 1em	">
 						<!-- <li>Capabilities</li> -->
 						<li><a href="../../required/index.html">Writing</a></li>
-						<li><a href="../../required/category/weeknotes/index.html">Weeknote #571</a></li>
+						<li><a href="../../required/category/weeknotes/index.html">Weeknote #577</a></li>
 						<!--  <li>Media Kit</li> -->
 						<!--  <li>Open Source</li> -->
 					</ul>
@@ -851,7 +862,7 @@
 						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/text-stats/id1373463793?mt=8"><img class="app-icon" src="https://is5-ssl.mzstatic.com/image/thumb/Purple124/v4/f4/f8/ee/f4f8ee2f-5e9f-75c0-ca7d-021091d83997/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/340x340bb-80.png" alt="Download Text Stats on the App Store"> Text Stats</a></li>
 						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/triagemail/id1124659536?mt=8"><img class="app-icon" src="https://is2-ssl.mzstatic.com/image/thumb/Purple123/v4/dc/69/9f/dc699f0a-a9ae-4119-cc5e-bd09668492f1/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/246x0w.jpg" alt="Download Triagemail on the App Store"> Triagemail</a></li>
 
-						<li><a rel="noreferrer" href="../../apps/privacy/index.html" style="line-height: 26px; padding-left:  43px; margin-right: 0.5em">Privacy Policy</a></li>					
+						<li><a rel="noreferrer" href="../../apps/privacy/index.html" style="line-height: 26px; padding-left:  43px; margin-right: 0.5em;  width: auto">Privacy Policy</a></li>					
 
 					</ul>
 					</div>
@@ -860,7 +871,7 @@
 						<h3>Misseristal</h3>
 
 						<p style="margin:0">
-							Today is <strong>Þórsdagur</strong> the 0th day of the month of <strong>Þorri</strong>, the 4th month of winter.
+							Today is <strong>Mánadagur</strong> the 9th day of the month of <strong>Góa</strong>, the 5th month of winter.
 						</p>
 				</div>
 				<div>

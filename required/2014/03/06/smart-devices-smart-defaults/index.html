@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -85,7 +38,7 @@
 <p>While we revel in the idea of a fully connected world, there are still plenty of hurdles. At the moment there seems very little work in-between dumb and smart devices. Right now there is an incredibly steep learning curve as well as developmental curve between a regular light bulb and a smart one. We are looking at how to flatten the incline between the two. The answer won&#8217;t always be off-the-shelf hardware, SDKs, or plugins, we want to re-think if devices really need to be &#8220;smart&#8221; to begin with.</p>
 <p>Recently, we purchased two different kinds of light bulbs. One was a very expensive, but very interesting <a href="http://lifx.co">LIFX WiFi controlled light bulb</a>, the other a cheap, disposable <a href="http://www.ikea.com/us/en/catalog/products/30241140/">IKEA PATRULL night light</a>. There was roughly a factor of 20 price different between the two. Yet the night light is the one that give us more smiles and satisfaction.</p>
 <p>There is some electronics in the night light, but no real &#8220;smarts&#8221; in the way of network connectivity or memory. It only has one, hard-wired function. There is a tiny light sensor on the top and when it can&#8217;t find the regular lights in the house being on, it turns itself on. When you turn on the house lights, the night light&#8217;s sensor detects there is light in the room and turns itself off.</p>
-<div class="banner"><img loading="lazy" alt="Patrull" src="../../../../wp-content/uploads/2014/03/night-light.jpg" width="700" height="761" /></div>
+<div class="banner"><img alt="Patrull" src="../../../../wp-content/uploads/2014/03/night-light.jpg" width="700" height="761" /></div>
 <p>This is an amazingly simple piece of wiring. It isn&#8217;t so much that the device is &#8220;smart&#8221; but that it has smart defaults. That is what gives it its amazing powers, not that this is geo fenced via bluetooth to my expensive smart phone. The over-complication with smart phone connectivity means that if you connected your smart phone to your lights with a trigger that said every time the phone leaves the area the lights automatically turn off, you run the risk of casting family members into darkness when you step outside. To get around this, you create even more arcane triggers which complicate matters unnecessarily. The night light&#8217;s sensor solution is not only simple, but elegant as well.</p>
 <p>Someone made a series of simple assumptions about what a night light is, what it does, and how it works in situ in the home. Then created a series of smart defaults for the device. It isn&#8217;t dumb or smart, it is somewhere on that ramp between the two.</p>
 <p>The ramp between the two extremes is a very overlooked area. Manufacturers are used to making dumb devices, they have been doing that for a long time. Now, everyone is making the long and difficult jump all the way to smart devices. This adds a bunch of cost and complexity to the end product. Not all the customers are interested in spending $100 for a &#8220;smart&#8221; light bulb, but paying a few dollars more for one with smart defaults is certainly more reasonable.</p>
@@ -224,9 +177,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -238,7 +197,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.376 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:35:06 -->
+<!-- Dynamic page generated in 0.351 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:28:24 -->
 
 <!-- super cache -->

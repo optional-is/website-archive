@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -88,7 +41,7 @@
 <h2>2D Barcodes</h2>
 <p>To read standard barcodes you needed your own barcode reader, with the exception of the ill-fated <a href="http://en.wikipedia.org/wiki/CueCat">CueCat</a>, there was never much available at the consumer level. Only recently have we crossed the threshold of cheap processing power and camera resolutions good enough to correctly identify and decode barcode data. At that point, everyone carrying a modern mobile phone met the minimum requirements of a barcode scanner and was capable of opening the door to understanding the message behind the lines and dots.</p>
 <p>2D barcodes are called two-dimensional because their information is encoded in two directions, both horizontally and vertically. This allows them to pack in more information per square unit than their predecessors. </p>
-<p><img loading="lazy" style="float: right; padding-left: 15px;" title="barcode-phone" src="../../../../wp-content/uploads/2009/06/barcode-phone.jpg" alt="barcode-phone" width="200" height="186" />2D barcodes can be scanned through most modern camera phones or webcams. Firstly, you need to spot a 2D barcode so you know what to scan. Secondly, your mobile device needs to have some decoding software. Many of the new Nokia phones come with the software installed by default. For other devices you might need to download some free software.</p>
+<p><img style="float: right; padding-left: 15px;" title="barcode-phone" src="../../../../wp-content/uploads/2009/06/barcode-phone.jpg" alt="barcode-phone" width="200" height="186" />2D barcodes can be scanned through most modern camera phones or webcams. Firstly, you need to spot a 2D barcode so you know what to scan. Secondly, your mobile device needs to have some decoding software. Many of the new Nokia phones come with the software installed by default. For other devices you might need to download some free software.</p>
 <p>Once you recognized the 2D barcode, you launch the application and point the camera at it. The application will decode the barcode and spit back the encoded text. Some applications are &#8220;helpful&#8221; and if it is a URL it asks you if you want to launch the browser.</p>
 <h2>Design</h2>
 <p><img loading="lazy" style="float: right; padding-left: 15px" title="Hallgrimskirkja Barcode Example" src="../../../../wp-content/uploads/2009/05/barcode-hallgrimskirkja.png" alt="barcode-hallgrimskirkja" width="160" height="209" />With 1D barcodes, you only need to be able to read the barcode horrizontally over a small range. The standard height of the barcode is there to make acquisition easier, but there is no prohibition to the actual height. This has lead to a variety of stylized barcodes. As an example I created this barcode mimicking <a href="http://en.wikipedia.org/wiki/Hallgrímskirkja">Hallgrímskirkja</a>, it isn&#8217;t real, but demonstrates the possibilities of branding even in the purchasing process.</p>
@@ -259,9 +212,15 @@ The <a href="http://en.wikipedia.org/wiki/Maxicode">MaxiCode</a> format was deve
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -273,7 +232,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.480 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:43:31 -->
+<!-- Dynamic page generated in 0.414 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:24:08 -->
 
 <!-- super cache -->

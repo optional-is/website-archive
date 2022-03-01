@@ -21,55 +21,8 @@
 <meta name="twitter:domain" content="http://optional.is">
 </head>
 <body>
-	<!--
-		<style>
-			header { clear: both; margin: 0 auto; max-width: 960px; padding: 0 1em; text-align: left; }
-			#header { font-family: optional; font-weight: normal; font-size: 38px; line-height: 32px; padding: 0.5em 0; text-decoration: none; color: #333; text-align: left; display: block; float: left; }
 
-			form.single { display: grid; grid-gap: 0; grid-template-columns: minmax(200px, 1fr) auto; }
-			form.single input:focus { border: none; outline: none; }
 
-			form.single button {
-			 	margin: 0;
-			 	padding: 0 1em;
-			 	color: #333;
-			 	background-color: #ffe24d;
-			 	border: none;
-			 	border-top-right-radius: 10px;
-			 	border-bottom-right-radius: 10px;
-			 	line-height: 40px;
-			}
-			form.single input {
-			 	border: none;
-			 	background-color: #eee;
-			 	border-top-left-radius: 10px;
-			 	border-bottom-left-radius: 10px;
-			 	line-height: 40px;
-			 	margin:0;
-			 	padding:0 1em;
-			 	box-sizing: border-box;
-			}
-			form.single button:hover {
-			 	background-color: #1b1700;
-				color: white;
-			}
-			form.single button:active {
-			 	background-color: #007f3f;
-				color: white;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				#header { color: #eee; }
-			}
-		</style>
-		<header>
-			<a href="/" id="header">(optional.is)</a>
-
-			<form action="//optional.is/required/" method="get" class="single" style="float: right; max-width: 300px; padding: 9px 0">
-				<input type="text" value="" name="s" id="s"><button>Search</button>
-			</form>
-		</header>
-	-->
 <div id="header">
 <h1><a href="../../../../index.html">(optional.is)</a></h1>
 </div>
@@ -81,7 +34,7 @@
 
 			<div class="entry">
 				<p>In the fall of 02007, a friend Kristján and I met over dinner with one of his colleagues, Almar, where we discussed the possibilities of creating a simple web-based surveying software for schools in Iceland. Between the three of us, we each had a level of expertise which could make this project work. Both Kristján and Almar work in the education field on various aspects of testing, teaching and learning for many years, while I had been programing for the web.</p>
-<p><img loading="lazy" style="float: right; padding-left: 15px" title="skólapúlsinn logo" src="../../../../wp-content/uploads/2009/05/skolapulsinn-logo.png" alt="skólapúlsinn logo" width="250" height="103" />We decided to move forward and called the project Skólapúlsinn, which is Icelandic for <em>School Pulse</em>. The concept behind Skólapúlsinn is rather than have a single large test sample once a year, many smaller test samples should be taken continuously through-out the entire school year. Currently, Iceland takes part in the <a href="http://www.pisa.oecd.org/">PISA test</a>, which 10th graders take in late May. It assesses how well students have acquired the knowledge and skills essential for full participation in society. Many of the same questions and themes from PISA are reflected in Skólapúlsinn.</p>
+<p><img style="float: right; padding-left: 15px" title="skólapúlsinn logo" src="../../../../wp-content/uploads/2009/05/skolapulsinn-logo.png" alt="skólapúlsinn logo" width="250" height="103" />We decided to move forward and called the project Skólapúlsinn, which is Icelandic for <em>School Pulse</em>. The concept behind Skólapúlsinn is rather than have a single large test sample once a year, many smaller test samples should be taken continuously through-out the entire school year. Currently, Iceland takes part in the <a href="http://www.pisa.oecd.org/">PISA test</a>, which 10th graders take in late May. It assesses how well students have acquired the knowledge and skills essential for full participation in society. Many of the same questions and themes from PISA are reflected in Skólapúlsinn.</p>
 <p>There are two major drawbacks to holding a test like PISA only once a year in May, the first being that a single data-point, even with a large group, could easily be swayed if there were any sort of anomaly. Perhaps a tragedy might have struck which impacted the entire 10th grade? The schools &#8220;average&#8221; would reflect only the outlier rather than the past 9 months. The second major drawback of a May test is that by the time the results are analyzed and returned, school is finished and the students are away on summer vacation. If it turns out there was a major problem with any of the measured scales, it is too late to correct the issues. For instance, learning that there was a truancy problem in the last 9 months doesn&#8217;t really make it better since the time to intervene has passed.</p>
 <p>Skólapúlsinn attempts to negate these effects by sampling more frequently, thus minimizing any anomalous events, good or bad, and giving a &#8220;pulse&#8221; to the school on a monthly basis. The school faculty is allowed to interpret and detect issues within the school year. One of the consequences that falls from this is that the schools get to register a baseline result. Without a data point, there is no empirical way that each month can be compared to others. Having a baseline allows a school to know where they stand, so when introducing new initiatives to improve student life, it is possible to see if they are having the intended effects.</p>
 <p>As we drafted the project, we decided on a few basic ground rules. Many of which were completely contrary to many of my Web 2.0 ideologies and experiences. Any and all of the data we collect is never turned over to the schools. This is complete vendor-lock-in, the minute they stop paying us, they lose the data. At first, I was very much against this idea, for several reasons: the schools have paid, it is their data and secondly we don&#8217;t have the time to grow a business while at the same time chasing silly requests from schools to analyze and interpret the results for them. If they had the raw numbers, they can do with it what they want. The goal of any product should be to make your customers self-sufficient and empower them to act autonomously.</p>
@@ -246,9 +199,15 @@
 <div id="footer" class="vcard">
   <div>
   <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
 <form method="get" id="searchform" action="http://optional.is/required/" >
 <div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
 </form>
+-->
 Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </div> 
 <a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
@@ -260,7 +219,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.459 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-01-20 10:32:46 -->
+<!-- Dynamic page generated in 0.381 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-03-01 13:26:17 -->
 
 <!-- super cache -->
