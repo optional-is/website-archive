@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>(optional.is)   PaperNet Boarding Pass</title>
+
+<link rel="stylesheet" href="wp-content/themes/optional/style.css" type="text/css" media="all" />
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="https://optional.is/required/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../images/apple-touch-icon-precomposed.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@optionalBot">
+<meta name="twitter:title" content="PaperNet Boarding Pass">
+<meta name="twitter:description" content="In an attempt to infuse some aspects of the Internet into an airlines boarding pass, many lessons where learnt about the airlines industries' needs and requirements. This is a look from a prototype to a final product of an international airlines printable boarding pass with a touch of useful dynamic data.">
+<meta name="twitter:creator" content="@optionalBot">
+<meta name="twitter:domain" content="http://optional.is">
+</head>
+<body>
+
+
+<div id="header">
+<h1><a href="index.html">(optional.is)</a></h1>
+</div>
+
+			
+		<div class="post-1279 post type-post status-publish format-standard hentry category-case-studies category-paper category-travel tag-2d-barcode tag-airlines tag-barcode tag-boarding-pass tag-flights tag-iata" id="post-1279">
+			<h1>PaperNet Boarding Pass</h1>
+			<div style="border-bottom: 2px solid #3746ca; padding: 2em 0; margin-bottom: 2em" class="time"><abbr title="2010-05-25T11:11:35+00:00">Tuesday, May 25th, 02010 at 11:11 UTC</abbr></div>
+
+			<div class="entry">
+				<p>A few years ago, I worked for an enterprise software company and have since served my penance. Looking back, it was great experience. It gave me opportunities to work on large scale projects that I would never have otherwise been able to play with and influence. In late 02007, one such interesting project crossed my desk. I was tasked with developing a printable boarding pass for a major international airlines. This was an excellent opportunity to break out of the boring static world of boarding passes and try to generate some more interesting and ultimately a more useful boarding passes. I didn&#8217;t want people to print it out, go to the airport and then throw it away. I wanted it to be printed and used during the entire journey. Sadly, this project never managed to get to its fullest potential for various reasons. Enough time has passed and now that I can discuss the project and I can tell you a little about my thought process during its creation. My version of the boarding pass is in use today (May 02010) having never been upgraded. In many ways it has been superseded by self-checking, there is no need to print anything at home before travelling to the airport, therefore it has probably waned to a point of redundancy within the airlines and industry as a whole. Maybe these ideas will be useful for others and could be integrated into the self-check-in system as well.</p>
+<p>The idea behind the printable boarding pass is that it allows you to avoid the long lines at the check-in desk. One of the restrictions from the airlines was that you could only print the boarding pass 22 hours before the flight. Since this was such a small window, it game me an opportunity to infuse the print-out with some dynamic paperNet ideas knowing it would not be too out-of-date by departure.</p>
+<p>The <a href="http://www.iata.org/">IATA</a> is the governing body which overseeing much of the air travel industry. <img style="float: right; padding-left: 15px;" title="optional-qrcode" src="wp-content/uploads/2010/05/optional-qrcode.png" alt="" width="162" height="162" />One of their cost-saving measures was to implement a printable barcoded boarding passes for all airlines by 02010. 02008 saw the requirement of airlines to be able to read these barcodes, and shortly after that every boarding passes would be required in this format. This cuts the costs of the traditional paper print-outs with the magnetic backing, to a simpler paper print-out with a 2D barcode, which contains the same information as small squares of ink. The barcode style boarding pass also cuts down the number of check-in desk spaces required, making it more efficient to use the check-in area and pushes the cost of printing from the airlines to the customer. It changed the cost of printing by only a few pennies, but over thousands of flights a day it adds-up quickly.</p>
+<p>The amount of information required on the visible boarding pass is rather minimal, most of which is duplicated in the machine readable 2D barcode. This allows a quick reading of your ticket at various points throughout the airport, including security check-points, gate checks and terminal entry points. The rest of the space on the boarding pass was available for me to take some liberties in the organization and design. There is a short list of items required by the IATA, but after that I was free to roam.</p>
+<p>A 2D barcode is a matrix of white and black squares which is encoded in 2 directions, horizontally and vertically, hence the name 2D. The technical format used on these boarding passes to create the 2D barcode is called <a href="http://en.wikipedia.org/wiki/PDF417">PDF417</a>. There is also some control information on the sides to orient the barcode for the reader. This enables the barcode to be read from any direction, because the reader can internally rotate the barcode to the correct position based on the thick black lines representing the control information. It basically says to the computer &#8220;This side up&#8221;.</p>
+<p>The original boarding pass template design was based on SAS&#8217;s boarding pass. This was about 1/3 the size of an A4 page and contained basic information about flights, the carrier and the traveller. This pretty much mimics the traditional boarding pass that you are given at the check-in desk, but it is printable at home and contains the 2D barcode instead of the magnetic strip on the back duplicating the same information. It was a good start to know what was required, but it isn&#8217;t a very interesting design.</p>
+<div class="banner"><img loading="lazy" title="SAS-boaring-pass" src="wp-content/uploads/2010/05/SAS-boaring-pass.jpg" alt="" width="700" height="525" /></div>
+<p>We knew that our target printout size for the boarding pass was going to be a standard A4 piece of paper, so we decided it was best to use the entire sheet for the boarding pass. Taking a queue from the 1/3 page SAS style, we created a tri-fold A4, mimicking the SAS boarding pass. This gave us two additional empty panes to add information. You can see how we copied the design of the SAS boarding pass for the top pane, the area above the first fold, for our boarding pass. The middle pane, the area between the first and second folds, contained information about the flight and ticket, along with items that were restricted in your luggage. The bottom pane, the area below the final fold, was designed to be a &#8220;next steps&#8221; process. These &#8220;next steps&#8221; described what to do about baggage drop-off, security, information about the gate and finally, information about your flight. These were presented in the logic order you flow through the airport.</p>
+<p><img loading="lazy" style="float: right; padding-left: 15px;" title="Highlighted-mock-up" src="wp-content/uploads/2010/05/Highlighted-mock-up.jpg" alt="" width="350" height="478" />The design was measured out and the dynamic areas highlighted. This allowed us to see how much of the design is static between print-outs and how much of the page is dynamically data driven.</p>
+<p>The boarding pass was originally designed with <a href="http://en.wikipedia.org/wiki/XSL_Formatting_Objects">XSL-FO</a> and the XML feed we were getting from the airlines data provider. Using XSL-FO we designed the information areas as blocks of text, so those were also sectioned off on the paper prototype to help us get a count of how many objects we were dealing with overall, both static and dynamic. Later in the project, we moved to the open source Jasper Reports to generate the final printable PDF.</p>
+<p>We took the highlighted paper prototype and iterated on the design to make the most important information easier to find.</p>
+<p>The top pane has not changed much, it still contains most of the basic information that is on a traditional boarding passes.</p>
+<div class="banner"><img loading="lazy" title="pass2" src="wp-content/uploads/2010/05/pass2.jpg" alt="" width="700" height="542" /></div>
+<p>One of the departures from the SAS style was to increase the font-size of your seat assignment. Once you are at your departure gate, most of the information on the boarding pass is no longer relevant. You know your destination, you know the gate number (you are waiting there) and you are waiting for the boarding call, so the actual flight time is not as important. Your biggest concern is where to go once you&#8217;re on the plane. By making the seat text a larger font and setting it off in a light-grey box it helps both you and the stewards to quickly visually identify your seat and get you settled faster. By increasing the size and making it easier to read, it minimizes confusion in low-light cabin settings for older travelers or those of us that don&#8217;t have perfect 20&#215;20 vision.</p>
+<p>The middle pane now contains the &#8220;next steps&#8221; items. This allows a logical flow down the page. The more important, most used information at the top, the next most used information in the middle, then finally, the bottom pane with the least used. In this iteration, the bottom pane had basic information about how use the barcode reader and some instructions about what to do if the read failed for your boarding pass. It also contained meta information that was useful to the staff, but was not important to the traveller.</p>
+<p>The middle pane&#8217;s &#8220;next steps&#8221; included time stamps for each event in the flight process. This would allow for people to more easily know when to arrive at the airport, when they needed to be at the gate, etc. Instead of simply saying &#8220;30 minutes before&#8221; we explicitly gave the time. This came out of my own personal habits. When flying internationally you are always told to be two hours early, but between EU countries, is that still International? what about England and Ireland? or Iceland and Denmark? In Iceland, flights to Greenland are International, but sometimes they don&#8217;t even check passports. Having a more definitive answer from the airlines would help to ease people&#8217;s questions and hopefully also keep people from making the wrong assumptions and arriving too late.</p>
+<p>We also put the barcode on every pane of the document. The extra redundancy would help because now there were 3 correct possible ways to scan the document. It could confuse the novice traveler into thinking that these are 3 different barcodes and therefore they might not know which to scan, but since the page gets folded it is less obvious that there are actually 3 barcodes. At any given time, with a folded boarding pass, you only see one barcode. This is certainly something that can be addressed if too many travellers get confused, but so far there haven&#8217;t been any complaints.</p>
+<p>One of the other things that should go without saying, but we had to battle for this, was that the boarding pass must work in only black and white! I don&#8217;t know the percentage, but I would venture to guess that people who have access to laser printers have access to black and white versions at the office—and most tech savvy people probably save expensive colour ink by printing in grey-scale. Therefore, the design could not expect colour to be used to highlight, offset or draw attention to any of the areas.</p>
+<p>One of the early competitor designs we looked when designing our boarding pass used a nice blue background with white-text. That had two side-effects, it sucked-up loads of blue ink unnecessarily and when printed in black and white, it was white text on a light grey background and was un-readable. I used this to argue for an optimized black and white version.</p>
+<p>We started our design only in black and white and then added colour for basic information such as the corporate logo, which we knew still worked when printed in black and white. We also stuck with black text on a white background as a nod to our customers, minimizing their printer ink usage.</p>
+<p>We took the paper mock-up and implemented the design in working code, further tweaking the layout. We moved some of the basic meta flight information to the middle pane and added a list of banned items to the bottom pane.</p>
+<div class="banner"><img loading="lazy" title="seat" src="wp-content/uploads/2010/05/seat.jpg" alt="" width="700" height="170" /></div>
+<p>We added a space for gate number. This is something that travellers do not know at the time the boarding pass is printed, but we left an area that they could fill in themselves when the gate number became available on the departure boards.</p>
+<p>This is an example of using the affordances of paper. Let people write on it freely! By adding an empty box it encourages two things. First, that people SHOULD actually write on this ticket. Second, it helps people remove items from their mental queue and put it onto paper. It is one less thing they need to remember and worry about forgetting if it&#8217;s written down. By adding the box explicitly it gives travelers and area to &#8220;safely&#8221; write in, and hopefully cut down any clutter than the ticket checkers need to deal with.</p>
+<p>This is a simple addition that could have been left out, and is left out on many tickets, but because we added it, it relieves cognitive loads and demonstrates that the airline is thinking ahead and helping you without being pushy.</p>
+<p><img loading="lazy" style="float: right; padding-left: 15px;" title="weather" src="wp-content/uploads/2010/05/weather.jpg" alt="" width="400" height="255" />Since the usage barcode instructions did not take-up much space, we experimented with the inclusion of external data to supplement the boarding pass. A few that quickly came to mind were weather and fellow travellers. Using a weather API we pulled in a five day forecast for the destination city. This would help travelers to quickly see what they might want to pack or wear last minute. To access fellow travellers we experimented with using the Dopplr API. <a href="http://dopplr.com">Dopplr</a> is a service for frequent travellers to help them coordinate meet-ups and random co-incidences in the same city. The other possibilities for external data sources included upcoming.org events listings, wikipedia entries, currency exchange rates and other APIs.</p>
+<p>The Dopplr and other external data integration was too far ahead of its time for the client&#8217;s target market, but the weather data did manage to make the cut and exists in the boarding pass today. This is partly due to the fact that you cannot print your boarding pass more than 22 hours earlier. Therefore, the weather data is fairly accurate.</p>
+<p>Some of these sources for external data have been re-used on other projects that related to the trip, but unfortunately not directly in the boarding pass.</p>
+<div class="banner"><img loading="lazy" title="bigger" src="wp-content/uploads/2010/05/bigger.jpg" alt="" width="700" height="998" /></div>
+<p>In the next iteration of the mock-up, the client was not a fan of the multiple size fonts, so we consolidate the number to just a few different sizes. I personally like the difference size, it gives a hierarchy of importance, but then again I&#8217;m not a professional designer.</p>
+<p>They also did not like the &#8220;next steps&#8221; as a time table, so it was down played and moved to the bottom pane. Understandably, all the times were the same font-size, so it was difficult to identify the flight time from the arrival time from boarding time. <img loading="lazy" style="float: right; padding-left: 15px;" title="floor" src="wp-content/uploads/2010/05/floor.jpg" alt="" width="200" height="180" />To rectify this, we decided to make the flight time so big you couldn&#8217;t miss it. We asked ourselves, &#8220;What is the most important aspect of the flight&#8221; and the flight time is what we determined, so it became the central item on the page. The other nice aspect of the larger font-size is that older travelers should have no problem reading the most important information: when the flight leaves.</p>
+<p>Ultimately, this design was dropped. Possibly because it did not look &#8220;professional&#8221; or fit with their design standards, or maybe it just looked &#8220;cheap&#8221; and &#8220;cluttered&#8221;. The massive boarding time is one feature that I personally wish would have made it into the final design. It has high visual impact and actually does serve as an accessibility aid for older travelers and those of us with poor eye sight. My quick test was to drop it the boarding pass on the floor, from my height standing, I could still read the departure time.</p>
+<p>At times in these mock-ups we had more room on the page that data, other times we had more data than available space. Having such a large time stamp for the departure time was forcing us to have less data and be more picky about what made it into the design, but by reducing the font-size we gained additional space, which in turn was unnecessarily filled with data that competed with everything else for attention.</p>
+<p><img loading="lazy" style="float: right; padding-left: 15px;" title="swaped" src="wp-content/uploads/2010/05/swaped.jpg" alt="" width="400" height="344" />Making and using paper prototypes really helped the process. We were quite far along in the design process that we realized we had made a mis-calculation. From the start we tried to make the logical flow of data from top to bottom, from most important to least. Having a printed hard-copy was a real benefit. We printed boarding passes and carried them around, folded them, smashed them, spilled coffee on them and everything in between. What we originally missed was what happens when you fold the A4 into thirds. The top and bottom panes will overlap each other. One must cover the other as they are folded back. Therefore, you could have the problem of the very least important data overlapping the most important. The only pane that was never covered by others was the middle pane. So we swapped the information that was on the top pane to the middle so it was always visible. The full &#8220;next steps&#8221; list turned into the single flight time number, which is also replicated on the middle pane. The bottom pane contains only items you are not allowed to bring on-board and instructions along with a picture of the barcode machine to help reduce questions about how to actually check-in.</p>
+<p><img loading="lazy" style="float: left; padding-right: 15px;" title="9flights" src="wp-content/uploads/2010/05/9flights.jpg" alt="" width="400" height="242" />Due to some regulations, we converted the final boarding pass instance to English only, which removed a lot of linguistic and spacing issues. You can see that the &#8220;next steps&#8221; table has made a small come back on the top pane and original SAS design needed to be expanded on to accommodate a full 9 possible connecting flights. Having a list of 9 possible connecting flights required some thinking and a redesign. Some airports required a list of all connecting flights, even previous ones. So there was the difficulty of how to draw attention to which flight this printed boarding pass was for. So we experimented with different font-sizes and underlining the flight which the ticket corresponds too.</p>
+<p>The printable boarding pass was deployed on March 8th, 02008. As the usage picks-up I am sure there will continue to be tweaks to the layout and to information on the print-out. This was not an attempt to make the world&#8217;s greatest boarding pass in the first try and we made a lot of mistakes along the way, but we tested some innovative ideas, some made the cut others didn&#8217;t. Hopefully, the design process and some of the usability ideas that we came-up with will make it into other boarding passes or related projects.</p>
+<h2>Additional: Changes for class related seating</h2>
+<p>November of 02008, the client added a new class to their ticket structure. They went from two distinct classes, Economy and Business Class to three, Economy, Economy Plus and Business Class. Previously, the boarding passes did not have the class distinction, which now needed to be added. Then came the problem of the lounges. Without any class information, people were unsure if they could enter the executive lounge or not. The simplest way to solve this was to begin to add the class information onto the boarding passes which we did. In our prototype testing, we also realized that it would be very easy for someone to change the text &#8220;Economy Class&#8221; to &#8220;Business Class&#8221; after downloading the PDF, but before printing it on their way to the airport. It also meant that whom ever was checking boarding passes at the executive lounge door had to look all over the A4 boarding pass to find the class distinction. Besides just printing &#8220;Class: Y&#8221; on a boarding pass, we planned to radically alter the masthead if you were in Business Class. This had three quick advantages. By inverting the colors, from a blue logo on a white background, to a white logo on a blue background, it made it immediately recognizable from a distance that the boarding pass was for the upscale Business Class. It became more difficult to forge a fake Business Class boarding pass. Finally, it demonstrated to the customer that they were special, they were the only ones with a different boarding pass than all the other classes. As the usage pattern of the boarding passes increases we are constantly learning about how people are using it. From this we have also made proposals to include currency exchange rates. So along with the dynamic five day weather forecast, travelers could get a rough idea of how much their money is worth abroad.</p>
+<p>After leaving this project a year ago, I&#8217;m not sure what has happened. I know you can still print them and to my knowledge not much has changed. I suspect that the self-check-in machines have pretty much obsoleted this printable-boarding pass. The next logical steps are to handle everything via email and SMS for smart phones. None of this information is proprietary knowledge or contains any trade secrets. Hopefully it was useful to see the thought process behind creating dynamic paperNet style tickets. This could easily be replicated for other services such as trains, boats, movie and concert tickets, etc.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="category/case-studies/index.html" title="View all articles in Case Studies" rel="tag category" class="category">Case Studies</a>, <a href="category/paper/index.html" title="View all articles in Paper" rel="tag category" class="category">Paper</a>, <a href="category/travel/index.html" title="View all articles in Travel" rel="tag category" class="category">Travel</a></p><p><strong>Tags:</strong> <a href="tag/2d-barcode/index.html" rel="tag"  class="tag">2d barcode</a>, <a href="tag/airlines/index.html" rel="tag"  class="tag">airlines</a>, <a href="tag/barcode/index.html" rel="tag"  class="tag">barcode</a>, <a href="tag/boarding-pass/index.html" rel="tag"  class="tag">boarding pass</a>, <a href="tag/flights/index.html" rel="tag"  class="tag">flights</a>, <a href="tag/iata/index.html" rel="tag"  class="tag">IATA</a></p>			  </div>
+			
+				
+   <div style="border-top: 4px solid #333; border-bottom: 1px solid #ddd; margin: 60px 0 100px 0">
+      <style>
+         .navigation {
+            display: grid;
+            grid-template-columns: minmax(200px, 1fr) minmax(20px, 1fr)  minmax(200px, 1fr);
+            grid-gap: 0px;
+            background-color: #f7f7f7;
+			padding-bottom: 0;
+         }
+         .navigation div a { display: block; height: 100%; text-decoration: none; color: #333; padding: 0 1em; background-color: #f7f7f7; }
+		 .navigation div a:visited { background-color: #f7f7f7; }
+         .navigation div a:hover { background-color: rgb(0,0,0,0.1); }
+         .navigation  div  { line-height: 20px; font-size: 14px; margin: 15px 0; }
+         .navigation div span { display: block; margin: 0; padding: 0 0 40px 0; font-weight: normal; color: #666; }
+        .navigation div span.time, .navigation div span.time { display: block; margin: 0; padding: 0; font-weight: 600; font-size: 24px; line-height: 48px; padding-top: 10px; color: #444;}
+         .navigation .prev, .navigation .next, .navigation .home  { margin: 0; padding: 0; text-align: left; } 
+		  @media screen and (max-width: 550px) {
+			  .navigation { display: block; }
+			  .navigation .prev,  .navigation .next { float: none; }
+			  .navigation .home { border: 1px solid #ddd; }
+		  } 
+		  
+		  
+		  
+      </style>
+      <div class="navigation">
+         <div class="prev" >
+<a href="2010/05/11/vertical-slices/index.html" style="text-decoration: none;"><span class="time">11 May 02010</span><span>Vertical Slices</span></a>			 
+         </div>
+
+
+         <div class="home" style="border-left: 1px solid #ddd; border-right: 1px solid #ddd; text-align: center;">
+            <a href="../index.html"><svg width="50%"><use xlink:href="#optional-logo"></use></svg></a>
+         </div>
+
+         <div class="next">
+			 <a href="2010/06/12/miracle-fruit-berries/index.html" style="text-decoration: none;"><span class="time">12 June 02010</span><span>Miracle Fruit Berries</span></a>         </div>
+      </div>
+   </div> 				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+		<!--		
+		<div class="navigation" style="border-bottom: 1px solid #aaa">
+			<div class="prev"><div class="time">11 May 02010</div><a href="/required/2010/05/11/vertical-slices/" style="text-decoration: none;>&laquo; Vertical Slices</a></div>
+			<div class="next"><div class="time">12 June 02010</div><a href="/required/2010/06/12/miracle-fruit-berries/" style="text-decoration: none;">Miracle Fruit Berries &raquo;</a></div>
+		</div>
+-->
+			</div>
+			
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+	<h3 id="comments">One Response to &#8220;PaperNet Boarding Pass&#8221;</h3>
+        <!--
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+	</div> -->
+
+	<ol class="commentlist">
+			<li class="comment even thread-even depth-1" id="comment-96">
+				<div id="div-comment-96" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='http://www.webstandardistas.com/' rel='external nofollow ugc' class='url'>Christopher Murphy</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="2010/05/25/papernet-boarding-pass/index.html#comment-96">2010/05/25 at 13:45</a>		</div>
+
+		<p>An absolutely fascinating walkthrough of your process. It&#8217;s disappointing they didn&#8217;t implement the final ideas; as a frequent flyer I would have thanked you for them, not least the larger than life boarding time (all travellers would thank you for that).</p>
+<p>The piece gives a deep insight into all of the aspects of the design process and is something I&#8217;ll be pointing my students towards as required reading. Thanks for sharing your insight.</p>
+
+		
+				</div>
+				</li><!-- #comment-## -->
+	</ol>
+<!--
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+	</div>
+-->
+ 
+
+
+	
+<svg class="svgs" version="1.1" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+   <symbol id="optional-logo" viewBox="0 0 284.478 66.043">
+   <path d="M14.128,33.557c0-4.464,1.599-8.264,4.798-11.39c3.185-3.131,7.081-4.704,11.673-4.704c4.607,0,8.519,1.586,11.739,4.736
+      c3.164,3.148,4.75,7.021,4.75,11.612c0,4.629-1.586,8.513-4.784,11.64c-3.22,3.108-7.164,4.665-11.84,4.665
+      c-4.63,0-8.508-1.584-11.64-4.76C15.695,42.226,14.128,38.293,14.128,33.557z M21.427,33.685c0,3.088,0.824,5.527,2.472,7.324
+      c1.699,1.821,3.922,2.734,6.701,2.734c2.788,0,5.023-0.898,6.692-2.702c1.673-1.797,2.507-4.198,2.507-7.202
+      c0-3.003-0.834-5.404-2.507-7.202c-1.698-1.814-3.922-2.727-6.692-2.727c-2.734,0-4.948,0.912-6.635,2.727
+      C22.273,28.456,21.427,30.809,21.427,33.685z"></path>
+   <path d="M57.723,66.043H50.58V18.326h7.143v3.364c2.817-2.809,6.004-4.228,9.583-4.228c4.248,0,7.75,1.573,10.5,4.704
+      c2.792,3.109,4.188,7.032,4.188,11.771c0,4.63-1.382,8.492-4.154,11.573c-2.75,3.069-6.218,4.604-10.405,4.604
+      c-3.618,0-6.851-1.45-9.711-4.351V66.043z M74.702,33.967c0-2.961-0.813-5.373-2.417-7.236c-1.626-1.875-3.68-2.82-6.158-2.82
+      c-2.623,0-4.747,0.912-6.372,2.727c-1.627,1.819-2.448,4.211-2.448,7.175c0,2.894,0.82,5.283,2.448,7.169
+      c1.609,1.84,3.721,2.763,6.345,2.763c2.473,0,4.514-0.938,6.123-2.794C73.871,39.089,74.702,36.761,74.702,33.967z"></path>
+   <path d="M94.226,24.988v24.237h-7.138V24.988h-3.041v-6.662h3.041V6.997h7.138v11.329h3.113v6.662H94.226z"></path>
+   <path d="M100.306,7.103c0-1.257,0.453-2.328,1.365-3.236c0.907-0.906,1.999-1.366,3.271-1.366c1.289,0,2.384,0.46,3.298,1.366
+      c0.905,0.891,1.365,1.975,1.365,3.27c0,1.289-0.46,2.386-1.365,3.299c-0.886,0.912-1.981,1.365-3.271,1.365
+      c-1.288,0-2.39-0.453-3.297-1.365C100.759,9.521,100.306,8.415,100.306,7.103z M108.526,18.326v30.899h-7.148V18.326H108.526z"></path>
+   <path d="M112.045,33.557c0-4.464,1.599-8.264,4.789-11.39c3.194-3.131,7.093-4.704,11.673-4.704c4.614,0,8.532,1.586,11.745,4.736
+      c3.171,3.148,4.759,7.021,4.759,11.612c0,4.629-1.599,8.513-4.791,11.64c-3.214,3.108-7.158,4.665-11.834,4.665
+      c-4.63,0-8.513-1.584-11.644-4.76C113.61,42.226,112.045,38.293,112.045,33.557z M119.341,33.685c0,3.088,0.824,5.527,2.473,7.324
+      c1.694,1.821,3.927,2.734,6.693,2.734c2.794,0,5.025-0.898,6.701-2.702c1.669-1.797,2.5-4.198,2.5-7.202
+      c0-3.003-0.832-5.404-2.5-7.202c-1.694-1.814-3.93-2.727-6.701-2.727c-2.722,0-4.934,0.912-6.626,2.727
+      C120.187,28.456,119.341,30.809,119.341,33.685z"></path>
+   <path d="M148.502,18.326h7.169v2.854c2.496-2.475,5.306-3.718,8.443-3.718c3.59,0,6.389,1.142,8.401,3.4
+      c1.733,1.93,2.602,5.064,2.602,9.425v18.938h-7.171V31.993c0-3.043-0.425-5.146-1.271-6.309c-0.819-1.178-2.324-1.774-4.503-1.774
+      c-2.375,0-4.055,0.784-5.04,2.346c-0.979,1.537-1.461,4.237-1.461,8.075v14.895h-7.169V18.326z"></path>
+   <path d="M202.845,18.326h7.176v30.899h-7.176v-3.233c-2.938,2.753-6.103,4.124-9.489,4.124c-4.269,0-7.799-1.539-10.593-4.634
+      c-2.771-3.15-4.154-7.083-4.154-11.798c0-4.637,1.383-8.497,4.154-11.584c2.772-3.088,6.24-4.638,10.406-4.638
+      c3.596,0,6.822,1.484,9.676,4.45V18.326z M185.905,33.685c0,2.96,0.79,5.373,2.373,7.232c1.632,1.878,3.683,2.826,6.158,2.826
+      c2.644,0,4.783-0.913,6.41-2.734c1.627-1.882,2.445-4.27,2.445-7.17c0-2.893-0.818-5.284-2.445-7.169
+      c-1.627-1.835-3.738-2.76-6.346-2.76c-2.451,0-4.502,0.927-6.157,2.792C186.719,28.584,185.905,30.915,185.905,33.685z"></path>
+   <path d="M222.102,7.014v42.212h-7.135V7.014H222.102z"></path>
+   <path d="M225.76,44.864c0-1.188,0.437-2.211,1.3-3.08c0.867-0.864,1.902-1.299,3.108-1.299s2.246,0.435,3.109,1.299
+      c0.869,0.869,1.305,1.901,1.305,3.108c0,1.228-0.436,2.274-1.305,3.145c-0.846,0.838-1.882,1.266-3.109,1.266
+      c-1.25,0-2.295-0.428-3.138-1.266C226.179,47.188,225.76,46.13,225.76,44.864z"></path>
+   <path d="M237.121,7.103c0-1.257,0.454-2.328,1.368-3.236c0.912-0.906,1.996-1.366,3.27-1.366c1.287,0,2.389,0.46,3.296,1.366
+      c0.908,0.891,1.361,1.975,1.361,3.27c0,1.289-0.453,2.386-1.361,3.299c-0.891,0.912-1.974,1.365-3.265,1.365
+      c-1.294,0-2.389-0.453-3.301-1.365C237.575,9.521,237.121,8.415,237.121,7.103z M245.338,18.326v30.899h-7.131V18.326H245.338z"></path>
+   <path d="M269.089,23.594l-5.893,3.137c-0.936-1.875-2.087-2.82-3.464-2.82c-0.659,0-1.216,0.215-1.683,0.651
+      c-0.463,0.433-0.697,0.985-0.697,1.66c0,1.185,1.379,2.355,4.128,3.519c3.784,1.633,6.335,3.127,7.64,4.499
+      c1.312,1.376,1.971,3.223,1.971,5.546c0,2.979-1.1,5.472-3.305,7.477c-2.129,1.903-4.712,2.854-7.738,2.854
+      c-5.186,0-8.846-2.528-11.004-7.579l6.086-2.826c0.848,1.482,1.494,2.422,1.937,2.826c0.868,0.802,1.903,1.206,3.109,1.206
+      c2.411,0,3.617-1.1,3.617-3.305c0-1.265-0.935-2.45-2.794-3.558c-0.72-0.354-1.432-0.7-2.152-1.04
+      c-0.725-0.343-1.455-0.686-2.19-1.051c-2.075-1.019-3.535-2.029-4.383-3.041c-1.071-1.295-1.614-2.95-1.614-4.986
+      c0-2.688,0.918-4.898,2.761-6.66c1.874-1.753,4.167-2.64,6.85-2.64C264.225,17.463,267.168,19.512,269.089,23.594z"></path>
+   <path d="M5.212,7.544l4.951,1.903C8.43,13.585,7.214,17.41,6.522,20.916c-0.348,1.775-0.608,3.646-0.785,5.605
+      c-0.171,1.958-0.265,4.092-0.265,6.411c0,2.336,0.093,4.479,0.265,6.438c0.177,1.96,0.437,3.823,0.785,5.606
+      c0.681,3.483,1.893,7.3,3.641,11.438l-4.951,1.902C1.742,51.078,0,42.615,0,32.933C0,23.257,1.742,14.793,5.212,7.544z"></path>
+   <path d="M279.288,58.503l-4.951-1.903c1.748-4.149,2.961-7.955,3.646-11.446c0.713-3.489,1.068-7.501,1.068-12.042
+      c0-4.505-0.355-8.516-1.068-12.02c-0.697-3.505-1.913-7.334-3.646-11.466l4.951-1.908c3.464,7.252,5.189,15.717,5.189,25.394
+      C284.478,42.785,282.752,51.245,279.288,58.503z"></path>
+   </symbol>
+
+</svg>
+<div id="footer" class="vcard">
+  <div>
+  <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
+<form method="get" id="searchform" action="http://optional.is/required/" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+-->
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+</div> 
+<a href="../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.486 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-06-30 11:51:16 -->
+
+<!-- super cache -->
