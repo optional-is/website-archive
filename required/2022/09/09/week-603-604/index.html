@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>(optional.is)   Week #603 &#038; #604</title>
+
+<link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" />
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="https://optional.is/required/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@optionalBot">
+<meta name="twitter:title" content="Week #603 & #604">
+<meta name="twitter:description" content="A double weeknote covering lots of backend server changes in our future.">
+<meta name="twitter:creator" content="@optionalBot">
+<meta name="twitter:domain" content="http://optional.is">
+</head>
+<body>
+
+
+<div id="header">
+<h1><a href="../../../../index.html">(optional.is)</a></h1>
+</div>
+
+			
+		<div class="post-6214 post type-post status-publish format-standard hentry category-briefs category-weeknotes tag-backups tag-dconstruct tag-england tag-heroku tag-queen tag-servers tag-sim tag-xero" id="post-6214">
+			<h1>Week #603 &#038; #604</h1>
+			<div style="border-bottom: 2px solid #cd8e7e; padding: 2em 0; margin-bottom: 2em" class="time"><abbr title="2022-09-09T14:41:00+00:00">Friday, September 9th, 02022 at 14:41 UTC</abbr></div>
+
+			<div class="entry">
+				
+<p></p>
+
+
+
+<h2>Week #603</h2>
+
+
+
+<p>This week saw the start of September. That is an odd-numbered month, so our VAT report is due. We spent one morning collecting receipts and filing them all away into our accounting software. Since it is also the start of the month, we do our little backup routine. The computers are incrementally version controlled every hour. Phones are synced to the cloud. Each month we try to remember to use our &#8216;air gapped&#8217; external hard drive and take another snapshot of all the laptops incase something really bad infects the computers and the networked, rolling backups are also a problem.</p>
+
+
+
+<p>We also got news that Heroku is ending their free tiers. It is a business decision, but it does have an impact on us. We use Heroku as a paying customer for a lot of services. We also have a lot of downtime were we go lower to the free-tiers. We also make prototypes and test things well in advance of release. We are also using the free-tiers because we know they are identical to the paid version. Now, every tiny little idea will cost more than it&#8217;s worth. So we&#8217;ve been exploring alternatives, like fly.io and AWS.</p>
+
+
+
+<p>For instance, we created a simple iOS app to receive push notifications. There is a webhook server running on Heroku that accepts a POST and converts that to a Apple Push Notification which gets sent to our phone. The code is very simple, but invaluable those 1-2 times a month we get a message. When a server 500 error occurs, we know instantly and can check the logs. While important, it&#8217;s easy enough to host anywhere &#8211; and that&#8217;s what we did. Rather than pay, we moved providers.</p>
+
+
+
+<p>Another of our hosting providers, Opalstack, is planning an 8h downtime on Sept 15th. That means we needed to prepare a few things. One thing NOT recommended todo with Heroku is host static files, so those are done on Opalstack via apache. We made a contingency plan for that. We also have our own QR code generator running on Opalstack which will be unavailable that day. We&#8217;ve taken to adding some heavy caching, so we should make it through those 8h unless someone needs to make a new QR code!</p>
+
+
+
+<p>Last week, found a bug in the XERO API and reported via their forums with no response. This week, we escalated it to Twitter and someone replied and we moved it into their big tracking software. They are looking into it and hopefully we&#8217;ll get a fix. This is no zero-day exploit, the API is validating URLs one way and the website is doing so differently. We&#8217;ve managed to get into a state where a URL string is valid in one case, but not the other &#8211; our opinion is that they should be consistent!</p>
+
+
+
+<p>As September begins, our school surveys are now underway and we&#8217;ve started for the next set of data collections. These will happen in October for two other groups. There has been some data crunching and we&#8217;ve tweaked one survey and moved it from April to October. We&#8217;ll see how this goes and adjust again as needed next year.</p>
+
+
+
+<p>For the <em>Hyperion</em> project, we are in the analytics phase. We&#8217;re having meetings to planning what needs to be collected and analyzed for future improvements. Then we need to document all this and send it over to the client for approval. We suspect this will take several rounds and some &#8216;horse trading&#8217;.</p>
+
+
+
+<h2>Week #604</h2>
+
+
+
+<p>We always come back to that silly business management book that sits on our shelf, “<em>Dig your well before you’re thirsty</em>”. This week, it didn&#8217;t work out. We had some meetings and a proposal for a small project that isn&#8217;t going anywhere. You win some and sometimes the client just isn&#8217;t that interested for any number of reasons that&#8217;s not your fault. Which is why you always gotta be digging, even when you don&#8217;t have too, because a lot of the time you won&#8217;t find anything.</p>
+
+
+
+<p>With the demise of Heroku, we&#8217;ve been researching AWS RDS as a replacement postgres database. They offer a free tier and (we think) competitive pricing! We are still exploring the back-up situation and any GDPR implications, but so far, we&#8217;ve managed to just drop-in the new DATABASE_URL and things just seem to &#8216;work&#8217; which is great news.</p>
+
+
+
+<p>For another project, we&#8217;ve been working on an &#8216;infinite&#8217; map. As your scroll, each of the zones is Ajaxed in, just like Google Maps. To help navigate this, we made a nice minimap using the &lt;canvas> element. This is clickable and jumps you around the larger map to that area. So far, so good, but the problem with being &#8216;infinite&#8217; is that as the base map grows so does the minimap. That will get really big too and not be so mini! So now we need to come-up with a way to either zoom the minimap, a minimap for the minimap or chunk it into dynamic zones too!?</p>
+
+
+
+<p>On Wednesday, Apple had their &#8220;Far Out&#8221; event which announced new iPhones, Watches and AirPod Pros. The biggest take away for us was that all US iPhones will be eSIM only! That means in a few years, this will come to the rest of the world. Here in Iceland, the Single Sign-On service relies on special physical SIM cards to operate. This is now effectively dead and we can&#8217;t program against this service as it currently stands today. We have time, but we&#8217;ll need to find some alternative method for authentication.</p>
+
+
+
+<p>We spent some time finally looking into the new WidgetKit framework in SwiftUI. We&#8217;ve got a soft-spot for data and this is how you make quick, glanceable watch complications. But it is also now how you add them to the Phone&#8217;s lock screen and dashboard. They&#8217;ve also made it more customizable with the design and layout. We learnt what we wanted and updated a few apps.</p>
+
+
+
+<p>On Thursday, Elizabeth II the Queen of England died. After 70 years on the throne it has now passed to her son King Charles III. Queen Elizabeth II had ruled for nearly 30% of the lifetime of the United States. </p>
+
+
+
+<p>&#x1f1fa;&#x1f1f8; 2022-1776=246 years<br />&#x1f478;&#x1f3fc;2022-1952=70 years<br />&#x1f478;&#x1f3fc;70/&#x1f1fa;&#x1f1f8;246=28.5%</p>
+
+
+
+<p>This Friday is the <a href="https://2022.dconstruct.org">dConstruct conference</a>. We&#8217;re sad we&#8217;re not in Brighton enjoying it with everyone else, but it is hard to know what&#8217;s happening day-to-day right now, so planning such a trip sadly wasn&#8217;t on the cards. We have fond memories of the event and hope everyone is enjoying it live, we&#8217;re looking forward to the updated <a href="https://huffduffer.com/dconstruct">dconstruct podcast</a>.</p>
+
+
+
+<h2>Fluxcapacitor</h2>
+
+
+
+<p>This week, back in 2019, was <a href="../../../../2019/09/06/week-447/index.html">week #447</a>. We were still planning for the 02020 Material Conference, which we had to cancel due to COVID-19 and still have not managed to reschedule.</p>
+
+
+
+<p>Last year at this time, was <a href="../../../../2021/09/10/week-551-552/index.html">weeks #551-552</a>. It was 1 year ago that we managed to fully transition to the EHF company leaving the shell of the SLF to be closed down. A year later, and you didn&#8217;t even notice.</p>
+
+
+
+<h2>Bric-à-brac</h2>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-twitter wp-block-embed-twitter"><div class="wp-block-embed__wrapper">
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true"><p lang="en" dir="ltr">1000 drones flying in fluid formation — the largest assemblage ever at Burning Man.  Produced by Drift Robotics, it filled the sky with mesmerizing beauty. <a href="https://t.co/V07ikthMFx">pic.twitter.com/V07ikthMFx</a></p>&mdash; Steve Jurvetson (@FutureJurvetson) <a href="https://twitter.com/FutureJurvetson/status/1565892300210728960?ref_src=twsrc%5Etfw">September 3, 2022</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div></figure>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-twitter wp-block-embed-twitter"><div class="wp-block-embed__wrapper">
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true"><p lang="en" dir="ltr">I can’t stop thinking about this image that compares the Titanic to a modern cruise ship.<br><br>Things have gotten bigger, but dulled by a certain sameness that robs them of their beauty. <a href="https://t.co/YQaTOTfhxq">pic.twitter.com/YQaTOTfhxq</a></p>&mdash; Sahil Bloom (@SahilBloom) <a href="https://twitter.com/SahilBloom/status/1566449245305044993?ref_src=twsrc%5Etfw">September 4, 2022</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div></figure>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-twitter wp-block-embed-twitter"><div class="wp-block-embed__wrapper">
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true"><p lang="en" dir="ltr">An innovative 3D <a href="https://twitter.com/hashtag/gear?src=hash&amp;ref_src=twsrc%5Etfw">#gear</a>, invented by three Japanese researchers<br><br>This amazing concept gives a potential for many applications in health, robotics and many other mechanical fields<br><br>Active ball joint mechanism (ABENICS)<a href="https://twitter.com/hashtag/innovation?src=hash&amp;ref_src=twsrc%5Etfw">#innovation</a> <a href="https://twitter.com/hashtag/tech?src=hash&amp;ref_src=twsrc%5Etfw">#tech</a> #<a href="https://twitter.com/hashtag/3D?src=hash&amp;ref_src=twsrc%5Etfw">#3D</a> <a href="https://twitter.com/hashtag/science?src=hash&amp;ref_src=twsrc%5Etfw">#science</a> <a href="https://t.co/3rBjfJS5qJ">pic.twitter.com/3rBjfJS5qJ</a></p>&mdash; Pascal Bornet (@pascal_bornet) <a href="https://twitter.com/pascal_bornet/status/1566629756694675456?ref_src=twsrc%5Etfw">September 5, 2022</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div></figure>
+
+
+
+<p></p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="../../../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../../../../tag/backups/index.html" rel="tag"  class="tag">backups</a>, <a href="../../../../tag/dconstruct/index.html" rel="tag"  class="tag">dconstruct</a>, <a href="../../../../tag/england/index.html" rel="tag"  class="tag">england</a>, <a href="../../../../tag/heroku/index.html" rel="tag"  class="tag">heroku</a>, <a href="../../../../tag/queen/index.html" rel="tag"  class="tag">Queen</a>, <a href="../../../../tag/servers/index.html" rel="tag"  class="tag">servers</a>, <a href="../../../../tag/sim/index.html" rel="tag"  class="tag">SIM</a>, <a href="../../../../tag/xero/index.html" rel="tag"  class="tag">xero</a></p>			  </div>
+			
+				
+   <div style="border-top: 4px solid #333; border-bottom: 1px solid #ddd; margin: 60px 0 100px 0">
+      <style>
+         .navigation {
+            display: grid;
+            grid-template-columns: minmax(200px, 1fr) minmax(20px, 1fr)  minmax(200px, 1fr);
+            grid-gap: 0px;
+            background-color: #f7f7f7;
+			padding-bottom: 0;
+         }
+         .navigation div a { display: block; height: 100%; text-decoration: none; color: #333; padding: 0 1em; background-color: #f7f7f7; }
+		 .navigation div a:visited { background-color: #f7f7f7; }
+         .navigation div a:hover { background-color: rgb(0,0,0,0.1); }
+         .navigation  div  { line-height: 20px; font-size: 14px; margin: 15px 0; }
+         .navigation div span { display: block; margin: 0; padding: 0 0 40px 0; font-weight: normal; color: #666; }
+        .navigation div span.time, .navigation div span.time { display: block; margin: 0; padding: 0; font-weight: 600; font-size: 24px; line-height: 48px; padding-top: 10px; color: #444;}
+         .navigation .prev, .navigation .next, .navigation .home  { margin: 0; padding: 0; text-align: left; } 
+		  @media screen and (max-width: 550px) {
+			  .navigation { display: block; }
+			  .navigation .prev,  .navigation .next { float: none; }
+			  .navigation .home { border: 1px solid #ddd; }
+		  } 
+		  
+		  
+		  
+      </style>
+      <div class="navigation">
+         <div class="prev" >
+<a href="../../../08/26/week-601-602/index.html" style="text-decoration: none;"><span class="time">26 August 02022</span><span>Week #601 & #602</span></a>			 
+         </div>
+
+
+         <div class="home" style="border-left: 1px solid #ddd; border-right: 1px solid #ddd; text-align: center;">
+            <a href="../../../../../index.html"><svg width="50%"><use xlink:href="#optional-logo"></use></svg></a>
+         </div>
+
+         <div class="next">
+			          </div>
+      </div>
+   </div> 				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+		<!--		
+		<div class="navigation" style="border-bottom: 1px solid #aaa">
+			<div class="prev"><div class="time">26 August 02022</div><a href="/required/2022/08/26/week-601-602/" style="text-decoration: none;>&laquo; Week #601 & #602</a></div>
+			<div class="next"></div>
+		</div>
+-->
+			</div>
+			
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+<svg class="svgs" version="1.1" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+   <symbol id="optional-logo" viewBox="0 0 284.478 66.043">
+   <path d="M14.128,33.557c0-4.464,1.599-8.264,4.798-11.39c3.185-3.131,7.081-4.704,11.673-4.704c4.607,0,8.519,1.586,11.739,4.736
+      c3.164,3.148,4.75,7.021,4.75,11.612c0,4.629-1.586,8.513-4.784,11.64c-3.22,3.108-7.164,4.665-11.84,4.665
+      c-4.63,0-8.508-1.584-11.64-4.76C15.695,42.226,14.128,38.293,14.128,33.557z M21.427,33.685c0,3.088,0.824,5.527,2.472,7.324
+      c1.699,1.821,3.922,2.734,6.701,2.734c2.788,0,5.023-0.898,6.692-2.702c1.673-1.797,2.507-4.198,2.507-7.202
+      c0-3.003-0.834-5.404-2.507-7.202c-1.698-1.814-3.922-2.727-6.692-2.727c-2.734,0-4.948,0.912-6.635,2.727
+      C22.273,28.456,21.427,30.809,21.427,33.685z"></path>
+   <path d="M57.723,66.043H50.58V18.326h7.143v3.364c2.817-2.809,6.004-4.228,9.583-4.228c4.248,0,7.75,1.573,10.5,4.704
+      c2.792,3.109,4.188,7.032,4.188,11.771c0,4.63-1.382,8.492-4.154,11.573c-2.75,3.069-6.218,4.604-10.405,4.604
+      c-3.618,0-6.851-1.45-9.711-4.351V66.043z M74.702,33.967c0-2.961-0.813-5.373-2.417-7.236c-1.626-1.875-3.68-2.82-6.158-2.82
+      c-2.623,0-4.747,0.912-6.372,2.727c-1.627,1.819-2.448,4.211-2.448,7.175c0,2.894,0.82,5.283,2.448,7.169
+      c1.609,1.84,3.721,2.763,6.345,2.763c2.473,0,4.514-0.938,6.123-2.794C73.871,39.089,74.702,36.761,74.702,33.967z"></path>
+   <path d="M94.226,24.988v24.237h-7.138V24.988h-3.041v-6.662h3.041V6.997h7.138v11.329h3.113v6.662H94.226z"></path>
+   <path d="M100.306,7.103c0-1.257,0.453-2.328,1.365-3.236c0.907-0.906,1.999-1.366,3.271-1.366c1.289,0,2.384,0.46,3.298,1.366
+      c0.905,0.891,1.365,1.975,1.365,3.27c0,1.289-0.46,2.386-1.365,3.299c-0.886,0.912-1.981,1.365-3.271,1.365
+      c-1.288,0-2.39-0.453-3.297-1.365C100.759,9.521,100.306,8.415,100.306,7.103z M108.526,18.326v30.899h-7.148V18.326H108.526z"></path>
+   <path d="M112.045,33.557c0-4.464,1.599-8.264,4.789-11.39c3.194-3.131,7.093-4.704,11.673-4.704c4.614,0,8.532,1.586,11.745,4.736
+      c3.171,3.148,4.759,7.021,4.759,11.612c0,4.629-1.599,8.513-4.791,11.64c-3.214,3.108-7.158,4.665-11.834,4.665
+      c-4.63,0-8.513-1.584-11.644-4.76C113.61,42.226,112.045,38.293,112.045,33.557z M119.341,33.685c0,3.088,0.824,5.527,2.473,7.324
+      c1.694,1.821,3.927,2.734,6.693,2.734c2.794,0,5.025-0.898,6.701-2.702c1.669-1.797,2.5-4.198,2.5-7.202
+      c0-3.003-0.832-5.404-2.5-7.202c-1.694-1.814-3.93-2.727-6.701-2.727c-2.722,0-4.934,0.912-6.626,2.727
+      C120.187,28.456,119.341,30.809,119.341,33.685z"></path>
+   <path d="M148.502,18.326h7.169v2.854c2.496-2.475,5.306-3.718,8.443-3.718c3.59,0,6.389,1.142,8.401,3.4
+      c1.733,1.93,2.602,5.064,2.602,9.425v18.938h-7.171V31.993c0-3.043-0.425-5.146-1.271-6.309c-0.819-1.178-2.324-1.774-4.503-1.774
+      c-2.375,0-4.055,0.784-5.04,2.346c-0.979,1.537-1.461,4.237-1.461,8.075v14.895h-7.169V18.326z"></path>
+   <path d="M202.845,18.326h7.176v30.899h-7.176v-3.233c-2.938,2.753-6.103,4.124-9.489,4.124c-4.269,0-7.799-1.539-10.593-4.634
+      c-2.771-3.15-4.154-7.083-4.154-11.798c0-4.637,1.383-8.497,4.154-11.584c2.772-3.088,6.24-4.638,10.406-4.638
+      c3.596,0,6.822,1.484,9.676,4.45V18.326z M185.905,33.685c0,2.96,0.79,5.373,2.373,7.232c1.632,1.878,3.683,2.826,6.158,2.826
+      c2.644,0,4.783-0.913,6.41-2.734c1.627-1.882,2.445-4.27,2.445-7.17c0-2.893-0.818-5.284-2.445-7.169
+      c-1.627-1.835-3.738-2.76-6.346-2.76c-2.451,0-4.502,0.927-6.157,2.792C186.719,28.584,185.905,30.915,185.905,33.685z"></path>
+   <path d="M222.102,7.014v42.212h-7.135V7.014H222.102z"></path>
+   <path d="M225.76,44.864c0-1.188,0.437-2.211,1.3-3.08c0.867-0.864,1.902-1.299,3.108-1.299s2.246,0.435,3.109,1.299
+      c0.869,0.869,1.305,1.901,1.305,3.108c0,1.228-0.436,2.274-1.305,3.145c-0.846,0.838-1.882,1.266-3.109,1.266
+      c-1.25,0-2.295-0.428-3.138-1.266C226.179,47.188,225.76,46.13,225.76,44.864z"></path>
+   <path d="M237.121,7.103c0-1.257,0.454-2.328,1.368-3.236c0.912-0.906,1.996-1.366,3.27-1.366c1.287,0,2.389,0.46,3.296,1.366
+      c0.908,0.891,1.361,1.975,1.361,3.27c0,1.289-0.453,2.386-1.361,3.299c-0.891,0.912-1.974,1.365-3.265,1.365
+      c-1.294,0-2.389-0.453-3.301-1.365C237.575,9.521,237.121,8.415,237.121,7.103z M245.338,18.326v30.899h-7.131V18.326H245.338z"></path>
+   <path d="M269.089,23.594l-5.893,3.137c-0.936-1.875-2.087-2.82-3.464-2.82c-0.659,0-1.216,0.215-1.683,0.651
+      c-0.463,0.433-0.697,0.985-0.697,1.66c0,1.185,1.379,2.355,4.128,3.519c3.784,1.633,6.335,3.127,7.64,4.499
+      c1.312,1.376,1.971,3.223,1.971,5.546c0,2.979-1.1,5.472-3.305,7.477c-2.129,1.903-4.712,2.854-7.738,2.854
+      c-5.186,0-8.846-2.528-11.004-7.579l6.086-2.826c0.848,1.482,1.494,2.422,1.937,2.826c0.868,0.802,1.903,1.206,3.109,1.206
+      c2.411,0,3.617-1.1,3.617-3.305c0-1.265-0.935-2.45-2.794-3.558c-0.72-0.354-1.432-0.7-2.152-1.04
+      c-0.725-0.343-1.455-0.686-2.19-1.051c-2.075-1.019-3.535-2.029-4.383-3.041c-1.071-1.295-1.614-2.95-1.614-4.986
+      c0-2.688,0.918-4.898,2.761-6.66c1.874-1.753,4.167-2.64,6.85-2.64C264.225,17.463,267.168,19.512,269.089,23.594z"></path>
+   <path d="M5.212,7.544l4.951,1.903C8.43,13.585,7.214,17.41,6.522,20.916c-0.348,1.775-0.608,3.646-0.785,5.605
+      c-0.171,1.958-0.265,4.092-0.265,6.411c0,2.336,0.093,4.479,0.265,6.438c0.177,1.96,0.437,3.823,0.785,5.606
+      c0.681,3.483,1.893,7.3,3.641,11.438l-4.951,1.902C1.742,51.078,0,42.615,0,32.933C0,23.257,1.742,14.793,5.212,7.544z"></path>
+   <path d="M279.288,58.503l-4.951-1.903c1.748-4.149,2.961-7.955,3.646-11.446c0.713-3.489,1.068-7.501,1.068-12.042
+      c0-4.505-0.355-8.516-1.068-12.02c-0.697-3.505-1.913-7.334-3.646-11.466l4.951-1.908c3.464,7.252,5.189,15.717,5.189,25.394
+      C284.478,42.785,282.752,51.245,279.288,58.503z"></path>
+   </symbol>
+
+</svg>
+<div id="footer" class="vcard">
+  <div>
+  <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
+<form method="get" id="searchform" action="http://optional.is/required/" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+-->
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+</div> 
+<a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.148 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-09-22 09:01:28 -->
+
+<!-- super cache -->
