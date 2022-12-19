@@ -39,7 +39,7 @@
 <p>It is interesting to see someone else&#8217;s work and get inspirated, but if you can&#8217;t execute on the idea yourself, then what good was the inspiration? This is where knowing your resources is key. For just about anything geographical, my first stop is <a title="Geonames" href="http://www.geonames.org/">Geonames.org</a>. I have used their code in several other projects, including the <a title="HLS World Map" href="../../../../2010/12/13/hls-world-map/index.html">HLS World Map</a> and <a title="Geonames Maps" href="../../../../2010/06/28/geonames-maps/index.html">Geonames maps</a>. It is as simple as it gets, a Comma Seperated Value list of places with plenty of metadata.</p>
 <p>If I wanted to replicate the thumbnail maps in the broshure, I knew I needed city names, and lots of them. In geonames, you can download a list of every town with a population over 1,000 people. Granted, this data might not be the most up-to-date, for most of my projects it&#8217;s fine. The next step was to pick a starting city. On the first go, I chose Reykjavík. While it makes sense as a local starting point, it isn&#8217;t geographically that interesting, we&#8217;ll see why in a bit. So I went with <a title="Saint Louis, MO USA on Wikipedia" href="http://en.wikipedia.org/wiki/St._Louis,_Missouri">Saint Louis, Missouri, USA</a>. A quick search on Wikipedia and I&#8217;ve got the Latitude and Longitude of the city; 38.627222,-90.197778.</p>
 <p>The next step is to choose and arbitrary tolerance in the number of degrees, sort of geographical error bars. I started with +/- 1.0 degrees. For Saint Louis, this would mean a Latitude of 37.627222 to 39.627222 and a Longitude of -91.197778 to -89.197778. This tolerance can be adjusted to taste.</p>
-<div class="banner"><img title="Zone of Lat/Lon for Saint Louis" src="../../../../wp-content/uploads/2011/04/stl-lat-lon.png" alt="Zone of Lat/Lon for Saint Louis" width="700" height="463" /></div>
+<div class="banner"><img decoding="async" title="Zone of Lat/Lon for Saint Louis" src="../../../../wp-content/uploads/2011/04/stl-lat-lon.png" alt="Zone of Lat/Lon for Saint Louis" width="700" height="463" /></div>
 <p>Now that we have this thin band of acceptable latitude and longitude values, I looped through the complete list from geonames to find &#8220;sister&#8221; cities on the same latitude and repeat the process to find &#8220;sister&#8221; cities at the same longitude.</p>
 <p>The original map of Estonia was a series of thumbnails left and right, showing other large cities at the same latitude and a series of thumnails up and down showing cities at the same longitude. It was simple and interesting to see how geographically similar cities might have vastly different climates, cultures, language and history. Now, with some simple logic, a few lines of code and the geonames database, it&#8217;s easy to recreate this for any location!</p>
 <p>For Saint Louis there were many results, so I reduced the tolerance to only 0.25 degrees and limited the results to cities to those with a population of 100,000 or higher. The following cities matched her latitude:</p>
@@ -130,7 +130,7 @@
 <p>Again, you can easily change the latitude and longitudes and generate a new thumbnail for each &#8220;sister&#8221; city.</p>
 <p>The next thing I want to try and do is limit it to &#8220;interesting&#8221; results. This might be difficult to do programatically. Does population of the city have more weight than location? Do you want to try and space out &#8220;sister&#8221; cities evenly, ignoring other metadata? The results will probably need to be curated by some human intervention or powerful heuristics.</p>
 <p>Once you have your sub-set of interesting sister cities, it can finally be arranged in a way similar to the original broshure. At this point, you can modify the look and feel as needed.</p>
-<div class="banner"><img loading="lazy" title="City Swatches focused on Saint Louis" src="../../../../wp-content/uploads/2011/04/city-swatches-stl.png" alt="City Swatches focused on Saint Louis" width="700" height="463" /></div>
+<div class="banner"><img decoding="async" loading="lazy" title="City Swatches focused on Saint Louis" src="../../../../wp-content/uploads/2011/04/city-swatches-stl.png" alt="City Swatches focused on Saint Louis" width="700" height="463" /></div>
 <p>I needed a name for this style map to make it easier for me and friends to refer to this in the future. I was originally reminded of Pantone color chips. How each chip can be reordered and put next to others to see how they look in combination. So the name &#8220;city chips&#8221; was kicked around for a bit. Someone thought it was a new brand of Potatoe Chip Snack Foods, so we continued looking. Pantone chips are also referred to as color swatches, so &#8220;City Swatches&#8221; was born.</p>
 <p>I have a few ideas and projects where this sort of style of small, broken-up map swatches will add clarity and zoom levels in a static, analog print medium. As a way to condense geographically disperse areas into something more linear and manageable, City Swatch style maps might be just what is needed.</p>
 
@@ -285,7 +285,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.150 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2022-10-31 21:26:58 -->
+<!-- Dynamic page generated in 0.270 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2022-12-19 09:40:18 -->
 
 <!-- super cache -->

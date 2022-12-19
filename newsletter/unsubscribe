@@ -307,7 +307,7 @@
           <form action="unsubscribe" method="post" target="_blank" style="max-width: 400px; text-align: center; margin: 0 auto; padding-bottom: 20px">
                           <input type="email" placeholder="Email Address"   name="email" class="required email" id="email" style="width: 100%; font-size: 22px; margin-bottom: 1em" value="">
                         <div style="text-align: left; line-height: 1.5em; margin: 0;">
-<div style="margin: 0; padding: 0 0 1em 0"><label><input type="checkbox" name="1" checked="checked" /> <strong>◍ (optional.is) Quarterly                                                                                                                                                                                                                                      </strong><br/><span style="opacity: 0.6">Sent quarterly, a look at what's been happening and interesting tidbits from around the Web.</span></label></div><div style="margin: 0; padding: 0 0 1em 0"><label><input type="checkbox" name="2" checked="checked" /> <strong>⪮ Good Morning                                                                                                                                                                                                                                                 </strong><br/><span style="opacity: 0.6">(Season 1) Sent monthly, 1 photo, 2 thoughts and 3 links. All interesting stuff, no self-promotion.</span></label></div>
+<div style="margin: 0; padding: 0 0 1em 0"><label><input type="checkbox" name="1" checked="checked" /> <strong>◍ (optional.is) Quarternotes                                                                                                                                                                                                                                   </strong><br/><span style="opacity: 0.6">Sent quarterly, a look at what's been happening and interesting tidbits from around the Web.</span></label></div><div style="margin: 0; padding: 0 0 1em 0"><label><input type="checkbox" name="2" checked="checked" /> <strong>⪮ Good Morning                                                                                                                                                                                                                                                 </strong><br/><span style="opacity: 0.6">(Season 2) Sent monthly, 4 links, all interesting stuff, no self-promotion.</span></label></div>
               </div>
                             <button name="subscribe" class="button">Unsubscribe</button>
                       </form>
@@ -627,7 +627,7 @@
 					<ul style="margin-top: 1em	">
 						<!-- <li>Capabilities</li> -->
 						<li><a href="../required/index.html">Writing</a></li>
-						<li><a href="../required/category/weeknotes/index.html">Weeknote #612</a></li>
+						<li><a href="../required/category/weeknotes/index.html">Weeknote #619</a></li>
 						<!--  <li>Media Kit</li> -->
 						<!--  <li>Open Source</li> -->
 					</ul>
@@ -655,7 +655,7 @@
 						<h3>Misseristal</h3>
 
 						<p style="margin:0">
-							Today is <strong>Sunnudagur</strong> the 9th day of the month of <strong>Gormánuður</strong>, the 1st month of winter.
+							Today is <strong>Sunnudagur</strong> the 28th day of the month of <strong>Ýlir</strong>, the 2nd month of winter.
 						</p>
 				</div>
 				<div>
