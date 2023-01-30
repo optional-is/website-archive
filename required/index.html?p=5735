@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>(optional.is)   Apple Remotes</title>
+
+<link rel="stylesheet" href="wp-content/themes/optional/style.css" type="text/css" media="all" />
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="https://optional.is/required/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../images/apple-touch-icon-precomposed.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@optionalBot">
+<meta name="twitter:title" content="Apple Remotes">
+<meta name="twitter:description" content="A look at the UI for all four of the Apple Remotes produced. Spanning 17 years of technology, the number of buttons has more than doubled.">
+<meta name="twitter:creator" content="@optionalBot">
+<meta name="twitter:domain" content="http://optional.is">
+</head>
+<body>
+
+
+<div id="header">
+<h1><a href="index.html">(optional.is)</a></h1>
+</div>
+
+			
+		<div class="post-5735 post type-post status-publish format-standard hentry category-interfaces tag-apple tag-buttons tag-feature-creep tag-ipod tag-remotes tag-siri tag-ui tag-ux" id="post-5735">
+			<h1>Apple Remotes</h1>
+			<div style="border-bottom: 2px solid #2b0195; padding: 2em 0; margin-bottom: 2em" class="time"><abbr title="2022-04-26T13:31:00+00:00">Tuesday, April 26th, 02022 at 13:31 UTC</abbr></div>
+
+			<div class="entry">
+				
+<p>We tend to never throw anything away and it ends up in a draw because it might be useful some day. Rummaging around, we found all four generations of the <a href="https://en.wikipedia.org/wiki/Apple_Remote">Apple Remotes</a>. Let&#8217;s take a look at each one and what functionality they provided.</p>
+
+
+
+<figure class="banner"><img decoding="async" src="wp-content/uploads/2022/03/apple-remote-line-up.jpg" alt="Four Generations of Apple Remotes"/></figure>
+
+
+
+<h2>Small White Plastic Remote (02005)</h2>
+
+
+
+<p>This came with an old MacBook. This was at the start of the iLife app suite and this remote could be used with &#8220;Front Row&#8221; to control your laptop to play movies, pictures, music and more. It has 6 buttons. Four directional control: Up, Down, Left, Right. A play/pause button and a menu/back button. </p>
+
+
+
+<p>It was powered by a CR2032 replaceable battery.</p>
+
+
+
+<h2>Aluminium Remote (02009)</h2>
+
+
+
+<p>This one was released in 02009 and served mostly the same purpose, to control your Mac and Apple TV. This has 7 buttons, the same 6 as before, but the play/pause was moved from the center to a dedicated button and the center became the new 7th confirm button.</p>
+
+
+
+<p>This too used a CR2032 replaceable battery.</p>
+
+
+
+<h2>Siri Remote (02015)</h2>
+
+
+
+<p>This was released with the 4th generation Apple TV. This broke from tradition and removed the circular directional buttons and replaced it with a touch surface like a trackpad. We also got a dedicated Siri button to enable voice input.</p>
+
+
+
+<p>If we count the trackpad as 1 input, we get 8 buttons. 6 physical buttons: play/pause, volume up, volume down, the menu/back button and a new &#8220;TV&#8221; button which either brought you all the way home or launched their dedicated TV app. If you double click the TV button you get additional functionality. The trackpad detects any swipe direction and is pressable as a confirm button.</p>
+
+
+
+<p>This device also has accelerometers and gyroscope to determine its position in space, duel microphones and bluetooth. </p>
+
+
+
+<p>In 02012, Apple introduced the smaller Lightning cable (deprecating the large 30 pin).  With that, the remote removed the replaceable battery and would recharge via this smaller lightning port.</p>
+
+
+
+<p>In 02017, this version got a slight tweak when they added a ring around the menu button to help break the symmetry when holding it.</p>
+
+
+
+<h2>New Siri Remote (02021)</h2>
+
+
+
+<p>Released with the Apple TV 5th generation, this takes a step back to the click wheel, but also keeps some of the trackpad functionality too. This remote has 14 input buttons!</p>
+
+
+
+<p>A play/pause, menu/back, TV, Siri button on the side, volume up, volume down, a new mute button and new power button. It also has the 4 directional buttons which are pressable, a center confirm button which is pressable. That&#8217;s 13, plus the whole directional input area is also a trackpad, for 14 inputs.</p>
+
+
+
+<p>They removed the accelorometers and gyroscope, but kept the microphones and bluetooth. The power continues to use an internal battery chargeable via a lightning port.</p>
+
+
+
+<h2>iPod Shuffles (02005-02015)</h2>
+
+
+
+<figure class="banner"><img decoding="async" loading="lazy" width="1000" height="962" src="wp-content/uploads/2022/03/ipod-shuffles.jpg" alt="" class="wp-image-5746" srcset="wp-content/uploads/2022/03/ipod-shuffles.jpg 1000w, wp-content/uploads/2022/03/ipod-shuffles-300x289.jpg 300w, wp-content/uploads/2022/03/ipod-shuffles-768x739.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" /><figcaption>2nd and 1st generation iPod Shuffles</figcaption></figure>
+
+
+
+<p>The first plastic Apple Remote and the <a href="https://en.wikipedia.org/wiki/IPod_Shuffle">iPod shuffle</a> where certainly siblings in UI design and button functionality. With a play/pause button and the ring, which harks back to the original click wheel iPod, containing volume up, volume down, and backwards and forwards to skip tracks, this is a nearly identical  layout to the remotes.</p>
+
+
+
+<p>We can see the evolution of functionality in these remotes. From promoting voice assistance via a dedicated button, to reversing course on designs that didn&#8217;t work, each gets slightly more complex while trying to balance the customer-needs with functionality.</p>
+
+
+
+<p>This &#8220;wheel directional-pad&#8221; is a pretty minimal design with very limited, learned inputs. It makes sense they would use the UI in all sorts of products over the last 18 years and we&#8217;d bet, we&#8217;ll see it this UI for another 18 years.</p>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="category/interfaces/index.html" title="View all articles in Interfaces" rel="tag category" class="category">Interfaces</a></p><p><strong>Tags:</strong> <a href="tag/apple/index.html" rel="tag"  class="tag">apple</a>, <a href="tag/buttons/index.html" rel="tag"  class="tag">buttons</a>, <a href="tag/feature-creep/index.html" rel="tag"  class="tag">feature creep</a>, <a href="tag/ipod/index.html" rel="tag"  class="tag">iPod</a>, <a href="tag/remotes/index.html" rel="tag"  class="tag">remotes</a>, <a href="tag/siri/index.html" rel="tag"  class="tag">siri</a>, <a href="tag/ui/index.html" rel="tag"  class="tag">UI</a>, <a href="tag/ux/index.html" rel="tag"  class="tag">UX</a></p>			  </div>
+			
+				
+   <div style="border-top: 4px solid #333; border-bottom: 1px solid #ddd; margin: 60px 0 100px 0">
+      <style>
+         .navigation {
+            display: grid;
+            grid-template-columns: minmax(200px, 1fr) minmax(20px, 1fr)  minmax(200px, 1fr);
+            grid-gap: 0px;
+            background-color: #f7f7f7;
+			padding-bottom: 0;
+         }
+         .navigation div a { display: block; height: 100%; text-decoration: none; color: #333; padding: 0 1em; background-color: #f7f7f7; }
+		 .navigation div a:visited { background-color: #f7f7f7; }
+         .navigation div a:hover { background-color: rgb(0,0,0,0.1); }
+         .navigation  div  { line-height: 20px; font-size: 14px; margin: 15px 0; }
+         .navigation div span { display: block; margin: 0; padding: 0 0 40px 0; font-weight: normal; color: #666; }
+        .navigation div span.time, .navigation div span.time { display: block; margin: 0; padding: 0; font-weight: 600; font-size: 24px; line-height: 48px; padding-top: 10px; color: #444;}
+         .navigation .prev, .navigation .next, .navigation .home  { margin: 0; padding: 0; text-align: left; } 
+		  @media screen and (max-width: 550px) {
+			  .navigation { display: block; }
+			  .navigation .prev,  .navigation .next { float: none; }
+			  .navigation .home { border: 1px solid #ddd; }
+		  } 
+		  
+		  
+		  
+      </style>
+      <div class="navigation">
+         <div class="prev" >
+<a href="2022/04/22/week-582-583-584/index.html" style="text-decoration: none;"><span class="time">22 April 02022</span><span>Week #582, #583, #584</span></a>			 
+         </div>
+
+
+         <div class="home" style="border-left: 1px solid #ddd; border-right: 1px solid #ddd; text-align: center;">
+            <a href="../index.html"><svg width="50%"><use xlink:href="#optional-logo"></use></svg></a>
+         </div>
+
+         <div class="next">
+			 <a href="2022/05/06/week-585-586/index.html" style="text-decoration: none;"><span class="time">06 May 02022</span><span>Week  #585 & #586</span></a>         </div>
+      </div>
+   </div> 				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+		<!--		
+		<div class="navigation" style="border-bottom: 1px solid #aaa">
+			<div class="prev"><div class="time">22 April 02022</div><a href="/required/2022/04/22/week-582-583-584/" style="text-decoration: none;>&laquo; Week #582, #583, #584</a></div>
+			<div class="next"><div class="time">06 May 02022</div><a href="/required/2022/05/06/week-585-586/" style="text-decoration: none;">Week  #585 & #586 &raquo;</a></div>
+		</div>
+-->
+			</div>
+			
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+<svg class="svgs" version="1.1" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+   <symbol id="optional-logo" viewBox="0 0 284.478 66.043">
+   <path d="M14.128,33.557c0-4.464,1.599-8.264,4.798-11.39c3.185-3.131,7.081-4.704,11.673-4.704c4.607,0,8.519,1.586,11.739,4.736
+      c3.164,3.148,4.75,7.021,4.75,11.612c0,4.629-1.586,8.513-4.784,11.64c-3.22,3.108-7.164,4.665-11.84,4.665
+      c-4.63,0-8.508-1.584-11.64-4.76C15.695,42.226,14.128,38.293,14.128,33.557z M21.427,33.685c0,3.088,0.824,5.527,2.472,7.324
+      c1.699,1.821,3.922,2.734,6.701,2.734c2.788,0,5.023-0.898,6.692-2.702c1.673-1.797,2.507-4.198,2.507-7.202
+      c0-3.003-0.834-5.404-2.507-7.202c-1.698-1.814-3.922-2.727-6.692-2.727c-2.734,0-4.948,0.912-6.635,2.727
+      C22.273,28.456,21.427,30.809,21.427,33.685z"></path>
+   <path d="M57.723,66.043H50.58V18.326h7.143v3.364c2.817-2.809,6.004-4.228,9.583-4.228c4.248,0,7.75,1.573,10.5,4.704
+      c2.792,3.109,4.188,7.032,4.188,11.771c0,4.63-1.382,8.492-4.154,11.573c-2.75,3.069-6.218,4.604-10.405,4.604
+      c-3.618,0-6.851-1.45-9.711-4.351V66.043z M74.702,33.967c0-2.961-0.813-5.373-2.417-7.236c-1.626-1.875-3.68-2.82-6.158-2.82
+      c-2.623,0-4.747,0.912-6.372,2.727c-1.627,1.819-2.448,4.211-2.448,7.175c0,2.894,0.82,5.283,2.448,7.169
+      c1.609,1.84,3.721,2.763,6.345,2.763c2.473,0,4.514-0.938,6.123-2.794C73.871,39.089,74.702,36.761,74.702,33.967z"></path>
+   <path d="M94.226,24.988v24.237h-7.138V24.988h-3.041v-6.662h3.041V6.997h7.138v11.329h3.113v6.662H94.226z"></path>
+   <path d="M100.306,7.103c0-1.257,0.453-2.328,1.365-3.236c0.907-0.906,1.999-1.366,3.271-1.366c1.289,0,2.384,0.46,3.298,1.366
+      c0.905,0.891,1.365,1.975,1.365,3.27c0,1.289-0.46,2.386-1.365,3.299c-0.886,0.912-1.981,1.365-3.271,1.365
+      c-1.288,0-2.39-0.453-3.297-1.365C100.759,9.521,100.306,8.415,100.306,7.103z M108.526,18.326v30.899h-7.148V18.326H108.526z"></path>
+   <path d="M112.045,33.557c0-4.464,1.599-8.264,4.789-11.39c3.194-3.131,7.093-4.704,11.673-4.704c4.614,0,8.532,1.586,11.745,4.736
+      c3.171,3.148,4.759,7.021,4.759,11.612c0,4.629-1.599,8.513-4.791,11.64c-3.214,3.108-7.158,4.665-11.834,4.665
+      c-4.63,0-8.513-1.584-11.644-4.76C113.61,42.226,112.045,38.293,112.045,33.557z M119.341,33.685c0,3.088,0.824,5.527,2.473,7.324
+      c1.694,1.821,3.927,2.734,6.693,2.734c2.794,0,5.025-0.898,6.701-2.702c1.669-1.797,2.5-4.198,2.5-7.202
+      c0-3.003-0.832-5.404-2.5-7.202c-1.694-1.814-3.93-2.727-6.701-2.727c-2.722,0-4.934,0.912-6.626,2.727
+      C120.187,28.456,119.341,30.809,119.341,33.685z"></path>
+   <path d="M148.502,18.326h7.169v2.854c2.496-2.475,5.306-3.718,8.443-3.718c3.59,0,6.389,1.142,8.401,3.4
+      c1.733,1.93,2.602,5.064,2.602,9.425v18.938h-7.171V31.993c0-3.043-0.425-5.146-1.271-6.309c-0.819-1.178-2.324-1.774-4.503-1.774
+      c-2.375,0-4.055,0.784-5.04,2.346c-0.979,1.537-1.461,4.237-1.461,8.075v14.895h-7.169V18.326z"></path>
+   <path d="M202.845,18.326h7.176v30.899h-7.176v-3.233c-2.938,2.753-6.103,4.124-9.489,4.124c-4.269,0-7.799-1.539-10.593-4.634
+      c-2.771-3.15-4.154-7.083-4.154-11.798c0-4.637,1.383-8.497,4.154-11.584c2.772-3.088,6.24-4.638,10.406-4.638
+      c3.596,0,6.822,1.484,9.676,4.45V18.326z M185.905,33.685c0,2.96,0.79,5.373,2.373,7.232c1.632,1.878,3.683,2.826,6.158,2.826
+      c2.644,0,4.783-0.913,6.41-2.734c1.627-1.882,2.445-4.27,2.445-7.17c0-2.893-0.818-5.284-2.445-7.169
+      c-1.627-1.835-3.738-2.76-6.346-2.76c-2.451,0-4.502,0.927-6.157,2.792C186.719,28.584,185.905,30.915,185.905,33.685z"></path>
+   <path d="M222.102,7.014v42.212h-7.135V7.014H222.102z"></path>
+   <path d="M225.76,44.864c0-1.188,0.437-2.211,1.3-3.08c0.867-0.864,1.902-1.299,3.108-1.299s2.246,0.435,3.109,1.299
+      c0.869,0.869,1.305,1.901,1.305,3.108c0,1.228-0.436,2.274-1.305,3.145c-0.846,0.838-1.882,1.266-3.109,1.266
+      c-1.25,0-2.295-0.428-3.138-1.266C226.179,47.188,225.76,46.13,225.76,44.864z"></path>
+   <path d="M237.121,7.103c0-1.257,0.454-2.328,1.368-3.236c0.912-0.906,1.996-1.366,3.27-1.366c1.287,0,2.389,0.46,3.296,1.366
+      c0.908,0.891,1.361,1.975,1.361,3.27c0,1.289-0.453,2.386-1.361,3.299c-0.891,0.912-1.974,1.365-3.265,1.365
+      c-1.294,0-2.389-0.453-3.301-1.365C237.575,9.521,237.121,8.415,237.121,7.103z M245.338,18.326v30.899h-7.131V18.326H245.338z"></path>
+   <path d="M269.089,23.594l-5.893,3.137c-0.936-1.875-2.087-2.82-3.464-2.82c-0.659,0-1.216,0.215-1.683,0.651
+      c-0.463,0.433-0.697,0.985-0.697,1.66c0,1.185,1.379,2.355,4.128,3.519c3.784,1.633,6.335,3.127,7.64,4.499
+      c1.312,1.376,1.971,3.223,1.971,5.546c0,2.979-1.1,5.472-3.305,7.477c-2.129,1.903-4.712,2.854-7.738,2.854
+      c-5.186,0-8.846-2.528-11.004-7.579l6.086-2.826c0.848,1.482,1.494,2.422,1.937,2.826c0.868,0.802,1.903,1.206,3.109,1.206
+      c2.411,0,3.617-1.1,3.617-3.305c0-1.265-0.935-2.45-2.794-3.558c-0.72-0.354-1.432-0.7-2.152-1.04
+      c-0.725-0.343-1.455-0.686-2.19-1.051c-2.075-1.019-3.535-2.029-4.383-3.041c-1.071-1.295-1.614-2.95-1.614-4.986
+      c0-2.688,0.918-4.898,2.761-6.66c1.874-1.753,4.167-2.64,6.85-2.64C264.225,17.463,267.168,19.512,269.089,23.594z"></path>
+   <path d="M5.212,7.544l4.951,1.903C8.43,13.585,7.214,17.41,6.522,20.916c-0.348,1.775-0.608,3.646-0.785,5.605
+      c-0.171,1.958-0.265,4.092-0.265,6.411c0,2.336,0.093,4.479,0.265,6.438c0.177,1.96,0.437,3.823,0.785,5.606
+      c0.681,3.483,1.893,7.3,3.641,11.438l-4.951,1.902C1.742,51.078,0,42.615,0,32.933C0,23.257,1.742,14.793,5.212,7.544z"></path>
+   <path d="M279.288,58.503l-4.951-1.903c1.748-4.149,2.961-7.955,3.646-11.446c0.713-3.489,1.068-7.501,1.068-12.042
+      c0-4.505-0.355-8.516-1.068-12.02c-0.697-3.505-1.913-7.334-3.646-11.466l4.951-1.908c3.464,7.252,5.189,15.717,5.189,25.394
+      C284.478,42.785,282.752,51.245,279.288,58.503z"></path>
+   </symbol>
+
+</svg>
+<div id="footer" class="vcard">
+  <div>
+  <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
+<form method="get" id="searchform" action="http://optional.is/required/" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+-->
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+</div> 
+<a href="../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.155 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2023-01-30 14:56:00 -->
+
+<!-- super cache -->
