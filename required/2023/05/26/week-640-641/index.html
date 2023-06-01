@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>(optional.is)   Week #640 &#038; #641</title>
+
+<link rel="stylesheet" href="../../../../wp-content/themes/optional/style.css" type="text/css" media="all" />
+<link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
+<link rel="pingback" href="https://optional.is/required/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@optionalBot">
+<meta name="twitter:title" content="Week #640 & #641">
+<meta name="twitter:description" content="A double weeknote, mostly focusing on SpellStruck.">
+<meta name="twitter:creator" content="@optionalBot">
+<meta name="twitter:domain" content="http://optional.is">
+</head>
+<body>
+
+
+<div id="header">
+<h1><a href="../../../../index.html">(optional.is)</a></h1>
+</div>
+
+			
+		<div class="post-6665 post type-post status-publish format-standard hentry category-briefs category-weeknotes tag-holidays tag-newsletters tag-spellstruck tag-surveys" id="post-6665">
+			<h1>Week #640 &#038; #641</h1>
+			<div style="border-bottom: 2px solid #f5c104; padding: 2em 0; margin-bottom: 2em" class="time"><abbr title="2023-05-26T20:02:00+00:00">Friday, May 26th, 02023 at 20:02 UTC</abbr></div>
+
+			<div class="entry">
+				
+<h2 class="wp-block-heading">Week #640</h2>
+
+
+
+<p>640 has several interesting namesakes. The <a href="https://en.wikipedia.org/wiki/A640_road">A640 is a road in England</a> that runs between&nbsp;Rochdale&nbsp;in&nbsp;Greater Manchester&nbsp;and&nbsp;Huddersfield&nbsp;in&nbsp;West Yorkshire and will take you around 35 minutes to drive. The <a href="https://en.wikipedia.org/wiki/Lamborghini_Murciélago">Lamborghini Murciélago LP640</a> which ended production in 02010 (slightly more than 640 weeks ago). The <a href="https://en.wikipedia.org/wiki/Zenair_CH_640">Zenair CH 640</a> is a Canadian&nbsp;light aircraft&nbsp;that is produced in the form of a kit for&nbsp;amateur construction!</p>
+
+
+
+<figure class="banner"><img decoding="async" src="../../../../wp-content/uploads/2023/05/downtown-closed.jpg" alt="Photo of a blocked street and no cars"/></figure>
+
+
+
+<p>Tuesday and Wednesday the European Summit was held in Reykjavik and much of downtown was closed to car and foot traffic for security reasons. It was strange and nice to see the downtown area with less car traffic.</p>
+
+
+
+<p>Thursday was <em>Uppstigningardagur</em> in Iceland, or <em>Ascension Thursday</em>. It is a public holiday so not as much got done.</p>
+
+
+
+<p>On Friday we robocalled a few thousand people to remind them of the survey closing and they still have not answered. We also sent out our <a href="../../../../../newsletter/02023Q2/index.html">Quarternotes newsletter 02023Q2</a>. Over the weekend, it got mentioned in a much bigger newsletter and we were bombarded with sign-ups. To the point that we thought our homemade captcha was failing and spammers had found away around the double opt-in! After some homework and digging through the logs, they were legit and welcome aboard!</p>
+
+
+
+<h2 class="wp-block-heading">Week #641</h2>
+
+
+
+<p>This week shares its name with <a href="https://en.wikipedia.org/wiki/641_Agnes">641 Agnes</a>, a stony Florian asteroid in the inner main asteroid belt. It is estimated to be 9km in diameter with a slow rotation.</p>
+
+
+
+<p>After all the new newsletter sign-ups, we sent out the <a href="../../../../../newsletter/s02e05/index.html">⪮ Good Morning s02e05 newsletter</a> on Tuesday. It was a bit late. We try to send it the in middle of each month, but the cascade of deadlines and Quarternotes newsletter pushed things back. It&#8217;s out now and you can read it online and/or subscribe to get it delivered to your inbox.</p>
+
+
+
+<p>After sending out the newsletter we had two people book some open-office hours with us. They were friend we had not talked to in many years, so it was great to reconnect and see what they&#8217;re up to these days. Hopefully, this will continue to be a regular thing.</p>
+
+
+
+<p>This week has been dominated by non-work tasks. Part of the team has been spending the mornings re-building their home kitchen, but in the evenings has been working on <em>Spellstruck</em> analytics. Now that we have a few weeks of data and the rest of the team is thinking clearly, we can start to ask interesting questions and dig into the data further. This is what we do best! One task was to look into how many people are playing each of the three modes: single player, multiplayer and the daily challenge. Using our experience, we created a table for each user on the day with a column for the number of games in the three different modes. Then a fourth column which concatenated if each column was greater than 0. That created 8 different possibilities, 000, 001, 010, 011, &#8230; 111. These are the wedges and counts in our Venn diagram. The SQL is much simpler,<code> SELECT count(id), venn FROM daily_venn GROUP BY venn</code>.</p>
+
+
+
+<figure class="banner"><a href="https://apple.co/-SpellStruck"><img decoding="async" src="../../../../wp-content/uploads/2023/05/spellstruck-arcade.jpg" alt="Screenshot of the Apple Arcade homepage featuring SpellStruck"/></a></figure>
+
+
+
+<p>On Friday, Apple Arcade featured <em><a href="https://apple.co/-SpellStruck">SpellStruck</a></em>. We had known for awhile and have been working with Apple and Disney on all the different marketing material. This is a long three day weekend. We&#8217;ll be watching the numbers and servers closely.</p>
+
+
+
+<h2 class="wp-block-heading">Fluxcapacitor</h2>
+
+
+
+<p>Back in 02010, we did a longer write-up about a 02007 project to <a href="../../../../index.html?p=1279">redesign an airlines boarding pass</a>.</p>
+
+
+
+<p>In 02012, we <a href="../../../../2012/05/23/the-data-journalism-handbook/index.html">contributed a chapter to the Data Journalism Handbook</a>. You can read it online.</p>
+
+
+
+<p><a href="../../../../2015/05/24/week-221-222-223/index.html">A triple weeknote from 02015</a>: mostly about the state of the company and some projects that never really panned out.</p>
+
+
+
+<h2 class="wp-block-heading">Bric-à-brac</h2>
+
+
+
+<p>With this week&#8217;s passing of Tina Turner, we went back to re-listen to the <a href="https://kitchensisters.org/present/9950-2/">Kitchen Sisters episode &#8220;Soul to Soul at 50&#8221;</a>.</p>
+
+
+
+<blockquote class="wp-block-quote is-style-default">
+<p>On March 6, 1971, a group of some of the top musicians from the United States -– Ike and Tina Turner, Wilson Pickett, the Staple Singers, and more -– boarded a plane bound for Ghana to perform in a musical celebration that was dubbed the “Soul to Soul Festival.” Thousands of audience members filled Accra’s Black Star Square for a continuous 15 hours of music. The festival was planned in part for the annual celebration of Ghana’s independence, but also as an invitation to a “homecoming” for these noted African-American artists to return to Africa.</p>
+</blockquote>
+
+              <div class="postmetadata">
+					<p><strong>Categories:</strong> <a href="../../../../category/briefs/index.html" title="View all articles in Briefs" rel="tag category" class="category">Briefs</a>, <a href="../../../../category/weeknotes/index.html" title="View all articles in Weeknotes" rel="tag category" class="category">Weeknotes</a></p><p><strong>Tags:</strong> <a href="../../../../tag/holidays/index.html" rel="tag"  class="tag">holidays</a>, <a href="../../../../tag/newsletters/index.html" rel="tag"  class="tag">newsletters</a>, <a href="../../../../tag/spellstruck/index.html" rel="tag"  class="tag">spellstruck</a>, <a href="../../../../tag/surveys/index.html" rel="tag"  class="tag">surveys</a></p>			  </div>
+			
+				
+   <div style="border-top: 4px solid #333; border-bottom: 1px solid #ddd; margin: 60px 0 100px 0">
+      <style>
+         .navigation {
+            display: grid;
+            grid-template-columns: minmax(200px, 1fr) minmax(20px, 1fr)  minmax(200px, 1fr);
+            grid-gap: 0px;
+            background-color: #f7f7f7;
+			padding-bottom: 0;
+         }
+         .navigation div a { display: block; height: 100%; text-decoration: none; color: #333; padding: 0 1em; background-color: #f7f7f7; }
+		 .navigation div a:visited { background-color: #f7f7f7; }
+         .navigation div a:hover { background-color: rgb(0,0,0,0.1); }
+         .navigation  div  { line-height: 20px; font-size: 14px; margin: 15px 0; }
+         .navigation div span { display: block; margin: 0; padding: 0 0 40px 0; font-weight: normal; color: #666; }
+        .navigation div span.time, .navigation div span.time { display: block; margin: 0; padding: 0; font-weight: 600; font-size: 24px; line-height: 48px; padding-top: 10px; color: #444;}
+         .navigation .prev, .navigation .next, .navigation .home  { margin: 0; padding: 0; text-align: left; } 
+		  @media screen and (max-width: 550px) {
+			  .navigation { display: block; }
+			  .navigation .prev,  .navigation .next { float: none; }
+			  .navigation .home { border: 1px solid #ddd; }
+		  } 
+		  
+		  
+		  
+      </style>
+      <div class="navigation">
+         <div class="prev" >
+<a href="../../12/week-638-639/index.html" style="text-decoration: none;"><span class="time">12 May 02023</span><span>Week #638 & #639</span></a>			 
+         </div>
+
+
+         <div class="home" style="border-left: 1px solid #ddd; border-right: 1px solid #ddd; text-align: center;">
+            <a href="../../../../../index.html"><svg width="50%"><use xlink:href="#optional-logo"></use></svg></a>
+         </div>
+
+         <div class="next">
+			          </div>
+      </div>
+   </div> 				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+		<!--		
+		<div class="navigation" style="border-bottom: 1px solid #aaa">
+			<div class="prev"><div class="time">12 May 02023</div><a href="/required/2023/05/12/week-638-639/" style="text-decoration: none;>&laquo; Week #638 & #639</a></div>
+			<div class="next"></div>
+		</div>
+-->
+			</div>
+			
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are closed. -->
+		<!-- <p class="nocomments">Comments are closed.</p> -->
+
+	
+
+
+	
+<svg class="svgs" version="1.1" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+   <symbol id="optional-logo" viewBox="0 0 284.478 66.043">
+   <path d="M14.128,33.557c0-4.464,1.599-8.264,4.798-11.39c3.185-3.131,7.081-4.704,11.673-4.704c4.607,0,8.519,1.586,11.739,4.736
+      c3.164,3.148,4.75,7.021,4.75,11.612c0,4.629-1.586,8.513-4.784,11.64c-3.22,3.108-7.164,4.665-11.84,4.665
+      c-4.63,0-8.508-1.584-11.64-4.76C15.695,42.226,14.128,38.293,14.128,33.557z M21.427,33.685c0,3.088,0.824,5.527,2.472,7.324
+      c1.699,1.821,3.922,2.734,6.701,2.734c2.788,0,5.023-0.898,6.692-2.702c1.673-1.797,2.507-4.198,2.507-7.202
+      c0-3.003-0.834-5.404-2.507-7.202c-1.698-1.814-3.922-2.727-6.692-2.727c-2.734,0-4.948,0.912-6.635,2.727
+      C22.273,28.456,21.427,30.809,21.427,33.685z"></path>
+   <path d="M57.723,66.043H50.58V18.326h7.143v3.364c2.817-2.809,6.004-4.228,9.583-4.228c4.248,0,7.75,1.573,10.5,4.704
+      c2.792,3.109,4.188,7.032,4.188,11.771c0,4.63-1.382,8.492-4.154,11.573c-2.75,3.069-6.218,4.604-10.405,4.604
+      c-3.618,0-6.851-1.45-9.711-4.351V66.043z M74.702,33.967c0-2.961-0.813-5.373-2.417-7.236c-1.626-1.875-3.68-2.82-6.158-2.82
+      c-2.623,0-4.747,0.912-6.372,2.727c-1.627,1.819-2.448,4.211-2.448,7.175c0,2.894,0.82,5.283,2.448,7.169
+      c1.609,1.84,3.721,2.763,6.345,2.763c2.473,0,4.514-0.938,6.123-2.794C73.871,39.089,74.702,36.761,74.702,33.967z"></path>
+   <path d="M94.226,24.988v24.237h-7.138V24.988h-3.041v-6.662h3.041V6.997h7.138v11.329h3.113v6.662H94.226z"></path>
+   <path d="M100.306,7.103c0-1.257,0.453-2.328,1.365-3.236c0.907-0.906,1.999-1.366,3.271-1.366c1.289,0,2.384,0.46,3.298,1.366
+      c0.905,0.891,1.365,1.975,1.365,3.27c0,1.289-0.46,2.386-1.365,3.299c-0.886,0.912-1.981,1.365-3.271,1.365
+      c-1.288,0-2.39-0.453-3.297-1.365C100.759,9.521,100.306,8.415,100.306,7.103z M108.526,18.326v30.899h-7.148V18.326H108.526z"></path>
+   <path d="M112.045,33.557c0-4.464,1.599-8.264,4.789-11.39c3.194-3.131,7.093-4.704,11.673-4.704c4.614,0,8.532,1.586,11.745,4.736
+      c3.171,3.148,4.759,7.021,4.759,11.612c0,4.629-1.599,8.513-4.791,11.64c-3.214,3.108-7.158,4.665-11.834,4.665
+      c-4.63,0-8.513-1.584-11.644-4.76C113.61,42.226,112.045,38.293,112.045,33.557z M119.341,33.685c0,3.088,0.824,5.527,2.473,7.324
+      c1.694,1.821,3.927,2.734,6.693,2.734c2.794,0,5.025-0.898,6.701-2.702c1.669-1.797,2.5-4.198,2.5-7.202
+      c0-3.003-0.832-5.404-2.5-7.202c-1.694-1.814-3.93-2.727-6.701-2.727c-2.722,0-4.934,0.912-6.626,2.727
+      C120.187,28.456,119.341,30.809,119.341,33.685z"></path>
+   <path d="M148.502,18.326h7.169v2.854c2.496-2.475,5.306-3.718,8.443-3.718c3.59,0,6.389,1.142,8.401,3.4
+      c1.733,1.93,2.602,5.064,2.602,9.425v18.938h-7.171V31.993c0-3.043-0.425-5.146-1.271-6.309c-0.819-1.178-2.324-1.774-4.503-1.774
+      c-2.375,0-4.055,0.784-5.04,2.346c-0.979,1.537-1.461,4.237-1.461,8.075v14.895h-7.169V18.326z"></path>
+   <path d="M202.845,18.326h7.176v30.899h-7.176v-3.233c-2.938,2.753-6.103,4.124-9.489,4.124c-4.269,0-7.799-1.539-10.593-4.634
+      c-2.771-3.15-4.154-7.083-4.154-11.798c0-4.637,1.383-8.497,4.154-11.584c2.772-3.088,6.24-4.638,10.406-4.638
+      c3.596,0,6.822,1.484,9.676,4.45V18.326z M185.905,33.685c0,2.96,0.79,5.373,2.373,7.232c1.632,1.878,3.683,2.826,6.158,2.826
+      c2.644,0,4.783-0.913,6.41-2.734c1.627-1.882,2.445-4.27,2.445-7.17c0-2.893-0.818-5.284-2.445-7.169
+      c-1.627-1.835-3.738-2.76-6.346-2.76c-2.451,0-4.502,0.927-6.157,2.792C186.719,28.584,185.905,30.915,185.905,33.685z"></path>
+   <path d="M222.102,7.014v42.212h-7.135V7.014H222.102z"></path>
+   <path d="M225.76,44.864c0-1.188,0.437-2.211,1.3-3.08c0.867-0.864,1.902-1.299,3.108-1.299s2.246,0.435,3.109,1.299
+      c0.869,0.869,1.305,1.901,1.305,3.108c0,1.228-0.436,2.274-1.305,3.145c-0.846,0.838-1.882,1.266-3.109,1.266
+      c-1.25,0-2.295-0.428-3.138-1.266C226.179,47.188,225.76,46.13,225.76,44.864z"></path>
+   <path d="M237.121,7.103c0-1.257,0.454-2.328,1.368-3.236c0.912-0.906,1.996-1.366,3.27-1.366c1.287,0,2.389,0.46,3.296,1.366
+      c0.908,0.891,1.361,1.975,1.361,3.27c0,1.289-0.453,2.386-1.361,3.299c-0.891,0.912-1.974,1.365-3.265,1.365
+      c-1.294,0-2.389-0.453-3.301-1.365C237.575,9.521,237.121,8.415,237.121,7.103z M245.338,18.326v30.899h-7.131V18.326H245.338z"></path>
+   <path d="M269.089,23.594l-5.893,3.137c-0.936-1.875-2.087-2.82-3.464-2.82c-0.659,0-1.216,0.215-1.683,0.651
+      c-0.463,0.433-0.697,0.985-0.697,1.66c0,1.185,1.379,2.355,4.128,3.519c3.784,1.633,6.335,3.127,7.64,4.499
+      c1.312,1.376,1.971,3.223,1.971,5.546c0,2.979-1.1,5.472-3.305,7.477c-2.129,1.903-4.712,2.854-7.738,2.854
+      c-5.186,0-8.846-2.528-11.004-7.579l6.086-2.826c0.848,1.482,1.494,2.422,1.937,2.826c0.868,0.802,1.903,1.206,3.109,1.206
+      c2.411,0,3.617-1.1,3.617-3.305c0-1.265-0.935-2.45-2.794-3.558c-0.72-0.354-1.432-0.7-2.152-1.04
+      c-0.725-0.343-1.455-0.686-2.19-1.051c-2.075-1.019-3.535-2.029-4.383-3.041c-1.071-1.295-1.614-2.95-1.614-4.986
+      c0-2.688,0.918-4.898,2.761-6.66c1.874-1.753,4.167-2.64,6.85-2.64C264.225,17.463,267.168,19.512,269.089,23.594z"></path>
+   <path d="M5.212,7.544l4.951,1.903C8.43,13.585,7.214,17.41,6.522,20.916c-0.348,1.775-0.608,3.646-0.785,5.605
+      c-0.171,1.958-0.265,4.092-0.265,6.411c0,2.336,0.093,4.479,0.265,6.438c0.177,1.96,0.437,3.823,0.785,5.606
+      c0.681,3.483,1.893,7.3,3.641,11.438l-4.951,1.902C1.742,51.078,0,42.615,0,32.933C0,23.257,1.742,14.793,5.212,7.544z"></path>
+   <path d="M279.288,58.503l-4.951-1.903c1.748-4.149,2.961-7.955,3.646-11.446c0.713-3.489,1.068-7.501,1.068-12.042
+      c0-4.505-0.355-8.516-1.068-12.02c-0.697-3.505-1.913-7.334-3.646-11.466l4.951-1.908c3.464,7.252,5.189,15.717,5.189,25.394
+      C284.478,42.785,282.752,51.245,279.288,58.503z"></path>
+   </symbol>
+
+</svg>
+<div id="footer" class="vcard">
+  <div>
+  <div style="float: left; font-size: 16px;">
+	  <form id="search" class="single" action="https://duckduckgo.com/">
+				<input type="hidden" name="sites" value="optional.is">
+				<input type="search" name="q" placeholder="Find..."><button>Search</button>
+			</form>
+	  <!--
+<form method="get" id="searchform" action="http://optional.is/required/" >
+<div><input type="text" value="" name="s" id="s" /><input type="submit" id="searchsubmit" value="Search" /></div>
+</form>
+-->
+Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
+</div> 
+<a href="../../../../../index.html" class="url fn org" style="float:right; display: block;">(optional.is)</a>
+  </div>
+</div>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-2497164-9"); pageTracker._trackPageview(); } catch(err) {}</script>
+
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.169 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2023-06-01 21:33:41 -->
+
+<!-- super cache -->
