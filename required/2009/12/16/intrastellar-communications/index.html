@@ -10,7 +10,7 @@
 <link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
 <link rel="pingback" href="https://optional.is/required/xmlrpc.php" />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://optional.is/required/wp-includes/wlwmanifest.xml" />
 <link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta name="twitter:card" content="summary">
@@ -41,11 +41,11 @@
 <p>When we were all on 14.4 modems, it didn&#8217;t matter if the latency of fetching data took 250 or 300 milliseconds, you were always hindered by the bandwidth. As we are getting connections with larger and larger through-put, the most noticeable limitation is becoming the latency and we know that the fastest possible speed is constant, the speed of light.</p>
 <h2>Talking to the Moon</h2>
 <p>Our <a href="http://en.wikipedia.org/wiki/Moon">Moon</a> is approximately 384,403 kilometers away. That&#8217;s 1.25 light-seconds. This means that any message that we send to the moon takes about 1.25 seconds to get there, then another 1.25 seconds for someone to reply. This means an overall delay of about 2.5 seconds between messages in communications. This would be a pretty annoying and boring conversation if all the awkward pauses lasted 2.5 seconds and were after each sentence!</p>
-<div class="banner"><img decoding="async" loading="lazy" title="Speed_of_light_from_Earth_to_Moon" src="../../../../wp-content/uploads/2009/12/Speed_of_light_from_Earth_to_Moon.gif" alt="Speed_of_light_from_Earth_to_Moon" width="640" height="60" /></div>
+<div class="banner"><img decoding="async" title="Speed_of_light_from_Earth_to_Moon" src="../../../../wp-content/uploads/2009/12/Speed_of_light_from_Earth_to_Moon.gif" alt="Speed_of_light_from_Earth_to_Moon" width="640" height="60" /></div>
 <p>This is because we cannot exceed the speed light. No matter how much bandwidth we put up between the Earth and the Moon, there is no way to overcome the latency factor. This is what is going to limit intra- and interstellar communications. So how do we get around this?</p>
 <h2>Mission to Mars</h2>
 <p>In early 02004, then President Bush of the USA made the first steps to create a Mars mission by getting back to the Moon by 02020. Let&#8217;s imagine that we do send Astronauts to Mars to explore the surface. Mars is 1.52 AU from the Sun, so on a good year, the distance between Earth and Mars could be as low as .52 AU or about 4 light minutes. On a bad year it would be around 2.5 AU (or more since we can&#8217; t send messages directly through the Sun) which is at least 20 light minutes.</p>
-<p><img decoding="async" loading="lazy" style="float: right; padding-left:10px" title="faux-mars-earth" src="../../../../wp-content/uploads/2009/12/faux-mars-earth.png" alt="faux-mars-earth" width="300" height="370" />On the Moon a 2.5 second round-trip delay is annoying, but on Mars a 40 minute round-trip delay is impractical. NASA designed the most recent missions to Mars, the <a href="http://en.wikipedia.org/wiki/Mars_Exploration_Rover">Mars Exploration Rovers</a>, to work as autonomously as possible. The rovers send back information about their environment, then at night, the NASA team decided where to go and what to examine and sends the information back to the rovers. The next day, the rovers execute the commands and the cycle continues. Instead of synchronous communication between Earth and Mars, it is a massive batch of commands once a day.</p>
+<p><img fetchpriority="high" decoding="async" style="float: right; padding-left:10px" title="faux-mars-earth" src="../../../../wp-content/uploads/2009/12/faux-mars-earth.png" alt="faux-mars-earth" width="300" height="370" />On the Moon a 2.5 second round-trip delay is annoying, but on Mars a 40 minute round-trip delay is impractical. NASA designed the most recent missions to Mars, the <a href="http://en.wikipedia.org/wiki/Mars_Exploration_Rover">Mars Exploration Rovers</a>, to work as autonomously as possible. The rovers send back information about their environment, then at night, the NASA team decided where to go and what to examine and sends the information back to the rovers. The next day, the rovers execute the commands and the cycle continues. Instead of synchronous communication between Earth and Mars, it is a massive batch of commands once a day.</p>
 <p>With Astronauts on the surface of Mars, they would be able to make more independent decisions about what to examine and where to explore. NASA will certainly want to keep tabs on the health and well-being of the crew, but the relay time back to Earth is fixed and could be as slow as 20+ minutes!</p>
 <h3>Can we design a better way?</h3>
 <p>We are observing on an almost daily basis new ways to push more information through the same pipes at ever increasing bandwidth. As with all technology, bandwidth seems to follow <a href="http://en.wikipedia.org/wiki/Moore%27s_law">Moore&#8217;s law</a> and becoming more abundant and cheaper every 18 months. Even if we can&#8217;t exceed the speed of light, can we do more with the ever increasing bandwidth?</p>
@@ -78,7 +78,7 @@
 
 09:40 - Mars gets the reply instructions.</pre>
 <p>So far, no speed increase. The trick here is that on Earth, when the doctor replies, he doesn&#8217;t send just the next step, he also sends the second step for all the possible scenarios. For example, if the first question was &#8220;Is the patient conscious&#8221;, he doesn&#8217;t need to wait 40 minutes to get a yes or no answer. He can simply send, &#8220;if YES, do X&#8221;, &#8220;if NO, do Y&#8221;.</p>
-<p><img decoding="async" loading="lazy" style="float:right; padding-left: 10px" title="binary-search-tree" src="../../../../wp-content/uploads/2009/12/binary-search-tree.png" alt="binary-search-tree" width="294" height="147" /> This is the basis of a binary tree. Each decision has only 2 possible outcomes, YES or NO, LEFT or RIGHT down each fork in the road. For example, if we label the first instruction 1, there are two possible outcomes, 1.1 and 1.2. Each of those have two choices, 1.1.1 and 1.1.2 and 1.2.1 and 1.2.2. As each choice is made, you can see that it is impossible to get to the other portions of the trees. If we went from 1, to 1.1, to 1.1.2, then we can throw away all of the 1.2 branch.</p>
+<p><img loading="lazy" decoding="async" style="float:right; padding-left: 10px" title="binary-search-tree" src="../../../../wp-content/uploads/2009/12/binary-search-tree.png" alt="binary-search-tree" width="294" height="147" /> This is the basis of a binary tree. Each decision has only 2 possible outcomes, YES or NO, LEFT or RIGHT down each fork in the road. For example, if we label the first instruction 1, there are two possible outcomes, 1.1 and 1.2. Each of those have two choices, 1.1.1 and 1.1.2 and 1.2.1 and 1.2.2. As each choice is made, you can see that it is impossible to get to the other portions of the trees. If we went from 1, to 1.1, to 1.1.2, then we can throw away all of the 1.2 branch.</p>
 <p>With near infinite bandwidth, you can queue-up as many of these decisions as possible. So the rest of the scenario plays out slightly differently&#8230;</p>
 <pre>09:20 - Earth gets incoming alert message and gets doctor to begin sending instructions.
 
@@ -264,7 +264,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 
-<!-- Dynamic page generated in 0.161 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2023-08-16 09:59:10 -->
+<!-- Dynamic page generated in 0.182 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2023-11-09 13:56:38 -->
 
 <!-- super cache -->

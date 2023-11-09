@@ -10,7 +10,7 @@
 <link rel="alternate" type="application/atom+xml" title="optional.is/required Atom Feed" href="http://feeds2.feedburner.com/optional?format=xml" />
 <link rel="pingback" href="https://optional.is/required/xmlrpc.php" />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://example.com/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://optional.is/required/wp-includes/wlwmanifest.xml" />
 <link rel="apple-touch-icon-precomposed" href="../../../../../images/apple-touch-icon-precomposed.png"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta name="twitter:card" content="summary">
@@ -35,15 +35,15 @@
 			<div class="entry">
 				<p><a href="http://en.wikipedia.org/wiki/2014_FIFA_World_Cup">This year&#8217;s world cup</a> was another thriller. Here in Iceland, we narrowly lost out to Croatia to get into the tournament. The secondary fallback for the office was the USA. Partly due to some of our team having roots there, but also for the Icelandic player who choose to play for the US rather than his main citizenship, Iceland.</p>
 <p>A few years ago, we developed a simple PHP script to generate some SVG to show the flow of data to and from sources. We experimented with various use-cases. When one person sends an email to another, and receives email from a third. We originally created a wheel which showed incoming and outgoing messages. When the numbers got large, things got messy. It was hard to tell what was incoming and what was outgoing. Our second attempt at this was to have redundant actors, once across the top of the page and again at the bottom of the page. From that, it was easy to see what messages were out going and to whom. Also across the bottom it was easy to see incoming messages and from whom they came. This worked really well for communications, but we thought about other data that could easily fit this mold. Luckily, it was World Cup season 02010 and we quickly realized that teams both score goals and concede them, just like we send and receive messages. So we fired-up some code and generated some SVGs. This is what the raw output looked like:</p>
-<div class="banner"><img decoding="async" class="alignnone size-full wp-image-3197" src="../../../../wp-content/uploads/2014/07/wc-02010-raw.png" alt="World Cup 2010 Raw Data" width="700" height="221" srcset="../../../../wp-content/uploads/2014/07/wc-02010-raw.png 700w, ../../../../wp-content/uploads/2014/07/wc-02010-raw-300x94.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
+<div class="banner"><img fetchpriority="high" decoding="async" class="alignnone size-full wp-image-3197" src="../../../../wp-content/uploads/2014/07/wc-02010-raw.png" alt="World Cup 2010 Raw Data" width="700" height="221" srcset="../../../../wp-content/uploads/2014/07/wc-02010-raw.png 700w, ../../../../wp-content/uploads/2014/07/wc-02010-raw-300x94.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
 <p>We then took that data and brought it into Illustrator to add some notes, groups, team flags, etc. After those changes we got to something that looked more like this:</p>
-<div class="banner"><img decoding="async" loading="lazy" class="alignnone size-full wp-image-3196" src="../../../../wp-content/uploads/2014/07/wc-02010.png" alt="World Cup 2010" width="700" height="512" srcset="../../../../wp-content/uploads/2014/07/wc-02010.png 700w, ../../../../wp-content/uploads/2014/07/wc-02010-300x219.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
+<div class="banner"><img decoding="async" class="alignnone size-full wp-image-3196" src="../../../../wp-content/uploads/2014/07/wc-02010.png" alt="World Cup 2010" width="700" height="512" srcset="../../../../wp-content/uploads/2014/07/wc-02010.png 700w, ../../../../wp-content/uploads/2014/07/wc-02010-300x219.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
 <p>Fast-forward to 02014 and we&#8217;ve got another World Cup on our hands. We dug through the old code repository and updated the values with this year&#8217;s teams and goals. Within a few minutes we had our data visualization again. That&#8217;s the great thing about doing this in code rather than by hand, it might have taken a bit longer when we started, but now that the code is working, we can updated data very, very fast.</p>
 <p>Here is what the raw output looked like after running it through the code:</p>
-<div class="banner"><img decoding="async" loading="lazy" src="../../../../wp-content/uploads/2014/07/worldcup2014-raw.png" alt="worldcup2014-raw" width="700" height="218" /></div>
+<div class="banner"><img decoding="async" src="../../../../wp-content/uploads/2014/07/worldcup2014-raw.png" alt="worldcup2014-raw" width="700" height="218" /></div>
 <p>The colors chosen for each country are simply using our <a href="../../../03/11/in-rainbows/index.html">In Rainbows GetColor function</a>. We&#8217;ve written about choosing colors plenty of times before and there are lots of ways we could have done this; <a href="../../../03/11/in-rainbows/index.html">In Rainbows</a>, <a href="../../../../2010/12/13/hls-world-map/index.html">HLS World Map</a> or something else entirely. As a first pass to make distinct colors this works like a charm.</p>
 <p>After playing around with the design a bit further in Illustrator, adding flags and other features, we&#8217;ve created this:</p>
-<div class="banner"><img decoding="async" loading="lazy" src="../../../../wp-content/uploads/2014/07/worldcup2014.png" alt="worldcup2014" width="700" height="281" /></div>
+<div class="banner"><img loading="lazy" decoding="async" src="../../../../wp-content/uploads/2014/07/worldcup2014.png" alt="worldcup2014" width="700" height="281" /></div>
 <p>We&#8217;re happy with the final product, but you might be curious about how we make all those lines and curves in code. It certainly isn&#8217;t magic, and it is probably way easier than you might think. <a href="https://github.com/optional-is/visualizations/tree/master/to_from">We&#8217;ve put all the code to make these to_from visualization on GitHub</a>. There you will find the 02010 code as well as the 02014 example.</p>
 <p>If we look more closely at the code itself, you&#8217;ll see that it isn&#8217;t as complicated as you might expect.</p>
 <pre class="brush: php; title: ; notranslate" title="">
@@ -342,8 +342,8 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 
 </body>
 </html>
-<script type='text/javascript' src='../../../../wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b' id='syntaxhighlighter-core-js'></script>
-<script type='text/javascript' src='../../../../wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9b' id='syntaxhighlighter-brush-php-js'></script>
+<script type="text/javascript" src="../../../../wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b" id="syntaxhighlighter-core-js"></script>
+<script type="text/javascript" src="../../../../wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9b" id="syntaxhighlighter-brush-php-js"></script>
 <script type='text/javascript'>
 	(function(){
 		var corecss = document.createElement('link');
@@ -388,7 +388,7 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 	}
 </script>
 
-<!-- Dynamic page generated in 0.165 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2023-08-16 09:52:59 -->
+<!-- Dynamic page generated in 0.213 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2023-11-09 13:55:33 -->
 
 <!-- super cache -->

@@ -1,0 +1,19 @@
+#
+# Robot.txt file for optional.is
+#
+# Brian Suda
+# brian@suda.co.uk
+# http://suda.co.uk
+#
+# Stopping the AI Bot from harvesting content
+# version 1.0
+# 2023/10/02
+
+User-agent: Exabot
+Disallow: *
+
+User-agent: msnbot
+Disallow: *
+
+User-agent: Google-Extended
+Disallow: /
