@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+	<head>
+		<title>(optional.is)</title>
+		<dateCreated>Wed, 14 Feb 2024 08:46:00 GMT</dateCreated>
+		<dateModified>Wed, 14 Feb 2024 08:46:00 GMT</dateModified>
+		<ownerName>optional Bot</ownerName>
+		<ownerEmail>optional@optional.is</ownerEmail>
+	</head>
+	<body>
+		<outline type="rss" 
+			text="(optional.is) /required" 
+			title="(optional.is) /required" 
+			xmlUrl="https://optional.is/required/feed/"
+			htmlUrl="https://optional.is/required/"
+			language="english" 
+			description="A small company based out of Reykjavik, Iceland specializing in future thinking projects"  
+		/>
+		<outline type="rss" 
+			text="(optional.is) Weeknotes" 
+			title="(optional.is) Weeknotes" 
+			xmlUrl="https://optional.is/required/category/weeknotes/feed/"
+			htmlUrl="https://optional.is/required/category/weeknotes/"
+			language="english" 
+			description="A brief overview of what’s been happening in the company each week. The number of the weeknote is how many weeks old the company is since inception"  
+		/>
+		<outline type="rss" 
+			text="◍ (optional.is) Quarternotes" 
+			title="◍ (optional.is) Quarternotes" 
+			xmlUrl="https://optional.is/newsletter/feeds/quarternotes.xml"
+			htmlUrl="https://optional.is/newsletter/"
+			language="english" 
+			description="Sent quarterly, a look at what's been happening and interesting tidbits from around the Web."  
+		/>
+		<outline type="rss" 
+			text="⪮ Good Morning" 
+			title="⪮ Good Morning" 
+			xmlUrl="https://optional.is/newsletter/feeds/gm.xml"
+			htmlUrl="https://optional.is/newsletter/"
+			language="english" 
+			description="Sent monthly, 4 links, all interesting stuff, no self-promotion."  
+		/>
+
+
+
+	</body>
+</opml>

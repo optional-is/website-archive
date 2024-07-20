@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/feeds/styles.xsl" type="text/xsl"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>◍ (optional.is) Quarternotes</title>
+	<atom:link href="https://optional.is/newsletter/feeds/quarternotes.rss" rel="self" type="application/rss+xml" />
+	<link>https://optional.is/newsletter/</link>
+	<description>Sent quarterly, a look at what's been happening and interesting tidbits from around the Web.</description>
+	<lastBuildDate>Tue, 16 Jul 2024 08:13:46 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>weekly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>(optional.is) Newsletter Generator</generator>
+	<atom:link rel="hub" href="https://pubsubhubbub.appspot.com"/>
+	<atom:link rel="hub" href="https://pubsubhubbub.superfeedr.com"/>
+	<atom:link rel="hub" href="https://websubhub.com/hub"/>	
+
+	  <item>
+    <title>◍ (optional.is) 02024Q3</title>
+    <link>https://optional.is/newsletter/02024Q3/</link>
+    <dc:creator><![CDATA[optional Bot]]></dc:creator>
+    <pubDate>Mon, 15 Jul 2024 22:31:43 +0000</pubDate>
+    <guid isPermaLink="false">https://optional.is/newsletter/02024Q3/</guid>
+    <description><![CDATA[<strong>02023Q2 REYKJAVIK:</strong> from mid-July to mid-August, we're relocating the office to the other side of the country to Egilsstaðir. It will be a nice change of scenery and a breath of fresh air.]]></description>
+    <content:encoded><![CDATA[		<div class="main" style="max-width: 600px; text-align: left; margin: 0  auto;  padding: 1em 1em 0 1em; font-size: 16px; line-height: 1.4; ">
+			<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://optional.is"><img stlye="margin-bottom: 30px;" class="optional-logo" src="https://optional.is/images/logo-black-sm.png" width="136" height="30" /></a></p>
+
+			<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><em>Hello, this is the (optional.is) quarterly newsletter. Mostly the thoughts of Brian Suda.</em></p>
+			<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><strong>02023Q2 REYKJAVIK:</strong> from mid-July to mid-August, we're relocating the office to the other side of the country to Egilsstaðir. It will be a nice change of scenery and a breath of fresh air.</p>
+
+
+			<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<hr class="hr" style="border-bottom: none;  border-top-width: 1px; border-top-style:solid"/>
+<h2 style="margin: 0; padding:0; line-height: 1.4;">Q2 Writing                                                                                                                                                                                              </h2>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">In Q2, we published one article and six weeknotes. We maintained our newsletter schedule with a full ◍ Quarternotes issue per quarter and a ⪮ Good Morning episode each month.<br />
+<br />
+<strong>Network Plumbing</strong><br />
+<a href="https://optional.is/required/2024/06/25/network-plumbing/"> https://optional.is/required/2024/06/25/network-plumbing/</a><br />
+<br />
+<h3>⪮ Good Morning Newsletter Season 3</h3><br />
+<strong>s03e04: Blue</strong><br />
+<a href="https://optional.is/newsletter/s03e04/">https://optional.is/newsletter/s03e04/</a><br />
+<br />
+<strong>s03e05: Endangered Food</strong><br />
+<a href="https://optional.is/newsletter/s03e05/">https://optional.is/newsletter/s03e05/</a><br />
+<br />
+<strong>s03e06: Bread</strong><br />
+<a href="https://optional.is/newsletter/s03e06/">https://optional.is/newsletter/s03e06/</a><br />
+<br />
+⸻<br />
+<br />
+📰 <a href="https://optional.is/newsletter/">optional.is/newsletter/</a><br />
+🗓 <a href="https://optional.is/required/category/weeknotes">optional.is/required/category/weeknotes</a><br />
+📡 <a href="https://optional.is/feeds/">optional.is/feeds/</a></p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<hr class="hr" style="border-bottom: none;  border-top-width: 1px; border-top-style:solid"/>
+<h2 style="margin: 0; padding:0; line-height: 1.4;">Project Progress                                                                                                                                                                                        </h2>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">This quarter, we've been heads down on at least 10 different external projects. While they've been fun and rewarding, we can't disclose too many details. This is a big challenge: promote our work, show our expertise and set ourselves up to win the next project when the case studies are full of redactions!<br />
+<br />
+<strong>Externally:</strong><br />
+• Built a web & iOS prototype for ███████████ in Miami.<br />
+• Researched and spec'ed out a ████████████ workout app.<br />
+• Has a UI/UX roll on a grant proposal about ████████████ podcasts for ███.<br />
+• Connected sales and inventory control systems for ██████████ in Australia to streamline their data and dashboards.<br />
+• Built a "data bridge" for ██████████ in Australia to convert their P&L from a CSV export into something Fathom could visualize.<br />
+• Explored some new Spatial Computing prototype apps for ██████████.<br />
+• Prepped data analytics for two new ██████████ games.<br />
+• Put together a mockup for a cipher word game for █████████.<br />
+• Pitched an idea for another new ██████████ game.<br />
+• Cleaned-up Trello, closed down servers and prepped a summer task list for ████████. <br />
+• Met with old coworkers and new friends for a potential █████████ reboot. It's been super fun to prototype and revisit some old ideas we know were successful.<br />
+• Worked on some better dark mode HTML emails. <br />
+• Translated a survey into Arabic and now working on updating templates for right-to-left text layouts.<br />
+<br />
+<strong>Internally:</strong><br />
+• We ran another print-on-demand test and have been shopping it around to publishers here in Iceland. Everyone we've shown loves the idea, but no one has committed any support (yet).<br />
+• Around the office, we continue to improve our networking and backup strategies.</p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<hr class="hr" style="border-bottom: none;  border-top-width: 1px; border-top-style:solid"/>
+<h2 style="margin: 0; padding:0; line-height: 1.4;">📅 July 17th, World Emoji Day                                                                                                                                                                            </h2>
+<div style="text-align: center; margin: 0 auto; padding:0; line-height: 1.4;">
+<img src="https://optional.is/newsletter/02024Q3/emoji.png" style="width: 100%; margin: 10px 0 0 0;" />
+</div>
+<p style="margin: 0; padding: 5px 0 10px 0; line-height: 1.4; font-size: 80%; opacity: 0.8;">Two sample emojis from the 01988 set</p>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><strong>July 17th is World Emoji Day. <a href="https://worldemojiday.com">https://worldemojiday.com</a></strong><br />
+<br />
+To celebrate, some sleuths have uncovered the earliest known hardware device that could add emojis in text. It was the Sharp PA-8500-01, a Japanese PDA or 'pocket PC', from 01988.<br />
+<a href="https://blog.emojipedia.org/new-earliest-emoji-sets-from-1988-and-1990-uncovered/">https://blog.emojipedia.org/new-earliest-emoji-sets-from-1988-and-1990-uncovered/</a></p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<hr class="hr" style="border-bottom: none;  border-top-width: 1px; border-top-style:solid"/>
+<h2 style="margin: 0; padding:0; line-height: 1.4;">@ "at a rate of"                                                                                                                                                                                        </h2>
+<div style="text-align: center; margin: 0 auto; padding:0; line-height: 1.4;">
+<img src="https://optional.is/newsletter/02024Q3/01909_emoji.jpg" style="width: 100%; margin: 10px 0 0 0;" />
+</div>
+<p style="margin: 0; padding: 5px 0 10px 0; line-height: 1.4; font-size: 80%; opacity: 0.8;">The Strand magazine, England, March 01909</p>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">This is a newspaper clipping of emoticons from 01909. It isn't the earliest known emoji or emoticon, but one modern-day commenter immediately asked "Did they have @ in 01909?".<br />
+<br />
+Well, the earliest symbol that looks like an @ dates to 01345. The symbol has been used to represent quantities, weights, dates and more. Pre-email and social media @ was an accounting and invoice abbreviation meaning "at a rate of".<br />
+<br />
+<a href="https://en.wikipedia.org/wiki/At_sign">https://en.wikipedia.org/wiki/At_sign</a></p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<hr class="hr" style="border-bottom: none;  border-top-width: 1px; border-top-style:solid"/>
+<h2 style="margin: 0; padding:0; line-height: 1.4;">Subscriber Badges                                                                                                                                                                                       </h2>
+<div style="text-align: center; margin: 0 auto; padding:0; line-height: 1.4;">
+<img src="https://optional.is/newsletter/02024Q3/subscriber-badges.jpg" style="width: 100%; margin: 10px 0 0 0;" />
+</div>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">These emails are sent individually, by us, with no tracking, using our own template designs. This allows for each one to be unique based on your subscriber information.<br />
+<br />
+You know we love projects that combine art and technology, so we've been experimenting with subscriber badges to celebrate how many years you've been with us. For some of you, that's been 14 years (since 02011)! <br />
+<br />
+In this newsletter, we've added your subscriber date to the email footer. If all goes to plan, by next quarter, you'll have your very own subscriber badge to celebrate your newsletter anniversary.</p></div>
+
+						<div class="section"  style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+				<hr class="hr" style="border-bottom: none;  border-top-width: 1px; border-top-style: solid"/>
+				<h2 style="margin: 0; padding:0; line-height: 1.4;">Merch</h2>
+				<div class="hr-light"  style="border-top: none; border-bottom-width: 1px; border-bottom-style:solid"><p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://triagemail.com/" target="_blank" >Triagemail: Get unread email under control.</a> An iOS app to check any email account. With only 4 options, get through all your unread email fast so you never miss anything important. <strong>$1.99 on the App Store</strong>.</p></div><div class="hr-light"  style="border-top: none; border-bottom-width: 1px; border-bottom-style:solid"><p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://apps.apple.com/us/app/red-days-holiday-countdown/id1128247890" target="_blank">Red Days: Holiday Countdown</a>. This is a <strong>free app</strong> to countdown to the next public holiday. Available for iOS and Apple Watch.</p></div><div class="hr-light"  style="border-top: none; border-bottom-width: 1px; border-bottom-style:solid"><p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://apps.apple.com/us/app/emoji-calendar/id1286750440?ls=1" target="_blank" >😀📅 Emoji Calendar</a>. This is a <strong>free app</strong> to countdown to the next holiday with simple two-glyph emojis. Available for iOS and Apple Watch.</p></div>			</div>
+					</div>
+		]]></content:encoded>      
+  </item>  <item>
+    <title>◍ (optional.is) 02024Q2</title>
+    <link>https://optional.is/newsletter/02024Q2/</link>
+    <dc:creator><![CDATA[optional Bot]]></dc:creator>
+    <pubDate>Wed, 10 Apr 2024 15:21:41 +0000</pubDate>
+    <guid isPermaLink="false">https://optional.is/newsletter/02024Q2/</guid>
+    <description><![CDATA[<strong>02024Q2 REYKJAVIK:</strong> With an early Easter behind us, we've got some exciting projects in the pipeline as we head into the summer months.]]></description>
+    <content:encoded><![CDATA[		<div class="main" style="max-width: 600px; text-align: left; margin: 0  auto;  padding: 1em 1em 0 1em; font-size: 16px; line-height: 1.4; ">
+			<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://optional.is"><img stlye="margin-bottom: 30px;" class="optional-logo" src="https://optional.is/images/logo-black-sm.png" width="136" height="30" /></a></p>
+
+			<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><em>Hello, this is the (optional.is) quarterly newsletter. Mostly the thoughts of Brian Suda.</em></p>
+			<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><strong>02024Q2 REYKJAVIK:</strong> With an early Easter behind us, we've got some exciting projects in the pipeline as we head into the summer months.</p>
+
+
+			<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<hr class="hr" style="border-bottom: none;  border-top-width: 1px; border-top-style:solid"/>
+<h2 style="margin: 0; padding:0; line-height: 1.4;">Q1 Writing                                                                                                                                                                                              </h2>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">The start of the year is always bustling with activity! In Q1, we published three articles and seven weeknotes, and maintained our newsletter schedule with one full ◍ Quarternotes issue per quarter and one ⪮ Good Morning episode each month.<br />
+<br />
+<br />
+<strong>Omnibus 02023</strong><br />
+<a href="https://optional.is/required/2024/01/01/omnibus-02023/">https://optional.is/required/2024/01/01/omnibus-02023/</a><br />
+<br />
+<strong>02023 TIL</strong><br />
+<a href="https://optional.is/required/2024/01/23/02023-til/">https://optional.is/required/2024/01/23/02023-til/</a><br />
+<br />
+<strong>Backups 2.0 DAS Edition</strong><br />
+<a href="https://optional.is/required/2024/03/19/backup-2-0-das-edition/">https://optional.is/required/2024/03/19/backup-2-0-das-edition/</a><br />
+<br />
+<h3>⪮ Good Morning Newsletter Season 3</h3><br />
+<strong>s03e01: Flags, Music and Symbolism</strong><br />
+<a href="https://optional.is/newsletter/s03e01/">https://optional.is/newsletter/s03e01/</a><br />
+<br />
+<strong>s03e02: Dragons!</strong><br />
+<a href="https://optional.is/newsletter/s03e02/">https://optional.is/newsletter/s03e02/</a><br />
+<br />
+<strong>s03e03: Martian News</strong><br />
+<a href="https://optional.is/newsletter/s03e03/">https://optional.is/newsletter/s03e03/</a><br />
+<br />
+⸻<br />
+<br />
+📰 <a href="https://optional.is/newsletter/">https://optional.is/newsletter/</a><br />
+🗓 <a href="https://optional.is/required/category/weeknotes">https://optional.is/required/category/weeknotes</a><br />
+📡 <a href="https://optional.is/feeds/">https://optional.is/feeds/</a></p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<hr class="hr" style="border-bottom: none;  border-top-width: 1px; border-top-style:solid"/>
+<h2 style="margin: 0; padding:0; line-height: 1.4;">WWW Proposal in Word 4.0                                                                                                                                                                                </h2>
+<div style="text-align: center; margin: 0 auto; padding:0; line-height: 1.4;">
+<img src="https://optional.is/newsletter/02024Q2/www.jpg" style="width: 100%; margin: 10px 0 0 0;" />
+</div>
+<p style="margin: 0; padding: 5px 0 10px 0; line-height: 1.4; font-size: 80%; opacity: 0.8;">A photocopy of the original WWW proposal given to us by Robert Cailliau, written by Tim Berners-Lee with his manager Mike Sendall's infamous note "vague, but exciting".</p>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">Recently, John Graham-Cumming documented his efforts to convert the original WWW proposal, written on a Mac in Microsoft Word 4.0, into a format compatible with modern software that  looked the same. (Spoiler, he got close enough)<br />
+<br />
+He published a short write-up on his steps and what worked and what didn't.<br />
+<a href="https://blog.jgc.org/2024/02/the-original-www-proposal-is-word-for.html">https://blog.jgc.org/2024/02/the-original-www-proposal-is-word-for.html</a><br />
+<br />
+It goes to show how quickly digital files can 'rot' when the software (or image format) used is no longer supported.<br />
+<br />
+We've been to CERN twice for some digital archaeology focusing on emulating the first two Web browsers.<br />
+<br />
+You can read about how we rebuilt the Line Mode Browser here:<br />
+<a href="https://optional.is/required/2013/09/25/cern-line-mode-browser/">https://optional.is/required/2013/09/25/cern-line-mode-browser/</a></p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<hr class="hr" style="border-bottom: none;  border-top-width: 1px; border-top-style:solid"/>
+<h2 style="margin: 0; padding:0; line-height: 1.4;">🥽 Spatial Computing                                                                                                                                                                                     </h2>
+<div style="text-align: center; margin: 0 auto; padding:0; line-height: 1.4;">
+<img src="https://optional.is/newsletter/02024Q2/vision-pro.jpg" style="width: 100%; margin: 10px 0 0 0;" />
+</div>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">For a potential upcoming project, we had the opportunity to play around with the new Apple Vision Pro headset. There is a lot good and a lot bad about this device, but if we shift our focus away from the hardware and look into what it means to 'compute spatially', is it really the future?<br />
+<br />
+In science fiction films like Minority Report, characters are depicted waving their hands to manipulate virtual windows. That's just not practical for anything more than a short period of time!<br />
+<br />
+The Vision Pro's eye tracking and simple pinch-to-click is very fast, accurate and by no means exhausting to use. But these input features don't constitute 'spacial computing'. They are merely new ways of interacting with a GUI. With the right sensors, you could achieve the same interactions on a computer.<br />
+<br />
+Spatial computing is volumetric, making use of the area beyond a flat 2D screen. Other Virtual Reality (VR) devices are great at putting you at the center of a virtual world. You move, it moves, so you really feel like you are surrounded and immersed.<br />
+<br />
+The Vision Pro is different, it is much more like the Spectacles by Snap Inc. Your data, apps and more are layered onto the existing world in Augmented Reality (AR). They stay where you left them, they are the inverse of a Spime. Rather than being a physical thing with internet smarts, they are a virtual thing that quasi-exists in the real world.<br />
+<br />
+The Vision Pro is still in its very early days. Even though the software needs updating, the hardware is heavy and expensive, it holds a lot of promise. Rather than complaining about it today, let's envision where it can take us in five years. That's much more exciting!</p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<hr class="hr" style="border-bottom: none;  border-top-width: 1px; border-top-style:solid"/>
+<h2 style="margin: 0; padding:0; line-height: 1.4;">🍠♨️🍅🤑 Making money from bi-products                                                                                                                                                                     </h2>
+<div style="text-align: center; margin: 0 auto; padding:0; line-height: 1.4;">
+<img src="https://optional.is/newsletter/02024Q2/tomato.jpg" style="width: 100%; margin: 10px 0 0 0;" />
+</div>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">We are fascinated by innovative ideas that are outside of the norm, especially when a waste from your process turns out to be just as profitable as the product itself.<br />
+<br />
+In the UK, British Sugar dominates around two-thirds of all the country's sugar production. Operating within a highly regulated and controlled market, pricing structures leave little room for profit margins, emphasizing the importance of operational efficiencies. At some point those processes were so streamlined there was no room to squeeze profits.<br />
+<br />
+Then someone suggested that all the hot air from the sugar making process be collected and pumped into a neighboring greenhouse.<br />
+<br />
+And that's how in 02006, British Sugar's flagship beet factory in West Norfolk became the country's tomato capital!<br />
+<br />
+Think about your "waste" products - they could help you diversify and might turn out to be more lucrative than you think.</p></div>
+
+						<div class="section"  style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+				<hr class="hr" style="border-bottom: none;  border-top-width: 1px; border-top-style: solid"/>
+				<h2 style="margin: 0; padding:0; line-height: 1.4;">Merch</h2>
+				<div class="hr-light"  style="border-top: none; border-bottom-width: 1px; border-bottom-style:solid"><p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://adventure-mazes.com" target="_blank">Adventure Mazes!</a> You can now order paperback books of our mazes. Join our monthly maze mailing list and enjoy the side quests.</p></div><div class="hr-light"  style="border-top: none; border-bottom-width: 1px; border-bottom-style:solid"><p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://triagemail.com/" target="_blank" >Triagemail: Get unread email under control.</a> An iOS app to check any email account. With only 4 options, get through all your unread email fast so you never miss anything important. <strong>$1.99 on the App Store</strong>.</p></div><div class="hr-light"  style="border-top: none; border-bottom-width: 1px; border-bottom-style:solid"><p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://apps.apple.com/us/app/newsletters/id1455564424" target="_blank">Newsletters</a>. An iOS app to help you read newsletters like this one in a collected and threaded format. Free for a limited time on the App Store.</p></div><div class="hr-light"  style="border-top: none; border-bottom-width: 1px; border-bottom-style:solid"><p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://apps.apple.com/us/app/emoji-calendar/id1286750440?ls=1" target="_blank" >😀📅 Emoji Calendar</a>. This is a <strong>free app</strong> to countdown to the next holiday with simple two-glyph emojis. Available for iOS and Apple Watch.</p></div>			</div>
+					</div>
+		]]></content:encoded>      
+  </item>  <item>
+    <title>◍ (optional.is) 02024Q1</title>
+    <link>https://optional.is/newsletter/02024Q1/</link>
+    <dc:creator><![CDATA[optional Bot]]></dc:creator>
+    <pubDate>Fri, 29 Mar 2024 17:51:20 +0000</pubDate>
+    <guid isPermaLink="false">https://optional.is/newsletter/02024Q1/</guid>
+    <description><![CDATA[<strong>02024Q1 REYKJAVIK:</strong> The start of each year is marked by a burst of internal activities, from paying taxes and compiling annual reports to strategizing for projects and refocusing efforts. But as Bruce Lee said: <em>Be Water My Friend</em>. We flow and react to what comes our way rather than be too rigid in what we expect.]]></description>
+    <content:encoded><![CDATA[		<div class="main" style="max-width: 600px; text-align: left; margin: 0  auto;  padding: 1em 1em 0 1em; font-size: 16px; line-height: 1.4; ">
+			<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://optional.is"><img stlye="margin-bottom: 30px;" class="optional-logo" src="https://optional.is/images/logo-black-sm.png" width="136" height="30" /></a></p>
+
+			<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><em>Hello, this is the (optional.is) quarterly newsletter. Mostly the thoughts of Brian Suda.</em></p>
+			<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><strong>02024Q1 REYKJAVIK:</strong> The start of each year is marked by a burst of internal activities, from paying taxes and compiling annual reports to strategizing for projects and refocusing efforts. But as Bruce Lee said: <em>Be Water My Friend</em>. We flow and react to what comes our way rather than be too rigid in what we expect.</p>
+
+
+			<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<hr class="hr" style="border-bottom: none;  border-top-width: 1px; border-top-style:solid"/>
+<h2 style="margin: 0; padding:0; line-height: 1.4;">Due Diligence as a Service                                                                                                                                                                              </h2>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">This year kicked off with two projects. We provide help to companies and investors to do due diligence before investing in companies. One that crossed our desk at the end of the year was to take an existing company’s SDK and build a simple ‘Hello World’ app to test the difficulty and assess the capabilities compared to what they pitched. The other project is to spend a month and build a web/app prototype. We’ll be focused on the backend APIs, CRM, front-end and possibly some of the app. After that, they'll evaluate the next possible steps for the product. Having something in hand you can use on a daily basis is worth 1,000 Figma mockups.</p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<hr class="hr" style="border-bottom: none;  border-top-width: 1px; border-top-style:solid"/>
+<h2 style="margin: 0; padding:0; line-height: 1.4;">⏳🌿 Long-Term Plants                                                                                                                                                                                     </h2>
+<div style="text-align: center; margin: 0 auto; padding:0; line-height: 1.4;">
+<img src="https://optional.is/newsletter/02024Q1/timeline.png" style="width: 100%; margin: 10px 0 0 0;" />
+</div>
+<p style="margin: 0; padding: 5px 0 10px 0; line-height: 1.4; font-size: 80%; opacity: 0.8;">A timeline of the evolution of Ginkgo, Magnolias and various insects.</p>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">Ginkgo trees are called living fossils. Over 290 million years ago, they thrived even before dinosaurs. Today, there is only one species left and it is endangered in the wild.<br />
+<br />
+The magnolia is another ancient plant. They evolved to be pollinated by beetles, because they had to wait 10 million years for modern pollinators like bees and 100 million years for butterflies to evolve.<br />
+<br />
+Both of these plants co-evolved in an ecosystem that doesn't exist today. Magnolias and ginkgo lost their original pollinators a long time ago, but they continue to survive all the way to the present.</p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<hr class="hr" style="border-bottom: none;  border-top-width: 1px; border-top-style:solid"/>
+<h2 style="margin: 0; padding:0; line-height: 1.4;">Q4 Writing                                                                                                                                                                                              </h2>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">In Q4, we published 1 article and 5 weeknotes, and stayed on track with the newsletter cadence of one full ◍ Quarternotes newsletter per quarter and one ⪮ Good Morning episode each month<br />
+<br />
+<strong>NFC Business Cards</strong><br />
+<a href="https://optional.is/required/2023/09/20/nfc-business-cards/">https://optional.is/required/2023/09/20/nfc-business-cards/</a><br />
+<br />
+⸻<br />
+<h3>⪮ Good Morning Newsletter Season 2</h3><br />
+<strong>s02e10: Flags, Music and Symbolism</strong><br />
+<a href="https://optional.is/newsletter/s02e10/">https://optional.is/newsletter/s02e10/</a><br />
+<br />
+<strong>s02e11: Stop, Look and Listen</strong><br />
+<a href="https://optional.is/newsletter/s02e11/">https://optional.is/newsletter/s02e11/</a><br />
+<br />
+<strong>s02e12: City Scale Models</strong><br />
+<a href="https://optional.is/newsletter/s02e12/">https://optional.is/newsletter/s02e12/</a><br />
+<br />
+⸻<br />
+<br />
+<strong>📰 Newsletter archive:</strong> <a href="https://optional.is/newsletter/">https://optional.is/newsletter/</a><br />
+<br />
+<strong>🗓 Weeknotes:</strong> <a href="https://optional.is/required/category/weeknotes">https://optional.is/required/category/weeknotes</a><br />
+<br />
+🚨🆕🚨 We are now publishing all our newsletters as RSS feeds as well.<br />
+<strong>📡 Feeds:</strong> <a href="https://optional.is/feeds/">https://optional.is/feeds/</a></p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<hr class="hr" style="border-bottom: none;  border-top-width: 1px; border-top-style:solid"/>
+<h2 style="margin: 0; padding:0; line-height: 1.4;">⪮ Good Morning Season 3                                                                                                                                                                                 </h2>
+<div style="text-align: center; margin: 0 auto; padding:0; line-height: 1.4;">
+<img src="https://optional.is/newsletter/02024Q1/gm-s02.png" style="width: 100%; margin: 10px 0 0 0;" />
+</div>
+<p style="margin: 0; padding: 5px 0 10px 0; line-height: 1.4; font-size: 80%; opacity: 0.8;">⪮ Good Morning Season 2 screenshots of all twelve episodes.</p>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">Season 2 went off without any major incidents. People continue to enjoy the format, so we're going to continue to iterate, such as adding additional links per topic and an optional image for each section.<br />
+<br />
+If you're not signed up, be sure to subscribe to ⪮ Good Morning for a monthly dose of 4 interesting topics.<br />
+<br />
+<strong>📰 Monthly Inbox Delivery: <a href="https://optional.is/newsletter">https://optional.is/newsletter</a></strong></p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<hr class="hr" style="border-bottom: none;  border-top-width: 1px; border-top-style:solid"/>
+<h2 style="margin: 0; padding:0; line-height: 1.4;">◍ Newsletters 2.0 iOS app                                                                                                                                                                               </h2>
+<div style="text-align: center; margin: 0 auto; padding:0; line-height: 1.4;">
+<img src="https://optional.is/newsletter/02024Q1/newsletters.jpg" style="width: 100%; margin: 10px 0 0 0;" />
+</div>
+<p style="margin: 0; padding: 5px 0 10px 0; line-height: 1.4; font-size: 80%; opacity: 0.8;">Screenshot of the Newsletters 2.0 iOS app</p>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">It has been in the works for a while now. We've re-worked the old Newsletters iPhone/iPad app to make updates easier. We removed some features, like spotlight indexing and global search, but managed to add new features like merging lists (for newsletters that switch sender emails) and list-wide image blocking/allowing.<br />
+<br />
+<a href="https://apps.apple.com/us/app/newsletters/id1455564424">Newsletters is a free download</a> for a limited time only. The price is expected to go up to $1.99 this spring.</p></div>
+
+						<div class="section"  style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+				<hr class="hr" style="border-bottom: none;  border-top-width: 1px; border-top-style: solid"/>
+				<h2 style="margin: 0; padding:0; line-height: 1.4;">Merch</h2>
+				<div class="hr-light"  style="border-top: none; border-bottom-width: 1px; border-bottom-style:solid"><p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://github.com/optional-is/calendaring/tree/master/A0-Yearly" target="_blank">Print ready A0 annual wall calendar PDF</a>. An open-source project to download and print at a local print shop yourself. <strong>Get organized and start planning.</strong></p></div><div class="hr-light"  style="border-top: none; border-bottom-width: 1px; border-bottom-style:solid"><p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://apps.apple.com/us/app/newsletters/id1455564424" target="_blank">Newsletters</a>. An iOS app to help you read newsletters like this one in a collected and threaded format. Free for a limited time on the App Store.</p></div><div class="hr-light"  style="border-top: none; border-bottom-width: 1px; border-bottom-style:solid"><p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://triagemail.com/" target="_blank" >Triagemail: Get unread email under control.</a> An iOS app to check any email account. With only 4 options, get through all your unread email fast so you never miss anything important. <strong>$1.99 on the App Store</strong>.</p></div><div class="hr-light"  style="border-top: none; border-bottom-width: 1px; border-bottom-style:solid"><p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://adventure-mazes.com" target="_blank">Adventure Mazes!</a> You can now order paperback books of our mazes. Join our monthly maze mailing list and enjoy the side quests.</p></div>			</div>
+					</div>
+		]]></content:encoded>      
+  </item>
+</channel>
+</rss>
