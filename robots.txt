@@ -12,8 +12,5 @@
 User-agent: Exabot
 Disallow: *
 
-User-agent: msnbot
-Disallow: *
-
 User-agent: Google-Extended
 Disallow: /
