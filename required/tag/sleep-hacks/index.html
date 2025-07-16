@@ -206,7 +206,17 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 	</div>
 </main>
+
 <svg class="svgs" version="1.1" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<clipPath id="squircle" clipPathUnits="objectBoundingBox">
+			<path d="M 0,0.5
+                C 0,0  0,0  0.5,0
+                  1,0  1,0  1,0.5
+                  1,1  1,1  0.5,1
+                  0,1  0,1  0,0.5"></path>
+		</clipPath>
+	</defs>
 	<symbol  id="m" viewBox="0 0 94 79">
 			<g stroke-width="1" fill="none" fill-rule="evenodd">
                     <polygon id="Stroke-1" stroke-width="3" points="0.512256698 17.2216169 0.512256698 1.49829352 20.6427475 1.49829352"></polygon>
@@ -316,7 +326,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 
 		<style>
 			footer {
-				border-top: 1px solid #979797;
+				border-top: 1px solid #000;
 				padding: 0;
 				color: #555;
 				text-align: left;
@@ -353,11 +363,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				line-height: 14px;
 				font-size: 12px;
 			}
-			footer #links ul li a, footer #links ul li a:visited, footer #links ul li a:active, footer #links ul li a:focus {
+			footer #links a, footer #links a:visited, footer #links a:active, footer #links a:focus {
 				color: #666;
 				text-decoration: none;
 			}
-			footer #links ul li a:hover {
+			footer #links a:hover {
 				color: #000;
 				background-color: transparent;
 			}			
@@ -366,7 +376,8 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 			}
 
 			footer .app-icon {
-				border-radius:  7px;
+				clip-path: url(index.html);
+				border-radius: 0;
 				height: 30px;
 				width:  30px;
 				box-shadow: none;
@@ -439,12 +450,11 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				<div>
 					<h3>Company</h3>
 					<ul>
-<li style="font-weight:400">EST<span style="font-size: 85%; text-decoration: underline; vertical-align: top; font-weight: 400; margin-top: -1px; display: inline-block;">D</span> MMXI</li>
-						<li>kt. 520521-0540</li>
+						<li style="font-weight:400">EST<span style="font-size: 85%; text-decoration: underline; vertical-align: top; font-weight: 400; margin-top: -1px; display: inline-block;">D</span> MMXI</li>
+<li>kt. 520521-0540</li>
 						<li>VAT №. 141140</li>
 						<li>+354.868.0795</li>
 						<li><a href="mailto:optional@optional.is">optional@optional.is</a></li>
-
 					</ul>
 					<hr style="margin-top: 1em; border: none; border-top: 1px solid black; width: 30px; text-align: left;" align="left"/>
 					<ul style="margin-top: 1em;	">
@@ -460,7 +470,7 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 					<h3>Writing</h3>
 					<ul>
 						<li><a href="../../index.html">/required articles</a></li>
-						<li><a href="../../category/weeknotes/index.html">Weeknumber #728</a></li>
+						<li><a href="../../category/weeknotes/index.html">Weeknumber #753</a></li>
 						<li><a href="../../../newsletter/archive/index.html"> Newsletters</a></li>
 						<li><a href="../../../feeds/index.html">RSS Feeds</a></li>
 
@@ -471,21 +481,21 @@ html, body, div, section, h1, h2, h3, footer, header, p, a { margin: 0; padding:
 				</div>
 				<div><h3>iOS Apps</h3>
 					<ul>
-						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/dashbones/id1071726287?mt=8"><img class="app-icon" src="https://is4-ssl.mzstatic.com/image/thumb/Purple124/v4/6f/9e/58/6f9e5846-2fb2-40a9-45cd-4ed4e06f1562/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/340x340bb-80.png" alt="Download Dashbones on the App Store" /> Dashbones</a></li>
-						<li><a rel="noreferrer" href="https://apps.apple.com/us/app/newsletters/id1455564424?ls=1&mt=8"><img class="app-icon" src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/e7/fc/aa/e7fcaaa9-e4b4-43c9-70ff-9155d89ba893/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/150x150bb-80.png" alt="Download Newsletters on the App Store"> Newsletters</a></li>
-						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/text-stats/id1373463793?mt=8"><img class="app-icon" src="https://is5-ssl.mzstatic.com/image/thumb/Purple124/v4/f4/f8/ee/f4f8ee2f-5e9f-75c0-ca7d-021091d83997/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/340x340bb-80.png" alt="Download Text Stats on the App Store"> Text Stats</a></li>
-						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/triagemail/id1124659536?mt=8"><img class="app-icon" src="https://is2-ssl.mzstatic.com/image/thumb/Purple123/v4/dc/69/9f/dc699f0a-a9ae-4119-cc5e-bd09668492f1/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/246x0w.jpg" alt="Download Triagemail on the App Store"> Triagemail</a></li>
-
+						<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/dashbones/id1071726287?ls=1&mt=8"><img class="app-icon" src="https://is4-ssl.mzstatic.com/image/thumb/Purple124/v4/6f/9e/58/6f9e5846-2fb2-40a9-45cd-4ed4e06f1562/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/340x340bb-80.png" alt="Download Dashbones on the App Store" /> Dashbones</a></li>
+<li><a rel="noreferrer" href="https://apps.apple.com/us/app/newsletters/id1455564424?ls=1&mt=8"><img class="app-icon" src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/e7/fc/aa/e7fcaaa9-e4b4-43c9-70ff-9155d89ba893/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/150x150bb-80.png" alt="Download Newsletters on the App Store" /> Newsletters</a></li>
+<li><a rel="noreferrer" href="https://itunes.apple.com/us/app/triagemail/id1124659536?ls=1&mt=8"><img class="app-icon" src="https://is2-ssl.mzstatic.com/image/thumb/Purple123/v4/dc/69/9f/dc699f0a-a9ae-4119-cc5e-bd09668492f1/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/246x0w.jpg" alt="Download Triagemail on the App Store" /> Triagemail</a></li>
+<li><a rel="noreferrer" href="https://apps.apple.com/us/app/ornithoto/id1665382610?ls=1&mt=8"><img class="app-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b4/b2/bc/b4b2bc15-89d1-948d-5806-dae9437e21eb/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/460x0w.png" alt="Download Ornithoto on the App Store" /> Ornithoto</a></li>
 						<li><a rel="noreferrer" href="../../../apps/privacy/index.html" style="line-height: 26px; padding-left:  43px; margin-right: 0.5em">Privacy Policy</a></li>					
 
 					</ul>
 					</div>
 					<div>
-						<div style="padding-top: 12px"><svg width="125" height="100"><use xlink:href="#m"></use></svg></div>
+						<div style="padding-top: 12px"><a href="../../../misseristal"><svg width="125" height="100"><use xlink:href="#m"></use></svg></a></div>
 						<h3>Misseristal</h3>
 
-						<p style="margin:0">
-							Today is <strong>Týrsdagur</strong> the 28th day of the month of <strong>Mörsugur</strong>, the 3rd month of winter.
+						<p style="margin:0"><a href="../../../misseristal">
+							Today is <strong>Öðinsdagur</strong> the 24th day of the month of <strong>Sólmánuður</strong>
+				 the 3rd month of summer.</a>
 						</p>
 				</div>
 				<div>
@@ -521,7 +531,7 @@ pageTracker._trackPageview();
 
 
 
-<!-- Dynamic page generated in 0.196 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2025-01-21 10:28:45 -->
+<!-- Dynamic page generated in 0.235 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2025-07-16 21:11:43 -->
 
 <!-- super cache -->

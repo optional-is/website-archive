@@ -14,7 +14,7 @@
 	<atom:link href="https://optional.is/newsletter/feeds/quarternotes.rss" rel="self" type="application/rss+xml" />
 	<link>https://optional.is/newsletter/</link>
 	<description>Sent quarterly, a look at what's been happening and interesting tidbits from around the Web.</description>
-	<lastBuildDate>Thu, 09 Jan 2025 09:43:29 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 08 Jul 2025 10:09:40 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>weekly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
@@ -24,6 +24,337 @@
 	<atom:link rel="hub" href="https://websubhub.com/hub"/>	
 
 	  <item>
+    <title>◍ (optional.is) 02025Q3</title>
+    <link>https://optional.is/newsletter/02025Q3/</link>
+    <dc:creator><![CDATA[optional Bot]]></dc:creator>
+    <pubDate>Tue, 08 Jul 2025 09:03:35 +0000</pubDate>
+    <guid isPermaLink="false">https://optional.is/newsletter/02025Q3/</guid>
+    <description><![CDATA[<strong>02025Q3 REYKJAVIK:</strong> This quarter's been a wild ride! We started a WebRTC video conferencing project that will last us all summer. We've also watched the exchange rate plummet and the value of our invoice drop. Undeterred, our camera app experiments move forward as we keep an eye out for new opportunities.]]></description>
+    <content:encoded><![CDATA[		<div class="main" style="max-width: 600px; text-align: left; margin: 0  auto;  padding: 1em 1em 0 1em; font-size: 16px; line-height: 1.4; ">
+			<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://optional.is"><img stlye="margin-bottom: 30px;" class="optional-logo" src="https://optional.is/images/logo-black-sm.png" width="136" height="30" /></a></p>
+
+			<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><em>Hello, this is the (optional.is) quarterly newsletter. Mostly the thoughts of Brian Suda.</em></p>
+			<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><strong>02025Q3 REYKJAVIK:</strong> This quarter's been a wild ride! We started a WebRTC video conferencing project that will last us all summer. We've also watched the exchange rate plummet and the value of our invoice drop. Undeterred, our camera app experiments move forward as we keep an eye out for new opportunities.</p>
+
+
+			<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<div style="text-align: center; padding: 1em 0">
+									<div style="display: inline-block;
+					padding: 20px;
+					line-height: 36px;
+					height: 36px;
+					width: 36px;
+					border-radius: 50%;
+					background: #7599d4;
+					font-size: 32px;
+					margin-bottom: 10px;
+					">📷         </div>
+
+					<h2 style="margin: 0; padding:0; line-height: 1.4;">New Camera App: Ornithoto                                                                                                                                                                               </h2>
+					</div>
+<div style="text-align: center; margin: 0 auto; padding:0; line-height: 1.4;">
+<img src="https://optional.is/newsletter/02025Q3/ornithoto-puffins.png" style="width: 100%; margin: 10px 0 0 0;" />
+</div>
+<p style="margin: 0; padding: 5px 0 10px 0; line-height: 1.4; font-size: 80%; opacity: 0.8;">Ornithoto taken in Borgarfjöður Eystri 02024 from the Puffin Colony.</p>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">We love the spark that comes from seeing something inspiring and diving in to try it ourselves.<br />
+<br />
+Our most recent experiment is an iOS camera app that saves a time-lapse photo capturing motion and light.<br />
+<br />
+We wrote about the inspiration, process and more about the technology. You can read it on our website: <a href="https://optional.is/required/2025/05/22/ornithoto-camera-app/">https://optional.is/required/2025/05/22/ornithoto-camera-app/</a><br />
+<br />
+<strong>Download it for free (for a limited time) on the Apple App Store: </strong><br />
+<a href="https://apps.apple.com/us/app/ornithoto/id1665382610?ls=1&mt=8">https://apps.apple.com/us/app/ornithoto/id1665382610?ls=1&mt=8</a></p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<div style="text-align: center; padding: 1em 0">
+									<div style="display: inline-block;
+					padding: 20px;
+					line-height: 36px;
+					height: 36px;
+					width: 36px;
+					border-radius: 50%;
+					background: #e0b0ff;
+					font-size: 32px;
+					margin-bottom: 10px;
+					">🐘         </div>
+
+					<h2 style="margin: 0; padding:0; line-height: 1.4;">Mastodon Move                                                                                                                                                                                           </h2>
+					</div>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">When Twitter collapsed, we joined a small, local, Icelandic instance. This is exactly what Mastodon is designed for: a local feed of like-minded people. This was our way to get back into the Icelandic community.<br />
+<br />
+We looked into running our own personal instance, but the maintenance, storage and bandwidth put us off. We suspect that a lot of early adopters made the jump before realizing the effort and commitment needed. Fast-forward a few years, the dust has settled and instances are closing.<br />
+<br />
+We're sad to see our local community Mastodon instance close. <br />
+<br />
+<strong>You can now find us over at <a href="https://mastodon.social/@briansuda">@briansuda@mastodon.social</a></strong></p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<div style="text-align: center; padding: 1em 0">
+									<div style="display: inline-block;
+					padding: 20px;
+					line-height: 36px;
+					height: 36px;
+					width: 36px;
+					border-radius: 50%;
+					background: #e6f4f9;
+					font-size: 32px;
+					margin-bottom: 10px;
+					">🗒️        </div>
+
+					<h2 style="margin: 0; padding:0; line-height: 1.4;">Q2 Writing                                                                                                                                                                                              </h2>
+					</div>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">In Q2, we published 6 articles, 7 weeknotes and maintained our ◍Quarternotes newsletter schedule. <br />
+<br />
+<strong>Cellular Automata</strong><br />
+<a href="https://optional.is/required/2025/04/11/cellular-automata/" >https://optional.is/required/2025/04/11/cellular-automata/</a><br />
+⸻<br />
+<strong>Muscle flexes</strong><br />
+<a href="https://optional.is/required/2025/04/25/muscle-flexes/" >https://optional.is/required/2025/04/25/muscle-flexes/</a><br />
+⸻<br />
+<strong>Sawtooth and Sine Wave</strong><br />
+<a href="https://optional.is/required/2025/05/07/sawtooth-and-sine-wave/" >https://optional.is/required/2025/05/07/sawtooth-and-sine-wave/</a><br />
+⸻<br />
+<strong>Ornithoto Camera App</strong><br />
+<a href="https://optional.is/required/2025/05/22/ornithoto-camera-app/" >https://optional.is/required/2025/05/22/ornithoto-camera-app/</a><br />
+⸻<br />
+<strong>Disney Flowchart</strong><br />
+<a href="https://optional.is/required/2025/06/06/disney-flowchart/" >https://optional.is/required/2025/06/06/disney-flowchart/</a><br />
+⸻<br />
+<strong>Blind Men and the Elephant</strong><br />
+<a href="https://optional.is/required/2025/06/20/blind-men-and-the-elephant/" >https://optional.is/required/2025/06/20/blind-men-and-the-elephant/</a><br />
+⸻<br />
+<br />
+<span style="font-size: 90%">📰 <a href="https://optional.is/newsletter/" >optional.is/newsletter/</a><br />
+🗓 <a href="https://optional.is/required/category/weeknotes/" >optional.is/required/category/weeknotes</a><br />
+📡 <a href="https://optional.is/feeds/" >optional.is/feeds/</a></span></p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<div style="text-align: center; padding: 1em 0">
+									<div style="display: inline-block;
+					padding: 20px;
+					line-height: 36px;
+					height: 36px;
+					width: 36px;
+					border-radius: 50%;
+					background: #c2d9c5;
+					font-size: 32px;
+					margin-bottom: 10px;
+					">🏔️        </div>
+
+					<h2 style="margin: 0; padding:0; line-height: 1.4;">Chimborazo                                                                                                                                                                                              </h2>
+					</div>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">Chimborazo is the highest mountain in Ecuador with an elevation of 6,263m (20,548ft). If measured, not from sea level, but from the center of the Earth, Chimborazo is 2.1 km (1.3 mi) farther than the summit of Everest. This is due to Earth's equatorial bulge.<br />
+<br />
+<strong>Does that make Chimborazo Earth's tallest mountain?</strong><br />
+<a href="https://en.wikipedia.org/wiki/Chimborazo">https://en.wikipedia.org/wiki/Chimborazo</a></p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<div style="text-align: center; padding: 1em 0">
+									<div style="display: inline-block;
+					padding: 20px;
+					line-height: 36px;
+					height: 36px;
+					width: 36px;
+					border-radius: 50%;
+					background: #fff0b0;
+					font-size: 32px;
+					margin-bottom: 10px;
+					">😀         </div>
+
+					<h2 style="margin: 0; padding:0; line-height: 1.4;">World Emoji Day                                                                                                                                                                                         </h2>
+					</div>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">In this year's proposal for Unicode Version 17.0 there is a <em>Hairy Creature</em> emoji. <br />
+<br />
+Our favorite <em>Hairy Creature</em> goes by many names around the world: Almas, Bigfoot, Mapinguari, Orang Pendek, Sasquatch, Yeti and more.<br />
+<br />
+We'll see in the September update if this elusive creature is finally caught.<br />
+<br />
+<strong>July 17th is World Emoji Day. <a href="https://worldemojiday.com">https://worldemojiday.com</a></strong></p></div>
+
+						<div class="section"  style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+				<div style="text-align: center; padding: 1em 0">
+				<div style="display: inline-block;
+				padding: 20px;
+				line-height: 36px;
+				height: 36px;
+				width: 36px;
+				border-radius: 50%;
+				background: #f2ebd7;
+				font-size: 32px;
+				margin-bottom: 10px;
+				">📦</div>
+
+				<h2 style="margin: 0; padding:0; line-height: 1.4;">Merch</h2>
+				</div>
+				<div class="hr-light"  style="border-top: none; border-bottom-width: 1px; border-bottom-style:solid"><p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://apps.apple.com/us/app/emoji-calendar/id1286750440?ls=1" target="_blank" >😀📅 Emoji Calendar</a>. This is a <strong>free app</strong> to count down to the next holiday with simple two-glyph emojis. Available for iOS and Apple Watch.</p></div><div class="hr-light"  style="border-top: none; border-bottom-width: 1px; border-bottom-style:solid"><p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="http://designingwithdata.com" target="_blank">Designing with Data eBooks</a>. If you need to tell your story using data, pick up these books today. Now <strong>pay what you want</strong> for <a href="https://gumroad.com/l/ArWZ" target="_blank">epub, mobi, pdf</a>.</p></div><div class="hr-light"  style="border-top: none; border-bottom-width: 1px; border-bottom-style:solid"><p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://triagemail.com/" target="_blank" >Triagemail: Get unread email under control.</a> An iOS app to check any email account. With only 4 options, get through all your unread email fast so you never miss anything important. <strong>$1.99 on the App Store</strong>.</p></div><div class="hr-light"  style="border-top: none; border-bottom-width: 1px; border-bottom-style:solid"><p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://apps.apple.com/us/app/ornithoto/id1665382610?ls=1&mt=8" target="_blank" >Ornithoto: long exposure photos</a> An experimental iOS camera app to capture light or motion to create amazing images. <!-- <strong>$2.99 on the App Store</strong>. --></p></div>			</div>
+					</div>
+		]]></content:encoded>      
+  </item>  <item>
+    <title>◍ (optional.is) 02025Q2</title>
+    <link>https://optional.is/newsletter/02025Q2/</link>
+    <dc:creator><![CDATA[optional Bot]]></dc:creator>
+    <pubDate>Tue, 01 Apr 2025 11:27:59 +0000</pubDate>
+    <guid isPermaLink="false">https://optional.is/newsletter/02025Q2/</guid>
+    <description><![CDATA[<strong> 02025Q2 REYKJAVIK:</strong> We're trying out a new design and layout: all the same great content in a brand-new look!]]></description>
+    <content:encoded><![CDATA[		<div class="main" style="max-width: 600px; text-align: left; margin: 0  auto;  padding: 1em 1em 0 1em; font-size: 16px; line-height: 1.4; ">
+			<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://optional.is"><img stlye="margin-bottom: 30px;" class="optional-logo" src="https://optional.is/images/logo-black-sm.png" width="136" height="30" /></a></p>
+
+			<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><em>Hello, this is the (optional.is) quarterly newsletter. Mostly the thoughts of Brian Suda.</em></p>
+			<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><strong> 02025Q2 REYKJAVIK:</strong> We're trying out a new design and layout: all the same great content in a brand-new look!</p>
+
+
+			<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<div style="text-align: center; padding: 1em 0">
+									<div style="display: inline-block;
+					padding: 20px;
+					line-height: 36px;
+					height: 36px;
+					width: 36px;
+					border-radius: 50%;
+					background: #e6f4f9;
+					font-size: 32px;
+					margin-bottom: 10px;
+					">🚢         </div>
+
+					<h2 style="margin: 0; padding:0; line-height: 1.4;">Ship It!                                                                                                                                                                                                </h2>
+					</div>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">In Q1, we wrapped up surveys and extracted ourselves from a prototype project we started last summer. They raised money, hired a team and hopefully one day we can talk about it.<br />
+<br />
+Q2 has two new projects. The first is a web-based tool to track with equipment & team utilization. The other is a 3–4 month proof-of-concept web/app prototype for tester to use and give feedback. This one spans all sorts of devices, web, TV, watch, etc.</p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<div style="text-align: center; padding: 1em 0">
+									<div style="display: inline-block;
+					padding: 20px;
+					line-height: 36px;
+					height: 36px;
+					width: 36px;
+					border-radius: 50%;
+					background: #d5ebd2;
+					font-size: 32px;
+					margin-bottom: 10px;
+					">⛰️        </div>
+
+					<h2 style="margin: 0; padding:0; line-height: 1.4;">Torpenhow Hill                                                                                                                                                                                          </h2>
+					</div>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">Torpenhow Hill is a made-up term based on a hill near the village of Torpenhow in Cumbria, England.<br />
+<br />
+It is an example of a tautological placename. In Old Saxons <em>torr</em> is hill. In Welsh <em>pen</em> is also hill, and in Old Norse <em>haugr</em>, which became 'how' is also 'hill'. Therefore, the name 'Torpenhow Hill' can be translated as: hill-hill-hill Hill.</p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<div style="text-align: center; padding: 1em 0">
+									<div style="display: inline-block;
+					padding: 20px;
+					line-height: 36px;
+					height: 36px;
+					width: 36px;
+					border-radius: 50%;
+					background: #e6f4f9;
+					font-size: 32px;
+					margin-bottom: 10px;
+					">🗒️        </div>
+
+					<h2 style="margin: 0; padding:0; line-height: 1.4;">Q1 Writing                                                                                                                                                                                              </h2>
+					</div>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">In Q1, we published six articles, six weeknotes and maintained our ◍ Quarternotes newsletter schedule. <br />
+<br />
+<strong>Omnibus 02024</strong><br />
+<a href="https://optional.is/required/2025/01/01/omnibus-02024/" >https://optional.is/required/2025/01/01/omnibus-02024/</a><br />
+⸻<br />
+<strong>02024 TIL</strong><br />
+<a href="https://optional.is/required/2025/01/14/02024-til/" >https://optional.is/required/2025/01/14/02024-til/</a><br />
+⸻<br />
+<strong>Optimized Charging</strong><br />
+<a href="https://optional.is/required/2025/01/28/optimized-charging/" >https://optional.is/required/2025/01/28/optimized-charging/</a><br />
+⸻<br />
+<strong>02024 Annual Report</strong><br />
+<a href="https://optional.is/required/2025/02/11/02024-annual-report/" >https://optional.is/required/2025/02/11/02024-annual-report/</a><br />
+⸻<br />
+<strong>Mini-Thermal printer</strong><br />
+<a href="https://optional.is/required/2025/02/26/mini-thermal-printer/" >https://optional.is/required/2025/02/26/mini-thermal-printer/</a><br />
+⸻<br />
+<strong>Eyjafajalljökull: 15th anniversary</strong><br />
+<a href="https://optional.is/required/2025/03/20/eyjafjallajokull-15th-anniversary/" >https://optional.is/required/2025/03/20/eyjafjallajokull-15th-anniversary/</a><br />
+⸻<br />
+<br />
+<span style="font-size: 90%">📰 <a href="https://optional.is/newsletter/" >optional.is/newsletter/</a><br />
+🗓 <a href="https://optional.is/required/category/weeknotes/" >optional.is/required/category/weeknotes</a><br />
+📡 <a href="https://optional.is/feeds/" >optional.is/feeds/</a></span></p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<div style="text-align: center; padding: 1em 0">
+									<div style="display: inline-block;
+					padding: 20px;
+					line-height: 36px;
+					height: 36px;
+					width: 36px;
+					border-radius: 50%;
+					background: #78a7d9;
+					font-size: 32px;
+					margin-bottom: 10px;
+					">🏴󠁧󠁢󠁳󠁣󠁴󠁿   </div>
+
+					<h2 style="margin: 0; padding:0; line-height: 1.4;">Witch Tartan                                                                                                                                                                                            </h2>
+					</div>
+<div style="text-align: center; margin: 0 auto; padding:0; line-height: 1.4;">
+<img src="https://optional.is/newsletter/02025Q2/tartan.jpg" style="width: 100%; margin: 10px 0 0 0;" />
+</div>
+<p style="margin: 0; padding: 5px 0 10px 0; line-height: 1.4; font-size: 80%; opacity: 0.8;">A newly approved tartan, designed by Clare Campbell, memorializes those persecuted under Scotland’s Witchcraft Act.</p>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">The pattern features several references to important colors and numbers.<br />
+<br />
+Its black and grey tones reflect the darkness of the era and the ashes of those burned. Red signifies bloodshed, while pink represents the legal tapes binding trial documents then and now. <br />
+<br />
+The thread count encodes the years 1563 and 1736 (1+5+6+3 = 15 and 1+7+3+6 = 17), with these numbers woven into black and grey bands surrounding a white check of three threads—symbolizing the campaign’s three objectives: securing a pardon, an apology, and memorials. <br />
+<br />
+The 173 black threads in the tartan’s squares represent the 173 years the Witchcraft Act was in force.</p></div>
+<div class="section" style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+<div style="text-align: center; padding: 1em 0">
+									<div style="display: inline-block;
+					padding: 20px;
+					line-height: 36px;
+					height: 36px;
+					width: 36px;
+					border-radius: 50%;
+					background: #d7e3e6;
+					font-size: 32px;
+					margin-bottom: 10px;
+					">🕰         </div>
+
+					<h2 style="margin: 0; padding:0; line-height: 1.4;">Office Hours                                                                                                                                                                                            </h2>
+					</div>
+
+<p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;">Over the last year, we’ve made use of people’s gracious open office hours. We’ve booked sessions with people we admire and had some amazing and informative chats.<br />
+<br />
+Our open office hours are:<br />
+<br />
+⁍ Monday evenings: 21-22:00 UTC for the Americas<br />
+⁍ Friday mornings: 9-11:00 UTC for Europe<br />
+<br />
+Hopefully, we’ll be able to reconnect with more old friends, meet new folks, and have more interesting and engaging conversations.<br />
+<br />
+<strong>🗓 Book a time to chat: </strong> <a href="https://calendly.com/brian-suda/30min"> https://calendly.com/brian-suda/30min</a></p></div>
+
+						<div class="section"  style="padding: 0 0 2em 0; margin: 0; line-height: 1.4;">
+				<div style="text-align: center; padding: 1em 0">
+				<div style="display: inline-block;
+				padding: 20px;
+				line-height: 36px;
+				height: 36px;
+				width: 36px;
+				border-radius: 50%;
+				background: #f2ebd7;
+				font-size: 32px;
+				margin-bottom: 10px;
+				">📦</div>
+
+				<h2 style="margin: 0; padding:0; line-height: 1.4;">Merch</h2>
+				</div>
+				<div class="hr-light"  style="border-top: none; border-bottom-width: 1px; border-bottom-style:solid"><p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://apps.apple.com/us/app/emoji-calendar/id1286750440?ls=1" target="_blank" >😀📅 Emoji Calendar</a>. This is a <strong>free app</strong> to countdown to the next holiday with simple two-glyph emojis. Available for iOS and Apple Watch.</p></div><div class="hr-light"  style="border-top: none; border-bottom-width: 1px; border-bottom-style:solid"><p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="http://designingwithdata.com" target="_blank">Designing with Data eBooks</a>. If you need to tell your story using data, pick up these books today. Now <strong>pay what you want</strong> for <a href="https://gumroad.com/l/ArWZ" target="_blank">epub, mobi, pdf</a>.</p></div><div class="hr-light"  style="border-top: none; border-bottom-width: 1px; border-bottom-style:solid"><p style="margin: 10px 0; padding: 0 0 10px 0; line-height: 1.4;"><a href="https://adventure-mazes.com" target="_blank">Adventure Mazes!</a> You can now order paperback books of our mazes. Join our monthly maze mailing list and enjoy the side quests.</p></div>			</div>
+					</div>
+		]]></content:encoded>      
+  </item>  <item>
     <title>◍ (optional.is) 02025Q1</title>
     <link>https://optional.is/newsletter/02025Q1/</link>
     <dc:creator><![CDATA[optional Bot]]></dc:creator>
