@@ -19,6 +19,19 @@
 <meta name="twitter:description" content="A high-level overview of all our numbers from 02021. How we spent our time and money to our customers and revenue.">
 <meta name="twitter:creator" content="@optionalBot">
 <meta name="twitter:domain" content="http://optional.is">
+<style id="wp-block-heading-inline-css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://optional.is/required/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://optional.is/required/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
 </head>
 <body>
 
@@ -34,15 +47,15 @@
 
 			<div class="entry">
 				
-<p>Each year, we try to put together this informal, rough annual report. <a href="category/annual-report/index.html">This is our 8th Annual Report write-up</a>. </p>
+<p class="wp-block-paragraph">Each year, we try to put together this informal, rough annual report. <a href="category/annual-report/index.html">This is our 8th Annual Report write-up</a>. </p>
 
 
 
-<p>The goal is to show in abstract, high-level numbers what the company is up too. Every company is different, but hopefully, this can be used by others as some sort of benchmark on what is &#8220;normal&#8221;.</p>
+<p class="wp-block-paragraph">The goal is to show in abstract, high-level numbers what the company is up too. Every company is different, but hopefully, this can be used by others as some sort of benchmark on what is &#8220;normal&#8221;.</p>
 
 
 
-<p>This year, as with last, is more atypical than others, so take this with a grain of salt. We also transitioned from our SLF company to an EHF company. That removed the previous full liability from owners of the SLF to a limited liability company of the EHF. For you dear reader and to our customers, nothing changed, but in the long term, it is more stable. So all of the following information is a slight blend of the two entities, but they were acting only as one when it came to invoicing, salary and bills.</p>
+<p class="wp-block-paragraph">This year, as with last, is more atypical than others, so take this with a grain of salt. We also transitioned from our SLF company to an EHF company. That removed the previous full liability from owners of the SLF to a limited liability company of the EHF. For you dear reader and to our customers, nothing changed, but in the long term, it is more stable. So all of the following information is a slight blend of the two entities, but they were acting only as one when it came to invoicing, salary and bills.</p>
 
 
 
@@ -50,39 +63,39 @@
 
 
 
-<p>This year, we had our first invoices go unpaid as the company we were working for went bankrupt. We&#8217;re lucky in that it took 10 years for that to happen, but when it did, it was a spectacular mess. </p>
+<p class="wp-block-paragraph">This year, we had our first invoices go unpaid as the company we were working for went bankrupt. We&#8217;re lucky in that it took 10 years for that to happen, but when it did, it was a spectacular mess. </p>
 
 
 
-<p>This year we worked closely with 6 different companies and sent out a total of 21 invoices. Four invoices were to Icelandic companies and 17 to international customers. One company we had not previously worked with. That project is done and there is no sign of any follow-up, but we did worked with some great people and something might come-up in the future. </p>
+<p class="wp-block-paragraph">This year we worked closely with 6 different companies and sent out a total of 21 invoices. Four invoices were to Icelandic companies and 17 to international customers. One company we had not previously worked with. That project is done and there is no sign of any follow-up, but we did worked with some great people and something might come-up in the future. </p>
 
 
 
-<p>Four out of the six customers will bring work into 02022, obviously not the bankrupt one.</p>
+<p class="wp-block-paragraph">Four out of the six customers will bring work into 02022, obviously not the bankrupt one.</p>
 
 
 
-<p>At the end of each month, we tally-up our hours and send out invoices for the work done that month. </p>
+<p class="wp-block-paragraph">At the end of each month, we tally-up our hours and send out invoices for the work done that month. </p>
 
 
 
-<p>If we look at the timeline for our bankrupt customer, there wasn&#8217;t much we could have done differently. In early January 02021, we sent in our invoice for December hours which was to be paid 30 days later at the start of Feb. Then at the start of Feb, we sent-in our January hours. At that point, the December invoice was late and a week later the company filed for bankruptcy. That left our December, January and February invoices lost. We spent most of 02020 working for the company, slowly increasing our workload from half-day a week, to one-day a week, to several days. Lots of data needed retrieving and analysing for potential investors as their runway was running out.</p>
+<p class="wp-block-paragraph">If we look at the timeline for our bankrupt customer, there wasn&#8217;t much we could have done differently. In early January 02021, we sent in our invoice for December hours which was to be paid 30 days later at the start of Feb. Then at the start of Feb, we sent-in our January hours. At that point, the December invoice was late and a week later the company filed for bankruptcy. That left our December, January and February invoices lost. We spent most of 02020 working for the company, slowly increasing our workload from half-day a week, to one-day a week, to several days. Lots of data needed retrieving and analysing for potential investors as their runway was running out.</p>
 
 
 
-<p>In the end, those three invoices went unpaid. They accounted for 30% of the total income from that client. Since we were a 3rd-party contractor, we were way down the list of any bankruptcy claimants. Sadly, we&#8217;ll never see that money. Those unpaid invoices accounted for around 15% of the company&#8217;s annual income.</p>
+<p class="wp-block-paragraph">In the end, those three invoices went unpaid. They accounted for 30% of the total income from that client. Since we were a 3rd-party contractor, we were way down the list of any bankruptcy claimants. Sadly, we&#8217;ll never see that money. Those unpaid invoices accounted for around 15% of the company&#8217;s annual income.</p>
 
 
 
-<p>One thing we could have done was to pre-bill a block of hours. If they couldn&#8217;t pay for them, we wouldn&#8217;t work. While that&#8217;s a solution, it is a pretty cold and untrusting one. Being on the data team, we knew the numbers were not looking good and prospects slim. We could have walked away earlier, but knowing the risks we continued to show-up and help even though that meant potentially not getting paid. We took a gamble and it didn&#8217;t work out. In our case we lost more than we expected, but that&#8217;s business. We weren&#8217;t the worst-off of the 3rd party claimants. The employees we worked with got their salaries right-up until the day bankruptcy was declared. We got stuck with a 3 month loss.</p>
+<p class="wp-block-paragraph">One thing we could have done was to pre-bill a block of hours. If they couldn&#8217;t pay for them, we wouldn&#8217;t work. While that&#8217;s a solution, it is a pretty cold and untrusting one. Being on the data team, we knew the numbers were not looking good and prospects slim. We could have walked away earlier, but knowing the risks we continued to show-up and help even though that meant potentially not getting paid. We took a gamble and it didn&#8217;t work out. In our case we lost more than we expected, but that&#8217;s business. We weren&#8217;t the worst-off of the 3rd party claimants. The employees we worked with got their salaries right-up until the day bankruptcy was declared. We got stuck with a 3 month loss.</p>
 
 
 
-<p>Employees have certain protections and benefits that are not afforded a contractor or freelancer. That&#8217;s something to remember when you evaluate the price difference between an hourly employee and hourly contractor.</p>
+<p class="wp-block-paragraph">Employees have certain protections and benefits that are not afforded a contractor or freelancer. That&#8217;s something to remember when you evaluate the price difference between an hourly employee and hourly contractor.</p>
 
 
 
-<p>One side-effect of all this was that we had to increase in our hourly rate to compensate for that loss and protect us going forward.</p>
+<p class="wp-block-paragraph">One side-effect of all this was that we had to increase in our hourly rate to compensate for that loss and protect us going forward.</p>
 
 
 
@@ -90,15 +103,15 @@
 
 
 
-<p>We were really bad about using our time tracker in 02021. Two of our major customers are on retainers, so we do not  need to watch our hours that closely. Most of the Australian projects are fixed-bid, so even if we come-in over our estimate, we are not billing more. Internal project take as long as they take. The mental overhead of using the time-tracking tool was too great compared to the immediate feedback and limited usefulness during the year.</p>
+<p class="wp-block-paragraph">We were really bad about using our time tracker in 02021. Two of our major customers are on retainers, so we do not  need to watch our hours that closely. Most of the Australian projects are fixed-bid, so even if we come-in over our estimate, we are not billing more. Internal project take as long as they take. The mental overhead of using the time-tracking tool was too great compared to the immediate feedback and limited usefulness during the year.</p>
 
 
 
-<p>That leaves us with only a few smaller projects that need exact hours. We would keep track of those hours along side the task lists in a text file.</p>
+<p class="wp-block-paragraph">That leaves us with only a few smaller projects that need exact hours. We would keep track of those hours along side the task lists in a text file.</p>
 
 
 
-<p>When it comes to services, all of our work falls into just a few categories: Programming, Administration, Meetings and Writing. Sometimes it feels like we&#8217;re doing all 4 at once!</p>
+<p class="wp-block-paragraph">When it comes to services, all of our work falls into just a few categories: Programming, Administration, Meetings and Writing. Sometimes it feels like we&#8217;re doing all 4 at once!</p>
 
 
 
@@ -106,19 +119,19 @@
 
 
 
-<p>None. Back 02020, we had to cancel the Material Conference. Rather than re-schedule it for later that year, we took the wait and see approach. Maybe we&#8217;d be able to reconvene in March 02021, one year later? Sadly, that was not possible. Nor any time the rest of 02021.</p>
+<p class="wp-block-paragraph">None. Back 02020, we had to cancel the Material Conference. Rather than re-schedule it for later that year, we took the wait and see approach. Maybe we&#8217;d be able to reconvene in March 02021, one year later? Sadly, that was not possible. Nor any time the rest of 02021.</p>
 
 
 
-<p>Right at the start of 02021, we were part of a panel discussion about &#8220;<a href="https://beyondtellerrand.com/stay-curious/career-choices">Career Choices</a>&#8221; for <em>Beyond Tellerand</em>&#8216;s virtual events series <em>Stay Curious</em>. It was a lot of fun. These sessions were not recorded, so you had to attend to get the advice and feedback.</p>
+<p class="wp-block-paragraph">Right at the start of 02021, we were part of a panel discussion about &#8220;<a href="https://beyondtellerrand.com/stay-curious/career-choices">Career Choices</a>&#8221; for <em>Beyond Tellerand</em>&#8216;s virtual events series <em>Stay Curious</em>. It was a lot of fun. These sessions were not recorded, so you had to attend to get the advice and feedback.</p>
 
 
 
-<p>We&#8217;re looking forward to travelling again in 02022, but realistically, we&#8217;re not planning anything.</p>
+<p class="wp-block-paragraph">We&#8217;re looking forward to travelling again in 02022, but realistically, we&#8217;re not planning anything.</p>
 
 
 
-<p>As for conference presentations, we&#8217;re out of the loop. We don&#8217;t have any specific theme or topic to convey to an audience. Our expertise is running a small consulting business, survey tools,  not talking about top secret projects, and trying to build-up an audience.</p>
+<p class="wp-block-paragraph">As for conference presentations, we&#8217;re out of the loop. We don&#8217;t have any specific theme or topic to convey to an audience. Our expertise is running a small consulting business, survey tools,  not talking about top secret projects, and trying to build-up an audience.</p>
 
 
 
@@ -126,7 +139,7 @@
 
 
 
-<p>When we look at the breakdown of spending in 02021, a few things have changed dramatically.</p>
+<p class="wp-block-paragraph">When we look at the breakdown of spending in 02021, a few things have changed dramatically.</p>
 
 
 
@@ -134,11 +147,11 @@
 
 
 
-<p>The category that jumped the biggest is Office Supplies. This year, we purchased a bunch of hardware; a new computer, peripherals, an iPhone and a few other gadgets. Our projects budget also increased. There are a few things in the works, so we&#8217;ve spent more money than usual on prototypes, printing and tests.</p>
+<p class="wp-block-paragraph">The category that jumped the biggest is Office Supplies. This year, we purchased a bunch of hardware; a new computer, peripherals, an iPhone and a few other gadgets. Our projects budget also increased. There are a few things in the works, so we&#8217;ve spent more money than usual on prototypes, printing and tests.</p>
 
 
 
-<p>The Professional Services category hasn&#8217;t changed much. This year we migrated over to a software solution for invoicing, salaries and taxes. This moves some of the accountant expenses to the software subscription and moves the workload internally. It will save money, but increase our time spent on these tasks. We&#8217;ll see how much money it &#8220;saves&#8221; by doing it internally. Either way, we&#8217;ll have a better overview of our finances.</p>
+<p class="wp-block-paragraph">The Professional Services category hasn&#8217;t changed much. This year we migrated over to a software solution for invoicing, salaries and taxes. This moves some of the accountant expenses to the software subscription and moves the workload internally. It will save money, but increase our time spent on these tasks. We&#8217;ll see how much money it &#8220;saves&#8221; by doing it internally. Either way, we&#8217;ll have a better overview of our finances.</p>
 
 
 
@@ -146,15 +159,15 @@
 
 
 
-<p>Right in the middle of the year our hosting provider, WebFaction, had a major hiccup and gave up. All of their clients  were to be migrated to the new owners GoDaddy (tsoHosting), but there were snags and rather than actually move everyone, our subscription was returned and we had to find new hosting.</p>
+<p class="wp-block-paragraph">Right in the middle of the year our hosting provider, WebFaction, had a major hiccup and gave up. All of their clients  were to be migrated to the new owners GoDaddy (tsoHosting), but there were snags and rather than actually move everyone, our subscription was returned and we had to find new hosting.</p>
 
 
 
-<p>Stupidly, we managed to backup and migrate all the files for the websites, but completely forgot about the server log history!!!</p>
+<p class="wp-block-paragraph">Stupidly, we managed to backup and migrate all the files for the websites, but completely forgot about the server log history!!!</p>
 
 
 
-<p>We lost most of the year&#8217;s web traffic information, so what is here is only from the last few months of the 02021.</p>
+<p class="wp-block-paragraph">We lost most of the year&#8217;s web traffic information, so what is here is only from the last few months of the 02021.</p>
 
 
 
@@ -227,7 +240,7 @@
 
 
 
-<p>There are three articles in the top 10 from the last two years. The older the article, the more time it has to build-up links around the web and more relevance in search engines.  On the other hand, recent articles would have a lot of traffic from our promoting the links on social media and via the RSS feed.</p>
+<p class="wp-block-paragraph">There are three articles in the top 10 from the last two years. The older the article, the more time it has to build-up links around the web and more relevance in search engines.  On the other hand, recent articles would have a lot of traffic from our promoting the links on social media and via the RSS feed.</p>
 
 
 
@@ -235,19 +248,19 @@
 
 
 
-<p>In 02022, we are officially closing the old SLF company and run everything only through the EHF. That has to go through the sheriff&#8217;s office to make sure no one has a claim against the company before we can officially shut it down through the tax office.</p>
+<p class="wp-block-paragraph">In 02022, we are officially closing the old SLF company and run everything only through the EHF. That has to go through the sheriff&#8217;s office to make sure no one has a claim against the company before we can officially shut it down through the tax office.</p>
 
 
 
-<p>We have a few local projects which helps us stay connected to the Icelandic community. We’ll continue with those growing slowly as needed.</p>
+<p class="wp-block-paragraph">We have a few local projects which helps us stay connected to the Icelandic community. We’ll continue with those growing slowly as needed.</p>
 
 
 
-<p>The survey tool has a solid staff survey and the goal is to grow the number of organizations that take part. We have pretty much maxed out the customer based in the education vertical and now we are slowly expanding with this new product.</p>
+<p class="wp-block-paragraph">The survey tool has a solid staff survey and the goal is to grow the number of organizations that take part. We have pretty much maxed out the customer based in the education vertical and now we are slowly expanding with this new product.</p>
 
 
 
-<p>Our two top secret projects SHOULD see the light of day! Then we can talk more about them, our thoughts and how we see the future developing along with everything we’ve learnt along the way.</p>
+<p class="wp-block-paragraph">Our two top secret projects SHOULD see the light of day! Then we can talk more about them, our thoughts and how we see the future developing along with everything we’ve learnt along the way.</p>
 
               <div class="postmetadata">
 					<p><strong>Categories:</strong> <a href="category/annual-report/index.html" title="View all articles in Annual Report" rel="tag category" class="category">Annual Report</a>, <a href="category/meta/index.html" title="View all articles in Meta" rel="tag category" class="category">Meta</a></p><p><strong>Tags:</strong> <a href="tag/02021/index.html" rel="tag"  class="tag">02021</a>, <a href="tag/2021/index.html" rel="tag"  class="tag">2021</a>, <a href="tag/annual-report/index.html" rel="tag"  class="tag">annual report</a>, <a href="tag/trends/index.html" rel="tag"  class="tag">trends</a></p>			  </div>
@@ -400,10 +413,10 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 <script type="speculationrules">
-{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/required\/*"},{"not":{"href_matches":["\/required\/wp-*.php","\/required\/wp-admin\/*","\/required\/wp-content\/uploads\/*","\/required\/wp-content\/*","\/required\/wp-content\/plugins\/*","\/required\/wp-content\/themes\/optional\/*","\/required\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/required/*"},{"not":{"href_matches":["/required/wp-*.php","/required/wp-admin/*","/required/wp-content/uploads/*","/required/wp-content/*","/required/wp-content/plugins/*","/required/wp-content/themes/optional/*","/required/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
 
-<!-- Dynamic page generated in 0.259 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2025-09-23 20:03:13 -->
+<!-- Dynamic page generated in 0.592 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2026-06-12 10:52:41 -->
 
 <!-- super cache -->

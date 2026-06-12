@@ -12,84 +12,239 @@
 	<atom:link href="https://optional.is/required/feed/" rel="self" type="application/rss+xml" />
 	<link>https://optional.is/required</link>
 	<description>optional is required</description>
-	<lastBuildDate>Fri, 19 Sep 2025 15:47:04 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 29 May 2026 09:52:44 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.8.2</generator>
-<atom:link rel="hub" href="https://pubsubhubbub.appspot.com"/><atom:link rel="hub" href="https://pubsubhubbub.superfeedr.com"/><atom:link rel="hub" href="https://websubhub.com/hub"/>	<item>
-		<title>Week #761 &#038; #762</title>
-		<link>https://optional.is/required/2025/09/19/week-761-762/</link>
+	<generator>https://wordpress.org/?v=7.0</generator>
+<atom:link rel="hub" href="https://pubsubhubbub.appspot.com"/>
+<atom:link rel="hub" href="https://pubsubhubbub.superfeedr.com"/>
+<atom:link rel="hub" href="https://websubhub.com/hub"/>
+<atom:link rel="self" href="https://optional.is/required/feed/"/>
+	<item>
+		<title>TIL DB</title>
+		<link>https://optional.is/required/2026/06/04/til-db/</link>
 		
 		<dc:creator><![CDATA[optional Bot]]></dc:creator>
-		<pubDate>Fri, 19 Sep 2025 13:31:00 +0000</pubDate>
+		<pubDate>Thu, 04 Jun 2026 13:31:00 +0000</pubDate>
+				<category><![CDATA[Applications]]></category>
+		<category><![CDATA[Experiments]]></category>
+		<category><![CDATA[Interfaces]]></category>
+		<category><![CDATA[Temporality]]></category>
+		<category><![CDATA[Visualizations]]></category>
+		<category><![CDATA[database]]></category>
+		<category><![CDATA[dirk]]></category>
+		<category><![CDATA[headlines]]></category>
+		<category><![CDATA[history]]></category>
+		<category><![CDATA[RDF]]></category>
+		<category><![CDATA[tags]]></category>
+		<category><![CDATA[TIL]]></category>
+		<category><![CDATA[visualisations]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=9748</guid>
+
+					<description><![CDATA[The Today I Learned lists have now been moved into a database to make it easier to query, pivot and explore.]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">Introducing the <em>Today I Learnt Database</em>.</p>
+
+
+
+<p class="wp-block-paragraph">Over the last few years, each day we&#8217;ve been collecting a few &#8216;interesting&#8217; headlines. We dropped them into a text file and at the end of the year went through everything, converted it to HTML and added some tags. It was an interest, but long process. We always had the intentions of doing something with these headlines!</p>
+
+
+
+<p class="wp-block-paragraph">We were fortunate enough to attend NewsFoo a few times. At one event, we met Ben Huh who was starting a new way to consume News called &#8220;<a href="https://www.theguardian.com/media/organgrinder/2011/jun/06/cheesburger-ben-huh-newspapers-open-source">The Moby Dick Project</a>&#8220;. You can <a href="https://web.archive.org/web/20111108132147/http://www.benhuh.com/2011/05/23/why-are-we-still-consuming-the-news-like-its-1899/">read more about it on Archive.org</a> since the original post is gone. This eventually spun out to become Circa, which closed and then re-opened under new management.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/moby-dick-project-sketches.gif" alt="Wireframes of the Moby Dick Project, a multicolumn interface for news stories" /></div>
+
+
+
+<p class="wp-block-paragraph">The original concept was a sort of three column view with each column changing in speed and curation. The first might be the news story, the second related events and the third comments. We remember it being described as consuming your Vegetables and Sweets! </p>
+
+
+
+<p class="wp-block-paragraph">What struck a cord with us was that there are plenty of stories that you say to yourself &#8220;Hey remember when that happened, did they ever find out why?&#8221;. Traditional news websites seem to be setup to show you articles and are not great at stringing things together. Wikipedia isn&#8217;t bad, but the content keeps getting written over and it is objective as opposed to user-generated comments.</p>
+
+
+
+<aside><p>Back in 02009 (around the time we heard about Project Moby Dick), the Air France Flight 447 had unexplainably crashed in the Atlantic flying from Rio de Janeiro, Brazil, to Paris. It was only recently in 02026 that Airbus was found at fault.</p><p>That story took 17 years to develop and still might not be over.</p></aside>
+
+
+
+<p class="wp-block-paragraph">When we started to collect our headlines, we wanted a way to track long story arcs. If we saw a headline in January, then again maybe 4 to 6 weeks later with something more or even a resolution, we want a way to thread them together. In our world of headline click-bait, we rarely get to see longer trends. That is one of the goals we wanted to achieve with our TIL headlines project.</p>
+
+
+
+<p class="wp-block-paragraph">Todo all this, we needed to move it out of these text articles into something more dynamic and clickable. Something that could continue to evolve and have old headlines become richer with the addition of new.</p>
+
+
+
+<p class="wp-block-paragraph">In our spare time, we converted the old HTML and tags into SQL statements and loaded everything up in to a relational database. That allowed us to make dynamic connections. We can browse by year, month, day or tag. You can search and filter and we can get frequency counts over time to show the number of mentions of a specific topic.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>You can browse the TIL DB at <a href="https://til.optional.is">https://til.optional.is</a></strong></p>
+
+
+
+<p class="wp-block-paragraph">What we&#8217;ve done so far are &#8220;table stakes&#8221;. It&#8217;s what you would expect from linked data: the ability to browse, pivot between topics and dates.</p>
+
+
+
+<p class="wp-block-paragraph">Our goal was to take it one step further. Back in 01998, Matt Webb created <em>DIRK: The fundamental connectedness of all things</em>. It was an RDF store of assertions in the form of &#8220;Subject Predicate Object&#8221;.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/archive-org-dirk-2002.png" alt="Screenshot of DIRK from 02002" /></div>
+
+
+
+<p class="wp-block-paragraph">For instance: <em>Reykjavik</em> <span style="text-decoration: underline;">is in</span> <em>Iceland</em>. <em>Iceland</em> <span style="text-decoration: underline;">is in</span> <em>Europe</em>. Therefore, we can conclude <em>Reykjavik</em> <span style="text-decoration: underline;">is in</span> <em>Europe</em>. If you string enough of these assertions together you can get to some interesting connected places. To make our TIL DB more interesting, we start to write some of our own assertions based on the existing tags we put on the headlines. This adds more value to the tags and focuses our attention on what tags to use.</p>
+
+
+
+<p class="wp-block-paragraph">For instance: <em>Betty White, beloved and trailblazing actress, dies at 99</em> was tagged <strong>obituary, tv, &nbsp;Betty White</strong>. We can use that to make a few assertions:  <strong>Betty White</strong>&nbsp;is connected to&nbsp;<strong>obituary</strong>&nbsp;because&nbsp;<em>she died at the age 99.</em> <strong>Betty White</strong>&nbsp;is connected to&nbsp;<strong>tv</strong>&nbsp;because&nbsp;<em>she stared in the Golden Girls.</em></p>
+
+
+
+<p class="wp-block-paragraph">This allows us to see how <strong>Betty White</strong> is connected to other tags through <strong>tv</strong> or <strong>obituary</strong> and why. Much like DIRK, we can click through various assertions, but we are trying to tie ours to facts in headlines.</p>
+
+
+
+<p class="wp-block-paragraph">We built a web form to connect any two tags in our system so you can see the steps between them. It is a slow process which will grow worse over time with more and more content. The fun is seeing how two random terms are related and how few steps it takes!</p>
+
+
+
+<h2 class="wp-block-heading">Just use AI</h2>
+
+
+
+<p class="wp-block-paragraph">Artificial Intelligence is certainly the buzzword <em>soup de jour</em> these days. So let&#8217;s look at how and where AI could be useful.</p>
+
+
+
+<p class="wp-block-paragraph">We are curating our headlines that we save based on lots of factors: importance, likelihood of a longer arc, non-reoccurring events and frequency. Every fall we get a new iPhone, every winter it snows; those are not headlines worth collecting for longer arcs. The Ukrainian-Russian war is still on going, and we&#8217;re not saving headlines of daily attacks &#8211; that&#8217;s (sadly) now background noise. The curation will stick with us for now.</p>
+
+
+
+<p class="wp-block-paragraph">Tagging is a tedious task that we&#8217;ve asked AI to help with. We have a giant json dump of headlines and tags with their corresponding database ids. The AI can ingest that easily and try to make some recommendations. That works for most things, it has some false-positives, but also feels a bit like it hits a local maximum. It heavily recommends existing tags and isn&#8217;t great at making new ones. It doesn&#8217;t &#8220;know&#8221; (it&#8217;s just a statistical machine) what new tags are useful or important.</p>
+
+
+
+<p class="wp-block-paragraph">We tried to get AI to write short assertions and it completely fell apart. The headlines are so short and there is extra, external knowledge that the AI doesn&#8217;t have. Their suggestions were longer than the headline and often just wrong. That&#8217;s a lost cause.</p>
+
+
+
+<p class="wp-block-paragraph">The two key insights people have told us about AI is that: </p>
+
+
+
+<ol class="wp-block-list">
+<li>It doesn&#8217;t know anything current. It is not a web crawler so don&#8217;t ask it about current events (like today&#8217;s headlines!)</li>
+
+
+
+<li>Rather than ask it to do something, ask it to write a script to do that. Then it is repeatable and deterministic outside of their AI ecosystem.</li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">We do use script to convert our text file to sql statements and scripts to export/dump the database into json formats. AI could help write these scripts, but that&#8217;s just fancy auto-complete/spell-check. There is no &#8220;AI&#8221; in the product.</p>
+
+
+
+<h2 class="wp-block-heading">Next Steps</h2>
+
+
+
+<p class="wp-block-paragraph">Everyday we continue to collect headlines and each month we try to import them into the database with tags. We are very far behind on the assertions. We need to make ourselves a small tool that just shows us a few un-asserted tags each day and we take smaller nibbles to add more metadata.</p>
+
+
+
+<p class="wp-block-paragraph">We&#8217;ve also considered away to make it more wiki-like and allow anyone to edit (or suggest) changes to tags and assertions. We&#8217;re not sure if the effort to build it compared to the audience actually contributing  is worth it right now.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/til-db-nyc-tag.png" alt="Screenshot of the frequency of the tag NYC over time and related tags" /></div>
+
+
+
+<p class="wp-block-paragraph">There are probably some smaller statistical tasks which we can add. Right now we chart tag frequency by month and you get a really good overview of trending topics. There are certainly more statical functions we can add like standard deviation, time between headlines, etc. Our advanced search allows for selecting a few tags and only showing headlines with ALL those tags (an AND search). We could try to do more frequency analysis on these 2 and 3 tag combinations.</p>
+
+
+
+<p class="wp-block-paragraph">The bare minimum is for us to continue to collect headlines. Once we have the data we can always add more metadata at a later date.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Go and explore the TIL DB at <a href="https://til.optional.is">https://til.optional.is</a></strong> see what&#8217;s missing and let us know what can be improved.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Week #797 &#038; #798</title>
+		<link>https://optional.is/required/2026/05/29/week-797-798/</link>
+		
+		<dc:creator><![CDATA[optional Bot]]></dc:creator>
+		<pubDate>Fri, 29 May 2026 13:31:00 +0000</pubDate>
 				<category><![CDATA[Briefs]]></category>
 		<category><![CDATA[Weeknotes]]></category>
-		<category><![CDATA[aitor]]></category>
-		<category><![CDATA[banksy]]></category>
-		<category><![CDATA[mario]]></category>
-		<category><![CDATA[nintendo]]></category>
-		<category><![CDATA[virtual boy]]></category>
-		<category><![CDATA[VR]]></category>
-		<guid isPermaLink="false">https://optional.is/required/?p=8477</guid>
+		<category><![CDATA[apps]]></category>
+		<category><![CDATA[backups]]></category>
+		<category><![CDATA[camera]]></category>
+		<category><![CDATA[meetings]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[sso]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=9931</guid>
 
-					<description><![CDATA[A double weeknote covering some highs and lows this week.]]></description>
+					<description><![CDATA[A double weeknote with another holiday break. We did manage to start a few new projects and wrap-up a few others.]]></description>
 										<content:encoded><![CDATA[
-<h2 class="wp-block-heading">Week #761</h2>
+<h2 class="wp-block-heading">Week #797</h2>
 
 
 
-<p>We started the week out with lunch with an old co-worker. It was great to meet-up, talk, compare notes and suggestions. Somehow the Banksy Documentary &#8220;<a href="https://www.imdb.com/title/tt1587707/">Exit Through the Gift Shop</a>&#8221; came up. If you haven&#8217;t seen it, you should fine a way to watch it.</p>
+<p class="wp-block-paragraph">We started the week off with a few meetings. All our surveys are done, so the team had a meeting to plan some summer projects and what needs improving for next school year. We also met with another friend about some microcontrollers to manage LED strips. Hopefully this will be useful for a potential upcoming project.</p>
 
 
 
-<div class="banner"><iframe width="560" height="315" src="https://www.youtube.com/embed/a0b90YppquE?si=yf5aUWNpyQhb_TxS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<p class="wp-block-paragraph">We&#8217;ve been tinkering on our Split-fount camera app for a few weeks now and decided to just release it. For the rest of the summer it is free and you can <a href="https://apps.apple.com/us/app/sf-camera/id6767219686">download SF Camera here on the iOS App Store</a>.</p>
 
 
 
-<p>On Tuesday was the Apple Event. It&#8217;s the predictable one where they release new iPhones and watches in preparation for the upcoming holiday season. We like to keep at least one eye on where the puck is heading.</p>
+<p class="wp-block-paragraph">By Wednesday we had worked on 9 different projects. Sometimes it&#8217;s fun to have a buffet of projects to pick and choose from, sometimes the context switching kills us. You can&#8217;t win.</p>
 
 
 
-<p>This week we continued on a quick security camera project. There is a crazy Vue.js version, but it has some issues and it is really hard to show to people. Originally, we were tasked with getting a sort of SwiftUI clone with the existing APIs and possibly change them over to a new system. We went way deeper into the weeds than expected.</p>
+<p class="wp-block-paragraph">More Backup woes. We have pretty good coverage of all our back-ups, but we continue to (sometimes painfully so) what&#8217;s missing. This week, we&#8217;re trying to figure out a good system for some iPad apps that do NOT save their data outside of the app container. Many apps are nice and save your data to iCloud storage or iCloud Drive. Then you can easily access it on another device and back it up. We found a few apps that are 100% self-contained. We deleted one and the multitude of pop-ups said &#8220;This will delete the app and its data&#8221; and we didn&#8217;t think about what that actually meant. The data isn&#8217;t settings or removing the data from this device &#8211; it was a complete deletion. So we had to restore the iPad from a backup to get the data back. The iPad backup was a week old, so now we&#8217;re in that window to get some data back, we might loose something we created in the last week. Luckily that wasn&#8217;t a problem, this time! Our next step is to look into how to better backup this app data to prevent this from happening again.</p>
 
 
 
-<p>On Thursday, we had another meeting with another old coworker where we (yet again) resurrected an old app idea. It has potential, precedence and the timing is in a good place. We&#8217;ll see if anyone&#8217;s interested in us running with the idea.</p>
+<h2 class="wp-block-heading">Week #798</h2>
 
 
 
-<p>On Friday, we published article about <a href="https://optional.is/required/2025/09/12/integrating-clusters/">Integrating Clusters</a>. It is one we started WAY back in 02014 when we were more dealing with processing Natural Language data and trying to cluster the results into manageable, digestible and understandable groups.</p>
+<p class="wp-block-paragraph">Monday was a holiday, so we started the week on Tuesday with a dud meeting. We did some prep work and then on the call no one was ready to review it. So we&#8217;re back to finding a time to have the same meeting again, but this time we review the project.</p>
 
 
 
-<h2 class="wp-block-heading">Week #762</h2>
+<p class="wp-block-paragraph">The exciting world life insurance is upon us as well. We got a cold call about switching life insurance and having the company pay for it. We sat on a sales call for a bit but now need to figure out what todo next.</p>
 
 
 
-<p>When we have some downtime, we work on our internal time tracking tool. We&#8217;ve shown it to a few external friends and they love the idea. We have integrations with our accounting software all setup and working. We just about have end-to-end client syncing, to time tracking to invoice generation working. Then we are moving onto the big USP (unique selling point).</p>
+<p class="wp-block-paragraph">On Wednesday we fixed a few bugs on our Xero/Django project and managed to spend half-a-day bring all the libraries and code up-to-date. We went from version 2 of Django to version 5. It took a few intermediate steps and lots of tests and checking, but we got there in the end. Hopefully, this will keep things current for a while and a bit faster for the customer.</p>
 
 
 
-<p>On Tuesday night, we did our weekly PETALS deploy. This small update is for setting-up permissions on the paid plans. Everyone&#8217;s on the &#8220;Early Adopter&#8221; get everything unlocked plan. So none of the current organizations will notice anything with the deploy, but future customers will start having access to some features behind the subscription paywall.</p>
+<p class="wp-block-paragraph">On Thursday we got the green light on a big project. This one has a potential to become it&#8217;s own company and project which we&#8217;d be a small owner. This is the culmination of a few years of working together with another company on marketing tools and now a sales tool. We have a great working relationship with them and we think there is a lot of potential here for future opportunities.</p>
 
 
 
-<p>We also met with an American friend who&#8217;s always popping over to Iceland. It was great to have lunch, chat and get some feedback. I&#8217;m sure we&#8217;ll do it again next time he&#8217;s in town.</p>
-
-
-
-<p>A family member brought us an idea for an app/website. We think he might be onto something so we stubbed out some app screens and basic revenue model. This week we met-up to create a survey to try and find out what the customer&#8217;s needs are rather than what they want. We also are trying to find out which of those needs are not currently being serviced. Using those two axises (high need/unserviced), we can figure out how to position the product and give some clarity and focus.</p>
-
-
-
-<p>This week we updated our machines to macOS 26. We&#8217;ve been dabbling on iOS26 beta for a while. Testing our apps and get our head around some of the new features. Previously, you couldn&#8217;t upload apps to the App Store if you were on a beta macOS, so we didn&#8217;t dare break our workflows, and besides we still gotta get stuff done. Long gone are the days of testing bleeding edge software locally on our work machines.</p>
-
-
-
-<p>Thursday morning we got some very sad news. Our friend and colleague, Aitor, who&#8217;ve we had so many crazy adventures with passed away. We&#8217;re still learning about what happened, but the rest of the week was a shock and daze. We created <a href="https://analog.is">analog.is</a> together, helped when he hosted <a href="https://sumendi.is">Sumendi</a> for World Restaurant day and so much more. We&#8217;ll always be proud of all our fun projects together.</p>
+<p class="wp-block-paragraph">For the PETALS project, we&#8217;re mostly focused on improving the sign-up and login process. As part of that, we implemented a magic link email login. Rather than the forgot my password dance, you can request a temporary link via email that logs you in. The next portion was to implement a Single Sign On library to support logging on with Google, Microsoft, Apple and others. It is processing slowly. The technology part is working, now to re-adjust the login and sign-up flows.</p>
 
 
 
@@ -97,812 +252,1184 @@
 
 
 
-<p>September 12th was Nintendo Direct. They announced a VIRTUAL BOY emulator and stereoscopic hardware for the switch! We love exploring anything VR and back in 1995, Nintendo&#8217;s failed experiment is making a comeback 30 years later!</p>
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/whatcable.png" alt="Screenshot of the What Cable tool"/></div>
 
 
 
-<div class="banner"><iframe width="560" height="315" src="https://www.youtube.com/embed/Oc8qckEoKxk?si=oOrTh_EaRx86rcsF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<p class="wp-block-paragraph">In reference to a recent article about <a href="https://optional.is/required/2026/05/07/ubs-c-non-power-delivery/">USB-C Non-Power Delivery</a>, we were pointed to <a href="https://www.whatcable.uk">https://www.whatcable.uk</a> It is a small utility that has a nice UI to tell you about the cable and device you have plugged in. (It took us awhile to understand the output) With this you can see what the power and data rating is for the cable and device. If there is a mis-match you can find the optimal cable pair. After a bunch of tests, we realized that the only major data transfer we&#8217;re doing with connected devices is backups. Sure we plugin the phone and transfer some pictures over a lower connection, but switching cables is a savings of only seconds-to-minutes. If we use the faster cables that come with our external hard drives, and we do because they are the only devices that take the funky USB Micro-B connection.</p>
 
 
 
-<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/09/super-mario-40.jpg" alt="Fake Super Mario Video Game Box art for the 40th anniversary" />
-<figcaption>Sept 13th was Super Mario Brothers&#8217; 40th anniversary.</figcaption>
-</figure>
+<p class="wp-block-paragraph">The office is near the Downtown Reykjavik Airport. There is ALOT of overhead traffic. It&#8217;s gotten to the point where we can tell by the sound that this isn&#8217;t a &#8220;normal&#8221; plane. This shortcut for iOS is great! <a href="https://whatsoverhead.com">https://whatsoverhead.com</a> You can just say &#8220;Hey Siri, what&#8217;s overhead&#8221; and it will read back some flight info. Since it is a shortcut you can see exactly how it is all working and salt-to-taste. It even works on a HomePod!</p>
 
 
 
-<p></p>
+<p class="wp-block-paragraph"></p>
 ]]></content:encoded>
 					
 		
 		
 			</item>
 		<item>
-		<title>Integrating Clusters</title>
-		<link>https://optional.is/required/2025/09/12/integrating-clusters/</link>
+		<title>Split-Fount Camera</title>
+		<link>https://optional.is/required/2026/05/22/split-fount-camera/</link>
 		
 		<dc:creator><![CDATA[optional Bot]]></dc:creator>
-		<pubDate>Fri, 12 Sep 2025 12:21:00 +0000</pubDate>
+		<pubDate>Fri, 22 May 2026 12:21:00 +0000</pubDate>
+				<category><![CDATA[Applications]]></category>
+		<category><![CDATA[Photography]]></category>
+		<category><![CDATA[camera]]></category>
+		<category><![CDATA[iOS]]></category>
+		<category><![CDATA[photography]]></category>
+		<category><![CDATA[photos]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=9938</guid>
+
+					<description><![CDATA[We had an itch to scratch to see if we could make this gradient camera. It turns out we could and the results have been loads of fun!]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">We continue to dabble in <a href="https://optional.is/required/category/photography/">unique camera apps</a>. After a bunch of code refactoring, we have a solid base to go from idea to prototype to new app quickly. That means we can experiment with new ideas and see if we like them. Getting into the field and snapping images tells you a lot more than just imaging the possibilities.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>TL;DR</strong> You can <a href="https://apps.apple.com/us/app/sf-camera/id6767219686">download the SF Camera on the iOS App Store</a> for Free until the price goes up September 02026.</p>
+
+
+
+<p class="wp-block-paragraph">We have a folder called &#8220;Inspiration&#8221; which we file away interesting images and ideas. Every once and awhile we browse through the folder when we need something new. As we recently browsed through, we saw that we saved several beautiful gradient, screen printed images. This is sometimes called &#8220;Rainbow Roll&#8221; or &#8220;Split-fount&#8221; screen pulls.</p>
+
+
+
+<p class="wp-block-paragraph">We liked this effect and tried to replicate it in some image editing software. It&#8217;s pretty easy and straight forward. </p>
+
+
+
+<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/sf-steps.jpg" alt="Four screenshots of the steps to apply the Split-Fount style effect"/></figure>
+
+
+
+<ol class="wp-block-list">
+<li>Select your base image. </li>
+
+
+
+<li>Convert it to black and white (Salt to taste). </li>
+
+
+
+<li>Create a second layer and put a color gradient over that. </li>
+
+
+
+<li>Convert that gradient layer from blend mode &#8220;Normal&#8221; to blend mode &#8220;Screen&#8221;. The black and white pixel values control the color that shows through.</li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">Even though a lot of our filters and camera effects can be done in post-processing, we really enjoy seeing through the view-finder the finished concept. Rather than take the color photo and go through these steps, we find it easier to compose the shot as we see the effect. It is a trade-off since in post you can infinitely tweak colors and other settings, but shooting as you see it means if you&#8217;re happy, one-click and you&#8217;re done &#8211; ready to share.</p>
+
+
+
+<p class="wp-block-paragraph">(Split-Fount) SF Camera was designed to create impactful photos quickly and easily. We have a limited pallet of colors, 11 so far, that you can swipe to choose the top and bottom gradients. The black and white image underneath is one designed to create high-contrast. We also allow you to invert the black and white to create interesting alternatives to the regular screen print style.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/split-fount-chips.png" alt="Eleven color chips representing the gradient options." /></div>
+
+
+
+<p class="wp-block-paragraph"><a href="https://apps.apple.com/us/app/sf-camera/id6767219686">Download the SF Camera on the iOS App Store</a> for Free until the price goes up September 02026.</p>
+
+
+
+<p class="wp-block-paragraph">With some of our other camera apps, you can always go into the photos.app and &#8216;revert to original&#8217;. This will remove the gradient and black and white effect and get you back to the source image. From there you can recreate the effect or do something completely different with the photo. Using SF Camera does NOT lock your photos into only this effect.</p>
+
+
+
+<h2 class="wp-block-heading">Future Improvements</h2>
+
+
+
+<p class="wp-block-paragraph">To change the gradient colors you can tap the text at the top to cycle through, but we&#8217;re mostly focusing on swiping! It is a hidden UI that is intuitive once you know it exists. We updated the swipe code to not only know what direction, but also which region (top/bottom/left/right). When you swipe left on the top half, we can cycle only through the top gradient color. Swiping up or down cycles through both. This has worked really well once you know it exists. But as we add more features and don&#8217;t want to overload or confuse the swipe motions.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/bw-samples.jpg" alt="A Colorful source image and a series of different grayscale images derived from the source image and how that affects the gradient."/></div>
+
+
+
+<p class="wp-block-paragraph">Not all greyscale images are equal! There are lots of ways to make a black and white image. Currently we are using an equation to make a hard light greyscale with lots of contrast. This has worked really well, but we took a photo or a bright red stop sign on a beautiful blue background and everything was equally grey. There was no contrast when applied the color gradient. The simplest way to solve this is to use different methods of converting color images to greyscale. Only take the Red channel, or only the Blue or Green. That would fix our previous Red/Blue problem, but now we&#8217;re adding more work onto you. It is probably worth it, but how it gets added and implemented is still up for debate.</p>
+
+
+
+<p class="wp-block-paragraph">Even though the app is live for anyone to download, there are still a bunch of improvements and ideas we&#8217;d like to implement.</p>
+
+
+
+<h2 class="wp-block-heading">Examples</h2>
+
+
+
+<p class="wp-block-paragraph">We made this camera app on a whim over the course of a few days. Then spent a few weeks refining some of the colors, options and interactions. It is a fun, cheerful camera that has completely taken over our camera roll!</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/sf-camera-collage.jpg" alt="A collage of 10 different images with color gradients taken with the SF Camera" /></div>
+
+
+
+<p class="wp-block-paragraph">If you download the app and enjoy it as much as we do, please share your images and let us know.</p>
+
+
+
+<p class="wp-block-paragraph"><img src="https://s.w.org/images/core/emoji/17.0.2/72x72/1f60e.png" alt="😎" class="wp-smiley" style="height: 1em; max-height: 1em;" /><img src="https://s.w.org/images/core/emoji/17.0.2/72x72/2600.png" alt="☀" class="wp-smiley" style="height: 1em; max-height: 1em;" /><img src="https://s.w.org/images/core/emoji/17.0.2/72x72/1f4f7.png" alt="📷" class="wp-smiley" style="height: 1em; max-height: 1em;" /> <strong>Happy summer snapping!</strong> <a href="https://apps.apple.com/us/app/sf-camera/id6767219686">Download the SF Camera on the iOS App Store</a>. </p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Week #795 &#038; #796</title>
+		<link>https://optional.is/required/2026/05/15/week-795-796/</link>
+		
+		<dc:creator><![CDATA[optional Bot]]></dc:creator>
+		<pubDate>Fri, 15 May 2026 12:21:00 +0000</pubDate>
+				<category><![CDATA[Briefs]]></category>
+		<category><![CDATA[Weeknotes]]></category>
+		<category><![CDATA[api]]></category>
+		<category><![CDATA[apps]]></category>
+		<category><![CDATA[LEDs]]></category>
+		<category><![CDATA[meetings]]></category>
+		<category><![CDATA[photography]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=9842</guid>
+
+					<description><![CDATA[Another double weeknote, but again a shortened week. Lots of meetings and progress in the background.]]></description>
+										<content:encoded><![CDATA[
+<h2 class="wp-block-heading">Week #795</h2>
+
+
+
+<p class="wp-block-paragraph">On Thursday we had an idea for camera filter. It has based partly on Hatch Show Prints and partly on Gradient overlay photos. It is a pretty easy effect to replicate in any image editing software. You have your base image, convert it to black and white, adjust the contrast/brightness to taste. Then on a second layer add a gradient and change the blend mode to &#8220;screen&#8221;. Even though this is easy to do in software, it is also fun to see it being applied in realtime with the colors you choose. This allow you to better compose the image and quicker to snap and share.</p>
+
+
+
+<p class="wp-block-paragraph">We&#8217;re trying to wrap-up a few projects before starting a new one. Several months ago we were brought onboard to just &#8220;Update an API in an app&#8221; which lead to a MUCH bigger mess. We re-wrote the whole thing, changed the API 2 or 3 more times and switched backend partners. This week, we finally got to the state where we can be &#8220;done&#8221;. It is now their job to turn this prototype into a product. They plan on raising money and building a team around the idea. It&#8217;s be great to help, but now we need to move to other projects.</p>
+
+
+
+<p class="wp-block-paragraph">For the WebRTC project, we&#8217;ve added more sample content. We&#8217;re experimenting with vertical video content and all the samples we can find are &#8220;shorts&#8221;, so we had to manually crop some longer videos into a vertical format as a test.</p>
+
+
+
+<p class="wp-block-paragraph">We published <a href="https://optional.is/required/2026/05/07/ubs-c-non-power-delivery/">UBS-C Non-Power Delivery</a>, because we&#8217;re always trying to optimize our travel cable carry and this threw a wrench in the gears!</p>
+
+
+
+<p class="wp-block-paragraph">The bigger project we&#8217;re moving into is a result of our trip to Miami. We presented and pitched some prototype ideas on the request of a client. Their internal team now needs to make the call to use this new platform or a more expensive existing one. They are under massive deadline pressure, so it makes sense to go with what works. We&#8217;ve split the project into 4 parts and we&#8217;ve got the green light on the first part (not our team), the second part is controlling a bunch of LEDs. It looks like we can start exploring using an ESP32 and string of LEDs to get an iOS app to turn them on or off on demand. The 3rd part is the proper web admin tool and iOS apps. The 4th part is integrating their CRM of choice into the web app to keep things in sync. They definitely want todo steps 3 &amp; 4, but maybe not for any summer deadlines.</p>
+
+
+
+<h2 class="wp-block-heading">Week #796</h2>
+
+
+
+<p class="wp-block-paragraph">This is another short week here in Iceland. Thursday is a public holiday and Friday is a write-off as well.</p>
+
+
+
+<p class="wp-block-paragraph">Monday turned out to be a day full of follow-up meetings on various projects: 11:00, 12:00, 14:00, 15:30, &amp; 20:00! A lot was accomplished and it unblocked us to continue the rest of the week.</p>
+
+
+
+<p class="wp-block-paragraph">Tuesday started with an early meeting. We needed a tool to manage phrases in an upcoming game prototype. We could do it in the Unity editor, but we decided not too since that would be a bit bulky for someone to do quick &#8216;live-ops&#8217; edits. Instead, we built a quick PHP website with an sqlite backend to manage these phrases. With a JSON dump we can now easily import into the Unity project and even push changes back to the website.</p>
+
+
+
+<p class="wp-block-paragraph">In the background to all these tasks, we still have two lingering projects. Last week we tried to finish-up everything for 1 small iOS app, but this week we got a request to add 3 more small features. It depends on some backend changes (which we&#8217;re not part of) but then we can implement what&#8217;s needed.</p>
+
+
+
+<p class="wp-block-paragraph">The other software project still has not officially been green-lit, so we&#8217;re working on it enough to show progress, but it can&#8217;t take all of our time right now either.</p>
+
+
+
+<p class="wp-block-paragraph">We continue to work on the Gradient Camera app, which has been renamed to <a href="https://en.wikipedia.org/wiki/Split-fount_inking">Split-fount</a>. It&#8217;s not a name that rolls off the tongue, so we wouldn&#8217;t say it&#8217;s final, but it does better explain what it does.</p>
+
+
+
+<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/gradient-chips.png" alt="11 color chips representing the options in the Split-fount camera app" /></figure>
+
+
+
+<p class="wp-block-paragraph">We also settled on 11 color gradient options. They run the spectrum and offer bright options that make an impact. We&#8217;re very happy with these options and will continue to snap more photos as tests, but we don&#8217;t expect to expand or change these much.</p>
+
+
+
+<p class="wp-block-paragraph">We also added an &#8220;invert&#8221; option. We were finding that on grey, dreary days, the sky was so white in the photos we never really say the top gradient color. When you invert the image, it flips the black and white image to a negative and then applies the screen gradient to that. It is a completely different look and feel.</p>
+
+
+
+<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/split-fount-examples.jpg" alt="Example photos"/><figcaption>Several example photos using different gradient colors. The last image uses the invert feature making the trees white.</figcaption></figure>
+
+
+
+<p class="wp-block-paragraph">This all can be done in post-production, but there is something magical about framing your shot and seeing how the final product will look. You change your angle, position and composition to make sure you capture the feeling you want.</p>
+
+
+
+<h2 class="wp-block-heading">Bric-à-brac</h2>
+
+
+
+<div class="banner"><img fetchpriority="high" decoding="async" title="hieroglyphs styled" src="http://optional.is/required/wp-content/uploads/2009/12/hieroglyphs-styled.png" alt="hieroglyphs styled" width="600" height="125" srcset="https://optional.is/required/wp-content/uploads/2009/12/hieroglyphs-styled.png 600w, https://optional.is/required/wp-content/uploads/2009/12/hieroglyphs-styled-300x62.png 300w" sizes="(max-width: 600px) 100vw, 600px"/></div>
+
+
+
+<p class="wp-block-paragraph">Our friend <a href="https://meet.andr3.net">Andr3</a> alerted us to this posted entitled: <a href="https://www.trojan-unicorn.com/village/warriors/david/blog/articles/2522-welcome-the-entire-land">Welcome The Entire World</a>. This is in reference to a presentation we gave at Codebits in Lisbon, Portugal, back in 02009. You can read <a href="https://optional.is/required/2009/12/03/welcome-the-entire-land/">the back story for Welcome the Entire Land</a>. It was one of those follies that has somehow struck a cord with folks!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>UBS-C Non-Power Delivery</title>
+		<link>https://optional.is/required/2026/05/07/ubs-c-non-power-delivery/</link>
+		
+		<dc:creator><![CDATA[optional Bot]]></dc:creator>
+		<pubDate>Thu, 07 May 2026 13:31:00 +0000</pubDate>
 				<category><![CDATA[Briefs]]></category>
 		<category><![CDATA[You're doing it wrong]]></category>
-		<category><![CDATA[algebra]]></category>
-		<category><![CDATA[calculus]]></category>
-		<category><![CDATA[clusters]]></category>
-		<category><![CDATA[gradient]]></category>
-		<category><![CDATA[integrating]]></category>
-		<category><![CDATA[sort]]></category>
-		<category><![CDATA[spectrum]]></category>
-		<guid isPermaLink="false">http://optional.is/required/?p=3490</guid>
+		<category><![CDATA[cables]]></category>
+		<category><![CDATA[EU]]></category>
+		<category><![CDATA[PD]]></category>
+		<category><![CDATA[Power Delivery]]></category>
+		<category><![CDATA[Travel]]></category>
+		<category><![CDATA[USB-C]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=9865</guid>
 
-					<description><![CDATA[It's always easier to lump and sort than to deal with individual solutions, but that's the lazy way. There must be a middle ground where you can make clusters that are not to large, but still manageable.]]></description>
+					<description><![CDATA[In our quest to minimize our electronic support travel kit, we hit a snag with non-PD devices.]]></description>
 										<content:encoded><![CDATA[
-<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-constrained wp-block-group-is-layout-constrained">
-<aside><p>We started this article in Feb 02014. Most of the ideas here came from working at a start-up doing natural language processing around video game forums. We tried to distill lots of information into both visualizations, summaries and topics.</p>
-<p>Also, 8 or so years prior to that, we were at SxSW in 02006 and Flickr had recently begun tag clusters. As you added tags to your images they were clustering like images into super-clusters. One panel swore it was so good it was curated, and another explained how they did it with <a href="https://en.wikipedia.org/wiki/K-means_clustering">k-means clustering</a>. Twenty years later, we have giant LLM probability machines holding large numbers of interconnected vectors. The data gets bigger, the techniques change, but the goals are almost always the same.</p>
-<p>Reading over it, the article still holds-up. The points are still relevant, both because we keep failing to think continuously and because it are agnostic to any tool.</p>
-<p>We went through it, updated the grammar, tense and a few other facts, otherwise it&#8217;s presented as it was written 11 years ago.</p>
-</aside>
-</div></div>
+<p class="wp-block-paragraph">For a while now, we&#8217;ve been trying to both minimize and optimize our cable and power travel kit.</p>
 
 
 
-<p>Recently, we worked a lot with data mining, clustering and classifying people. For various projects, people want to know what their readers, players, volunteers and viewership is like. People want nice, neatly packaged-up groups that they can potentially sell too.</p>
+<p class="wp-block-paragraph">Back in Jan-02025, we wrote <a href="https://optional.is/required/2025/01/28/optimized-charging/">Optimized Charging</a> about our attempts to figure out what is the maximum power draw from various devices. Maybe those big power-bricks went over board for most devices.</p>
 
 
 
-<p>Organizations don&#8217;t know how to sell to you or me as an individual, but as a white-male, 25-35, with a college degree, they have a strategy for that! It was never feasible to have as many different types of customers as there are customers. Simplifying things into generalized clusters made the workload, computing and budgeting easier.</p>
+<p class="wp-block-paragraph">This time we&#8217;re back to the opposite direction. We&#8217;ve acquired several &#8216;fun&#8217; bits of hardware that are certainly not premium Apple devices. As such, they are usually USB-C charging ports; thanks to the EU e-waste rules attempting to minimize cables and plugs, but these devices tend to ship with a USB-C to USB-A cable.</p>
 
 
 
-<p>The problem with clustering is that you begin to put all white-men, aged 25-35 into the same bucket that must enjoy the same type of music. Based on a few variables you make wide assumptions to fill in the rest of the gaps.</p>
+<p class="wp-block-paragraph">That&#8217;s annoying because we&#8217;re doing our best to move to JUST USB-C to USB-C cables to minimize what we need to take with us. When we plug-in our USB-C candy bar burner phone to a 20W Apple USB-C PD plug, nothing happens. Sometimes the manufacture recommends to use the plug that came with their device. Which is exactly what we&#8217;re trying to avoid.</p>
 
 
 
-<p>Marketers aren&#8217;t the first to do this, look at Zodiac. It is the Year of the Goat, so there are predictions about the children born this year. They will be prosperous and lucky&#8230; in 10 years time will they statistically be more prosperous and lucky than others? Probably not. But we generalize and imaging these things because it is easy, not because it is correct.</p>
+<p class="wp-block-paragraph">After some digging we realized that these &#8216;cheap&#8217;, &#8216;fun&#8217; hardware toys were shipping with a USB-C to USB-A cable is because USB-A will only pass through (up to) 15W of power, defaulting to something closer to 5W. When we were plugging in a USB-C to USB-C cable from the device to the charger, the charger was using the PD (power delivery) to try to negotiation with the device how much power to actually supply. Since these &#8216;dumb&#8217; devices were not PD compatible, they never answered the hand-shake and therefore power never started flowing.</p>
 
 
 
-<p>A recent prototype involved a huge amount of effort from the volunteers and team members who will be using it for their daily operations. As we&#8217;ve design this, we are doing our best to not boil people down to some 5 star rating. That would be the easy route, show me all team members who are above 3.5 stars. Somehow they are more intrinsically &#8220;good&#8221; than someone with a 3.4 star rating. (What about the number of reviews, or the standard deviation?) All our personalities, history, customs, backgrounds and individuality; all summed-up in a single scalar value.</p>
+<p class="wp-block-paragraph">Just having a USB-A in the chain between the PD Plug and the device stops the handshake and limits the power way down. Then no negotiation is needed and power flows.</p>
 
 
 
-<p>We want to avoid falling into these traps. So what are the option? Well, you have as many possible clusters of people as there are people. An organization with 10,000 people have a minimum possible cluster size of 1, creating 10,000 clusters. Previously this was never feasible, but it is becoming more and more possible as our computational power increases.</p>
+<p class="wp-block-paragraph">Using a 35W Apple duel USB-C PD plug, we plugged in a USB-C to USB-C cable to our burner phone and there was no charge. We swapped the cable for a USB-C to USB-A cable, with a USB-A to USB-C adapter and plug that into the 35W plug. The burner phone immediately lit up charging!</p>
 
 
 
-<p>We&#8217;ve drew inspiration from the <a href="https://en.wikipedia.org/wiki/Bartle_Test">Bartle Taxonomy of players</a>, which has 4 categories of gamers and <a href="https://en.wikipedia.org/wiki/Claritas_Prizm">Claritas PRIZM</a>, which has 68 segmentations. The more possible clusters, the more descriptive and nuanced each cluster can become. Claritas PRIZM is describing households for direct marketing. There is the trade-off between being fine-grained enough for their marketing efforts, but not too fine-grained that no one can design what category they want to sell their stuff too.</p>
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/cables-982x1024.jpg" alt="Three orientations of how to plug in the device to power plug. USB-C to USB-A with a USB-C adapter that charges. USB-A with USB-C adapter to USB-C no charge. USB-C to USB-C no charge." /></div>
 
 
 
-<p>We&#8217;ve been exploring clustering for our clients. They want to know how their customers are acting, exploring, using their product as well as how they can use this information to their advantage in the future. We proposed several clusters within their data. We could use something similar to the Bartle Test or Claritas PRIZM, but wouldn&#8217;t it be even more exciting to increase the number of clusters?</p>
+<p class="wp-block-paragraph">If any non-PD device comes along with us we now have to figure out a new system. </p>
 
 
 
-<p>One of the big steps between algebra and calculus is the act of the continuous integration. If you want to know the area under a curve, you can start by summing up lots and lots of small rectangles which fit under the curve. We know how to easily compute the area of a rectangle. If we continuously make them skinnier and skinnier we can fit more and more under the curve, with each reduction in size, the computed area becomes more and more correct. We can take this to the extreme and make them infinitely skinny and we&#8217;re now creating integrals and entering into the world of calculus.</p>
+<ol class="wp-block-list">
+<li>Keep our USB-C only cables and find a very lower Wattage plug that is USB-C and not PD and bring that along.</li>
 
 
 
-<p>The ancients did something very similar when trying to work out the value for pi. They took a circle and put a square inside it so the corners touched and another square completely on the outside of the circle. They knew the area of the inside square and the area of the outside square, so the circle had to be in between those two values. The next step was to change the square into a pentagon, which fit nicer around the circle. Then a hexagon, and continuing to add more and more sides, it began to look more and more like a circle. With each iteration, the area of the circle was getting more and more exact. Taken to the extreme, a shape with infinite sides becomes a circle.</p>
+<li>Bring along a USB-C to USB-A cable and a USB-A plug</li>
 
 
 
-<p>In life, we are rarely dealing with the discrete, it&#8217;s usually continuous. So why do the same thing for clusters of data?</p>
+<li>Bring along a USB-C to USB-A cable and a USB-A to USB-C adapter</li>
+</ol>
 
 
 
-<p>What would be ideal is to have a system that is the best of both worlds; continuous values that allows for everyone to be unique, but at the same time have some sort of clusters that we can discuss and make inferences about.</p>
+<p class="wp-block-paragraph">It will probably be option 3, simply because when we get onto an airplane or hotel they usually still have USB-A plugs. Which means we were carrying a USB-C to USB-A adapter already, we could forego that and just bring the cable.</p>
 
 
 
-<p>Humans have the ability to do this; to hold both a continuous concept in our heads and give it a discrete name. Colors are a good example of this (although culturally it isn&#8217;t perfect).</p>
+<aside><p><img src="https://s.w.org/images/core/emoji/17.0.2/72x72/1f6a8.png" alt="🚨" class="wp-smiley" style="height: 1em; max-height: 1em;" /> In our testing, we also ran into another problem. Some of the cheap USB-C to USB-A cables (even C-to-C cables) were only meant for charging. That&#8217;s fine for most cases, but sometimes we wanted to connect the device with a laptop to extract photos or other media. Having only a charging cable meant the device never showed-up on the computer when plugged in. Be sure to check that the cables you bring can also transfer data, not just power!</p></aside>
 
 
 
-<p>The spectrum of color is a continuous set of values going from infrared through to red and the visible spectrum out to violet and ultra-violet and onwards. There is no specific point at which red becomes orange, or orange becomes yellow, yet we have a cluster and a concept for the each color. Culturally we sort of know when colors change and when we can&#8217;t agree we tend to create new clusters, like yellow-green or light-green. It flexes when it needs too. Every color has an exact value, but it also shares a cluster with many of its neighbors.</p>
+<p class="wp-block-paragraph"></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Week #793 &#038; #794</title>
+		<link>https://optional.is/required/2026/05/01/week-793-794/</link>
+		
+		<dc:creator><![CDATA[optional Bot]]></dc:creator>
+		<pubDate>Fri, 01 May 2026 12:21:00 +0000</pubDate>
+				<category><![CDATA[Briefs]]></category>
+		<category><![CDATA[Weeknotes]]></category>
+		<category><![CDATA[backups]]></category>
+		<category><![CDATA[boarding pass]]></category>
+		<category><![CDATA[infrared]]></category>
+		<category><![CDATA[miami]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=9822</guid>
+
+					<description><![CDATA[A double weeknote that resembled Swiss cheese! Between travel and public holidays there was a lot of stop and start.]]></description>
+										<content:encoded><![CDATA[
+<h2 class="wp-block-heading">Week #793</h2>
 
 
 
-<p>Rather than an enumerated list of possible clusters any given person could be in, we could begin to map out continuous variables and explain our customers in terms of these values, then we can map those values onto some <a href="https://en.wikipedia.org/wiki/Probability_density_function">Probability Density Function</a> to explain (with some probability) that a person is in one group or another or some state in between. It isn&#8217;t blue or purple, but some blue-purple color.</p>
+<p class="wp-block-paragraph">This week we wrapped-up several surveys that were lingering from March and finished directly pestering high school students and now turned it over to the schools to get the minimum response rate.</p>
 
 
 
-<p>No two people are the same, yet we tend to bundle them into just a few clusters. We already know that names are powerful and useful tools, but at the same time they can&#8217;t be ridged structures with hard boundaries. Having a limited group of named clusters is fine as long as you realize the data underneath is continuous and flows. </p>
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/miami-trip.jpg" alt="Collage of images from the Miami Trip"/></div>
 
 
 
-<p>Our color spectrum is an excellent example. In a database, we&#8217;d save the exact RGB value and call it by its cluster name: RED, ORANGE, YELLOW. This way we don&#8217;t loose the exact information had we only kept the cluster name. Then in the future we could change the cluster boundaries or add more facets/variables and create new clusters. Having the raw data keeps things fluid and dynamic and prevents the data from getting stale.</p>
+<p class="wp-block-paragraph">On Wednesday we started our trip home from Miami. We were there almost a week having meetings, checking-in with friends and quickly prototyping for more meetings. Overall, the meetings went well, it was fun to get out and see Miami, and we made a few new friends.</p>
 
 
 
-<h2 class="wp-block-heading">Additional Reading</h2>
+<p class="wp-block-paragraph">On Thursday, it was a public holiday here in Iceland it was the First Day of Summer. It is also the start of the Old Icelandic month Harpa, which is the start of the six month summer period. The first day of winter is not really celebrated, but it is trying to be re-branded as Meat Soup Day in preparation for the cold months ahead.</p>
+
+
+
+<p class="wp-block-paragraph">We published an article about <a href="https://optional.is/required/2026/04/23/100-year-old-spatial-images/">100 year old spatial images</a> that we&#8217;ve been experimenting creating. It has been a fun project that has some interesting possibilities going forward.</p>
+
+
+
+<p class="wp-block-paragraph">In the background, we continue to update our Web app for the Australian Concreters. The more they use it, the more they need small fixes here and there: More columns in the table, adding public holidays to the planning calendar, etc. We&#8217;re over the hump of getting the app working, now we&#8217;re making improvements and refinements.</p>
+
+
+
+<p class="wp-block-paragraph">We&#8217;re always improving our backup regime and this week we started to revisit the old MacBook Pro from 02016. Currently the laptop is being used as our photo database. Hardware-wise it is a 1TB SSD, but the keyboard is broken and it is an Intel machine with limited support. To keep our large photo library off our working computer we are using this one to store photos. We really need to keep those back-ups in triplicate: LOCKSS (&#8220;Lots of Copies Keep Stuff Safe&#8221;). Currently, the whole computer gets backed-up with Time Machine and then replicated to an air-gapped external HD and also saved offsite. The issue we realized is that if that computer dies, we don&#8217;t actually want to restore the whole HD Image to a new computer, we just want that photo library! It is a bit of a waste, but right now it is easiest to continue to use Time Machine to automatically and periodically backup. We can mount the <code>.sparsebundle</code> file and retrieve any file without needing to do a full restore. Now the task is to delete all the un-used apps, preferences, etc. to lighten the backups of the old MacBook Pro.</p>
+
+
+
+<h2 class="wp-block-heading">Week #794</h2>
+
+
+
+<p class="wp-block-paragraph">It is another short week because Friday is May 1st. That&#8217;s another public holiday in most of Europe.</p>
+
+
+
+<p class="wp-block-paragraph">This week we spent mostly dusting around the edges of things. We have a small iOS app project around video feed from various cameras. We&#8217;re waiting for some backend updates before we can finalize it. We met with the team, talked with the manufacturer and we think we&#8217;ve cracked how to get the info we need. </p>
+
+
+
+<p class="wp-block-paragraph">We&#8217;re also waiting for another project to be green-lit. Our contact is working hard to sell the idea internally and almost everyone one is on board. The last hold-outs are super busy and behind schedule. They are willing to go with an existing, tested company, then work with us to build something new. Which totally makes sense, but we&#8217;re still in the running, if not for next month, defiantly for the future. So to prep and not be under some horrible deadline stress, we started on the Django Web admin tool portion. This is going to need to be done no matter what, so we setup some basic models, authentication and file uploading.</p>
+
+
+
+<p class="wp-block-paragraph">We are working on a time tracking tool that tightly integrates with our accounting software. We&#8217;ve had a few external teams use it and this week we fixed a few more bugs and added a few new features that we needed. We took over direct control of a project down in Australia, so we needed to change all the hours from one project to another. Same thing, different entities to invoice. So we added a bulk time log update. While we were in there we fixed a few other bugs and did a bit of UI clean-up.</p>
+
+
+
+<h2 class="wp-block-heading">Bric-à-brac</h2>
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XFXHwz8PgcY?si=PVkkXNath0bMWZZR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+<p class="wp-block-paragraph">Being in the US this week, we managed to watch <a href="https://www.pbs.org/show/life-unearthed-with-ariel-waldman">Life Unearthed by our old friend Ariel Waldman</a>. Normally it is geo-locked, but not when you&#8217;re inside the geo fence. If you can you should definitely check it out!</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/boarding-pass.jpg" alt="02026 Icelandair Boarding pass, very similar to the one we designed in 02007" /></div>
+
+
+
+<p class="wp-block-paragraph">Back in 02010, we wrote about our experience with the <a href="https://optional.is/required/2010/05/25/papernet-boarding-pass/">Icelandair Boarding printable pass</a>, which we designed in 02007. On our travels this week, we printed our boarding pass and lo and behold, it is pretty much our original design! Three sections, barcode multiple times, travel info, next steps. It&#8217;s missing the weather and social integrations.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>100 year old spatial images</title>
+		<link>https://optional.is/required/2026/04/23/100-year-old-spatial-images/</link>
+		
+		<dc:creator><![CDATA[optional Bot]]></dc:creator>
+		<pubDate>Thu, 23 Apr 2026 13:31:00 +0000</pubDate>
+				<category><![CDATA[Photography]]></category>
+		<category><![CDATA[photography]]></category>
+		<category><![CDATA[spatial]]></category>
+		<category><![CDATA[stereoscopic]]></category>
+		<category><![CDATA[VR]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=9768</guid>
+
+					<description><![CDATA[Going through the Icelandic photo archives for stereoscopic images and converting them to spatial images brings new life to images over 100 years old.]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">Over the last year or so, we&#8217;ve been doing some experiments with spatial images. A spatial image is a single image file, but has a different picture for your left and right eye. These are commonly used in Virtual Reality, but we&#8217;re all probably much more familiar with them from the old <em>View Master</em> toys.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/View-Master-Classic-Deluxe-Edition.jpg" alt="View Master Product with several paper discs"/></div>
+
+
+
+<p class="wp-block-paragraph">The View Master was a plastic set of goggles that you inserted a paper disc into that would rotate around to see a set of seven 3D images! It appeared in 3D because the images for the left and right eye were different images of the same thing using slightly offset cameras. This mimicked what you&#8217;re left and right eye would naturally see.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/Holmes-Stereoscope.jpg" alt="Holmes Stereoscope"/></div>
+
+
+
+<p class="wp-block-paragraph">100 years before the View Master, we had <a href="https://en.wikipedia.org/wiki/Stereoscope">Stereoscopes</a>. The earliest was from 01832 and worked in exactly the same way, but instead of a paper disc, they used single cards with printed images. They were the first 3D VR headsets.</p>
+
+
+
+<p class="wp-block-paragraph">Luckily for us, there was a craze for taking these 3D pictures, which means you can find lots of 3D imagery from 100+ years ago online. Reykjavik and Iceland both have online photography collections. With a little bit of searching and help from their team, we found thousands of stereoscopic images in the archives. These consisted of a single, wide image that contained both the image for the left and right eye.</p>
 
 
 
 <ul class="wp-block-list">
-<li>The Big Sort: Why the Clustering of Like-Minded American is Tearing Us Apart. By Bill Bishop</li>
+<li><a href="https://sarpur.is/en/collection/?f=sfield%3Amaterial_s%3D%23Stereóskóp%23&amp;om=2&amp;s=sort_inv_is_sml%20asc">Stereoscope images on Sarpur Iceland’s Cultural-Historical Database Website</a></li>
+
+
+
+<li><a href="https://borgarsogusafn.is/myndasafn?q=stereóskóp*">Stereoscope images on Reykjavik Photography museum website</a></li>
 </ul>
+
+
+
+<h2 class="wp-block-heading">Converting to Spatial Images</h2>
+
+
+
+<p class="wp-block-paragraph">There are lots of tools out there to make spatial images, but they assume that you already have two separate left and right images. Usually this is done with either two separate cameras, or two lenses on a single camera and they get processed as two images.</p>
+
+
+
+<p class="wp-block-paragraph">What we had was a single image that had both pictures side-by-side. To convert this into two separate image files, we opened some image editing software, duplicated the image to two layers, and arranged the left and right images to be on top of each other. Then we could crop correctly and make any minor adjustments.</p>
+
+
+
+<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/layers-example.jpg" alt="Screenshot of photo editing software overlaying the left and right image" /><figcaption>Using photo editing software, the left and right images are put on separate layers. The top layer&#8217;s opacity is decreased to better line-up something in the foreground before saving each layer as a separate file the same dimensions.</figcaption></figure>
+
+
+
+<p class="wp-block-paragraph">Now that we had a left and right image from the stereoscopic card, we can run it through software to create a single 3D image file. We use <a href="https://apps.apple.com/us/app/spatialify/id6471922894">Spatialify</a>, it is cheap, easy and works! It offers several &#8220;3D&#8221; output options, the traditional blue/red offset (anaglyph) for the blue/red 3D glasses, wigglegrams which are animated gifs, and proper spatial files viewable in VR.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/workflow-collage.jpg" alt="Collage of the source image, spatiality app taking a left and a right and sample output"/></div>
+
+
+
+<p class="wp-block-paragraph">There is a lot of trial and error getting things right. Sometimes the source images are badly scratched, damaged or rotated. Finding the correct alignment can be difficult and sometimes the subject matter just doesn&#8217;t lend itself very well in 3D. Luckily, we have a thousands of possible images to convert, if something isn&#8217;t working we can move on.</p>
+
+
+
+<h2 class="wp-block-heading">Gallery</h2>
+
+
+
+<p class="wp-block-paragraph">Here is a short list of zip archives with the left, right, spatial, anaglyph and wigglegram for the image. <strong>Be aware, these images might still be under copyright.</strong></p>
+
+
+
+<p class="wp-block-paragraph"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/MAO-106-Wiggle.gif"/><br /><strong>Magnús Ólafsson (1862-1937)</strong><br />01906, A group of people washing clothes in Laugardalur.<br />Download: <a href="https://optional.is/required/wp-content/uploads/2026/04/MAO-106.zip">MAÓ 106 &#8211; 6.1 MB</a></p>
+
+
+
+<p><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/MAO-429-Wiggle.gif"/><br /><strong>Magnús Ólafsson (1862-1937)</strong><br />01931, Austurvöllur, Reykjavík. Bertel Thorvaldssen statue prepared for transport.<br />Download: <a href="https://optional.is/required/wp-content/uploads/2026/04/MAO-429.zip">MAÓ 429 &#8211; 6.8 MB</a></p>
+
+
+
+<p><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/MAO-862-Wiggle.gif"/><br /><strong>Magnús Ólafsson (1862-1937)</strong><br />01900-01920, Old hut in Hafnarfjörður lava field.<br />Download: <a href="https://optional.is/required/wp-content/uploads/2026/04/MAO-862.zip">MAÓ 429 &#8211; 7.1 MB</a></p>
+
+
+
+<p><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/MAO-984-Wiggle.gif"/><br /><strong>Magnús Ólafsson (1862-1937)</strong><br />01930 or 01931, German Graf Zeppelin over Reykjavík. Grófin 1, Tryggvagata and Reykjavík Harbour.<br />Download: <a href="https://optional.is/required/wp-content/uploads/2026/04/MAO-984.zip">MAÓ 429 &#8211; 6.5 MB</a></p>
 ]]></content:encoded>
 					
 		
 		
 			</item>
 		<item>
-		<title>Week #759 &#038; #760</title>
-		<link>https://optional.is/required/2025/09/05/week-759-760/</link>
+		<title>Week #791 &#038; #792</title>
+		<link>https://optional.is/required/2026/04/18/week-791-792/</link>
 		
 		<dc:creator><![CDATA[optional Bot]]></dc:creator>
-		<pubDate>Fri, 05 Sep 2025 13:31:00 +0000</pubDate>
+		<pubDate>Sat, 18 Apr 2026 11:11:00 +0000</pubDate>
 				<category><![CDATA[Briefs]]></category>
 		<category><![CDATA[Weeknotes]]></category>
+		<category><![CDATA[backups]]></category>
 		<category><![CDATA[camera apps]]></category>
+		<category><![CDATA[meetings]]></category>
+		<category><![CDATA[miami]]></category>
 		<category><![CDATA[surveys]]></category>
 		<category><![CDATA[webrtc]]></category>
-		<guid isPermaLink="false">https://optional.is/required/?p=8401</guid>
+		<guid isPermaLink="false">https://optional.is/required/?p=9757</guid>
 
-					<description><![CDATA[A double weeknote covering a lot! We have 4-5 different projects we touch on a daily basis right now. It could be as little as an email or meeting or spend half the day coding.]]></description>
+					<description><![CDATA[A busy double weeknote that ends with a trip to Miami for meetings.]]></description>
 										<content:encoded><![CDATA[
-<h2 class="wp-block-heading">Week #759</h2>
+<h2 class="wp-block-heading">Week #791</h2>
 
 
 
-<p>A very strange project landed in our laps this week. We are tasked with reverse engineering some APIs. We have the server code and this crazy Vue.js code and we&#8217;re trying to get an iOS app to connect and replicate some of what the other code is doing. This came from a Chinese team who handed it over to another team in Prague. We don&#8217;t know all the politics, but it&#8217;s hard to find who&#8217;s what product owner and what&#8217;s documented. So we&#8217;ve just gone straight to the source (code) to figure it out.</p>
+<p class="wp-block-paragraph">Monday was a public holiday, so Tuesday was our Monday. We started out working with a team in the UK here in Iceland doing some school observations. Some Icelandic schools are implementing the Starling (PALS) method of learning vocabulary and we&#8217;re tangentially connected.</p>
 
 
 
-<p>We have a small extension to a project for the Australian concreters. They bought a concrete pumping truck and now need to keep track of that in their online jobs tool we built. When a job is booked with this as one of the execution steps, some special actions need to be taken. Then we got some small scope creep&#8230; nothing we can&#8217;t handle, but everyone&#8217;s tight on budget and watching the hours.</p>
+<p class="wp-block-paragraph">Over the Easter break, we prototyped yet two more camera apps. One for RGB separations and another for Dithering. These are internal apps and as is are fun, but there are a few missing pieces before we can call them &#8220;ready&#8221;.</p>
 
 
 
-<p>With a little help from some friends, we managed to get a working WebRTC library for tvOS! This means that we now have the ability to group video chat via web, iOS and tvOS. We first started focusing on the Web tool to manage accounts. The Web is fast and easy. We started to work on the iOS portion next. With SwiftUI we can managed to get 90+% of the tv app as well. After living with the tv app, we&#8217;ve all realized that&#8217;s where it&#8217;s going to actually all happen. These next few weeks we&#8217;re going to really focus on making that the best experience possible. We also know that our commitment to this prototype is limited. It was only suppose to be for the summer, but now Autumn is on our doorstep.</p>
+<p class="wp-block-paragraph">We also took some time to refactor the code. Previously, we pulled out all the common components into their own files and would duplicate them back and forth between apps if we made changes. Now we refactored again into a single Xcode project with a different target for each app. All the common code is in one place and it is also easier to see what other non-common code we are re-using elsewhere. In that process, we also setup Xcode cloud for each of the apps. If we make changes to any of the code-base and commit those changes to git version control, it automatically kicks off the process to rebuild all the camera apps.</p>
 
 
 
-<p>This week we published <a href="https://optional.is/required/2025/08/27/lut-cubes-and-shaders/">LUT Cubes and Shaders</a> article. Our latest experimental camera app is now on the App Store and we wanted to document some of our thoughts about the pros and cons of Shaders and LUTs.</p>
+<p class="wp-block-paragraph">We had our 4TB Time Machine hard drive go bad. We&#8217;ve written about our backup setup a few times (<a href="https://optional.is/required/2022/05/31/backups/">Backups</a>, <a href="https://optional.is/required/2024/03/19/backup-2-0-das-edition/">Backups 2.0 DAS Edition</a>, <a href="https://optional.is/required/2026/02/26/backups-3-0-remote/">Backups 3.0 Remote</a>) We made a late night online order for another 4TB drive and bright and early the next morning it was dropped off. We hot-swapped it in and started-up some fresh Time Machine backups. </p>
 
 
 
-<p>It was also the end of August this week, so that means getting into the accounting software and paying the bills and reconciling transactions!</p>
+<p class="wp-block-paragraph">In the process, we remembered the wise words of wisdom &#8220;You don&#8217;t have a backup until you restore it&#8221;. That lead us to fetching one Time Machine image from our off-site backup and adding it back to the hard drive to see if we could pick-up from the last backup.</p>
 
 
 
-<p>This week we built a quick Pixelated Camera App. Given we have a bunch of code to make camera apps, this one was pretty easy. Rather than video delays or filters, we take the camera frame and crop it into a square. Then resize it down to 32&#215;32 pixels and then upscale it back to 4K without interpolating the pixels. This gives a crazy video game look to the world around you.</p>
+<p class="wp-block-paragraph">The drive was probably a bit over 2 years old, so that was much sooner than we expected. We didn&#8217;t amortize the cost over as many months as we&#8217;d hoped, but you win some, you loose some. Overall, we&#8217;re still doing better than paying for our cloud storage.</p>
 
 
 
-<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/09/1756808348566.png" alt=""/></figure>
+<h2 class="wp-block-heading">Week #792</h2>
 
 
 
-<p>When it lands well, it&#8217;s amazing, but when browsing the camera roll, it mostly feels like thumbnails and the full-res image is missing. This is all part of the experimenting process, you have an idea, try it, see if you like it or not and iterate to improve. We just hit our first iteration!</p>
+<p class="wp-block-paragraph">On the backup hard drive front, after a few days of syncing and starting backups again, we&#8217;re back to where we were before the crash. But now we&#8217;re re-evaluating how we should backup older machines. Using Time Machine to take a snapshot of a computer that isn&#8217;t really being used or updating daily is probably overkill. Also, given that if the hard drive in the old laptop crashes, we wouldn&#8217;t buy a new computer and restore an old backup, what we really need todo is clear-off any files not used, and only sync what is actively being worked on (In our case, it is the photos database). But that&#8217;s a task for next week.</p>
 
 
 
-<h2 class="wp-block-heading">Week #760</h2>
+<p class="wp-block-paragraph">This week we continued to work on the WebRTC debugging. We now have everything working and have mimicked the &#8220;companion camera&#8221; feature. Now you can use any WebRTC capable phone (iPhone or Android) to connect to the Apple TV and relay your video and audio to other attendees. Also, in the future we could have an android &#8216;smart tv&#8217; app so you can use your iPhone as the camera to an android TV and relay that to other participants. There were lots of little connections and audio bugs to work out, but now I think we&#8217;re in good shape.</p>
 
 
 
-<p>Monday was Labor Day public holiday in the USA. Things on that side of the pond were quiet. We managed to get a big chunk of the Concreter tasks done, setup an iOS to connect and authenticate to this inherited API and blew the dust off another really old project that we&#8217;re going to pitch before the end of the month.</p>
+<p class="wp-block-paragraph">On Tuesday we sent our Q2 <a href="https://optional.is/newsletter/02026Q2/">◍ Quarternotes newsletter</a>. Be sure to subscribe to get it delivered straight to your inbox.</p>
 
 
 
-<p>On Tuesday, we started our student survey. Last minute checks and fixes, then emails went out with September lists of students. We&#8217;ll repeat this process for the next 8 months until June when the school year is over. Along the way, we&#8217;ll spin-up additional data collection servers for other student, parent and staff surveys.</p>
+<p class="wp-block-paragraph">We continue to work on surveys. We had a staff survey in March, but a few organization wanted to move it to April. This month is also our biggest student survey and we&#8217;re also conducting a survey in high schools. After April, things will calm down again.</p>
 
 
 
-<p>Wednesdays we have a regular 15min sync about another project. This week we tried to demo progress and while everything was installed and running, we couldn&#8217;t manage to connect. So there are a few WebRTC bugs to still fix, but overall things are coming together!</p>
+<p class="wp-block-paragraph">On another survey front, we finally got connected with another development team to work on how we can use their Single Sign-On solution. Iceland stopped allowing private companies to use the island.is SSO a few years ago. We have them a heads-up and it still hasn&#8217;t been implemented, but it looks like this finally might be the month!</p>
 
 
 
-<p>Thursday was spent mostly working on an iOS reskin on this VUE.js project. That&#8217;s the easy part. The harder part is figuring out the API end-points, the nomenclature and how toggles in the front-end correspond to the json keys coming from the API (and web socket when we can figure out how to connect to it). On Friday night we&#8217;ll have a meeting with a bunch of stakeholders to figure this all out.</p>
+<p class="wp-block-paragraph">In the land down under, we&#8217;ve got a few more requests from our concreters for updates to their work calendar. Right now we capture a start date and duration and plot that onto a calendar. Now we need to extend the duration to &#8216;skip&#8217; non-work days (Sundays) and holidays. Plus a few additional UI requests. We&#8217;ll implement those next week after our travel meetings.</p>
 
 
 
-<p>We had a lunch meetings with an old friend &amp; work colleague. It was great to catch-up, vent about things, and hear what&#8217;s happening in their worlds. As with many things in life, you&#8217;re not going make the next step from your immediate circle of friends, it usually takes one or two degrees of separation for the next opportunity.</p>
+<p class="wp-block-paragraph">We also managed to rekindle a game idea from a few years ago. First we meet with the design team to talk about theming and the overall world. Then we met with the engineering team to get everyone up to speed on the previous prototypes. We started in Unity, then switched to SwiftUI and now back to Unity. After kicking the tires on the prototypes, we have a much better understanding of everything that needs to be done.</p>
 
 
 
-<p>A new prototype idea came to us this week from a nephew. He&#8217;s got a great idea for a service. We quickly took his paper prototypes and digitized them into SwiftUI wireframes to click around in (nothing is database powered &#8211; yet). We also reached out to some friends who, 10+ years ago sold their company to Google doing a similar thing, to get some advice. We think this one might have legs, so we&#8217;re happy to take a few hours to encourage them to pursue it.</p>
+<p class="wp-block-paragraph">On Thursday morning we went into a local school in Reykjavik for an observation. Now we have a much better idea of the basic requirements that we&#8217;d need for an online support solution. That afternoon we flew to Miami, Florida USA for some meetings and planning.</p>
 
 
 
-<p>The <a href="https://petals.team">PETALS</a> project continues. Late last week we deployed some changes and this week we&#8217;re collecting feedback and trying to plan for the rest of the year. The main task for us is to start gating various functionality based on your subscription plan. We have a series of GitHub issues and we&#8217;ll go through them one-by-one adding if statements into the templates and check on the backend so we catch all the things we want to manage.</p>
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/miami-flight.jpg" alt="image out the window flying to Miami" /></div>
 
 
 
-<p>The update to the Australian project will be deployed on our Sunday night (Monday morning in Australia) and we&#8217;re going to try and do it in a conference call. That way if there are any bugs, it isn&#8217;t 11h from finding them to fixing them. They really want to avoid any downtime (which is understandable).</p>
+<p class="wp-block-paragraph">The Friday meetings went well and we&#8217;ll continue on a proof-of-concept for next week.</p>
 ]]></content:encoded>
 					
 		
 		
 			</item>
 		<item>
-		<title>LUT Cubes and Shaders</title>
-		<link>https://optional.is/required/2025/08/27/lut-cubes-and-shaders/</link>
+		<title>Hatena Burger Permutations</title>
+		<link>https://optional.is/required/2026/04/09/hatena-burger-permutations/</link>
 		
 		<dc:creator><![CDATA[optional Bot]]></dc:creator>
-		<pubDate>Wed, 27 Aug 2025 13:31:00 +0000</pubDate>
-				<category><![CDATA[Applications]]></category>
-		<category><![CDATA[Briefs]]></category>
-		<category><![CDATA[Experiments]]></category>
-		<category><![CDATA[Photography]]></category>
-		<category><![CDATA[cube]]></category>
-		<category><![CDATA[LUT]]></category>
-		<category><![CDATA[photography]]></category>
-		<category><![CDATA[shader]]></category>
-		<guid isPermaLink="false">https://optional.is/required/?p=8374</guid>
-
-					<description><![CDATA[After experimenting with LUT files, we quickly ran into how they're different than shaders - in both a good and bad way.]]></description>
-										<content:encoded><![CDATA[
-<p>We&#8217;ve been working on a 3rd experimental camera app call <a href="https://apps.apple.com/us/app/lut-photo/id6749096589?ls=1&amp;mt=8">LUT Cam</a> to go along with <a href="https://optional.is/required/2025/05/22/ornithoto-camera-app/">Ornithoto</a> and <a href="https://optional.is/required/2025/07/31/dejaview-camera-app/">DejaView</a>. This is a bring your own filter style camera. In the past we&#8217;ve experimented with adding real-time filters over video feeds. We love B&amp;W camera apps that edit your photos or camera apps with loads of filters. The problem for us is that either you can&#8217;t preview the filters in real-time or we like 2 filters from here, and 3 from somewhere else. That lead us to experiment with a camera app shell that we can continue to improve, while letting you load your favorite filters.</p>
-
-
-
-<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/08/LUT-Cam-screenshots-1024x701.png" alt="a screenshot of three sample screens from the LUT Camera app"/></figure>
-
-
-
-<p>The industry standard for color grading are LUT files. We decided to build a camera app that loads any LUT cube file so you can manage the filters you want.</p>
-
-
-
-<p>But LUTs are not the end-all-be-all for filters. We&#8217;ve also experimented with real-time video shaders and while their portability is limited, they can do things LUTs can&#8217;t. We wanted to go through some of the pros and cons of each.</p>
-
-
-
-<h2 class="wp-block-heading">LUT Cubes</h2>
-
-
-
-<p>LUT stands for Look-Up Table. This allows you to look-up the value of any R, G, B value and convert it to a new value. This is a look-up that&#8217;s been pre-computed.</p>
-
-
-
-<p>A sample .cube file looks like:</p>
-
-
-
-<p><code>0.1546 0.0000 0.0595<br />0.1885 0.0000 0.0569<br />0.2176 0.0000 0.0546</code></p>
-
-
-
-<p>Each column corresponds to the R, G, B values. Our sample file has 42,875 lines of RGB triplets.</p>
-
-
-
-<p>In swift, we load this file and parse the lines to fetch the three columns of values. After that, we load the image and values in to the built-in Cube filter. Some sample Swift code would look like:</p>
-
-
-
-<p><code>let filter = CIFilter(name: "CIColorCube")!<br />filter.setValue(CIImage(cgImage: source_image), forKey: kCIInputImageKey)<br />filter.setValue(lut.data, forKey: "inputCubeData")<br />filter.setValue(lut.dimension, forKey: "inputCubeDimension")<br />let outputImage = filter.outputImage!</code></p>
-
-
-
-<p>This applies the LUT transform values to the image using the <code>CIColorCube</code>. The transformations are fast enough to run at 30 fps on 4K video (on a new-ish iPhone).</p>
-
-
-
-<p>Keeping all the data in a .cube file allows for portability. They can be save and transferred between devices, shared with others and sent to customers. A cube files doesn&#8217;t record what actions were taken to arrive at these values (for instance exposure, white balance, color correction, hue/vibrance), but the final transformations are preserved.</p>
-
-
-
-<h2 class="wp-block-heading">Exporting a LUT</h2>
-
-
-
-<p>In various photo and video editing tools, you take export your color corrections as a LUT file. This allows you to make your own LUT .cube files. This allows you to take your edits as a LUT into another app and speed-up your workflows or previews. Video apps like DaVinci Resolve can also import and export LUT files. This makes them an ideal interchange format for camera filters.</p>
-
-
-
-<p>Sadly, there isn&#8217;t a portable standard for shaders in the same way as LUTs and after a bit of digging, we&#8217;ll see why.</p>
-
-
-
-<h2 class="wp-block-heading">Shaders</h2>
-
-
-
-<p>A shader is another tool to transform a pixel/image. Technically, a ColorCube transform is a shader being applied to each pixel in an image, but we have many more possibilities when we are looking at each pixel independently with a shader. For instance, a LUT is not aware of the other channels. You cannot do a channel swap and put the Red value in the Green channel and the Green value back to the Red channel. That&#8217;s something you could easily do with a shader. An example shader in c takes a pixel with the four channels and allows you to alternate them in any way you want and return a new color value.</p>
-
-
-
-<p><code>float4 LCPurple(sample_t s) {<br />  float4 swappedColor;<br />  swappedColor.r = s.r;<br />  swappedColor.g = s.b;<br />  swappedColor.b = s.g ;<br />  swappedColor.a = s.a;<br />  return swappedColor;<br />}</code></p>
-
-
-
-<p>In this example, we get a pixel with an RGBA value and we swap the G and B channels and return the new pixel color. The function can be much more complicated. In this example we put all RGB values into a greyscale equation and put that new value in all three channels.</p>
-
-
-
-<p><code>float4 GreyY(sample_t s) {<br />  float4 swappedColor;<br />  float y = (0.299 * s.r + 0.587 * s.g + 0.114 * s.b);<br />  swappedColor.r = y;<br />  swappedColor.g = y;<br />  swappedColor.b = y;<br />  swappedColor.a = s.a;<br />  return swappedColor;<br />}</code></p>
-
-
-
-<p>The calculations are done in realtime as opposed to a pre-computed LUT file. Some shaders can even be globally aware of all the colors in an image or take additional parameters into the function, like min/max brightness/darkness values to scale the RGB values. This gives shaders a much more powerful way to transform the colors than a LUT, but it the lacks portability.</p>
-
-
-
-<h2 class="wp-block-heading">LUT Camera</h2>
-
-
-
-<p>You can download the <a href="https://apps.apple.com/us/app/lut-photo/id6749096589?ls=1&amp;mt=8">LUT Camera</a> now for free. We&#8217;ll eventually put a small price on it once we&#8217;ve worked out all the bugs. Using portable LUT files and filters has been an itch we&#8217;ve wanted to scratch for a while. We have yet another internal camera app built around shaders. For us to add a new shader is a lot of work and the app is old and clunky and not written in SwiftUI, etc. etc. Making an app where we can load in any LUT file we find online and easily create more using other photo editing tools speeds-up the workflow and experimenting immensely. We&#8217;re reminded of the quote:</p>
-
-
-
-<p><em>Perfection is the enemy of good. —Voltaire</em></p>
-
-
-
-<p>Sometimes a great LUT now is better than never making that perfect shader. Most people are taking party-pics and want some fun filters. They&#8217;re not color grading a multi-million dollar feature film. With that in mind, finding free (or creating) LUTs and loading them into your own camera app hits that sweat spot. Not everything will be a master piece, but that&#8217;s ok.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Week #757 &#038; #758</title>
-		<link>https://optional.is/required/2025/08/22/week-757-758/</link>
-		
-		<dc:creator><![CDATA[optional Bot]]></dc:creator>
-		<pubDate>Fri, 22 Aug 2025 13:31:00 +0000</pubDate>
-				<category><![CDATA[Briefs]]></category>
-		<category><![CDATA[Weeknotes]]></category>
-		<category><![CDATA[backups]]></category>
-		<category><![CDATA[LUT]]></category>
-		<category><![CDATA[networking]]></category>
-		<category><![CDATA[payday]]></category>
-		<category><![CDATA[pdf]]></category>
-		<category><![CDATA[petals]]></category>
-		<category><![CDATA[time tracking]]></category>
-		<guid isPermaLink="false">https://optional.is/required/?p=8316</guid>
-
-					<description><![CDATA[A double weeknote where we spent most of the last 14 days getting our hands into lots of different ideas.
-]]></description>
-										<content:encoded><![CDATA[
-<h2 class="wp-block-heading">Week #757</h2>
-
-
-
-<p>The Australian project is winding down. The last major thing was around PDF creation &#8211; and wow that&#8217;s annoying. There are three major competing ways each with increasing difficulties and benefits. jsPDF creates pdfs in javascript but can&#8217;t do fonts or canvas, since it is rendering HTML in canvas and then making it a PDF. At the other end of the spectrum is a headless chrome instance. That&#8217;s as good as it gets, but it&#8217;s resource heavy! The middle ground we took in python is no longer supported, but we could get it all setup without more server overhead. Now, all the major tasks are done and they are using the system. There will be feature requests and bugs, so we&#8217;re on the ready, but in general we&#8217;re about to close the books on this one.</p>
-
-
-
-<p>Luckily, another project is potentially opening-up. We&#8217;re looking at swapping an API in an existing system. We got the source code and WOW, it&#8217;s a crazy Vue app that was originally made by a team in China (so the tooling and comments are all in Chinese) and the native apps it creates are just WebViews on their Vue app. It was a complete mess to try and even get working!</p>
-
-
-
-<p>It&#8217;s only August, but we&#8217;re getting a jump on 02026 and we&#8217;ve started to create the A0 poster. <a href="https://github.com/optional-is/calendaring/tree/master/A0-Yearly">It is on GitHub so you can print your own</a>. We might make a few more tweaks before the end of the year, but atleast now we&#8217;ve done our homework early and won&#8217;t need to stress at the year-end deadline hits.</p>
-
-
-
-<p>Our survey projects are starting to come to life. Starting in September, our first wave of surveys will go out, so we&#8217;re collecting lists and starting the machine. Then in October we have two more surveys starting. We&#8217;ve streamlined the process as much as possible and things go relatively smoothly.</p>
-
-
-
-<p>We soft launched our 3rd experimental camera app <a href="https://apps.apple.com/us/app/lut-photo/id6749096589?ls=1&amp;mt=8">LUT Camera</a>. This one uses industry standard LUT cube files to create a &#8216;bring your own filter&#8217; camera. It is still in the super early stages, so grab it while it&#8217;s still free.</p>
-
-
-
-<p>On Friday, we published an article we started back in 02009 regarding the <a href="https://optional.is/required/2025/08/15/wii-music-hand-holding/">Wii Music</a> game and how it was a great example of how to move players from n00bie to expert.</p>
-
-
-
-<h2 class="wp-block-heading">Week #758</h2>
-
-
-
-<p>This week we continued with <a href="https://petals.team">PETALS</a> tasks. Our goal is to get this officially launched with a paid component before the end of the year. We&#8217;re on track. Several organizations are using the system and giving feedback. We fix bugs, implement changes and iterate.</p>
-
-
-
-<p>The accounting software we used here in Iceland is called <a href="https://payday.is">PayDay</a>. They have an API to do most everything in the system. The one thing they don&#8217;t have is a Time Tracking tool. They have the ability to create customers, send in payslips and register invoices. We&#8217;ve done this several times for teams in Australia connecting with the Xero accounting system. So we took a crack and adjusting past projects and we&#8217;re happy where this is heading! (Yet another side-project)</p>
-
-
-
-<p>We took a day this week to dig into some Apple vision tracking libraries for Body Pose Detection. The library takes an image and returns x/y coordinates for wrists, elbows, shoulders, hips and more. We wedged it into a video stream and got pretty good results on an Apple TV. This opens-up a bunch of possibilities for various projects and ideas.</p>
-
-
-
-<p>Yet another project fell into our laps this week. There is some existing software and they needed an API url swapped out. Well, it turns out this is some Vue.js project originally created in China with a Java backend now managed by a team in Prague. What originally was going to be going in and changing some URLs might have turned into rebuilding it to the new API from scratch in SwiftUI using the existing design as a starting point.</p>
-
-
-
-<h2 class="wp-block-heading">Back-ups and Networking</h2>
-
-
-
-<p>Last summer (02024-06) we wrote about our <a href="https://optional.is/required/2024/06/25/network-plumbing/">network plumbing</a> setup. We spent a lot of time tweaking and organizing our network as best we could given the circumstances around the building and network availability. Its worked out so well, we&#8217;ve pretty much forgotten about it.</p>
-
-
-
-<p>Even further back in 02022-05 we were becoming much more aware of our <a href="https://optional.is/required/2022/05/31/backups/">backup situation</a>. We were reviewing what was where and how many backups we had, etc. We still have a monthly reminder to backup everything (mostly to our air-gapped external hard drive now). In March 02024 we started to get a much more centralized <a href="https://optional.is/required/2024/03/19/backup-2-0-das-edition/">backup 2.0 plan using a DAS</a>. Things are in great shape, we&#8217;ve added a remote, off-site NAS which the DAS syncs to weekly. Now we have all our files and Time Machine backups both on and off-site. Things are going so smoothly, we&#8217;ve pretty much forgotten about these too.</p>
-
-
-
-<p>What&#8217;s next? We&#8217;ll eventually need to upgrade the aging AirPort Extreme routers. WiFi 7 is out (although we don&#8217;t have any devices that support it), network cameras are becoming ubiquitous. Ideally, we&#8217;d like to run network cables and plugs, but it might not be possible. We&#8217;ve also looked into a NAS drive, but our old MacMini with the DAS also acts as a print server (which now supports AirPrint) and can run arbitrary cron task. We don&#8217;t use fancy RAID redundancy or SSDs, just standard Hard Drives that are rsync&#8217;ed night locally and weekly remotely.</p>
-
-
-
-<p>We&#8217;re always looking to improve and Backups 3.0 is always on the horizon.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Wii Music Hand Holding</title>
-		<link>https://optional.is/required/2025/08/15/wii-music-hand-holding/</link>
-		
-		<dc:creator><![CDATA[optional Bot]]></dc:creator>
-		<pubDate>Fri, 15 Aug 2025 13:31:00 +0000</pubDate>
+		<pubDate>Thu, 09 Apr 2026 13:31:00 +0000</pubDate>
 				<category><![CDATA[Interfaces]]></category>
-		<category><![CDATA[Music and Audiology]]></category>
-		<category><![CDATA[You're doing it wrong]]></category>
-		<category><![CDATA[audio]]></category>
-		<category><![CDATA[flow]]></category>
-		<category><![CDATA[game flow]]></category>
-		<category><![CDATA[hand holding]]></category>
-		<category><![CDATA[user experience]]></category>
-		<category><![CDATA[UX]]></category>
-		<category><![CDATA[wii]]></category>
-		<guid isPermaLink="false">http://suda.co.uk/wp-test/?p=24</guid>
+		<category><![CDATA[burgers]]></category>
+		<category><![CDATA[combinations]]></category>
+		<category><![CDATA[combinatorics]]></category>
+		<category><![CDATA[hatena burger]]></category>
+		<category><![CDATA[japan]]></category>
+		<category><![CDATA[nintendo]]></category>
+		<category><![CDATA[permutations]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=8874</guid>
 
-					<description><![CDATA[Recently, we setup the Wii again. One of the games we play was Wii Music, and that reminded us that we stubbed this post back in January 02009 extolling how great the UX was and still is!]]></description>
+					<description><![CDATA[Hatena Burger boasts over 270,000 burger combinations. Using some combinatorics, let's see if that's true.]]></description>
 										<content:encoded><![CDATA[
-<aside>
-<img decoding="async" style="float: right; padding-left: 20px" src="/required/wp-content/uploads/2025/08/bs-mii.png" height="180" />
-<p>This article was drafted in 02009 and left for 16 years to collect dust. Recently, we pulled the Nintendo Wii out of storage and in the pile of games was Wii Music. After playing and remembering this draft article, we went back to finish it.</p>
-<p>We updated a few paragraphs, added some screenshots, but most of what was written in 02009 still stands.</p>
-<p>We setup the Dolphin Emulator and ran Wii Music to get the screenshots.</p>
-</aside>
+<p class="wp-block-paragraph">In Kyoto, Japan, in the Nintendo museum, there is a restaurant called <a href="https://museum.nintendo.com/en/cafe/index.html">Hatena Burger</a>. They claim to have over 270,000 different burgers you can order! Let&#8217;s investigate that claim to see how true it really is.</p>
 
 
 
-<p>Video games have come a long way from their humble beginnings. The main problem is now that they have saturated the hard-core gaming market, they are looking to expand. In 02009 everyone has been claiming that casual games are the future. This is the highest growth area of people who like to play games, but don&#8217;t want to invest the time and effort into building a character. They just want to escape for a few hours and relax, sort of like playing Solitaire or Minesweeper.</p>
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/hatena-burger.png" alt="Hatena Burger Logo"/></div>
 
 
 
-<p>The Nintendo Wii is the learder with casual games. But even with games aimed at short intervals and simple tasks, there is still a learning curve. This is difficult to overcome. The people playing will come from various background and experiences. This makes it very difficult for a one-size fits all type game. When Nintendo came out with <a href="https://en.wikipedia.org/wiki/Wii_Music">Wii Music</a> there was certainly a risk involved. People who are musicians need a simple way to get in and start playing, but at the same time you can&#8217;t leave people who&#8217;ve never played an instrument out in the cold. If you cater to people who are learning how to play an instrument, you bore and isolate all the people who do know how to play. It is a difficult position to be in!</p>
+<p class="wp-block-paragraph">The way they can arrive at such a big number of possible burgers is to have a variety of different items you can combine in various ways. This quickly creates really big amounts of permutations.</p>
 
 
 
-<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/08/wii-music-main-menu.jpg" alt="Wii Music Main Menu Screenshot" />
-<figcaption>Wii Music Main menu allows you to take lessons, play mini-games or have open jam sessions.</figcaption>
-</figure>
+<p class="wp-block-paragraph">Since you can build your own burger you get to choose 1 of 3 different bun types, 1 of 10 different main ingredients, 3 of 11 different toppings and 1 of 7 different types of sauces.</p>
 
 
 
-<p>Nintendo did it well. They managed to follow closely the steps of a mythic journey. From the moment you switch the game on to when you are jamming away, the system does an excellent job of holding your hand when you need it and letting you go when you don&#8217;t.</p>
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/hatena-burger-menu-jp.jpg" alt="A photo of the menu at Hatena Burger. Lots of icons representing possible choices to build your burger." /></div>
 
 
 
-<p>If we look into the steps of a mythic journey you&#8217;ll see that it starts with a challenge. Then some help comes along and before the end your learnt something. Wii Music parallels this nicely. It starts out with a limited set of options and Meastro is there to help teach you how the instruments are played using the Wii controller. (This is important if you&#8217;re new or a seasoned musician) You then take a practice round and they slowly build on top with more and more features. After playing the Maestro goes away and lets you take control. Eventually you unlock more and more game modes, instruments and options until you can create your own music videos.</p>
+<p class="wp-block-paragraph">To figure out all the possible combinations you simply multiple all these values together.</p>
 
 
 
-<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/08/wii-music-onboarding1.jpg" alt="Wii Music Screenshot of the Maestro" /><figcaption>We meet Maestro, Sebastian Tute, our instructor and guide for Wii Music.</figcaption>
-</figure>
+<p class="wp-block-paragraph"><code>3 Bun types × 10 Main ingredients × 7 Sauces × (11 Toppings × 11 Toppings × 11 Toppings) = 279,510 possible combinations.</code></p>
 
 
 
-<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/08/wii-music-onboarding2.jpg" alt="Screenshot of Wii Music introducing Be-Bops" /><figcaption>Wii Music slowly introduces you to all the different elements: instruments, timing, rhythm and more.</figcaption></figure>
+<p class="wp-block-paragraph">It does seem that there are over 270,000 possible burgers you can order, but that comes with several big asterisks! These are possible combinations with repetition. When you are selecting your 3 different  toppings order doesn&#8217;t matter, so Tomato, Lettuce and Cheese is considered a different burger than Lettuce, Cheese and Tomato, but most of us would agree it is the same thing. Also, you can select the same topping 3 times: a Cheese, Cheese, Cheese burger. What is the total possible combinations if we make sure the set of toppings is unique and order independent?</p>
 
 
 
-<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/08/wii-music-help.jpg" alt="Wii Music Screenshot explaining how to get help" /><figcaption>If you ever get lost of confused, there&#8217;s an easy button to get help from Maestro. This is a great anchor and allows the system to step back, but still be there if needed.</figcaption>
-</figure>
+<p class="wp-block-paragraph">Todo so, we are not multiplying the total number of toppings (11) by the number you can choose (3). Instead we need to look into combinations without repetition using combinatorics. </p>
 
 
 
-<p>Wii Music isn&#8217;t the pinnacle of gaming. It is a focused, niche game which has a limited shelf-life and interest, but it excellently demonstrates how to guide someone through an unfamiliar land. This is true of everything from visiting a website to driving a car! When you are new to the system, things are daunting and confusing. Designers cut and cut features so you are left with only the basics so it is near impossible to mess-up. The less items, the less distractions and the more you can concentrate, the better chance of success. The flip side is once you understand the system and are comfortable, the lack of features are inhibiting. In a physical world you&#8217;re sort of stuck with what is in front of you, but in a digital world, the very interface can change and morph with you.</p>
+<p class="wp-block-paragraph">First we select the number of possible combinations and then subtract the duplicates. We start with 11 different toppings, but once we select the first one, we only have 10 left, and after selecting the second, only 9 left. That&#8217;s 11 × 10 × 9 = 990 possibilities without repeating an ingredient. But that&#8217;s still order independent. We want to reduce that by the number of combinations of our 3 potential selections, which is 3! =  6. We can take 990 / 6 = 165. Then general equation is:</p>
 
 
 
-<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/08/wii-music-lessons.jpg" alt="Screenshot of the lessons screen" />
-<figcaption>Wii Music Lessons screen unlocks more options as you complete each section.</figcaption>
-</figure>
+<p class="wp-block-paragraph">n!/(n-r)!  × (1/r!) where n is the number of times possible (11) and r is the number we can choose (3).</p>
 
 
 
-<p>Some applications let you choose between <em>Classic</em> or <em>Expert Mode</em>, or to use a <em>Wizard</em> or <em>Go it alone</em>. This isn&#8217;t helping the user grow and learn, it is just throwing them down one of two hallways and hope they can find their own way. How does someone ease from that <em>Classic Mode</em> into <em>Expert</em>? What are the steps in between, do they have to unlearn everything and then relearn it all in a new mode? That&#8217;s a waste of everyone&#8217;s time. This brings us back to Wii Music, because they do a really good job of only showing you what you need when you need it. The first time you start the difficult songs are not available yet, you have to practice the easy ones first. That way you&#8217;re not thrown directly into the deep end and feel like you are worthless. The Maestro explains how the instruments work, then after a few sessions he simply tells you how you can get help if you need it, then he stops reminding you altogether. It is weening you off the need for him, but he&#8217;s still there incase you lose your balance. This is truly teaching and learning. This isn&#8217;t Pick A Mode and hope for the best, it is a clean gradient over time with as many stops as needed for the people playing.</p>
+<p class="wp-block-paragraph">11! /(11-3)!  × (1/3!) = 165 possible combinations without repetition. That&#8217;s a lot lower than the 1,331 possible combinations of 11 × 11 × 11 Toppings or 990 of 11 × 10 × 9 Toppings without repetition.</p>
 
 
 
-<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/08/wii-music-handbells-1.jpg" alt="" />
-<figcaption>You start with only one possible Handbell song. You then play that melody. Your reward is that handbells are not an unlocked instrument elsewhere and a new, harder song is available. You&#8217;re never at a place more difficult than your skills.</figcaption>
-</figure>
+<p class="wp-block-paragraph">If we plug that new value into our equation we get <code>3 buns × 10 mains × 7 sauces × ( 11 nCR 3 = 165 topping combinations) = 34,650 possible unique burgers</code>. That&#8217;s far less than the 279,510 possible burger combinations when we preserve the topping order.</p>
 
 
 
-<p>We can learn a lot about gaming interaction, building a community and knowing when to help and when to get out of the way from Wii Music. As casual gaming grows larger and larger, the only possible way to scale up the phenominon is to have as small a gap between the types of players. Having only <em>Beginners</em> and <em>Experts</em> is a wide gap. They speak two different languages and can&#8217;t help each other, but if you have a slow gradient of skill levels, then there is the ability for moderate players to teach beginner and experts to help improve the moderate players.</p>
+<h2 class="wp-block-heading">Interactive Examples</h2>
 
 
 
-<p>In Wii Music, the jam session allows for an easy mix of talented and non-talented people. For the true musicians, it is possible to find your own beat and make your own music, where as beginners can turn on the staff and watch the notes whiz past alerting them when and how to play along. All of this within the same screen. Plenty of games do this like Rock Band and Guitar Hero. You can select your difficulty level. But with those games the only way to practice is memorization and putting the loads of hours playing and trying harder and harder settings. With Wii Music, there is no <em>EASY</em>, <em>NORMAL</em>, <em>HARD</em> modes, it is just <em>YOUR</em> mode. The Maestro dips in and out letting you make mistakes and improve yourself, offering suggestions here and there, but generally letting you put in the hard work and seeing your skills improve musically rather than simple memorization.</p>
+<p class="wp-block-paragraph"><img src="https://s.w.org/images/core/emoji/17.0.2/72x72/1f6a8.png" alt="🚨" class="wp-smiley" style="height: 1em; max-height: 1em;" /> These examples require Javascript, so if you&#8217;re looking at this in a feed-reader or email client, it might not work. Check the original link to try these examples.</p>
 
 
 
-<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2009/01/wii-music-jam-session.jpg" alt="Screenshot from a jam session" /></figure>
+<p class="wp-block-paragraph">Channeling <a href="https://worrydream.com">Bret Victor</a>, let&#8217;s have a look at the possible combinations in a more interactive way. One of his approaches was to have inline text be editable, thus changing the flow of the paragraph. He advocated for green text inline being draggable to update the values. Let&#8217;s experiment with the following paragraph. <em>(Try dragging the text in green to the left or right to change the values)</em></p>
+
+
+
+<p style="background-color: #dedede; padding: 20px; margin-bottom: 20px">At Hatena Burger, you can build your own burger by selecting from <span id="sliderBun" class="draggable-slider">3</span> different buns, <span id="sliderMain" class="draggable-slider">10</span> different main ingredients, <span id="sliderSauce" class="draggable-slider">7</span> different sauces and 3 of <span id="sliderTopping" class="draggable-slider">11</span> different Toppings. This gives <span id="draggable-result">279,510</span> different possible meals. </p>
+
+<style>
+.draggable-slider { color: white; background-color: green; border-radius: 10px; font-weight: bold; padding: 0 10px; cursor: grab; display: inline-block; width: 20px; user-select: none; text-align: center; }
+#draggable-result { font-weight: bold; }
+</style>
+
+<script type="text/javascript">
+var sliderBunValues = ['1','2','3','4'];
+const sliderValues = {
+ "sliderBun": [1, 2, 3, 4],
+ "sliderMain": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+ "sliderSauce": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+ "sliderTopping": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+};
+
+const spanBun  = document.getElementById('sliderBun');
+const spanMain = document.getElementById('sliderMain');
+const spanSauce = document.getElementById('sliderSauce');
+const spanTopping = document.getElementById('sliderTopping');
+const results  = document.getElementById('draggable-result');
+let isDragging = false;
+
+spanBun.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  e.preventDefault(); // Prevent text selection
+  document.body.style.userSelect = 'none'; // Prevent selection globally
+});
+
+spanMain.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  e.preventDefault(); // Prevent text selection
+  document.body.style.userSelect = 'none'; // Prevent selection globally
+});
+
+spanTopping.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  e.preventDefault(); // Prevent text selection
+  document.body.style.userSelect = 'none'; // Prevent selection globally
+});
+
+spanSauce.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  e.preventDefault(); // Prevent text selection
+  document.body.style.userSelect = 'none'; // Prevent selection globally
+});
+
+
+document.addEventListener('mouseup', () => {
+  isDragging = false;
+  document.body.style.userSelect = ''; // Restore selection
+
+});
+
+document.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+
+  if (!document.getElementById(e.toElement.id)) { return; }
+
+
+  // Get the X position relative to the span
+  const rect = document.getElementById(e.toElement.id).getBoundingClientRect();
+  let relativeX = e.clientX - rect.left;
+
+  // Clamp the value between 0 and the span width
+  relativeX = Math.max(0, Math.min(relativeX, rect.width));
+
+  // Convert to a value (for example 0–100)
+  var newValue = sliderValues[e.toElement.id]
+
+  const value = Math.round((relativeX / rect.width) * (newValue.length - 1));
+  // Update the span content
+  document.getElementById(e.toElement.id).textContent = newValue[value];
+  
+  results.textContent = (parseInt(spanBun.textContent) * parseInt(spanMain.textContent) * parseInt(spanSauce.textContent) * parseInt(spanTopping.textContent) * parseInt(spanTopping.textContent) * parseInt(spanTopping.textContent)).toLocaleString();
+});
+</script>
+
+
+
+<p class="wp-block-paragraph">This is a great example of how changing the number of options by a small amount can make a big impact on the total permutations. The downside is that it overly simplify duplicate toppings and doesn&#8217;t allow for fine grained choices. Maybe not all the toppings or sauces are for me?</p>
+
+
+
+<p class="wp-block-paragraph">Let&#8217;s try again with a more complex menu. This allow the customer to limit the options not by a number, but by dietary preferences; Vegan, Vegetarian, Pescatarian, Dairy-free, Celiac, etc.</p>
+
+
+
+<style>
+.hb_box {
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+  vertical-align: top;
+  font-size: 80%;
+}
+.hb_box img { width: 80px; height: 80px; }
+</style>
+
+<h3>Buns</h3>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/bun-brown.png" />
+  <label><input type="checkbox" class="hb_bun" name="hb_bun_1" id="hb_bun_1" value="1" checked="checked" /> Brown</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/bun-red.png"  />
+  <label><input type="checkbox" class="hb_bun" name="hb_bun_2" id="hb_bun_2" value="2" checked="checked" /> Red</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/bun-black.png" />
+  <label><input type="checkbox" class="hb_bun" name="hb_bun_3" id="hb_bun_3" value="3" checked="checked" /> Black</label>
+</div>
+<hr />
+
+<h3>Main</h3>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-beef.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_1" id="hb_main_1" value="1" checked="checked" /> Beef Patty</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-double-beef.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_2" id="hb_main_2" value="2" checked="checked" /> Beef Patty Double</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-sukiyaki.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_3" id="hb_main_3" value="3" checked="checked" /> Sukiyaki Beef</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-double-sukiyaki.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_4" id="hb_main_4" value="4" checked="checked" /> Sukiyaki Beef Double</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-chicken.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_5" id="hb_main_5" value="5" checked="checked" /> Fried Chicken</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-double-chicken.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_6" id="hb_main_6" value="6" checked="checked" /> Fried Chicken Double</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-fish.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_7" id="hb_main_7" value="7" checked="checked" /> Grilled Miso Fish</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-double-fish.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_8" id="hb_main_8" value="8" checked="checked" /> Grilled Miso Fish Double</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-mushroom.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_9" id="hb_main_9" value="9" checked="checked" /> Big Mushroom</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-double-mushroom.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_10" id="hb_main_10" value="10" checked="checked" /> Big Mushroom Double</label>
+</div>
+<hr />
+<h3>Toppings</h3>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-fried-egg.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_1" id="hb_top_1" value="1" checked="checked" /> Fried Egg</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-scrambled-egg.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_2" id="hb_top_2" value="2" checked="checked" /> Scrambled Egg</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-tofu.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_3" id="hb_top_3" value="3" checked="checked" /> Fried Tofu</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-kyoto-pepper.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_4" id="hb_top_4" value="4" checked="checked" /> Kyoto Green Pepper</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-onion.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_5" id="hb_top_5" value="5" checked="checked" /> Onion</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-cheese.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_6" id="hb_top_6" value="6" checked="checked" /> Cheddar Cheese</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-onion.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_7" id="hb_top_7" value="7" checked="checked" /> Kyoto Green Onion</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-lotus-root.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_8" id="hb_top_8" value="8" checked="checked" /> Stir-Fried Lotus Root</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-tomato.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_9" id="hb_top_9" value="9" checked="checked" /> Tomato</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-lettuce.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_10" id="hb_top_10" value="10" checked="checked" /> Lettuce</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-shibazuke-pickles.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_11" id="hb_top_11" value="11" checked="checked" /> Shibazuke Pickles</label>
+</div>
+<hr />
+<h3>Sauces</h3>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/sauce-wasabi-garlic-soy.png" />
+  <label><input type="checkbox" class="hb_sauce" name="hb_sauce_1" id="hb_sauce_1" value="1" checked="checked" /> Wasabi Garlic Soy Sauce</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/sauce-sukiyaki.png" />
+  <label><input type="checkbox" class="hb_sauce" name="hb_sauce_2" id="hb_sauce_2" value="2" checked="checked" /> Sukiyaki Sauce</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/sauce-black-curry.png" />
+  <label><input type="checkbox" class="hb_sauce" name="hb_sauce_3" id="hb_sauce_3" value="3" checked="checked" /> Black Curry Sauce</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/sauce-shibazuke-pickles-tartar.png" />
+  <label><input type="checkbox" class="hb_sauce" name="hb_sauce_4" id="hb_sauce_4" value="4" checked="checked" /> Shibazuke-Pickles Tartar Sauce</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/sauce-ketchup.png" />
+  <label><input type="checkbox" class="hb_sauce" name="hb_sauce_5" id="hb_sauce_5" value="5" checked="checked" /> Ketchup</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/sauce-citrus-pepper-dashi.png" />
+  <label><input type="checkbox" class="hb_sauce" name="hb_sauce_6" id="hb_sauce_6" value="6" checked="checked" /> Citrus Pepper Dashi Sauce</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/sauce-veggie-aurora.png" />
+  <label><input type="checkbox" class="hb_sauce" name="hb_sauce_7" id="hb_sauce_7" value="7" checked="checked" /> Veggie Aurora Sauce</label>
+</div>
+<hr />
+<h3>Stats</h3>
+<p>Based on your selection there are <strong id="hb_combinations">xxx</strong> possible burgers.</p>
+<hr />
+<script>
+const bun_checkboxes = document.querySelectorAll('.hb_bun');
+const main_checkboxes = document.querySelectorAll('.hb_main');
+const sauce_checkboxes = document.querySelectorAll('.hb_sauce');
+const top_checkboxes = document.querySelectorAll('.hb_top');
+
+function onBunChange() {
+  const atLeastOneChecked = Array.from(bun_checkboxes).some(cb => cb.checked);
+  if (!atLeastOneChecked){
+    document.getElementById('hb_bun_1').checked = 'checked';
+  }
+  do_hb_calculation()
+}
+
+bun_checkboxes.forEach(cb => {
+  cb.addEventListener('change', onBunChange);
+});
+
+function onMainChange() {
+  const atLeastOneChecked = Array.from(main_checkboxes).some(cb => cb.checked);
+  if (!atLeastOneChecked){
+    document.getElementById('hb_main_1').checked = 'checked';
+  }
+  do_hb_calculation()
+}
+
+main_checkboxes.forEach(cb => {
+  cb.addEventListener('change', onMainChange);
+});
+
+function onSauceChange() {
+  const atLeastOneChecked = Array.from(sauce_checkboxes).some(cb => cb.checked);
+  if (!atLeastOneChecked){
+    document.getElementById('hb_sauce_1').checked = 'checked';
+  }
+  do_hb_calculation()
+}
+
+sauce_checkboxes.forEach(cb => {
+  cb.addEventListener('change', onSauceChange);
+});
+
+function onTopChange() {
+  if (document.querySelectorAll('.hb_top:checked').length < 3){
+    document.getElementById('hb_top_1').checked = 'checked';
+    document.getElementById('hb_top_2').checked = 'checked';
+    document.getElementById('hb_top_3').checked = 'checked';
+  }
+  do_hb_calculation()
+}
+
+top_checkboxes.forEach(cb => {
+  cb.addEventListener('change', onTopChange);
+});
+
+function do_hb_calculation(){
+  var combo_count = document.querySelectorAll('.hb_bun:checked').length * document.querySelectorAll('.hb_main:checked').length * document.querySelectorAll('.hb_sauce:checked').length * document.querySelectorAll('.hb_top:checked').length * (document.querySelectorAll('.hb_top:checked').length - 1) * (document.querySelectorAll('.hb_top:checked').length - 2)
+  document.getElementById('hb_combinations').textContent = combo_count.toLocaleString()
+}
+do_hb_calculation()
+</script>
+
+
+
+<p class="wp-block-paragraph">Finally, as you build your burger, you get a nice animated cartoon of your combination.</p>
+
+
+
+<style>
+.hb_stack { display: inline-block; width: 300px; text-align: center }
+#hb_topping_1_1, #hb_topping_2_2, #hb_topping_3_3 {   animation: spin1 10s ease-in-out infinite alternate; }
+#hb_topping_2_1, #hb_topping_3_2, #hb_topping_1_3 {   animation: spin2 11s ease-in-out infinite alternate; }
+#hb_topping_3_1, #hb_topping_1_2, #hb_topping_2_3 {   animation: spin3 9s ease-in-out infinite alternate; }
+@keyframes spin1 {
+  0% { transform: rotate(-10deg); }
+  100% { transform: rotate(10deg); }
+}
+@keyframes spin2 {
+  0% { transform: rotate(8deg); }
+  100% { transform: rotate(-12deg); }
+}
+@keyframes spin3 {
+  0% { transform: rotate(-12deg); }
+  100% { transform: rotate(7deg); }
+}
+
+</style>
+<div style="text-align: center;">
+<div class="hb_stack" style="text-align: center;">
+<div><img decoding="async" id="hb_buntop_1" src=""  /></div>
+<div style="position: relative; z-index: 100"><img decoding="async" id="hb_stack_sauce_1" src="" /></div>
+<div style="position: relative; margin-top: -20px; z-index: 80"><img decoding="async" id="hb_topping_1_1" src="" /></div>
+<div style="position: relative; margin-top: -10px; z-index: 70"><img decoding="async" id="hb_topping_1_2" src="" /></div>
+<div style="position: relative; margin-top: -10px; z-index: 60"><img decoding="async" id="hb_topping_1_3" src="" /></div>
+<div style="position: relative; margin-top: -10px; z-index: 50"><img decoding="async" id="hb_stack_main_1" src="" /></div>
+<div><img decoding="async" id="hb_bunbottom_1" src="" /></div>
+</div>
+
+<div class="hb_stack" style="text-align: center;">
+<div><img decoding="async" id="hb_buntop_2" src=""  /></div>
+<div style="position: relative; z-index: 100"><img decoding="async" id="hb_stack_sauce_2" src="" /></div>
+<div style="position: relative; margin-top: -20px; z-index: 80"><img decoding="async" id="hb_topping_2_1" src="" /></div>
+<div style="position: relative; margin-top: -10px; z-index: 70"><img decoding="async" id="hb_topping_2_2" src="" /></div>
+<div style="position: relative; margin-top: -10px; z-index: 60"><img decoding="async" id="hb_topping_2_3" src="" /></div>
+<div style="position: relative; margin-top: -10px; z-index: 50"><img decoding="async" id="hb_stack_main_2" src="" /></div>
+<div><img decoding="async" id="hb_bunbottom_2" src="" /></div>
+</div>
+
+<div class="hb_stack" style="text-align: center;">
+<div><img decoding="async" id="hb_buntop_3" src=""  /></div>
+<div style="position: relative; z-index: 100"><img decoding="async" id="hb_stack_sauce_3" src="" /></div>
+<div style="position: relative; margin-top: -20px; z-index: 80"><img decoding="async" id="hb_topping_3_1" src="" /></div>
+<div style="position: relative; margin-top: -10px; z-index: 70"><img decoding="async" id="hb_topping_3_2" src="" /></div>
+<div style="position: relative; margin-top: -10px; z-index: 60"><img decoding="async" id="hb_topping_3_3" src="" /></div>
+<div style="position: relative; margin-top: -10px; z-index: 50"><img decoding="async" id="hb_stack_main_3" src="" /></div>
+<div><img decoding="async" id="hb_bunbottom_3" src="" /></div>
+</div>
+
+</div>
+
+<p style="color: blue; cursor: pointer; text-decoration: underline; text-align: center;" onclick="random_hatena_burgers()">Reload Random Burgers</p>
+
+<script>
+function fisherYatesShuffle(array) {
+    let currentIndex = array.length;
+    while (currentIndex !== 0) {
+        // Pick a remaining element
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element
+        let temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+    return array;
+}
+
+function random_hatena_burger(index){
+
+
+const stack_buns = ['brown','red','black'];
+const stack_sauces = ['black-curry','citrus-pepper-dashi','ketchup','shibazuke-pickles-tartar','sukiyaki','veggie-aurora','wasabi-garlic-soy'];
+const stack_main = ['chicken','beef','fish','sukiyaki','mushroom','double-chicken','double-beef','double-fish','double-sukiyaki','double-mushroom'];
+
+const stack_toppings = ['tofu','onion','tomato','shibazuke','lettuce','pepper','green-onion','lotus','cheese','egg','scrambled-egg'];
+
+
+var bun_type = stack_buns[Math.floor(Math.random() * stack_buns.length)];
+var bun_top = document.getElementById('hb_buntop_'+ index);
+var bun_bottom = document.getElementById('hb_bunbottom_'+ index);
+var sauce = document.getElementById('hb_stack_sauce_'+ index);
+var sauce_type = stack_sauces[Math.floor(Math.random() * stack_sauces.length)];
+var mains = document.getElementById('hb_stack_main_'+ index);
+var mains_type = stack_main[Math.floor(Math.random() * stack_main.length)];
+
+bun_top.src = "https://optional.is/required/wp-content/uploads/2025/12/stack/bun-top-"+bun_type+".png"
+bun_bottom.src = "https://optional.is/required/wp-content/uploads/2025/12/stack/bun-bottom-"+bun_type+".png"
+sauce.src = "https://optional.is/required/wp-content/uploads/2025/12/stack/sauce-"+sauce_type+".png"
+mains.src = "https://optional.is/required/wp-content/uploads/2025/12/stack/main-"+mains_type+".png"
+
+var topping1 = document.getElementById('hb_topping_'+ index+'_1');
+var topping2 = document.getElementById('hb_topping_'+ index+'_2');
+var topping3 = document.getElementById('hb_topping_'+ index+'_3');
+var topping_types = fisherYatesShuffle(stack_toppings)
+
+topping1.src = "https://optional.is/required/wp-content/uploads/2025/12/stack/topping-"+ topping_types [0]+".png"
+topping2.src = "https://optional.is/required/wp-content/uploads/2025/12/stack/topping-"+ topping_types [1]+".png"
+topping3.src = "https://optional.is/required/wp-content/uploads/2025/12/stack/topping-"+ topping_types [2]+".png"
+
+}
+
+function random_hatena_burgers(){
+ random_hatena_burger(1);
+ random_hatena_burger(2);
+ random_hatena_burger(3);
+}
+
+random_hatena_burgers()
+</script>
+
+
+
+<h2 class="wp-block-heading">Conclusion</h2>
+
+
+
+<p class="wp-block-paragraph">Does Hatena Burger have over 270,000 different burgers? Strictly speaking yes. Practically speaking, no. It&#8217;s much, much less when you remove duplicate toppings. Looking into the mathematics and combinatorics of the possibilities can be a fun and interesting way to see how adding or removing small amounts can have big impacts.</p>
+
+
+
+<p class="wp-block-paragraph">When we see what seems like outlandish claims &#8220;Over 270,000 possible burgers&#8221; it is within our abilities to double check and confirm or deny if it&#8217;s true.</p>
 ]]></content:encoded>
 					
 		
 		
 			</item>
 		<item>
-		<title>Week #755 &#038; #756</title>
-		<link>https://optional.is/required/2025/08/08/week-755-756/</link>
+		<title>Week #789 &#038; #790</title>
+		<link>https://optional.is/required/2026/04/03/week-789-790/</link>
 		
 		<dc:creator><![CDATA[optional Bot]]></dc:creator>
-		<pubDate>Fri, 08 Aug 2025 13:31:00 +0000</pubDate>
+		<pubDate>Fri, 03 Apr 2026 13:31:00 +0000</pubDate>
 				<category><![CDATA[Briefs]]></category>
 		<category><![CDATA[Weeknotes]]></category>
-		<category><![CDATA[australia]]></category>
-		<category><![CDATA[css]]></category>
-		<category><![CDATA[surveys]]></category>
-		<category><![CDATA[swift]]></category>
-		<guid isPermaLink="false">https://optional.is/required/?p=8314</guid>
-
-					<description><![CDATA[A Monday holiday sandwiched between a double weeknote. Mostly prototyping and prepping.]]></description>
-										<content:encoded><![CDATA[
-<h2 class="wp-block-heading">Week #755</h2>
-
-
-
-<p>The week started off well. For the school survey projects, we&#8217;re going back over the code-base and both updating the libraries, but also the CSS. It&#8217;s been a long time since we touched it, so bring both up to modern standards is good. Along the way, we&#8217;ve switched the fonts, got dark mode working and cleaned-up some color choices. This week we continues with the CSS for the WordPress theme and charts.</p>
-
-
-
-<p>We also got a new &#8220;smart&#8221; water meter installed (sort of). They came first time Monday morning, turned off the water and power, then after turning it back on again left. We had a look since they didn&#8217;t say goodbye and nothing is plugged in and only 2 of the 3 meters have been switched&#8230; we&#8217;re assuming they&#8217;re coming back, but who knows when!</p>
-
-
-
-<p>The Australian concreters, always have a few more bugs and requests, so we spent some time this week also ironing things out so they can switch over to using the web app for planning projects and inventory.</p>
-
-
-
-<p>On Sunday night, we had a short meeting with Australia to plan next steps and sync about the current status.</p>
-
-
-
-<h2 class="wp-block-heading">Week #756</h2>
-
-
-
-<p>Monday started as a public holiday in Iceland. It was Frídagur verslunarmanna (Commerce Day). Originally designed to give shopkeepers a day off, it has evolved into the busiest travel weekend in Iceland.</p>
-
-
-
-<p>On Tuesday we finalized all the tasks and bugs for the Australian Concreters. They&#8217;ll use the system for a bit, then we&#8217;ll revamp the inventory portion. They also bought a mixing truck, so we&#8217;re back to tracking hours AND equipment. We end-up treating the equipment like labour, we just don&#8217;t send the equipment&#8217;s hours to generate pay slips. On Wednesday and Thursday we got a few more items. Luckily, we&#8217;re billing hourly, so while this takes time away from other projects, we are getting paid.</p>
-
-
-
-<p>We&#8217;ve also been getting back into the SwiftUI prototypes. Connecting the Apple TV with an iPhone/iPad to use the camera and an Apple Watch to gather more sensor data in real-time. We&#8217;ve got all the pieces in place, but it needs both some refactoring. The client is eager to move faster on the project, but there are only so many hours in the day and the fall gets busy for us with school surveys. The major issues is that tvOS and watchOS both support sub-sets of useful networking libraries making it really hard to connect to each other easily.</p>
-
-
-
-<p>On Thursday, we went through the task list with the school survey team and cleaned-up most all of our outstanding issues before we start in September. There will always be a few hiccups and things that need improving, re-styling, text changes or bugs to fix, but we&#8217;re in a good shape and happy with the progress.</p>
-
-
-
-<h2 class="wp-block-heading">Bric-à-brac</h2>
-
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yYRzPBJxEAs?si=ben-6DAgeTi2YcL_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-
-<p>The newest Mario Kart game for the Switch 2 keeps with the tradition of in-game brands. This video breaks down many of the classic designs from the last few releases and categorizes them into similar groupings.</p>
-
-
-
-<p>We&#8217;ve also started to go down the Wii rabbit hole. Over the summer we got the Wii out of storage and have been playing a few classic games. More on that later.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>DejaView Camera App</title>
-		<link>https://optional.is/required/2025/07/31/dejaview-camera-app/</link>
-		
-		<dc:creator><![CDATA[optional Bot]]></dc:creator>
-		<pubDate>Thu, 31 Jul 2025 13:31:00 +0000</pubDate>
-				<category><![CDATA[Applications]]></category>
-		<category><![CDATA[Briefs]]></category>
-		<category><![CDATA[Experiments]]></category>
-		<category><![CDATA[Photography]]></category>
-		<category><![CDATA[action sampler]]></category>
-		<category><![CDATA[app]]></category>
 		<category><![CDATA[apps]]></category>
 		<category><![CDATA[camera]]></category>
-		<category><![CDATA[iOS]]></category>
-		<category><![CDATA[Kalimar]]></category>
-		<category><![CDATA[past]]></category>
-		<category><![CDATA[time]]></category>
-		<guid isPermaLink="false">https://optional.is/required/?p=8305</guid>
+		<category><![CDATA[cities]]></category>
+		<category><![CDATA[easter]]></category>
+		<category><![CDATA[eCards]]></category>
+		<category><![CDATA[mini-games]]></category>
+		<category><![CDATA[webrtc]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=9695</guid>
 
-					<description><![CDATA[DejaView is our second experimental camera app. It allows you to reach into the past and take an action photo collage. ]]></description>
+					<description><![CDATA[A double weeknote. The first half was stormy, the second half was Easter break.]]></description>
 										<content:encoded><![CDATA[
-<a rel="noreferrer" href="https://apps.apple.com/us/app/dejaview/id1598005975?ls=1&amp;mt=8"><img class="app-icon" 
-style="
-border-radius: 15px;
-height: 60px;
-width: 60px;
-box-shadow: none;
-margin: 0 0.5em 1em 0;
-border: 1px solid #ccc;
-padding: 0;
-vertical-align: middle;"
+<h2 class="wp-block-heading">Week #789</h2>
 
-src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f5/57/b1/f557b1d4-7fa4-c5a6-bc34-3d2ed494b43a/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/460x0w.png" alt="Download DejaView on the App Store"/> Download DejaView on the App Store</a>
 
 
+<p class="wp-block-paragraph">We spent some time this week finishing-up a project for the concreters down in Australia. We will be taking over future work directly, so we&#8217;re preparing for all that.</p>
 
-<p>DejaView is our second experimental camera app. It has its roots in an analog film camera we own called the <a href="https://microsites.lomography.com/supersampler/">LOMO Supersampler</a>. We probably bought this camera around the year 02000 and we&#8217;ve taken it all over the world with us. </p>
 
 
+<p class="wp-block-paragraph">We did a lot of brainstorming on some word puzzle mini-games. There is a kernel of something germinating. A few prototypes proved interesting, now we need to sit down with a wider audience and get feedback.</p>
 
-<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/07/lomo-supersampler.jpg" alt="LOMO Supersampler"/><figcaption>Pearl LOMO Supersampler camera. Probably purchased ~02000.</figcaption></figure>
 
 
+<p class="wp-block-paragraph">We continued to work on the WebRTC project by layering on a Pose Detection machine learning layer to highlight joins and features.</p>
 
-<p>What makes this camera so special is that there are four lenses that fire each with a slight delay from the previous. The result is on a single 4:3 frame you get four small time slices creating a short animation. The camera allows you to set a 0.2s or 2.0s timeframe.</p>
 
 
+<p class="wp-block-paragraph">This week was also several meetings. Previously, we helped a small team put in a Gulleggið submission. Sadly, they were not selected in the top 10, so we all met to figure out the future of this idea. We also met-up with an old friend over zoom and chatted about higher-education, AI and Iceland. On Wednesday we met-up for morning coffee with another friend and chatted health care, AI, research and more. There might be some possibilities to work together in the future. <em>Always dig your well before you&#8217;re thirsty.</em></p>
 
-<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/07/018_16A-1024x683.jpg" alt="LOMO Supersampler photos. Four slices of Edinburgh Castle"/><figcaption>LOMO Supersampler Edinburgh Castle from Princess Street. Circa 02022.</figcaption></figure>
 
 
+<p class="wp-block-paragraph">Thursday was an Orange Weather Alert day, so we mostly stayed home.</p>
 
-<p>A similar camera is the Kalimar Action Shot 16. This has 16 lenses and had a unique purpose to help you analyze your golf swing. This was an early &#8220;Burst Mode&#8221; style camera that was a blunt approach to capturing the action by just taking lots of pictures. The camera took 16 images on two frames of film.</p>
 
 
+<p class="wp-block-paragraph">On Friday, we published our <a href="https://optional.is/required/2026/03/27/camelut/">Camelut article</a> detailing how we built a LUT bring your own filter camera. We also continue to update our camera apps with more small tweaks. Since it is a common library between them for the basic camera features, they all get the benefit of small updates and bug fixes.</p>
 
-<p>The other project we drew inspiration from was a virtual &#8220;magic mirror&#8221;. It was a simple experiment that used a webcam and a large screen to show customers at clothing stores what they were wearing. The &#8220;magic&#8221; part was that there was a few seconds delay on the webcam. This allowed patrons to spin around and get a good view of themselves from different angles, spin back around and see it in the &#8220;mirror&#8217;s&#8221; delay.</p>
 
 
+<h2 class="wp-block-heading">Week #790</h2>
 
-<p>There is a short story called &#8220;<a href="https://en.wikipedia.org/wiki/Light_of_Other_Days">Light of Other Days</a>&#8221; by Bob Shaw, which puts forward the idea of &#8220;slow glass&#8221;. Glass with such a high refraction level that it takes years for light to pass through creating a massive delayed effect.</p>
 
 
+<p class="wp-block-paragraph">This is Easter week in Iceland with loads of public holidays and days off. Our work load was pretty minimal as we just had a few meetings and keep a few reoccurring tasks. Otherwise, we enjoyed the stormy Icelandic weather!</p>
 
-<p>Playing with the idea of time delays using the phone&#8217;s camera is possible in the digital era. We love all these ideas and bundled them into our newest experimental camera app <em>DejaView</em>.</p>
 
 
+<p class="wp-block-paragraph">On Thursday, we had a few meetings about some new/old project ideas. That opened some big doors with quick deadlines, but we&#8217;ve been working towards this for a while.</p>
 
-<p>Building on our knowledge from the <a href="https://optional.is/required/2025/05/22/ornithoto-camera-app/">Ornithoto Camera app</a>, we created an iOS app that uses the camera&#8217;s video feed to save individual frames as images. Since we know we want this camera to take four frames on a delay, we kept a buffer of a few seconds of previous frames.</p>
 
 
-
-<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/07/dejaview-flow.png" alt="flow diagram of time showing how Dejaview app takes frames from the past, whereas analog cameras capture it in the future"/></figure>
-
-
-
-<p>The analog cameras would wait for a shutter press, then open the apertures in sequence taking a photo. We wanted to explore that &#8220;magic mirror&#8221; experience and save photos from the past. In DejaView, when you press the shutter button it doesn&#8217;t start the photo taking experience, it completes it. Using the video buffer we reach into the past to get the previous frames to make the collage.</p>
-
-
-
-<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/07/dejaview-samples.jpg" alt="Three sample collages. Street scape, an airplane landing, airplane passing overhead" /></figure>
-
-
-
-<p>The app itself has all the regular features: change camera lenses, adjust the delay, a timer, the ability to save the collage and source images, change from a few different collage types, and make an animated gif of the results.</p>
-
-
-
-<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/07/dejaview-instructions.jpg" alt="Annotated screenshot of the app menu"/></figure>
-
-
-
-<p>The results are &#8220;clean&#8221; digital photos which lack film grain, LOMO&#8217;s vignetting and soft edges of a plastic lens. Rather than add these in the camera with more options and settings, we&#8217;ll leave the post-processing to you so you can salt-to-taste. (Which is partly why we allow you to save the four original images too). </p>
-
-
-
-<p>You can download the DejaView app for your iPhone today. It is currently free, but as we get feedback and fix bugs, we&#8217;ll eventually set a small price to download. If you get it now, all future updates will be free.</p>
-
-
-
-<p>The app is niche and certainly won&#8217;t be your go-to daily camera, but it is a lot of fun to take pictures from the past. The results make you smile and your friends say Wow!</p>
-
-
-
-<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/07/animated.gif" alt="Animated GIF of a child sledding down a hill hitting a small jump."/><figcaption>Animated GIF output from DejaView. The four frames are put together in a loop.</figcaption></figure>
-
-
-
-<a rel="noreferrer" href="https://apps.apple.com/us/app/dejaview/id1598005975?ls=1&amp;mt=8"><img class="app-icon" 
-style="
-border-radius: 15px;
-height: 60px;
-width: 60px;
-box-shadow: none;
-margin: 0 0.5em 1em 0;
-border: 1px solid #ccc;
-padding: 0;
-vertical-align: middle;"
-
-src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f5/57/b1/f557b1d4-7fa4-c5a6-bc34-3d2ed494b43a/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/460x0w.png" alt="Download DejaView on the App Store"/> Download DejaView on the App Store</a>
-
-
-
-<p></p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Week #753 &#038; #754</title>
-		<link>https://optional.is/required/2025/07/25/week-753-754/</link>
-		
-		<dc:creator><![CDATA[optional Bot]]></dc:creator>
-		<pubDate>Fri, 25 Jul 2025 13:31:00 +0000</pubDate>
-				<category><![CDATA[Briefs]]></category>
-		<category><![CDATA[Weeknotes]]></category>
-		<category><![CDATA[backups]]></category>
-		<category><![CDATA[camera apps]]></category>
-		<category><![CDATA[css]]></category>
-		<category><![CDATA[iOS]]></category>
-		<category><![CDATA[less]]></category>
-		<category><![CDATA[LUT]]></category>
-		<guid isPermaLink="false">https://optional.is/required/?p=8128</guid>
-
-					<description><![CDATA[A double weeknote. It was productive, but not exactly in the ways you'd expect.]]></description>
-										<content:encoded><![CDATA[
-<h2 class="wp-block-heading">Week #753</h2>
-
-
-
-<p>On Monday, we returned to Reykjavik. Most people wouldn&#8217;t have noticed we left or came back. Which is a testament to the ability to work remotely and that we&#8217;ve managed to decentralize most all of our tools.</p>
-
-
-
-<p>Tuesday our Web Hosting had a &#8216;major&#8217; issue with one server (coincidentally it was the one we are using) which required some downtime. It wasn&#8217;t a major inconvenience and the small team did a great job. That got us thinking again about backups. (It seemed to be an issue with memory and not hard drives) What if they couldn&#8217;t restore from a backup? (it&#8217;s happened before!) We have a great system for local backups, but we need to think of a simple and smooth way to backup the databases and files on the server.</p>
-
-
-
-<p>On Wednesday we increased the price of our experimental camera app: <a href="https://apps.apple.com/us/app/ornithoto/id1665382610?ls=1&amp;mt=8">Ornithoto</a> to $1.99. You can read more about the app <a href="https://optional.is/required/2025/05/22/ornithoto-camera-app/">here</a>. But our general thinking is to release the app for free and after a period of time, we increase the price to something nominal. This will keep support requests and questions to mostly paid customers. We won&#8217;t get rich, but we won&#8217;t loose our minds.</p>
-
-
-
-<p>We have a second experimental camera app currently called <a href="https://apps.apple.com/us/app/dejaview/id1598005975">DejaView</a>. We finally went through the code and found the bug that was holding things up. It wasn&#8217;t super difficult to untie, just needd the time and space to find and fix it. It is now available for <a href="https://apps.apple.com/us/app/dejaview/id1598005975?ls=1&amp;mt=8">free online</a>. We&#8217;re looking for feedback and bugs, then after a few months we&#8217;ll set a price for this one too. So grab it while you can for free future updates.</p>
-
-
-
-<p>For our surveys projects, we have an internal goal this summer to breath some new design life into the look and feel of the data collection and the reporting site. The University of Iceland have a nice style guide that we used as a basis. We moved to a new web font: <strong>Atkinson Hyperlegible</strong> and cleaned-up our CSS to add better theming and dark mode. Our previous CSS workflow was written probably 10+ years ago using LESS. CSS now supports variables natively so we&#8217;ve made the jump to just vanilla CSS which we combine and minify in the deploy process. the <code>variables.css</code> file which defines all our semantic variable names for colors in light and dark mode. Then using more specific CSS selectors we can add a theme name on the <code>&lt;body class="theme_name"&gt;</code> to override all the previously set color variables without adding more CSS definitions.</p>
-
-
-
-<p>Compiling WebRTC libraries for tvOS has gotten the better of us this week. We&#8217;ve been debugging and trying loads of things with not much success. Our next step is to deprioritize this and try to get some outside help.</p>
-
-
-
-<p>We had a meeting on Friday and sometimes you gotta say the same thing again and again and when others are ready to make the connection they will. We had a break through and we&#8217;re pretty sure we&#8217;ve brought this up to the client several times before. Maybe it&#8217;s the way we said it this time, maybe they finally made the connections, but either way we&#8217;re moving things forward.</p>
-
-
-
-<p>On Sunday night our time, Monday morning Australia time, we had a project review. We went through all the updates and found and fixed a few bigs before deploying for the customer.</p>
-
-
-
-<h2 class="wp-block-heading">Week #574</h2>
-
-
-
-<p>We continue to update CSS files for our charts and reports. We&#8217;ve switched the basics like the webfont and converted all the color references over to variables. Now that we&#8217;re implementing dark mode CSS, we need to go through all those color variables and make sure they work well on a dark background. Our next two tasks are to re-design the login page to give it a bit more &#8216;flare&#8217; then go back over all the charts and clean those up and add a bit more interactivity.</p>
-
-
-
-<p>This week the Australian customer reviewed the changes and came back with fixes. Some where minor design fixes, some where mis-communications on what data was editable, and a few bugs and feature requests.</p>
-
-
-
-<p>Meeting-wise, we had a few great chats this week. We&#8217;re pushing forward on a prototype game project. Working with an illustrator friend, we&#8217;re flushing out the concept. We also met-up about our WebRTC project and having a small reset on priorities.</p>
-
-
-
-<p>We also went down a rabbit hole of LUT files. These are used in post-editing images in video. They are presets you can apply. Portable filters. We looked around and very few camera apps we could find support LUT files, so we made our own and it works great! We&#8217;re going to kick the tires for a while and se about creating favorites likes or importing and saving LUT files for quick access. Right now it loads them from the file system, so adding more is as easy as dropping them into folders.</p>
+<p class="wp-block-paragraph">Friday was the usual sync on a few other projects before the Holiday weekend.</p>
 
 
 
@@ -910,95 +1437,27 @@ src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f5/57/b1/f557b1d4-7fa
 
 
 
-<p>We were listening to a podcast interview with Australian comedian Mr. John Robertson. In it, they mention his creation <em>The Dark Room</em>. The Dark Room is the world’s only live-action videogame where Robertson comperes your way through a room-sized text-based adventure game where there are prizes to be won, if you can get out of The Dark Room.</p>
+<p class="wp-block-paragraph">For a new prototype idea, we went back to some old, old UI designs around navigating through the metaphor of the city! These are the navigation headers from Kelloggs.com at the end of 01996 and beginning of 01997. That was a fun time on the web where big companies were still experimenting before  the standard mobile friendly navigation we have today.</p>
 
 
 
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/2RzbFwsbvrQ?si=n789e5M5Ow8Ouzjk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/03/kelloggs-Cereal-City-01996.gif" alt="Kelloggs.com December 01996" /></figure>
 
 
 
-<p>We found a recorded from 02024 PAX West conference. Not for children or the faint-of-heart. It&#8217;s an amazing adventure of improve comedy with the aid of text-based choices on the screen. It&#8217;s got our mind spinning with ideas.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Creative Tip Jars</title>
-		<link>https://optional.is/required/2025/07/17/creative-tip-jars/</link>
-		
-		<dc:creator><![CDATA[optional Bot]]></dc:creator>
-		<pubDate>Thu, 17 Jul 2025 13:31:00 +0000</pubDate>
-				<category><![CDATA[Briefs]]></category>
-		<category><![CDATA[Experiments]]></category>
-		<category><![CDATA[You're doing it wrong]]></category>
-		<category><![CDATA[betting]]></category>
-		<category><![CDATA[choice]]></category>
-		<category><![CDATA[persuation]]></category>
-		<category><![CDATA[psycology]]></category>
-		<category><![CDATA[tips]]></category>
-		<guid isPermaLink="false">http://optional.is/required/?p=2497</guid>
-
-					<description><![CDATA[In many countries tipping is not part of the culture. Iceland is one of those countries. You never really tip for a taxi or food or other services. This leads to a difficult and usually empty tip jar at small shops and restaurants.]]></description>
-										<content:encoded><![CDATA[
-<p>In Iceland, it&#8217;s not really standard to tip. Everyone gets paid a minimum wage, even in the service industry, but that hasn&#8217;t stopped places from being creative in getting you to part with some coins. Iceland has also moved to a pretty cashless society, the last holdout (public transportation) now has NFC tap to pay. Coins and bills are reserved for the tooth fairy and children&#8217;s birthday parties.</p>
+<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/03/Kelloggs-Cereal-city-01997.gif" alt="Kelloggs.com January 01997"/></figure>
 
 
 
-<p>There is a psychological trick that some &#8216;tipping&#8217; system employ. When we see it, it puts a smile on our faces, but we know your games.</p>
+<p class="wp-block-paragraph">One thing you notice in Cereal City was the &#8220;Card Shop&#8221; for those who were not online in the late 90s, ePostcards were a big thing! Even Apple had a whole tab called &#8216;iCards&#8217; dedicated to sending HTML emails. This was probably a way to both collect email addresses, but also allow people to send HTML email before many mail clients supported it. Hotmail (HoTMaiL &#8211; see the reference) was started in 01995 and was one of the first Web-based email clients, before that AOL or Juno both were dedicated apps.</p>
 
 
 
-<figure class="banner"><img loading="lazy" decoding="async" width="350" height="335" src="http://optional.is/required/wp-content/uploads/2013/05/tipjars.jpg" alt="Two tip jars with opposite labels hoping you vote for one or the other" class="wp-image-2517" srcset="https://optional.is/required/wp-content/uploads/2013/05/tipjars.jpg 350w, https://optional.is/required/wp-content/uploads/2013/05/tipjars-300x287.jpg 300w" sizes="auto, (max-width: 350px) 100vw, 350px" /><figcaption class="wp-element-caption">Café using two tip jars with opposing, but equal themes. You&#8217;re expected to vote, or counter-act the poll with your own money.</figcaption></figure>
+<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/03/Screenshot-2026-03-24-at-15.31.37-1024x740.png" alt="Screenshot of archive.org of Apple's iCards page" /></figure>
 
 
 
-<p>Making people choose changes the psychology from &#8216;should I give&#8217; to &#8216;which do I give too?&#8217;. A good question should be pretty equal expecting people to put money and cast their vote to both options. Seeing your rival tip jar filling faster is even a stronger incentive to donate to redress the balance.</p>
-
-
-
-<p><a href="https://meta.wikimedia.org/wiki/Cunningham%27s_Law">Cunningham&#8217;s Law</a> states: <em>The best way to get the right answer on the internet is not to ask a question; it&#8217;s to post the wrong answer.</em> Seeing a tip jar with the &#8220;wrong answer&#8221; winning will illicit a quicker response than asking for a donation! This method is an interesting, and easy way to improve your response rate.</p>
-
-
-
-<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/06/homeless-donations.jpg" alt="Photo of a homeless man with 9 bowls accepting tips. Each bowl is labelled with a different world religion." /></figure>
-
-
-
-<p>This example from 02013 was mentioned on <a href="http://boingboing.net/2013/05/01/homeless-mans-ab-test-of-ge.html">BoingBoing</a>. Using nine different bowls of popular world religions, a homeless man is using guilt and pier-pressure to get you to donate. Seeing how under-represented your faith (or non-faith) is doing, or wanting to make sure it stays on top induces people walking by to donate. But also it goes to your internal consistency. As part of your faith you were probably encouraged to help everyone, and the man&#8217;s sigh &#8220;Which Religion Cares The Most About The Homeless?&#8221; is a challenge to your internal consistency to prove to yourself what you believe is true.</p>
-
-
-
-<p>Back in 01984, Robert Cialdini published his book “<em>Influence: The Psychology of Persuasion</em>”. In it he lists six methods you can use to influence others. It&#8217;s a great book, easy read and not too heavy on the academic aspect of psychology. We have a copy and are constantly reminding ourselves of the methods.</p>
-
-
-
-<p>The factors he lists are agnostic to good and bad goals. The same actions could be used to influence you in a positive or negative way. </p>
-
-
-
-<p>There are examples of &#8220;tip jars&#8221; which are employed for social good. In the UK there is a project called <a href="https://ballotbin.co.uk">Ballot Bins</a>. They are waste receptacles for cigarettes and trash, with a twist. Each bin is separated into two with a window or counter on it. Similar to the tip jars, they are getting you to &#8216;vote&#8217; on something by placing your trash in your preferred side. This little &#8216;game&#8217; incentives you not to throw your trash on the ground, but to dispose of it properly, with a tiny bit of psychology.</p>
-
-
-
-<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/06/big-ballot-bins.jpg" alt="Street Trashcans with two holes and a label and counter. The idea is you vote for which concept you prefer by adding more trash." /></figure>
-
-
-
-<p>You can read more about Ballot Bins and <a href="https://www.hubbub.org.uk/pick-your-side">#PickYourSide</a> by the creators: a creative environmental charity &#8211; <a href="https://www.hubbub.org.uk/">HubBub</a>.</p>
-
-
-
-<p>Is this manipulative, yes. Does it work, yes. Is it for the better, yes.</p>
-
-
-
-<p>The power is not in deploying that tip jar, but in knowing and understanding how and why these tricks work. These psychological questions allow you to change habits for yourself and others, improve society and they keep you on your toes when others are trying to manipulate you for good and bad.</p>
-
-
-
-<p>Next time you are trying to extract something extra, maybe it&#8217;s best to phrase it as a choice?</p>
+<p class="wp-block-paragraph"></p>
 ]]></content:encoded>
 					
 		

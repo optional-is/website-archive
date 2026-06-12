@@ -1,0 +1,1880 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>optional.is/required</title>
+	<atom:link href="https://optional.is/required/feed/?cat=-819" rel="self" type="application/rss+xml" />
+	<link>https://optional.is/required</link>
+	<description>optional is required</description>
+	<lastBuildDate>Thu, 28 May 2026 13:50:22 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.0</generator>
+<atom:link rel="hub" href="https://pubsubhubbub.appspot.com"/>
+<atom:link rel="hub" href="https://pubsubhubbub.superfeedr.com"/>
+<atom:link rel="hub" href="https://websubhub.com/hub"/>
+<atom:link rel="self" href="https://optional.is/required/feed/?cat=-819"/>
+	<item>
+		<title>TIL DB</title>
+		<link>https://optional.is/required/2026/06/04/til-db/</link>
+		
+		<dc:creator><![CDATA[optional Bot]]></dc:creator>
+		<pubDate>Thu, 04 Jun 2026 13:31:00 +0000</pubDate>
+				<category><![CDATA[Applications]]></category>
+		<category><![CDATA[Experiments]]></category>
+		<category><![CDATA[Interfaces]]></category>
+		<category><![CDATA[Temporality]]></category>
+		<category><![CDATA[Visualizations]]></category>
+		<category><![CDATA[database]]></category>
+		<category><![CDATA[dirk]]></category>
+		<category><![CDATA[headlines]]></category>
+		<category><![CDATA[history]]></category>
+		<category><![CDATA[RDF]]></category>
+		<category><![CDATA[tags]]></category>
+		<category><![CDATA[TIL]]></category>
+		<category><![CDATA[visualisations]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=9748</guid>
+
+					<description><![CDATA[The Today I Learned lists have now been moved into a database to make it easier to query, pivot and explore.]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">Introducing the <em>Today I Learnt Database</em>.</p>
+
+
+
+<p class="wp-block-paragraph">Over the last few years, each day we&#8217;ve been collecting a few &#8216;interesting&#8217; headlines. We dropped them into a text file and at the end of the year went through everything, converted it to HTML and added some tags. It was an interest, but long process. We always had the intentions of doing something with these headlines!</p>
+
+
+
+<p class="wp-block-paragraph">We were fortunate enough to attend NewsFoo a few times. At one event, we met Ben Huh who was starting a new way to consume News called &#8220;<a href="https://www.theguardian.com/media/organgrinder/2011/jun/06/cheesburger-ben-huh-newspapers-open-source">The Moby Dick Project</a>&#8220;. You can <a href="https://web.archive.org/web/20111108132147/http://www.benhuh.com/2011/05/23/why-are-we-still-consuming-the-news-like-its-1899/">read more about it on Archive.org</a> since the original post is gone. This eventually spun out to become Circa, which closed and then re-opened under new management.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/moby-dick-project-sketches.gif" alt="Wireframes of the Moby Dick Project, a multicolumn interface for news stories" /></div>
+
+
+
+<p class="wp-block-paragraph">The original concept was a sort of three column view with each column changing in speed and curation. The first might be the news story, the second related events and the third comments. We remember it being described as consuming your Vegetables and Sweets! </p>
+
+
+
+<p class="wp-block-paragraph">What struck a cord with us was that there are plenty of stories that you say to yourself &#8220;Hey remember when that happened, did they ever find out why?&#8221;. Traditional news websites seem to be setup to show you articles and are not great at stringing things together. Wikipedia isn&#8217;t bad, but the content keeps getting written over and it is objective as opposed to user-generated comments.</p>
+
+
+
+<aside><p>Back in 02009 (around the time we heard about Project Moby Dick), the Air France Flight 447 had unexplainably crashed in the Atlantic flying from Rio de Janeiro, Brazil, to Paris. It was only recently in 02026 that Airbus was found at fault.</p><p>That story took 17 years to develop and still might not be over.</p></aside>
+
+
+
+<p class="wp-block-paragraph">When we started to collect our headlines, we wanted a way to track long story arcs. If we saw a headline in January, then again maybe 4 to 6 weeks later with something more or even a resolution, we want a way to thread them together. In our world of headline click-bait, we rarely get to see longer trends. That is one of the goals we wanted to achieve with our TIL headlines project.</p>
+
+
+
+<p class="wp-block-paragraph">Todo all this, we needed to move it out of these text articles into something more dynamic and clickable. Something that could continue to evolve and have old headlines become richer with the addition of new.</p>
+
+
+
+<p class="wp-block-paragraph">In our spare time, we converted the old HTML and tags into SQL statements and loaded everything up in to a relational database. That allowed us to make dynamic connections. We can browse by year, month, day or tag. You can search and filter and we can get frequency counts over time to show the number of mentions of a specific topic.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>You can browse the TIL DB at <a href="https://til.optional.is">https://til.optional.is</a></strong></p>
+
+
+
+<p class="wp-block-paragraph">What we&#8217;ve done so far are &#8220;table stakes&#8221;. It&#8217;s what you would expect from linked data: the ability to browse, pivot between topics and dates.</p>
+
+
+
+<p class="wp-block-paragraph">Our goal was to take it one step further. Back in 01998, Matt Webb created <em>DIRK: The fundamental connectedness of all things</em>. It was an RDF store of assertions in the form of &#8220;Subject Predicate Object&#8221;.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/archive-org-dirk-2002.png" alt="Screenshot of DIRK from 02002" /></div>
+
+
+
+<p class="wp-block-paragraph">For instance: <em>Reykjavik</em> <span style="text-decoration: underline;">is in</span> <em>Iceland</em>. <em>Iceland</em> <span style="text-decoration: underline;">is in</span> <em>Europe</em>. Therefore, we can conclude <em>Reykjavik</em> <span style="text-decoration: underline;">is in</span> <em>Europe</em>. If you string enough of these assertions together you can get to some interesting connected places. To make our TIL DB more interesting, we start to write some of our own assertions based on the existing tags we put on the headlines. This adds more value to the tags and focuses our attention on what tags to use.</p>
+
+
+
+<p class="wp-block-paragraph">For instance: <em>Betty White, beloved and trailblazing actress, dies at 99</em> was tagged <strong>obituary, tv, &nbsp;Betty White</strong>. We can use that to make a few assertions:  <strong>Betty White</strong>&nbsp;is connected to&nbsp;<strong>obituary</strong>&nbsp;because&nbsp;<em>she died at the age 99.</em> <strong>Betty White</strong>&nbsp;is connected to&nbsp;<strong>tv</strong>&nbsp;because&nbsp;<em>she stared in the Golden Girls.</em></p>
+
+
+
+<p class="wp-block-paragraph">This allows us to see how <strong>Betty White</strong> is connected to other tags through <strong>tv</strong> or <strong>obituary</strong> and why. Much like DIRK, we can click through various assertions, but we are trying to tie ours to facts in headlines.</p>
+
+
+
+<p class="wp-block-paragraph">We built a web form to connect any two tags in our system so you can see the steps between them. It is a slow process which will grow worse over time with more and more content. The fun is seeing how two random terms are related and how few steps it takes!</p>
+
+
+
+<h2 class="wp-block-heading">Just use AI</h2>
+
+
+
+<p class="wp-block-paragraph">Artificial Intelligence is certainly the buzzword <em>soup de jour</em> these days. So let&#8217;s look at how and where AI could be useful.</p>
+
+
+
+<p class="wp-block-paragraph">We are curating our headlines that we save based on lots of factors: importance, likelihood of a longer arc, non-reoccurring events and frequency. Every fall we get a new iPhone, every winter it snows; those are not headlines worth collecting for longer arcs. The Ukrainian-Russian war is still on going, and we&#8217;re not saving headlines of daily attacks &#8211; that&#8217;s (sadly) now background noise. The curation will stick with us for now.</p>
+
+
+
+<p class="wp-block-paragraph">Tagging is a tedious task that we&#8217;ve asked AI to help with. We have a giant json dump of headlines and tags with their corresponding database ids. The AI can ingest that easily and try to make some recommendations. That works for most things, it has some false-positives, but also feels a bit like it hits a local maximum. It heavily recommends existing tags and isn&#8217;t great at making new ones. It doesn&#8217;t &#8220;know&#8221; (it&#8217;s just a statistical machine) what new tags are useful or important.</p>
+
+
+
+<p class="wp-block-paragraph">We tried to get AI to write short assertions and it completely fell apart. The headlines are so short and there is extra, external knowledge that the AI doesn&#8217;t have. Their suggestions were longer than the headline and often just wrong. That&#8217;s a lost cause.</p>
+
+
+
+<p class="wp-block-paragraph">The two key insights people have told us about AI is that: </p>
+
+
+
+<ol class="wp-block-list">
+<li>It doesn&#8217;t know anything current. It is not a web crawler so don&#8217;t ask it about current events (like today&#8217;s headlines!)</li>
+
+
+
+<li>Rather than ask it to do something, ask it to write a script to do that. Then it is repeatable and deterministic outside of their AI ecosystem.</li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">We do use script to convert our text file to sql statements and scripts to export/dump the database into json formats. AI could help write these scripts, but that&#8217;s just fancy auto-complete/spell-check. There is no &#8220;AI&#8221; in the product.</p>
+
+
+
+<h2 class="wp-block-heading">Next Steps</h2>
+
+
+
+<p class="wp-block-paragraph">Everyday we continue to collect headlines and each month we try to import them into the database with tags. We are very far behind on the assertions. We need to make ourselves a small tool that just shows us a few un-asserted tags each day and we take smaller nibbles to add more metadata.</p>
+
+
+
+<p class="wp-block-paragraph">We&#8217;ve also considered away to make it more wiki-like and allow anyone to edit (or suggest) changes to tags and assertions. We&#8217;re not sure if the effort to build it compared to the audience actually contributing  is worth it right now.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/til-db-nyc-tag.png" alt="Screenshot of the frequency of the tag NYC over time and related tags" /></div>
+
+
+
+<p class="wp-block-paragraph">There are probably some smaller statistical tasks which we can add. Right now we chart tag frequency by month and you get a really good overview of trending topics. There are certainly more statical functions we can add like standard deviation, time between headlines, etc. Our advanced search allows for selecting a few tags and only showing headlines with ALL those tags (an AND search). We could try to do more frequency analysis on these 2 and 3 tag combinations.</p>
+
+
+
+<p class="wp-block-paragraph">The bare minimum is for us to continue to collect headlines. Once we have the data we can always add more metadata at a later date.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Go and explore the TIL DB at <a href="https://til.optional.is">https://til.optional.is</a></strong> see what&#8217;s missing and let us know what can be improved.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Split-Fount Camera</title>
+		<link>https://optional.is/required/2026/05/22/split-fount-camera/</link>
+		
+		<dc:creator><![CDATA[optional Bot]]></dc:creator>
+		<pubDate>Fri, 22 May 2026 12:21:00 +0000</pubDate>
+				<category><![CDATA[Applications]]></category>
+		<category><![CDATA[Photography]]></category>
+		<category><![CDATA[camera]]></category>
+		<category><![CDATA[iOS]]></category>
+		<category><![CDATA[photography]]></category>
+		<category><![CDATA[photos]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=9938</guid>
+
+					<description><![CDATA[We had an itch to scratch to see if we could make this gradient camera. It turns out we could and the results have been loads of fun!]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">We continue to dabble in <a href="https://optional.is/required/category/photography/">unique camera apps</a>. After a bunch of code refactoring, we have a solid base to go from idea to prototype to new app quickly. That means we can experiment with new ideas and see if we like them. Getting into the field and snapping images tells you a lot more than just imaging the possibilities.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>TL;DR</strong> You can <a href="https://apps.apple.com/us/app/sf-camera/id6767219686">download the SF Camera on the iOS App Store</a> for Free until the price goes up September 02026.</p>
+
+
+
+<p class="wp-block-paragraph">We have a folder called &#8220;Inspiration&#8221; which we file away interesting images and ideas. Every once and awhile we browse through the folder when we need something new. As we recently browsed through, we saw that we saved several beautiful gradient, screen printed images. This is sometimes called &#8220;Rainbow Roll&#8221; or &#8220;Split-fount&#8221; screen pulls.</p>
+
+
+
+<p class="wp-block-paragraph">We liked this effect and tried to replicate it in some image editing software. It&#8217;s pretty easy and straight forward. </p>
+
+
+
+<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/sf-steps.jpg" alt="Four screenshots of the steps to apply the Split-Fount style effect"/></figure>
+
+
+
+<ol class="wp-block-list">
+<li>Select your base image. </li>
+
+
+
+<li>Convert it to black and white (Salt to taste). </li>
+
+
+
+<li>Create a second layer and put a color gradient over that. </li>
+
+
+
+<li>Convert that gradient layer from blend mode &#8220;Normal&#8221; to blend mode &#8220;Screen&#8221;. The black and white pixel values control the color that shows through.</li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">Even though a lot of our filters and camera effects can be done in post-processing, we really enjoy seeing through the view-finder the finished concept. Rather than take the color photo and go through these steps, we find it easier to compose the shot as we see the effect. It is a trade-off since in post you can infinitely tweak colors and other settings, but shooting as you see it means if you&#8217;re happy, one-click and you&#8217;re done &#8211; ready to share.</p>
+
+
+
+<p class="wp-block-paragraph">(Split-Fount) SF Camera was designed to create impactful photos quickly and easily. We have a limited pallet of colors, 11 so far, that you can swipe to choose the top and bottom gradients. The black and white image underneath is one designed to create high-contrast. We also allow you to invert the black and white to create interesting alternatives to the regular screen print style.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/split-fount-chips.png" alt="Eleven color chips representing the gradient options." /></div>
+
+
+
+<p class="wp-block-paragraph"><a href="https://apps.apple.com/us/app/sf-camera/id6767219686">Download the SF Camera on the iOS App Store</a> for Free until the price goes up September 02026.</p>
+
+
+
+<p class="wp-block-paragraph">With some of our other camera apps, you can always go into the photos.app and &#8216;revert to original&#8217;. This will remove the gradient and black and white effect and get you back to the source image. From there you can recreate the effect or do something completely different with the photo. Using SF Camera does NOT lock your photos into only this effect.</p>
+
+
+
+<h2 class="wp-block-heading">Future Improvements</h2>
+
+
+
+<p class="wp-block-paragraph">To change the gradient colors you can tap the text at the top to cycle through, but we&#8217;re mostly focusing on swiping! It is a hidden UI that is intuitive once you know it exists. We updated the swipe code to not only know what direction, but also which region (top/bottom/left/right). When you swipe left on the top half, we can cycle only through the top gradient color. Swiping up or down cycles through both. This has worked really well once you know it exists. But as we add more features and don&#8217;t want to overload or confuse the swipe motions.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/bw-samples.jpg" alt="A Colorful source image and a series of different grayscale images derived from the source image and how that affects the gradient."/></div>
+
+
+
+<p class="wp-block-paragraph">Not all greyscale images are equal! There are lots of ways to make a black and white image. Currently we are using an equation to make a hard light greyscale with lots of contrast. This has worked really well, but we took a photo or a bright red stop sign on a beautiful blue background and everything was equally grey. There was no contrast when applied the color gradient. The simplest way to solve this is to use different methods of converting color images to greyscale. Only take the Red channel, or only the Blue or Green. That would fix our previous Red/Blue problem, but now we&#8217;re adding more work onto you. It is probably worth it, but how it gets added and implemented is still up for debate.</p>
+
+
+
+<p class="wp-block-paragraph">Even though the app is live for anyone to download, there are still a bunch of improvements and ideas we&#8217;d like to implement.</p>
+
+
+
+<h2 class="wp-block-heading">Examples</h2>
+
+
+
+<p class="wp-block-paragraph">We made this camera app on a whim over the course of a few days. Then spent a few weeks refining some of the colors, options and interactions. It is a fun, cheerful camera that has completely taken over our camera roll!</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/sf-camera-collage.jpg" alt="A collage of 10 different images with color gradients taken with the SF Camera" /></div>
+
+
+
+<p class="wp-block-paragraph">If you download the app and enjoy it as much as we do, please share your images and let us know.</p>
+
+
+
+<p class="wp-block-paragraph"><img src="https://s.w.org/images/core/emoji/17.0.2/72x72/1f60e.png" alt="😎" class="wp-smiley" style="height: 1em; max-height: 1em;" /><img src="https://s.w.org/images/core/emoji/17.0.2/72x72/2600.png" alt="☀" class="wp-smiley" style="height: 1em; max-height: 1em;" /><img src="https://s.w.org/images/core/emoji/17.0.2/72x72/1f4f7.png" alt="📷" class="wp-smiley" style="height: 1em; max-height: 1em;" /> <strong>Happy summer snapping!</strong> <a href="https://apps.apple.com/us/app/sf-camera/id6767219686">Download the SF Camera on the iOS App Store</a>. </p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>UBS-C Non-Power Delivery</title>
+		<link>https://optional.is/required/2026/05/07/ubs-c-non-power-delivery/</link>
+		
+		<dc:creator><![CDATA[optional Bot]]></dc:creator>
+		<pubDate>Thu, 07 May 2026 13:31:00 +0000</pubDate>
+				<category><![CDATA[Briefs]]></category>
+		<category><![CDATA[You're doing it wrong]]></category>
+		<category><![CDATA[cables]]></category>
+		<category><![CDATA[EU]]></category>
+		<category><![CDATA[PD]]></category>
+		<category><![CDATA[Power Delivery]]></category>
+		<category><![CDATA[Travel]]></category>
+		<category><![CDATA[USB-C]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=9865</guid>
+
+					<description><![CDATA[In our quest to minimize our electronic support travel kit, we hit a snag with non-PD devices.]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">For a while now, we&#8217;ve been trying to both minimize and optimize our cable and power travel kit.</p>
+
+
+
+<p class="wp-block-paragraph">Back in Jan-02025, we wrote <a href="https://optional.is/required/2025/01/28/optimized-charging/">Optimized Charging</a> about our attempts to figure out what is the maximum power draw from various devices. Maybe those big power-bricks went over board for most devices.</p>
+
+
+
+<p class="wp-block-paragraph">This time we&#8217;re back to the opposite direction. We&#8217;ve acquired several &#8216;fun&#8217; bits of hardware that are certainly not premium Apple devices. As such, they are usually USB-C charging ports; thanks to the EU e-waste rules attempting to minimize cables and plugs, but these devices tend to ship with a USB-C to USB-A cable.</p>
+
+
+
+<p class="wp-block-paragraph">That&#8217;s annoying because we&#8217;re doing our best to move to JUST USB-C to USB-C cables to minimize what we need to take with us. When we plug-in our USB-C candy bar burner phone to a 20W Apple USB-C PD plug, nothing happens. Sometimes the manufacture recommends to use the plug that came with their device. Which is exactly what we&#8217;re trying to avoid.</p>
+
+
+
+<p class="wp-block-paragraph">After some digging we realized that these &#8216;cheap&#8217;, &#8216;fun&#8217; hardware toys were shipping with a USB-C to USB-A cable is because USB-A will only pass through (up to) 15W of power, defaulting to something closer to 5W. When we were plugging in a USB-C to USB-C cable from the device to the charger, the charger was using the PD (power delivery) to try to negotiation with the device how much power to actually supply. Since these &#8216;dumb&#8217; devices were not PD compatible, they never answered the hand-shake and therefore power never started flowing.</p>
+
+
+
+<p class="wp-block-paragraph">Just having a USB-A in the chain between the PD Plug and the device stops the handshake and limits the power way down. Then no negotiation is needed and power flows.</p>
+
+
+
+<p class="wp-block-paragraph">Using a 35W Apple duel USB-C PD plug, we plugged in a USB-C to USB-C cable to our burner phone and there was no charge. We swapped the cable for a USB-C to USB-A cable, with a USB-A to USB-C adapter and plug that into the 35W plug. The burner phone immediately lit up charging!</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/05/cables-982x1024.jpg" alt="Three orientations of how to plug in the device to power plug. USB-C to USB-A with a USB-C adapter that charges. USB-A with USB-C adapter to USB-C no charge. USB-C to USB-C no charge." /></div>
+
+
+
+<p class="wp-block-paragraph">If any non-PD device comes along with us we now have to figure out a new system. </p>
+
+
+
+<ol class="wp-block-list">
+<li>Keep our USB-C only cables and find a very lower Wattage plug that is USB-C and not PD and bring that along.</li>
+
+
+
+<li>Bring along a USB-C to USB-A cable and a USB-A plug</li>
+
+
+
+<li>Bring along a USB-C to USB-A cable and a USB-A to USB-C adapter</li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">It will probably be option 3, simply because when we get onto an airplane or hotel they usually still have USB-A plugs. Which means we were carrying a USB-C to USB-A adapter already, we could forego that and just bring the cable.</p>
+
+
+
+<aside><p><img src="https://s.w.org/images/core/emoji/17.0.2/72x72/1f6a8.png" alt="🚨" class="wp-smiley" style="height: 1em; max-height: 1em;" /> In our testing, we also ran into another problem. Some of the cheap USB-C to USB-A cables (even C-to-C cables) were only meant for charging. That&#8217;s fine for most cases, but sometimes we wanted to connect the device with a laptop to extract photos or other media. Having only a charging cable meant the device never showed-up on the computer when plugged in. Be sure to check that the cables you bring can also transfer data, not just power!</p></aside>
+
+
+
+<p class="wp-block-paragraph"></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>100 year old spatial images</title>
+		<link>https://optional.is/required/2026/04/23/100-year-old-spatial-images/</link>
+		
+		<dc:creator><![CDATA[optional Bot]]></dc:creator>
+		<pubDate>Thu, 23 Apr 2026 13:31:00 +0000</pubDate>
+				<category><![CDATA[Photography]]></category>
+		<category><![CDATA[photography]]></category>
+		<category><![CDATA[spatial]]></category>
+		<category><![CDATA[stereoscopic]]></category>
+		<category><![CDATA[VR]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=9768</guid>
+
+					<description><![CDATA[Going through the Icelandic photo archives for stereoscopic images and converting them to spatial images brings new life to images over 100 years old.]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">Over the last year or so, we&#8217;ve been doing some experiments with spatial images. A spatial image is a single image file, but has a different picture for your left and right eye. These are commonly used in Virtual Reality, but we&#8217;re all probably much more familiar with them from the old <em>View Master</em> toys.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/View-Master-Classic-Deluxe-Edition.jpg" alt="View Master Product with several paper discs"/></div>
+
+
+
+<p class="wp-block-paragraph">The View Master was a plastic set of goggles that you inserted a paper disc into that would rotate around to see a set of seven 3D images! It appeared in 3D because the images for the left and right eye were different images of the same thing using slightly offset cameras. This mimicked what you&#8217;re left and right eye would naturally see.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/Holmes-Stereoscope.jpg" alt="Holmes Stereoscope"/></div>
+
+
+
+<p class="wp-block-paragraph">100 years before the View Master, we had <a href="https://en.wikipedia.org/wiki/Stereoscope">Stereoscopes</a>. The earliest was from 01832 and worked in exactly the same way, but instead of a paper disc, they used single cards with printed images. They were the first 3D VR headsets.</p>
+
+
+
+<p class="wp-block-paragraph">Luckily for us, there was a craze for taking these 3D pictures, which means you can find lots of 3D imagery from 100+ years ago online. Reykjavik and Iceland both have online photography collections. With a little bit of searching and help from their team, we found thousands of stereoscopic images in the archives. These consisted of a single, wide image that contained both the image for the left and right eye.</p>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://sarpur.is/en/collection/?f=sfield%3Amaterial_s%3D%23Stereóskóp%23&amp;om=2&amp;s=sort_inv_is_sml%20asc">Stereoscope images on Sarpur Iceland’s Cultural-Historical Database Website</a></li>
+
+
+
+<li><a href="https://borgarsogusafn.is/myndasafn?q=stereóskóp*">Stereoscope images on Reykjavik Photography museum website</a></li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Converting to Spatial Images</h2>
+
+
+
+<p class="wp-block-paragraph">There are lots of tools out there to make spatial images, but they assume that you already have two separate left and right images. Usually this is done with either two separate cameras, or two lenses on a single camera and they get processed as two images.</p>
+
+
+
+<p class="wp-block-paragraph">What we had was a single image that had both pictures side-by-side. To convert this into two separate image files, we opened some image editing software, duplicated the image to two layers, and arranged the left and right images to be on top of each other. Then we could crop correctly and make any minor adjustments.</p>
+
+
+
+<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/layers-example.jpg" alt="Screenshot of photo editing software overlaying the left and right image" /><figcaption>Using photo editing software, the left and right images are put on separate layers. The top layer&#8217;s opacity is decreased to better line-up something in the foreground before saving each layer as a separate file the same dimensions.</figcaption></figure>
+
+
+
+<p class="wp-block-paragraph">Now that we had a left and right image from the stereoscopic card, we can run it through software to create a single 3D image file. We use <a href="https://apps.apple.com/us/app/spatialify/id6471922894">Spatialify</a>, it is cheap, easy and works! It offers several &#8220;3D&#8221; output options, the traditional blue/red offset (anaglyph) for the blue/red 3D glasses, wigglegrams which are animated gifs, and proper spatial files viewable in VR.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/workflow-collage.jpg" alt="Collage of the source image, spatiality app taking a left and a right and sample output"/></div>
+
+
+
+<p class="wp-block-paragraph">There is a lot of trial and error getting things right. Sometimes the source images are badly scratched, damaged or rotated. Finding the correct alignment can be difficult and sometimes the subject matter just doesn&#8217;t lend itself very well in 3D. Luckily, we have a thousands of possible images to convert, if something isn&#8217;t working we can move on.</p>
+
+
+
+<h2 class="wp-block-heading">Gallery</h2>
+
+
+
+<p class="wp-block-paragraph">Here is a short list of zip archives with the left, right, spatial, anaglyph and wigglegram for the image. <strong>Be aware, these images might still be under copyright.</strong></p>
+
+
+
+<p class="wp-block-paragraph"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/MAO-106-Wiggle.gif"/><br /><strong>Magnús Ólafsson (1862-1937)</strong><br />01906, A group of people washing clothes in Laugardalur.<br />Download: <a href="https://optional.is/required/wp-content/uploads/2026/04/MAO-106.zip">MAÓ 106 &#8211; 6.1 MB</a></p>
+
+
+
+<p><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/MAO-429-Wiggle.gif"/><br /><strong>Magnús Ólafsson (1862-1937)</strong><br />01931, Austurvöllur, Reykjavík. Bertel Thorvaldssen statue prepared for transport.<br />Download: <a href="https://optional.is/required/wp-content/uploads/2026/04/MAO-429.zip">MAÓ 429 &#8211; 6.8 MB</a></p>
+
+
+
+<p><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/MAO-862-Wiggle.gif"/><br /><strong>Magnús Ólafsson (1862-1937)</strong><br />01900-01920, Old hut in Hafnarfjörður lava field.<br />Download: <a href="https://optional.is/required/wp-content/uploads/2026/04/MAO-862.zip">MAÓ 429 &#8211; 7.1 MB</a></p>
+
+
+
+<p><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/04/MAO-984-Wiggle.gif"/><br /><strong>Magnús Ólafsson (1862-1937)</strong><br />01930 or 01931, German Graf Zeppelin over Reykjavík. Grófin 1, Tryggvagata and Reykjavík Harbour.<br />Download: <a href="https://optional.is/required/wp-content/uploads/2026/04/MAO-984.zip">MAÓ 429 &#8211; 6.5 MB</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Hatena Burger Permutations</title>
+		<link>https://optional.is/required/2026/04/09/hatena-burger-permutations/</link>
+		
+		<dc:creator><![CDATA[optional Bot]]></dc:creator>
+		<pubDate>Thu, 09 Apr 2026 13:31:00 +0000</pubDate>
+				<category><![CDATA[Interfaces]]></category>
+		<category><![CDATA[burgers]]></category>
+		<category><![CDATA[combinations]]></category>
+		<category><![CDATA[combinatorics]]></category>
+		<category><![CDATA[hatena burger]]></category>
+		<category><![CDATA[japan]]></category>
+		<category><![CDATA[nintendo]]></category>
+		<category><![CDATA[permutations]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=8874</guid>
+
+					<description><![CDATA[Hatena Burger boasts over 270,000 burger combinations. Using some combinatorics, let's see if that's true.]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">In Kyoto, Japan, in the Nintendo museum, there is a restaurant called <a href="https://museum.nintendo.com/en/cafe/index.html">Hatena Burger</a>. They claim to have over 270,000 different burgers you can order! Let&#8217;s investigate that claim to see how true it really is.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/hatena-burger.png" alt="Hatena Burger Logo"/></div>
+
+
+
+<p class="wp-block-paragraph">The way they can arrive at such a big number of possible burgers is to have a variety of different items you can combine in various ways. This quickly creates really big amounts of permutations.</p>
+
+
+
+<p class="wp-block-paragraph">Since you can build your own burger you get to choose 1 of 3 different bun types, 1 of 10 different main ingredients, 3 of 11 different toppings and 1 of 7 different types of sauces.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/hatena-burger-menu-jp.jpg" alt="A photo of the menu at Hatena Burger. Lots of icons representing possible choices to build your burger." /></div>
+
+
+
+<p class="wp-block-paragraph">To figure out all the possible combinations you simply multiple all these values together.</p>
+
+
+
+<p class="wp-block-paragraph"><code>3 Bun types × 10 Main ingredients × 7 Sauces × (11 Toppings × 11 Toppings × 11 Toppings) = 279,510 possible combinations.</code></p>
+
+
+
+<p class="wp-block-paragraph">It does seem that there are over 270,000 possible burgers you can order, but that comes with several big asterisks! These are possible combinations with repetition. When you are selecting your 3 different  toppings order doesn&#8217;t matter, so Tomato, Lettuce and Cheese is considered a different burger than Lettuce, Cheese and Tomato, but most of us would agree it is the same thing. Also, you can select the same topping 3 times: a Cheese, Cheese, Cheese burger. What is the total possible combinations if we make sure the set of toppings is unique and order independent?</p>
+
+
+
+<p class="wp-block-paragraph">Todo so, we are not multiplying the total number of toppings (11) by the number you can choose (3). Instead we need to look into combinations without repetition using combinatorics. </p>
+
+
+
+<p class="wp-block-paragraph">First we select the number of possible combinations and then subtract the duplicates. We start with 11 different toppings, but once we select the first one, we only have 10 left, and after selecting the second, only 9 left. That&#8217;s 11 × 10 × 9 = 990 possibilities without repeating an ingredient. But that&#8217;s still order independent. We want to reduce that by the number of combinations of our 3 potential selections, which is 3! =  6. We can take 990 / 6 = 165. Then general equation is:</p>
+
+
+
+<p class="wp-block-paragraph">n!/(n-r)!  × (1/r!) where n is the number of times possible (11) and r is the number we can choose (3).</p>
+
+
+
+<p class="wp-block-paragraph">11! /(11-3)!  × (1/3!) = 165 possible combinations without repetition. That&#8217;s a lot lower than the 1,331 possible combinations of 11 × 11 × 11 Toppings or 990 of 11 × 10 × 9 Toppings without repetition.</p>
+
+
+
+<p class="wp-block-paragraph">If we plug that new value into our equation we get <code>3 buns × 10 mains × 7 sauces × ( 11 nCR 3 = 165 topping combinations) = 34,650 possible unique burgers</code>. That&#8217;s far less than the 279,510 possible burger combinations when we preserve the topping order.</p>
+
+
+
+<h2 class="wp-block-heading">Interactive Examples</h2>
+
+
+
+<p class="wp-block-paragraph"><img src="https://s.w.org/images/core/emoji/17.0.2/72x72/1f6a8.png" alt="🚨" class="wp-smiley" style="height: 1em; max-height: 1em;" /> These examples require Javascript, so if you&#8217;re looking at this in a feed-reader or email client, it might not work. Check the original link to try these examples.</p>
+
+
+
+<p class="wp-block-paragraph">Channeling <a href="https://worrydream.com">Bret Victor</a>, let&#8217;s have a look at the possible combinations in a more interactive way. One of his approaches was to have inline text be editable, thus changing the flow of the paragraph. He advocated for green text inline being draggable to update the values. Let&#8217;s experiment with the following paragraph. <em>(Try dragging the text in green to the left or right to change the values)</em></p>
+
+
+
+<p style="background-color: #dedede; padding: 20px; margin-bottom: 20px">At Hatena Burger, you can build your own burger by selecting from <span id="sliderBun" class="draggable-slider">3</span> different buns, <span id="sliderMain" class="draggable-slider">10</span> different main ingredients, <span id="sliderSauce" class="draggable-slider">7</span> different sauces and 3 of <span id="sliderTopping" class="draggable-slider">11</span> different Toppings. This gives <span id="draggable-result">279,510</span> different possible meals. </p>
+
+<style>
+.draggable-slider { color: white; background-color: green; border-radius: 10px; font-weight: bold; padding: 0 10px; cursor: grab; display: inline-block; width: 20px; user-select: none; text-align: center; }
+#draggable-result { font-weight: bold; }
+</style>
+
+<script type="text/javascript">
+var sliderBunValues = ['1','2','3','4'];
+const sliderValues = {
+ "sliderBun": [1, 2, 3, 4],
+ "sliderMain": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+ "sliderSauce": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+ "sliderTopping": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+};
+
+const spanBun  = document.getElementById('sliderBun');
+const spanMain = document.getElementById('sliderMain');
+const spanSauce = document.getElementById('sliderSauce');
+const spanTopping = document.getElementById('sliderTopping');
+const results  = document.getElementById('draggable-result');
+let isDragging = false;
+
+spanBun.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  e.preventDefault(); // Prevent text selection
+  document.body.style.userSelect = 'none'; // Prevent selection globally
+});
+
+spanMain.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  e.preventDefault(); // Prevent text selection
+  document.body.style.userSelect = 'none'; // Prevent selection globally
+});
+
+spanTopping.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  e.preventDefault(); // Prevent text selection
+  document.body.style.userSelect = 'none'; // Prevent selection globally
+});
+
+spanSauce.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  e.preventDefault(); // Prevent text selection
+  document.body.style.userSelect = 'none'; // Prevent selection globally
+});
+
+
+document.addEventListener('mouseup', () => {
+  isDragging = false;
+  document.body.style.userSelect = ''; // Restore selection
+
+});
+
+document.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+
+  if (!document.getElementById(e.toElement.id)) { return; }
+
+
+  // Get the X position relative to the span
+  const rect = document.getElementById(e.toElement.id).getBoundingClientRect();
+  let relativeX = e.clientX - rect.left;
+
+  // Clamp the value between 0 and the span width
+  relativeX = Math.max(0, Math.min(relativeX, rect.width));
+
+  // Convert to a value (for example 0–100)
+  var newValue = sliderValues[e.toElement.id]
+
+  const value = Math.round((relativeX / rect.width) * (newValue.length - 1));
+  // Update the span content
+  document.getElementById(e.toElement.id).textContent = newValue[value];
+  
+  results.textContent = (parseInt(spanBun.textContent) * parseInt(spanMain.textContent) * parseInt(spanSauce.textContent) * parseInt(spanTopping.textContent) * parseInt(spanTopping.textContent) * parseInt(spanTopping.textContent)).toLocaleString();
+});
+</script>
+
+
+
+<p class="wp-block-paragraph">This is a great example of how changing the number of options by a small amount can make a big impact on the total permutations. The downside is that it overly simplify duplicate toppings and doesn&#8217;t allow for fine grained choices. Maybe not all the toppings or sauces are for me?</p>
+
+
+
+<p class="wp-block-paragraph">Let&#8217;s try again with a more complex menu. This allow the customer to limit the options not by a number, but by dietary preferences; Vegan, Vegetarian, Pescatarian, Dairy-free, Celiac, etc.</p>
+
+
+
+<style>
+.hb_box {
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+  vertical-align: top;
+  font-size: 80%;
+}
+.hb_box img { width: 80px; height: 80px; }
+</style>
+
+<h3>Buns</h3>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/bun-brown.png" />
+  <label><input type="checkbox" class="hb_bun" name="hb_bun_1" id="hb_bun_1" value="1" checked="checked" /> Brown</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/bun-red.png"  />
+  <label><input type="checkbox" class="hb_bun" name="hb_bun_2" id="hb_bun_2" value="2" checked="checked" /> Red</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/bun-black.png" />
+  <label><input type="checkbox" class="hb_bun" name="hb_bun_3" id="hb_bun_3" value="3" checked="checked" /> Black</label>
+</div>
+<hr />
+
+<h3>Main</h3>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-beef.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_1" id="hb_main_1" value="1" checked="checked" /> Beef Patty</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-double-beef.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_2" id="hb_main_2" value="2" checked="checked" /> Beef Patty Double</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-sukiyaki.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_3" id="hb_main_3" value="3" checked="checked" /> Sukiyaki Beef</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-double-sukiyaki.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_4" id="hb_main_4" value="4" checked="checked" /> Sukiyaki Beef Double</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-chicken.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_5" id="hb_main_5" value="5" checked="checked" /> Fried Chicken</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-double-chicken.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_6" id="hb_main_6" value="6" checked="checked" /> Fried Chicken Double</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-fish.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_7" id="hb_main_7" value="7" checked="checked" /> Grilled Miso Fish</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-double-fish.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_8" id="hb_main_8" value="8" checked="checked" /> Grilled Miso Fish Double</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-mushroom.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_9" id="hb_main_9" value="9" checked="checked" /> Big Mushroom</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/main-double-mushroom.png" />
+  <label><input type="checkbox" class="hb_main" name="hb_main_10" id="hb_main_10" value="10" checked="checked" /> Big Mushroom Double</label>
+</div>
+<hr />
+<h3>Toppings</h3>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-fried-egg.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_1" id="hb_top_1" value="1" checked="checked" /> Fried Egg</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-scrambled-egg.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_2" id="hb_top_2" value="2" checked="checked" /> Scrambled Egg</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-tofu.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_3" id="hb_top_3" value="3" checked="checked" /> Fried Tofu</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-kyoto-pepper.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_4" id="hb_top_4" value="4" checked="checked" /> Kyoto Green Pepper</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-onion.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_5" id="hb_top_5" value="5" checked="checked" /> Onion</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-cheese.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_6" id="hb_top_6" value="6" checked="checked" /> Cheddar Cheese</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-onion.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_7" id="hb_top_7" value="7" checked="checked" /> Kyoto Green Onion</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-lotus-root.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_8" id="hb_top_8" value="8" checked="checked" /> Stir-Fried Lotus Root</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-tomato.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_9" id="hb_top_9" value="9" checked="checked" /> Tomato</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-lettuce.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_10" id="hb_top_10" value="10" checked="checked" /> Lettuce</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/topping-shibazuke-pickles.png" />
+  <label><input type="checkbox" class="hb_top" name="hb_top_11" id="hb_top_11" value="11" checked="checked" /> Shibazuke Pickles</label>
+</div>
+<hr />
+<h3>Sauces</h3>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/sauce-wasabi-garlic-soy.png" />
+  <label><input type="checkbox" class="hb_sauce" name="hb_sauce_1" id="hb_sauce_1" value="1" checked="checked" /> Wasabi Garlic Soy Sauce</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/sauce-sukiyaki.png" />
+  <label><input type="checkbox" class="hb_sauce" name="hb_sauce_2" id="hb_sauce_2" value="2" checked="checked" /> Sukiyaki Sauce</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/sauce-black-curry.png" />
+  <label><input type="checkbox" class="hb_sauce" name="hb_sauce_3" id="hb_sauce_3" value="3" checked="checked" /> Black Curry Sauce</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/sauce-shibazuke-pickles-tartar.png" />
+  <label><input type="checkbox" class="hb_sauce" name="hb_sauce_4" id="hb_sauce_4" value="4" checked="checked" /> Shibazuke-Pickles Tartar Sauce</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/sauce-ketchup.png" />
+  <label><input type="checkbox" class="hb_sauce" name="hb_sauce_5" id="hb_sauce_5" value="5" checked="checked" /> Ketchup</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/sauce-citrus-pepper-dashi.png" />
+  <label><input type="checkbox" class="hb_sauce" name="hb_sauce_6" id="hb_sauce_6" value="6" checked="checked" /> Citrus Pepper Dashi Sauce</label>
+</div>
+<div class="hb_box">
+  <img decoding="async" src="https://optional.is/required/wp-content/uploads/2025/12/icons/sauce-veggie-aurora.png" />
+  <label><input type="checkbox" class="hb_sauce" name="hb_sauce_7" id="hb_sauce_7" value="7" checked="checked" /> Veggie Aurora Sauce</label>
+</div>
+<hr />
+<h3>Stats</h3>
+<p>Based on your selection there are <strong id="hb_combinations">xxx</strong> possible burgers.</p>
+<hr />
+<script>
+const bun_checkboxes = document.querySelectorAll('.hb_bun');
+const main_checkboxes = document.querySelectorAll('.hb_main');
+const sauce_checkboxes = document.querySelectorAll('.hb_sauce');
+const top_checkboxes = document.querySelectorAll('.hb_top');
+
+function onBunChange() {
+  const atLeastOneChecked = Array.from(bun_checkboxes).some(cb => cb.checked);
+  if (!atLeastOneChecked){
+    document.getElementById('hb_bun_1').checked = 'checked';
+  }
+  do_hb_calculation()
+}
+
+bun_checkboxes.forEach(cb => {
+  cb.addEventListener('change', onBunChange);
+});
+
+function onMainChange() {
+  const atLeastOneChecked = Array.from(main_checkboxes).some(cb => cb.checked);
+  if (!atLeastOneChecked){
+    document.getElementById('hb_main_1').checked = 'checked';
+  }
+  do_hb_calculation()
+}
+
+main_checkboxes.forEach(cb => {
+  cb.addEventListener('change', onMainChange);
+});
+
+function onSauceChange() {
+  const atLeastOneChecked = Array.from(sauce_checkboxes).some(cb => cb.checked);
+  if (!atLeastOneChecked){
+    document.getElementById('hb_sauce_1').checked = 'checked';
+  }
+  do_hb_calculation()
+}
+
+sauce_checkboxes.forEach(cb => {
+  cb.addEventListener('change', onSauceChange);
+});
+
+function onTopChange() {
+  if (document.querySelectorAll('.hb_top:checked').length < 3){
+    document.getElementById('hb_top_1').checked = 'checked';
+    document.getElementById('hb_top_2').checked = 'checked';
+    document.getElementById('hb_top_3').checked = 'checked';
+  }
+  do_hb_calculation()
+}
+
+top_checkboxes.forEach(cb => {
+  cb.addEventListener('change', onTopChange);
+});
+
+function do_hb_calculation(){
+  var combo_count = document.querySelectorAll('.hb_bun:checked').length * document.querySelectorAll('.hb_main:checked').length * document.querySelectorAll('.hb_sauce:checked').length * document.querySelectorAll('.hb_top:checked').length * (document.querySelectorAll('.hb_top:checked').length - 1) * (document.querySelectorAll('.hb_top:checked').length - 2)
+  document.getElementById('hb_combinations').textContent = combo_count.toLocaleString()
+}
+do_hb_calculation()
+</script>
+
+
+
+<p class="wp-block-paragraph">Finally, as you build your burger, you get a nice animated cartoon of your combination.</p>
+
+
+
+<style>
+.hb_stack { display: inline-block; width: 300px; text-align: center }
+#hb_topping_1_1, #hb_topping_2_2, #hb_topping_3_3 {   animation: spin1 10s ease-in-out infinite alternate; }
+#hb_topping_2_1, #hb_topping_3_2, #hb_topping_1_3 {   animation: spin2 11s ease-in-out infinite alternate; }
+#hb_topping_3_1, #hb_topping_1_2, #hb_topping_2_3 {   animation: spin3 9s ease-in-out infinite alternate; }
+@keyframes spin1 {
+  0% { transform: rotate(-10deg); }
+  100% { transform: rotate(10deg); }
+}
+@keyframes spin2 {
+  0% { transform: rotate(8deg); }
+  100% { transform: rotate(-12deg); }
+}
+@keyframes spin3 {
+  0% { transform: rotate(-12deg); }
+  100% { transform: rotate(7deg); }
+}
+
+</style>
+<div style="text-align: center;">
+<div class="hb_stack" style="text-align: center;">
+<div><img decoding="async" id="hb_buntop_1" src=""  /></div>
+<div style="position: relative; z-index: 100"><img decoding="async" id="hb_stack_sauce_1" src="" /></div>
+<div style="position: relative; margin-top: -20px; z-index: 80"><img decoding="async" id="hb_topping_1_1" src="" /></div>
+<div style="position: relative; margin-top: -10px; z-index: 70"><img decoding="async" id="hb_topping_1_2" src="" /></div>
+<div style="position: relative; margin-top: -10px; z-index: 60"><img decoding="async" id="hb_topping_1_3" src="" /></div>
+<div style="position: relative; margin-top: -10px; z-index: 50"><img decoding="async" id="hb_stack_main_1" src="" /></div>
+<div><img decoding="async" id="hb_bunbottom_1" src="" /></div>
+</div>
+
+<div class="hb_stack" style="text-align: center;">
+<div><img decoding="async" id="hb_buntop_2" src=""  /></div>
+<div style="position: relative; z-index: 100"><img decoding="async" id="hb_stack_sauce_2" src="" /></div>
+<div style="position: relative; margin-top: -20px; z-index: 80"><img decoding="async" id="hb_topping_2_1" src="" /></div>
+<div style="position: relative; margin-top: -10px; z-index: 70"><img decoding="async" id="hb_topping_2_2" src="" /></div>
+<div style="position: relative; margin-top: -10px; z-index: 60"><img decoding="async" id="hb_topping_2_3" src="" /></div>
+<div style="position: relative; margin-top: -10px; z-index: 50"><img decoding="async" id="hb_stack_main_2" src="" /></div>
+<div><img decoding="async" id="hb_bunbottom_2" src="" /></div>
+</div>
+
+<div class="hb_stack" style="text-align: center;">
+<div><img decoding="async" id="hb_buntop_3" src=""  /></div>
+<div style="position: relative; z-index: 100"><img decoding="async" id="hb_stack_sauce_3" src="" /></div>
+<div style="position: relative; margin-top: -20px; z-index: 80"><img decoding="async" id="hb_topping_3_1" src="" /></div>
+<div style="position: relative; margin-top: -10px; z-index: 70"><img decoding="async" id="hb_topping_3_2" src="" /></div>
+<div style="position: relative; margin-top: -10px; z-index: 60"><img decoding="async" id="hb_topping_3_3" src="" /></div>
+<div style="position: relative; margin-top: -10px; z-index: 50"><img decoding="async" id="hb_stack_main_3" src="" /></div>
+<div><img decoding="async" id="hb_bunbottom_3" src="" /></div>
+</div>
+
+</div>
+
+<p style="color: blue; cursor: pointer; text-decoration: underline; text-align: center;" onclick="random_hatena_burgers()">Reload Random Burgers</p>
+
+<script>
+function fisherYatesShuffle(array) {
+    let currentIndex = array.length;
+    while (currentIndex !== 0) {
+        // Pick a remaining element
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element
+        let temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+    return array;
+}
+
+function random_hatena_burger(index){
+
+
+const stack_buns = ['brown','red','black'];
+const stack_sauces = ['black-curry','citrus-pepper-dashi','ketchup','shibazuke-pickles-tartar','sukiyaki','veggie-aurora','wasabi-garlic-soy'];
+const stack_main = ['chicken','beef','fish','sukiyaki','mushroom','double-chicken','double-beef','double-fish','double-sukiyaki','double-mushroom'];
+
+const stack_toppings = ['tofu','onion','tomato','shibazuke','lettuce','pepper','green-onion','lotus','cheese','egg','scrambled-egg'];
+
+
+var bun_type = stack_buns[Math.floor(Math.random() * stack_buns.length)];
+var bun_top = document.getElementById('hb_buntop_'+ index);
+var bun_bottom = document.getElementById('hb_bunbottom_'+ index);
+var sauce = document.getElementById('hb_stack_sauce_'+ index);
+var sauce_type = stack_sauces[Math.floor(Math.random() * stack_sauces.length)];
+var mains = document.getElementById('hb_stack_main_'+ index);
+var mains_type = stack_main[Math.floor(Math.random() * stack_main.length)];
+
+bun_top.src = "https://optional.is/required/wp-content/uploads/2025/12/stack/bun-top-"+bun_type+".png"
+bun_bottom.src = "https://optional.is/required/wp-content/uploads/2025/12/stack/bun-bottom-"+bun_type+".png"
+sauce.src = "https://optional.is/required/wp-content/uploads/2025/12/stack/sauce-"+sauce_type+".png"
+mains.src = "https://optional.is/required/wp-content/uploads/2025/12/stack/main-"+mains_type+".png"
+
+var topping1 = document.getElementById('hb_topping_'+ index+'_1');
+var topping2 = document.getElementById('hb_topping_'+ index+'_2');
+var topping3 = document.getElementById('hb_topping_'+ index+'_3');
+var topping_types = fisherYatesShuffle(stack_toppings)
+
+topping1.src = "https://optional.is/required/wp-content/uploads/2025/12/stack/topping-"+ topping_types [0]+".png"
+topping2.src = "https://optional.is/required/wp-content/uploads/2025/12/stack/topping-"+ topping_types [1]+".png"
+topping3.src = "https://optional.is/required/wp-content/uploads/2025/12/stack/topping-"+ topping_types [2]+".png"
+
+}
+
+function random_hatena_burgers(){
+ random_hatena_burger(1);
+ random_hatena_burger(2);
+ random_hatena_burger(3);
+}
+
+random_hatena_burgers()
+</script>
+
+
+
+<h2 class="wp-block-heading">Conclusion</h2>
+
+
+
+<p class="wp-block-paragraph">Does Hatena Burger have over 270,000 different burgers? Strictly speaking yes. Practically speaking, no. It&#8217;s much, much less when you remove duplicate toppings. Looking into the mathematics and combinatorics of the possibilities can be a fun and interesting way to see how adding or removing small amounts can have big impacts.</p>
+
+
+
+<p class="wp-block-paragraph">When we see what seems like outlandish claims &#8220;Over 270,000 possible burgers&#8221; it is within our abilities to double check and confirm or deny if it&#8217;s true.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Camelut</title>
+		<link>https://optional.is/required/2026/03/27/camelut/</link>
+		
+		<dc:creator><![CDATA[optional Bot]]></dc:creator>
+		<pubDate>Fri, 27 Mar 2026 13:31:00 +0000</pubDate>
+				<category><![CDATA[Applications]]></category>
+		<category><![CDATA[Briefs]]></category>
+		<category><![CDATA[Photography]]></category>
+		<category><![CDATA[camelut]]></category>
+		<category><![CDATA[camera]]></category>
+		<category><![CDATA[iOS]]></category>
+		<category><![CDATA[LUT]]></category>
+		<category><![CDATA[shaders]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=8804</guid>
+
+					<description><![CDATA[Camelut is our third experimental iOS camera app - a bring your own filters camera. It takes industry standard LUT Cube files and applies them in real-time to your camera feed. ]]></description>
+										<content:encoded><![CDATA[
+<p style="text-align: center">
+<a href="https://apps.apple.com/us/app/lut-photo/id6749096589?ls=1&#038;mt=8"><img decoding="async" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a6/b9/a9/a6b9a91a-3080-417b-0c13-7156a6f8b203/Placeholder.mill/400x400bb-75.webp" alt="Camelut Logo"/></a>
+</p>
+<p style="text-align: center"><strong>Camelut is a bring your own filters camera.</strong></p>
+<p style="text-align: center"><a href="https://apps.apple.com/us/app/lut-photo/id6749096589?ls=1&amp;mt=8">Download Camelut on the iOS App Store</a></p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://optional.is/apps/camelut/">Camelut</a> is our third experimental iOS camera app. It takes industry standard LUT Cube files which are used to color grade images and video and applies them in real-time to your camera feed as you take photos. </p>
+
+
+
+<p class="wp-block-paragraph">One of the benefits of LUT files is that you can find, download, install or create your own custom filters. This is something that other camera apps can&#8217;t do. Normally, you&#8217;re stuck with the filters they provide, but Camelut let&#8217;s you import your own. That&#8217;s the downside, you need to find, curate and manage your own filters. That&#8217;s not for everyone. With great flexibility comes great power.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/03/filter-samples.jpg" alt="Collage of images and iOS settings"/></div>
+
+
+
+<p class="wp-block-paragraph">To help you get started, we made three LUT files you can download and try. <strong>Download ZIP:&nbsp;<a href="optional-is-luts.zip">(optional.is) LUTs</a>&nbsp;(880 KB)</strong> </p>
+
+
+
+<p class="wp-block-paragraph">There are plenty of other LUTs out there for free and pay. You can even create your own in many popular image editing software tools. (Search for &#8220;Export Adjustments as LUT&#8221;)</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/03/camelut-sample.jpg" alt="" /></div>
+
+
+
+<p class="wp-block-paragraph">We implemented a bunch of non-intuitive features which mimic other photography apps, but are not exposed in the UI. For instance, when you take a photo with a filter, it appears in your photo library with the filter applied (as you&#8217;d expect). At some point we thought about also adding a button to save the original image, sans filter, as well. After digging around, we decided to add the source image and then as a second version of the filtered image to it. In the photos app, you can &#8220;revert to original&#8221; and you can get the source image. If you really want both, you can duplicate the image and remove the filter on one. This isn&#8217;t intuitive, but it&#8217;s also the way several other apps handle it, and we wanted to try to be a good photography app citizen and follow conventions.</p>
+
+
+
+<p class="wp-block-paragraph">Personally, we&#8217;ve been experimenting with 100+ different filters. The first time you take a picture they look horrible. You think, what&#8217;s the point of this filter? Then you&#8217;re outside in daylight and try the same filters again. This time they work really well, so it&#8217;s hard to delete a filter just in case! </p>
+
+
+
+<p class="wp-block-paragraph">We have several go-to filters, which is why we created 4 tag categories. We put similar Black and White LUTs together, created a Vintage style LUTs category, one for LUTs that work well Outdoors and another for our Favorites LUTs. This makes it easier to navigate around (by swiping) and find the best filter for the situation. You can create your own category names that make sense to your photography style.</p>
+
+
+
+<p class="wp-block-paragraph">This is now one of our go-to camera apps. Since it is our own itch to scratch, we&#8217;ll continue to explore, improve and support Camelut into the future.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://optional.is/apps/camelut/">Read more about Camelut</a> and basic features and functionality.</p>
+
+
+
+<aside><p>There are a few ways you can create filters and effects on video streams. We previously wrote about the differences between <a href="https://optional.is/required/2025/08/27/lut-cubes-and-shaders/">LUT Cubes and Shaders</a>. For Camelut, we focused on LUT files since they are portable, but have their own limitations.</p></aside>
+
+
+
+<p class="wp-block-paragraph"><a href="https://apps.apple.com/us/app/lut-photo/id6749096589?ls=1&amp;mt=8">Download Camelut on the iOS App Store</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>SXSW 02006</title>
+		<link>https://optional.is/required/2026/03/12/sxsw-02006/</link>
+		
+		<dc:creator><![CDATA[optional Bot]]></dc:creator>
+		<pubDate>Thu, 12 Mar 2026 12:21:00 +0000</pubDate>
+				<category><![CDATA[Community]]></category>
+		<category><![CDATA[austin]]></category>
+		<category><![CDATA[friends]]></category>
+		<category><![CDATA[sxsw]]></category>
+		<category><![CDATA[tech]]></category>
+		<category><![CDATA[web 2.0]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=9263</guid>
+
+					<description><![CDATA[Twenty years ago today, (March 10th-15th) we gathered in Austin, Texas for SXSW interactive festival.]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">Twenty years ago, (March 10th-15th 02006) we gathered in Austin, Texas for the SXSW interactive festival. As we think back to that event, it is one of those pivotal &#8216;sliding doors&#8217; moments. It felt like a big wave was swelling and we did well to get right in front of all the action.</p>
+
+
+
+<p class="wp-block-paragraph">To put things into a bit of context, this was 02006, the iPhone was still 10 months way from launch. The world was Blackberries, Nokias and Palm Pilots. We split a hotel room with 2 other people. As reimbursement, we wrote a physical cheque to pay for the hotel stay.</p>
+
+
+
+<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/01/sxsw-2006-website.jpg" alt="Screenshot of sxsw.com from 2006"/><figcaption>Screenshot from <a href="https://web.archive.org/web/20060221113710/http://2006.sxsw.com">Archive.org of SXSW.com from 02006</a>.</figcaption></figure>
+
+
+
+<p class="wp-block-paragraph">This is what most of the web used to look like before mobile devices and stacked layouts! We had columns and tiny text. Call out buttons, banner images, navigation tabs and more.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://en.wikipedia.org/wiki/Web_2.0">Web 2.0</a> and <a href="https://en.wikipedia.org/wiki/Ajax_(programming)">AJAX</a> were buzz-words. There was a certain expectation of how we&#8217;d use a website. This is pre-twitter, Facebook was only 2 years old and just started to allow anyone besides .edu email address to register.</p>
+
+
+
+<p class="wp-block-paragraph">Tagging and <a href="https://en.wikipedia.org/wiki/Folksonomy">Folksonomies</a> were also something new and exciting. The ability to create ontologies from the bottom-up rather than top-down was creating a stir. There were several panels on the topic. At the time the photo sharing site <a href="https://www.flickr.com/search/?text=sxsw06">Flickr</a> had tags and started to create super-groups based on tag clusters. We vividly remember sitting in one session where they explained how they did this with k-means clustering, and then in another some panelist swore it was so good it must be human curated. If that were today, it would be the opposite, the default assumption would be LLMs and AI made the tags and when it&#8217;s actually human curated we&#8217;re surprised.</p>
+
+
+
+<p class="wp-block-paragraph">Oh the crazy parties. It seemed like every small venue turned into some interactive party or off-venue party. We met so many interesting people. We remember talked with someone from <a href="https://robotcoop.com">Robo Co-op</a> about their sites <a href="https://en.wikipedia.org/wiki/43_Things">43 Things</a>, 43 Places, 43 People, etc. We were avid users of the sites so to meet someone who created it was amazing. Then at another event, a WordPress meetup, we meet <a href="https://ma.tt/2006/03/sxsw/">Matt Mullenweg</a> the creator. WordPress was less than three years old and they were still evangelizing the software. We also remember standing in a parking lot outside of a venue and met <a href="https://en.wikipedia.org/wiki/Joshua_Schachter">Joshua Schachter</a> who had created <a href="https://del.icio.us">Del.icio.us</a> which we were an early adopter of. He was chatting to someone else, and we just listened, border-line weird.</p>
+
+
+
+<p class="wp-block-paragraph">The hot new geolocation <a href="https://en.wikipedia.org/wiki/Dodgeball_(service)">Dodgeball</a> was all the rage. As people you followed checked-into venues you&#8217;d get an SMS. One minute we were sitting having a drink, then everyone&#8217;s phones started to buzz and they all moved like a string of ants to the next party. While technology connects us and does great things, it was our first reminder that sometimes what&#8217;s right in front of you is just fine. Always searching for where the grass is greener isn&#8217;t necessarily the best way to live life. We experienced that with people too. SXSW brings together ALOT of people who you&#8217;d never normally see or get access too. There were times someone was engaged in a conversation in our group, saw someone &#8220;more famous&#8221; and stopped mid-sentence and walked away. It was bewildering behavior, but another lesson learnt.</p>
+
+
+
+<p class="wp-block-paragraph">We were there because we&#8217;d volunteered working on <a href="https://microformats.org">Microformats</a>. This was a way to embed a bit of extra hints at what your HTML content was representing using already established means. Human-readable text then could be extracted by machines and converted into other formats, like calendar events and contacts. It was certainly picking-up speed compared to the more complicated and machine focused RDF.</p>
+
+
+
+<figure class="banner"><img fetchpriority="high" decoding="async" width="1000" height="663" src="https://optional.is/required/wp-content/uploads/2026/03/sxsw06-microformats.jpg" alt="Microformats crew sitting around at SxSW 2006" class="wp-image-9643" srcset="https://optional.is/required/wp-content/uploads/2026/03/sxsw06-microformats.jpg 1000w, https://optional.is/required/wp-content/uploads/2026/03/sxsw06-microformats-300x199.jpg 300w, https://optional.is/required/wp-content/uploads/2026/03/sxsw06-microformats-768x509.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" />
+<figcaption><a href="https://www.flickr.com/photos/adactio/113270200/">The Microformats Mafia</a> Photo by Jeremy Keith, licensed as CC BY 2.0</figcaption>
+</figure>
+
+
+
+<p class="wp-block-paragraph">We made a lot of new friends on that trip. Many of which we are still in contact with today. That lead to working professionally with and for many of them. Browsing through the nearly <a href="https://www.flickr.com/search/?text=sxsw06">10,000 photos on Flickr tagged sxsw06</a>, there are a lot of memories, people who are no longer with us, some things people probably wished weren&#8217;t online, products and companies that have come and gone, and more. That time at SXSW was unique. The event continues today, but it isn&#8217;t the same. </p>
+
+
+
+<p class="wp-block-paragraph">In this post-pandemic, war-torn 02020s, conferences and events like SxSW06 are hard. In the last 20 years, everyone&#8217;s realized the importance of the Web and internet and there have plenty of grifts, NFTs, Crypto, ICOs, Web 3.0, and AI are just some of the big ones. To gather so many like-minded, energetic people in once place and not have it ruined by corporate greed felt unique.</p>
+
+
+
+<p class="wp-block-paragraph">We&#8217;re happy we got to attend and in some small way would like to think we&#8217;ve left the Web a better place because of it.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Backups 3.0 Remote</title>
+		<link>https://optional.is/required/2026/02/26/backups-3-0-remote/</link>
+		
+		<dc:creator><![CDATA[optional Bot]]></dc:creator>
+		<pubDate>Thu, 26 Feb 2026 13:31:00 +0000</pubDate>
+				<category><![CDATA[Meta]]></category>
+		<category><![CDATA[backups]]></category>
+		<category><![CDATA[DAS]]></category>
+		<category><![CDATA[hosting]]></category>
+		<category><![CDATA[icloud]]></category>
+		<category><![CDATA[LOCKSS]]></category>
+		<category><![CDATA[NAS]]></category>
+		<category><![CDATA[VPN]]></category>
+		<category><![CDATA[VPS]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=9209</guid>
+
+					<description><![CDATA[The third in the series where we continue to improve our backups, partly out of necessity.]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">RAID is not a backup!</p>
+
+
+
+<p class="wp-block-paragraph">In part 3: We continue to extend our backup regime by adding a remote NAS. (<a href="https://optional.is/required/2024/03/19/backup-2-0-das-edition/">part 2 DAS Edition</a>, <a href="https://optional.is/required/2022/05/31/backups/">part 1 Backups</a>)</p>
+
+
+
+<p class="wp-block-paragraph">We&#8217;re lucky enough to have some family a few timezones away that were willing to stick a small NAS box on a shelf for us. At the time we went with a very simple, entry level Synology 2-bay NAS solution. We didn&#8217;t need RAID redundancy or any media server encoding. This was our off-site, cold-storage, 3rd copy backup. Hopefully, we won&#8217;t need it.</p>
+
+
+
+<p class="wp-block-paragraph">This is our &#8216;3&#8217; and &#8216;1&#8217; in the 3-2-1 backup rule. (3 copies, 2 mediums, 1 offsite).</p>
+
+
+
+<p class="wp-block-paragraph">To make this as easy as possible, we took advantage of our Unifi routers. Along with the NAS we also bought a Unifi Express. We created a private VPN between our office network and the remote network. Doing so makes all the devices on that network seem as if they are on our local network. We can SMB:// into a &#8220;local&#8221; IP address to our remote NAS.</p>
+
+
+
+<p class="wp-block-paragraph">Now that we have an 8TB hard drive in a NAS a few timezones away that seems like it is local, we can create a cron job which <code>rsyncs</code> from our local DAS to the remote NAS.</p>
+
+
+
+<p class="wp-block-paragraph">The current hardware setup is a 4-bay DAS connected to an older Mac mini. The first two bays contain 4TB hard drives for work and personal data. The 3rd bay is an 8TB hard drive which contains a copy of the first two 4TB drives. Each night the Mac mini runs a cron job to <code>rsync</code> the data to the 3rd drive. We do this rather than RAID for two reasons. We can have multiple drive sizes and if it were in RAID and we accidentally delete or corrupt a file, it is instantly also deleted or corrupted on the mirrored drive too. From time-to-time, having a daily delay has proven useful. With this setup we have &#8216;2&#8217; copies of the data. The 4th hard drive is another 4TB drive we use as a Time Machine backup for our laptops. That makes &#8216;2&#8217; copies there too (the laptop and the Time Machine backup)</p>
+
+
+
+<p class="wp-block-paragraph">We also have an external 4TB hard drive we use as an &#8220;air gapped&#8221; Time Machine. We plug that in about once a month to our laptops to also create a backup (just in case!).</p>
+
+
+
+<p class="wp-block-paragraph">Nightly, we also <code>rsync</code> from the 8TB drive on the DAS to the 8TB drive on the remote NAS. At the moment, it is not using the full disk space, so we also weekly <code>rsync</code> the 4TB Time Machine drive to the remote NAS. With time, we&#8217;ll fill-up the hard drive, but the remote NAS has 2-bays and one is still empty.</p>
+
+
+
+<p class="wp-block-paragraph">The way the Time Machine backups are structured means that a small incremental update causes a lot of files to change. If a large file changes just a tiny bit, we still need to rsync the whole file over to the remote NAS. We decided that a weekly remote Time Machine backup would be enough. We have two local copies (plus the laptop itself) if needed.</p>
+
+
+
+<h2 class="wp-block-heading">Webhosting</h2>
+
+
+
+<p class="wp-block-paragraph">Most all our websites and web apps reside in one of two places: Heroku or Opalstack. Heroku is our goto service for web apps for customer projects. Everything you deploy there is via git version control, so we have a copy on heroku, locally and in a git repository (usually bitbucket or GitHub). 3-2-1 is covered. Any databases are backed-up nightly in the cloud, but technically that&#8217;s just &#8216;2&#8217; locations and &#8216;1&#8217; offsite. (A 3rd backup would be best)</p>
+
+
+
+<p class="wp-block-paragraph">Opalstack is our VPS (Virtual Private Server). We host a lot of static website, WordPress, personal projects and file storage there. We&#8217;ve had bad experiences with previous VPSes like Joyent, Textdrive, and WebFaction, from having no backups to being acquired. We needed to make sure that anything created there we have a local copy of as well.<br /><br />To solve this, we have a cron task on the VPS that dumps all the databases to flat files. Then we added to our local rsync script to grab all the files: database dumps and html directories from the VPS and put them onto the DAS. Once they are there, they get absorbed into the 3-2-1 system.</p>
+
+
+
+<h2 class="wp-block-heading">Backups still not covered</h2>
+
+
+
+<p class="wp-block-paragraph">We have done a great job getting to the 3-2-1 for all our local files. Our laptops and file server are all automatically being backed up. So what&#8217;s left?</p>
+
+
+
+<p class="wp-block-paragraph">Our devices (iPhones and iPads) are only backed up to iCloud. That&#8217;s mostly fine, except that photos are pretty important and (we feel) too fragile on iCloud. The way iCloud works, is to save space on your device sometimes you only get image thumbnails, and then if you delete a picture on your laptop to save space, it might purge it everywhere, including your phone. To mitigate this, we use the &#8220;Image Capture&#8221; app (or Photos.app) on the laptop to copy all recent images to the hard drive. Then it is part of our local backup regime.</p>
+
+
+
+<p class="wp-block-paragraph">The other major sources of data that are not currently in any sort of regular backup routine are our cloud-base services. Files in Google Drive, iCloud Drive, Trello, Asana, email, etc. are assumed to be &#8220;backed up&#8221; by the service provider, but we&#8217;ve had instances where that&#8217;s not true. Our email address could get flagged (for no reason) and our account suspended locking us out of our data. Our next big task is to list all the places that have data only in other systems (mastodon for instance) and get an automated cron job to save that date to our DAS and into our 3-2-1 backup regime.</p>
+
+
+
+<p class="wp-block-paragraph">Every iteration where improve the backup plan gets both more difficult and the data gets smaller. Looking back, we&#8217;ve gone from nothing (or Dropbox), to a pile of external hard drives and Time Machine, to a DAS with a schedule and system in place, to a remove NAS and syncing our website data. Each step has improved our redundancy and safe guarded the data we feel is important. We&#8217;ll never be &#8220;DONE&#8221;, but with every small step, we get closer.</p>
+
+
+
+<h2 class="wp-block-heading">Addendum: We got lucky!</h2>
+
+
+
+<p class="wp-block-paragraph">Recently, we had one small backup disaster that was outside out 3-2-1 system. We recovered most, if not all, of the data by shear chance.</p>
+
+
+
+<p class="wp-block-paragraph">There were several old email accounts setup from previous projects on the iPhone that were just causing problems. The accounts closed several years ago and the login didn’t work. So we deleted them. It&#8217;s good practice to clean-up and not leave any un-used accounts lingering for longer than needed.</p>
+
+
+
+<p class="wp-block-paragraph">Then a day later we realized that half the contacts were gone. Somehow, that old account was the default for all new contacts created. Normally this wouldn’t be a big issue since the contacts would be synced with the server, but since that connection was broken awhile ago those contacts ONLY existing on the phone. Now they&#8217;re gone. We looked in Time Machine backups for the computer&#8217;s contacts database, but they were never synced there. We looked on iCloud but they were not there either, since they were never synced there. The laptop didn’t have a back-up of the iPhone since that’s now managed by iCloud. iCloud DOES have a backup of the phone, but only the most recent, and that’s already been overwritten and lost all the contacts.</p>
+
+
+
+<p class="wp-block-paragraph">It was only by luck that a few months ago, we upgraded the old iPhone 12 to a less old iPhone 13 and the iPhone 12’s backup was still in iCloud. We did the dance of backing up the iPhone 13, restoring the 12’s backup, getting all the lost contacts moved to iCloud, and restoring the 13’s backup again. It took a few hours, but we restored the contacts. This experience shed a light on a few areas of improvement in our backup regime. The first thing we did was check to make sure any new contact was being put into iCloud by default. We also took a manual vCard backup of the contacts and added that into the 3-2-1 system.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Remember L-O-C-K-S-S, Lots Of Copies, Keep, Stuff, Safe.</strong></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Wyld&#8217;s Great (VR) Globe</title>
+		<link>https://optional.is/required/2026/02/12/wylds-great-vr-globe/</link>
+		
+		<dc:creator><![CDATA[optional Bot]]></dc:creator>
+		<pubDate>Thu, 12 Feb 2026 13:31:00 +0000</pubDate>
+				<category><![CDATA[Applications]]></category>
+		<category><![CDATA[Briefs]]></category>
+		<category><![CDATA[globe]]></category>
+		<category><![CDATA[maps]]></category>
+		<category><![CDATA[projections]]></category>
+		<category><![CDATA[VR]]></category>
+		<category><![CDATA[worldmapper]]></category>
+		<category><![CDATA[Wyld]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=8656</guid>
+
+					<description><![CDATA[In 01851, it was possible to step inside a globe to see an inverted projection of the Earth's surface. 170 years later, we've recreated the experience in VR using new cartograms.]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">Back in 01851, the notable mapmaker James Wyld created a giant (60ft ~18.5m) globe in Leicester Square, London, England. It was there for nearly 11 years and built to capitalize on the Great Exhibition tourism. His globe was unique in that the map was rendered on the inside of the sphere rather than the outside. The projection on the globe matches that of the Earth so everything is scaled and positioned correctly.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/01/Greatglobe_sectional.png" alt="Woodblock carving of the cross-section of the building holding a sphere representing the globe" /></div>
+
+
+
+<p class="wp-block-paragraph">You&#8217;d enter and ascend stairs to various viewing platforms. From there you can see the globe from various angles. Being on a sphere reduces the distortion you&#8217;d get from various other maps that over-emphasizing the poles compared to the equator.</p>
+
+
+
+<p class="wp-block-paragraph">Over time, interest in <a href="https://en.wikipedia.org/wiki/Wyld%27s_Great_Globe">Wyld&#8217;s Great Globe</a> decreased until closure. Today, the Mapparium in Boston is the only globe you can enter and view from the inside. It was built in 01935 and is only half the diameter of Wyld&#8217;s.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/02/The-Mapparium-Boston-1024x681-1.jpg" alt="Mapparium in Boston. View inside the globe while walking over a bridge which bisects the sphere." /></div>
+
+
+
+<p class="wp-block-paragraph">These are unique experiences which change the way you look at and understand our Earth. We wanted to explore if it was possible to recreate this experience digitally using Virtual Reality.</p>
+
+
+
+<p class="wp-block-paragraph">For other projects we&#8217;ve wrapped 180 and 360 images onto the inside of a sphere, so it should be simple todo the same thing with a 2D map using the right projections.</p>
+
+
+
+<p class="wp-block-paragraph">Working with the <a href="https://worldmapper.org">Worldmapper</a> team, we took several of their equalrectangular projection maps and put them into a sphere in Virtual Reality. With a VR headset, you can look around 360 degrees, and simulate being inside a globe with the map rendered on the inside surface.</p>
+
+
+
+<figure class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/01/davinci-resolve.png" alt="Screenshot with two panes, the first is inside of a sphere with a world map projected onto it. The second pane is the Equalrectangular version of the map" />
+<figcaption>Using DaVinci Resolve, we wrapped the 2D cartogram to the inside of a sphere.</figcaption>
+</figure>
+
+
+
+<p class="wp-block-paragraph">The Worldmapper team have worked extensively with various datasets to warp and bulge countries, regions and continents based on the data. Rather than the country being represented on the globe based on their square meterage, it is possible to visualize it based on population, tree coverage, mobile phone usage, and more.</p>
+
+
+
+<p class="wp-block-paragraph">Seeing all the different data sets as flat 2D images is interesting, but seeing them rendered all around you in a sphere is much more impactful!</p>
+
+
+
+<p class="wp-block-paragraph">We packaged everything-up in an app for the Apple Vision Pro. There you can select from a list of categories to view the cartograms as if you were standing inside the globe. </p>
+
+
+
+<figure class="banner"><video controls src="https://optional.is/required/wp-content/uploads/2026/02/worldmapper-avp-480.mov" style="width:100%"></video>
+<figcaption>NASA Black Marble in 360</figcaption>
+</figure>
+
+
+
+<p class="wp-block-paragraph">Technically, if you were on the inside of the Earth looking at the underside of the continents, you should see them reversed to what you&#8217;d expect on a globe. We tested this, but the reaction wasn&#8217;t positive; people need the shapes and outlines they are used too to orient  themselves. So we applied the maps to the inside the sphere &#8216;mirrored&#8217; so they look &#8216;correct&#8217;.</p>
+
+
+
+<p class="wp-block-paragraph">As part of an outreach exhibition, we created a short looping video of several maps crossfading between each other. There were 10 or so static maps by Worldmapper and NASA and one animated &#8216;<a href="https://worldmapper.org/natures-heartbeat/">heartbeat</a>&#8216; map. Since they were all in equalrectangular projection, we could use some VR video playback software to play this 2D video as if it were 360 degrees.</p>
+
+
+
+<p class="wp-block-paragraph">The looping video isn&#8217;t as nice as a dedicated app where you can select the topic and explore as long as you&#8217;d like, but it works in all places that you can view 360 images. This makes demoing on other VR devices, and even smart phones with accelerometers, quick and easy; you pick it up, look for a bit and put it down when you&#8217;re done.</p>
+
+
+
+<p class="wp-block-paragraph">The reception was great, we learnt a lot and will continue to improve the app designs and cartograms. These tools help the Worldmapper team expand their offerings: from 2D printed postcards, to touch screen interactive maps, to a 360 VR movie, and 360 VR interactive cartograms. As a tool for outreach these VR experiences are proving popular. They give a certain <img src="https://s.w.org/images/core/emoji/17.0.2/72x72/1f4af.png" alt="💯" class="wp-smiley" style="height: 1em; max-height: 1em;" /> factor that&#8217;s hard to recreate elsewhere.</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/02/1770768542494.jpeg" alt="A person with an Apple Vision Pro headset on" /></div>
+
+
+
+<p class="wp-block-paragraph">How many chances do you get to stand at the center of Earth and explore the continents?</p>
+]]></content:encoded>
+					
+		
+		<enclosure url="https://optional.is/required/wp-content/uploads/2026/02/worldmapper-avp-480.mov" length="8800907" type="video/quicktime" />
+
+			</item>
+		<item>
+		<title>02025 Annual Report</title>
+		<link>https://optional.is/required/2026/01/28/02025-annual-report/</link>
+		
+		<dc:creator><![CDATA[optional Bot]]></dc:creator>
+		<pubDate>Wed, 28 Jan 2026 13:31:00 +0000</pubDate>
+				<category><![CDATA[Annual Report]]></category>
+		<category><![CDATA[Meta]]></category>
+		<category><![CDATA[annual report]]></category>
+		<category><![CDATA[exchange rate]]></category>
+		<category><![CDATA[photography]]></category>
+		<category><![CDATA[projects]]></category>
+		<category><![CDATA[publishing]]></category>
+		<category><![CDATA[writing]]></category>
+		<guid isPermaLink="false">https://optional.is/required/?p=8758</guid>
+
+					<description><![CDATA[We look back over 02025: where we spent our time and money. This annual report is meant as a guide for others to use as a benchmark for themselves.]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">Each year we put together an overview of the status of the company. It is less about the exact numbers, and more about how and where we spend our time and money. The company continues to evolve. You can read any of our previous <a href="https://optional.is/required/category/annual-report/">Annual Reports</a>.</p>
+
+
+
+<p class="wp-block-paragraph">These are meant to be a guide for others who might be starting out or struggling. We&#8217;re definitely not the &#8220;best&#8221; or &#8220;right&#8221; way to run a company. We&#8217;re a small, digital company, if you are too, then knowing where your money is going compared to others can be helpful.</p>
+
+
+
+<h2 class="wp-block-heading">Finances</h2>
+
+
+
+<p class="wp-block-paragraph">We exported all our invoices from the bookkeeping software and much like everything, we&#8217;re pretty steady. We&#8217;re sending ~1.5 invoices a month. One invoice is our retainer, the others are additional projects, usually in Australia, sometimes Iceland or the UK.</p>
+
+
+
+<table>
+	<thead>
+		<tr>
+			<th>Year</th>
+			<th>Customers</th>
+			<th>Invoices</th>
+			<th>Notes</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>02021</td>
+			<td>3</td>
+			<td>12</td>
+			<td class="item">EHF. company transition from SLF., not a full financial year</td>
+		</tr>
+		<tr>
+			<td>02022</td>
+			<td>4</td>
+			<td>18</td>
+			<td class="item">Two customers should be merged. The same project, invoiced to a different company.</td>
+		</tr>
+		<tr>
+			<td>02023</td>
+			<td>3</td>
+			<td>16</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>02024</td>
+			<td>3</td>
+			<td>17</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>02025</td>
+			<td>2</td>
+			<td>18</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+<p class="wp-block-paragraph">In 02025, we invoiced 2 different customers. There is a 3rd customer missing from this year. It was a small project for a friend who&#8217;s working with an Icelandic company that needed some HTML/CSS/PHP help with their WordPress templates. We did the work late in the year and they reviewed it and had more ideas. Rather than send two small invoices we are in the process of bundling them together. So we did the work in 02025, but will send the invoice off in 02026!</p>
+
+
+
+<p class="wp-block-paragraph">All our 02025 customers were from abroad. ~92% of our income currently comes from a single US customer that we are on a retainer. That doesn’t mean it is a single project! We’ve probably had conversations with 6–7 different companies. It’s great work, fun, and interesting, but we are well aware it is a single point of failure. We&#8217;re pretty comfortable with all the teams we work with and could we &#8220;cut out the middle-man&#8221; if needed. We&#8217;re not worried about the interactions and relationships, but more about the declining exchange rate.</p>
+
+
+
+<p class="wp-block-paragraph">In 02026, one of our goals is to get back into local networking and look for more paid projects locally.</p>
+
+
+
+<p class="wp-block-paragraph">There are also several other projects that we are trying to turn into products. PETALS, a dog-based app idea and a web service are all volunteer work between jobs. The goal is to grow them into revenue generating projects.</p>
+
+
+
+<h2 class="wp-block-heading">Services</h2>
+
+
+
+<h3 class="wp-block-heading">Programming/Prototyping &amp; Ideation</h3>
+
+
+
+<p class="wp-block-paragraph">The vast majority of what we&#8217;ve been doing has been programming. HTML/CSS, Django/Python, iOS and PHP are some of the languages we&#8217;re paid to use.</p>
+
+
+
+<p class="wp-block-paragraph">Software is malleable. We&#8217;re much more in the &#8216;use it like a hammer&#8217; camp than &#8216;use it like a scalpel&#8217;. For most of the teams we work with, the software is either a temporary solution, or something that is supporting another tool. No one asks for &#8216;a great app for my apartments&#8217; they ask for &#8216;an app for our sales people to sell more apartments&#8217;. That changes the narrative and means we are always shifting priorities.</p>
+
+
+
+<p class="wp-block-paragraph">Sometimes that means the software works just well enough and isn&#8217;t robust for the future or large traffic. Those are problems we&#8217;ll solve when they come-up. We are building for the immediate needs rather than &#8216;what ifs&#8217;. That does lead to some decisions being bad ones in the long term, even though they were good for the short term. It also leads to some crufty code, but we&#8217;re ok with that since some of these projects get cancelled. We&#8217;d rather get 3-4 valuable tools in their hands quicker and getting feedback sooner than waiting for &#8216;the perfect solution&#8217;.</p>
+
+
+
+<h3 class="wp-block-heading">Meetings</h3>
+
+
+
+<p class="wp-block-paragraph">From Jan-October, we had daily stand-up meetings. They were only (suppose to be) 15 min each day, but sometimes they dragged on or we had much longer reviews. In October, we were no longer needed in attendance and that freed-up our afternoons. Since then we probably spend only 2-3h a week in various meetings.</p>
+
+
+
+<p class="wp-block-paragraph">We have a loosely schedule Monday meeting, which is an hour blocked out of our calendar to meet-up and chat with a few people in the UK. It&#8217;s been a nice way to both not talk-tech, but also get feedback, listen and offer ideas to everyone else who joins the call.</p>
+
+
+
+<h3 class="wp-block-heading">Data Analytics</h3>
+
+
+
+<p class="wp-block-paragraph">This year was actually pretty minimal when it comes to analytics. We worked pretty hard the previous year(s) getting everything into a good spot with Spellstruck. Now we are just making sure things keep running as expected.</p>
+
+
+
+<p class="wp-block-paragraph">We volunteered at &#8216;Game Makers Iceland&#8217; help any teams with analytics, but no one took us up on the offer.</p>
+
+
+
+<h3 class="wp-block-heading">Consulting</h3>
+
+
+
+<p class="wp-block-paragraph">Toward the end of the year, we were brought in on a project to just &#8216;get the app to connect to a different API&#8217;. That turned into a whole new prototype to connect to the new API and then we&#8217;ve stuck around and are involved in consulting and prototyping while they raise money.</p>
+
+
+
+<h3 class="wp-block-heading">Design</h3>
+
+
+
+<p class="wp-block-paragraph">All the prototype projects we did this year we also designed. There is only one project which we worked solely (so far) as a designer. For that project, we created a storyboard for a short six-minute VR film idea. First was hand sketches, then some placeholder renderings. We put that into video editing software with temp tracks and placeholder videos. This was never meant to be the product, it is the &#8216;object&#8217; the rest of the team uses as their starting place. We didn&#8217;t want to get lots of talented, expensive experts together and everyone to stare at a blank page and argue about what todo. At least with this design prototype we can start a genuine conversation about what&#8217;s good, what&#8217;s bad and how to fix it.</p>
+
+
+
+<h2 class="wp-block-heading">Expenses</h2>
+
+
+
+<table>
+	<thead>
+		<tr>
+			<th>Category</th>
+			<th>02015</th>
+			<th>02016</th>
+			<th>02017</th>
+			<th>02021</th>
+			<th>02022</th>
+			<th>02023</th>
+			<th>02024</th>
+			<th>02025</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="item">Office Supplies</td>
+			<td>1.49%</td>
+			<td>3.80%</td>
+			<td>2.44%</td>
+			<td>12.29%</td>
+			<td>7.1%</td>
+			<td>1.96%</td>
+			<td>4.75%</td>
+			<td>4.9%</td>
+
+		</tr>
+		<tr>
+			<td class="item">Tax</td>
+			<td>55.78%</td>
+			<td>57.63%</td>
+			<td>52.22%</td>
+			<td>35.24%</td>
+			<td>53.3%</td>
+			<td>25.04%</td>
+			<td>43.22%</td>
+			<td>42.1%</td>
+
+		</tr>
+		<tr>
+			<td class="item">Salary</td>
+			<td>34.84%</td>
+			<td>33.76%</td>
+			<td>38.39%</td>
+			<td>46.51%</td>
+			<td>36.9%</td>
+			<td>67.10%</td>
+			<td>47.19%</td>
+			<td>52.0%</td>
+		</tr>
+		<tr>
+			<td class="item">Conferences</td>
+			<td>2.34%</td>
+			<td>–</td>
+			<td>5.05%</td>
+			<td>–</td>
+			<td>–</td>
+			<td>2.39%</td>
+			<td>2.61%</td>
+			<td>–</td>
+		</tr>
+		<tr>
+			<td class="item">Projects</td>
+			<td>1.69%</td>
+			<td>0.27%</td>
+			<td>–</td>
+			<td>3.6%</td>
+			<td>–</td>
+			<td>0.83%</td>
+			<td>–</td>
+			<td>0.3%</td>
+		</tr>
+		<tr>
+			<td class="item">Professional Services</td>
+			<td>2.72%</td>
+			<td>5.56%</td>
+			<td>1.64%</td>
+			<td>2.36%</td>
+			<td>2.7%</td>
+			<td>2.68%</td>
+			<td>2.27%</td>
+			<td>0.8%</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+<p class="wp-block-paragraph">Like last year, we&#8217;re looking at the last 10 years of spending and comparing. Right now, categories are pretty stable. We haven&#8217;t done any travel, so Education, Conferences are 0%.</p>
+
+
+
+<p class="wp-block-paragraph">Our Projects have also been slow, therefore we haven&#8217;t spent much on them. It is also a grey area since &#8216;web hosting&#8217; is a fixed cost in &#8216;office supplies&#8217; our side project costs are absorbed into general operating costs. Most of the actual project spending is direct domain renewals or printing costs.</p>
+
+
+
+<p class="wp-block-paragraph">The big surprise was that our professional services costs dropped. In 2021, when we restructured the company, we stopped paying an accountant to do everything. Instead, we use <a href="https://payday.is/">PayDay.is</a> web-based bookkeeping software. The cost of the software, plus our new accountants, was around the same cost as just letting the old accountants handle salary, taxes, invoices and receipts. The downside using the old accountants was that we had no idea of our financial status. We took over that roll, which requires time from us, but we have a much better sense of the company&#8217;s financials. The PayDay monthly software subscription is put under Office Supplies (which has remained constant), but finally our hard work reconciling all the bank entries has dropped our annual Professional Services cost!</p>
+
+
+
+<div class="banner"><img decoding="async" src="https://optional.is/required/wp-content/uploads/2026/01/2025-USDISK-exchange-rate.png" alt="A line graph of the exchange rate between the US dollar and the Icelandic kronur for 2025. The line drops from 140 at the start to 125 at the end. An 11% decrease overall." /></div>
+
+
+
+<p class="wp-block-paragraph">Much like 02024, we spent more money than we brought in. Over 12 months we only lost a small amount. We closed the overall gap with additional projects and revenue. The biggest factor is that at the start of 02025 the exchange rate between the US dollar to the Icelandic kronur was ~140, but has since dropped down to ~125. That&#8217;s an 11% decrease in our USD invoices. Had the exchange rate remained the same, we&#8217;d easily be in the black!</p>
+
+
+
+<h2 class="wp-block-heading">Travel &amp; Conferences</h2>
+
+
+
+<p class="wp-block-paragraph">It was a busy year and we stayed at HQ. We didn&#8217;t attend or present at any conferences (local or abroad) and we didn&#8217;t travel for work or meetings. It was nice and the year flew-by, but sometimes it is also good to get out, mix and learn with other folks.</p>
+
+
+
+<h2 class="wp-block-heading">Publishing and Web Stats</h2>
+
+
+
+<p class="wp-block-paragraph">We&#8217;re moving all writing and publishing information over to the annual <a href="https://optional.is/required/2026/01/01/omnibus-02025/">Omnibus</a> article. You can see the full table of Web Traffic Stats there. Here is a short list of the top visited webpages.</p>
+
+
+
+<table>
+	<thead>
+		<tr>
+			<th>Article</th>
+			<th>Year</th>
+			<th>Traffic</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="item"><a href="https://optional.is/required/2009/12/03/welcome-the-entire-land/">Welcome, the entire land</a></td>
+			<td>02009</td>
+			<td>20.47%</td>
+		</tr>
+		<tr>
+			<td class="item"><a href="https://optional.is/required/2022/12/06/yankee-candles-levels-of-abstraction/">Yankee Candles Levels of Abstraction</a></td>
+			<td>02022</td>
+			<td>15.95%</td>
+		</tr>
+		<tr>
+			<td class="item"><a href="https://optional.is/required/2019/11/27/sf-symbols-font/">SF Symbols Font</a></td>
+			<td>02019</td>
+			<td>2.43%</td>
+		</tr>
+		<tr>
+			<td class="item"><a href="https://optional.is/required/2011/10/05/what-2d-barcodes-arent/">What 2D Barcodes aren’t</a></td>
+			<td>02011</td>
+			<td>2.21%</td>
+		</tr>
+		<tr>
+			<td class="item"><a href="https://optional.is/required/2009/04/20/near-future-of-sports/">Near future of sports from a spectator’s point of view</a></td>
+			<td>02009</td>
+			<td>1.58%</td>
+		</tr>
+		<tr>
+			<td class="item"><a href="https://optional.is/required/2013/09/25/cern-line-mode-browser/">CERN Line Mode Browser</a></td>
+			<td>02013</td>
+			<td>0.99%</td>
+		</tr>
+		<tr>
+			<td class="item"><a href="https://optional.is/required/2010/01/18/tweetcc-a-creative-commons-journey/">TweetCC a Creative Commons Journey</a></td>
+			<td>02010</td>
+			<td>0.94%</td>
+		</tr>
+		<tr>
+			<td class="item"><a href="https://optional.is/required/2022/10/19/color-name-abstractions/">Color Name Abstractions</a></td>
+			<td>02022</td>
+			<td>0.80%</td>
+		</tr>
+		<tr>
+			<td class="item"><a href="https://optional.is/required/2012/04/25/titanic-visualized/">Titanic: Behind the numbers</a></td>
+			<td>02012</td>
+			<td>0.78%</td>
+		</tr>
+		<tr>
+			<td class="item"><a href="https://optional.is/required/2025/07/03/latency-and-the-sea/">Latency and the Sea</a></td>
+			<td>02025</td>
+			<td>0.78%</td>
+		</tr>
+		<tr>
+			<td class="item"><a href="https://optional.is/required/2023/06/27/iphone-ir-photography/">iPhone IR Photography</a></td>
+			<td>02023</td>
+			<td>0.78%</td>
+		</tr>
+		<tr>
+			<td class="item"><a href="https://optional.is/required/2022/01/12/pool-numbers/">Pool Numbers</a></td>
+			<td>02022</td>
+			<td>0.70%</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+<p class="wp-block-paragraph">We publish our content as articles on <a href="https://optional.is/required/">/required</a> and via our <a href="https://optional.is/feeds/">feeds</a>. We also have a <a href="https://optional.is/newsletter/">newsletter</a> which is unique content not published here. You need to <a href="https://optional.is/newsletter/subscribe/">subscribe</a> so it gets delivered straight to your inbox. Occasionally, we&#8217;ll post something to social media (LinkedIn or Mastodon)</p>
+
+
+
+<h2 class="wp-block-heading">iOS Camera Apps</h2>
+
+
+
+<p class="wp-block-paragraph">In 02025, we publicly released three iOS camera apps and we have 2+ more that we&#8217;re still testing internally. We made these fun little apps not to compete with others, but to scratch our own itch. When it comes to photography and seeing the world in a different way, we thought it&#8217;s worth sharing with others.</p>
+
+
+
+<table>
+<tbody>
+<tr><td><a rel="noreferrer" href="https://apps.apple.com/us/app/dejaview-camera/id1598005975"><img decoding="async" class="app-icon" style="
+height: 100px;
+width: 100px;
+box-shadow: none;
+margin: 0 0.5em 1em 0;
+padding: 0;
+vertical-align: middle;" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/58/5c/4a/585c4ae4-c6ec-f59b-f0f2-324574b719a2/Placeholder.mill/400x400bb-75.webp" alt="Download DejaView on the App Store"/><br />Download DejaView on the App Store</a>
+</td>
+<td style="padding: 1em .5em">
+<a rel="noreferrer" href="https://apps.apple.com/us/app/ornithoto/id1665382610"><img decoding="async" class="app-icon" style="
+height: 100px;
+width: 100px;
+margin: 0 0.5em 1em 0;
+padding: 0;
+vertical-align: middle;" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/14/47/82/14478233-d030-9e3f-2998-5115b1efc54b/Placeholder.mill/400x400bb-75.webp" alt="Download Ornithoto on the App Store"/><br />Download Ornithoto on the App Store</a>
+</td>
+
+<td>
+<a rel="noreferrer" href="https://apps.apple.com/us/app/camelut/id6749096589"><img decoding="async" class="app-icon" style="
+height: 100px;
+width: 100px;
+margin: 0 0.5em 1em 0;
+padding: 0;
+vertical-align: middle;" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a6/b9/a9/a6b9a91a-3080-417b-0c13-7156a6f8b203/Placeholder.mill/400x400bb-75.webp" alt="Download Camelut on the App Store"/><br />Download Camelut on the App Store</a>
+
+
+</td></tr></tbody></table>
+
+
+
+<p class="wp-block-paragraph">You can read more about each: <a href="https://optional.is/required/2025/07/31/dejaview-camera-app/">DejaView</a>, <a href="https://optional.is/required/2025/05/22/ornithoto-camera-app/">Ornithoto</a>, <a href="https://optional.is/required/2025/08/27/lut-cubes-and-shaders/">Camelut</a> and all the other <a href="https://optional.is/required/category/photography/">photography articles</a>.</p>
+
+
+
+<h2 class="wp-block-heading">Projects</h2>
+
+
+
+<p class="wp-block-paragraph">In late 02023, we started the trend of working closely with an external company to help them build a prototype to secure funding. Christmas 02023 was rough with weird meetings and deadlines that eventually all fell apart. Half that team split and started a new project. In 02024, we worked closely with them to get their core service up and running and tested. Once they secured some funding, we extracted ourselves and they built their own internal team.</p>
+
+
+
+<p class="wp-block-paragraph">In 02025, we did a similar thing over the summer with a new company. This was focused on WebRTC. The project was due to wrap-up at the end of the summer, but here we are in January and we&#8217;re very close to letting friends beta test. At that same time, we started helping yet another nascent company get their prototype off the ground. It&#8217;s been slow, but very promising. We have several pilot tests planned and we&#8217;ll see where that leads.</p>
+
+
+
+<p class="wp-block-paragraph">We also got pulled into a &#8220;quick&#8221; prototyping project. We worked closely with ████████ to mock-up an app that blended their offerings with a potential buyer&#8217;s. They met with ████, █████, ████, and other publicly traded companies. Our prototype was used in meetings to demonstrate the power of what the acquisition would mean.</p>
+
+
+
+<h2 class="wp-block-heading">Notes for 02026</h2>
+
+
+
+<p class="wp-block-paragraph">The first quarter of 02026 is already packed. Traditionally, we have big surveys in February, March and April. There is a lot of planning and prep work. A very old health survey woke-up in the summer and wanted to be ready by New Years. That didn&#8217;t happen. In January, we&#8217;re working with their tech team to replace the Icelandic Single Sign-On service which closed for non-governmental agencies.</p>
+
+
+
+<p class="wp-block-paragraph">We were also asked to put in an RFP for a big project in 02025, but it was so vague we opted out rather than get shackled to something that had no chance of success. Strangely, we might still get pulled into the project through the side-door.</p>
+
+
+
+<p class="wp-block-paragraph">For the last few years we&#8217;ve been helping a premium real-estate company with advertising their offerings in VR. We&#8217;ll continue to do that in 02026. One of the properties also requested an app. We&#8217;re looking into the logistics and budget of helping.</p>
+
+
+
+<p class="wp-block-paragraph">UTMessan tech event is the first weekend of February. Our friends from <a href="https://worldmapper.org">Worldmapper</a> will have a presentation and booth. We made a VR prototype with their cartograms. The next step is to clean-up the images, since they were never meant to be shown in 360, and work a bit on how we&#8217;re going to demo this at their booth.</p>
+
+
+
+<h3 class="wp-block-heading">Publishing</h3>
+
+
+
+<p class="wp-block-paragraph">In 02025, we challenged ourselves to write something every week and we did! We want to keep a similar pace in 02026, but don&#8217;t feel that we need to write every week just to write. So maybe we&#8217;ll miss some weeks in 02026, but that&#8217;s ok. We are still actively publishing our <strong>◍ Quarternotes</strong> newsletter and would like to get back into the more relaxed <strong>⪮ Good Morning</strong> newsletter in some fashion.</p>
+
+
+
+<h3 class="wp-block-heading">Internal Project</h3>
+
+
+
+<p class="wp-block-paragraph">We have 3 internal projects we&#8217;d like to focus on more in 02026.</p>
+
+
+
+<ol class="wp-block-list">
+<li>Time Tracking Web App</li>
+
+
+
+<li>On Demand Printing (Adventure Mazes and a new project)</li>
+
+
+
+<li>A dog related service</li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">We&#8217;re dog-fooding our own time tracker and have one other company using it. We need to add more beta testers to get feedback and improve it.</p>
+
+
+
+<p class="wp-block-paragraph">The On Demand Printing just needs some attention. It is all there and working, but finding the right time and place to promote it is not our forte.</p>
+
+
+
+<p class="wp-block-paragraph">The new app idea comes from a nephew who&#8217;s really taking the ball and running with the idea. We&#8217;re mentoring and volunteer helping along the way. We have a new potential team member and we&#8217;re attending some events at the end of the month to learn more about product pitches and fund raising.</p>
+
+
+
+<p class="wp-block-paragraph">Those are the 3 we want to focus on, but there are a BUNCH more &#8216;weekend&#8217; projects that we&#8217;d love to see come to fruition as well.</p>
+
+
+
+<h3 class="wp-block-heading">Workload</h3>
+
+
+
+<p class="wp-block-paragraph">We&#8217;re never not busy. We have a good mix of paid projects, fun projects, volunteer projects and potential projects. In 02026, we need to add &#8216;local&#8217; projects into that mix and rebuild our network.</p>
+
+
+
+<p class="wp-block-paragraph">Good luck, it&#8217;s tuff out there so lend a helping hand when you can. Always remember:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>A rising tide lifts all boats.</strong></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

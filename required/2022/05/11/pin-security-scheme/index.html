@@ -19,6 +19,27 @@
 <meta name="twitter:description" content="There has been several articles recently about lapses in PIN security, either by poor numeric choices or the ability to snoop on keypresses in new ways. This is a brief article outlining some issues and my own misconceptions about choosing a good PIN.">
 <meta name="twitter:creator" content="@optionalBot">
 <meta name="twitter:domain" content="http://optional.is">
+<style id="wp-block-heading-inline-css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://optional.is/required/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id="wp-block-list-inline-css">
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+/*# sourceURL=https://optional.is/required/wp-includes/blocks/list/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://optional.is/required/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id="wp-block-embed-inline-css">
+.wp-block-embed.alignleft,.wp-block-embed.alignright,.wp-block[data-align=left]>[data-type="core/embed"],.wp-block[data-align=right]>[data-type="core/embed"]{max-width:360px;width:100%}.wp-block-embed.alignleft .wp-block-embed__wrapper,.wp-block-embed.alignright .wp-block-embed__wrapper,.wp-block[data-align=left]>[data-type="core/embed"] .wp-block-embed__wrapper,.wp-block[data-align=right]>[data-type="core/embed"] .wp-block-embed__wrapper{min-width:280px}.wp-block-cover .wp-block-embed{min-height:240px;min-width:320px}.wp-block-group.is-layout-flex .wp-block-embed{flex:1 1 0%;min-width:0}.wp-block-embed{overflow-wrap:break-word}.wp-block-embed :where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-embed iframe{max-width:100%}.wp-block-embed__wrapper{position:relative}.wp-embed-responsive .wp-has-aspect-ratio .wp-block-embed__wrapper:before{content:"";display:block;padding-top:50%}.wp-embed-responsive .wp-has-aspect-ratio iframe{bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.wp-embed-responsive .wp-embed-aspect-21-9 .wp-block-embed__wrapper:before{padding-top:42.85%}.wp-embed-responsive .wp-embed-aspect-18-9 .wp-block-embed__wrapper:before{padding-top:50%}.wp-embed-responsive .wp-embed-aspect-16-9 .wp-block-embed__wrapper:before{padding-top:56.25%}.wp-embed-responsive .wp-embed-aspect-4-3 .wp-block-embed__wrapper:before{padding-top:75%}.wp-embed-responsive .wp-embed-aspect-1-1 .wp-block-embed__wrapper:before{padding-top:100%}.wp-embed-responsive .wp-embed-aspect-9-16 .wp-block-embed__wrapper:before{padding-top:177.77%}.wp-embed-responsive .wp-embed-aspect-1-2 .wp-block-embed__wrapper:before{padding-top:200%}
+/*# sourceURL=https://optional.is/required/wp-includes/blocks/embed/style.min.css */
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
 </head>
 <body>
 
@@ -34,11 +55,11 @@
 
 			<div class="entry">
 				
-<p>PINs (Personal Identification Numbers) are usually 4-6 characters in length. We wanted to look at the mathematics behind a not-so-obvious trick in an attempt to guess a PIN.</p>
+<p class="wp-block-paragraph">PINs (Personal Identification Numbers) are usually 4-6 characters in length. We wanted to look at the mathematics behind a not-so-obvious trick in an attempt to guess a PIN.</p>
 
 
 
-<p>During some TV cartoon crime capture, the bad guys use a number pad to type in their PIN to open the doors. Quickly behind them the hero uses some fingerprint powder to see what buttons were pressed.</p>
+<p class="wp-block-paragraph">During some TV cartoon crime capture, the bad guys use a number pad to type in their PIN to open the doors. Quickly behind them the hero uses some fingerprint powder to see what buttons were pressed.</p>
 
 
 
@@ -48,47 +69,47 @@
 
 
 
-<p>Let&#8217;s look at the odds before and after and how they change.</p>
+<p class="wp-block-paragraph">Let&#8217;s look at the odds before and after and how they change.</p>
 
 
 
-<p>If you have no prior knowledge and there are 10 buttons (0-9) and the PIN is four digits long, there are 10,000 possible permutations! 10 possible digits for your first choice, 10 again for your second, 10 for the third and 10 for the fourth. That&#8217;s 10×10×10×10 = 10,000. </p>
+<p class="wp-block-paragraph">If you have no prior knowledge and there are 10 buttons (0-9) and the PIN is four digits long, there are 10,000 possible permutations! 10 possible digits for your first choice, 10 again for your second, 10 for the third and 10 for the fourth. That&#8217;s 10×10×10×10 = 10,000. </p>
 
 
 
-<p>In Combinatorics this is represented by: P<sup>R</sup>(n,r) = P<sup>R</sup>(10,4) = 10<sup>4</sup> = 10,000. This is permutations with replacement, because we can reuse each number over and over. For example, your PIN could be 1234 or 1111.</p>
+<p class="wp-block-paragraph">In Combinatorics this is represented by: P<sup>R</sup>(n,r) = P<sup>R</sup>(10,4) = 10<sup>4</sup> = 10,000. This is permutations with replacement, because we can reuse each number over and over. For example, your PIN could be 1234 or 1111.</p>
 
 
 
-<p>10,000 is a lot of choices, so how does our chances increase if we reduce the list of possible digits down from 10 choices to just the 4 buttons that had fingerprints on them.</p>
+<p class="wp-block-paragraph">10,000 is a lot of choices, so how does our chances increase if we reduce the list of possible digits down from 10 choices to just the 4 buttons that had fingerprints on them.</p>
 
 
 
-<p>This is a permutations calculation without replacement, nCr. The general equation is:</p>
+<p class="wp-block-paragraph">This is a permutations calculation without replacement, nCr. The general equation is:</p>
 
 
 
-<p>P(n,r) = n!/(n-r)!</p>
+<p class="wp-block-paragraph">P(n,r) = n!/(n-r)!</p>
 
 
 
-<p>Our number of items <em>n</em>, and samples <em>r</em>, is: n factorial divided by (n-r) factorial. When we plug in our values of 4 numbers and 4 samples we get 4!/(4-4)! or just (4×3×2×1) which is 24.</p>
+<p class="wp-block-paragraph">Our number of items <em>n</em>, and samples <em>r</em>, is: n factorial divided by (n-r) factorial. When we plug in our values of 4 numbers and 4 samples we get 4!/(4-4)! or just (4×3×2×1) which is 24.</p>
 
 
 
-<p>By knowing the buttons pressed we reduced the number of possible PINs from 10,000 to just 24!</p>
+<p class="wp-block-paragraph">By knowing the buttons pressed we reduced the number of possible PINs from 10,000 to just 24!</p>
 
 
 
-<p>Now let&#8217;s get sneaky. What if we know the PIN is 4 digits in length, but we reused one of the numbers. When our hero dusts for fingerprints they only see 3 buttons pressed. Which one was pressed twice? Since there is replacement (one button pressed twice) we need to use a new formula.</p>
+<p class="wp-block-paragraph">Now let&#8217;s get sneaky. What if we know the PIN is 4 digits in length, but we reused one of the numbers. When our hero dusts for fingerprints they only see 3 buttons pressed. Which one was pressed twice? Since there is replacement (one button pressed twice) we need to use a new formula.</p>
 
 
 
-<p>First we need to pretend that all 4 key presses are unique, that gets us our previous formula of 4! (4×3×2×1), but since two of the digits are the same, we need then divide by 2! (2×1). 4!/2! = 12.</p>
+<p class="wp-block-paragraph">First we need to pretend that all 4 key presses are unique, that gets us our previous formula of 4! (4×3×2×1), but since two of the digits are the same, we need then divide by 2! (2×1). 4!/2! = 12.</p>
 
 
 
-<p>That means if you have the sequence 1,1,2,3 there are 12 unique PINs. </p>
+<p class="wp-block-paragraph">That means if you have the sequence 1,1,2,3 there are 12 unique PINs. </p>
 
 
 
@@ -96,27 +117,27 @@
 
 
 
-<p>But we don&#8217;t have 1,1,2,3 we have 1,2,3,<em>x</em>. If <em>x</em> is 1, then we have 12 unique ways, but <em>x</em> could be 1, 2 or 3, so we need to multiple 12×3 which gives us 36 possible PINs.</p>
+<p class="wp-block-paragraph">But we don&#8217;t have 1,1,2,3 we have 1,2,3,<em>x</em>. If <em>x</em> is 1, then we have 12 unique ways, but <em>x</em> could be 1, 2 or 3, so we need to multiple 12×3 which gives us 36 possible PINs.</p>
 
 
 
-<p>4 unique digits has 24 possible combinations versus 3 unique digits, but one is reused, with 36 possible combinations. It is a bit counter intuitive, but reusing a digit actually makes this particular attack on PIN combinations harder.</p>
+<p class="wp-block-paragraph">4 unique digits has 24 possible combinations versus 3 unique digits, but one is reused, with 36 possible combinations. It is a bit counter intuitive, but reusing a digit actually makes this particular attack on PIN combinations harder.</p>
 
 
 
-<p>In reality a computer could try 10,000 combinations instantaneously, we are at the mercy of the security system to throttle the PINs if you continue to get them wrong.</p>
+<p class="wp-block-paragraph">In reality a computer could try 10,000 combinations instantaneously, we are at the mercy of the security system to throttle the PINs if you continue to get them wrong.</p>
 
 
 
-<p>Continuing with this logic, what if we reused two digits in our PIN? Then the hero only knows 2 of the possible 4 digits. Does that create even more permutations? No. If you know two digits and had to arrange them to make four digits, we first need to chunk them into pairs. We create the pairs 11, 12, 21, 22. We need two sets of these. That gets us 4×4 or 16 possibilities. The problem is that two of the permutations will be 1111 and 2222 which we know can&#8217;t exists, because two different buttons were pressed. The equation then becomes (4×4)-2 or only 14 possible combinations. </p>
+<p class="wp-block-paragraph">Continuing with this logic, what if we reused two digits in our PIN? Then the hero only knows 2 of the possible 4 digits. Does that create even more permutations? No. If you know two digits and had to arrange them to make four digits, we first need to chunk them into pairs. We create the pairs 11, 12, 21, 22. We need two sets of these. That gets us 4×4 or 16 possibilities. The problem is that two of the permutations will be 1111 and 2222 which we know can&#8217;t exists, because two different buttons were pressed. The equation then becomes (4×4)-2 or only 14 possible combinations. </p>
 
 
 
-<p>This makes sense because if we reduce it once again to the hero knowing only one key was pressed, there is only one possible combination 1111.</p>
+<p class="wp-block-paragraph">This makes sense because if we reduce it once again to the hero knowing only one key was pressed, there is only one possible combination 1111.</p>
 
 
 
-<p>Going the other direction, if the PIN were five digits in length, that would give us a possible 10×10×10×10×10 = 100,000 possibilities. If we knew which 5 buttons were pressed that reduced the possibilities to 5! (5×4×3×2×1) = 120. If we know the combination is 5 digits in length but we can only tell 4 buttons were pressed that gives us: 5!/2! = 120/2 = 60  unique combinations, but remember we have 1,2,3,4,x  where x could be any of four digits.  That&#8217;s now (5!/2!)×4 or 240 possible combinations.</p>
+<p class="wp-block-paragraph">Going the other direction, if the PIN were five digits in length, that would give us a possible 10×10×10×10×10 = 100,000 possibilities. If we knew which 5 buttons were pressed that reduced the possibilities to 5! (5×4×3×2×1) = 120. If we know the combination is 5 digits in length but we can only tell 4 buttons were pressed that gives us: 5!/2! = 120/2 = 60  unique combinations, but remember we have 1,2,3,4,x  where x could be any of four digits.  That&#8217;s now (5!/2!)×4 or 240 possible combinations.</p>
 
 
 
@@ -124,7 +145,7 @@
 
 
 
-<p>After doing all the calculations, we searched around to confirm our process, method and results. We found this article from <a href="https://www.schneier.com/blog/archives/2012/01/improving_the_s.html">02012 from Schneier on Security</a> which points to a <a href="https://mindyourdecisions.com/blog/2011/01/27/game-theory-and-probability-of-iphone-passwords/">02011 article also about PIN  security schemes</a>. They are both worth skimming. They come to the same conclusions, but some of the comments are also useful.</p>
+<p class="wp-block-paragraph">After doing all the calculations, we searched around to confirm our process, method and results. We found this article from <a href="https://www.schneier.com/blog/archives/2012/01/improving_the_s.html">02012 from Schneier on Security</a> which points to a <a href="https://mindyourdecisions.com/blog/2011/01/27/game-theory-and-probability-of-iphone-passwords/">02011 article also about PIN  security schemes</a>. They are both worth skimming. They come to the same conclusions, but some of the comments are also useful.</p>
 
 
 
@@ -132,15 +153,15 @@
 
 
 
-<p>PINs are hard to get right and are subject to brute-force attacks. Devices like your phone and cash machines do their best to throttle attempts. A 4 or 6 digit PIN is (at the moment) doing its best to strike a balance between easy-of-use and security. It isn&#8217;t perfect, and in the wrong hands, even 6! (10×10×10×10×10×10) = 1,000,000 possible combinations isn&#8217;t a hurdle. There are ways to improve this, like shuffling the location of the numbers on keypad everytime, but these introduce barriers and possible errors for the customers.</p>
+<p class="wp-block-paragraph">PINs are hard to get right and are subject to brute-force attacks. Devices like your phone and cash machines do their best to throttle attempts. A 4 or 6 digit PIN is (at the moment) doing its best to strike a balance between easy-of-use and security. It isn&#8217;t perfect, and in the wrong hands, even 6! (10×10×10×10×10×10) = 1,000,000 possible combinations isn&#8217;t a hurdle. There are ways to improve this, like shuffling the location of the numbers on keypad everytime, but these introduce barriers and possible errors for the customers.</p>
 
 
 
-<p>There are ways to improve your PIN security by choosing longer PINs, but being being vigilant is best. The odds of someone checking for fingerprints after use is probably much, much lower than &#8216;<a href="https://en.wikipedia.org/wiki/Credit_card_fraud#Skimming">card skimmers</a>&#8216; or  &#8216;<a href="https://en.wikipedia.org/wiki/Keystroke_logging">keyloggers</a>&#8216;.  There are plenty of other attack vectors which having a PIN with more permutations does not protect against.</p>
+<p class="wp-block-paragraph">There are ways to improve your PIN security by choosing longer PINs, but being being vigilant is best. The odds of someone checking for fingerprints after use is probably much, much lower than &#8216;<a href="https://en.wikipedia.org/wiki/Credit_card_fraud#Skimming">card skimmers</a>&#8216; or  &#8216;<a href="https://en.wikipedia.org/wiki/Keystroke_logging">keyloggers</a>&#8216;.  There are plenty of other attack vectors which having a PIN with more permutations does not protect against.</p>
 
 
 
-<p>Remember: Locks just keep honest people honest.</p>
+<p class="wp-block-paragraph">Remember: Locks just keep honest people honest.</p>
 
               <div class="postmetadata">
 					<p><strong>Categories:</strong> <a href="../../../../category/youre-doing-it-wrong/index.html" title="View all articles in You're doing it wrong" rel="tag category" class="category">You're doing it wrong</a></p><p><strong>Tags:</strong> <a href="../../../../tag/attacks/index.html" rel="tag"  class="tag">attacks</a>, <a href="../../../../tag/fraud/index.html" rel="tag"  class="tag">fraud</a>, <a href="../../../../tag/pin/index.html" rel="tag"  class="tag">PIN</a>, <a href="../../../../tag/scam/index.html" rel="tag"  class="tag">scam</a>, <a href="../../../../tag/security/index.html" rel="tag"  class="tag">security</a></p>			  </div>
@@ -293,10 +314,10 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 <script type="speculationrules">
-{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/required\/*"},{"not":{"href_matches":["\/required\/wp-*.php","\/required\/wp-admin\/*","\/required\/wp-content\/uploads\/*","\/required\/wp-content\/*","\/required\/wp-content\/plugins\/*","\/required\/wp-content\/themes\/optional\/*","\/required\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/required/*"},{"not":{"href_matches":["/required/wp-*.php","/required/wp-admin/*","/required/wp-content/uploads/*","/required/wp-content/*","/required/wp-content/plugins/*","/required/wp-content/themes/optional/*","/required/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
 
-<!-- Dynamic page generated in 0.321 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2025-09-23 20:04:57 -->
+<!-- Dynamic page generated in 0.758 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2026-06-12 10:55:58 -->
 
 <!-- super cache -->

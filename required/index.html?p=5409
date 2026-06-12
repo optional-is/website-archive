@@ -19,6 +19,23 @@
 <meta name="twitter:description" content="">
 <meta name="twitter:creator" content="@optionalBot">
 <meta name="twitter:domain" content="http://optional.is">
+<style id="wp-block-heading-inline-css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://optional.is/required/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://optional.is/required/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id="wp-block-quote-inline-css">
+.wp-block-quote{box-sizing:border-box;overflow-wrap:break-word}.wp-block-quote.is-large:where(:not(.is-style-plain)),.wp-block-quote.is-style-large:where(:not(.is-style-plain)){margin-bottom:1em;padding:0 1em}.wp-block-quote.is-large:where(:not(.is-style-plain)) p,.wp-block-quote.is-style-large:where(:not(.is-style-plain)) p{font-size:1.5em;font-style:italic;line-height:1.6}.wp-block-quote.is-large:where(:not(.is-style-plain)) cite,.wp-block-quote.is-large:where(:not(.is-style-plain)) footer,.wp-block-quote.is-style-large:where(:not(.is-style-plain)) cite,.wp-block-quote.is-style-large:where(:not(.is-style-plain)) footer{font-size:1.125em;text-align:right}.wp-block-quote>cite{display:block}
+/*# sourceURL=https://optional.is/required/wp-includes/blocks/quote/style.min.css */
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
 </head>
 <body>
 
@@ -34,11 +51,11 @@
 
 			<div class="entry">
 				
-<p>In early 02021, we were at the local swimming pool called Sundhöllin. One of the many rules is to NOT take photos. Sorry, we broke the rules, but for typography reasons, it surely must be allowed.&nbsp;</p>
+<p class="wp-block-paragraph">In early 02021, we were at the local swimming pool called Sundhöllin. One of the many rules is to NOT take photos. Sorry, we broke the rules, but for typography reasons, it surely must be allowed.&nbsp;</p>
 
 
 
-<p>Painted on the walls were a series of numbers. We&#8217;re not sure of the font. Maybe there isn’t a digitized version, because it is just some sign painters handiwork. We took photos in an attempt to identify them, or to digitize them. Since we didn&#8217;t manage to find the font, we traced the numbers from photos. This got us 0-9 in a nice vector form.</p>
+<p class="wp-block-paragraph">Painted on the walls were a series of numbers. We&#8217;re not sure of the font. Maybe there isn’t a digitized version, because it is just some sign painters handiwork. We took photos in an attempt to identify them, or to digitize them. Since we didn&#8217;t manage to find the font, we traced the numbers from photos. This got us 0-9 in a nice vector form.</p>
 
 
 
@@ -50,7 +67,7 @@
 
 
 
-<p>We&#8217;re always on the look out for objects, ideas or culturally significant/under-represented or under-appreciated Icelandic works. These numbers might only exist in one place on the planet and that’s paint on the wall in the local swimming pool.</p>
+<p class="wp-block-paragraph">We&#8217;re always on the look out for objects, ideas or culturally significant/under-represented or under-appreciated Icelandic works. These numbers might only exist in one place on the planet and that’s paint on the wall in the local swimming pool.</p>
 
 
 
@@ -58,11 +75,11 @@
 
 
 
-<p>We set out to try and find what font face this could be. It wasn&#8217;t a transfer or airbrush stencil. It looked hand-painted, so the likelihood it was made-up on the spot wasn&#8217;t impossible. We put our mock-ups through &#8220;<a href="https://www.myfonts.com/WhatTheFont/">What the   Font</a>&#8221; and nothing in the search results matched.</p>
+<p class="wp-block-paragraph">We set out to try and find what font face this could be. It wasn&#8217;t a transfer or airbrush stencil. It looked hand-painted, so the likelihood it was made-up on the spot wasn&#8217;t impossible. We put our mock-ups through &#8220;<a href="https://www.myfonts.com/WhatTheFont/">What the   Font</a>&#8221; and nothing in the search results matched.</p>
 
 
 
-<p>We thought this probably was some unique design, until one day it hit us! For a few years now, probably even before that trip to the swimming pool, we&#8217;ve been staring at this font!</p>
+<p class="wp-block-paragraph">We thought this probably was some unique design, until one day it hit us! For a few years now, probably even before that trip to the swimming pool, we&#8217;ve been staring at this font!</p>
 
 
 
@@ -70,27 +87,27 @@
 
 
 
-<p>LG Smart TVs use the Miso font designed by Mårten Nettelbladt, it is almost identical to the font on the pool walls. There are small differences, like the number seven. Miso is available in a full alphabet with several weights! If you like the style, you should consider the full Miso font!</p>
+<p class="wp-block-paragraph">LG Smart TVs use the Miso font designed by Mårten Nettelbladt, it is almost identical to the font on the pool walls. There are small differences, like the number seven. Miso is available in a full alphabet with several weights! If you like the style, you should consider the full Miso font!</p>
 
 
 
-<p>According to <a href="http://martennettelbladt.se/miso/">Mårten&#8217;s website, Miso was released in 02006</a>. Now we needed to figure out if what was painted on the  walls was post-02006 or not?</p>
+<p class="wp-block-paragraph">According to <a href="http://martennettelbladt.se/miso/">Mårten&#8217;s website, Miso was released in 02006</a>. Now we needed to figure out if what was painted on the  walls was post-02006 or not?</p>
 
 
 
-<p>Luckily, the Reykjavik Photography Museum has an online search. We found several images of the <a href="https://ljosm.reykjavik.is/fotoweb/archives/5000-Heim/Ljosmyndasafn/Dagblaðið%20V%C3%ADsir/365%20slysavarnir%20004.jpg.info#c=%2Ffotoweb%2Farchives%2F5000-Heim%2F%3Fq%3DSundh%25C3%25B6llin">swimming pool, some from 01984</a> where the numbers are clearly visible. <a href="https://ljosm.reykjavik.is/fotoweb/archives/5000-Heim/Ljosmyndasafn/Þorgr%C3%ADmur%20Gestsson/ÞOG%20003%20020%201-5.jpg.info#c=%2Ffotoweb%2Farchives%2F5000-Heim%2F%3Fq%3Dsundh%25C3%25B6llin">There are even photos from 01972</a> and something is  painted on the walls, but it is hard to confirm it is the same font-face.</p>
+<p class="wp-block-paragraph">Luckily, the Reykjavik Photography Museum has an online search. We found several images of the <a href="https://ljosm.reykjavik.is/fotoweb/archives/5000-Heim/Ljosmyndasafn/Dagblaðið%20V%C3%ADsir/365%20slysavarnir%20004.jpg.info#c=%2Ffotoweb%2Farchives%2F5000-Heim%2F%3Fq%3DSundh%25C3%25B6llin">swimming pool, some from 01984</a> where the numbers are clearly visible. <a href="https://ljosm.reykjavik.is/fotoweb/archives/5000-Heim/Ljosmyndasafn/Þorgr%C3%ADmur%20Gestsson/ÞOG%20003%20020%201-5.jpg.info#c=%2Ffotoweb%2Farchives%2F5000-Heim%2F%3Fq%3Dsundh%25C3%25B6llin">There are even photos from 01972</a> and something is  painted on the walls, but it is hard to confirm it is the same font-face.</p>
 
 
 
-<p>That leads us to the question of where did Miso come from since our pool numbers certainly pre-date it. Was Miso inspired by that swimming pool? Is there a common ancestor? Or are they designed independently?</p>
+<p class="wp-block-paragraph">That leads us to the question of where did Miso come from since our pool numbers certainly pre-date it. Was Miso inspired by that swimming pool? Is there a common ancestor? Or are they designed independently?</p>
 
 
 
-<p>(If we were to guess, it would be independent designs. Everything in the glyphs follow a strict grid/angle and a few circular radii.)</p>
+<p class="wp-block-paragraph">(If we were to guess, it would be independent designs. Everything in the glyphs follow a strict grid/angle and a few circular radii.)</p>
 
 
 
-<p>A small update from Mårten about the history of MISO:</p>
+<p class="wp-block-paragraph">A small update from Mårten about the history of MISO:</p>
 
 
 
@@ -102,7 +119,7 @@
 
 
 
-<p>Neither of those two fonts are what is painted on the wall in Sundhöllin. You can see the similarities, but also the differences. The mystery continues as to the origins.</p>
+<p class="wp-block-paragraph">Neither of those two fonts are what is painted on the wall in Sundhöllin. You can see the similarities, but also the differences. The mystery continues as to the origins.</p>
 
 
 
@@ -110,11 +127,11 @@
 
 
 
-<p>Having a nice set of number glyphs lead us to the idea of using them for hours in a clock face. We went back to the original files and added X, V, I to make Roman Numerals. Then we sent the files off to be laser cut. </p>
+<p class="wp-block-paragraph">Having a nice set of number glyphs lead us to the idea of using them for hours in a clock face. We went back to the original files and added X, V, I to make Roman Numerals. Then we sent the files off to be laser cut. </p>
 
 
 
-<p>The idea was to work on a clock face using Icelandic material using numbers from something quintessentially Icelandic, the swimming pool.</p>
+<p class="wp-block-paragraph">The idea was to work on a clock face using Icelandic material using numbers from something quintessentially Icelandic, the swimming pool.</p>
 
 
 
@@ -122,7 +139,7 @@
 
 
 
-<p>Along with the numbers and letters, we also cut two types of pills and a series of dots. Using these combinations, we tried out several different styles of clock face layouts by sticking them to the wall.</p>
+<p class="wp-block-paragraph">Along with the numbers and letters, we also cut two types of pills and a series of dots. Using these combinations, we tried out several different styles of clock face layouts by sticking them to the wall.</p>
 
 
 
@@ -130,11 +147,11 @@
 
 
 
-<p>We wanted a big clock, but these are a bit too big! Next time, we&#8217;ll get them cut much smaller. If we had a projector, that would have helped a lot getting the spacing, rotation and positioning correct.</p>
+<p class="wp-block-paragraph">We wanted a big clock, but these are a bit too big! Next time, we&#8217;ll get them cut much smaller. If we had a projector, that would have helped a lot getting the spacing, rotation and positioning correct.</p>
 
 
 
-<p>Going back to digital, we arranged different clock faces much quicker than doing it by hand on the wall.</p>
+<p class="wp-block-paragraph">Going back to digital, we arranged different clock faces much quicker than doing it by hand on the wall.</p>
 
 
 
@@ -142,15 +159,15 @@
 
 
 
-<p>Once we manage to order some analog clocks parts, we&#8217;ll better know what size, style and amount of glyphs to get laser cut.</p>
+<p class="wp-block-paragraph">Once we manage to order some analog clocks parts, we&#8217;ll better know what size, style and amount of glyphs to get laser cut.</p>
 
 
 
-<p>The set of 01937 Sundhöllin Pool Number Glyphs are <a href="https://github.com/optional-is/pool_numbers">available to download</a>. If you need a full font, check-out <a href="http://martennettelbladt.se/miso/">Miso</a>.</p>
+<p class="wp-block-paragraph">The set of 01937 Sundhöllin Pool Number Glyphs are <a href="https://github.com/optional-is/pool_numbers">available to download</a>. If you need a full font, check-out <a href="http://martennettelbladt.se/miso/">Miso</a>.</p>
 
 
 
-<p>I have no idea what the license (if any) of the original painted numbers might be, but feel free to use our digitally created version. Just drop us a line and let us know what you make.</p>
+<p class="wp-block-paragraph">I have no idea what the license (if any) of the original painted numbers might be, but feel free to use our digitally created version. Just drop us a line and let us know what you make.</p>
 
               <div class="postmetadata">
 					<p><strong>Categories:</strong> <a href="category/experiments/index.html" title="View all articles in Experiments" rel="tag category" class="category">Experiments</a>, <a href="category/typography/index.html" title="View all articles in Typography" rel="tag category" class="category">Typography</a>, <a href="category/visualizations/index.html" title="View all articles in Visualizations" rel="tag category" class="category">Visualizations</a></p><p><strong>Tags:</strong> <a href="tag/clock/index.html" rel="tag"  class="tag">clock</a>, <a href="tag/font/index.html" rel="tag"  class="tag">font</a>, <a href="tag/iceland/index.html" rel="tag"  class="tag">iceland</a>, <a href="tag/numbers/index.html" rel="tag"  class="tag">numbers</a>, <a href="tag/pool/index.html" rel="tag"  class="tag">pool</a>, <a href="tag/typography/index.html" rel="tag"  class="tag">typography</a></p>			  </div>
@@ -303,10 +320,10 @@ Copyright 2009 - <a href="http://suda.co.uk/">Brian Suda</a>
 </body>
 </html>
 <script type="speculationrules">
-{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/required\/*"},{"not":{"href_matches":["\/required\/wp-*.php","\/required\/wp-admin\/*","\/required\/wp-content\/uploads\/*","\/required\/wp-content\/*","\/required\/wp-content\/plugins\/*","\/required\/wp-content\/themes\/optional\/*","\/required\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/required/*"},{"not":{"href_matches":["/required/wp-*.php","/required/wp-admin/*","/required/wp-content/uploads/*","/required/wp-content/*","/required/wp-content/plugins/*","/required/wp-content/themes/optional/*","/required/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
 
-<!-- Dynamic page generated in 0.292 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2025-09-23 20:00:30 -->
+<!-- Dynamic page generated in 0.716 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2026-06-12 10:44:43 -->
 
 <!-- super cache -->

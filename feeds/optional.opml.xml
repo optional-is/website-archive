@@ -17,6 +17,14 @@
 			description="A small company based out of Reykjavik, Iceland specializing in future thinking projects"  
 		/>
 		<outline type="rss" 
+			text="(optional.is) Articles" 
+			title="(optional.is) Articles" 
+			xmlUrl="https://optional.is/required/feed/?cat=-819"
+			htmlUrl="https://optional.is/required/"
+			language="english" 
+			description="Our thoughts and publications."  
+		/>
+		<outline type="rss" 
 			text="(optional.is) Weeknotes" 
 			title="(optional.is) Weeknotes" 
 			xmlUrl="https://optional.is/required/category/weeknotes/feed/"
